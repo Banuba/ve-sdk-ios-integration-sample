@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		18A89EDCE2E4BBC5BFDCD2A6 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EF8E3B8563B74AA5DC4A4F /* Pods_Example.framework */; };
+		635DB1AB2548541000B1C799 /* masks in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1A92548541000B1C799 /* masks */; };
+		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
 		6388C620254838BB005C017A /* BanubaEffectPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6388C61F254838BB005C017A /* BanubaEffectPlayer.framework */; };
 		6388C621254838BB005C017A /* BanubaEffectPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6388C61F254838BB005C017A /* BanubaEffectPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		639DA00C254700290011C153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00B254700290011C153 /* AppDelegate.swift */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		4583CD9AF3110FA7864EFF0B /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		635DB1A92548541000B1C799 /* masks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = masks; sourceTree = "<group>"; };
+		635DB1AA2548541000B1C799 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
 		6388C61F254838BB005C017A /* BanubaEffectPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BanubaEffectPlayer.framework; path = Example/BanubaEffectPlayer.framework; sourceTree = "<group>"; };
 		639DA008254700290011C153 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639DA00B254700290011C153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +68,6 @@
 				4583CD9AF3110FA7864EFF0B /* Pods-Example.debug.xcconfig */,
 				994758AB50A0F631545D9D59 /* Pods-Example.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -102,6 +105,8 @@
 				639DA00F254700290011C153 /* ViewController.swift */,
 				639DA011254700290011C153 /* Main.storyboard */,
 				639DA0142547002C0011C153 /* Assets.xcassets */,
+				635DB1AA2548541000B1C799 /* luts */,
+				635DB1A92548541000B1C799 /* masks */,
 				639DA0162547002C0011C153 /* LaunchScreen.storyboard */,
 				639DA0192547002C0011C153 /* Info.plist */,
 			);
@@ -168,8 +173,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635DB1AB2548541000B1C799 /* masks in Resources */,
 				639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */,
 				639DA0152547002C0011C153 /* Assets.xcassets in Resources */,
+				635DB1AC2548541000B1C799 /* luts in Resources */,
 				639DA013254700290011C153 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
