@@ -1,0 +1,3 @@
+#ifndef BNB_DETAIL_OS_DETECTED
+#define BNB_DETAIL_OS_DETECTED 1
+#endif

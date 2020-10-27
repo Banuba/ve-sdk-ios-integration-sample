@@ -1,0 +1,533 @@
+{
+  "layer_shapes" : {
+    "conv9_2_mbox_conf_reshape_output" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 24
+    },
+    "conv4_3_norm_mbox_loc_output" : {
+      "k" : 8,
+      "w" : 32,
+      "n" : 1,
+      "h" : 18
+    },
+    "conv7_2_mbox_loc_output" : {
+      "k" : 8,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "permute_1_output" : {
+      "k" : 1152,
+      "w" : 1,
+      "n" : 1,
+      "h" : 2
+    },
+    "pool4_output" : {
+      "k" : 32,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "pool5_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "prelu_fc7_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "prelu_fc6_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "conv5_3_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "conv8_2_mbox_conf_reshape_output" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 24
+    },
+    "conv5_2_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "conv5_1_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "prelu_4_3_output" : {
+      "k" : 32,
+      "w" : 32,
+      "n" : 1,
+      "h" : 18
+    },
+    "prelu_4_2_output" : {
+      "k" : 16,
+      "w" : 32,
+      "n" : 1,
+      "h" : 18
+    },
+    "prelu_4_1_output" : {
+      "k" : 16,
+      "w" : 32,
+      "n" : 1,
+      "h" : 18
+    },
+    "conv6_2_mbox_conf_reshape_output" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 80
+    },
+    "conv4_3_norm_mbox_conf_reshape_output" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1152
+    },
+    "conv7_2_mbox_conf_reshape_output" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 24
+    },
+    "prelu_5_2_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "prelu_5_1_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "prelu_5_3_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "conv8_2_mbox_loc_reshape_output" : {
+      "k" : 4,
+      "w" : 1,
+      "n" : 1,
+      "h" : 24
+    },
+    "conv9_2_mbox_loc_reshape_output" : {
+      "k" : 4,
+      "w" : 1,
+      "n" : 1,
+      "h" : 24
+    },
+    "conv4_3_norm_mbox_conf_output" : {
+      "k" : 4,
+      "w" : 32,
+      "n" : 1,
+      "h" : 18
+    },
+    "permute_12_output" : {
+      "k" : 24,
+      "w" : 1,
+      "n" : 1,
+      "h" : 4
+    },
+    "conv8_2_mbox_loc_output" : {
+      "k" : 8,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "conv9_2_output" : {
+      "k" : 32,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "conv4_3_output" : {
+      "k" : 32,
+      "w" : 32,
+      "n" : 1,
+      "h" : 18
+    },
+    "conv8_2_mbox_conf_output" : {
+      "k" : 4,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "conv9_1_output" : {
+      "k" : 16,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "conv4_2_output" : {
+      "k" : 16,
+      "w" : 32,
+      "n" : 1,
+      "h" : 18
+    },
+    "conv4_1_output" : {
+      "k" : 16,
+      "w" : 32,
+      "n" : 1,
+      "h" : 18
+    },
+    "conv6_2_mbox_loc_reshape_output" : {
+      "k" : 4,
+      "w" : 1,
+      "n" : 1,
+      "h" : 80
+    },
+    "conv7_2_mbox_loc_reshape_output" : {
+      "k" : 4,
+      "w" : 1,
+      "n" : 1,
+      "h" : 24
+    },
+    "conv3_3_output" : {
+      "k" : 16,
+      "w" : 32,
+      "n" : 1,
+      "h" : 18
+    },
+    "prelu_6_2_output" : {
+      "k" : 32,
+      "w" : 8,
+      "n" : 1,
+      "h" : 5
+    },
+    "prelu_6_1_output" : {
+      "k" : 32,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "conv9_2_mbox_loc_output" : {
+      "k" : 8,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "conv3_2_output" : {
+      "k" : 8,
+      "w" : 64,
+      "n" : 1,
+      "h" : 36
+    },
+    "conv6_2_mbox_conf_output" : {
+      "k" : 4,
+      "w" : 8,
+      "n" : 1,
+      "h" : 5
+    },
+    "conv3_1_output" : {
+      "k" : 8,
+      "w" : 64,
+      "n" : 1,
+      "h" : 36
+    },
+    "prelu_7_2_output" : {
+      "k" : 32,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "prelu_7_1_output" : {
+      "k" : 16,
+      "w" : 8,
+      "n" : 1,
+      "h" : 5
+    },
+    "conv8_2_output" : {
+      "k" : 32,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "conv8_1_output" : {
+      "k" : 16,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "fc7_mbox_conf_output" : {
+      "k" : 4,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "permute_11_output" : {
+      "k" : 24,
+      "w" : 1,
+      "n" : 1,
+      "h" : 4
+    },
+    "permute_14_output" : {
+      "k" : 4,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1592
+    },
+    "conv2_2_output" : {
+      "k" : 8,
+      "w" : 64,
+      "n" : 1,
+      "h" : 36
+    },
+    "output1" : {
+      "k" : 6,
+      "w" : 1,
+      "n" : 1,
+      "seq" : 1592,
+      "h" : 1
+    },
+    "conv2_1_output" : {
+      "k" : 4,
+      "w" : 128,
+      "n" : 1,
+      "h" : 72
+    },
+    "fc7_mbox_loc_output" : {
+      "k" : 8,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "prelu_8_2_output" : {
+      "k" : 32,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "prelu_8_1_output" : {
+      "k" : 16,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "conv4_3_norm_mbox_loc_reshape_output" : {
+      "k" : 4,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1152
+    },
+    "prelu_9_2_output" : {
+      "k" : 32,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "prelu_9_1_output" : {
+      "k" : 16,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "fc7_mbox_loc_reshape_output" : {
+      "k" : 4,
+      "w" : 1,
+      "n" : 1,
+      "h" : 288
+    },
+    "fc7_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "fc7_mbox_conf_reshape_output" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 288
+    },
+    "conv6_2_mbox_loc_output" : {
+      "k" : 8,
+      "w" : 8,
+      "n" : 1,
+      "h" : 5
+    },
+    "conv7_2_output" : {
+      "k" : 32,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "conv7_1_output" : {
+      "k" : 16,
+      "w" : 8,
+      "n" : 1,
+      "h" : 5
+    },
+    "input1" : {
+      "k" : 3,
+      "w" : 128,
+      "n" : 1,
+      "h" : 72
+    },
+    "conv9_2_mbox_conf_output" : {
+      "k" : 4,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "permute_9_output" : {
+      "k" : 80,
+      "w" : 1,
+      "n" : 1,
+      "h" : 4
+    },
+    "prelu_2_2_output" : {
+      "k" : 8,
+      "w" : 64,
+      "n" : 1,
+      "h" : 36
+    },
+    "prelu_2_1_output" : {
+      "k" : 4,
+      "w" : 128,
+      "n" : 1,
+      "h" : 72
+    },
+    "permute_6_output" : {
+      "k" : 24,
+      "w" : 1,
+      "n" : 1,
+      "h" : 2
+    },
+    "conv6_1_output" : {
+      "k" : 32,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "permute_4_output" : {
+      "k" : 24,
+      "w" : 1,
+      "n" : 1,
+      "h" : 2
+    },
+    "permute_3_output" : {
+      "k" : 80,
+      "w" : 1,
+      "n" : 1,
+      "h" : 2
+    },
+    "permute_2_output" : {
+      "k" : 288,
+      "w" : 1,
+      "n" : 1,
+      "h" : 2
+    },
+    "permute_5_output" : {
+      "k" : 24,
+      "w" : 1,
+      "n" : 1,
+      "h" : 2
+    },
+    "permute_7_output" : {
+      "k" : 1152,
+      "w" : 1,
+      "n" : 1,
+      "h" : 4
+    },
+    "permute_8_output" : {
+      "k" : 288,
+      "w" : 1,
+      "n" : 1,
+      "h" : 4
+    },
+    "fc6_output" : {
+      "k" : 64,
+      "w" : 16,
+      "n" : 1,
+      "h" : 9
+    },
+    "mbox_loc_output" : {
+      "k" : 1592,
+      "w" : 1,
+      "n" : 1,
+      "h" : 4
+    },
+    "prelu_3_3_output" : {
+      "k" : 16,
+      "w" : 32,
+      "n" : 1,
+      "h" : 18
+    },
+    "permute_10_output" : {
+      "k" : 24,
+      "w" : 1,
+      "n" : 1,
+      "h" : 4
+    },
+    "prelu_3_1_output" : {
+      "k" : 8,
+      "w" : 64,
+      "n" : 1,
+      "h" : 36
+    },
+    "conv7_2_mbox_conf_output" : {
+      "k" : 4,
+      "w" : 4,
+      "n" : 1,
+      "h" : 3
+    },
+    "prelu_3_2_output" : {
+      "k" : 8,
+      "w" : 64,
+      "n" : 1,
+      "h" : 36
+    },
+    "conv6_2_output" : {
+      "k" : 32,
+      "w" : 8,
+      "n" : 1,
+      "h" : 5
+    },
+    "permute_13_output" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1592
+    },
+    "mbox_conf_softmax_output" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1592
+    },
+    "mbox_conf_output" : {
+      "k" : 1592,
+      "w" : 1,
+      "n" : 1,
+      "h" : 2
+    },
+    "predictions_output" : {
+      "k" : 6,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1592
+    }
+  }
+}

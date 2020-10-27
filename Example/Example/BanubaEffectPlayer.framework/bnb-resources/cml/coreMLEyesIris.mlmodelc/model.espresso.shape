@@ -1,0 +1,238 @@
+{
+  "layer_shapes" : {
+    "Iris__encoder_relu_2_1_output" : {
+      "k" : 24,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "Iris__upsampling_3_output" : {
+      "k" : 80,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "Iris__decoder_relu_2_1_output" : {
+      "k" : 24,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "Iris__concatenate_0_output" : {
+      "k" : 24,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "output1" : {
+      "k" : 2,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "Iris__encoder_relu_3_0_output" : {
+      "k" : 32,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "Iris__pool_3_output" : {
+      "k" : 32,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "Iris__decoder_relu_3_0_output" : {
+      "k" : 32,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "Iris__encoder_relu_4_1_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "Iris__pool_0_output" : {
+      "k" : 8,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "Iris__decoder_relu_4_1_output" : {
+      "k" : 48,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "Iris__upsampling_0_output" : {
+      "k" : 24,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "Iris__concatenate_3_output" : {
+      "k" : 80,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "Iris__encoder_relu_0_0_output" : {
+      "k" : 8,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "Iris__decoder_relu_0_0_output" : {
+      "k" : 8,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "Iris__out_convolution_output" : {
+      "k" : 2,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "Iris__upsampling_2_output" : {
+      "k" : 56,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "Iris__mid_relu_1_output" : {
+      "k" : 128,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "Iris__upsampling_4_output" : {
+      "k" : 96,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "Iris__pool_1_output" : {
+      "k" : 16,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "Iris__concatenate_1_output" : {
+      "k" : 40,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "Iris__mid_relu_0_output" : {
+      "k" : 128,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "Iris__pool_4_output" : {
+      "k" : 48,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "Iris__last_concatenate_0_output" : {
+      "k" : 12,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "Iris__encoder_relu_2_0_output" : {
+      "k" : 24,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "Iris__decoder_relu_2_0_output" : {
+      "k" : 24,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "input1" : {
+      "k" : 4,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "Iris__concatenate_4_output" : {
+      "k" : 96,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "Iris__encoder_relu_3_1_output" : {
+      "k" : 32,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "Iris__last_relu_0_output" : {
+      "k" : 4,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "Iris__decoder_relu_3_1_output" : {
+      "k" : 32,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "Iris__encoder_relu_4_0_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "Iris__mid_upsampling_1_output" : {
+      "k" : 128,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "Iris__concatenate_2_output" : {
+      "k" : 56,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "Iris__upsampling_1_output" : {
+      "k" : 40,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "Iris__decoder_relu_4_0_output" : {
+      "k" : 48,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "Iris__pool_2_output" : {
+      "k" : 24,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "Iris__decoder_relu_1_0_output" : {
+      "k" : 16,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "Iris__encoder_relu_1_0_output" : {
+      "k" : 16,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    }
+  }
+}
