@@ -1,0 +1,25 @@
+#pragma once
+
+#include <bnb/types/interfaces/acne_regions.hpp>
+#include <bnb/types/interfaces/action_units.hpp>
+#include <bnb/types/interfaces/action_units_data.hpp>
+#include <bnb/types/interfaces/action_units_indices.hpp>
+#include <bnb/types/interfaces/camera_position.hpp>
+#include <bnb/types/interfaces/depth_map.hpp>
+#include <bnb/types/interfaces/external_face_data.hpp>
+#include <bnb/types/interfaces/eyes_state.hpp>
+#include <bnb/types/interfaces/face_data.hpp>
+#include <bnb/types/interfaces/face_data_source.hpp>
+#include <bnb/types/interfaces/frame_data.hpp>
+#include <bnb/types/interfaces/frx_recognition_result.hpp>
+#include <bnb/types/interfaces/lips_shine_mask.hpp>
+#include <bnb/types/interfaces/pixel_format.hpp>
+#include <bnb/types/interfaces/pixel_rect.hpp>
+#include <bnb/types/interfaces/point2d.hpp>
+#include <bnb/types/interfaces/rotation.hpp>
+#include <bnb/types/interfaces/transformable_event.hpp>
+#include <bnb/types/interfaces/transformation.hpp>
+#include <bnb/types/interfaces/transformed_mask.hpp>
+#include <bnb/types/interfaces/transformed_mask_byte.hpp>
+#include <bnb/types/interfaces/transformed_mask_gpu.hpp>
+#include <bnb/types/interfaces/types.hpp>

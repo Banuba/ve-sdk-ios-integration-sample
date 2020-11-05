@@ -1,0 +1,658 @@
+{
+  "layer_shapes" : {
+    "bn_Conv1_output" : {
+      "k" : 4,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "block_9_expand_prelu_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "output3" : {
+      "k" : 3,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "block_7_project_BN_output" : {
+      "k" : 8,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_11_depthwise_BN_output" : {
+      "k" : 192,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_4_depthwise_BN_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "roll_output" : {
+      "k" : 12,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "block_13_expand_prelu_output" : {
+      "k" : 192,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_14_expand_BN_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "detector_output" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "block_16_depthwise_prelu_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_1_expand_BN_output" : {
+      "k" : 48,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "block_4_project_BN_output" : {
+      "k" : 8,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_13_depthwise_prelu_output" : {
+      "k" : 192,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_10_depthwise_prelu_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_12_project_BN_output" : {
+      "k" : 32,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "expanded_conv_depthwise_prelu_output" : {
+      "k" : 4,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "block_6_depthwise_BN_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_4_expand_prelu_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_3_expand_BN_output" : {
+      "k" : 48,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_2_expand_prelu_output" : {
+      "k" : 48,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_5_depthwise_prelu_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_12_expand_prelu_output" : {
+      "k" : 192,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_2_depthwise_prelu_output" : {
+      "k" : 48,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_15_project_BN_output" : {
+      "k" : 40,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_5_expand_BN_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_12_expand_BN_output" : {
+      "k" : 192,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_1_project_BN_output" : {
+      "k" : 8,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_16_depthwise_BN_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_8_project_BN_output" : {
+      "k" : 8,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_8_depthwise_BN_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_10_depthwise_BN_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_6_expand_prelu_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_7_expand_BN_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_8_depthwise_prelu_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "output2" : {
+      "k" : 12,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "block_9_expand_BN_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_10_project_BN_output" : {
+      "k" : 32,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_15_expand_BN_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_5_project_BN_output" : {
+      "k" : 8,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_15_depthwise_BN_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_8_expand_prelu_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_2_add_output" : {
+      "k" : 8,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_13_project_BN_output" : {
+      "k" : 40,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_11_expand_prelu_output" : {
+      "k" : 192,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_3_depthwise_BN_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_1_depthwise_BN_output" : {
+      "k" : 48,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_15_depthwise_prelu_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_3_depthwise_prelu_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_12_depthwise_prelu_output" : {
+      "k" : 192,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_4_add_output" : {
+      "k" : 8,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_9_project_BN_output" : {
+      "k" : 8,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "flatten_1_output" : {
+      "k" : 1920,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "block_10_expand_BN_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_5_add_output" : {
+      "k" : 8,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_16_project_BN_output" : {
+      "k" : 120,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_16_expand_prelu_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_9_depthwise_prelu_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_10_expand_prelu_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_5_depthwise_BN_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_6_depthwise_prelu_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_3_expand_prelu_output" : {
+      "k" : 48,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_7_add_output" : {
+      "k" : 8,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_2_project_BN_output" : {
+      "k" : 8,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_6_project_BN_output" : {
+      "k" : 8,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "Conv1_pad_output__fix__underflow___" : {
+      "k" : 3,
+      "w" : 129,
+      "n" : 1,
+      "h" : 129
+    },
+    "block_1_expand_prelu_output" : {
+      "k" : 48,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "block_1_pad_output" : {
+      "k" : 48,
+      "w" : 65,
+      "n" : 1,
+      "h" : 65
+    },
+    "block_2_expand_BN_output" : {
+      "k" : 48,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_8_add_output" : {
+      "k" : 8,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_13_expand_BN_output" : {
+      "k" : 192,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_6_pad_output" : {
+      "k" : 48,
+      "w" : 17,
+      "n" : 1,
+      "h" : 17
+    },
+    "Conv1_pad_output" : {
+      "k" : 3,
+      "w" : 129,
+      "n" : 1,
+      "h" : 129
+    },
+    "block_14_depthwise_BN_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_15_add_output" : {
+      "k" : 40,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_3_pad_output" : {
+      "k" : 48,
+      "w" : 33,
+      "n" : 1,
+      "h" : 33
+    },
+    "block_9_add_output" : {
+      "k" : 8,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_14_add_output" : {
+      "k" : 40,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "output1" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "Conv1_prelu_output" : {
+      "k" : 4,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "block_4_expand_BN_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_7_depthwise_BN_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "output4" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "block_5_expand_prelu_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_14_depthwise_prelu_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_12_add_output" : {
+      "k" : 32,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_11_depthwise_prelu_output" : {
+      "k" : 192,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_6_expand_BN_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_11_add_output" : {
+      "k" : 32,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "input1" : {
+      "k" : 3,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "block_13_depthwise_BN_output" : {
+      "k" : 192,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_16_expand_BN_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "expanded_conv_project_BN_output" : {
+      "k" : 8,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "block_1_depthwise_prelu_output" : {
+      "k" : 48,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_11_project_BN_output" : {
+      "k" : 32,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_8_expand_BN_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_11_expand_BN_output" : {
+      "k" : 192,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_15_expand_prelu_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_9_depthwise_BN_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_7_expand_prelu_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_13_pad_output" : {
+      "k" : 192,
+      "w" : 9,
+      "n" : 1,
+      "h" : 9
+    },
+    "block_3_project_BN_output" : {
+      "k" : 8,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "expanded_conv_depthwise_BN_output" : {
+      "k" : 4,
+      "w" : 64,
+      "n" : 1,
+      "h" : 64
+    },
+    "block_7_depthwise_prelu_output" : {
+      "k" : 48,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_12_depthwise_BN_output" : {
+      "k" : 192,
+      "w" : 8,
+      "n" : 1,
+      "h" : 8
+    },
+    "block_14_project_BN_output" : {
+      "k" : 40,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "block_4_depthwise_prelu_output" : {
+      "k" : 48,
+      "w" : 16,
+      "n" : 1,
+      "h" : 16
+    },
+    "block_2_depthwise_BN_output" : {
+      "k" : 48,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "block_14_expand_prelu_output" : {
+      "k" : 240,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    }
+  }
+}

@@ -1,0 +1,1626 @@
+{
+  "storage" : "model.espresso.weights",
+  "properties" : {
+
+  },
+  "format_version" : 200,
+  "layers" : [
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2_1_output",
+      "blob_weights" : 3,
+      "K" : 3,
+      "blob_biases" : 1,
+      "name" : "conv2_1",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 4,
+      "bottom" : "input1",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 5
+      },
+      "top" : "prelu_2_1_output",
+      "type" : "activation",
+      "name" : "prelu_2_1",
+      "bottom" : "conv2_1_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2_2_output",
+      "blob_weights" : 9,
+      "K" : 4,
+      "blob_biases" : 7,
+      "stride_x" : 2,
+      "name" : "conv2_2",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "has_biases" : 1,
+      "C" : 8,
+      "bottom" : "prelu_2_1_output",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 11
+      },
+      "top" : "prelu_2_2_output",
+      "type" : "activation",
+      "name" : "prelu_2_2",
+      "bottom" : "conv2_2_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv3_1_output",
+      "blob_weights" : 15,
+      "K" : 8,
+      "blob_biases" : 13,
+      "name" : "conv3_1",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 8,
+      "bottom" : "prelu_2_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 17
+      },
+      "top" : "prelu_3_1_output",
+      "type" : "activation",
+      "name" : "prelu_3_1",
+      "bottom" : "conv3_1_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv3_2_output",
+      "blob_weights" : 21,
+      "K" : 8,
+      "blob_biases" : 19,
+      "name" : "conv3_2",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 8,
+      "bottom" : "prelu_3_1_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 23
+      },
+      "top" : "prelu_3_2_output",
+      "type" : "activation",
+      "name" : "prelu_3_2",
+      "bottom" : "conv3_2_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv3_3_output",
+      "blob_weights" : 27,
+      "K" : 8,
+      "blob_biases" : 25,
+      "stride_x" : 2,
+      "name" : "conv3_3",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "has_biases" : 1,
+      "C" : 16,
+      "bottom" : "prelu_3_2_output",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 29
+      },
+      "top" : "prelu_3_3_output",
+      "type" : "activation",
+      "name" : "prelu_3_3",
+      "bottom" : "conv3_3_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv4_1_output",
+      "blob_weights" : 33,
+      "K" : 16,
+      "blob_biases" : 31,
+      "name" : "conv4_1",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 16,
+      "bottom" : "prelu_3_3_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 35
+      },
+      "top" : "prelu_4_1_output",
+      "type" : "activation",
+      "name" : "prelu_4_1",
+      "bottom" : "conv4_1_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv4_2_output",
+      "blob_weights" : 39,
+      "K" : 16,
+      "blob_biases" : 37,
+      "name" : "conv4_2",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 16,
+      "bottom" : "prelu_4_1_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 41
+      },
+      "top" : "prelu_4_2_output",
+      "type" : "activation",
+      "name" : "prelu_4_2",
+      "bottom" : "conv4_2_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv4_3_output",
+      "blob_weights" : 45,
+      "K" : 16,
+      "blob_biases" : 43,
+      "name" : "conv4_3",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "prelu_4_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 47
+      },
+      "top" : "prelu_4_3_output",
+      "type" : "activation",
+      "name" : "prelu_4_3",
+      "bottom" : "conv4_3_output"
+    },
+    {
+      "pad_value" : 0,
+      "average_count_exclude_padding" : 1,
+      "top_shape_style" : 0,
+      "avg_or_max" : 1,
+      "stride_x" : 2,
+      "pad_mode" : 1,
+      "stride_y" : 2,
+      "pad_t" : 0,
+      "weights" : {
+
+      },
+      "size_y" : 2,
+      "type" : "pool",
+      "pad_r" : 0,
+      "pad_b" : 0,
+      "size_x" : 2,
+      "pad_fill_mode" : 0,
+      "bottom" : "prelu_4_3_output",
+      "pad_l" : 0,
+      "name" : "pool4",
+      "top" : "pool4_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv5_1_output",
+      "blob_weights" : 51,
+      "K" : 32,
+      "blob_biases" : 49,
+      "name" : "conv5_1",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "pool4_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 53
+      },
+      "top" : "prelu_5_1_output",
+      "type" : "activation",
+      "name" : "prelu_5_1",
+      "bottom" : "conv5_1_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv5_2_output",
+      "blob_weights" : 57,
+      "K" : 64,
+      "blob_biases" : 55,
+      "name" : "conv5_2",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "prelu_5_1_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 59
+      },
+      "top" : "prelu_5_2_output",
+      "type" : "activation",
+      "name" : "prelu_5_2",
+      "bottom" : "conv5_2_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv5_3_output",
+      "blob_weights" : 63,
+      "K" : 64,
+      "blob_biases" : 61,
+      "name" : "conv5_3",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "prelu_5_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 65
+      },
+      "top" : "prelu_5_3_output",
+      "type" : "activation",
+      "name" : "prelu_5_3",
+      "bottom" : "conv5_3_output"
+    },
+    {
+      "pad_value" : 0,
+      "average_count_exclude_padding" : 1,
+      "top_shape_style" : 0,
+      "avg_or_max" : 1,
+      "stride_x" : 1,
+      "pad_mode" : 1,
+      "stride_y" : 1,
+      "pad_t" : 0,
+      "weights" : {
+
+      },
+      "size_y" : 3,
+      "type" : "pool",
+      "pad_r" : 0,
+      "pad_b" : 0,
+      "size_x" : 3,
+      "pad_fill_mode" : 0,
+      "bottom" : "prelu_5_3_output",
+      "pad_l" : 0,
+      "name" : "pool5",
+      "top" : "pool5_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "fc6_output",
+      "blob_weights" : 69,
+      "K" : 64,
+      "blob_biases" : 67,
+      "name" : "fc6",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "pool5_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 71
+      },
+      "top" : "prelu_fc6_output",
+      "type" : "activation",
+      "name" : "prelu_fc6",
+      "bottom" : "fc6_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "fc7_output",
+      "blob_weights" : 75,
+      "K" : 64,
+      "blob_biases" : 73,
+      "name" : "fc7",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "prelu_fc6_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 77
+      },
+      "top" : "prelu_fc7_output",
+      "type" : "activation",
+      "name" : "prelu_fc7",
+      "bottom" : "fc7_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv6_1_output",
+      "blob_weights" : 81,
+      "K" : 64,
+      "blob_biases" : 79,
+      "name" : "conv6_1",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "prelu_fc7_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 83
+      },
+      "top" : "prelu_6_1_output",
+      "type" : "activation",
+      "name" : "prelu_6_1",
+      "bottom" : "conv6_1_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv6_2_output",
+      "blob_weights" : 87,
+      "K" : 32,
+      "blob_biases" : 85,
+      "stride_x" : 2,
+      "name" : "conv6_2",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "prelu_6_1_output",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 89
+      },
+      "top" : "prelu_6_2_output",
+      "type" : "activation",
+      "name" : "prelu_6_2",
+      "bottom" : "conv6_2_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv7_1_output",
+      "blob_weights" : 93,
+      "K" : 32,
+      "blob_biases" : 91,
+      "name" : "conv7_1",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 16,
+      "bottom" : "prelu_6_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 95
+      },
+      "top" : "prelu_7_1_output",
+      "type" : "activation",
+      "name" : "prelu_7_1",
+      "bottom" : "conv7_1_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv7_2_output",
+      "blob_weights" : 99,
+      "K" : 16,
+      "blob_biases" : 97,
+      "stride_x" : 2,
+      "name" : "conv7_2",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "prelu_7_1_output",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 101
+      },
+      "top" : "prelu_7_2_output",
+      "type" : "activation",
+      "name" : "prelu_7_2",
+      "bottom" : "conv7_2_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv8_1_output",
+      "blob_weights" : 105,
+      "K" : 32,
+      "blob_biases" : 103,
+      "name" : "conv8_1",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 16,
+      "bottom" : "prelu_7_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 107
+      },
+      "top" : "prelu_8_1_output",
+      "type" : "activation",
+      "name" : "prelu_8_1",
+      "bottom" : "conv8_1_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv8_2_output",
+      "blob_weights" : 111,
+      "K" : 16,
+      "blob_biases" : 109,
+      "name" : "conv8_2",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "prelu_8_1_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 113
+      },
+      "top" : "prelu_8_2_output",
+      "type" : "activation",
+      "name" : "prelu_8_2",
+      "bottom" : "conv8_2_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv9_1_output",
+      "blob_weights" : 117,
+      "K" : 32,
+      "blob_biases" : 115,
+      "name" : "conv9_1",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 16,
+      "bottom" : "prelu_8_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 119
+      },
+      "top" : "prelu_9_1_output",
+      "type" : "activation",
+      "name" : "prelu_9_1",
+      "bottom" : "conv9_1_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv9_2_output",
+      "blob_weights" : 123,
+      "K" : 16,
+      "blob_biases" : 121,
+      "name" : "conv9_2",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "prelu_9_1_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "mode" : 4,
+      "weights" : {
+        "params_prelu" : 125
+      },
+      "top" : "prelu_9_2_output",
+      "type" : "activation",
+      "name" : "prelu_9_2",
+      "bottom" : "conv9_2_output"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv4_3_norm_mbox_conf_output",
+      "blob_weights" : 129,
+      "K" : 32,
+      "blob_biases" : 127,
+      "name" : "conv4_3_norm_mbox_conf",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 4,
+      "bottom" : "prelu_4_3_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "fc7_mbox_conf_output",
+      "blob_weights" : 133,
+      "K" : 64,
+      "blob_biases" : 131,
+      "name" : "fc7_mbox_conf",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 4,
+      "bottom" : "prelu_fc7_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv6_2_mbox_conf_output",
+      "blob_weights" : 137,
+      "K" : 32,
+      "blob_biases" : 135,
+      "name" : "conv6_2_mbox_conf",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 4,
+      "bottom" : "prelu_6_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv7_2_mbox_conf_output",
+      "blob_weights" : 141,
+      "K" : 32,
+      "blob_biases" : 139,
+      "name" : "conv7_2_mbox_conf",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 4,
+      "bottom" : "prelu_7_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv8_2_mbox_conf_output",
+      "blob_weights" : 145,
+      "K" : 32,
+      "blob_biases" : 143,
+      "name" : "conv8_2_mbox_conf",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 4,
+      "bottom" : "prelu_8_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv9_2_mbox_conf_output",
+      "blob_weights" : 149,
+      "K" : 32,
+      "blob_biases" : 147,
+      "name" : "conv9_2_mbox_conf",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 4,
+      "bottom" : "prelu_9_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "name" : "conv4_3_norm_mbox_conf_reshape",
+      "bottom" : "conv4_3_norm_mbox_conf_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 2,
+      "weights" : {
+
+      },
+      "top" : "conv4_3_norm_mbox_conf_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "name" : "fc7_mbox_conf_reshape",
+      "bottom" : "fc7_mbox_conf_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 2,
+      "weights" : {
+
+      },
+      "top" : "fc7_mbox_conf_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "name" : "conv6_2_mbox_conf_reshape",
+      "bottom" : "conv6_2_mbox_conf_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 2,
+      "weights" : {
+
+      },
+      "top" : "conv6_2_mbox_conf_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "name" : "conv7_2_mbox_conf_reshape",
+      "bottom" : "conv7_2_mbox_conf_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 2,
+      "weights" : {
+
+      },
+      "top" : "conv7_2_mbox_conf_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "name" : "conv8_2_mbox_conf_reshape",
+      "bottom" : "conv8_2_mbox_conf_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 2,
+      "weights" : {
+
+      },
+      "top" : "conv8_2_mbox_conf_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "name" : "conv9_2_mbox_conf_reshape",
+      "bottom" : "conv9_2_mbox_conf_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 2,
+      "weights" : {
+
+      },
+      "top" : "conv9_2_mbox_conf_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv4_3_norm_mbox_loc_output",
+      "blob_weights" : 153,
+      "K" : 32,
+      "blob_biases" : 151,
+      "name" : "conv4_3_norm_mbox_loc",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 8,
+      "bottom" : "prelu_4_3_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "fc7_mbox_loc_output",
+      "blob_weights" : 157,
+      "K" : 64,
+      "blob_biases" : 155,
+      "name" : "fc7_mbox_loc",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 8,
+      "bottom" : "prelu_fc7_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv6_2_mbox_loc_output",
+      "blob_weights" : 161,
+      "K" : 32,
+      "blob_biases" : 159,
+      "name" : "conv6_2_mbox_loc",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 8,
+      "bottom" : "prelu_6_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv7_2_mbox_loc_output",
+      "blob_weights" : 165,
+      "K" : 32,
+      "blob_biases" : 163,
+      "name" : "conv7_2_mbox_loc",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 8,
+      "bottom" : "prelu_7_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv8_2_mbox_loc_output",
+      "blob_weights" : 169,
+      "K" : 32,
+      "blob_biases" : 167,
+      "name" : "conv8_2_mbox_loc",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 8,
+      "bottom" : "prelu_8_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv9_2_mbox_loc_output",
+      "blob_weights" : 173,
+      "K" : 32,
+      "blob_biases" : 171,
+      "name" : "conv9_2_mbox_loc",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 8,
+      "bottom" : "prelu_9_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv4_3_norm_mbox_conf_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_1_output",
+      "type" : "transpose",
+      "name" : "permute_1"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "fc7_mbox_conf_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_2_output",
+      "type" : "transpose",
+      "name" : "permute_2"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv6_2_mbox_conf_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_3_output",
+      "type" : "transpose",
+      "name" : "permute_3"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv7_2_mbox_conf_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_4_output",
+      "type" : "transpose",
+      "name" : "permute_4"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv8_2_mbox_conf_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_5_output",
+      "type" : "transpose",
+      "name" : "permute_5"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv9_2_mbox_conf_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_6_output",
+      "type" : "transpose",
+      "name" : "permute_6"
+    },
+    {
+      "name" : "conv4_3_norm_mbox_loc_reshape",
+      "bottom" : "conv4_3_norm_mbox_loc_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv4_3_norm_mbox_loc_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "name" : "fc7_mbox_loc_reshape",
+      "bottom" : "fc7_mbox_loc_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 4,
+      "weights" : {
+
+      },
+      "top" : "fc7_mbox_loc_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "name" : "conv6_2_mbox_loc_reshape",
+      "bottom" : "conv6_2_mbox_loc_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv6_2_mbox_loc_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "name" : "conv7_2_mbox_loc_reshape",
+      "bottom" : "conv7_2_mbox_loc_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv7_2_mbox_loc_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "name" : "conv8_2_mbox_loc_reshape",
+      "bottom" : "conv8_2_mbox_loc_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv8_2_mbox_loc_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "name" : "conv9_2_mbox_loc_reshape",
+      "bottom" : "conv9_2_mbox_loc_output",
+      "dst_n" : 0,
+      "mode" : 1,
+      "dst_seq" : 1,
+      "dst_k" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv9_2_mbox_loc_reshape_output",
+      "dst_h" : -1,
+      "dst_w" : 1,
+      "type" : "reshape"
+    },
+    {
+      "weights" : {
+
+      },
+      "top" : "mbox_conf_output",
+      "type" : "concat",
+      "name" : "mbox_conf",
+      "bottom" : "permute_1_output,permute_2_output,permute_3_output,permute_4_output,permute_5_output,permute_6_output"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv4_3_norm_mbox_loc_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_7_output",
+      "type" : "transpose",
+      "name" : "permute_7"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "fc7_mbox_loc_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_8_output",
+      "type" : "transpose",
+      "name" : "permute_8"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv6_2_mbox_loc_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_9_output",
+      "type" : "transpose",
+      "name" : "permute_9"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv7_2_mbox_loc_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_10_output",
+      "type" : "transpose",
+      "name" : "permute_10"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv8_2_mbox_loc_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_11_output",
+      "type" : "transpose",
+      "name" : "permute_11"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv9_2_mbox_loc_reshape_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_12_output",
+      "type" : "transpose",
+      "name" : "permute_12"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "mbox_conf_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_13_output",
+      "type" : "transpose",
+      "name" : "permute_13"
+    },
+    {
+      "weights" : {
+
+      },
+      "top" : "mbox_loc_output",
+      "type" : "concat",
+      "name" : "mbox_loc",
+      "bottom" : "permute_7_output,permute_8_output,permute_9_output,permute_10_output,permute_11_output,permute_12_output"
+    },
+    {
+      "C" : 2,
+      "weights" : {
+
+      },
+      "top" : "mbox_conf_softmax_output",
+      "type" : "softmax",
+      "name" : "mbox_conf_softmax",
+      "bottom" : "permute_13_output"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "mbox_loc_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "permute_14_output",
+      "type" : "transpose",
+      "name" : "permute_14"
+    },
+    {
+      "weights" : {
+
+      },
+      "top" : "predictions_output",
+      "type" : "concat",
+      "name" : "predictions",
+      "bottom" : "mbox_conf_softmax_output,permute_14_output"
+    },
+    {
+      "top" : "output1",
+      "name" : "reshape_1",
+      "dst_w" : 1,
+      "dst_n" : 0,
+      "type" : "reshape",
+      "dst_h" : 1,
+      "mode" : 1,
+      "bottom" : "predictions_output",
+      "hint_fallback_from_metal" : 1,
+      "dst_seq" : -1,
+      "dst_k" : 6,
+      "weights" : {
+
+      }
+    }
+  ]
+}

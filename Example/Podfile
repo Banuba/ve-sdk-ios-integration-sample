@@ -1,0 +1,10 @@
+source 'git@github.com:Banuba/specs.git'
+
+target 'Example' do
+  use_frameworks!
+  pod 'BanubaVideoEditorSDK'
+  pod 'BanubaMusicEditorSDK'
+  pod 'BanubaOverlayEditorSDK'
+  pod 'BanubaSDK'
+  pod 'VideoEditor'
+end
