@@ -12,8 +12,7 @@ class ViewController: UIViewController {
   }
   
   private func initVideoEditor() {
-    // use default configuration
-    let config = VideoEditorConfig()
+    let config = createVideoEditorConfiguration()
     videoEditorSDK = BanubaVideoEditorSDK(
       token: "place client token here",
       effectsToken: "place effects token here",
@@ -26,6 +25,12 @@ class ViewController: UIViewController {
   
   @IBAction func openVideoEditorAction(_ sender: Any) {
     videoEditorSDK?.presentVideoEditor(from: self, animated: true, completion: nil)
+  }
+  
+  func createVideoEditorConfiguration() -> VideoEditorConfig {
+    let config = VideoEditorConfig()
+    
+    return config
   }
 }
 
