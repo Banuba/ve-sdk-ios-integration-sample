@@ -28,9 +28,31 @@ class ViewController: UIViewController {
   }
   
   func createVideoEditorConfiguration() -> VideoEditorConfig {
-    let config = VideoEditorConfig()
+    var config = VideoEditorConfig()
+    
+    config.galleryConfiguration = updateGalleryConfiguration(config.galleryConfiguration)
+    config.slideShowConfiguration = updateSlideShowConfiguration(config.slideShowConfiguration)
     
     return config
+  }
+  
+  private func updateGalleryConfiguration(_ configuration: GalleryConfiguration) -> GalleryConfiguration {
+    var configuration = configuration
+    
+    configuration.multiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "multi_choise"))
+    configuration.cancelMultiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
+    configuration.backButtonConfiguration = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    
+    return configuration
+  }
+  
+  private func updateSlideShowConfiguration(_ configuration: SlideShowConfiguration) -> SlideShowConfiguration {
+    var configuration = configuration
+    
+    configuration.clearSelectionButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
+    configuration.closeButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    
+    return configuration
   }
 }
 
