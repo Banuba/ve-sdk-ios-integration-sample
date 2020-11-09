@@ -107,6 +107,7 @@ class ViewController: UIViewController {
     ]
     configuration.recordButtonConfiguration.normalImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.recordImageName = "ic_record_stop"
+  }
   
   private func updateEditorConfiguration(_ configuration: EditorConfiguration) -> EditorConfiguration {
     var configuration = configuration
