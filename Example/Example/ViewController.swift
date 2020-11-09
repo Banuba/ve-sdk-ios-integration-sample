@@ -28,9 +28,27 @@ class ViewController: UIViewController {
   }
   
   func createVideoEditorConfiguration() -> VideoEditorConfig {
-    let config = VideoEditorConfig()
+    var config = VideoEditorConfig()
+    
+    config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
     
     return config
+  }
+  
+  private func updateFilterConfiguration(_ configuration: FilterConfiguration) -> FilterConfiguration {
+    var configuration = configuration
+    
+    configuration.cancelButton.textConfiguration.color = .white
+    configuration.doneButton.textConfiguration.color = .white
+    configuration.resetButton.backgroundColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.resetButton.cornerRadius = 4.0
+    configuration.resetButton.textConfiguration.color = .white
+    configuration.toolTipLabel.color = .white
+    configuration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
+  
+    configuration.effectItemConfiguration.cornerRadius = 4.0
+    
+    return configuration
   }
 }
 
