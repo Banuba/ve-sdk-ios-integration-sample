@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
     config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
     config.textEditorConfiguration = updateTextEditorConfiguration(config.textEditorConfiguration)
+    config.speedSelectionConfiguration = updateSpeedSelectionConfiguration(config.speedSelectionConfiguration)
     
     return config
   }
@@ -424,6 +425,17 @@ class ViewController: UIViewController {
     configuration.doneButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
     configuration.fontButton.borderColor = UIColor(red: 6, green: 188, blue: 193).cgColor
     configuration.fontButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    return configuration
+  }
+  
+  private func updateSpeedSelectionConfiguration(_ configuration: SpeedSelectionConfiguration) -> SpeedSelectionConfiguration {
+    var configuration = configuration
+    
+    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    configuration.speedBarConfiguration.speedItemBackgroundColor = UIColor(red: 18, green: 38, blue: 58)
+    configuration.speedBarConfiguration.selectorColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.speedBarConfiguration.selectorTextColor = UIColor.white
     
     return configuration
   }
