@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     config.trimGalleryVideoConfiguration = updateTrimGalleryVideoConfiguration(config.trimGalleryVideoConfiguration)
     config.multiTrimConfiguration = updateMultiTrimConfiguration(config.multiTrimConfiguration)
     config.singleTrimConfiguration = updateSingleTrimConfiguration(config.singleTrimConfiguration)
+    config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
     
     return config
   }
@@ -544,6 +545,22 @@ class ViewController: UIViewController {
     configuration.saveButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
     
     configuration.editedTimeLabelConfiguration.errorColor = UIColor(red: 250, green: 62, blue: 118)
+    
+    return configuration
+  }
+  
+  private func updateFilterConfiguration(_ configuration: FilterConfiguration) -> FilterConfiguration {
+    var configuration = configuration
+    
+    configuration.cancelButton.textConfiguration.color = .white
+    configuration.doneButton.textConfiguration.color = .white
+    configuration.resetButton.backgroundColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.resetButton.cornerRadius = 4.0
+    configuration.resetButton.textConfiguration.color = .white
+    configuration.toolTipLabel.color = .white
+    configuration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
+  
+    configuration.effectItemConfiguration.cornerRadius = 4.0
     
     return configuration
   }
