@@ -121,6 +121,27 @@ class ViewController: UIViewController {
     configuration.timeLineConfiguration.progressBarColor = UIColor(red: 6, green: 188, blue: 193)
     configuration.timeLineConfiguration.progressBarSelectColor = UIColor.white
 
+    let nextButtonTextConfiguration = TextConfiguration(
+      kern: 1.0,
+      font: UIFont.systemFont(ofSize: 12.0),
+      color: UIColor.white
+    )
+    let inactiveNextButtonTextConfiguration = TextConfiguration(
+      kern: 1.0,
+      font: UIFont.systemFont(ofSize: 12.0),
+      color: UIColor.white.withAlphaComponent(0.5)
+    )
+    configuration.saveButton = SaveButtonConfiguration(
+      textConfiguration: nextButtonTextConfiguration,
+      inactiveTextConfiguration: inactiveNextButtonTextConfiguration,
+      text: "NEXT",
+      width: 68.0,
+      height: 41.0,
+      cornerRadius: 4.0,
+      backgroundColor: UIColor(red: 6, green: 188, blue: 193),
+      inactiveBackgroundColor: UIColor(red: 6, green: 188, blue: 193).withAlphaComponent(0.5)
+    )
+    
     return configuration
   }
   
@@ -167,6 +188,12 @@ class ViewController: UIViewController {
     
     configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_nav_back_arrow"))
     configuration.playButtonImageName = "ic_play"
+    
+    configuration.saveButton.background.color = UIColor(red: 6, green: 188, blue: 193)
+    configuration.saveButton.background.cornerRadius = 4.0
+    configuration.saveButton.width = 68.0
+    configuration.saveButton.height = 42.0
+    configuration.saveButton.title.style.color = .white
     
     return configuration
   }
