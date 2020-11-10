@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
     config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
     config.textEditorConfiguration = updateTextEditorConfiguration(config.textEditorConfiguration)
+    config.alertViewConfiguration = updateAlertConfiguration(config.alertViewConfiguration)
     
     return config
   }
@@ -424,6 +425,15 @@ class ViewController: UIViewController {
     configuration.doneButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
     configuration.fontButton.borderColor = UIColor(red: 6, green: 188, blue: 193).cgColor
     configuration.fontButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    return configuration
+  }
+  
+  private func updateAlertConfiguration(_ configuration: AlertViewConfiguration) -> AlertViewConfiguration {
+    var configuration = configuration
+    
+    configuration.refuseButtonBackgroundColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.refuseButtonTextColor = UIColor.white
     
     return configuration
   }
