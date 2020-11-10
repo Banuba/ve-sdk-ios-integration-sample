@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     config.singleTrimConfiguration = updateSingleTrimConfiguration(config.singleTrimConfiguration)
     config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
     config.alertViewConfiguration = updateAlertConfiguration(config.alertViewConfiguration)
+    config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
     
     return config
   }
@@ -572,6 +573,21 @@ class ViewController: UIViewController {
     configuration.refuseButtonBackgroundColor = UIColor(red: 6, green: 188, blue: 193)
     configuration.refuseButtonTextColor = UIColor.white
     
+    return configuration
+  }
+  
+  private func updateFullScreenActivityConfiguration(_ configuration: FullScreenActivityConfiguration) -> FullScreenActivityConfiguration {
+      var configuration = configuration
+
+      configuration.activityIndicator = SmallActivityIndicatorConfiguration(
+        gradientType: .color(
+          SmallActivityIndicatorConfiguration.GradientColorConfiguration(
+            angle: 0.0,
+            colors: [UIColor(red: 6, green: 188, blue: 193).cgColor, UIColor.white.cgColor]
+          )
+        ),
+        activityLineWidth: 3.0
+      )
     return configuration
   }
 }
