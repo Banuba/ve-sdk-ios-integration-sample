@@ -281,7 +281,7 @@ class ViewController: UIViewController {
       ),
       ControlButtonConfig(
         type: .play,
-        imageName: "ic_play",
+        imageName: "ic_editor_play",
         selectedImageName: "ic_pause"
       ),
       ControlButtonConfig(
@@ -352,7 +352,7 @@ class ViewController: UIViewController {
       ),
       OverlayControlButtonConfig(
         type: .play,
-        imageName: "ic_play",
+        imageName: "ic_editor_play",
         selectedImageName: "ic_pause"
       ),
       OverlayControlButtonConfig(
@@ -368,14 +368,14 @@ class ViewController: UIViewController {
         title: "Text",
         titleColor: .white,
         font: UIFont.systemFont(ofSize: 14.0),
-        imageName: "ic_addText"
+        imageName: "ic_AddText"
       ),
       OverlayEditorEditButtonConfig(
         type: .sticker,
         title: "Sticker",
         titleColor: .white,
         font: UIFont.systemFont(ofSize: 14.0),
-        imageName: "ic_addSticker"
+        imageName: "ic_AddSticker"
       )
     ]
     
