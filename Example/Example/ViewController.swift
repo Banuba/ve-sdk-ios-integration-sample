@@ -118,6 +118,9 @@ class ViewController: UIViewController {
     configuration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
     configuration.recordButtonConfiguration.strokeColor = UIColor(red: 6, green: 188, blue: 193).cgColor
     
+    configuration.timeLineConfiguration.progressBarColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.timeLineConfiguration.progressBarSelectColor = UIColor.white
+
     return configuration
   }
   
