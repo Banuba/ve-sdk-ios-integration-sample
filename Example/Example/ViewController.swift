@@ -115,6 +115,8 @@ class ViewController: UIViewController {
     ]
     configuration.recordButtonConfiguration.normalImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.recordImageName = "ic_record_stop"
+    configuration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
+    configuration.recordButtonConfiguration.strokeColor = UIColor(red: 6, green: 188, blue: 193).cgColor
     
     return configuration
   }
