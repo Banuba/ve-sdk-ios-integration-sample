@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     var config = VideoEditorConfig()
     
     config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
+    config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
     
     return config
   }
@@ -106,6 +107,54 @@ class ViewController: UIViewController {
     ]
     configuration.recordButtonConfiguration.normalImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.recordImageName = "ic_record_stop"
+  }
+  
+  private func updateEditorConfiguration(_ configuration: EditorConfiguration) -> EditorConfiguration {
+    var configuration = configuration
+    
+    configuration.additionalEffectsButtons = [
+      AdditionalEffectsButtonConfiguration(
+        identifier: .sticker,
+        imageConfiguration: ImageConfiguration(imageName: "ic_stickers_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_stickers_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .text,
+        imageConfiguration: ImageConfiguration(imageName: "ic_text_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_text_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .effects,
+        imageConfiguration: ImageConfiguration(imageName: "ic_filters_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_filters_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .masks,
+        imageConfiguration: ImageConfiguration(imageName: "ic_masks_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_masks_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .sound,
+        imageConfiguration: ImageConfiguration(imageName: "ic_audio_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_audio_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .speed,
+        imageConfiguration: ImageConfiguration(imageName: "ic_speed_effect_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_speed_effect_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .color,
+        imageConfiguration: ImageConfiguration(imageName: "ic_effects_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_effects_on")
+      )
+    ]
+    
+    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_nav_back_arrow"))
+    configuration.playButtonImageName = "ic_play"
+    
+    return configuration
+  }
 }
 
 extension ViewController: BanubaVideoEditorSDKDelegate {
