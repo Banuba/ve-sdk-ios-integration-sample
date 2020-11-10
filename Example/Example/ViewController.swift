@@ -207,6 +207,9 @@ class ViewController: UIViewController {
     configuration.nextButtonConfiguration.backgroundColor = .clear
     configuration.nextButtonConfiguration.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
     
+    configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.galleryItemConfiguration.orderNumberTitleColor = .white
+    
     return configuration
   }
   
@@ -219,6 +222,9 @@ class ViewController: UIViewController {
     
     configuration.chooseSelectionButtonConfiguration.backgroundColor = .clear
     configuration.chooseSelectionButtonConfiguration.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.galleryItemConfiguration.orderNumberTitleColor = .white
     
     return configuration
   }
