@@ -41,6 +41,9 @@ class ViewController: UIViewController {
     config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
     config.textEditorConfiguration = updateTextEditorConfiguration(config.textEditorConfiguration)
     config.speedSelectionConfiguration = updateSpeedSelectionConfiguration(config.speedSelectionConfiguration)
+    config.trimGalleryVideoConfiguration = updateTrimGalleryVideoConfiguration(config.trimGalleryVideoConfiguration)
+    config.multiTrimConfiguration = updateMultiTrimConfiguration(config.multiTrimConfiguration)
+    config.singleTrimConfiguration = updateSingleTrimConfiguration(config.singleTrimConfiguration)
     
     return config
   }
@@ -480,6 +483,67 @@ class ViewController: UIViewController {
     configuration.speedBarConfiguration.speedItemBackgroundColor = UIColor(red: 18, green: 38, blue: 58)
     configuration.speedBarConfiguration.selectorColor = UIColor(red: 6, green: 188, blue: 193)
     configuration.speedBarConfiguration.selectorTextColor = UIColor.white
+    
+    return configuration
+  }
+  
+  private func updateTrimGalleryVideoConfiguration(_ configuration: TrimGalleryVideoConfiguration) -> TrimGalleryVideoConfiguration {
+    var configuration = configuration
+    
+    configuration.backButtonConfiguration = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    configuration.playerControlConfiguration = PlayerControlConfiguration(
+      playButtonImageName: "ic_play",
+      pauseButtonImageName: "ic_trim_pause"
+    )
+    
+    configuration.galleryVideoPartsConfiguration.addGalleryVideoPartImageName = "add_video_part"
+    configuration.deleteGalleryVideoPartButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_delete_video_part"))
+    
+    configuration.nextButtonConfiguration.backgroundColor = .clear
+    configuration.nextButtonConfiguration.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    configuration.editedTimeLabelConfiguration.errorColor = UIColor(red: 250, green: 62, blue: 118)
+    
+    return configuration
+  }
+  
+  private func updateMultiTrimConfiguration(_ configuration: MultiTrimConfiguration) -> MultiTrimConfiguration {
+    var configuration = configuration
+    
+    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    configuration.playerControlConfiguration = PlayerControlConfiguration(
+      playButtonImageName: "ic_play",
+      pauseButtonImageName: "ic_trim_pause"
+    )
+    
+    configuration.trimTimeLineConfiguration.draggerImageName = "trim_left"
+    configuration.trimTimeLineConfiguration.doneButtonConfiguration.style.color = UIColor(red: 6, green: 188, blue: 193)
+    configuration.trimTimeLineConfiguration.trimControlsColor = UIColor(red: 250, green: 62, blue: 118)
+    
+    configuration.saveButton.backgroundColor = .clear
+    configuration.saveButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    configuration.editedTimeLabelConfiguration.errorColor = UIColor(red: 250, green: 62, blue: 118)
+    
+    return configuration
+  }
+  
+  private func updateSingleTrimConfiguration(_ configuration: SingleTrimConfiguration) -> SingleTrimConfiguration {
+    var configuration = configuration
+    
+    configuration.playerControlConfiguration = PlayerControlConfiguration(
+      playButtonImageName: "ic_play",
+      pauseButtonImageName: "ic_trim_pause"
+    )
+    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    
+    configuration.trimTimeLineConfiguration.draggerImageName = "trim_left"
+    configuration.trimTimeLineConfiguration.trimControlsColor = UIColor(red: 250, green: 62, blue: 118)
+    
+    configuration.saveButton.backgroundColor = .clear
+    configuration.saveButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    configuration.editedTimeLabelConfiguration.errorColor = UIColor(red: 250, green: 62, blue: 118)
     
     return configuration
   }
