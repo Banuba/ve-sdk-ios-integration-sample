@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     
     config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
     config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
+    config.galleryConfiguration = updateGalleryConfiguration(config.galleryConfiguration)
+    config.slideShowConfiguration = updateSlideShowConfiguration(config.slideShowConfiguration)
     
     return config
   }
@@ -108,7 +110,7 @@ class ViewController: UIViewController {
     configuration.recordButtonConfiguration.normalImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.recordImageName = "ic_record_stop"
   }
-  
+
   private func updateEditorConfiguration(_ configuration: EditorConfiguration) -> EditorConfiguration {
     var configuration = configuration
     
@@ -152,6 +154,23 @@ class ViewController: UIViewController {
     
     configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_nav_back_arrow"))
     configuration.playButtonImageName = "ic_play"
+    
+    return configuration
+  }
+  
+  private func updateSlideShowConfiguration(_ configuration: SlideShowConfiguration) -> SlideShowConfiguration {
+    var configuration = configuration
+    
+    configuration.clearSelectionButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
+    configuration.closeButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+   }
+  
+  private func updateGalleryConfiguration(_ configuration: GalleryConfiguration) -> GalleryConfiguration {
+    var configuration = configuration
+    
+    configuration.multiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "multi_choise"))
+    configuration.cancelMultiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
+    configuration.backButtonConfiguration = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
     
     return configuration
   }
