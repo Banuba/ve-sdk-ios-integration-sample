@@ -40,6 +40,12 @@ class ViewController: UIViewController {
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
     config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
     config.textEditorConfiguration = updateTextEditorConfiguration(config.textEditorConfiguration)
+    config.speedSelectionConfiguration = updateSpeedSelectionConfiguration(config.speedSelectionConfiguration)
+    config.trimGalleryVideoConfiguration = updateTrimGalleryVideoConfiguration(config.trimGalleryVideoConfiguration)
+    config.multiTrimConfiguration = updateMultiTrimConfiguration(config.multiTrimConfiguration)
+    config.singleTrimConfiguration = updateSingleTrimConfiguration(config.singleTrimConfiguration)
+    config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
+    config.alertViewConfiguration = updateAlertConfiguration(config.alertViewConfiguration)
     config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
     
     return config
@@ -116,6 +122,32 @@ class ViewController: UIViewController {
     ]
     configuration.recordButtonConfiguration.normalImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.recordImageName = "ic_record_stop"
+    configuration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
+    configuration.recordButtonConfiguration.strokeColor = UIColor(red: 6, green: 188, blue: 193).cgColor
+    
+    configuration.timeLineConfiguration.progressBarColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.timeLineConfiguration.progressBarSelectColor = UIColor.white
+
+    let nextButtonTextConfiguration = TextConfiguration(
+      kern: 1.0,
+      font: UIFont.systemFont(ofSize: 12.0),
+      color: UIColor.white
+    )
+    let inactiveNextButtonTextConfiguration = TextConfiguration(
+      kern: 1.0,
+      font: UIFont.systemFont(ofSize: 12.0),
+      color: UIColor.white.withAlphaComponent(0.5)
+    )
+    configuration.saveButton = SaveButtonConfiguration(
+      textConfiguration: nextButtonTextConfiguration,
+      inactiveTextConfiguration: inactiveNextButtonTextConfiguration,
+      text: "NEXT",
+      width: 68.0,
+      height: 41.0,
+      cornerRadius: 4.0,
+      backgroundColor: UIColor(red: 6, green: 188, blue: 193),
+      inactiveBackgroundColor: UIColor(red: 6, green: 188, blue: 193).withAlphaComponent(0.5)
+    )
     
     return configuration
   }
@@ -164,6 +196,12 @@ class ViewController: UIViewController {
     configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_nav_back_arrow"))
     configuration.playButtonImageName = "ic_play"
     
+    configuration.saveButton.background.color = UIColor(red: 6, green: 188, blue: 193)
+    configuration.saveButton.background.cornerRadius = 4.0
+    configuration.saveButton.width = 68.0
+    configuration.saveButton.height = 42.0
+    configuration.saveButton.title.style.color = .white
+    
     return configuration
   }
   
@@ -172,6 +210,12 @@ class ViewController: UIViewController {
     
     configuration.clearSelectionButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
     configuration.closeButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    
+    configuration.nextButtonConfiguration.backgroundColor = .clear
+    configuration.nextButtonConfiguration.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.galleryItemConfiguration.orderNumberTitleColor = .white
     
     return configuration
   }
@@ -182,6 +226,12 @@ class ViewController: UIViewController {
     configuration.multiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "multi_choise"))
     configuration.cancelMultiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
     configuration.backButtonConfiguration = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    
+    configuration.chooseSelectionButtonConfiguration.backgroundColor = .clear
+    configuration.chooseSelectionButtonConfiguration.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.galleryItemConfiguration.orderNumberTitleColor = .white
     
     return configuration
   }
@@ -429,18 +479,99 @@ class ViewController: UIViewController {
     return configuration
   }
   
-  private func updateFullScreenActivityConfiguration(_ configuration: FullScreenActivityConfiguration) -> FullScreenActivityConfiguration {
+  private func updateSpeedSelectionConfiguration(_ configuration: SpeedSelectionConfiguration) -> SpeedSelectionConfiguration {
     var configuration = configuration
     
-    configuration.activityIndicator = SmallActivityIndicatorConfiguration(
-      gradientType: .color(
-        SmallActivityIndicatorConfiguration.GradientColorConfiguration(
-          angle: 0.0,
-          colors: [UIColor(red: 6, green: 188, blue: 193).cgColor, UIColor.white.cgColor]
-        )
-      ),
-      activityLineWidth: 3.0
+    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    configuration.speedBarConfiguration.speedItemBackgroundColor = UIColor(red: 18, green: 38, blue: 58)
+    configuration.speedBarConfiguration.selectorColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.speedBarConfiguration.selectorTextColor = UIColor.white
+    
+    return configuration
+  }
+  
+  private func updateTrimGalleryVideoConfiguration(_ configuration: TrimGalleryVideoConfiguration) -> TrimGalleryVideoConfiguration {
+    var configuration = configuration
+    
+    configuration.backButtonConfiguration = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    configuration.playerControlConfiguration = PlayerControlConfiguration(
+      playButtonImageName: "ic_play",
+      pauseButtonImageName: "ic_trim_pause"
     )
+    
+    configuration.galleryVideoPartsConfiguration.addGalleryVideoPartImageName = "add_video_part"
+    configuration.deleteGalleryVideoPartButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_delete_video_part"))
+    
+    configuration.nextButtonConfiguration.backgroundColor = .clear
+    configuration.nextButtonConfiguration.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    configuration.editedTimeLabelConfiguration.errorColor = UIColor(red: 250, green: 62, blue: 118)
+    
+    return configuration
+  }
+  
+  private func updateMultiTrimConfiguration(_ configuration: MultiTrimConfiguration) -> MultiTrimConfiguration {
+    var configuration = configuration
+    
+    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    configuration.playerControlConfiguration = PlayerControlConfiguration(
+      playButtonImageName: "ic_play",
+      pauseButtonImageName: "ic_trim_pause"
+    )
+    
+    configuration.trimTimeLineConfiguration.draggerImageName = "trim_left"
+    configuration.trimTimeLineConfiguration.doneButtonConfiguration.style.color = UIColor(red: 6, green: 188, blue: 193)
+    configuration.trimTimeLineConfiguration.trimControlsColor = UIColor(red: 250, green: 62, blue: 118)
+    
+    configuration.saveButton.backgroundColor = .clear
+    configuration.saveButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    configuration.editedTimeLabelConfiguration.errorColor = UIColor(red: 250, green: 62, blue: 118)
+    
+    return configuration
+  }
+  
+  private func updateSingleTrimConfiguration(_ configuration: SingleTrimConfiguration) -> SingleTrimConfiguration {
+    var configuration = configuration
+    
+    configuration.playerControlConfiguration = PlayerControlConfiguration(
+      playButtonImageName: "ic_play",
+      pauseButtonImageName: "ic_trim_pause"
+    )
+    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    
+    configuration.trimTimeLineConfiguration.draggerImageName = "trim_left"
+    configuration.trimTimeLineConfiguration.trimControlsColor = UIColor(red: 250, green: 62, blue: 118)
+    
+    configuration.saveButton.backgroundColor = .clear
+    configuration.saveButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    configuration.editedTimeLabelConfiguration.errorColor = UIColor(red: 250, green: 62, blue: 118)
+    
+    return configuration
+  }
+  
+  private func updateFilterConfiguration(_ configuration: FilterConfiguration) -> FilterConfiguration {
+    var configuration = configuration
+    
+    configuration.cancelButton.textConfiguration.color = .white
+    configuration.doneButton.textConfiguration.color = .white
+    configuration.resetButton.backgroundColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.resetButton.cornerRadius = 4.0
+    configuration.resetButton.textConfiguration.color = .white
+    configuration.toolTipLabel.color = .white
+    configuration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
+  
+    configuration.effectItemConfiguration.cornerRadius = 4.0
+    
+    return configuration
+  }
+  
+  private func updateAlertConfiguration(_ configuration: AlertViewConfiguration) -> AlertViewConfiguration {
+    var configuration = configuration
+    
+    configuration.refuseButtonBackgroundColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.refuseButtonTextColor = UIColor.white
     
     return configuration
   }
