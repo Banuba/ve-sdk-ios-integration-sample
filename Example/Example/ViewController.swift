@@ -3,7 +3,7 @@ import BanubaVideoEditorSDK
 import BanubaMusicEditorSDK
 
 class ViewController: UIViewController {
-
+  
   private var videoEditorSDK: BanubaVideoEditorSDK?
   
   override func viewDidLoad() {
@@ -32,6 +32,10 @@ class ViewController: UIViewController {
     var config = VideoEditorConfig()
     
     config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
+    config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
+    config.galleryConfiguration = updateGalleryConfiguration(config.galleryConfiguration)
+    config.slideShowConfiguration = updateSlideShowConfiguration(config.slideShowConfiguration)
+    config.videoCoverSelectionConfiguration = updateVideCoverSelectionConfiguration(config.videoCoverSelectionConfiguration)
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
     
     return config
@@ -108,6 +112,104 @@ class ViewController: UIViewController {
     ]
     configuration.recordButtonConfiguration.normalImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.recordImageName = "ic_record_stop"
+    
+    return configuration
+  }
+  
+  private func updateEditorConfiguration(_ configuration: EditorConfiguration) -> EditorConfiguration {
+    var configuration = configuration
+    
+    configuration.additionalEffectsButtons = [
+      AdditionalEffectsButtonConfiguration(
+        identifier: .sticker,
+        imageConfiguration: ImageConfiguration(imageName: "ic_stickers_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_stickers_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .text,
+        imageConfiguration: ImageConfiguration(imageName: "ic_text_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_text_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .effects,
+        imageConfiguration: ImageConfiguration(imageName: "ic_filters_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_filters_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .masks,
+        imageConfiguration: ImageConfiguration(imageName: "ic_masks_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_masks_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .sound,
+        imageConfiguration: ImageConfiguration(imageName: "ic_audio_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_audio_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .speed,
+        imageConfiguration: ImageConfiguration(imageName: "ic_speed_effect_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_speed_effect_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .color,
+        imageConfiguration: ImageConfiguration(imageName: "ic_effects_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_effects_on")
+      )
+    ]
+    
+    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_nav_back_arrow"))
+    configuration.playButtonImageName = "ic_play"
+    
+    return configuration
+  }
+  
+  private func updateSlideShowConfiguration(_ configuration: SlideShowConfiguration) -> SlideShowConfiguration {
+    var configuration = configuration
+    
+    configuration.clearSelectionButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
+    configuration.closeButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    
+    return configuration
+  }
+  
+  private func updateGalleryConfiguration(_ configuration: GalleryConfiguration) -> GalleryConfiguration {
+    var configuration = configuration
+    
+    configuration.multiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "multi_choise"))
+    configuration.cancelMultiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
+    configuration.backButtonConfiguration = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
+    
+    return configuration
+  }
+  
+  private func updateVideCoverSelectionConfiguration(_ configuration: VideoCoverSelectionConfiguration) -> VideoCoverSelectionConfiguration {
+    var configuration = configuration
+    
+    configuration.cancelButton = TextButtonConfiguration(
+      style: TextConfiguration(
+        font: UIFont.boldSystemFont(ofSize: 18.0),
+        color: UIColor(red: 6, green: 188, blue: 193)
+      ),
+      text: "Cancel"
+    )
+    configuration.doneButton = RoundedButtonConfiguration(
+      textConfiguration: TextConfiguration(
+        font: UIFont.boldSystemFont(ofSize: 18.0),
+        color: UIColor(red: 6, green: 188, blue: 193)
+      ),
+      cornerRadius: 0.0,
+      backgroundColor: .clear
+    )
+    configuration.sliderColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.sliderMinTrackTintColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.toolTipLabel = TextConfiguration(
+      kern: 0.0,
+      font: UIFont.systemFont(ofSize: 16.0),
+      color: .white,
+      alignment: .left
+    )
+    
+    return configuration
   }
   
   private func updateMusicEditorConfigurtion(_ configuration: MusicEditorConfig) -> MusicEditorConfig {
