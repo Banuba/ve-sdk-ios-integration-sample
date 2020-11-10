@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
     config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
     config.textEditorConfiguration = updateTextEditorConfiguration(config.textEditorConfiguration)
+    config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
     
     return config
   }
@@ -424,6 +425,22 @@ class ViewController: UIViewController {
     configuration.doneButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
     configuration.fontButton.borderColor = UIColor(red: 6, green: 188, blue: 193).cgColor
     configuration.fontButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    
+    return configuration
+  }
+  
+  private func updateFullScreenActivityConfiguration(_ configuration: FullScreenActivityConfiguration) -> FullScreenActivityConfiguration {
+    var configuration = configuration
+    
+    configuration.activityIndicator = SmallActivityIndicatorConfiguration(
+      gradientType: .color(
+        SmallActivityIndicatorConfiguration.GradientColorConfiguration(
+          angle: 0.0,
+          colors: [UIColor(red: 6, green: 188, blue: 193).cgColor, UIColor.white.cgColor]
+        )
+      ),
+      activityLineWidth: 3.0
+    )
     
     return configuration
   }
