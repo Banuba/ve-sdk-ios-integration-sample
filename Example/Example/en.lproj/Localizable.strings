@@ -1,0 +1,393 @@
+/*
+1) Copy and paste this file in the host application
+2) Remove unused
+3) Override values
+*/
+
+// MARK: - Camera Screen
+
+/* Music selection screen title */
+"Music" = "Music";
+
+/* Audio track delete action */
+"Delete" = "Delete";
+
+/* Title on the screen of the voice recorder */
+"Voice" = "Voice";
+
+/* Used when the question is answered yes */
+"Yes" = "Yes";
+
+/* Used when answering a negative question */
+"No" = "No";
+
+/* Title of the message if an error occurs */
+"Error" = "Error";
+
+/* Move to next screen */
+"Next" = "Next";
+
+/* Publish video */
+"Publish" = "Publish";
+
+/* Return to the previous screen */
+"Back" = "Back";
+
+/* Ability to cancel */
+"Cancel" = "Cancel";
+
+/* Used in alert with Yes and No options when resetting filters. */
+"Do you want to stop capturing and editing the video?" = "Do you want to stop capturing and editing the video?";
+
+/* Used in alert with Yes and No options when resetting filters. */
+"Do you want to reset all?" = "Do you want to reset all?";
+
+/* Used in alert with Yes and No options */
+"Do you want to delete the last clip?" = "Do you want to delete the last clip?";
+
+/* Used in alert with Yes and No options */
+"Do you want to back to adding effects?" = "Return to editing effects?";
+
+/* Error message that appears when clicking the Next button in the camera when the first part of split mode is not recorded */
+"First part not recorded" = "First part not recorded";
+
+/* Error message received when trying to load a mask */
+"Mask not loaded" = "Mask not loaded";
+
+/* An error message that appears when you click the Next button in the camera, when the second part of the video in split mode is not equal in length to the first part */
+"Second part is too short" = "Second part is too short";
+
+/* In-camera beautification (facial correction) enabled */
+"Beautifier" = "Beautifier";
+
+/* The light (flashlight) in the camera is on */
+"Flash" = "Flash";
+
+/* An error message that appears in the camera when the length of the recorded video is less than the minimum allowed duration */
+"Too short. Please capture at least %d seconds" = "Too short. Please capture at least %d seconds";
+
+/* An error message that appears in the camera if the recorded video is longer than the maximum allowed length */
+"Maximum %d seconds." = "Maximum %d seconds.";
+
+/* Turning off the camera's auto timer */
+"Timer is off" = "Timer is off";
+
+/*'Seconds' for maximum */
+"Max length %d sec" = "Max length %d sec";
+
+/* 'Seconds' for short */
+"%d sec" = "%d sec";
+
+/* Screen title when multi-select mode is enabled on the video gallery screen */
+"Choose video" = "Choose video";
+
+/* Name of the button in multi-select mode, which confirms the selection of user files and continues the process further */
+"Choose" = "Choose";
+
+/* Built-in track volume description */
+"Sound" = "Sound";
+
+/* Add extra audio track action */
+"Add" = "Add";
+
+/* Enabling the countdown timer to automatically start shooting in the camera */
+"%i seconds timer is on" = "%i seconds timer is on";
+
+/* Step one of two to edit your avatar: take a photo */
+"Make cover photo" = "Make cover photo";
+
+/* The first step of two when taking a profile photo using the camera */
+"Step 1 / 2" = "Step 1 / 2";
+    
+/* Step two of two when taking a profile photo using the camera */
+"Step 2 / 2" = "Step 2 / 2";
+    
+/* Description of the zone selection screen for the user avatar when taking pictures on the profile screen */
+"Crop your profile photo for feed and comments" = "Crop your profile photo for feed and comments";
+
+/* Suggestion to choose a cover for a video before publishing it online */
+"Choose cover" = "CHOOSE COVER";
+    
+/* Hint on how to apply visual filters or time filter to video */
+"Press and hold" = "Press and hold";
+
+/* Hint on how to remove a piece of video */
+"Drag to remove" = "Drag to remove";
+ 
+/* Screen title with video from phone gallery */
+"Gallery" = "Gallery";
+    
+/* Shows instead of a blank screen on the Gallery screen */
+"No files found" = "No files found";
+
+/* Shows instead of a blank screen on the Gallery screen */
+"Videos should be longer than 5 seconds" = "Videos should be longer than 5 seconds";
+
+/* Activity signature */
+"LOADING" = "LOADING";
+
+/* Text under the trobber when downloading a video */
+"VIDEO IS\nLOADING" = "VIDEO IS\nLOADING";
+
+/* Text under the trobber when exporting a video */
+"EXPORTING" = "EXPORTING";
+
+/* Message about downloading videos from iCloud in the window for selecting videos saved on the mobile device */
+"Video is uploading from iCloud" = "Video is uploading from iCloud";
+
+/* Speed screen name */
+"Speed" = "Speed";
+
+/* Screen name which will be visible if enable in configuration */
+"Single Trim Video Screen Name" = "Trim Video";
+
+/* Screen name which will be visible if enable in configuration */
+"Multi Trim Video Screen Name" = "Multitrimmer";
+
+/* Screen name which will be visible if enable in configuration */
+"Multi Trim Video Item Screen Name" = "Trim Video";
+
+/* Recorder mask effect screen name */
+"Mask Effect Screen Name" = "Mask";
+
+/* Recorder color effect screen name */
+"Color Effect Screen Name" = "Effect";
+
+/* Recorder color effect screen name */
+"Color Effect Screen Name" = "Effect";
+
+/* Screen name which will be visible if enable in configuration */
+"Text editor color" = "Color";
+
+/* Screen name which will be visible if enable in configuration */
+"Choose Cover Screen Name" = "Choose cover";
+
+/* Screen name which will be visible if enable in configuration at color filters screen */
+"Screen colors" = "Screen colors";
+
+"Reach maximum video duration" = "Reach maximum video duration";
+
+/* Disable timer option titiel */
+"Off" = "Off";
+
+// MARK: - Gifphy Screen
+
+/* Hint, which is shown in the GIF objects search input field, if it is empty */
+"Search on giphy.com" = "Search on giphy.com";
+
+/* Ability to cancel the search for GIF objects */
+"Cancel" = "Cancel";
+
+/* Pictures not found by custom keyword */
+"No stickers found" = "No stickers found";
+
+/* A heading showing that there are problems with the Internet connection */
+"Problems with internet" = "Problems with internet";
+
+/* Advice to the user on further actions to solve this problem */
+"Check your connection and try again" = "Check your connection and try again";
+
+/* Ability to load GIF objects again */
+"Again" = "Again";
+
+// MARK: - ERROR MESSAGES
+/* Message when request failed with `statusCode` code */
+"HTTP Error %d" = "HTTP Error %d";
+
+/* Message displayed when there is no internet connection */
+"You don't seem to be connected to the internet. \nPlease try again" = "You don't seem to be connected to the internet. \nPlease try again";
+
+/* Error if the format of the response from the server does not match the expected */
+"Unknown data format" = "Unknown data format";
+
+/* Used in alert with options Cancel and In settings. */
+"Gallery failed to open. Please allow access in device settings" = "Gallery failed to open. Please allow access in device settings";
+
+/* Used in alert with options Cancel and In settings. */
+"Camera unavailable. Please allow access in device settings" = "Camera unavailable. Please allow access in device settings";
+
+/* Used in a message to the user when access to the camera is denied through special options in the phone settings (such as 'Parental Control') */
+"Restricting access to camera" = "Restricting access to camera";
+
+/* Used in alert with options Cancel and In settings */
+"Microphone unavailable. Please allow access in device settings" = "Microphone unavailable. Please allow access in device settings";
+
+/* Message when opening the trimmer screen */
+"Choose %i seconds" = "Choose %i seconds";
+
+// MARK: - Settings
+
+/* The name of the button, by clicking on which you can go to the Settings application. */
+"Settings" = "Settings";
+
+/* Used in an alert with Yes and No when resetting effects. */
+"Reset effects?" = "Reset effects?";
+
+/* Undo filters applied to video in the add filters screen */
+"Reset" = "Reset";
+
+/* Finish button title */
+"Done" = "Done";
+
+/* Used in alert with Yes and No options */
+"Upload video from device gallery?" = "Upload video from device gallery?";
+
+/*  Alert text on transition */
+"Upload photo from device gallery?" = "Upload photo from device gallery?";
+
+/* OK button title in alert */
+"OK" = "OK";
+
+/* Show the user when the disk space has run out during video recording and when he clicks the Record video button */
+"Not enough storage" = "Not enough storage";
+
+// MARK: - Effects names
+
+/* Soul effect name */
+"com.banuba.editor.effect.name.soul" = "Soul";
+
+/* TV Foam effect name */
+"com.banuba.editor.effect.name.tv-foam" = "TV-Foam";
+
+/* VHS video effect name */
+"com.banuba.editor.effect.name.vhs" = "VHS";
+
+/* Flash video effect name */
+"com.banuba.editor.effect.name.flash" = "Flash";
+
+/* Rave effect name */
+"com.banuba.editor.effect.name.rave" = "Rave";
+
+/* Glitch effect name */
+"com.banuba.editor.effect.name.glitch" = "Glitch";
+
+/* Acid whip effect name */
+"com.banuba.editor.effect.name.acid-whip" = "Acid whip";
+
+/* Zoom effect name */
+"com.banuba.editor.effect.name.zoom" = "Zoom";
+
+/* Cathode effect name */
+"com.banuba.editor.effect.name.cathode" = "Cathode";
+
+/* Polaroid effect name */
+"com.banuba.editor.effect.name.polaroid" = "Polaroid";
+
+/* Slow motion effect name */
+"com.banuba.editor.effect.name.slow-motion" = "Slow mo";
+
+/* Rapid effect name */
+"com.banuba.editor.effect.name.rapid" = "Rapid";
+
+// MARK: - GALLERY SCREEN / SLIDE SHOW
+
+/* No photo in the combined gallery */
+"No matching files found in gallery" = "No matching files found in gallery";
+
+/* No photo in gallery */
+"No matching photos found in gallery" = "No matching photos found in gallery";
+
+/* User has selected too few photos in the gallery */
+"Too few, at least %d photos needed" = "Too few, at least %d photos needed";
+
+/* User selected too many photos in the gallery */
+"Too much, %d - max number of photos" = "Too much, %d - max number of photos";
+
+/* Shown when the user tries to add a file to import beyond what is possible */
+"You can choose %i videos" = "You can choose %i videos";
+
+/* Failed to download photos for slideshow */
+"Error loading images" = "Error loading images";
+
+/* Failed to export a video */
+"Failed to create video" = "Failed to create video";
+
+// MARK: - Music Editor
+
+/* Delete track button title */
+"MusicEditor.Delete" = "Delete";
+
+/* Edit track volume button title */
+"MusicEditor.Volume" = "Volue";
+
+/* Edit track button title */
+"MusicEditor.Edit" = "Edit";
+
+/* Add track button title */
+"MusicEditor.Tracks" = "Tracks";
+
+/* Add effects button title */
+"MusicEditor.Effects" = "Effects";
+
+/* Add voice record button title */
+"MusicEditor.Record" = "Record";
+
+/* Video volume title */
+"MusicEditor.VideoVolume" = "Volume";
+
+/* Audio duration title */
+"MusicEditor.Duration" = "Duration";
+
+/* Cancel button title */
+"MusicEditor.Cancel" = "Cancel";
+
+/* Confirmation button title */
+"MusicEditor.Yes" = "Yes";
+
+/* Discarding button title */
+"MusicEditor.No" = "No";
+
+/* Confirmation message for discarding changes */
+"MusicEditor.Do you want to reset all?" = "Do you want to reset all?";
+
+/* Error message when a user tries to add tracks with reached limit */
+"MusicEditor.Max available tracks - %i" = "Max available tracks - %i";
+
+/* Elf filter title */
+"com.banuba.musicEditor.elf" = "Elf";
+/* Baritone filter title */
+"com.banuba.musicEditor.baritone" = "Baritone";
+/* Echo filter title */
+"com.banuba.musicEditor.echo" = "Echo";
+/* Giant filter title */
+"com.banuba.musicEditor.giant" = "Giant";
+/* Robot filter title */
+"com.banuba.musicEditor.robot" = "Robot";
+/* Squirrel filter title */
+"com.banuba.musicEditor.squirrel" = "Squirrel";
+
+// MARK: - Overlay Editor
+
+/* Delete overlay item button title */
+"OverlayEditor.Delete" = "Delete";
+
+/* Edit overlay item button title */
+"OverlayEditor.Edit" = "Edit";
+
+/* Add text button title */
+"OverlayEditor.Text" = "Text";
+
+/* Add sticker button title */
+"OverlayEditor.Sticker" = "Sticker";
+
+/* Cancel button title */
+"OverlayEditor.Cancel" = "Cancel";
+
+/* Done button title */
+"OverlayEditor.Done" = "Done";
+
+/* Confirmation button title */
+"OverlayEditor.Yes" = "Yes";
+
+/* Discarding button title */
+"OverlayEditor.No" = "No";
+
+/* Confirmation message for discarding changes */
+"OverlayEditor.Do you want to reset all?" = "Do you want to reset all?";
+
+// MARK: - Hands-free
+
+"hands.free.timer.title" = "Сountdown";
+"hands.free.video.mode.title" = "Hands-free video mode";
+"hands.free.video.drag.title" = "Drag to set video duration:";
+"hands.free.btn.title" = "START RECORDING";
