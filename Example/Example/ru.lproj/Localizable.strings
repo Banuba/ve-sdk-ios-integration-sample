@@ -1,0 +1,372 @@
+// MARK: - Camera Screen
+
+/* Music selection screen title */
+"Music" = "Музыка";
+
+/* Audio track delete action */
+"Delete" = "Удалить";
+
+/* Title on the screen of the voice recorder */
+"Voice" = "Да";
+
+/* Used when the question is answered yes */
+"Yes" = "Да";
+
+/* Used when answering a negative question */
+"No" = "Нет";
+
+/* Title of the message if an error occurs */
+"Error" = "Ошибка";
+
+/* Move to next screen */
+"Next" = "Дальше";
+
+/* Publish video */
+"Publish" = "Опубликовать";
+
+/* Return to the previous screen */
+"Back" = "Назад";
+
+/* Ability to cancel */
+"Cancel" = "Отмена";
+
+"Reach maximum video duration" = "Достигнута максимальная длина видео";
+
+/* Disable timer option titiel */
+"Off" = "Выкл.";
+
+/* Used in alert with Yes and No options when resetting filters. */
+"Do you want to stop capturing and editing the video?" = "Прервать съемку и монтаж нового видео?";
+
+/* Used in alert with Yes and No options when resetting filters. */
+"Do you want to reset all?" = "Сбросить всё?";
+
+/* Used in alert with Yes and No options */
+"Do you want to delete the last clip?" = "Удалить последний снятый отрезок видео?";
+
+/* Used in alert with Yes and No options */
+"Return to editing effects?" = "Вернуться к добавлению эффектов?";
+
+/* Error message that appears when clicking the Next button in the camera when the first part of split mode is not recorded */
+"First part not recorded" = "Первая часть сплита не записана";
+
+/* Error message received when trying to load a mask */
+"Mask not loaded" = "Маска не загружена";
+
+/* An error message that appears when you click the Next button in the camera, when the second part of the video in split mode is not equal in length to the first part */
+"Second part is too short" = "Вторая часть слишком короткая";
+
+/* In-camera beautification (facial correction) enabled */
+"Beautifier" = "Бьютификатор";
+
+/* The light (flashlight) in the camera is on */
+"Flash" = "Подсветка";
+
+/* An error message that appears in the camera when the length of the recorded video is less than the minimum allowed duration */
+"Too short. Please capture at least %d seconds" = "Слишком короткий отрезок, нужно снять хотя бы %d секунд";
+
+/* An error message that appears in the camera if the recorded video is longer than the maximum allowed length */
+ "Maximum %d seconds." = "Максимум %d секунд";
+
+/* Turning off the camera's auto timer */
+"Timer is off" = "Таймер выключен";
+
+/* Pictures not found by custom keyword */
+"No stickers found" = "Стикеры не найдены";
+
+/*'Seconds' for maximum */
+"Max length %d sec" = "Максимум %d сек";
+
+/* 'Seconds' for short */
+"%d sec" = "%d сек";
+
+/* Screen title when multi-select mode is enabled on the video gallery screen */
+"Choose video" = "Выберете видео";
+
+/* Name of the button in multi-select mode, which confirms the selection of user files and continues the process further */
+"Choose" = "Выбрать";
+
+/* Built-in track volume description */
+"Sound" = "Звук";
+
+/* Add extra audio track action */
+"Add" = "Добавить";
+
+/* Enabling the countdown timer to automatically start shooting in the camera */
+"%i seconds timer is on" = "Таймер включен на %i секунд";
+
+/* Step one of two to edit your avatar: take a photo */
+"Make cover photo" = "Пожалуйста, сделай фото на обложку";
+
+/* The first step of two when taking a profile photo using the camera */
+"Step 1 / 2" = "Шаг 1 / 2";
+    
+/* Step two of two when taking a profile photo using the camera */
+"Step 2 / 2" = "Шаг 2 / 2";
+    
+/* Description of the zone selection screen for the user avatar when taking pictures on the profile screen */
+"Crop your profile photo for feed and comments" = "Круглая аватарка нужна для потока и комментариев";
+
+/* Suggestion to choose a cover for a video before publishing it online */
+"Choose cover" = "Пожалуйста, выбери обложку для видео";
+    
+/* Hint on how to apply visual filters or time filter to video */
+"Press and hold" = "Нажми и держи";
+
+/* Hint on how to remove a piece of video */
+"Drag to remove" = "Перетащи для того, чтобы удалить";
+ 
+/* Screen title with video from phone gallery */
+"Gallery" = "Галерея";
+    
+/* Shows instead of a blank screen on the Gallery screen */
+"No files found" = "В галерее нет подходящих видео";
+
+/* Shows instead of a blank screen on the Gallery screen */
+"Videos should be longer than 5 seconds" = "Вполне возможно, что они короче 5 секунд";
+
+/* Activity signature */
+"LOADING" = "ЗАГРУЗКА";
+
+/* Text under the trobber when downloading a video */
+"VIDEO IS\nLOADING" = "ВИДЕО\nСКАЧИВАЕТСЯ";
+
+/* Message about downloading videos from iCloud in the window for selecting videos saved on the mobile device */
+"Video is uploading from iCloud" = "Видео загружаются из iCloud";
+
+/* Speed screen name */
+"Speed" = "Скорость";
+
+/* Screen name which will be visible if enable in configuration */
+"Single Trim Video Screen Name" = "Обрезать видео";
+
+/* Screen name which will be visible if enable in configuration */
+"Multi Trim Video Screen Name" = "Обрезать несколько видео";
+
+/* Screen name which will be visible if enable in configuration */
+"Multi Trim Video Item Screen Name" = "Обрезать видео";
+
+/* Recorder mask effect screen name */
+"Mask Effect Screen Name" = "Маска";
+
+/* Recorder color effect screen name */
+"Color Effect Screen Name" = "Цвет";
+
+/* Screen name which will be visible if enable in configuration */
+"Text editor color" = "Цвет";
+
+/* Screen name which will be visible if enable in configuration */
+"Choose Cover Screen Name" = "Выберете обложку";
+
+/* Screen name which will be visible if enable in configuration at color filters screen */
+"Screen colors" = "Цвет видео";
+
+// MARK: - Gifphy Screen
+
+/* Hint, which is shown in the GIF objects search input field, if it is empty */
+
+"Search on giphy.com" = "Поиск на giphy.com";
+
+/* Ability to cancel the search for GIF objects */
+"Cancel" = "Отмена";
+
+/* Pictures not found by custom keyword */
+"No stickers found" = "Стикеры не найдены";
+
+/* A heading showing that there are problems with the Internet connection */
+"Problems with internet" = "Проблемы с интернетом";
+
+/* Advice to the user on further actions to solve this problem */
+"Check your connection and try again" = "Проверьте подключение и попробуйте ещё раз";
+
+/* Ability to load GIF objects again */
+"Again" = "Ещё раз";
+
+// MARK: - ERROR MESSAGES
+/* Message when request failed with `statusCode` code */
+"HTTP Error %d" = "Ошибка HTTP %d";
+
+/* Message displayed when there is no internet connection */
+"You don't seem to be connected to the internet. \nPlease try again" = "Не получается соединиться с интернетом.\nПожалуйста, попробуй еще раз";
+
+/* Error if the format of the response from the server does not match the expected */
+"Unknown data format" = "Неожиданный формат данных";
+
+/* Used in alert with options Cancel and In settings. */
+"Gallery failed to open. Please allow access in device settings" = "Пожалуйста, разреши доступ к галерее в настройках";
+
+/* Used in alert with options Cancel and In settings. */
+"Camera unavailable. Please allow access in device settings" = "Пожалуйста, разреши доступ к камере в настройках";
+
+/* Used in a message to the user when access to the camera is denied through special options in the phone settings (such as 'Parental Control') */
+"Restricting access to camera" = "Доступ к камере ограничен";
+
+/* Used in alert with options Cancel and In settings */
+"Microphone unavailable. Please allow access in device settings" = "Пожалуйста, разреши доступ к микрофону в настройках";
+
+/* Message when opening the trimmer screen */
+"Choose %i seconds" = "Выберете %d секунд";
+
+// MARK: - Settings
+
+/* The name of the button, by clicking on which you can go to the Settings application. */
+"Settings" = "В настройки";
+
+/* Used in an alert with Yes and No when resetting effects. */
+"Reset effects?" = "Сбросить эффекты?";
+
+/* Undo filters applied to video in the add filters screen */
+"Reset" = "Сбросить";
+
+/* Finish button title */
+"Done" = "Готово";
+
+/* Used in alert with Yes and No options */
+"Upload video from device gallery?" = "Можно взять видео из галереи?";
+
+/*  Alert text on transition */
+"Upload photo from device gallery?" = "Можно взять фото из галереи?";
+
+/* OK button title in alert */
+"OK" = "ОК";
+
+/* Show the user when the disk space has run out during video recording and when he clicks the Record video button */
+"Not enough storage" = "Недостаточно места на телефоне";
+
+// MARK: - Effects names
+
+/* Soul effect name */
+"com.banuba.editor.effect.name.soul" = "Soul";
+
+/* TV Foam effect name */
+"com.banuba.editor.effect.name.tv-foam" = "TV-Foam";
+
+/* VHS video effect name */
+"com.banuba.editor.effect.name.vhs" = "VHS";
+
+/* Flash video effect name */
+"com.banuba.editor.effect.name.flash" = "Flash";
+
+/* Rave effect name */
+"com.banuba.editor.effect.name.rave" = "Rave";
+
+/* Glitch effect name */
+"com.banuba.editor.effect.name.glitch" = "Glitch";
+
+/* Acid whip effect name */
+"com.banuba.editor.effect.name.acid-whip" = "Acid whip";
+
+/* Zoom effect name */
+"com.banuba.editor.effect.name.zoom" = "Zoom";
+
+/* Cathode effect name */
+"com.banuba.editor.effect.name.cathode" = "Cathode";
+
+/* Polaroid effect name */
+"com.banuba.editor.effect.name.polaroid" = "Polaroid";
+
+/* Slow motion effect name */
+"com.banuba.editor.effect.name.slow-motion" = "Slow mo";
+
+/* Rapid effect name */
+"com.banuba.editor.effect.name.rapid" = "Rapid";
+
+// MARK: - GALLERY SCREEN / SLIDE SHOW
+
+/* No photo in the combined gallery */
+"No matching files found in gallery" = "В галерее не нашлось подходящих файлов";
+
+/* No photo in gallery */
+"No matching photos found in gallery" = "В галерее не нашлось подходящих фото";
+
+/* User has selected too few photos in the galleryv */
+"Too few, at least %d photos needed" = "Слишком мало, надо хотя бы %d фото";
+
+/* Shown when the user tries to add a file to import beyond what is possible */
+"You can choose %i videos" = "Вы можете выбрать %i видео";
+
+/* User selected too many photos in the gallery */
+"Too much, %d - max number of photos" = "Слишком много, %d – макс количество фото";
+
+/* Failed to download photos for slideshow */
+"Error loading images" = "Ошибка загрузки изображений";
+
+/* Failed to export a video */
+"Failed to create video" = "Не удалось создать видео";
+
+// MARK: - Music Editor
+
+/* Delete track button title */
+"MusicEditor.Delete" = "Удалить";
+
+/* Edit track volume button title */
+"MusicEditor.Volume" = "Громкость";
+
+/* Edit track button title */
+"MusicEditor.Edit" = "Редактировать";
+
+/* Add track button title */
+"MusicEditor.Tracks" = "Треки";
+
+/* Add effects button title */
+"MusicEditor.Effects" = "Эффекты";
+
+/* Add voice record button title */
+"MusicEditor.Record" = "Голос";
+
+/* Video volume title */
+"MusicEditor.VideoVolume" = "Громкость";
+
+/* Audio duration title */
+"MusicEditor.Duration" = "Длительность";
+
+/* Cancel button title */
+"MusicEditor.Cancel" = "Отменить";
+
+/* Confirmation button title */
+"MusicEditor.Yes" = "Да";
+
+/* Discarding button title */
+"MusicEditor.No" = "Не";
+
+/* Confirmation message for discarding changes */
+"MusicEditor.Do you want to reset all?" = "Желаете сбросить все изменения?";
+
+/* Error message when a user tries to add tracks with reached limit */
+"MusicEditor.Max available tracks - %i" = "Максимальное количество треков - %i";
+
+// MARK: - Overlay Editor
+
+/* Delete overlay item button title */
+"OverlayEditor.Delete" = "Удалить";
+
+/* Edit overlay item button title */
+"OverlayEditor.Edit" = "Редактировать";
+
+/* Add text button title */
+"OverlayEditor.Text" = "Текст";
+
+/* Add sticker button title */
+"OverlayEditor.Sticker" = "Стикер";
+
+/* Cancel button title */
+"OverlayEditor.Cancel" = "Отменить";
+
+/* Done button title */
+"OverlayEditor.Done" = "Готово";
+
+/* Confirmation button title */
+"OverlayEditor.Yes" = "Да";
+
+/* Discarding button title */
+"OverlayEditor.No" = "Нет";
+
+/* Confirmation message for discarding changes */
+"OverlayEditor.Do you want to reset all?" = "Желаете сбросить все изменения?";
+
+// MARK: - Hands-free
+
+"hands.free.timer.title" = "Обратный отсчет";
+"hands.free.video.mode.title" = "Режим автозаписи";
+"hands.free.video.drag.title" = "Перетащи для измененич длительности:";
+"hands.free.btn.title" = "НАЧАТЬ ЗАПИСЬ";
