@@ -168,8 +168,8 @@ class ViewController: UIViewController {
       ),
       AdditionalEffectsButtonConfiguration(
         identifier: .effects,
-        imageConfiguration: ImageConfiguration(imageName: "ic_filters_off"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_filters_on")
+        imageConfiguration: ImageConfiguration(imageName: "ic_effects_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_effects_on")
       ),
       AdditionalEffectsButtonConfiguration(
         identifier: .masks,
@@ -182,14 +182,14 @@ class ViewController: UIViewController {
         selectedImageConfiguration: ImageConfiguration(imageName: "ic_audio_on")
       ),
       AdditionalEffectsButtonConfiguration(
-        identifier: .speed,
-        imageConfiguration: ImageConfiguration(imageName: "ic_speed_effect_off"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_speed_effect_on")
+        identifier: .time,
+        imageConfiguration: ImageConfiguration(imageName: "ic_speed_effects_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_speed_effects_on")
       ),
       AdditionalEffectsButtonConfiguration(
         identifier: .color,
-        imageConfiguration: ImageConfiguration(imageName: "ic_effects_off"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_effects_on")
+        imageConfiguration: ImageConfiguration(imageName: "ic_filters_off"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "ic_filters_on")
       )
     ]
     
