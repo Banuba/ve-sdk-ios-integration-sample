@@ -62,12 +62,6 @@ class ViewController: UIViewController {
         initVideoEditor()
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidLoad()
-    
-        initVideoEditor()
-    }
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
