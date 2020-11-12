@@ -45,7 +45,7 @@ If you are not using any dependency manager you can intagrate Video Editor SDK m
 
 1) Download the SDK [here](), then simply drag all frameworks required by VideoEditorSDK into the *Frameworks, Libraries, and Embedded Content* section of your target and make sure that the *Embed* settings are set to *Embed & Sign*:
 
- ![img](screenshots/manually_adding_frameworks.png)
+ ![img](Screenshots/manually_adding_frameworks.png)
 
 
 ### Start Video Editor from ViewController
