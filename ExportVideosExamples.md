@@ -13,7 +13,7 @@ To export video after finishing editing use these several methods:
   /// - Parameters:
   ///   - fileUrl: url where exported video should be stored.
   ///   - completion: completion: (success, error, image), execute on background thread.
-  /// Preconfigue WatermarkConfiguration in configuration file otherwise will be used default configuration.
+  /// Preconfigue WatermarkConfiguration in configuration file otherwise will be used default configuration. Default cover image video indent is 0.5 second.
   func exportVideoWithCoverImage(fileUrl: URL, completion: @escaping (Bool, Error?, UIImage) -> Void)
   
   /// Export several configurable video
@@ -110,3 +110,32 @@ class ExportVideoInfo {
 }
 ```
   
+## Configure video watermark
+``` swift
+/// The watermark configuration.
+public struct WatermarkConfiguration {
+
+  /// The watermark image configuration
+  public var watermark: ImageConfiguration
+
+  /// The watermark size configuration.
+  public var size: CGSize
+
+  /// The watermark offset from edges.
+  public var sharedOffset: CGFloat
+
+  /// The watermark position.
+  public var position: WatermarkPosition
+  
+  /// The watermark possible positions.
+  public enum WatermarkPosition {
+    case leftTop
+    case leftBottom
+    case rightTop
+    case rightBottom
+  }
+
+  ...
+
+}
+```
