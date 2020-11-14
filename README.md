@@ -11,7 +11,7 @@ The Most Powerful Augmented Reality Video Editor SDK for Mobile
 - [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). *Optional*
 
 ## Free Trial
-Before purchasing the license cost you have 1-month free trial period.  
+Before purchasing the license cost you have a 1-month free trial period.  
 1. Sign NDA. [Contact Us](https://www.banuba.com/video-editor-sdk#form)
 1. Clone this repository
 1. Request [tokens](##Tokens)
@@ -26,9 +26,9 @@ Since Banuba VE SDK includes Face AR SDK it is required to specify Face AR token
 
 ## Getting Started
 ### CocoaPods
-VideoEditorSDK is available via CocoaPods. If you're new to CocoaPods, [this Getting Started Guide will help you](https://guides.cocoapods.org/using/getting-started.html). CocoaPods is the preferred and simpliest way to use the VE SDK.
+VideoEditorSDK is available via CocoaPods. If you're new to CocoaPods, [this Getting Started Guide will help you](https://guides.cocoapods.org/using/getting-started.html). CocoaPods is the preferred and simplest way to use the VE SDK.
 
-The example of Podfile lines whitch you have to add you can find [here](Example/Podfile)
+The example of Podfile lines which you have to add you can find [here](Example/Podfile)
 
 1. Make sure to have CocoaPods installed, e.g., via [Homebrew](https://brew.sh):
    ```sh
@@ -41,7 +41,7 @@ The example of Podfile lines whitch you have to add you can find [here](Example/
 3. Open `Example.xcworkspace` with Xcode and run the project.
 
 ### Manually
-If you are not using any dependency manager you can intagrate Video Editor SDK manually via a dynamic framework.
+If you are not using any dependency manager you can integrate Video Editor SDK manually via a dynamic framework.
 
 1) Download the SDK [here](), then simply drag all frameworks required by VideoEditorSDK into the *Frameworks, Libraries, and Embedded Content* section of your target and make sure that the *Embed* settings are set to *Embed & Sign*:
 
@@ -100,6 +100,9 @@ extension ViewController: BanubaVideoEditorSDKDelegate {
 ```  
 
 ### Configure export flow
+
+Example export video flow see [here](/Example/Example/ViewController.swift#L599).
+Detailed export video features you can find [here](ExportVideosExamples.md)
 
 ### Configure screens  
 The SDK allows to override icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
