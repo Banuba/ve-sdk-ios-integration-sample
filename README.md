@@ -100,7 +100,35 @@ extension ViewController: BanubaVideoEditorSDKDelegate {
 ```  
 
 ### Configure export flow
-
+To export video after finishing editing use these several methods:
+``` swift
+ /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution
+  /// - Parameters:
+  ///   - fileUrl: url where exported video should be stored.
+  ///   - completion: completion: (success, error), execute on background thread.
+  func exportVideo(fileUrl: URL, completion: @escaping (Bool, Error?) -> Void)
+  
+  /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution and cover image
+  /// - Parameters:
+  ///   - fileUrl: url where exported video should be stored.
+  ///   - completion: completion: (success, error, image), execute on background thread.
+  /// Preconfigue WatermarkConfiguration in configuration file otherwise will be used default configuration. Default cover image video indent is 0.5 second.
+  func exportVideoWithCoverImage(fileUrl: URL, completion: @escaping (Bool, Error?, UIImage) -> Void)
+  
+  /// Export several configurable video
+  /// - Parameters:
+  ///   - configurations: contains configurations for exporting videos such as file url,
+  ///    watermark and video quality
+  ///   - completion: completion: (success, error), execute on the background thread.
+  func exportVideos(using configurations: [ExportVideoConfiguration], completion: (Bool,Error?)->Void)
+  
+  /// Export several configurable video with cover image
+  /// - Parameters:
+  ///   - configurations: contains configurations for exporting videos such as file url,
+  ///    watermark and video quality
+  ///   - completion: completion: (success, error, image), execute on the background thread.
+  func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
+```  
 Example export video flow see [here](/Example/Example/ViewController.swift#L599).
 Detailed export video features you can find [here](ExportVideosExamples.md)
 

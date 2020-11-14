@@ -21,14 +21,14 @@ To export video after finishing editing use these several methods:
   ///   - configurations: contains configurations for exporting videos such as file url,
   ///    watermark and video quality
   ///   - completion: completion: (success, error), execute on the background thread.
-  public func exportVideos(using configurations: [ExportVideoConfiguration], completion: (Bool,Error?)->Void)
+  func exportVideos(using configurations: [ExportVideoConfiguration], completion: (Bool,Error?)->Void)
   
   /// Export several configurable video with cover image
   /// - Parameters:
   ///   - configurations: contains configurations for exporting videos such as file url,
   ///    watermark and video quality
   ///   - completion: completion: (success, error, image), execute on the background thread.
-  public func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
+  func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
 ```  
 
 ## Export video customization
