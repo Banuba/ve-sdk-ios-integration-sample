@@ -1,7 +1,6 @@
-# Banuba Video Editor SDK Integration sample for iOS
+# Export flow
 
-## Export video ways
-To export video after finishing editing use these several methods:
+Please consider the following examples to configure your export flow.
 ``` swift
  /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution
   /// - Parameters:
@@ -31,8 +30,8 @@ To export video after finishing editing use these several methods:
   func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
 ```  
 
-## Export video customization
-To setup export video parameters use ExportVideoConfiguration:
+## Export video configuration
+Below is the sample with available configurations for export video.
 ``` swift
 /// Export Video Configuration
 struct ExportVideoConfiguration {
@@ -110,7 +109,7 @@ class ExportVideoInfo {
 }
 ```
   
-## Configure video watermark
+## Configure a watermark on exported video
 ``` swift
 /// The watermark configuration.
 public struct WatermarkConfiguration {

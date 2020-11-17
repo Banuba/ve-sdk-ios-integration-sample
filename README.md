@@ -14,19 +14,19 @@ The Most Powerful Augmented Reality Video Editor SDK for Mobile
 Before purchasing the license cost you have a 1-month free trial period.  
 1. Sign NDA. [Contact Us](https://www.banuba.com/video-editor-sdk#form)
 1. Clone this repository
-1. Request [tokens](##Tokens)
+1. Request [token](##Token)
 1. Put tokens in the app
 1. Start the sample
 1. Follow [integration guide](##Getting-Started) to bring your customizations
 
-## Tokens  
+## Token
 Banuba uses tokens for [Face AR SDK](https://www.banuba.com/facear-sdk/face-filters) and VE SDK products to differentiate our clients, protects features and technology. SDK requires up to date tokens, otherwise SDK will crash the app.  
 Since Banuba VE SDK includes Face AR SDK it is required to specify Face AR token for applying AR effects. Please, put the token [here](/Example/Example/ViewController.swift#L19)
 
 
 ## Getting Started
 ### CocoaPods
-VideoEditorSDK is available via CocoaPods. If you're new to CocoaPods, [this Getting Started Guide will help you](https://guides.cocoapods.org/using/getting-started.html). CocoaPods is the preferred and simplest way to use the VE SDK.
+VideoEditorSDK is available via CocoaPods. If you're new to CocoaPods, [this Getting Started Guide will help you](https://guides.cocoapods.org/using/getting-started.html). CocoaPods is the preferred and the simplest way get the VE SDK.
 
 The example of Podfile lines which you have to add you can find [here](Example/Podfile)
 
