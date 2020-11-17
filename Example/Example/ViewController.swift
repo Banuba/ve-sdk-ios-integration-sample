@@ -2,6 +2,8 @@ import UIKit
 import BanubaVideoEditorSDK
 import BanubaMusicEditorSDK
 import BanubaOverlayEditorSDK
+import AVFoundation
+import AVKit
 
 class ViewController: UIViewController {
   
@@ -592,12 +594,48 @@ class ViewController: UIViewController {
   }
 }
 
+// MARK: - Export example
+extension ViewController {
+  func exportVideo() {
+    let manager = FileManager.default
+    let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
+    if manager.fileExists(atPath: videoURL.path) {
+      try? manager.removeItem(at: videoURL)
+    }
+    
+    let exportConfiguration = ExportVideoConfiguration(
+      fileURL: videoURL,
+      quality: .preset(AVAssetExportPresetHighestQuality),
+      watermarkConfiguration: nil
+    )
+    videoEditorSDK?.exportVideos(using: [exportConfiguration], completion: { (success, error) in
+      DispatchQueue.main.async {
+        // Clear video editor session data
+        self.videoEditorSDK?.clearSessionData()
+        if success {
+          self.playVideoAtURL(videoURL)
+        }
+      }
+    })
+  }
+  
+  private func playVideoAtURL(_ videoURL: URL) {
+    let player = AVPlayer(url: videoURL)
+    let playerController = AVPlayerViewController()
+    playerController.player = player
+    present(playerController, animated: true) {
+        player.play()
+    }
+  }
+}
+
 extension ViewController: BanubaVideoEditorSDKDelegate {
   func videoEditorDidCancel(_ videoEditor: BanubaVideoEditorSDK) {
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
   
   func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK) {
+    exportVideo()
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
 }
