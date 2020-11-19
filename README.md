@@ -29,7 +29,7 @@ Since Banuba VE SDK includes Face AR SDK it is required to specify Face AR token
 1. Paste provided Banuba ssh private key into .ssh folder on your Mac.
 2. Add ssh private key to SSH authentication agent using `passphrase` provided by Banuba:
    ```sh
-   sudo ssh-add <banuba-ssh-file>
+   sudo ssh-add <banuba-ssh-private-key-file>
    ```
 ### CocoaPods
 VideoEditorSDK is available via CocoaPods. If you're new to CocoaPods, [this Getting Started Guide will help you](https://guides.cocoapods.org/using/getting-started.html). CocoaPods is the preferred and the simplest way get the VE SDK.
