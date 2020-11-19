@@ -25,9 +25,9 @@ Since Banuba VE SDK includes Face AR SDK it is required to specify Face AR token
 
 
 ## Getting Started
-### Grant Access to Banuba repos via ssh
+### Setup SSH key for GitHub
 1. Paste provided Banuba ssh private key into .ssh folder on your Mac.
-2. Add ssh private key to SSH authentication agent using `passphrase` provided by Banuba:
+2. Add ssh private key to SSH authentication agent using `passphrase` provided by Banuba. Please make the following command in Terminal:
    ```sh
    sudo ssh-add <banuba-ssh-private-key-file>
    ```
