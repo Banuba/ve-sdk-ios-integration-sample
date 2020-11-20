@@ -17,11 +17,11 @@ Before purchasing the license cost you have a 1-month free trial period.
 1. Request [token](#Token)
 1. Put tokens in the app
 1. Start the sample
-1. Follow [integration guide](##Getting-Started) to bring your customizations
+1. Follow [integration guide](#Getting-Started) to bring your customizations
 
 ## Token
 Banuba uses tokens for [Face AR SDK](https://www.banuba.com/facear-sdk/face-filters) and VE SDK products to differentiate our clients, protects features and technology. SDK requires up to date tokens, otherwise SDK will crash the app.  
-Since Banuba VE SDK includes Face AR SDK it is required to specify Face AR token for applying AR effects. Please, put the token [here](/Example/Example/ViewController.swift#L19)
+Since Banuba VE SDK includes Face AR SDK it is required to specify Face AR token for applying AR effects. Please, put the token [here](/Example/Example/ViewController.swift#L21)
 
 
 ## Getting Started
