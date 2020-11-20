@@ -48,14 +48,6 @@ The example of Podfile lines which you have to add you can find [here](Example/P
    ```
 1. Open `Example.xcworkspace` with Xcode and run the project.
 
-### Manually
-If you are not using any dependency manager you can integrate Video Editor SDK manually via a dynamic framework.
-
-1) Download the SDK [here](), then simply drag all frameworks required by VideoEditorSDK into the *Frameworks, Libraries, and Embedded Content* section of your target and make sure that the *Embed* settings are set to *Embed & Sign*:
-
- ![img](Screenshots/manually_adding_frameworks.png)
-
-
 ### Start Video Editor from ViewController
 ``` swift
 import BanubaVideoEditorSDK
