@@ -44,7 +44,6 @@ The example of Podfile lines which you have to add you can find [here](Example/P
    ```
 1. Install VideoEditorSDK for the provided Xcode workspace with:
    ```sh
-   pod init
    pod install
    ```
 1. Open `Example.xcworkspace` with Xcode and run the project.
