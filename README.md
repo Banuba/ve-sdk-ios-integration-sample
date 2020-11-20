@@ -130,7 +130,7 @@ To export video after finishing editing use these several methods:
   func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
 ```  
 Example export video flow see [here](/Example/Example/ViewController.swift#L599).
-Detailed export video features you can find [here](ExportVideosExamples.md)
+Detailed export video features you can find [here](export_flow.md)
 
 ### Configure screens  
 The SDK allows to override icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
