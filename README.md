@@ -10,18 +10,11 @@ The Most Powerful Augmented Reality Video Editor SDK for Mobile
 ## Dependencies
 - [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). *Optional*
 
-## Free Trial
-Before purchasing the license cost you have a 1-month free trial period.  
-1. Sign NDA. [Contact Us](https://www.banuba.com/video-editor-sdk#form)
-1. Clone this repository
-1. Request [token](#Token)
-1. Put tokens in the app
-1. Start the sample
-1. Follow [integration guide](#Getting-Started) to bring your customizations
+## Free Trial  
+We offer а free 14-days trial, so you have the opportunity to thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us via [sales@banuba.com](mailto:sales@banuba.com). They will send you the trial token. Put it into the app, as described below, to run the SDK.  
 
 ## Token
-Banuba uses tokens for [Face AR SDK](https://www.banuba.com/facear-sdk/face-filters) and VE SDK products to differentiate our clients, protects features and technology. SDK requires up to date tokens, otherwise SDK will crash the app.  
-Since Banuba VE SDK includes Face AR SDK it is required to specify Face AR token for applying AR effects. Please, put the token [here](/Example/Example/ViewController.swift#L21)
+Banuba uses tokens for Face AR SDK to manange features and protect the technology. SDK usage requires up to date tokens (trial or commercial one). When tokens expires, the SDK features became not available. The token should be put [here](/Example/Example/ViewController.swift#L21)
 
 
 ## Getting Started
