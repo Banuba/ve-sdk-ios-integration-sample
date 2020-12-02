@@ -1,6 +1,5 @@
-# Banuba Video Editor SDK Integration sample for iOS
-[Banuba VE SDK](https://www.banuba.com/video-editor-sdk)
-The Most Powerful Augmented Reality Video Editor SDK for Mobile
+# Banuba AI Video Editor SDK. Integration sample for iOS.
+Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to add a fully-functional video editor with Tiktok-like features, AR filters and effects in your app. The following guide explains how you can integrate our SDK into your iOS project. 
 
 ## Requirements
 - Swift 5+
@@ -11,31 +10,31 @@ The Most Powerful Augmented Reality Video Editor SDK for Mobile
 - [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). *Optional*
 
 ## Free Trial  
-We offer а free 14-days trial, so you have the opportunity to thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us via [sales@banuba.com](mailto:sales@banuba.com). They will send you the trial token. Put it into the app, as described below, to run the SDK.  
+We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token. Put it into the app, as described below, to run the SDK.  
 
 ## Token
-Banuba uses tokens for Face AR SDK to manange features and protect the technology. SDK usage requires up to date tokens (trial or commercial one). When tokens expires, the SDK features became not available. The token should be put [here](/Example/Example/ViewController.swift#L21)
+To integrate the Video Editor SDK in your project, you need to have the client token. It helps us to prevent our software from inappropriate and unconditioned usage. The token is unique to each client and valid for a specific time. Once it expires, the access to SDK features will be blocked automatically. The token should be put [here](/Example/Example/ViewController.swift#L21)
 
 
 ## Getting Started
 ### Setup SSH key for GitHub
-1. Paste provided Banuba ssh private key into .ssh folder on your Mac.
-2. Add ssh private key to SSH authentication agent using `passphrase` provided by Banuba. Please make the following command in Terminal:
+1. Paste Banuba ssh private key into .ssh folder on your Mac.
+2. Add ssh private key to SSH authentication agent using `passphrase` provided by Banuba. Please, use the following command in Terminal:
    ```sh
    sudo ssh-add <banuba-ssh-private-key-file>
    ```
 ### CocoaPods
-VideoEditorSDK is available via CocoaPods. If you're new to CocoaPods, [this Getting Started Guide will help you](https://guides.cocoapods.org/using/getting-started.html). CocoaPods is the preferred and the simplest way get the VE SDK.
+Video Editor SDK is available via CocoaPods. If you're new to CocoaPods, refer to the [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html). CocoaPods is the preferred and the simplest way to get the SDK.
 
-**Important**: Please make sure that you have installed CocoaPods version >= 1.9.0 installed. Please check your CocoaPods version using command `pod --version`.
+**Important**: Make sure that you have installed CocoaPods version >= 1.9.0 installed. Check your CocoaPods version using command `pod --version`.
 
-The example of Podfile lines which you have to add you can find [here](Example/Podfile)
+Please, refer to the [example of Podfile](Example/Podfile) lines which you need to add.
 
-1. Make sure to have CocoaPods installed, e.g., via [Homebrew](https://brew.sh):
+1. Make sure to have CocoaPods installed, e.g. via [Homebrew](https://brew.sh):
    ```sh
    brew install cocoapods 
    ```
-1. Install VideoEditorSDK for the provided Xcode workspace with:
+1. Install Video Editor SDK for the provided Xcode workspace with:
    ```sh
    pod install
    ```
@@ -93,7 +92,7 @@ extension ViewController: BanubaVideoEditorSDKDelegate {
 ```  
 
 ### Configure export flow
-To export video after finishing editing use these several methods:
+To export video after the editing is complete use these several methods:
 ``` swift
  /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution
   /// - Parameters:
@@ -126,5 +125,5 @@ Example export video flow see [here](/Example/Example/ViewController.swift#L599)
 Detailed export video features you can find [here](export_flow.md)
 
 ### Configure screens  
-The SDK allows to override icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
-Below you can find how to customize VE SDK to bring your experience.
+The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
+Below you can find how to customize our Video Editor SDK to get your branded experience.
