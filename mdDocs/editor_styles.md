@@ -33,4 +33,4 @@ How the buttons appears on the screen
 
 ImageName setups play button UIImage
 
-  ![img](screenshots/EditorConfiguration.jpg)
+  ![img](screenshots/EditorConfiguration.png)
