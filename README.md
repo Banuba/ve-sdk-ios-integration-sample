@@ -135,3 +135,5 @@ Detailed export video features you can find [here](export_flow.md)
 ### Configure screens  
 The SDK allows to override icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 Below you can find how to customize VE SDK to bring your experience.
+
+1.[Camera screen](mdDocs/camera_styles.md)
