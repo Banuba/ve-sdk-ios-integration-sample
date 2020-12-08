@@ -7,7 +7,7 @@ import AVKit
 
 class ViewController: UIViewController {
   
-  private var videoEditorSDK: BanubaVideoEditorSDK?
+  private var videoEditorSDK: BanubaVideoEditor?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
   
   private func initVideoEditor() {
     let config = createVideoEditorConfiguration()
-    videoEditorSDK = BanubaVideoEditorSDK(
+    videoEditorSDK = BanubaVideoEditor(
       token: "place client token here",
       effectsToken: "place effects token here",
       configuration: config,
@@ -282,7 +282,6 @@ class ViewController: UIViewController {
   private func updateMainMusicViewControllerConfig(_ configuration: MainMusicViewControllerConfig) -> MainMusicViewControllerConfig {
     var configuration = configuration
     
-    configuration.cancelButtonConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
     configuration.editButtons = [
       EditButtonConfig(
         font: UIFont.systemFont(ofSize: 14.0),
@@ -456,9 +455,6 @@ class ViewController: UIViewController {
     configuration.mainOverlayViewControllerConfig.draggersHorizontalInset = 10.0
     configuration.mainOverlayViewControllerConfig.draggersHeight = 20.0
     
-    configuration.mainOverlayViewControllerConfig.cancelButtonConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
-    configuration.mainOverlayViewControllerConfig.cancelButtonConfiguration.title = "Cancel"
-    
     return configuration
   }
   
@@ -629,12 +625,12 @@ extension ViewController {
   }
 }
 
-extension ViewController: BanubaVideoEditorSDKDelegate {
-  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditorSDK) {
+extension ViewController: BanubaVideoEditorDelegate {
+  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
   
-  func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK) {
+  func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
     exportVideo()
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
