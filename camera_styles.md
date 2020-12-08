@@ -1,96 +1,96 @@
 # Banuba VideoEditor SDK
 ## Camera screen styles  
 
-   - [videoResolution: VideoResolutionConfiguration]()
+   - videoResolution: VideoResolutionConfiguration
    
   VideoResolutionConfiguration setups camera options for capturing and rendering video
   
-  - [saveButton: SaveButtonConfiguration?]()
+  - saveButton: SaveButtonConfiguration?
   
   SaveButtonConfiguration setups save button style
 
-  - [backButton: BackButtonConfiguration]()
+  - backButton: BackButtonConfiguration
   
   BackButtonConfiguration setups back button style
 
-  - [removeButtonImageName: String]()
+  - removeButtonImageName: String
   
   ImageName setups remove button UIImage
   
-  - [сaptureButtonMode: CaptureButtonMode]()
+  - сaptureButtonMode: CaptureButtonMode
   
   CaptureButtonMode contains two varieties:
   1. Mixed. Photo and video camera functionality.
   2. Video. Only photo camera functionality.
   
-  - [recordButtonConfiguration: RecordButtonConfiguration]()
+  - recordButtonConfiguration: RecordButtonConfiguration
   
   RecordButtonConfiguration setups capture button style
   
-  - [recordButtonProvider: VideoEditorCaptureButtonProvider?]()
+  - recordButtonProvider: VideoEditorCaptureButtonProvider?
   
   VideoEditorCaptureButtonProvider provides access to the possibility for creating capture button
   
-  - [additionalEffectsButtons: [AdditionalEffectsButtonConfiguration]]()
+  - additionalEffectsButtons: [AdditionalEffectsButtonConfiguration]
   
    AdditionalEffectsButtonConfiguration array setups all of the camera screen control buttons' styles
   
-  - [speedButton: SpeedButtonConfiguration]()
+  - speedButton: SpeedButtonConfiguration
   
   SpeedButtonConfiguration setups speed button style
  
-  - [galleryButton: RoundedButtonConfiguration]()
+  - galleryButton: RoundedButtonConfiguration
   
   RoundedButtonConfiguration setups gallery button style
   
-  - [emptyGalleryImageName: String]()
-  
+  - emptyGalleryImageName: String
+ 
   Image name setups gallery button image for empty gallery state
  
-  - [timerConfiguration: TimerConfiguration]()
+  - timerConfiguration: TimerConfiguration
   
   TimerConfiguration setups timer functionality options
   
-  - [timeLineConfiguration: TimeLineConfiguration]()
+  - timeLineConfiguration: TimeLineConfiguration
   
   TimeLineConfiguration setups progress bar style for sequences
   
-  - [scrollBarConfiguration: ScrollBarConfiguration]()
+  - scrollBarConfiguration: ScrollBarConfiguration
   
   ScrollBarConfiguration setups bottom scroll bar style
   
-  - [regularRecordButtonPosition: CGFloat]()
+  - regularRecordButtonPosition: CGFloat
   
   Value setups capture button posttion according to the screen bottom
   
-  - [recorderEffectsConfiguration: RecorderEffectsConfiguration]()
+  - recorderEffectsConfiguration: RecorderEffectsConfiguration
   
   RecorderEffectsConfiguration setups effects list style
   
-  - [leftControlsBottomOffsetFromCaptureButton: CGFloat]()
+  - leftControlsBottomOffsetFromCaptureButton: CGFloat
   
   Value setups left controls posttions according to the capture button bottom
   
-  - [leftControlsLeftOffset: CGFloat]()
+  - leftControlsLeftOffset: CGFloat
   
   Value setups left controls posttions according to the capture button leading
   
-  - [sequenceHeight: CGFloat]()
+  - sequenceHeight: CGFloat
   
   Sequence bar height
   
-  - [useHorizontalVersion: Bool]()
+  - useHorizontalVersion: Bool
   
   How the buttons appears on the screen
   
-  - [loopAudioWhileRecording: Bool]()
+  - loopAudioWhileRecording: Bool
   
   Loop audio while recording video if music is selected
   
-  - [takeAudioDurationAsMaximum: Bool]()
+  - takeAudioDurationAsMaximum: Bool
   
   This flag suggests that given audio duration setups maximum recording length
   
-  - [isDynamicMusicTitle: Bool]()
+  - isDynamicMusicTitle: Bool
   
   Value provides the ability to dynamically changing the title of the song when new audio is adding
