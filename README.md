@@ -126,4 +126,14 @@ Detailed export video features you can find [here](export_flow.md)
 
 ### Configure screens  
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
+
+#### Icons
+1. Load icons to the Assets catalog.
+1. Find the desired screen for an icon in [VideoEditroConfig](/Example/Example/ViewController.swift#L35) entity.
+1. Find the desired UI element in the configuration entity and override the icon with the resource name or put UIImage if an option available.
+
+### Localization
+To localize video editor strings resources download [Localized.strings](/Example/Example/en.lproj/Localizable.strings) the most recent for the current release. And make your own localization! We will inform you if any keys will be changed or added.
+**Important**: Do not change keys (left values), override only right values.
+
 Below you can find how to customize our Video Editor SDK to get your branded experience.
