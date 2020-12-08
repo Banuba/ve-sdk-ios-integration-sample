@@ -94,3 +94,7 @@
   - isDynamicMusicTitle: Bool
   
   Value provides the ability to dynamically changing the title of the song when new audio is adding
+  
+  ![img](screenshots/RecorderConfiguration.jpg)
+  
+  ![img](screenshots/RecorderEffectsConfiguration.jpg)
