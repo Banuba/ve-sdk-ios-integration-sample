@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     let config = createVideoEditorConfiguration()
     videoEditorSDK = BanubaVideoEditor(
       token: "place client token here",
-      effectsToken: "place effects token here",
+      effectsToken: "JKUsDuoT+mERLng/LVBT/SxK7fK+1u0DuoAruXXgIJhuSI0aynki+8gGXUWAC1H3jBDYThexyDBxlvZFZ7/2nzslMbIi26y2xh4P7GI=",
       configuration: config,
       analytics: nil,
       externalViewControllerFactory: nil
