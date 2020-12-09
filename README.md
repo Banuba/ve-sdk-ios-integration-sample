@@ -18,7 +18,7 @@ To integrate the Video Editor SDK in your project, you need to have the client t
 
 ## Getting Started
 ### Setup SSH key for GitHub
-1. Paste Banuba ssh private key into .ssh folder on your Mac.
+1. Paste Banuba ssh private key into .ssh folder on your Mac. (If .ssh directory doesn't exist - run mkdir -p ~/.ssh')
 2. Add ssh private key to SSH authentication agent using `passphrase` provided by Banuba. Please, use the following command in Terminal:
    ```sh
    sudo ssh-add <banuba-ssh-private-key-file>
