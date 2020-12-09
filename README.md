@@ -130,6 +130,8 @@ Below you can find how to customize VE SDK to bring your experience.
 
 1.[Camera screen](mdDocs/camera_styles.md)
 
+2.[Editor screen](mdDocs/editor_styles.md)
+
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
 #### Icons
