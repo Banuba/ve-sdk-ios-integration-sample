@@ -134,6 +134,8 @@ Below you can find how to customize VE SDK to bring your experience.
 
 3.[Trim screens](mdDocs/trim_styles.md)
 
+5.[Music editor screen](mdDocs/musicEditor_styles.md)
+
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
 #### Icons
