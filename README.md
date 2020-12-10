@@ -134,6 +134,8 @@ Below you can find how to customize VE SDK to bring your experience.
 
 3.[Trim screens](mdDocs/trim_styles.md)
 
+7.[Alert screens](mdDocs/alert_styles.md)
+
 #### Icons
 1. Load icons to the Assets catalog.
 1. Find the desired screen for an icon in [VideoEditroConfig](/Example/Example/ViewController.swift#L35) entity.
