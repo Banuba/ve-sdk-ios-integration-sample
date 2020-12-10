@@ -143,8 +143,9 @@ The SDK allows overriding icons, colors, typefaces and many more configuration e
 1. Find the desired screen for an icon in [VideoEditroConfig](/Example/Example/ViewController.swift#L35) entity.
 1. Find the desired UI element in the configuration entity and override the icon with the resource name or put UIImage if an option available.
 
-### Localization
-To localize video editor strings resources download [Localized.strings](/Example/Example/en.lproj/Localizable.strings) the most recent for the current release. And make your own localization! We will inform you if any keys will be changed or added.
-**Important**: Do not change keys (left values), override only right values.
+Example: [how to change the mask icon on the camera screen](/Example/Example/ViewController.swift#L80).
 
-Below you can find how to customize our Video Editor SDK to get your branded experience.
+### Localization
+Feel free to edit any text in the SDK app. To localize texts (strings resources)  in video editor go to the lib [Localized.strings](/Example/Example/en.lproj/Localizable.strings) and download the file with text. Then change the text and put it into your app.
+
+**Important**: Do not change keys (left values), override only right values (text itself).
