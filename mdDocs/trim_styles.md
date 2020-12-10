@@ -37,7 +37,7 @@ ScreenNameConfiguration setups screen title style
 
  TimeLabelConfiguration setups current duration view style
   
-  ![img](screenshots/SingleTrimConfiguration.jpg)
+  ![img](screenshots/SingleTrimConfiguration.png)
 
 ## Multi trim screen styles  
 
@@ -89,7 +89,7 @@ Trim sequence height
 
 TimeLabelConfiguration setups current duration view style
 
-![img](screenshots/MultiTrimConfiguration.jpg)
+![img](screenshots/MultiTrimConfiguration.png)
 
 ## Trim video parts screen styles  
 
@@ -141,4 +141,4 @@ ScreenNameConfiguration setups screen title style
 
 TimeLabelConfiguration setups current duration view style
 
-![img](screenshots/GalleryTrimConfiguration.jpg)
+![img](screenshots/GalleryTrimConfiguration.png)
