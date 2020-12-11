@@ -134,6 +134,8 @@ Below you can find how to customize VE SDK to bring your experience.
 
 3.[Trim screens](mdDocs/trim_styles.md)
 
+4.[Overlay screens](mdDocs/overlayEditor_styles.md)
+
 5.[Music editor screen](mdDocs/musicEditor_styles.md)
 
 6.[Gallery screen](mdDocs/gallery_styles.md)
