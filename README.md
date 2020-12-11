@@ -6,6 +6,14 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 - Xcode 12+
 - iOS 11.0+
 
+## SDKs size
+
+Sizes with enabled bitcode. SDKs contains all of our functional and UI modules, including Face AR module to be able to rendering masks and postprocessing effects.
+| Options | Mb      | 
+| -------- | --------- | 
+| Before archiving | 137 | 
+| After archiving | 42 | 
+
 ## Dependencies
 - [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). *Optional*
 
