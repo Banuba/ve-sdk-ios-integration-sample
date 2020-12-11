@@ -125,7 +125,7 @@ Example export video flow see [here](/Example/Example/ViewController.swift#L599)
 Detailed export video features you can find [here](export_flow.md)
 
 ### Configure screens  
-The SDK allows to override icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
+The SDK allows to override icons, colors, typefaces, text messages and button titles and many more configuration entities. Every SDK screen has its own set of styles.
 Below you can find how to customize VE SDK to bring your experience.
 
 1.[Camera screen](mdDocs/camera_styles.md)
@@ -137,6 +137,10 @@ Below you can find how to customize VE SDK to bring your experience.
 5.[Music editor screen](mdDocs/musicEditor_styles.md)
 
 6.[Gallery screen](mdDocs/gallery_styles.md)
+
+7.[Alert screens](mdDocs/alert_styles.md)
+
+8.[Cover screen](mdDocs/cover_styles.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
