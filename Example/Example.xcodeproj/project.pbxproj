@@ -15,9 +15,9 @@
 		639DA00C254700290011C153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00B254700290011C153 /* AppDelegate.swift */; };
 		639DA010254700290011C153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00F254700290011C153 /* ViewController.swift */; };
 		639DA013254700290011C153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA011254700290011C153 /* Main.storyboard */; };
-		639DA0152547002C0011C153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639DA0142547002C0011C153 /* Assets.xcassets */; };
 		639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA0162547002C0011C153 /* LaunchScreen.storyboard */; };
 		8A32EED0258CB5430098F852 /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EECF258CB5430098F852 /* bundleEffects */; };
+		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,11 +44,11 @@
 		639DA00B254700290011C153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639DA00F254700290011C153 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		639DA012254700290011C153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		639DA0142547002C0011C153 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		639DA0172547002C0011C153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		639DA0192547002C0011C153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79EF8E3B8563B74AA5DC4A4F /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A32EECF258CB5430098F852 /* bundleEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleEffects; sourceTree = "<group>"; };
+		8A32EEDE258CB70C0098F852 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		994758AB50A0F631545D9D59 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,12 +104,12 @@
 		639DA00A254700290011C153 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				8A32EEDE258CB70C0098F852 /* Assets.xcassets */,
 				8A32EECF258CB5430098F852 /* bundleEffects */,
 				639DA00B254700290011C153 /* AppDelegate.swift */,
 				639DA00F254700290011C153 /* ViewController.swift */,
 				634FAC06255C351900FB0DBC /* Localizable.strings */,
 				639DA011254700290011C153 /* Main.storyboard */,
-				639DA0142547002C0011C153 /* Assets.xcassets */,
 				635DB1AA2548541000B1C799 /* luts */,
 				639DA0162547002C0011C153 /* LaunchScreen.storyboard */,
 				639DA0192547002C0011C153 /* Info.plist */,
@@ -180,9 +180,9 @@
 			files = (
 				634FAC04255C351900FB0DBC /* Localizable.strings in Resources */,
 				639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */,
-				639DA0152547002C0011C153 /* Assets.xcassets in Resources */,
 				635DB1AC2548541000B1C799 /* luts in Resources */,
 				639DA013254700290011C153 /* Main.storyboard in Resources */,
+				8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */,
 				8A32EED0258CB5430098F852 /* bundleEffects in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

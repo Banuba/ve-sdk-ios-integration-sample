@@ -18,7 +18,7 @@ class ViewController: UIViewController {
   private func initVideoEditor() {
     let config = createVideoEditorConfiguration()
     videoEditorSDK = BanubaVideoEditor(
-      token: "place client token here",
+      token: "Hug94nIssIIr2mqUWdY1wzRKfEC8pkAjGbiOTzWJ802eo03D9F58fCjUG7OWMuJyr+9ccEWjIrkPUgb0TgD1V/Jx0d6HMqrUGNsqVaCBhzgSkfF3ND2zjDPfxkON3+/3VBGvZIdUt5gs0lDIGjsTUh7rl0JIRPFlhsX1j5fTv1BzeHYfUXb+fUWVe1mTVKcxALRgOfF6rZCJZ8m0hTK8M1YpLA7qGr72Vh3SnjyKvEz5W6cCmKrjPtFx+M8IpGLc3mcqrfRNw/DepttLr5Ckmopc2Ch1p3Fz3NzbkvF8pCdQOD7Tz5lUW5NqwwyG9IEUNS3lDPy3138ew6ndM3T6IuZZnZLK1HFfZXl1pDOtnl9vYFMBhUWmnRsBzp4jA0oNG9oJpDGpgGv0q8vUP0EnJLo0+LWQGcO8FiZrs6dedt94whVxzQ2VyLTVXVtvBM6/YAeL6L1dVpKhD5oth1JQlZn1tF5wpoDgwGYScL5itxf8sF0sGiXVbSA/nIBM4AZWEClYGoc8ohS7Ab3O9TuNcPLDehRwUBENVdtQHDS+D3DOO4iL9A7noDH66Ubj6EdSErVGvnq3+RnSVfiqYXhM1GpCEs1rZMmjai5bYa4svZ3OFTs1gJRhce5S+yPhbg0YOSP87qcWQXy5j/I/zW0v+Zi2sa1IhyIHfrANtfAeo8gtAE0qT1AxWClrLDi5LnTObPfbE6ei3/5PPZsheaI8ML5rO6u0DNgftQpgZ/9kOVkG/dXKdP2dVCA=",
       effectsToken: "JKUsDuoT+mERLng/LVBT/SxK7fK+1u0DuoAruXXgIJhuSI0aynki+8gGXUWAC1H3jBDYThexyDBxlvZFZ7/2nzslMbIi26y2xh4P7GI=",
       configuration: config,
       analytics: nil,
