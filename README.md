@@ -6,6 +6,14 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 - Xcode 12+
 - iOS 11.0+
 
+## SDKs size
+
+If you utilize the AR technology with masks (like Tiktok or Snapchat) you would need to have [Face AR module](https://www.banuba.com/facear-sdk/face-filters), produced by Banuba. Alternatively, you may just have the app that shoots the video/pics and edit it with no AR feature. Depending on your choice, the SDK size will vary:
+| Options | Mb      | Note |
+| -------- | --------- | ----- |
+| :white_check_mark: Face AR SDK + bitcode enabled  | 42 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
+| :x: Face AR SDK + bitcode enabled | 19 | no AR effects  |  
+
 ## Dependencies
 - [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). *Optional*
 
