@@ -1,11 +1,14 @@
 source 'git@github.com:Banuba/specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 use_frameworks!
 
 target 'Example' do
-  pod 'BanubaVideoEditorSDK', '0.0.13.2'
+  pod 'BanubaVideoEditorSDK', '0.0.13.3'
+  pod 'BanubaAudioBrowserSDK', '0.0.4'
   pod 'BanubaMusicEditorSDK', '0.0.13.2'
   pod 'BanubaOverlayEditorSDK', '0.0.13.2'
   pod 'BanubaSDK', '0.0.13.2'
   pod 'VideoEditor', '0.0.13.2'
+  pod 'lottie-ios', "3.1.8"
 end
