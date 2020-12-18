@@ -1,0 +1,62 @@
+warp_mesh = "BabyFace.bsm2"
+msaa = 1
+shadowmap_size = 512
+adjust_znear = 150
+# draw_order = ['retouch', '!glfx_UPDATE_BG', '!glfx_WARP_IMAGE', "TriMat", 'glass', 'glass_opas']
+draw_order = ['retouch',   '!glfx_UPDATE_BG',"TriMat", 'glass', 'glass_opas']
+
+[materials.TriMat]
+vs = "fstri.vert"
+fs = "bg.frag"
+blend = "off"
+backfaces = true
+shadow = false
+zwrite = false
+samplers = {tex="wave.png"}
+
+# Retouch
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+selection_tex="redmask_new_3.png"
+lookupTexTeeth="teeth_highlighter5.png"
+lookupTexEyes="lut_80_percent.png"
+tex_softLight="soft_princess.png"
+tex_normalMakeup="BabyFace_BaseColor.png"
+
+# PBR
+[materials.glass]
+vs = "glass.vert"
+fs = "video.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply"
+backfaces = true
+colorwrite = true
+zwrite = true
+shadow = false
+samplers = {}
+
+# PBR
+[materials.glass_opas]
+vs = "glass_opas.vert"
+fs = "glass_opas.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = true
+[materials.glass_opas.samplers]
+tex_diffuse="glass_BaseColor.png"
+tex_normal="no_Normal.png"
+tex_metallic="no_Metallic.png"
+tex_roughness="glass_Roughness.png"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"

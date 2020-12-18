@@ -1,0 +1,30 @@
+{
+  "name": "Sberbank_EyeGlasses",
+  "frx": {
+    "type" : "3d_anim",
+    "3d_anim" : {
+      "type" : "vfx"
+    },
+    "media": {
+      "type": "VIDEO",
+      "file": "eyes.mp4"
+    }
+  },
+"final" : {
+      "type" : "FILTER",
+
+      "filter" : {
+        "fragmentCode" : "finalColorFilter.fsh",
+        "textures" : [{
+          "file" : "pinkvine.png",
+          "sampler" : "lookupTexture",
+          "magFilter" : "LINEAR",
+          "minFilter" : "LINEAR"
+      }] 
+   }
+  },
+  "recognizer" : [
+    "background"
+  ],
+  "recordDuration": 15
+}

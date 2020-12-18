@@ -1,0 +1,58 @@
+warp_mesh = "BeautyFace.bsm2"
+draw_order = ['retouch', '!glfx_WARP_IMAGE', 'glasses', 'glass', "!glfx_UPDATE_BG", 'TriMat']
+
+# Retouch
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+selection_tex="redmask_new_3.png"
+lookupTexTeeth="teeth_highlighter5.png"
+lookupTexEyes="lut_80_percent.png"
+tex_softLight="soft_low.png"
+tex_normalMakeup="morphStandart_BaseColor.png"
+
+[materials.TriMat]
+vs = "fstri.vert"
+fs = "glitch.frag"
+blend = "off"
+backfaces = true
+shadow = false
+zwrite = false
+samplers = {}
+
+# PBR
+[materials.glasses]
+vs = "glasses.vert"
+fs = "glasses.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.glasses.samplers]
+tex_diffuse="glasses_BaseColor.png"
+tex_normal="glasses_Normal.png"
+tex_metallic="glasses_Metallic.png"
+tex_roughness="glasses_Roughness.png"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+
+# PBR
+[materials.glass]
+vs = "glass.vert"
+fs = "video_a.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply"
+backfaces = true
+colorwrite = true
+zwrite = false
+shadow = false
+samplers = {}

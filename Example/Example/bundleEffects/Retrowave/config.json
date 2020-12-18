@@ -1,0 +1,26 @@
+{
+  "name": "Sberbank_Retrowave",
+  "frx": {
+    "type": "3d_anim",
+    "3d_anim": {
+      "type": "vfx"
+    },
+    "media": {
+      "type": "VIDEO",
+      "file": "Retrowave.mp4"
+    }
+  },
+  "final": {
+    "type": "FILTER",
+    "filter": {
+      "fragmentCode": "finalColorFilter.fsh",
+      "textures": [{
+        "file": "retrowave_2.png",
+        "sampler": "lookupTexture",
+        "magFilter": "LINEAR",
+        "minFilter": "LINEAR"
+      }]
+    }
+  },
+  "recordDuration": 15
+}
