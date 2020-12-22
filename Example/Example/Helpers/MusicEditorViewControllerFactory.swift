@@ -43,9 +43,12 @@ class MusicEditorViewControllerFactory: MusicEditorExternalViewControllerFactory
       )
     }
     
+    var config = AudioBrowserConfig()
+    config.mubertAudioConfig.pat = "Place your mubert token here"
+    
     let browser = BanubaAudioBrowser(
       audioService: AudioBrowserService(),
-      audioBrowserConfig: AudioBrowserConfig(),
+      audioBrowserConfig: config,
       slideInTransitioningDelegate: SlideInPresentationManager(
         coverPercentage: 0.8, panToDismiss: true
       ),
