@@ -1,6 +1,22 @@
 # Banuba AI Video Editor SDK. Integration sample for iOS.
 Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to add a fully-functional video editor with Tiktok-like features, AR filters and effects in your app. The following guide explains how you can integrate our SDK into your iOS project. 
 
+- [Requirements](#Requirements)
+- [SDKs size](#SDKs-size)
+- [Dependencies](#Dependencies)
+- [Free Trial](#Free-Trial)
+- [Token](#Token)
+- [Getting Started](#Getting-Started)
+    + [Setup SSH key for GitHub](#Setup-SSH-key-for-GitHub)
+    + [CocoaPods](#CocoaPods)
+    + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)
+    + [Configure export flow](#Configure-export-flow)
+    + [Configure screens](#Configure-screens)
+    + [Icons](#Icons)
+    + [Localization](#Localization)
+- [FAQ](#FAQ)
+- [Third party libraries](#Third-party-libraries)
+
 ## Requirements
 - Swift 5+
 - Xcode 12+
@@ -154,7 +170,7 @@ Below you can find how to customize VE SDK to bring your experience.
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
-#### Icons
+### Icons
 1. Load icons to the Assets catalog.
 1. Find the desired screen for an icon in [VideoEditroConfig](/Example/Example/ViewController.swift#L35) entity.
 1. Find the desired UI element in the configuration entity and override the icon with the resource name or put UIImage if an option available.
@@ -164,4 +180,10 @@ Example: [how to change the mask icon on the camera screen](/Example/Example/Vie
 ### Localization
 Feel free to edit any text in the SDK app. To localize texts (strings resources)  in video editor go to the lib [Localized.strings](/Example/Example/en.lproj/Localizable.strings) and download the file with text. Then change the text and put it into your app.
 
-**Important**: Do not change keys (left values), override only right values (text itself).
+**Important**: Do not change keys (left values), override only right values (text itself).  
+
+## FAQ  
+Please visit our [FAQ page](mddocs/faq.md) to find more technical answers to your questions.
+
+## Third party libraries
+In progress ...
