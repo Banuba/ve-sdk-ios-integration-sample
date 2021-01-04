@@ -1,6 +1,12 @@
 # Banuba AI Video Editor SDK. Integration sample for iOS.
 Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to add a fully-functional video editor with Tiktok-like features, AR filters and effects in your app. The following guide explains how you can integrate our SDK into your iOS project. 
 
+<p align="center">
+<img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="31.6%" height="auto">&nbsp;
+<img src="mdDocs/gif/audio_browser.gif" alt="Screenshot" width="31.6%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="31.6%" height="auto"/>&nbsp;
+</p>
+
 - [Requirements](#Requirements)
 - [SDKs size](#SDKs-size)
 - [Dependencies](#Dependencies)
