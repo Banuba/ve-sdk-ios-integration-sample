@@ -17,6 +17,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
     + [CocoaPods](#CocoaPods)
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)
     + [Configure export flow](#Configure-export-flow)
+    + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
     + [Icons](#Icons)
     + [Localization](#Localization)
@@ -153,6 +154,12 @@ To export video after the editing is complete use these several methods:
 ```  
 Example export video flow see [here](/Example/Example/ViewController.swift#L599).
 Detailed export video features you can find [here](export_flow.md)
+
+### Configure audio content
+
+The video editor can work with audio files to create even more attractive video recordings. The SDK does not provide audio files on its own, but it has a convenient way to set up your internal or external audio file provider for users would apply audio content.
+
+Check out [step-by-step](mdDocs/audio_content.md) guide to add your audio content into the SDK.
 
 ### Configure screens  
 The SDK allows to override icons, colors, typefaces, text messages and button titles and many more configuration entities. Every SDK screen has its own set of styles.
