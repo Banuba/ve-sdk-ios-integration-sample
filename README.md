@@ -71,6 +71,9 @@ Please, refer to the [example of Podfile](Example/Podfile) lines which you need 
 1. Open `Example.xcworkspace` with Xcode and run the project.
 
 ### Start Video Editor from ViewController
+
+To start video editor with preselected music track input musicTrack as parameter to 'presentVideoEditor' method. Look [example](/Example/Example/ViewController.swift#L41)
+
 ``` swift
 import BanubaVideoEditorSDK
 
@@ -90,6 +93,7 @@ class ViewController: UIViewController {
         videoEditorSDK?.presentVideoEditor(
             from: self,
             animated: true,
+            musicTrack: nil,
             completion: nil
         )
     }
