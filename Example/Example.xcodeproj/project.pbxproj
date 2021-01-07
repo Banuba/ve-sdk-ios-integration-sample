@@ -10,6 +10,10 @@
 		18A89EDCE2E4BBC5BFDCD2A6 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EF8E3B8563B74AA5DC4A4F /* Pods_Example.framework */; };
 		634FAC04255C351900FB0DBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634FAC06255C351900FB0DBC /* Localizable.strings */; };
 		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
+		635E864525A5DA230035AB99 /* EffectSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635E864125A5DA230035AB99 /* EffectSelection.storyboard */; };
+		635E864625A5DA230035AB99 /* TrackSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635E864225A5DA230035AB99 /* TrackSelection.storyboard */; };
+		635E864725A5DA240035AB99 /* EffectPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E864325A5DA230035AB99 /* EffectPickerViewController.swift */; };
+		635E864825A5DA240035AB99 /* TrackPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E864425A5DA230035AB99 /* TrackPickerViewController.swift */; };
 		6388C620254838BB005C017A /* BanubaEffectPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6388C61F254838BB005C017A /* BanubaEffectPlayer.framework */; };
 		6388C621254838BB005C017A /* BanubaEffectPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6388C61F254838BB005C017A /* BanubaEffectPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		639DA00C254700290011C153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00B254700290011C153 /* AppDelegate.swift */; };
@@ -24,10 +28,6 @@
 		8A8C2517258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2511258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift */; };
 		8A8C2518258CC35400FDED05 /* AudioBrowserAdoptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2512258CC35400FDED05 /* AudioBrowserAdoptor.swift */; };
 		8A8C2519258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2513258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift */; };
-		8AA67D00258CD9C000D8FF7F /* TrackPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA67CFC258CD9C000D8FF7F /* TrackPickerViewController.swift */; };
-		8AA67D01258CD9C000D8FF7F /* EffectPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA67CFD258CD9C000D8FF7F /* EffectPickerViewController.swift */; };
-		8AA67D02258CD9C000D8FF7F /* EffectSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67CFE258CD9C000D8FF7F /* EffectSelection.storyboard */; };
-		8AA67D03258CD9C000D8FF7F /* TrackSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67CFF258CD9C000D8FF7F /* TrackSelection.storyboard */; };
 		8AA67D0C258CDADE00D8FF7F /* LottieAnimation in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67D0B258CDADE00D8FF7F /* LottieAnimation */; };
 		8AA67D0E258CDB1300D8FF7F /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67D0D258CDB1300D8FF7F /* Music */; };
 /* End PBXBuildFile section */
@@ -51,6 +51,10 @@
 		634FAC05255C351900FB0DBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		634FAC07255C357400FB0DBC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		635DB1AA2548541000B1C799 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
+		635E864125A5DA230035AB99 /* EffectSelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EffectSelection.storyboard; sourceTree = "<group>"; };
+		635E864225A5DA230035AB99 /* TrackSelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrackSelection.storyboard; sourceTree = "<group>"; };
+		635E864325A5DA230035AB99 /* EffectPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectPickerViewController.swift; sourceTree = "<group>"; };
+		635E864425A5DA230035AB99 /* TrackPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackPickerViewController.swift; sourceTree = "<group>"; };
 		6388C61F254838BB005C017A /* BanubaEffectPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BanubaEffectPlayer.framework; path = Example/BanubaEffectPlayer.framework; sourceTree = "<group>"; };
 		639DA008254700290011C153 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639DA00B254700290011C153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,10 +72,6 @@
 		8A8C2512258CC35400FDED05 /* AudioBrowserAdoptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBrowserAdoptor.swift; sourceTree = "<group>"; };
 		8A8C2513258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimerViewControllerFactory.swift; sourceTree = "<group>"; };
 		8AA67CA8258CD5CA00D8FF7F /* BanubaAudioBrowserSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaAudioBrowserSDK.xcframework; path = ../BanubaAudioBrowserSDK.xcframework; sourceTree = "<group>"; };
-		8AA67CFC258CD9C000D8FF7F /* TrackPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackPickerViewController.swift; sourceTree = "<group>"; };
-		8AA67CFD258CD9C000D8FF7F /* EffectPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectPickerViewController.swift; sourceTree = "<group>"; };
-		8AA67CFE258CD9C000D8FF7F /* EffectSelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EffectSelection.storyboard; sourceTree = "<group>"; };
-		8AA67CFF258CD9C000D8FF7F /* TrackSelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrackSelection.storyboard; sourceTree = "<group>"; };
 		8AA67D0B258CDADE00D8FF7F /* LottieAnimation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LottieAnimation; sourceTree = "<group>"; };
 		8AA67D0D258CDB1300D8FF7F /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Music; sourceTree = "<group>"; };
 		994758AB50A0F631545D9D59 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,10 +163,10 @@
 		8AA67CFB258CD99B00D8FF7F /* MusicSelection */ = {
 			isa = PBXGroup;
 			children = (
-				8AA67CFD258CD9C000D8FF7F /* EffectPickerViewController.swift */,
-				8AA67CFE258CD9C000D8FF7F /* EffectSelection.storyboard */,
-				8AA67CFC258CD9C000D8FF7F /* TrackPickerViewController.swift */,
-				8AA67CFF258CD9C000D8FF7F /* TrackSelection.storyboard */,
+				635E864325A5DA230035AB99 /* EffectPickerViewController.swift */,
+				635E864125A5DA230035AB99 /* EffectSelection.storyboard */,
+				635E864425A5DA230035AB99 /* TrackPickerViewController.swift */,
+				635E864225A5DA230035AB99 /* TrackSelection.storyboard */,
 			);
 			path = MusicSelection;
 			sourceTree = "<group>";
@@ -234,14 +234,14 @@
 			files = (
 				8AA67D0C258CDADE00D8FF7F /* LottieAnimation in Resources */,
 				634FAC04255C351900FB0DBC /* Localizable.strings in Resources */,
+				635E864525A5DA230035AB99 /* EffectSelection.storyboard in Resources */,
 				639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */,
 				635DB1AC2548541000B1C799 /* luts in Resources */,
-				8AA67D03258CD9C000D8FF7F /* TrackSelection.storyboard in Resources */,
-				8AA67D02258CD9C000D8FF7F /* EffectSelection.storyboard in Resources */,
 				8AA67D0E258CDB1300D8FF7F /* Music in Resources */,
 				639DA013254700290011C153 /* Main.storyboard in Resources */,
 				8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */,
 				8A32EED0258CB5430098F852 /* bundleEffects in Resources */,
+				635E864625A5DA230035AB99 /* TrackSelection.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +296,14 @@
 			files = (
 				8A8C2517258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift in Sources */,
 				8A8C2515258CC35400FDED05 /* MusicEditorViewControllerFactory.swift in Sources */,
-				8AA67D01258CD9C000D8FF7F /* EffectPickerViewController.swift in Sources */,
 				8A8C2516258CC35400FDED05 /* ViewControllerFactory.swift in Sources */,
+				635E864825A5DA240035AB99 /* TrackPickerViewController.swift in Sources */,
 				639DA010254700290011C153 /* ViewController.swift in Sources */,
-				8AA67D00258CD9C000D8FF7F /* TrackPickerViewController.swift in Sources */,
 				8A8C2518258CC35400FDED05 /* AudioBrowserAdoptor.swift in Sources */,
 				8A8C2519258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift in Sources */,
 				8A8C2514258CC35400FDED05 /* AnalyticsExample.swift in Sources */,
 				639DA00C254700290011C153 /* AppDelegate.swift in Sources */,
+				635E864725A5DA240035AB99 /* EffectPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

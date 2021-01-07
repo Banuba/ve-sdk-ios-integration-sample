@@ -2,6 +2,7 @@ import UIKit
 import BanubaVideoEditorSDK
 import BanubaMusicEditorSDK
 import BanubaOverlayEditorSDK
+import VideoEditor
 import AVFoundation
 import AVKit
 
@@ -37,7 +38,29 @@ class ViewController: UIViewController {
   }
   
   @IBAction func openVideoEditorAction(_ sender: Any) {
-    videoEditorSDK?.presentVideoEditor(from: self, animated: true, completion: nil)
+    let musicURL = Bundle.main.bundleURL
+      .appendingPathComponent("Music/long", isDirectory: true)
+      .appendingPathComponent("long_music_2.wav")
+    let assset = AVURLAsset(url: musicURL)
+    let musicTrackPreset = MediaTrack(
+      id: CMPersistentTrackID.random(in: 6..<CMPersistentTrackID.max),
+      url: musicURL,
+      timeRange: MediaTrackTimeRange(
+        startTime: .zero,
+        playingTimeRange: CMTimeRange(
+          start: .zero,
+          duration: assset.duration
+        )
+      ),
+      title: "My awesome track"
+    )
+    // Paste a music track as a track preset at the camera screen to record video with music
+    videoEditorSDK?.presentVideoEditor(
+      from: self,
+      animated: true,
+      musicTrack: nil,
+      completion: nil
+    )
   }
   
   private func createVideoEditorConfiguration() -> VideoEditorConfig {
