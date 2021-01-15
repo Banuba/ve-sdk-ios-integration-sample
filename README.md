@@ -193,7 +193,7 @@ Feel free to edit any text in the SDK app. To localize texts (strings resources)
 **Important**: Do not change keys (left values), override only right values (text itself).  
 
 ## FAQ  
-Please visit our [FAQ page](mddocs/faq.md) to find more technical answers to your questions.
+Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to your questions.
 
 ## Third party libraries
 In progress ...
