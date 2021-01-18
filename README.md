@@ -49,7 +49,7 @@ To integrate the Video Editor SDK in your project, you need to have the client t
 ## Getting Started
 ### Setup SSH key for GitHub
 1. Paste Banuba ssh private key into .ssh folder on your Mac. (If .ssh directory doesn't exist - run mkdir -p ~/.ssh')
-2. Add ssh private key to SSH authentication agent using `passphrase` provided by Banuba. Please, use the following command in Terminal:
+2. Add ssh private key to SSH authentication agent. Please, use the following command in Terminal:
    ```sh
    sudo ssh-add <banuba-ssh-private-key-file>
    ```
@@ -72,44 +72,44 @@ Please, refer to the [example of Podfile](Example/Podfile) lines which you need 
 
 ### Start Video Editor from ViewController
 
-To start video editor with preselected music track input musicTrack as parameter to 'presentVideoEditor' method. Look [example](/Example/Example/ViewController.swift#L41)
+To start video editor with preselected music track input musicTrack as parameter to `presentVideoEditor` method. Look [example](/Example/Example/ViewController.swift#L41)
 
 ``` swift
 import BanubaVideoEditorSDK
 
 class ViewController: UIViewController {
 
-    private var videoEditorSDK: BanubaVideoEditorSDK?
+  private var videoEditorSDK: BanubaVideoEditorSDK?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-        initVideoEditor()
-    }
+    initVideoEditor()
+  }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
 
-        videoEditorSDK?.presentVideoEditor(
-            from: self,
-            animated: true,
-            musicTrack: nil,
-            completion: nil
-        )
-    }
+    videoEditorSDK?.presentVideoEditor(
+      from: self,
+      animated: true,
+      musicTrack: nil,
+      completion: nil
+    )
+  }
   
-    private func initVideoEditor() {
-        let configuration = VideoEditorConfig()
-        videoEditorSDK = BanubaVideoEditorSDK(
-            token: "place client token here",
-            effectsToken: "place effects token here",
-            configuration: configuration,
-            analytics: nil,
-            externalViewControllerFactory: nil
-        )
-        videoEditorSDK?.delegate = self
-    }
-    ...
+  private func initVideoEditor() {
+    let configuration = VideoEditorConfig()
+    videoEditorSDK = BanubaVideoEditorSDK(
+      token: "place client token here",
+      effectsToken: "place effects token here",
+      configuration: configuration,
+      analytics: nil,
+      externalViewControllerFactory: nil
+    )
+    videoEditorSDK?.delegate = self
+  }
+  ...
 }
 
 // MARK: - Handle Video Editor lifecycle
@@ -125,35 +125,67 @@ extension ViewController: BanubaVideoEditorSDKDelegate {
 
 ```  
 
+The Video Editor has several entry points. It can be launched at the camera screen and at trimmer screen with pre-defined videos:
+``` swift
+/// Modally presents Video editor's root view controller
+/// - Parameters:
+///   - hostController: The view controller to display over.
+///   - animated: Pass true to animate the presentation.
+///   - musicTrack: Music track which will be played on camera recording.
+///   - completion: The block to execute after the presentation finishes.
+public func presentVideoEditor(
+  from hostController: UIViewController,
+  animated: Bool,
+  musicTrack: MediaTrack? = nil,
+  completion: (() -> Void)?
+)
+          
+/// Modally presents Video editor's trim view controller with pre-defined videos
+/// - Parameters:
+///   - videoItems: An array with urls to videos located on a phone.
+///   - hostController: The view controller to display over.
+///   - animated: Pass true to animate the presentation.
+///   - musicTrack: Music track which will be played on camera recording.
+///   - completion: The block to execute after the presentation finishes.
+public func presentVideoEditor(
+  withVideoItems videoItems: [URL],
+  from hostController: UIViewController,
+  animated: Bool,
+  musicTrack: MediaTrack? = nil, 
+  completion: (() -> Void)?
+)
+```  
+
+
 ### Configure export flow
 To export video after the editing is complete use these several methods:
 ``` swift
- /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution
-  /// - Parameters:
-  ///   - fileUrl: url where exported video should be stored.
-  ///   - completion: completion: (success, error), execute on background thread.
-  func exportVideo(fileUrl: URL, completion: @escaping (Bool, Error?) -> Void)
+/// Export video with default 1280x720 (or 1920x1080 on required devices) resolution
+/// - Parameters:
+///   - fileUrl: url where exported video should be stored.
+///   - completion: completion: (success, error), execute on background thread.
+func exportVideo(fileUrl: URL, completion: @escaping (Bool, Error?) -> Void)
   
-  /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution and cover image
-  /// - Parameters:
-  ///   - fileUrl: url where exported video should be stored.
-  ///   - completion: completion: (success, error, image), execute on background thread.
-  /// Preconfigue WatermarkConfiguration in configuration file otherwise will be used default configuration. Default cover image video indent is 0.5 second.
-  func exportVideoWithCoverImage(fileUrl: URL, completion: @escaping (Bool, Error?, UIImage) -> Void)
+/// Export video with default 1280x720 (or 1920x1080 on required devices) resolution and cover image
+/// - Parameters:
+///   - fileUrl: url where exported video should be stored.
+///   - completion: completion: (success, error, image), execute on background thread.
+/// Preconfigue WatermarkConfiguration in configuration file otherwise will be used default configuration. Default cover image video indent is 0.5 second.
+func exportVideoWithCoverImage(fileUrl: URL, completion: @escaping (Bool, Error?, UIImage) -> Void)
   
-  /// Export several configurable video
-  /// - Parameters:
-  ///   - configurations: contains configurations for exporting videos such as file url,
-  ///    watermark and video quality
-  ///   - completion: completion: (success, error), execute on the background thread.
-  func exportVideos(using configurations: [ExportVideoConfiguration], completion: (Bool,Error?)->Void)
+/// Export several configurable video
+/// - Parameters:
+///   - configurations: contains configurations for exporting videos such as file url,
+///    watermark and video quality
+///   - completion: completion: (success, error), execute on the background thread.
+func exportVideos(using configurations: [ExportVideoConfiguration], completion: (Bool,Error?)->Void)
   
-  /// Export several configurable video with cover image
-  /// - Parameters:
-  ///   - configurations: contains configurations for exporting videos such as file url,
-  ///    watermark and video quality
-  ///   - completion: completion: (success, error, image), execute on the background thread.
-  func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
+/// Export several configurable video with cover image
+/// - Parameters:
+///   - configurations: contains configurations for exporting videos such as file url,
+///    watermark and video quality
+///   - completion: completion: (success, error, image), execute on the background thread.
+func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
 ```  
 Example export video flow see [here](/Example/Example/ViewController.swift#L599).
 Detailed export video features you can find [here](export_flow.md)
