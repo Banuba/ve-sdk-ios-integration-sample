@@ -12,6 +12,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 - [SDKs size](#SDKs-size)
 - [Free Trial](#Free-Trial)
 - [Token](#Token)
+- [What can you customize?](#What-can-you-customize)
 - [Getting Started](#Getting-Started)
     + [Setup SSH key for GitHub](#Setup-SSH-key-for-GitHub)
     + [CocoaPods](#CocoaPods)
@@ -43,8 +44,16 @@ If you utilize the AR technology with masks (like Tiktok or Snapchat) you would 
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token. Put it into the app, as described below, to run the SDK.  
 
 ## Token
-To integrate the Video Editor SDK in your project, you need to have the client token. It helps us to prevent our software from inappropriate and unconditioned usage. The token is unique to each client and valid for a specific time. Once it expires, the access to SDK features will be blocked automatically. The token should be put [here](/Example/Example/ViewController.swift#L21)
+To integrate the Video Editor SDK in your project, you need to have the client token. It helps us to prevent our software from inappropriate and unconditioned usage. The token is unique to each client and valid for a specific time. Once it expires, the access to SDK features will be blocked automatically. The token should be put [here](/Example/Example/ViewController.swift#L21)  
 
+
+## What can you customize?
+
+We understand that the client should have options to brand video editor to bring its own experience to the market. Therefore we provide list of options to customize:
+
+:white_check_mark: Use your branded icons. See details :white_check_mark: Use you branded colors. See details :white_check_mark: Change text styles i.e. font, color. See details :white_check_mark: Localize and change text resources. Default locale is :us: :white_check_mark: Make content you want i.e. a number of video with different resolutions and durations, an audio file. See details :x: Change layout :x: Change screen order
+
+:exclamation: We do custom UX/UI changes as a separate contract. Please contact our sales@banuba.com.
 
 ## Getting Started
 ### Setup SSH key for GitHub
