@@ -8,8 +8,8 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 </p>
 
 - [Requirements](#Requirements)
-- [SDKs size](#SDKs-size)
 - [Dependencies](#Dependencies)
+- [SDKs size](#SDKs-size)
 - [Free Trial](#Free-Trial)
 - [Token](#Token)
 - [Getting Started](#Getting-Started)
@@ -26,7 +26,10 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 ## Requirements
 - Swift 5+
 - Xcode 12+
-- iOS 11.0+
+- iOS 11.0+  
+
+## Dependencies
+- [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). *Optional*
 
 ## SDKs size
 
@@ -35,9 +38,6 @@ If you utilize the AR technology with masks (like Tiktok or Snapchat) you would 
 | -------- | --------- | ----- |
 | :white_check_mark: Face AR SDK + bitcode enabled  | 42 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
 | :x: Face AR SDK + bitcode enabled | 19 | no AR effects  |  
-
-## Dependencies
-- [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). *Optional*
 
 ## Free Trial  
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token. Put it into the app, as described below, to run the SDK.  
