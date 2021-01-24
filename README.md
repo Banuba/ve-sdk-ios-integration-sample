@@ -209,21 +209,14 @@ Detailed export video features you can find [here](export_flow.md)
 The SDK allows to override icons, colors, typefaces, text messages and button titles and many more configuration entities. Every SDK screen has its own set of styles.
 Below you can find how to customize VE SDK to bring your experience.
 
-1.[Camera screen](mdDocs/camera_styles.md)
-
-2.[Editor screen](mdDocs/editor_styles.md)
-
-3.[Trim screens](mdDocs/trim_styles.md)
-
-4.[Overlay screens](mdDocs/overlayEditor_styles.md)
-
-5.[Music editor screen](mdDocs/musicEditor_styles.md)
-
-6.[Gallery screen](mdDocs/gallery_styles.md)
-
-7.[Alert screens](mdDocs/alert_styles.md)
-
-8.[Cover screen](mdDocs/cover_styles.md)
+1. [Camera screen](mdDocs/camera_styles.md)
+1. [Editor screen](mdDocs/editor_styles.md)
+1. [Trim screens](mdDocs/trim_styles.md)
+1. [Overlay screens](mdDocs/overlayEditor_styles.md)
+1. [Music editor screen](mdDocs/musicEditor_styles.md)
+1. [Gallery screen](mdDocs/gallery_styles.md)
+1. [Alert screens](mdDocs/alert_styles.md)
+1. [Cover screen](mdDocs/cover_styles.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
