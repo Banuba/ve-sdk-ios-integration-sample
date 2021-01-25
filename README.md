@@ -43,9 +43,12 @@ If you utilize the AR technology with masks (like Tiktok or Snapchat) you would 
 ## Free Trial  
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token. Put it into the app, as described below, to run the SDK.  
 
-## Token
-To integrate the Video Editor SDK in your project, you need to have the client token. It helps us to prevent our software from inappropriate and unconditioned usage. The token is unique to each client and valid for a specific time. Once it expires, the access to SDK features will be blocked automatically. The token should be put [here](/Example/Example/ViewController.swift#L21)  
+## Token 
+We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
+There are 2 tokens:
+1. Face AR token used for [Face AR library](https://www.banuba.com/facear-sdk/face-filters). This token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/1f93a967c387786c51f6f6158ba1d7d59140c64d/Example/Example/ViewController.swift#L29).
+1. Video Editor token used for enabling visual and time effects. This token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/1f93a967c387786c51f6f6158ba1d7d59140c64d/Example/Example/ViewController.swift#L30).
 
 ## What can you customize?
 
