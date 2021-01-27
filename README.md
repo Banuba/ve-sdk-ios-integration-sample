@@ -64,6 +64,12 @@ We understand that the client should have options to brand video editor to bring
 
 :exclamation: We do custom UX/UI changes as a separate contract. Please contact our sales@banuba.com.
 
+### Configure AR cloud
+
+The video editor is able to download AR effects from Banuba server to provide more effects in video editor and save your app size .
+
+Please check out [step-by-step guide]() to configure AR Cloud in the SDK.
+
 ## Getting Started
 ### Setup SSH key for GitHub
 1. Paste Banuba ssh private key into .ssh folder on your Mac. (If .ssh directory doesn't exist - run mkdir -p ~/.ssh')
