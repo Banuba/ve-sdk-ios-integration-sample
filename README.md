@@ -40,6 +40,17 @@ If you utilize the AR technology with masks (like Tiktok or Snapchat) you would 
 | :white_check_mark: Face AR SDK + bitcode enabled  | 42 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
 | :x: Face AR SDK + bitcode enabled | 19 | no AR effects  |  
 
+## Video quality params
+
+To be able to use your own quality parametrs please follow this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/ve-sdk-ios-video-resolution-configuration/mdDocs/video_resolution_configuration.md).
+
+| Resolution  | Size        | Bitrate(kbps) |
+| ----------- | ------------| ------------- |
+| 360p        | 360 x 640   | 800           |
+| 480p        | 480 x 854   | 2000          |
+| HD          | 720 x 1280  | 4000          |
+| FHD         | 1080 x 1920 | 6400          |
+
 ## Free Trial  
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token. Put it into the app, as described below, to run the SDK.  
 
