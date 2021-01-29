@@ -291,7 +291,7 @@ public struct ExportVideoConfiguration {
   }
 }
 ```
-Check out [this example](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/ae4360ae9275377275cfa35043d9272e413b3e12/Example/Example/ViewController.swift#L629) if you have any troubles.
+Check out [this example](/Example/Example/ViewController.swift#L629) if you have any troubles.
 
 ### Icons
 1. Load icons to the Assets catalog.
