@@ -19,6 +19,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)
     + [Configure export flow](#Configure-export-flow)
     + [Configure screens](#Configure-screens)
+    + [Configure watermark](#Configure-watermark)
     + [Icons](#Icons)
     + [Localization](#Localization)
 - [FAQ](#FAQ)
@@ -228,6 +229,69 @@ Below you can find how to customize VE SDK to bring your experience.
 1. [Cover screen](mdDocs/cover_styles.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
+
+### Configure watermark
+One of the SDK features is a watermark. You can add your branded image on top of the video, which user exports.
+
+To use a watermark, you need to create and configure this structure:
+
+``` swift
+/// The watermark configuration.
+public struct WatermarkConfiguration {
+  /// The watermark image configuration
+  public var watermark: ImageConfiguration
+  /// The watermark size configuration.
+  public var size: CGSize
+  /// The watermark offset from edges.
+  public var sharedOffset: CGFloat
+  /// The watermark position.
+  public var position: WatermarkPosition
+  
+  public enum WatermarkPosition {
+    case leftTop
+    case leftBottom
+    case rightTop
+    case rightBottom
+  }
+  
+  /// Initializes and returns the watermark configuration object with specified configurations.
+  public init(
+    watermark: ImageConfiguration,
+    size: CGSize,
+    sharedOffset: CGFloat,
+    position: WatermarkPosition
+  ) {
+    self.watermark = watermark
+    self.size = size
+    self.sharedOffset = sharedOffset
+    self.position = position
+  }
+}
+``` 
+Then add it to ExportVideoConfiguration:
+``` swift
+/// Export Video Configuration
+public struct ExportVideoConfiguration {
+  /// The video file URL.
+  public let fileURL: URL
+  /// The export video quality.
+  public let quality: ExportQuality
+  /// The watermark configuration. Optional.
+  public let watermarkConfiguration: WatermarkConfiguration?
+  
+  /// ExportVideoConfiguration constructor.
+  public init(
+    fileURL: URL,
+    quality: ExportQuality,
+    watermarkConfiguration: WatermarkConfiguration?
+  ) {
+    self.fileURL = fileURL
+    self.quality = quality
+    self.watermarkConfiguration = watermarkConfiguration
+  }
+}
+```
+Check out [this example]() if you have any troubles.
 
 ### Icons
 1. Load icons to the Assets catalog.
