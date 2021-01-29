@@ -14,8 +14,6 @@
 		635E864625A5DA230035AB99 /* TrackSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635E864225A5DA230035AB99 /* TrackSelection.storyboard */; };
 		635E864725A5DA240035AB99 /* EffectPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E864325A5DA230035AB99 /* EffectPickerViewController.swift */; };
 		635E864825A5DA240035AB99 /* TrackPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E864425A5DA230035AB99 /* TrackPickerViewController.swift */; };
-		6388C620254838BB005C017A /* BanubaEffectPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6388C61F254838BB005C017A /* BanubaEffectPlayer.framework */; };
-		6388C621254838BB005C017A /* BanubaEffectPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6388C61F254838BB005C017A /* BanubaEffectPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		639DA00C254700290011C153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00B254700290011C153 /* AppDelegate.swift */; };
 		639DA010254700290011C153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00F254700290011C153 /* ViewController.swift */; };
 		639DA013254700290011C153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA011254700290011C153 /* Main.storyboard */; };
@@ -31,20 +29,6 @@
 		8AA67D0C258CDADE00D8FF7F /* LottieAnimation in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67D0B258CDADE00D8FF7F /* LottieAnimation */; };
 		8AA67D0E258CDB1300D8FF7F /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67D0D258CDB1300D8FF7F /* Music */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		6388C6182548347A005C017A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				6388C621254838BB005C017A /* BanubaEffectPlayer.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4583CD9AF3110FA7864EFF0B /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6388C620254838BB005C017A /* BanubaEffectPlayer.framework in Frameworks */,
 				18A89EDCE2E4BBC5BFDCD2A6 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +165,6 @@
 				639DA004254700290011C153 /* Sources */,
 				639DA005254700290011C153 /* Frameworks */,
 				639DA006254700290011C153 /* Resources */,
-				6388C6182548347A005C017A /* Embed Frameworks */,
 				9F88FAE6E4D2AAA6E024C9E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (

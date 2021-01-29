@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
     config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
     config.galleryConfiguration = updateGalleryConfiguration(config.galleryConfiguration)
-    config.slideShowConfiguration = updateSlideShowConfiguration(config.slideShowConfiguration)
+    config.combinedGalleryConfiguration = updateCombinedGalleryConfiguration(config.combinedGalleryConfiguration)
     config.videoCoverSelectionConfiguration = updateVideCoverSelectionConfiguration(config.videoCoverSelectionConfiguration)
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
     config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
@@ -233,7 +233,6 @@ class ViewController: UIViewController {
     ]
     
     configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_nav_back_arrow"))
-    configuration.playButtonImageName = "ic_play"
     
     configuration.saveButton.background.color = UIColor(red: 6, green: 188, blue: 193)
     configuration.saveButton.background.cornerRadius = 4.0
@@ -244,7 +243,7 @@ class ViewController: UIViewController {
     return configuration
   }
   
-  private func updateSlideShowConfiguration(_ configuration: SlideShowConfiguration) -> SlideShowConfiguration {
+  private func updateCombinedGalleryConfiguration(_ configuration: CombinedGalleryConfiguration) -> CombinedGalleryConfiguration {
     var configuration = configuration
     
     configuration.clearSelectionButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
@@ -275,7 +274,7 @@ class ViewController: UIViewController {
     return configuration
   }
   
-  private func updateVideCoverSelectionConfiguration(_ configuration: VideoCoverSelectionConfiguration) -> VideoCoverSelectionConfiguration {
+  private func updateVideCoverSelectionConfiguration(_ configuration: SimpleVideoCoverSelectionConfiguration) -> SimpleVideoCoverSelectionConfiguration {
     var configuration = configuration
     
     configuration.cancelButton = TextButtonConfiguration(
@@ -399,7 +398,6 @@ class ViewController: UIViewController {
     )
     configuration.timerColor = .white
     configuration.backButtonImage = "ic_close"
-    configuration.resetButtonImage = "ic_cancel"
     configuration.dimViewColor = UIColor(red: 6, green: 188, blue: 193).withAlphaComponent(0.6)
     
     configuration.rewindToStartButton = ControlButtonConfig(
@@ -454,15 +452,15 @@ class ViewController: UIViewController {
       )
     ]
     
-    configuration.mainOverlayViewControllerConfig.editButtons = [
-      OverlayEditorEditButtonConfig(
+    configuration.mainOverlayViewControllerConfig.addButtons = [
+      OverlayAddButtonConfig(
         type: .text,
         title: "Text",
         titleColor: .white,
         font: UIFont.systemFont(ofSize: 14.0),
         imageName: "ic_AddText"
       ),
-      OverlayEditorEditButtonConfig(
+      OverlayAddButtonConfig(
         type: .sticker,
         title: "Sticker",
         titleColor: .white,
@@ -472,7 +470,7 @@ class ViewController: UIViewController {
     ]
     
     configuration.mainOverlayViewControllerConfig.editCompositionButtons = [
-      OverlayEditCompositionButtonConfig(
+      OverlayEditButtonConfig(
         type: .edit,
         title: "Edit",
         titleColor: .white,
@@ -480,7 +478,7 @@ class ViewController: UIViewController {
         imageName: "ic_edit",
         selectedImageName: nil
       ),
-      OverlayEditCompositionButtonConfig(
+      OverlayEditButtonConfig(
         type: .delete,
         title: "Delete",
         titleColor: .white,
@@ -592,8 +590,6 @@ class ViewController: UIViewController {
   private func updateFilterConfiguration(_ configuration: FilterConfiguration) -> FilterConfiguration {
     var configuration = configuration
     
-    configuration.cancelButton.textConfiguration.color = .white
-    configuration.doneButton.textConfiguration.color = .white
     configuration.resetButton.backgroundColor = UIColor(red: 6, green: 188, blue: 193)
     configuration.resetButton.cornerRadius = 4.0
     configuration.resetButton.textConfiguration.color = .white
