@@ -6,6 +6,8 @@ import VideoEditor
 import AVFoundation
 import AVKit
 
+fileprivate let effectsToken = "u4fwA4rVK2P/nkHS/tKE7SxK7fK+1u0DuoAruXXgIJhuSI0aynki+8gGXUWAC1H3jBDYThexzTBxlPc0eq2x2mdwR/F+iL2gmVpXrC4mAXiEByjb5VpSqsJzbM/K9LGnEDByWZVRTzq8ZuvwKR7BCKU3f4Z7"
+
 class ViewController: UIViewController {
   
   private var videoEditorSDK: BanubaVideoEditor?
@@ -27,7 +29,8 @@ class ViewController: UIViewController {
     
     videoEditorSDK = BanubaVideoEditor(
       token: "Place your Face AR token here",
-      effectsToken: "Place your effect token here",
+      effectsToken: effectsToken,
+      cloudMasksToken: "Place your masks token here",
       configuration: config,
       analytics: Analytics(),
       externalViewControllerFactory: viewControllerFactory
