@@ -26,10 +26,11 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 
 ## Requirements
 - Swift 5+
-- Xcode 12+
+- Xcode 12.4+
 - iOS 11.0+  
 
 ## Dependencies
+
 - [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). *Optional*
 
 ## SDKs size
