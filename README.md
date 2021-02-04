@@ -13,6 +13,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 - [Free Trial](#Free-Trial)
 - [Token](#Token)
 - [What can you customize?](#What-can-you-customize)
+- [Configure AR cloud](#Configure-AR-cloud)
 - [Getting Started](#Getting-Started)
     + [Setup SSH key for GitHub](#Setup-SSH-key-for-GitHub)
     + [CocoaPods](#CocoaPods)
@@ -69,7 +70,7 @@ We understand that the client should have options to brand video editor to bring
 
 The video editor is able to download AR effects from Banuba server to provide more effects in video editor and save your app size .
 
-Please check out [step-by-step guide]() to configure AR Cloud in the SDK.
+Please check out [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure AR Cloud in the SDK.
 
 ## Getting Started
 ### Setup SSH key for GitHub
