@@ -15,5 +15,5 @@ Add line to pod file .
 
 ### Step 2
 
-Paste AR Cloud client id value [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/db5ab9072c709f3302bffa06bd75e984a51635ed/Example/Example/ViewController.swift#L28) to BanubaVideoEditor init with cloudMasksToken entire argument.
+Paste AR Cloud client id value [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/a2ea45e31d45d41ca82cf5035238bf027cc7a745/Example/Example/ViewController.swift#L31) to BanubaVideoEditor init with cloudMasksToken entire argument.
 *Please ask Banuba to provide **client id** for trial period.*
