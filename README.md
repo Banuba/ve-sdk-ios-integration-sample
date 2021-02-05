@@ -26,6 +26,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 - [Third party libraries](#Third-party-libraries)
 
 ## Requirements
+- Iphone devices 6+
 - Swift 5+
 - Xcode 12.4+
 - iOS 11.0+  
