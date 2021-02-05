@@ -22,14 +22,14 @@ Please set captureButtonMode property of RecorderConfiguration entity to .video 
 
 ### 3. I want to start VideoEditor with a preselected audio track
 
-To start video editor with preselected music track input musicTrack value with MediaTrack type as parameter to presentVideoEditor method. 
+To start video editor with preselected music track input MediaTrack instance as parameter to presentVideoEditor method. 
 
 ```
 videoEditorSDK?.presentVideoEditor(
-      from: self,
+      from: YourViewController,
       animated: true,
-      musicTrack: musicTrack,
-      completion: nil
+      musicTrack: MediaTrack(...),
+      completion: {...}
     )
 ```
 **MediaTrack**
