@@ -32,32 +32,4 @@ videoEditorSDK?.presentVideoEditor(
       completion: {...}
     )
 ```
-**MediaTrack**
 
-```
-public class MediaTrack {
-    public static let unknownId: CMPersistentTrackID
-    
-    public let id: CMPersistentTrackID
-    public let url: URL
-    public let timeRange: MediaTrackTimeRange
-    public let title: String?
-
-    public init(id: CMPersistentTrackID, url: URL, timeRange: MediaTrackTimeRange, title: String? = nil)
-}
-```
-
-**MediaTrackTimeRange**
-
-```
-public struct MediaTrackTimeRange {
-
-    /// timeRange in asset
-    public let startTime: CMTime
-
-    /// timeRange that should be played
-    public let playingTimeRange: CMTimeRange
-
-    public init(startTime: CMTime, playingTimeRange: CMTimeRange)
-}
-```
