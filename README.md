@@ -49,9 +49,8 @@ We offer а free 14-days trial for you could thoroughly test and assess Video Ed
 ## Token 
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
-There are 2 tokens:
-1. Face AR token used for [Face AR library](https://www.banuba.com/facear-sdk/face-filters). This token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/1f93a967c387786c51f6f6158ba1d7d59140c64d/Example/Example/ViewController.swift#L29).
-1. Video Editor token used for enabling visual and time effects. This token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/1f93a967c387786c51f6f6158ba1d7d59140c64d/Example/Example/ViewController.swift#L30).
+Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29).
+
 
 ## What can you customize?
 

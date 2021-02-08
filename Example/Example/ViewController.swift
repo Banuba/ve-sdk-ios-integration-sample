@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
     videoEditorSDK = BanubaVideoEditor(
-      token: "Place your Face AR token here",
+      token: "PUT VIDEO EDITOR TOKEN",
       effectsToken: "u4fwA4rVK2P/nkHS/tKE7SxK7fK+1u0DuoAruXXgIJhuSI0aynki+8gGXUWAC1H3jBDYThexzTBxlPc0eq2x2mdwR/F+iL2gmVpXrC4mAXiEByjb5VpSqsJzbM/K9LGnEDByWZVRTzq8ZuvwKR7BCKU3f4Z7",
-      cloudMasksToken: "Put your AR Cloud id here",
+      cloudMasksToken: "PUT AR CLOUD ID",
       configuration: config,
       analytics: Analytics(),
       externalViewControllerFactory: viewControllerFactory
