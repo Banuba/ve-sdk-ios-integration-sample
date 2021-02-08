@@ -19,3 +19,17 @@ Please set captureButtonMode property of RecorderConfiguration entity to .video 
  **Note** that the name of directory will be used as a title of the AR mask within the app. 
  
  **Note** "bundleEffects" is the name for the folder in which the masks should be located. Do not change the name of this folder so that our modules can find the resources they need. If the folder doesn't exist, then create it.
+
+### 3. I want to start VideoEditor with a preselected audio track
+
+To start video editor with preselected music track input MediaTrack instance as parameter to presentVideoEditor method. 
+
+```
+videoEditorSDK?.presentVideoEditor(
+      from: YourViewController,
+      animated: true,
+      musicTrack: MediaTrack(...),
+      completion: {...}
+    )
+```
+
