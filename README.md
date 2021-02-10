@@ -20,6 +20,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)
     + [Configure export flow](#Configure-export-flow)
     + [Configure screens](#Configure-screens)
+    + [Configure watermark](#Configure-watermark)
     + [Icons](#Icons)
     + [Localization](#Localization)
 - [FAQ](#FAQ)
@@ -228,6 +229,13 @@ Below you can find how to customize VE SDK to bring your experience.
 1. [Cover screen](mdDocs/cover_styles.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
+
+### Configure watermark
+One of the SDK features is a watermark. You can add your branded image on top of the video, which user exports.
+
+To use a watermark, you need to create and configure WatermarkConfiguration structure, then add it to ExportVideoConfiguration entity.
+
+Check out [this example](/Example/Example/ViewController.swift#L629) if you have any troubles.
 
 ### Icons
 1. Load icons to the Assets catalog.

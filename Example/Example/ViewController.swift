@@ -636,10 +636,16 @@ extension ViewController {
       try? manager.removeItem(at: videoURL)
     }
     
+    let watermarkConfiguration = WatermarkConfiguration(
+      watermark: ImageConfiguration(imageName: "Common.Banuba.Watermark"),
+      size: CGSize(width: 204, height: 52),
+      sharedOffset: 20,
+      position: .rightBottom)
+    
     let exportConfiguration = ExportVideoConfiguration(
       fileURL: videoURL,
       quality: .preset(AVAssetExportPresetHighestQuality),
-      watermarkConfiguration: nil
+      watermarkConfiguration: watermarkConfiguration
     )
     videoEditorSDK?.exportVideos(using: [exportConfiguration], completion: { (success, error) in
       DispatchQueue.main.async {
