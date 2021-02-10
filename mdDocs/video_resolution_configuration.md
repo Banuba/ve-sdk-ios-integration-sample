@@ -1,66 +1,49 @@
-## First of all make sure you are using the correct parameters for ExportVideoInfo entity initializer.
+# Export video functionality
+
+### Using funcs with ExportVideoConfiguration entity you could specify resolution for exported video. 
+
+Available resolutions:
+- 360p
+- 480p
+- 720p
+- 1080p
 
 ```
- /// ExportVideoInfo constructor.
-  /// - Parameters:
-  ///   - width: Specify output video width.
-  ///   - height: Specify output video height.
-  ///   - bitrate: Specify output video bitrate.
-  ///   - frameRate: Specify specified output video frame rate.
-  ///   - codecType: Specify the codec from AVVideoSettings like 'AVVideoCodecType.h264' etc. AVVideoCodecType.h264 is preferred as a hardware accelerated type
-  ///   - scalingMode: Specify video scaling mode with required mode like 'AVVideoScalingModeResizeAspect'
+    /// Export video with default 1280x720 (or 1920x1080/480x854 on required devices) resolution
+    /// - Parameters:
+    ///   - fileUrl: url where exported video should be stored.
+    ///   - completion: completion: (success, error), execute on background thread.
+    public func exportVideo(
+      fileURL: URL,
+      completion: @escaping (Bool, Error?) -> Void
+    )
+
+    /// Export video with default 1280x720 (or 1920x1080/480x854 on required devices) resolution and cover image
+    /// - Parameters:
+    ///   - fileUrl: url where exported video should be stored.
+    ///   - completion: completion: (success, error, image), execute on background thread.
+    public func exportVideoWithCoverImage(
+      fileURL: URL,
+      completion: @escaping (Bool, Error?, UIImage) -> Void
+    )
+
+    /// Export several configurable video
+    /// - Parameters:
+    ///   - configurations: contains configurations for exporting videos such as file url,
+    ///    watermark and video quality
+    ///   - completion: completion: (success, error), execute on background thread.
+    public func exportVideos(
+      using configurations: [ExportVideoConfiguration],
+      completion: @escaping (_ success: Bool, _ error: Error?) -> Void
+    )
+
+    /// Export several configurable video with cover image
+    /// - Parameters:
+    ///   - configurations: contains configurations for exporting videos such as file url,
+    ///    watermark and video quality
+    ///   - completion: completion: (success, error, image), execute on background thread.
+    public func exportVideosWithCoverImage(
+      using configurations: [ExportVideoConfiguration],
+      completion: @escaping ((_ success: Bool, _ error: Error?, _ image: UIImage) -> Void)
+    )
 ```
-
-## Implement your ExportVideoInfo instance.
-
-```
- let exportVideoInfo = ExportVideoInfo(
-      width: 640,
-      height: 360,
-      bitrate: 1000000,
-      frameRate: 30,
-      codecType: AVVideoCodecType.h264,
-      scalingMode: AVVideoScalingModeResizeAspect
- )
- ```
- ## Create ExportVideoConfiguration with following properties.
- 
- ```
- /// The video file URL.
-  public let fileURL: URL
-  /// The export video quality.
-  public let quality: ExportQuality
-  /// The watermark configuration. Optional.
-  public let watermarkConfiguration: WatermarkConfiguration?
-  ```
- 
-```
-  let exportVideoConfigurations: [ExportVideoConfiguration] = [
-      ExportVideoConfiguration(
-        fileURL: firstFileURL,
-        quality: .auto,
-        watermarkConfiguration: watermarkConfiguration
-      ),
-      ExportVideoConfiguration(
-        fileURL: secondFileURL,
-        quality: .videoConfiguration(exportVideoInfo),
-        watermarkConfiguration: watermarkConfiguration
-      )
-    ]
- ```
-
-## Use our BanubaVideoEditor API func
-
-```
-/// Export several configurable video with cover image
-  /// - Parameters:
-  ///   - configurations: contains configurations for exporting videos such as file url,
-  ///    watermark and video quality
-  ///   - completion: completion: (success, error, image), execute on background thread.
-  public func exportVideosWithCoverImage(
-    using configurations: [ExportVideoConfiguration],
-    completion: @escaping ((_ success: Bool, _ error: Error?, _ image: UIImage)->Void)
-  )
-```
-
-
