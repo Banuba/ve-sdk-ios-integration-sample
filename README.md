@@ -96,10 +96,14 @@ Please, refer to the [example of Podfile](Example/Podfile) lines which you need 
    ```sh
    brew install cocoapods 
    ```
+1. Initialize pods in your project folder (optional, if you didn't make it before).
+```sh
+pod init
+```
 1. Install Video Editor SDK for the provided Xcode workspace with:
-   ```sh
-   pod install
-   ```
+```sh
+pod install
+```
 1. Open `Example.xcworkspace` with Xcode and run the project.
 
 ### Start Video Editor from ViewController
