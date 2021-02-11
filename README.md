@@ -85,12 +85,6 @@ The video editor is able to download AR effects from Banuba server to provide mo
 Please check out [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure AR Cloud in the SDK.
 
 ## Getting Started
-### Setup SSH key for GitHub
-1. Paste Banuba ssh private key into .ssh folder on your Mac. (If .ssh directory doesn't exist - run mkdir -p ~/.ssh')
-2. Add ssh private key to SSH authentication agent. Please, use the following command in Terminal:
-   ```sh
-   sudo ssh-add <banuba-ssh-private-key-file>
-   ```
 ### CocoaPods
 Video Editor SDK is available via CocoaPods. If you're new to CocoaPods, refer to the [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html). CocoaPods is the preferred and the simplest way to get the SDK.
 
@@ -102,10 +96,14 @@ Please, refer to the [example of Podfile](Example/Podfile) lines which you need 
    ```sh
    brew install cocoapods 
    ```
+1. Initialize pods in your project folder (optional, if you didn't make it before).
+```sh
+pod init
+```
 1. Install Video Editor SDK for the provided Xcode workspace with:
-   ```sh
-   pod install
-   ```
+```sh
+pod install
+```
 1. Open `Example.xcworkspace` with Xcode and run the project.
 
 ### Start Video Editor from ViewController

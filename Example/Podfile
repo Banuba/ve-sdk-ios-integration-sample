@@ -1,4 +1,4 @@
-source 'git@github.com:Banuba/specs.git'
+source 'https://github.com/Banuba/specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 use_frameworks!
