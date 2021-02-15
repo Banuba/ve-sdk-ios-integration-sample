@@ -266,6 +266,20 @@ class ViewController: UIViewController {
     return config
   }
   
+    private func updateAlertConfiguration(_ configuration: AlertViewConfiguration) -> AlertViewConfiguration {
+    var config = configuration
+    config.cornerRadius = 7.0
+    config.buttonRadius = 4.0
+    config.refuseButtonTextColor = UIColor.white
+    config.refuseButtonBackgroundColor = UIColor.green
+    config.agreeButtonBackgroundColor = UIColor.yellow
+    config.agreeButtonTextColor = UIColor.black
+    config.titleAligment = .center
+    config.titleFont = UIFont.boldSystemFont(ofSize: 22.0)
+    config.buttonsFont = UIFont.systemFont(ofSize: 16.0)
+    return config
+  }
+  
   private func updateCombinedGalleryConfiguration(_ configuration: CombinedGalleryConfiguration) -> CombinedGalleryConfiguration {
     var configuration = configuration
     
@@ -622,20 +636,6 @@ class ViewController: UIViewController {
     configuration.effectItemConfiguration.cornerRadius = 4.0
     
     return configuration
-  }
-  
-  private func updateAlertConfiguration(_ configuration: AlertViewConfiguration) -> AlertViewConfiguration {
-    var config = configuration
-    config.cornerRadius = 7.0
-    config.buttonRadius = 4.0
-    config.refuseButtonTextColor = UIColor.white
-    config.refuseButtonBackgroundColor = UIColor.green
-    config.agreeButtonBackgroundColor = UIColor.yellow
-    config.agreeButtonTextColor = UIColor.black
-    config.titleAligment = .center
-    config.titleFont = UIFont.boldSystemFont(ofSize: 22.0)
-    config.buttonsFont = UIFont.systemFont(ofSize: 16.0)
-    return config
   }
   
   private func updateFullScreenActivityConfiguration(_ configuration: FullScreenActivityConfiguration) -> FullScreenActivityConfiguration {
