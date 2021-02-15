@@ -219,6 +219,7 @@ The SDK allows to override icons, colors, typefaces, text messages and button ti
 Below you can find how to customize VE SDK to bring your experience.
 
 1. [Camera screen](mdDocs/camera_styles.md)
+1. [Hands Free screen](mdDocs/handsFree_styles.md)
 1. [Editor screen](mdDocs/editor_styles.md)
 1. [Trim screens](mdDocs/trim_styles.md)
 1. [Overlay screens](mdDocs/overlayEditor_styles.md)
