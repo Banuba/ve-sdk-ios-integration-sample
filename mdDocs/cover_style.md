@@ -13,7 +13,7 @@ RoundedButtonConfiguration setups done button style
 
 TextConfiguration setups tool tip label
 
-- [sliderColor: UIColor](/Example/Example/Extension/SimpleVideoCoverSelectionConfiguration.swift#L8)
+- [sliderColor: UIColor](/Example/Example/Extension/SimpleVideoCoverSelectionConfiguration.swift#L9)
 
 Slider color
 
