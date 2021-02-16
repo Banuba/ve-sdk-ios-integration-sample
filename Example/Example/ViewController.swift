@@ -81,6 +81,7 @@ class ViewController: UIViewController {
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
     config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
     config.textEditorConfiguration = updateTextEditorConfiguration(config.textEditorConfiguration)
+    config.gifPickerConfiguration = updateGifPickerConfiguration(config.gifPickerConfiguration)
     config.speedSelectionConfiguration = updateSpeedSelectionConfiguration(config.speedSelectionConfiguration)
     config.trimGalleryVideoConfiguration = updateTrimGalleryVideoConfiguration(config.trimGalleryVideoConfiguration)
     config.multiTrimConfiguration = updateMultiTrimConfiguration(config.multiTrimConfiguration)
