@@ -1,5 +1,82 @@
 # Banuba VideoEditor SDK
-## GalleryConfiguration
+## CombinedGalleryConfiguration
+
+- videoResolution: VideoResolutionConfiguration
+
+VideoResolutionConfiguration setups editor options for rendering video
+
+- galleryItemConfiguration: GalleryItemConfiguration
+
+GalleryItemConfiguration setups gallery item style for collection view cell
+
+- closeButtonConfiguration: ImageButtonConfiguration
+
+ImageButtonConfiguration setups close button style
+
+- albumButtonConfiguration: TextButtonConfiguration
+
+TextButtonConfiguration setups album button style
+
+- nextButtonConfiguration: SaveButtonConfiguration
+
+SaveButtonConfiguration setups next button style
+
+- noItemsLabelConfiguration: TextConfiguration
+  
+TextConfiguration setups 'no photos' and 'no videos' label title style
+
+- layoutConfiguration: GalleryLayoutConfiguration
+  
+GalleryLayoutConfiguration setups collection view layout for gallery items
+
+- topBarBlurColor: UIColor
+ 
+Top bar blur color
+
+- clearSelectionButtonConfiguration: ImageButtonConfiguration
+  
+ImageButtonConfiguration setups clear selection button style
+
+- galleryTypeButton: TextButtonConfiguration
+  
+TextButtonConfiguration setups gallery type buttons' style
+
+- galleryTypeUnderlineColor: UIColor
+  
+Color for underline view
+
+- isVideoEnabled: Bool
+  
+Setups gallery state with video only
+
+- isPhotoEnabled: Bool
+  
+Setups gallery state with photo only
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - backButtonConfiguration: BackButtonConfiguration
 
