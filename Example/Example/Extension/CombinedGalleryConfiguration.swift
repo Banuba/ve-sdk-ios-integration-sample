@@ -38,6 +38,7 @@ extension ViewController {
     configuration.topBarBlurColor = UIColor.yellow
     configuration.clearSelectionButtonConfiguration.imageConfiguration.imageName = "imageName"
     configuration.galleryTypeButton.style.color = UIColor.yellow
+    configuration.galleryTypeUnderlineColor = UIColor.yellow
     configuration.isVideoEnabled = true
     configuration.isPhotoEnabled = true
   
