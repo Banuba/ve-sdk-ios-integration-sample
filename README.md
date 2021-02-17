@@ -73,6 +73,7 @@ We understand that the client should have options to brand video editor to bring
 :white_check_mark: Change text styles i.e. font, color. [See details](#Configure-screens)    
 :white_check_mark: Localize and change text resources. Default locale is :us:  
 :white_check_mark: Make content you want i.e. a number of video with different resolutions and durations, an audio file. [See details](#Configure-export-flow)  
+:white_check_mark: Customize recording video duration behavior. [See details](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_duration_configuration.md)  
 :x: Change layout  
 :x: Change screen order
 
