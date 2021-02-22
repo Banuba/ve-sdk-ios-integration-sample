@@ -1,39 +1,39 @@
 # Banuba VideoEditor SDK
 ## AlertViewConfiguration
 
-- cornerRadius: CGFloat
+- [cornerRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L4)
 
 Container corner radius
 
-- buttonRadius: CGFloat
+- [buttonRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L5)
 
 Buttons' radius
 
-- refuseButtonBackgroundColor: UIColor
+- [refuseButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L6)
 
 Refuse button background color
 
-- refuseButtonTextColor: UIColor
+- [refuseButtonTextColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L7)
 
 Refuse button text color
 
-- agreeButtonBackgroundColor: UIColor
+- [agreeButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L8)
 
 Agree button background color
 
-- agreeButtonTextColor: UIColor
+- [agreeButtonTextColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L9)
 
 Agree button text color
 
-- titleAligment: NSTextAlignment
+- [titleAligment: NSTextAlignment](/Example/Example/Extension/AlertViewConfiguration.swift#L10)
 
 Main title aligment
 
-- titleFont: UIFont
+- [titleFont: UIFont](/Example/Example/Extension/AlertViewConfiguration.swift#L11)
 
 Main title font
 
-- buttonsFont: UIFont
+- [buttonsFont: UIFont](/Example/Example/Extension/AlertViewConfiguration.swift#L12)
 
 Buttons' font
 
