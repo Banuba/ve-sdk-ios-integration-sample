@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     config.multiTrimConfiguration = updateMultiTrimConfiguration(config.multiTrimConfiguration)
     config.singleTrimConfiguration = updateSingleTrimConfiguration(config.singleTrimConfiguration)
     config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
-    config.alertViewConfiguration = updateAlertConfiguration(config.alertViewConfiguration)
+    config.alertViewConfiguration = updateAlertViewConfiguration(config.alertViewConfiguration)
     config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
     
     return config
@@ -598,15 +598,6 @@ class ViewController: UIViewController {
     configuration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
   
     configuration.effectItemConfiguration.cornerRadius = 4.0
-    
-    return configuration
-  }
-  
-  private func updateAlertConfiguration(_ configuration: AlertViewConfiguration) -> AlertViewConfiguration {
-    var configuration = configuration
-    
-    configuration.refuseButtonBackgroundColor = UIColor(red: 6, green: 188, blue: 193)
-    configuration.refuseButtonTextColor = UIColor.white
     
     return configuration
   }
