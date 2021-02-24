@@ -1,5 +1,4 @@
 # API for using client's audio content in the SDK
-[comment]: <> (This file was created by exporting notion page from here: https://www.notion.so/vebanuba/API-for-using-client-s-audio-content-in-the-SDK-9a0e03dd3ad04962a2cbadebe5c73c19)
 ## Overview
 
 The user can apply audio tracks on camera and audio editor screens.
