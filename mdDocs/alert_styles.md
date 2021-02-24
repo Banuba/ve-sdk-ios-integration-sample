@@ -1,5 +1,5 @@
 # Banuba VideoEditor SDK
-## AlertViewConfiguration
+## AlertViewConfiguration - configuration for all UIAlertController at the editor
 
 - [cornerRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L4)
 
