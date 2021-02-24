@@ -8,6 +8,7 @@
 | Name | Link | Copyright info |
 | --- | --- | --- |
 | Reachability.swift | [https://github.com/ashleymills/Reachability.swift](https://github.com/ashleymills/Reachability.swift) | Copyright (c) 2016 Ashley Mills |
+| SSZipArchive | [https://github.com/ZipArchive/ZipArchive](https://github.com/ZipArchive/ZipArchive) | Copyright (c) 2010-2015, Sam Soffes |
 
 ### Face AR SDK
 [View](https://docs.banuba.com/face-ar-sdk/overview/3rd_licenses) third party libraries for Banuba Face AR SDK
