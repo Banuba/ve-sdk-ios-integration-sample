@@ -1,5 +1,12 @@
 # Banuba VideoEditor SDK
-## AlertViewConfiguration - configuration for all UIAlertController at the editor
+## AlertViewConfiguration
+
+The UIAlertController object displays a message to the user.
+In addition to displaying a message to the user, you can associate actions that can be used.
+
+In the application UIAlertController is used when you want to cancel some action, or reset progress.
+
+Please use the properties below to configure the UIAlertController.
 
 - [cornerRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L4)
 
