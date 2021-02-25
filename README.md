@@ -270,4 +270,4 @@ Feel free to edit any text in the SDK app. To localize texts (strings resources)
 Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to your questions.
 
 ## Third party libraries
-In progress ...
+[View](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/3rd_party_licences.md) information about third party libraries.
