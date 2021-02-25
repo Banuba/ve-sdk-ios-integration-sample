@@ -1,7 +1,7 @@
 # Banuba VideoEditor SDK
 ## AlertViewConfiguration
 
-The AlertController object displays a message to the user.
+The AlertController entity displays a message to the user.
 In addition to displaying a message to the user, you can associate actions that can be used. In the application AlertController is used when you want to cancel some action, or reset progress.
 
 Please use the properties below to configure the AlertController.
