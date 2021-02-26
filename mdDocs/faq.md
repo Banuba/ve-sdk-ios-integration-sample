@@ -32,4 +32,24 @@ videoEditorSDK?.presentVideoEditor(
       completion: {...}
     )
 ```
+### 4. I want to use Video Editor without Face AR.
+For first: to be able to use Video Editor without Face AR you need to remove this lines from pod file.
 
+```
+pod 'BanubaEffectPlayer' # Remove this line
+pod 'BanubaSDK' # Remove this line
+```
+
+Then pass 'false' boolean value to 'isFaceAREnabled' entire argument of BanubaVideoEditor init.
+
+```
+ videoEditorSDK = BanubaVideoEditor(
+   token: YourClientToken,
+   effectsToken: YourEffectsToken,
+   isFaceAREnabled: false, #use this line
+   cloudMasksToken: YourCloudMasksToken,
+   configuration: YourConfig,
+   analytics: YourAnalyticsExample,
+   externalViewControllerFactory: YourExternalViewControllerFactory
+)
+```
