@@ -33,7 +33,7 @@ videoEditorSDK?.presentVideoEditor(
     )
 ```
 ### 4. I want to use Video Editor without Face AR.
-For first: to be able to use Video Editor without Face AR you need to remove this lines from pod file.
+For first: to be able to use Video Editor without Face AR you need to remove this lines from [pod file](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile).
 
 ```
 pod 'BanubaEffectPlayer' # Remove this line
