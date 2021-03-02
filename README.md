@@ -15,7 +15,6 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 - [What can you customize?](#What-can-you-customize)
 - [Configure AR cloud](#Configure-AR-cloud)
 - [Getting Started](#Getting-Started)
-    + [Setup SSH key for GitHub](#Setup-SSH-key-for-GitHub)
     + [CocoaPods](#CocoaPods)
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)
     + [Configure export flow](#Configure-export-flow)
