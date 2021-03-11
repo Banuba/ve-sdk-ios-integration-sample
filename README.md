@@ -253,6 +253,11 @@ To use a watermark, you need to create and configure WatermarkConfiguration stru
 
 Check out [this example](/Example/Example/ViewController.swift#L629) if you have any troubles.
 
+### Configure the record button
+The record button is a main control on the camera screen which you can fully customize along with animations playing on tap.
+
+First of all look at [RecordButtonConfiguration](mdDocs/record_button_configuration.md) entity which you can customize in [Camera screen configuration quide](mdDocs/camera_styles.md). If it still not suits your needs you can create your own view for more information look [here](mdDocs/record_button_provider.md)
+
 ### Icons
 1. Load icons to the Assets catalog.
 1. Find the desired screen for an icon in [VideoEditroConfig](/Example/Example/ViewController.swift#L35) entity.

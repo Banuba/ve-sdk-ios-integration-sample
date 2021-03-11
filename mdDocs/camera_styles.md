@@ -27,9 +27,9 @@
   
   RecordButtonConfiguration setups capture button style
   
-  - recordButtonProvider: VideoEditorCaptureButtonProvider?
+  - recordButtonProvider: RecorderButtonProvider?
   
-  VideoEditorCaptureButtonProvider provides access to the possibility for creating capture button
+  RecorderButtonProvider provides access to the possibility for creating recorder button
   
   - additionalEffectsButtons: [AdditionalEffectsButtonConfiguration]
   
