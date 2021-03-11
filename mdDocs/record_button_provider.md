@@ -5,7 +5,7 @@ To implement your own custom record button you should create a new provider witÑ
 ``` swift
 /// The record button view provider.
 public protocol RecordButtonProvider {
-  func getButton() -> RecordButton?
+  func getButton() -> RecordButton
 }
 ``` 
 Then make a new class implements ``RecordButton`` protocol
@@ -13,9 +13,9 @@ Then make a new class implements ``RecordButton`` protocol
 public protocol RecordButton: UIView {
   var delegate: RecordButtonDelegate? { get set }
   var configuration: RecordButtonConfiguration? { get set }
-  func updateVideoRecordingProgress(_ captureProgress: Double)
+  func updateVideoRecordingProgress(_ progress: Double)
   func changeViewToIdleState()
-  func changeViewToCaptureState()
+  func changeViewToRecordingState()
   func reset()
 }
 
