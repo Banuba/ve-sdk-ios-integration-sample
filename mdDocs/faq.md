@@ -32,22 +32,3 @@ videoEditorSDK?.presentVideoEditor(
       completion: {...}
     )
 ```
-### 4. I want to disable Face AR.  
-Face AR SDK is used optionally in VE SDK and can be disabled. Please make these changes to disable Face AR SDK
-1. Remove pod ['BanubaEffectPlayer'](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile#L12) from podfile.
-1. Remove pod ['BanubaSDK'](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile#L13) from podfile.
-
-Change 'isFaceAREnabled' to 'false' when creating instance of  BanubaVideoEditor.  
-
-Example, 
-```
- videoEditorSDK = BanubaVideoEditor(
-   token: YourClientToken,
-   effectsToken: YourEffectsToken,
-   isFaceAREnabled: false, // CHANGE to 'false' here
-   cloudMasksToken: YourCloudMasksToken,
-   configuration: YourConfig,
-   analytics: YourAnalyticsExample,
-   externalViewControllerFactory: YourExternalViewControllerFactory
-)
-```
