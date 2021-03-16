@@ -14,6 +14,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 - [Token](#Token)
 - [What can you customize?](#What-can-you-customize)
 - [Configure AR cloud](#Configure-AR-cloud)
+- [Disable Face AR](#Disable-Face-AR)
 - [Getting Started](#Getting-Started)
     + [CocoaPods](#CocoaPods)
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)
@@ -84,6 +85,27 @@ We understand that the client should have options to brand video editor to bring
 The video editor is able to download AR effects from Banuba server to provide more effects in video editor and save your app size .
 
 Please check out [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure AR Cloud in the SDK.
+
+### Disable Face AR 
+
+Face AR SDK is used optionally in VE SDK and can be disabled. Please make these changes to disable Face AR SDK
+1. Remove pod ['BanubaEffectPlayer'](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile#L12) from podfile.
+1. Remove pod ['BanubaSDK'](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile#L13) from podfile.
+
+Change 'isFaceAREnabled' to 'false' when creating instance of  BanubaVideoEditor.  
+
+Example, 
+```
+ videoEditorSDK = BanubaVideoEditor(
+   token: YourClientToken,
+   effectsToken: YourEffectsToken,
+   isFaceAREnabled: false, // CHANGE to 'false' here
+   cloudMasksToken: YourCloudMasksToken,
+   configuration: YourConfig,
+   analytics: YourAnalyticsExample,
+   externalViewControllerFactory: YourExternalViewControllerFactory
+)
+```
 
 ## Getting Started
 ### CocoaPods
