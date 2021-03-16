@@ -32,3 +32,17 @@ videoEditorSDK?.presentVideoEditor(
       completion: {...}
     )
 ```
+
+### 5. I want to add color filters
+
+Color filters (luts) are special graphic files placed into **luts** directory inside the host project folder.
+
+To add your own color filter icon you should place it into **assets** folder that will be used as an icon for this particular color effect within the list of effects.
+
+The name of the icon resource must be **the same** as the graphic file within luts directory.
+
+As an example, check out how the black-and-white color filter is added: 
+
+[**Here**](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/luts/CF01.png) is a graphic file named C1.png within luts directory that allows to achieve black-and-white picture
+
+[**Here**](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/Filters%20Preview/CF01_preview.imageset) is an appropriate icon named CF01_preview.imageset within drawable resource directory that is used as an icon within the list of effects
