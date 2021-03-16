@@ -32,3 +32,50 @@ videoEditorSDK?.presentVideoEditor(
       completion: {...}
     )
 ```
+### 4. I want to use VideoEditor several times from different entry points.
+
+Before you want to use VideoEditor again you need to deinitialize your current editor instanse in your entry point class scope. You need to set 'yourVideoEditorSdkInstance' = nil after following funcs called.
+
+```
+
+// Video Editor Delegate implementation example
+extension ViewController: BanubaVideoEditorDelegate {
+  func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
+    // User finished editing sessoin, need to dismiss video editor and export video
+    videoEditorSDK?.dismissVideoEditor(
+      animated: true
+    ) { [weak self] in
+      self?.exportVideo(...) { ... in
+         self?.'yourVideoEditorSdkInstance' = nil
+      }
+    }
+  }
+  
+  func videoEditorDidCancel(
+    _ videoEditor: BanubaVideoEditor
+  ) {
+    // User canceled editing sessoin, need to dismiss video editor
+    videoEditorSDK?.dismissVideoEditor(
+      animated: true,
+      completion: {
+        self?.'yourVideoEditorSdkInstance' = nil
+      }
+    )
+  }
+}
+
+```
+
+Next time you want open VideoEditor flow you need to create BanubaVideoEditor instance. 
+
+For example on your tap button action:
+
+```
+
+@IBAction func videoEditorButtonTapped(...) {
+   if 'yourVideoEditorSdkInstance' = nil {
+      'yourVideoEditorSdkInstance' = BanubaVideoEditor(...)
+   }
+}
+
+```
