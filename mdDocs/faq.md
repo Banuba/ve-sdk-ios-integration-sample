@@ -67,7 +67,7 @@ extension ViewController: BanubaVideoEditorDelegate {
 
 ```
 
-Next time you want open VideoEditor flow you need to [create BanubaVideoEditor instance](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L42). 
+Use the following approach if you want to [create BanubaVideoEditor instance](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L42) again. 
 
 For example on your tap button action:
 
