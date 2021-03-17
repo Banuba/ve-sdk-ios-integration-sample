@@ -35,7 +35,7 @@ videoEditorSDK?.presentVideoEditor(
 
 ### 4. I want to use VideoEditor several times from different entry points.
 
-Before you want to use VideoEditor again you need to deinitialize your current editor instanse in your entry point class scope. You need to set 'yourVideoEditorSdkInstance' = nil after following funcs called.
+Before you want to use VideoEditor again you need to deinitialize your current editor instanse in your [entry point class scope](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L675). You need to set 'yourVideoEditorSdkInstance' = nil after following funcs called([done](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L660) and [cancel](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L678)).
 
 ```
 
@@ -67,7 +67,7 @@ extension ViewController: BanubaVideoEditorDelegate {
 
 ```
 
-Next time you want open VideoEditor flow you need to create BanubaVideoEditor instance. 
+Next time you want open VideoEditor flow you need to [create BanubaVideoEditor instance](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L42). 
 
 For example on your tap button action:
 
