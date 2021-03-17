@@ -33,6 +33,54 @@ videoEditorSDK?.presentVideoEditor(
     )
 ```
 
+### 4. I want to use VideoEditor several times from different entry points.
+
+Before you want to use VideoEditor again you need to deinitialize your current editor instanse in your [entry point class scope](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L675). You need to set 'yourVideoEditorSdkInstance' = nil after following funcs called([done](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L660) and [cancel](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L678)).
+
+```
+
+// Video Editor Delegate implementation example
+extension ViewController: BanubaVideoEditorDelegate {
+  func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
+    // User finished editing sessoin, need to dismiss video editor and export video
+    videoEditorSDK?.dismissVideoEditor(
+      animated: true
+    ) { [weak self] in
+      self?.exportVideo(...) { ... in
+         self?.'yourVideoEditorSdkInstance' = nil
+      }
+    }
+  }
+  
+  func videoEditorDidCancel(
+    _ videoEditor: BanubaVideoEditor
+  ) {
+    // User canceled editing sessoin, need to dismiss video editor
+    videoEditorSDK?.dismissVideoEditor(
+      animated: true,
+      completion: {
+        self?.'yourVideoEditorSdkInstance' = nil
+      }
+    )
+  }
+}
+
+```
+
+Use the following approach if you want to [create BanubaVideoEditor instance](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L42) again. 
+
+For example on your tap button action:
+
+```
+
+@IBAction func videoEditorButtonTapped(...) {
+   if 'yourVideoEditorSdkInstance' = nil {
+      'yourVideoEditorSdkInstance' = BanubaVideoEditor(...)
+   }
+}
+
+```
+
 ### 5. I want to add color filters
 
 Color filters (luts) are special graphic files placed into **luts** directory inside the host project folder.

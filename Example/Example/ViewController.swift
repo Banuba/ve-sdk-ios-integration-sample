@@ -39,6 +39,9 @@ class ViewController: UIViewController {
   }
   
   @IBAction func openVideoEditorAction(_ sender: Any) {
+    if videoEditorSDK == nil {
+      initVideoEditor()
+    }
     let musicURL = Bundle.main.bundleURL
       .appendingPathComponent("Music/long", isDirectory: true)
       .appendingPathComponent("long_music_2.wav")
@@ -654,6 +657,7 @@ extension ViewController {
         if success {
           self.playVideoAtURL(videoURL)
         }
+        self.videoEditorSDK = nil
       }
     })
   }
@@ -670,11 +674,14 @@ extension ViewController {
 
 extension ViewController: BanubaVideoEditorDelegate {
   func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
-    videoEditor.dismissVideoEditor(animated: true, completion: nil)
+    videoEditor.dismissVideoEditor(animated: true) { [weak self] in
+      self?.videoEditorSDK = nil
+    }
   }
   
   func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
-    exportVideo()
-    videoEditor.dismissVideoEditor(animated: true, completion: nil)
+    videoEditor.dismissVideoEditor(animated: true) { [weak self] in
+      self?.exportVideo()
+    }
   }
 }
