@@ -149,6 +149,10 @@ Color pallete inset
 
 TextEditColorItemConfiguration setups pallete's color items' configuration 
 
+- cursorColor: UIColor
+
+Cursor color
+
 ![img](screenshots/TextEditorScreen.png)
 
 ## GifPickerConfiguration
