@@ -21,22 +21,22 @@ extension ViewController {
         font: UIFont.systemFont(ofSize: 14.0),
         type: .track,
         title: "Tracks",
-        titleColor: UIColor.yellow,
-        imageName: "btn_add_track"
+        titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+        imageName: "ic_tracks"
       ),
       EditButtonConfig(
         font: UIFont.systemFont(ofSize: 14.0),
         type: .effect,
         title: "Effects",
-        titleColor: UIColor.yellow,
-        imageName: "btn_add_track"
+        titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+        imageName: "ic_effects"
       ),
       EditButtonConfig(
         font: UIFont.systemFont(ofSize: 14.0),
         type: .record,
         title: "Record",
-        titleColor: UIColor.yellow,
-        imageName: "btn_add_record"
+        titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+        imageName: "ic_voice_recording"
       )
     ]
     
@@ -47,46 +47,46 @@ extension ViewController {
         font: UIFont.systemFont(ofSize: 14.0),
         type: .edit,
         title: "Edit",
-        titleColor: #colorLiteral(red: 0.3176470588, green: 0.5960784314, blue: 0.8549019608, alpha: 1),
-        imageName: "btn_edit_on",
-        selectedImageName: "imageName"
+        titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+        imageName: "ic_edit",
+        selectedImageName: nil
       ),
       EditCompositionButtonConfig(
         font: UIFont.systemFont(ofSize: 14.0),
         type: .delete,
         title: "Delete",
-        titleColor: #colorLiteral(red: 0.3176470588, green: 0.5960784314, blue: 0.8549019608, alpha: 1),
-        imageName: "btn_X",
-        selectedImageName: "imageName"
+        titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+        imageName: "ic_trash",
+        selectedImageName: nil
       )
     ]
     
     configuration.controlButtons = [
       ControlButtonConfig(
         type: .reset,
-        imageName: "btn_delete",
+        imageName: "ic_restart",
         selectedImageName: nil
       ),
       ControlButtonConfig(
         type: .play,
-        imageName: "btn_play_music",
-        selectedImageName: "imageName"
+        imageName: "ic_editor_play",
+        selectedImageName: "ic_pause"
       ),
       ControlButtonConfig(
         type: .done,
-        imageName: "btn_accepted_track",
+        imageName: "ic_done",
         selectedImageName: nil
       )
     ]
     
     configuration.playerControlsHeight = 50.0
     configuration.audioWaveConfiguration.isRandomWaveColor = true
-    configuration.mainLabelColors = UIColor.yellow
+    configuration.mainLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.additionalLabelColors = UIColor.black
     configuration.speakerImageName = "imageName"
     configuration.volumeLabel.title = "Title"
     configuration.tracksLimit = 5
-    configuration.cursorColor = UIColor.yellow
+    configuration.cursorColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.controlsBackgroundConfiguration.cornerRadius = 0.0
     configuration.backgroundConfiguration.cornerRadius = 0.0
     configuration.timelineCornerRadius = 0.0
@@ -99,31 +99,31 @@ extension ViewController {
     
     configuration.rewindToStartButton = ControlButtonConfig(
       type: .reset,
-      imageName: "imageName",
+      imageName: "ic_restart",
       selectedImageName: nil
     )
     
     configuration.playPauseButton = ControlButtonConfig(
       type: .play,
-      imageName: "imageName",
-      selectedImageName: "imageName"
+      imageName: "ic_editor_play",
+      selectedImageName: "ic_pause"
     )
     
     configuration.playerControlsHeight = 50.0
     
     configuration.recordButton = ControlButtonConfig(
       type: .play,
-      imageName: "imageName",
-      selectedImageName: "imageName"
+      imageName: "ic_start_recording",
+      selectedImageName: "ic_pause_recording"
     )
     
-    configuration.backButtonImage = "imageName"
-    configuration.doneButtonImage = "imageName"
+    configuration.backButtonImage = "ic_close"
+    configuration.doneButtonImage = "ic_done"
     configuration.dimViewColor = #colorLiteral(red: 0.3176470588, green: 0.5960784314, blue: 0.8549019608, alpha: 0.2039811644)
-    configuration.additionalLabelColors = UIColor.yellow
+    configuration.additionalLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.startingRecordingTimerSeconds = 0.0
-    configuration.timerColor = UIColor.yellow
-    configuration.cursorColor = UIColor.yellow
+    configuration.timerColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.cursorColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.backgroundConfiguration.cornerRadius = 0.0
     configuration.playerControlsBackgroundConfiguration.cornerRadius = 0.0
     configuration.timelineCornerRadius = 0.0
@@ -134,11 +134,11 @@ extension ViewController {
   func updateVideoTrackLineEditControllerConfig(_ configuration: VideoTrackLineEditViewControllerConfig) -> VideoTrackLineEditViewControllerConfig {
     var configuration = configuration
     
-    configuration.doneButtonImageName = "imageName"
-    configuration.doneButtonTintColor = UIColor.yellow
-    configuration.sliderTintColor = UIColor.yellow
-    configuration.mainLabelColors = UIColor.yellow
-    configuration.additionalLabelColors = UIColor.yellow
+    configuration.doneButtonImageName = "ic_done"
+    configuration.doneButtonTintColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.sliderTintColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.mainLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.additionalLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.backgroundConfiguration.cornerRadius = 0.0
     configuration.height = 50.0
     return configuration
@@ -149,22 +149,22 @@ extension ViewController {
     var configuration = configuration
     
     configuration.audioWaveConfiguration.isRandomWaveColor = true
-    configuration.audioWaveConfiguration.waveLinesColor = UIColor.yellow
-    configuration.doneButtonImageName = "imageName"
-    configuration.doneButtonTintColor = UIColor.yellow
-    configuration.sliderTintColor = UIColor.yellow
-    configuration.draggersColor = UIColor.yellow
-    configuration.draggerImageName = "imageName"
+    configuration.audioWaveConfiguration.waveLinesColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.doneButtonImageName = "ic_done"
+    configuration.doneButtonTintColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.sliderTintColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.draggersColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.draggerImageName = "trim_left"
     configuration.trimHeight = 61.0
-    configuration.trimBorderColor = UIColor.yellow
+    configuration.trimBorderColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.trimBorderWidth = 2.0
     configuration.cursorHeight = 1.0
-    configuration.dimViewColor = UIColor.yellow.withAlphaComponent(0.5)
-    configuration.mainLabelColors = UIColor.yellow
-    configuration.additionalLabelColors = UIColor.yellow
-    configuration.cursorColor = UIColor.yellow
+    configuration.dimViewColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    configuration.mainLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.additionalLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.cursorColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.draggersWidth = 25.0
-    configuration.draggersLineColor = UIColor.yellow
+    configuration.draggersLineColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.draggersCornerRadius = 0.0
     configuration.draggersLineWidth = 2.0
     configuration.draggersLineHeight = 35.0
