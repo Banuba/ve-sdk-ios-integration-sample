@@ -1,5 +1,7 @@
 # Banuba VideoEditor SDK
-## Camera screen styles  
+## Camera screen styles 
+
+  Style is intended to setup action button icons, customize relative position and appearance of music, gallery, switch camera icons. Icons drawables customized by using custom attributes of this style (for instance, [icon_mask_on](/Example/Example/Extension/RecorderConfiguration.swift#L81) and [icon_mask_off](/Example/Example/Extension/RecorderConfiguration.swift#L82) setup drawables for icons related to applied AR mask effect)
 
    - [videoResolution: VideoResolutionConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L9)
    
