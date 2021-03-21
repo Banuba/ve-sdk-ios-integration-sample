@@ -1,5 +1,8 @@
+import UIKit
+import BanubaVideoEditorSDK
+
 extension ViewController {
-  private func updateAlertViewConfiguration(_ configuration: AlertViewConfiguration) -> AlertViewConfiguration {
+  func updateAlertViewConfiguration(_ configuration: AlertViewConfiguration) -> AlertViewConfiguration {
     var config = configuration
     config.cornerRadius = 7.0
     config.buttonRadius = 4.0

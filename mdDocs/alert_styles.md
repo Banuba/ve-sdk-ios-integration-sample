@@ -6,39 +6,39 @@ In addition to displaying a message to the user, you can associate actions that 
 
 Please use the properties below to configure the AlertController.
 
-- [cornerRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L4)
+- [cornerRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L7)
 
 Container corner radius
 
-- [buttonRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L5)
+- [buttonRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L8)
 
 Buttons' radius
 
-- [refuseButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L6)
+- [refuseButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L9)
 
 Refuse button background color
 
-- [refuseButtonTextColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L7)
+- [refuseButtonTextColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L10)
 
 Refuse button text color
 
-- [agreeButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L8)
+- [agreeButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L11)
 
 Agree button background color
 
-- [agreeButtonTextColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L9)
+- [agreeButtonTextColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L12)
 
 Agree button text color
 
-- [titleAligment: NSTextAlignment](/Example/Example/Extension/AlertViewConfiguration.swift#L10)
+- [titleAligment: NSTextAlignment](/Example/Example/Extension/AlertViewConfiguration.swift#L13)
 
 Main title aligment
 
-- [titleFont: UIFont](/Example/Example/Extension/AlertViewConfiguration.swift#L11)
+- [titleFont: UIFont](/Example/Example/Extension/AlertViewConfiguration.swift#L14)
 
 Main title font
 
-- [buttonsFont: UIFont](/Example/Example/Extension/AlertViewConfiguration.swift#L12)
+- [buttonsFont: UIFont](/Example/Example/Extension/AlertViewConfiguration.swift#L15)
 
 Buttons' font
 
