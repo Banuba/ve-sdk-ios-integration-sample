@@ -1,7 +1,7 @@
 # Banuba VideoEditor SDK
 ## Camera screen styles 
 
-Here we set up the styles for the recording screen. These configs are for customizing action button icons, adjusting relative position and appearance of music, gallery, switching camera icons. Icons configurable using this style's custom attributes (for example, [icon_mask_on] (/ Example / Example / Extension / RecorderConfiguration.swift # L81) and [icon_mask_off] (/ Example / Example / Extension / RecorderConfiguration.swift # L82) setup drawings for icons associated with the applied AR mask effect)
+Here we set up the styles for the recording screen. These configs are for customizing action button icons, adjusting relative position and appearance of music, gallery, switching camera icons. Icons configurable using this style's custom attributes (for example, [icon_mask_on](/Example/Example/Extension/RecorderConfiguration.swift#L81) and [icon_mask_off](/Example/Example/Extension/RecorderConfiguration.swift#L82) setup drawings for icons associated with the applied AR mask effect)
 
    - [videoResolution: VideoResolutionConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L9)
    
