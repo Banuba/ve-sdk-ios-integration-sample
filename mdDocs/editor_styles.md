@@ -1,36 +1,32 @@
 # Banuba VideoEditor SDK
 ## Editor screen styles  
 
-- additionalEffectsButtons: [AdditionalEffectsButtonConfiguration]
+- [additionalEffectsButtons: [AdditionalEffectsButtonConfiguration]](/Example/Example/Extension/EditorConfiguration.swift#L8)
 
 AdditionalEffectsButtonConfiguration array setups all of the camera screen control buttons' styles
 
-- additionalEffectsButtonsBottomOffset: CGFloat
+- [additionalEffectsButtonsBottomOffset: CGFloat](/Example/Example/Extension/EditorConfiguration.swift#L46)
 
 Setups all of the camera screen control buttons' bottom offset
 
-- videoResolution: VideoResolutionConfiguration
+- [videoResolution: VideoResolutionConfiguration](/Example/Example/Extension/EditorConfiguration.swift#L47)
 
 VideoResolutionConfiguration setups editor options for rendering video
 
-- saveButton: BanubaButtonConfiguration
+- [saveButton: BanubaButtonConfiguration](/Example/Example/Extension/EditorConfiguration.swift#L68)
 
 SaveButtonConfiguration setups save button style
 
-- backButton: BackButtonConfiguration
+- [backButton: BackButtonConfiguration](/Example/Example/Extension/EditorConfiguration.swift#L74)
 
 BackButtonConfiguration setups back button style
 
-- isVideoCoverSelectionEnabled: Bool
+- [isVideoCoverSelectionEnabled: Bool](/Example/Example/Extension/EditorConfiguration.swift#L76)
 
 Indicates whether there will be a preview selection screen after the editor screen
 
-- useHorizontalVersion: Bool
+- [useHorizontalVersion: Bool](/Example/Example/Extension/EditorConfiguration.swift#L77)
 
 How the buttons appears on the screen
-
-- playButtonImageName: String
-
-ImageName setups play button UIImage
 
   ![img](screenshots/EditorConfiguration.png)
