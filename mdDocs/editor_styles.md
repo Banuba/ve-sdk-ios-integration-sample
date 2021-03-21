@@ -1,5 +1,9 @@
 # Banuba VideoEditor SDK
-## Editor screen styles  
+## Editor screen styles
+
+In the application, the Editor screen displays buttons with functionality that is available for video editing.
+
+Use the properties below to customize the Editor screen.
 
 - [additionalEffectsButtons: [AdditionalEffectsButtonConfiguration]](/Example/Example/Extension/EditorConfiguration.swift#L8)
 
