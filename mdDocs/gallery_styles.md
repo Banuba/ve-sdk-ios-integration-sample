@@ -1,6 +1,10 @@
 # Banuba VideoEditor SDK
 ## CombinedGalleryConfiguration
 
+The CombinedGallery is used in app when you want to select a photo or video stored on your phone.
+
+Use the properties below to customize the CombinedGallery.
+
 - [videoResolution: VideoResolutionConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L9)
 
 VideoResolutionConfiguration setups editor options for rendering video
