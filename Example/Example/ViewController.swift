@@ -247,21 +247,6 @@ class ViewController: UIViewController {
     return configuration
   }
   
-  private func updateCombinedGalleryConfiguration(_ configuration: CombinedGalleryConfiguration) -> CombinedGalleryConfiguration {
-    var configuration = configuration
-    
-    configuration.clearSelectionButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
-    configuration.closeButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
-    
-    configuration.nextButtonConfiguration.backgroundColor = .clear
-    configuration.nextButtonConfiguration.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
-    
-    configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
-    configuration.galleryItemConfiguration.orderNumberTitleColor = .white
-    
-    return configuration
-  }
-  
   private func updateGalleryConfiguration(_ configuration: GalleryConfiguration) -> GalleryConfiguration {
     var configuration = configuration
     
