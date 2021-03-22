@@ -280,7 +280,7 @@ Check out [this example](/Example/Example/ViewController.swift#L629) if you have
 
 Stickers are interactive objects (gif images) that can be added to the video recording to add more fun for users. 
 
-By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **stickersApiKey** parameter in [videoeditor.json](app/src/main/assets/videoeditor.json) file.
+By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **giphyAPIKey** parameter in GifPickerConfiguration entity.
 
 ### Icons
 1. Load icons to the Assets catalog.
