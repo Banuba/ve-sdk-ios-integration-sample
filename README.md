@@ -1,7 +1,7 @@
 [![](https://www.banuba.com/hubfs/Banuba_November2018/Images/Banuba%20SDK.png)](https://www.banuba.com/video-editor-sdk)
 
 # Banuba AI Video Editor SDK. Integration sample for iOS.
-Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to add a fully-functional video editor with Tiktok-like features, AR filters and effects in your app. The following guide explains how you can integrate our SDK into your iOS project. 
+Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to quickly integrate short video functionality into your mobile app. On this page, we will explain how to do so on iOS.
 
 <p align="center">
 <img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="31.6%" height="auto">&nbsp;
@@ -12,7 +12,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 - [Requirements](#Requirements)
 - [Dependencies](#Dependencies)
 - [SDKs size](#SDKs-size)
-- [Free Trial](#Free-Trial)
+- [Starting a free trial](#Free-Trial)
 - [Token](#Token)
 - [What can you customize?](#What-can-you-customize)
 - [Configure AR cloud](#Configure-AR-cloud)
@@ -30,22 +30,26 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 - [Third party libraries](#Third-party-libraries)
 
 ## Requirements
-- Iphone devices 6+
+This is what you need to run the AI Video Editor SDK
+
+- iPhone devices 6+
 - Swift 5+
 - Xcode 12.4+
-- iOS 11.0+  
+- iOS 11.0+
+Unfortunately, it isn’t compatible with iPads.
 
 ## Dependencies
 
-- [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). *Optional*
+To use the face masks, you will also need the [Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). It is optional, however, the other features will work without it. 
 
 ## SDKs size
 
-If you utilize the AR technology with masks (like Tiktok or Snapchat) you would need to have [Face AR module](https://www.banuba.com/facear-sdk/face-filters), produced by Banuba. Alternatively, you may just have the app that shoots the video/pics and edit it with no AR feature. Depending on your choice, the SDK size will vary:
 | Options | Mb      | Note |
 | -------- | --------- | ----- |
 | :white_check_mark: Face AR SDK + bitcode enabled  | 42 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
 | :x: Face AR SDK + bitcode enabled | 19 | no AR effects  |  
+
+You can either include the filters in the app or have users download them from the [AR cloud](https://www.banuba.com/facear-sdk/face-filters) to decrease the app size. 
 
 ## Video quality params
 
@@ -58,8 +62,13 @@ To be able to use your own quality parametrs please follow this [guide](https://
 | HD          | 720 x 1280  | 4000          |
 | FHD         | 1080 x 1920 | 6400          |
 
-## Free Trial  
-We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token. Put it into the app, as described below, to run the SDK.  
+## Starting a free trial
+
+You should start with getting a trial token. It will grant you 14 days to freely play around with the AI Video Editor SDK and test its entire functionality the way you see fit.
+
+There is nothing complicated about it - [contact us](https://www.banuba.com/video-editor-sdk) or send an email to sales@banuba.com and we will send it to you. We can also send you a sample app so you can see how it works “under the hood”.
+
+Once you receive the token, put it [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29). One token can be used for Video Editor SDK and Face AR SDK. We can also send you a clientCloudid for the [AR cloud](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md), should you need it.
 
 ## Token 
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
@@ -84,19 +93,20 @@ We understand that the client should have options to brand video editor to bring
 
 ### Configure AR cloud
 
-The video editor is able to download AR effects from Banuba server to provide more effects in video editor and save your app size .
-
-Please check out [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure AR Cloud in the SDK.
+To decrease the app size, you can have your application download filters and effects from a Banuba server. 
+Please check out the [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure the AR Cloud in the SDK.
 
 ### Disable Face AR 
 
-Face AR SDK is used optionally in VE SDK and can be disabled. Please make these changes to disable Face AR SDK
-1. Remove pod ['BanubaEffectPlayer'](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile#L12) from podfile.
-1. Remove pod ['BanubaSDK'](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile#L13) from podfile.
+Face AR SDK is optional for the video editor SDK and can be disabled. Please make these changes to disable it:
 
-Change 'isFaceAREnabled' to 'false' when creating instance of  BanubaVideoEditor.  
+- Remove the pod called ['BanubaEffectPlayer'](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile#L12) from the podfile.
+- Remove the pod ['BanubaSDK'](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile#L13) from the podfile.
 
-Example, 
+Change 'isFaceAREnabled' to 'false' when creating an instance of BanubaVideoEditor.
+
+Example:
+
 ```
  videoEditorSDK = BanubaVideoEditor(
    token: YourClientToken,
@@ -111,25 +121,26 @@ Example,
 
 ## Getting Started
 ### CocoaPods
-Video Editor SDK is available via CocoaPods. If you're new to CocoaPods, refer to the [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html). CocoaPods is the preferred and the simplest way to get the SDK.
 
-**Important**: Make sure that you have installed CocoaPods version >= 1.9.0 installed. Check your CocoaPods version using command `pod --version`.
+The easiest way to integrate the Video Editor SDK in your mobile app is through [CocoaPods](https://cocoapods.org). If you haven’t used this dependency manager before, see the [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html).
 
-Please, refer to the [example of Podfile](Example/Podfile) lines which you need to add.
+Important: Make sure that you have CocoaPods version >= 1.9.0 installed. Check your CocoaPods version using this command [pod --version]
 
-1. Make sure to have CocoaPods installed, e.g. via [Homebrew](https://brew.sh):
+Please, refer to the example of [Podfile](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile) lines which you need to add.
+
+1. Make sure to have CocoaPods installed, e.g. via Homebrew:
    ```sh
    brew install cocoapods 
    ```
-1. Initialize pods in your project folder (optional, if you didn't make it before).
-```sh
-pod init
-```
-1. Install Video Editor SDK for the provided Xcode workspace with:
+2. Initialize pods in your project folder (if you didn't do it before).
+   ```sh
+   pod init
+   ```
+3. Install the Video Editor SDK for the provided Xcode workspace with:
 ```sh
 pod install
 ```
-1. Open `Example.xcworkspace` with Xcode and run the project.
+4. Open Example.xcworkspace with Xcode and run the project.
 
 ### Start Video Editor from ViewController
 
@@ -184,7 +195,8 @@ extension ViewController: BanubaVideoEditorSDKDelegate {
 
 ```  
 
-The Video Editor has several entry points. It can be launched at the camera screen and at trimmer screen with pre-defined videos:
+The Video Editor has several entry points. It can be launched on the camera screen and on the trimmer screen with predefined videos:
+
 ``` swift
 /// Modally presents Video editor's root view controller
 /// - Parameters:
@@ -217,7 +229,9 @@ public func presentVideoEditor(
 
 
 ### Configure export flow
-To export video after the editing is complete use these several methods:
+
+To export video after the editing is complete use these methods:
+
 ``` swift
 /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution
 /// - Parameters:
@@ -246,18 +260,21 @@ func exportVideos(using configurations: [ExportVideoConfiguration], completion: 
 ///   - completion: completion: (success, error, image), execute on the background thread.
 func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
 ```  
-Example export video flow see [here](/Example/Example/ViewController.swift#L599).
-Detailed export video features you can find [here](export_flow.md)
+See the sample export video flow [here](/Example/Example/ViewController.swift#L599). You can find the detailed video export features [here](export_flow.md).
 
 ### Configure audio content
 
-The video editor can work with audio files to create even more attractive video recordings. The SDK does not provide audio files on its own, but it has a convenient way to set up your internal or external audio file provider for users would apply audio content.
+Banuba Video Editor SDK can trim audio tracks, merge them, and apply them to a video. It doesn’t include music or sounds. However, it can be integrated with [Mubert](https://mubert.com/) and get music from there. Moreover, the users can add audio files from their phones to the editor. 
 
-Check out [step-by-step](mdDocs/audio_content.md) guide to add your audio content into the SDK.
+Integrating audio content is simple. See this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/audio_content.md#step-1).
 
 ### Configure screens  
-The SDK allows to override icons, colors, typefaces, text messages and button titles and many more configuration entities. Every SDK screen has its own set of styles.
-Below you can find how to customize VE SDK to bring your experience.
+
+Each screen can be modified to your liking. You can change icons, colors, text and its font, button titles, and much more. 
+
+Note that layouts and screen order can’t be changed. You can, however, [ask](https://www.banuba.com/video-editor-sdk#form) us to customize the mobile video editor UI as a separate contract. 
+
+Below see the list of screens with links to their detailed description and notes on modifying them
 
 1. [Camera screen](mdDocs/camera_styles.md)
 1. [Editor screen](mdDocs/editor_styles.md)
@@ -271,23 +288,28 @@ Below you can find how to customize VE SDK to bring your experience.
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
 ### Configure watermark
-One of the SDK features is a watermark. You can add your branded image on top of the video, which user exports.
 
-To use a watermark, you need to create and configure WatermarkConfiguration structure, then add it to ExportVideoConfiguration entity.
+You can add a branded image that would appear on videos that users export. 
 
-Check out [this example](/Example/Example/ViewController.swift#L629) if you have any troubles.
+To do so, create and configure the WatermarkConfiguration structure, then add it to the ExportVideoConfiguration entity. 
+
+See this [example](/Example/Example/ViewController.swift#L629) for details.
 
 ### Icons
-1. Load icons to the Assets catalog.
-1. Find the desired screen for an icon in [VideoEditroConfig](/Example/Example/ViewController.swift#L35) entity.
-1. Find the desired UI element in the configuration entity and override the icon with the resource name or put UIImage if an option available.
 
-Example: [how to change the mask icon on the camera screen](/Example/Example/ViewController.swift#L80).
+Any icon in the mobile video editor SDK can be replaced. This is how:
+
+1. Load custom images to the Assets catalog
+2. Locate the screen with an icon you want to change in the [VideoEditorConfig](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L35) entity
+3. Find the specific element and override it with the resource name or use UIImage, if available.
+
+For [example](/Example/Example/ViewController.swift#L80), this is how you change a mask icon on the camera screen.
 
 ### Localization
-Feel free to edit any text in the SDK app. To localize texts (strings resources)  in video editor go to the lib [Localized.strings](/Example/Example/en.lproj/Localizable.strings) and download the file with text. Then change the text and put it into your app.
 
-**Important**: Do not change keys (left values), override only right values (text itself).  
+Any text in the mobile video editor SDK can be changed. To edit text resources, download the file with strings [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings), change whatever you need, and put the new file into your app.
+
+Don’t change the keys (values on the left), only the values on the right. Otherwise, the button names and other texts will not show.
 
 ## FAQ  
 Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to your questions.
