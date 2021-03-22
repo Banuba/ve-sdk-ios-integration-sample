@@ -49,7 +49,7 @@ If you utilize the AR technology with masks (like Tiktok or Snapchat) you would 
 ## Supported media formats
 | Audio      | Video      | Images      |
 | ---------- | ---------  | ----------- |
-|.aac, .mp3, .wav<br>.ogg, .ac3 |.mp4, .mov, .m4a| .jpg, .gif, .heic, .png,<br>.nef, .cr2, .jpeg, .raf, .bmp
+|.mp3, .aac, .wav, <br>.m4a, .flac, .aiff |.mp4, .mov, .m4v| .bmp, .gif, .heic, <br>.jpeg, .jpg, .png, .tiff 
 
 ## Video quality params
 
