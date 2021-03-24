@@ -12,6 +12,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
 - [Requirements](#Requirements)
 - [Dependencies](#Dependencies)
 - [SDKs size](#SDKs-size)
+- [Supported media formats](#Supported-media-formats)
 - [Free Trial](#Free-Trial)
 - [Token](#Token)
 - [What can you customize?](#What-can-you-customize)
@@ -46,6 +47,11 @@ If you utilize the AR technology with masks (like Tiktok or Snapchat) you would 
 | -------- | --------- | ----- |
 | :white_check_mark: Face AR SDK + bitcode enabled  | 42 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
 | :x: Face AR SDK + bitcode enabled | 19 | no AR effects  |  
+
+## Supported media formats
+| Audio      | Video      | Images      |
+| ---------- | ---------  | ----------- |
+|.mp3, .aac, .wav, <br>.m4a, .flac, .aiff |.mp4, .mov, .m4v| .bmp, .gif, .heic, <br>.jpeg, .jpg, .png, .tiff 
 
 ## Video quality params
 
