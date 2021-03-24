@@ -25,6 +25,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
     + [Configure watermark](#Configure-watermark)
+    + [Configure stickers content](#Configure-stickers-content)
     + [Icons](#Icons)
     + [Localization](#Localization)
 - [FAQ](#FAQ)
@@ -282,6 +283,12 @@ One of the SDK features is a watermark. You can add your branded image on top of
 To use a watermark, you need to create and configure WatermarkConfiguration structure, then add it to ExportVideoConfiguration entity.
 
 Check out [this example](/Example/Example/ViewController.swift#L629) if you have any troubles.
+
+### Configure stickers content
+
+Stickers are interactive objects (gif images) that can be added to the video recording to add more fun for users. 
+
+By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **giphyAPIKey** parameter in GifPickerConfiguration entity.
 
 ### Icons
 1. Load icons to the Assets catalog.
