@@ -94,3 +94,17 @@ As an example, check out how the black-and-white color filter is added:
 [**Here**](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/luts/CF01.png) is a graphic file named C1.png within luts directory that allows to achieve black-and-white picture
 
 [**Here**](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/Filters%20Preview/CF01_preview.imageset) is an appropriate icon named CF01_preview.imageset within drawable resource directory that is used as an icon within the list of effects
+
+### 6. I want to enabled slideshow animation 
+
+To be able to turn off slideshow animation use following property of RecorderConfiguration and CombinedGalleryConfiguration entities.
+
+```
+let videoEditorConfig = VideoEditorConfig()
+
+videoEditorConfig.recorderConfiguration.shouldUseImageEffect = true
+videoEditorConfig.combinedGalleryConfiguration.shouldUseImageEffect = true
+
+```
+
+Default flag is false.
