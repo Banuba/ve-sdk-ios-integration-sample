@@ -26,6 +26,7 @@ Banuba [Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to
     + [Configure screens](#Configure-screens)
     + [Configure watermark](#Configure-watermark)
     + [Configure stickers content](#Configure-stickers-content)
+    + [Configure cursor color](#Configure-cursor-color)
     + [Icons](#Icons)
     + [Localization](#Localization)
 - [FAQ](#FAQ)
@@ -289,6 +290,10 @@ Check out [this example](/Example/Example/ViewController.swift#L629) if you have
 Stickers are interactive objects (gif images) that can be added to the video recording to add more fun for users. 
 
 By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **giphyAPIKey** parameter in GifPickerConfiguration entity.
+
+### Configure cursor color
+
+All you need is just to set your color into **cursorColor: UIColor** parameter in MainOverlayViewControllerConfig entity.
 
 ### Icons
 1. Load icons to the Assets catalog.
