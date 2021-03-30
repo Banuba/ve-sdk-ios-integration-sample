@@ -56,7 +56,7 @@ If you utilize the AR technology with masks (like Tiktok or Snapchat) you would 
 
 ## Video quality params
 
-To be able to use your own quality parametrs please follow this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/ve-sdk-ios-video-resolution-configuration/mdDocs/video_resolution_configuration.md).
+To be able to use your own quality parametrs please follow this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_resolution_configuration.md).
 
 | Resolution  | Size        | Bitrate(kbps) |
 | ----------- | ------------| ------------- |
