@@ -106,5 +106,8 @@ videoEditorConfig.recorderConfiguration.shouldUseImageEffect = true
 videoEditorConfig.combinedGalleryConfiguration.shouldUseImageEffect = true
 
 ```
+### 7. I want to change cursor color
+
+All you need is just to set your color into **cursorColor: UIColor** parameter in MainOverlayViewControllerConfig entity.
 
 Default flag is false.
