@@ -258,9 +258,9 @@ Detailed export video features you can find [here](export_flow.md)
 
 ### Configure audio content
 
-The video editor can work with audio files to create even more attractive video recordings. The SDK does not provide audio files on its own, but it has a convenient way to set up your internal or external audio file provider for users would apply audio content.
+The video editor can work with audio files to create even more attractive video recordings. The SDK does not provide audio files on its own, but it has a convenient way to set up your internal or external audio file provider for users to apply audio content.
 
-Check out [step-by-step](mdDocs/audio_content.md) guide to add your audio content into the SDK.
+Check out the [step-by-step](mdDocs/audio_content.md) to add your audio content to the SDK.
 
 ### Configure screens  
 The SDK allows to override icons, colors, typefaces, text messages and button titles and many more configuration entities. Every SDK screen has its own set of styles.
