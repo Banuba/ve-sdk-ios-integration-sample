@@ -37,6 +37,10 @@ GalleryItemConfiguration setups gallery item style for collection view cell
 
 GalleryLayoutConfiguration setups collection view layout for gallery items
 
+- shouldUseImageEffect: Bool
+  
+Value provides the ability for enabling animation for slideshow
+
 ![img](screenshots/GalleryScreen.png)
 
 ## SlideShowConfiguration

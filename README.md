@@ -12,7 +12,8 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 - [Requirements](#Requirements)
 - [Dependencies](#Dependencies)
 - [SDKs size](#SDKs-size)
-- [Starting a free trial](#Free-Trial)
+- [Starting a free trial](#Starting-a-free-trial)
+- [Supported media formats](#Supported-media-formats)
 - [Token](#Token)
 - [What can you customize?](#What-can-you-customize)
 - [Configure AR cloud](#Configure-AR-cloud)
@@ -24,6 +25,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
     + [Configure watermark](#Configure-watermark)
+    + [Configure stickers content](#Configure-stickers-content)
     + [Icons](#Icons)
     + [Localization](#Localization)
 - [FAQ](#FAQ)
@@ -51,9 +53,14 @@ To use the face masks, you will also need the [Face AR SDK](https://www.banuba.c
 
 You can either include the filters in the app or have users download them from the [AR cloud](https://www.banuba.com/facear-sdk/face-filters) to decrease the app size. 
 
+## Supported media formats
+| Audio      | Video      | Images      |
+| ---------- | ---------  | ----------- |
+|.mp3, .aac, .wav, <br>.m4a, .flac, .aiff |.mp4, .mov, .m4v| .bmp, .gif, .heic, <br>.jpeg, .jpg, .png, .tiff 
+
 ## Video quality params
 
-To be able to use your own quality parametrs please follow this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/ve-sdk-ios-video-resolution-configuration/mdDocs/video_resolution_configuration.md).
+To be able to use your own quality parametrs please follow this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_resolution_configuration.md).
 
 | Resolution  | Size        | Bitrate(kbps) |
 | ----------- | ------------| ------------- |
@@ -294,6 +301,12 @@ You can add a branded image that would appear on videos that users export.
 To do so, create and configure the WatermarkConfiguration structure, then add it to the ExportVideoConfiguration entity. 
 
 See this [example](/Example/Example/ViewController.swift#L629) for details.
+
+### Configure stickers content
+
+Stickers are interactive objects (gif images) that can be added to the video recording to add more fun for users. 
+
+By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **giphyAPIKey** parameter in GifPickerConfiguration entity.
 
 ### Icons
 
