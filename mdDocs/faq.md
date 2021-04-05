@@ -1,28 +1,29 @@
 # FAQ  
-This page is aimed to explain the most frequent technical questions asked while integrating our SDK.
 
-### 1. I want to start and stop video recording by short click.  
-The user has to keep pressing recording button to record new video by default. Video recording stops when the user releases finger from recording button.  
+These are the answers to the most common questions asked about our SDK.
 
-Please set captureButtonMode property of RecorderConfiguration entity to .video to allow the user to start and stop recording new video by short click.
+### 1. How do I start/stop recording with a tap?
+  
+By default, the user must hold the “record” button to film and release it to stop filming. 
+
+To change that, set the **captureButtonMode** property of the RecorderConfiguration entity to .video.
 
 ``` json
  var config = VideoEditorConfig()
  config.recorderConfiguration.captureButtonMode = .video
 ```
-### 2. I want to add AR Mask to the Video Editor (without AR Cloud backend)
 
- Technically AR Mask is a bulk of files within the folder.
+### 2.How do I add an AR mask to the app (without AR cloud)
 
- You should place AR Masks to the YourProject/bundleEffects/ directory inside the host project directory (main bundle). Be sure that AR mask directory has a **preview.png** file. It is used as an icon of the AR mask in the app.
+If you don’t want to pull the masks from the backend, you can include them in the app itself. 
 
- **Note** that the name of directory will be used as a title of the AR mask within the app. 
- 
- **Note** "bundleEffects" is the name for the folder in which the masks should be located. Do not change the name of this folder so that our modules can find the resources they need. If the folder doesn't exist, then create it.
+A mask is a bundle of files within a specific folder in the YourProject/bundleEffects/ directory. The preview.png file in the filter folder is used as an icon within the app, and the name of the directory is also the name of the mask.  
 
-### 3. I want to start VideoEditor with a preselected audio track
+ **Note** Please, don’t change the name of the bundleEffects folder, otherwise, the app will not work. If it doesn’t exist already, create it manually.
 
-To start video editor with preselected music track input MediaTrack instance as parameter to presentVideoEditor method. 
+### 3. How do I start the Video Editor with a preselected audio track?
+
+To do so, add the MediaTrack instance as a parameter to the presentVideoEditor method.
 
 ```
 videoEditorSDK?.presentVideoEditor(
@@ -33,9 +34,9 @@ videoEditorSDK?.presentVideoEditor(
     )
 ```
 
-### 4. I want to use VideoEditor several times from different entry points.
+### 4. How do I use the Video Editor several times from different entry points?
 
-Before you want to use VideoEditor again you need to deinitialize your current editor instanse in your [entry point class scope](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L675). You need to set 'yourVideoEditorSdkInstance' = nil after following funcs called([done](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L660) and [cancel](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L678)).
+Before you want to use VideoEditor again, you need to deinitialize your current editor instance in your [entry point class scope](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L675). You need to set 'yourVideoEditorSdkInstance' = nil after following funcs called([done](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L660) and [cancel](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L678)).
 
 ```
 
@@ -81,19 +82,18 @@ For example on your tap button action:
 
 ```
 
-### 5. I want to add color filters
+### 5. How do I add a color filter (LUT)?
 
-Color filters (luts) are special graphic files placed into **luts** directory inside the host project folder.
+Color filters (LUTs) are special graphic files placed into the /luts directory inside the host project folder.
 
-To add your own color filter icon you should place it into **assets** folder that will be used as an icon for this particular color effect within the list of effects.
+To add your own icon that will be used to represent this particular effect in the list, you should place it into the /assets folder.
 
-The name of the icon resource must be **the same** as the graphic file within luts directory.
+The name of the icon resource must be the same as the graphic file within the /luts directory.
+As an example, check out how the black-and-white color filter is added:
 
-As an example, check out how the black-and-white color filter is added: 
+[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/luts/CF01.png) is a graphic file named C1.png within the /luts directory. It allows to turn the picture black-and-white.
 
-[**Here**](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/luts/CF01.png) is a graphic file named C1.png within luts directory that allows to achieve black-and-white picture
-
-[**Here**](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/Filters%20Preview/CF01_preview.imageset) is an appropriate icon named CF01_preview.imageset within drawable resource directory that is used as an icon within the list of effects
+[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/Filters%20Preview/CF01_preview.imageset) is an appropriate icon named CF01_preview.imageset within the drawable resource directory that is used as an icon within the list of effects
 
 ### 6. I want to enabled slideshow animation 
 
