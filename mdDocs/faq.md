@@ -6,7 +6,7 @@ These are the answers to the most common questions asked about our SDK.
   
 By default, the user must hold the “record” button to film and release it to stop filming. 
 
-To change that, set the captureButtonMode property of the RecorderConfiguration entity to .video.
+To change that, set the **captureButtonMode** property of the RecorderConfiguration entity to .video.
 
 ``` json
  var config = VideoEditorConfig()
