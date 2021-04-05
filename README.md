@@ -36,7 +36,7 @@ This is what you need to run the AI Video Editor SDK
 - Swift 5+
 - Xcode 12.4+
 - iOS 11.0+
-Unfortunately, it isn’t compatible with iPads.
+Unfortunately, It isn't optimized for iPads.
 
 ## Dependencies
 
@@ -64,7 +64,7 @@ To be able to use your own quality parametrs please follow this [guide](https://
 
 ## Starting a free trial
 
-You should start with getting a trial token. It will grant you 14 days to freely play around with the AI Video Editor SDK and test its entire functionality the way you see fit.
+You should start with getting a trial token. It will grant you **14 days** to freely play around with the AI Video Editor SDK and test its entire functionality the way you see fit.
 
 There is nothing complicated about it - [contact us](https://www.banuba.com/video-editor-sdk) or send an email to sales@banuba.com and we will send it to you. We can also send you a sample app so you can see how it works “under the hood”.
 
