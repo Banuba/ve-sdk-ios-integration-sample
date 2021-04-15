@@ -267,7 +267,7 @@ func exportVideos(using configurations: [ExportVideoConfiguration], completion: 
 ///   - completion: completion: (success, error, image), execute on the background thread.
 func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
 ```  
-See the sample export video flow [here](/Example/Example/ViewController.swift#L599). You can find the detailed video export features [here](export_flow.md).
+See the sample export video flow [here](/Example/Example/ViewController.swift#L628). You can find the detailed video export features [here](export_flow.md).
 
 ### Configure audio content
 
@@ -313,10 +313,10 @@ By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to lo
 Any icon in the mobile video editor SDK can be replaced. This is how:
 
 1. Load custom images to the Assets catalog
-2. Locate the screen with an icon you want to change in the [VideoEditorConfig](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L35) entity
+2. Locate the screen with an icon you want to change in the [VideoEditorConfig](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L70) entity
 3. Find the specific element and override it with the resource name or use UIImage, if available.
 
-For [example](/Example/Example/ViewController.swift#L80), this is how you change a mask icon on the camera screen.
+For [example](/Example/Example/ViewController.swift#L123), this is how you change a mask icon on the camera screen.
 
 ### Localization
 
@@ -329,3 +329,7 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 
 ## Third party libraries
 [View](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/3rd_party_licences.md) information about third party libraries.
+
+## Migration guides
+
+[1.0.15](mdDocs/migration_guides/1.0.15.md)

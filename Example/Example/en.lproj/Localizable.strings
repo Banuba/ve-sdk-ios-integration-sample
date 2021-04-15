@@ -42,6 +42,9 @@
 /* Used in alert with Yes and No options when resetting filters. */
 "Do you want to reset all?" = "Do you want to reset all?";
 
+/* Used in alert with Yes and No options when resetting slideshow. */
+"Do you want to reset slideshow?" = "Do you want to reset slideshow?";
+
 /* Used in alert with Yes and No options */
 "Do you want to delete the last clip?" = "Do you want to delete the last clip?";
 
@@ -58,10 +61,11 @@
 "Second part is too short" = "Second part is too short";
 
 /* In-camera beautification (facial correction) enabled */
-"Beautifier" = "Beautifier";
+"Beautifier on" = "Beautification on";
+"Beautifier off" = "Beautification off";
 
 /* The light (flashlight) in the camera is on */
-"Flash" = "Flash";
+"Flash" = "Light";
 
 /* An error message that appears in the camera when the length of the recorded video is less than the minimum allowed duration */
 "Too short. Please capture at least %d seconds" = "Too short. Please capture at least %d seconds";
@@ -138,6 +142,9 @@
 /* Speed screen name */
 "Speed" = "Speed";
 
+/* Speed screen info */
+"Recording speed %@" = "Recording speed %@";
+
 /* Screen name which will be visible if enable in configuration */
 "Single Trim Video Screen Name" = "Trim Video";
 
@@ -166,6 +173,9 @@
 "Screen colors" = "Screen colors";
 
 "Reach maximum video duration" = "Reach maximum video duration";
+
+/* Music info alert */
+"The soundtrack is alreay in use" = "The soundtrack is already in use";
 
 /* Disable timer option titiel */
 "Off" = "Off";
@@ -200,14 +210,14 @@
 /* Error if the format of the response from the server does not match the expected */
 "Unknown data format" = "Unknown data format";
 
-/* Used in alert with options Cancel and In settings. */
-"Gallery failed to open. Please allow access in device settings" = "Gallery failed to open. Please allow access in device settings";
+/* Used in alert re-asking permissions to Photos with Cancel and Settings options. */
+"Banuba.Camera.MissedGalleryPersmission" = "Please, allow your Photos & Videos in the settings to make a clip.";
 
-/* Used in alert with options Cancel and In settings. */
-"Camera unavailable. Please allow access in device settings" = "Camera unavailable. Please allow access in device settings";
+/* Used in alert re-asking Camera & Microphone permissions with Settings option. */
+"Banuba.Camera.MissedCameraAndMicrophonePersmissions" = "Please, allow your Camera and Mic to make a recording.";
 
 /* Used in a message to the user when access to the camera is denied through special options in the phone settings (such as 'Parental Control') */
-"Restricting access to camera" = "Restricting access to camera";
+"Banuba.Camera.CameraAccessRestricted" = "Camera permissions are not granted";
 
 /* Used in alert with options Cancel and In settings */
 "Microphone unavailable. Please allow access in device settings" = "Microphone unavailable. Please allow access in device settings";
@@ -220,20 +230,17 @@
 /* The name of the button, by clicking on which you can go to the Settings application. */
 "Settings" = "Settings";
 
+/* The name of the button, by clicking on which you can refuse missed permission alert message */
+"Settings.Close" = "Close";
+
 /* Used in an alert with Yes and No when resetting effects. */
-"Reset effects?" = "Reset effects?";
+"Reset effects?" = "Discard changes?";
 
 /* Undo filters applied to video in the add filters screen */
-"Reset" = "Reset";
+"Undo" = "Undo";
 
 /* Finish button title */
 "Done" = "Done";
-
-/* Used in alert with Yes and No options */
-"Upload video from device gallery?" = "Upload video from device gallery?";
-
-/*  Alert text on transition */
-"Upload photo from device gallery?" = "Upload photo from device gallery?";
 
 /* OK button title in alert */
 "OK" = "OK";
@@ -285,7 +292,10 @@
 "No matching files found in gallery" = "No matching files found in gallery";
 
 /* No photo in gallery */
-"No matching photos found in gallery" = "No matching photos found in gallery";
+"No matching photos found in gallery" = "No photos found";
+
+/* No video in gallery */
+"No matching video found in gallery" = "No videos found";
 
 /* User has selected too few photos in the gallery */
 "Too few, at least %d photos needed" = "Too few, at least %d photos needed";
@@ -308,7 +318,10 @@
 "MusicEditor.Delete" = "Delete";
 
 /* Edit track volume button title */
-"MusicEditor.Volume" = "Volue";
+"MusicEditor.Volume" = "Volume";
+
+/* Voice effect button title */
+"MusicEditor.VoiceEffect" = "Effect";
 
 /* Edit track button title */
 "MusicEditor.Edit" = "Edit";
@@ -383,7 +396,27 @@
 "OverlayEditor.No" = "No";
 
 /* Confirmation message for discarding changes */
-"OverlayEditor.Do you want to reset all?" = "Do you want to reset all?";
+"OverlayEditor.Do you want to reset all?" = "Discard changes?";
+
+// MARK: - AudioBrowser
+
+/* No internet connection title in alert */
+"AudioBrowser.noInternetConnection" = "No internet connection";
+
+/* Message for user if No internet connection */
+"AudioBrowser.checkConnectionMessage" = "Please, check your connection and try again";
+
+/* Retry button title */
+"AudioBrowser.retry" = "Retry";
+
+/* Allow access message */
+"AudioBrowser.allowAccessMessage" = "To use your own music, allow access to Apple Music library, please.";
+
+/* Allow button title */
+"AudioBrowser.allowAccess" = "Allow Access";
+
+/* My files button title */
+"AudioBrowser.myFiles" = "My Files";
 
 // MARK: - Hands-free
 
@@ -391,3 +424,32 @@
 "hands.free.video.mode.title" = "Hands-free video mode";
 "hands.free.video.drag.title" = "Drag to set video duration:";
 "hands.free.btn.title" = "START RECORDING";
+
+// MARK: - Video Editor
+
+/* Gallery image tab title */
+"BanubaVideoEditor.Gallery.ImageTabTitle" = "Image";
+
+/* Gallery video tab title */
+"BanubaVideoEditor.Gallery.VideoTabTitle" = "Video";
+
+/* Gallery custom All Photos title */
+"BanubaVideoEditor.Gallery.AllPhotosTitle" = "All Photos";
+
+/* Gallery Recent Photos title */
+"BanubaVideoEditor.Gallery.RecentPhotosTitle" = "Recent";
+
+// MARK: - Effect additional media picker text resource
+
+/* No media files found in gallery for adding to the effect */
+"com.banuba.videoEditor.recorder.additionalEffects.NoMediaFound" = "No media found";
+
+/* No media files found in gallery for adding to the effect */
+"com.banuba.videoEditor.recorder.additionalEffects.AllowAccess" = "Allow Access";
+
+/* Helpers info message for changing video background */
+"com.banuba.videoEditor.recorder.additionalEffects.selectMediaToChangeBackgroundMessage" = "Select media to change the background:";
+
+/* Helpers info message for providing acces to a user gallery */
+"com.banuba.videoEditor.recorder.additionalEffects.allowAccesToChangeBackgroundMessage" = "Allow access to Gallery to change the background";
+
