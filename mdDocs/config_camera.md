@@ -1,5 +1,6 @@
 # Banuba VideoEditor SDK
 ## Camera config
+These configs allows to customize the Camera screen behavior.
 
 | Property | Available values | Description |
 | ------------- | :------------: | :------------- |
