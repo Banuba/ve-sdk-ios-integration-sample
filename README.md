@@ -332,4 +332,4 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 
 ## Migration guides
 
-[1.0.15](mdDocs/migration_guides/1.0.15.md)
+[1.0.15](mdDocs/releases/1.0.15.md)
