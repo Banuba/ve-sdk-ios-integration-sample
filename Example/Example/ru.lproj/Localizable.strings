@@ -416,10 +416,11 @@
 
 // MARK: - Hands-free
 
-"hands.free.timer.title" = "Сountdown";
-"hands.free.video.mode.title" = "Hands-free video mode";
-"hands.free.video.drag.title" = "Drag to set video duration:";
-"hands.free.btn.title" = "START RECORDING";
+"hands.free.timer.title" = "Таймер";
+"hands.free.video.mode.title" = "Свободные руки видео режим";
+"hands.free.video.drag.title" = "Перетащите чтобы выбрать продолжительность:";
+"hands.free.btn.title" = "Начать запись";
+"hands.free.seconds" = "%@ c";
 
 // MARK: - Video Editor
 
