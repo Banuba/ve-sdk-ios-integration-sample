@@ -424,6 +424,7 @@
 "hands.free.video.mode.title" = "Hands-free video mode";
 "hands.free.video.drag.title" = "Drag to set video duration:";
 "hands.free.btn.title" = "START RECORDING";
+"hands.free.seconds" = "%@ s";
 
 // MARK: - Video Editor
 
