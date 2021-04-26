@@ -1,15 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "‘4.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "hyla@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "hyla@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
