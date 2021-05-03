@@ -34,7 +34,6 @@ class ViewController: UIViewController {
       externalViewControllerFactory: viewControllerFactory
     )
     
-    musicEditorViewControllerFactory.videoEditorSDK = videoEditorSDK
     videoEditorSDK?.delegate = self
   }
   
@@ -70,8 +69,11 @@ class ViewController: UIViewController {
   private func createVideoEditorConfiguration() -> VideoEditorConfig {
     var config = VideoEditorConfig()
     
+    config.audioBrowserConfiguration.config.mubertAudioConfig.pat = "Place your mubert token here"
+    
     var featureConfiguration = config.featureConfiguration
     featureConfiguration.isAudioBrowserEnabled = true
+    featureConfiguration.supportsTrimRecordedVideo = true
     config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
     
     config.isHandfreeEnabled = true
@@ -512,9 +514,9 @@ class ViewController: UIViewController {
       imageConfiguration: ImageConfiguration(imageName: "ic_text_without_background"),
       selectedImageConfiguration: ImageConfiguration(imageName: "ic_text_with_background")
     )
-    configuration.doneButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    configuration.doneButton.textConfiguration?.color = UIColor(red: 6, green: 188, blue: 193)
     configuration.fontButton.borderColor = UIColor(red: 6, green: 188, blue: 193).cgColor
-    configuration.fontButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    configuration.fontButton.textConfiguration?.color = UIColor(red: 6, green: 188, blue: 193)
     
     return configuration
   }
@@ -596,7 +598,7 @@ class ViewController: UIViewController {
     
     configuration.resetButton.backgroundColor = UIColor(red: 6, green: 188, blue: 193)
     configuration.resetButton.cornerRadius = 4.0
-    configuration.resetButton.textConfiguration.color = .white
+    configuration.resetButton.textConfiguration?.color = .white
     configuration.toolTipLabel.color = .white
     configuration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
   
@@ -638,7 +640,8 @@ extension ViewController {
     
     let exportConfiguration = ExportVideoConfiguration(
       fileURL: videoURL,
-      quality: .preset(AVAssetExportPresetHighestQuality),
+      quality: .auto,
+      useHEVCCodecIfPossible: true,
       watermarkConfiguration: watermarkConfiguration
     )
     videoEditorSDK?.exportVideos(using: [exportConfiguration], completion: { (success, error) in
