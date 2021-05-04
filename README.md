@@ -309,6 +309,11 @@ Stickers are interactive objects (gif images) that can be added to the video rec
 
 By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **giphyAPIKey** parameter in GifPickerConfiguration entity.
 
+### Configure the record button
+The record button is a main control on the camera screen which you can fully customize along with animations playing on tap.
+
+First of all look at [RecordButtonConfiguration](mdDocs/record_button_configuration.md) entity which you can customize in [Camera screen configuration quide](mdDocs/camera_styles.md). If it still not suits your needs you can create your own view for more information look [here](mdDocs/record_button_provider.md)
+
 ### Icons
 
 Any icon in the mobile video editor SDK can be replaced. This is how:
