@@ -145,6 +145,9 @@
 /* Speed screen info */
 "Recording speed %@" = "Recording speed %@";
 
+/* Network Unavailable info */
+"Network Unavailable" = "Network Unavailable";
+
 /* Screen name which will be visible if enable in configuration */
 "Single Trim Video Screen Name" = "Trim Video";
 
@@ -460,6 +463,7 @@
 "hands.free.video.mode.title" = "Hands-free video mode";
 "hands.free.video.drag.title" = "Drag to set video duration:";
 "hands.free.btn.title" = "START RECORDING";
+"hands.free.seconds" = "%@ s";
 
 // MARK: - Video Editor
 
@@ -488,3 +492,8 @@
 
 /* Helpers info message for providing acces to a user gallery */
 "com.banuba.videoEditor.recorder.additionalEffects.allowAccesToChangeBackgroundMessage" = "Allow access to Gallery to change the background";
+
+// MARK: - Cover
+"cover.thumbnail.title" = "Choose a frame from your video or an image from Gallery";
+"cover.gallery.button.title" = "Choose from Gallery";
+"cover.delete.button.title" = "Delete";
