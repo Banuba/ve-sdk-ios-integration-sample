@@ -63,10 +63,10 @@ To be able to use your own quality parametrs please follow this [guide](https://
 
 | Recording speed | 360p(360 x 640) | 480p(480 x 854) | HD(720 x 1280) | FHD(1080 x 1920) |
 | --------------- | --------------- | --------------- | -------------- | ---------------- |
-| 1x(Default)     | ≈ 800 kbps      | ≈ 2000 kbps     | ≈ 4000 kbps    | ≈ 6400 kbps      |
-| 0.5x            | ≈ 800 kbps      | ≈ 2000 kbps     | ≈ 4000 kbps    | ≈ 6400 kbps      |
-| 2x              | ≈ 800 kbps      | ≈ 2000 kbps     | ≈ 4000 kbps    | ≈ 6400 kbps      |
-| 3x              | ≈ 800 kbps      | ≈ 2000 kbps     | ≈ 4000 kbps    | ≈ 6400 kbps      |  
+| 1x(Default)     | 800             | 2000            | 4000           | 6400             |
+| 0.5x            | 800             | 2000            | 4000           | 6400             |
+| 2x              | 800             | 2000            | 4000           | 6400             |
+| 3x              | 800             | 2000            | 4000           | 6400             |  
 
 ## Starting a free trial
 
