@@ -79,7 +79,6 @@ class ViewController: UIViewController {
     config.isHandfreeEnabled = true
     config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
     config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
-    config.galleryConfiguration = updateGalleryConfiguration(config.galleryConfiguration)
     config.combinedGalleryConfiguration = updateCombinedGalleryConfiguration(config.combinedGalleryConfiguration)
     config.videoCoverSelectionConfiguration = updateVideCoverSelectionConfiguration(config.videoCoverSelectionConfiguration)
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
@@ -261,21 +260,7 @@ class ViewController: UIViewController {
     configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
     configuration.galleryItemConfiguration.orderNumberTitleColor = .white
     
-    return configuration
-  }
-  
-  private func updateGalleryConfiguration(_ configuration: GalleryConfiguration) -> GalleryConfiguration {
-    var configuration = configuration
-    
-    configuration.multiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "multi_choise"))
-    configuration.cancelMultiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
-    configuration.backButtonConfiguration = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
-    
-    configuration.chooseSelectionButtonConfiguration.backgroundColor = .clear
-    configuration.chooseSelectionButtonConfiguration.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
-    
-    configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
-    configuration.galleryItemConfiguration.orderNumberTitleColor = .white
+    configuration.galleryTypeUnderlineColor = UIColor(red: 6, green: 188, blue: 193)
     
     return configuration
   }
