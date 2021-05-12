@@ -33,7 +33,7 @@ GalleryLayoutConfiguration setups collection view layout for gallery items
 
 Top bar blur color
 
-- clearSelectiobButtonConfiguration: ImageButtonConfiguration
+- clearSelectionButtonConfiguration: ImageButtonConfiguration
 
 ImageButtonConfiguration setups clear selection button style
 
