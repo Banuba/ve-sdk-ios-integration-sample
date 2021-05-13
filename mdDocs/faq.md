@@ -111,3 +111,18 @@ videoEditorConfig.combinedGalleryConfiguration.shouldUseImageEffect = true
 All you need is just to set your color into **cursorColor: UIColor** parameter in MainOverlayViewControllerConfig entity.
 
 Default flag is false.
+
+### 8. I want to change progress bar position
+
+Progress bar position contains two types of layout:
+- top
+- bottom (**by default**)
+
+To change progress bar position you need to modify **progressBarPosition** property of **RecorderConfiguration** entity.
+
+```
+
+let videoEditorConfig = VideoEditorConfig()
+videoEditorConfig.recorderConfiguration.progressBarPosition = .top
+
+```
