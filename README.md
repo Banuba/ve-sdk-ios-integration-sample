@@ -4,9 +4,10 @@
 Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to quickly integrate short video functionality into your mobile app. On this page, we will explain how to do so on iOS.
 
 <p align="center">
-<img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="31.6%" height="auto">&nbsp;
-<img src="mdDocs/gif/audio_browser.gif" alt="Screenshot" width="31.6%" height="auto"/>&nbsp;
-<img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="31.6%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="23.7%" height="auto">&nbsp;
+<img src="mdDocs/gif/audio_browser.gif" alt="Screenshot" width="23.7%%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="23.7%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/pip_preview.gif" alt="Screenshot" width="23.7%" height="auto"/>&nbsp;
 </p>
 
 - [Requirements](#Requirements)
