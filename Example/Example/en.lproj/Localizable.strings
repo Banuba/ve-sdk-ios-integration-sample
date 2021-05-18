@@ -178,11 +178,13 @@
 "Reach maximum video duration" = "Reach maximum video duration";
 
 /* Music info alert */
+
 "Replace" = "Replace";
 "Delete" = "Delete";
 "Cancel" = "Cancel";
 "The soundtrack is alreay in use" = "The soundtrack is alreay in use";
 "Do you want to replace it with a different audio?" = "Do you want to replace it with a different audio?";
+"The soundtrack is alreay in use" = "The soundtrack is already in use";
 
 /* Disable timer option titiel */
 "Off" = "Off";
@@ -497,3 +499,4 @@
 "cover.thumbnail.title" = "Choose a frame from your video or an image from Gallery";
 "cover.gallery.button.title" = "Choose from Gallery";
 "cover.delete.button.title" = "Delete";
+

@@ -4,9 +4,10 @@
 Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to quickly integrate short video functionality into your mobile app. On this page, we will explain how to do so on iOS.
 
 <p align="center">
-<img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="31.6%" height="auto">&nbsp;
-<img src="mdDocs/gif/audio_browser.gif" alt="Screenshot" width="31.6%" height="auto"/>&nbsp;
-<img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="31.6%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="23.7%" height="auto">&nbsp;
+<img src="mdDocs/gif/audio_browser.gif" alt="Screenshot" width="23.7%%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="23.7%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/pip_preview.gif" alt="Screenshot" width="23.7%" height="auto"/>&nbsp;
 </p>
 
 - [Requirements](#Requirements)
@@ -268,7 +269,7 @@ func exportVideos(using configurations: [ExportVideoConfiguration], completion: 
 ///   - completion: completion: (success, error, image), execute on the background thread.
 func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
 ```  
-See the sample export video flow [here](/Example/Example/ViewController.swift#L599). You can find the detailed video export features [here](export_flow.md).
+See the sample export video flow [here](/Example/Example/ViewController.swift#L628). You can find the detailed video export features [here](export_flow.md).
 
 ### Configure audio content
 
@@ -309,15 +310,20 @@ Stickers are interactive objects (gif images) that can be added to the video rec
 
 By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **giphyAPIKey** parameter in GifPickerConfiguration entity.
 
+### Configure the record button
+The record button is a main control on the camera screen which you can fully customize along with animations playing on tap.
+
+First of all look at [RecordButtonConfiguration](mdDocs/record_button_configuration.md) entity which you can customize in [Camera screen configuration quide](mdDocs/camera_styles.md). If it still not suits your needs you can create your own view for more information look [here](mdDocs/record_button_provider.md)
+
 ### Icons
 
 Any icon in the mobile video editor SDK can be replaced. This is how:
 
 1. Load custom images to the Assets catalog
-2. Locate the screen with an icon you want to change in the [VideoEditorConfig](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L35) entity
+2. Locate the screen with an icon you want to change in the [VideoEditorConfig](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L70) entity
 3. Find the specific element and override it with the resource name or use UIImage, if available.
 
-For [example](/Example/Example/ViewController.swift#L80), this is how you change a mask icon on the camera screen.
+For [example](/Example/Example/ViewController.swift#L123), this is how you change a mask icon on the camera screen.
 
 ### Localization
 
@@ -330,3 +336,7 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 
 ## Third party libraries
 [View](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/3rd_party_licences.md) information about third party libraries.
+
+## Migration guides
+
+[1.0.15](mdDocs/releases/1.0.15.md)

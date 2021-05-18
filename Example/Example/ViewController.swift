@@ -34,7 +34,6 @@ class ViewController: UIViewController {
       externalViewControllerFactory: viewControllerFactory
     )
     
-    musicEditorViewControllerFactory.videoEditorSDK = videoEditorSDK
     videoEditorSDK?.delegate = self
   }
   
@@ -70,14 +69,16 @@ class ViewController: UIViewController {
   private func createVideoEditorConfiguration() -> VideoEditorConfig {
     var config = VideoEditorConfig()
     
+    config.audioBrowserConfiguration.config.mubertAudioConfig.pat = "Place your mubert token here"
+    
     var featureConfiguration = config.featureConfiguration
     featureConfiguration.isAudioBrowserEnabled = true
+    featureConfiguration.supportsTrimRecordedVideo = true
     config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
     
     config.isHandfreeEnabled = true
     config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
     config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
-    config.galleryConfiguration = updateGalleryConfiguration(config.galleryConfiguration)
     config.combinedGalleryConfiguration = updateCombinedGalleryConfiguration(config.combinedGalleryConfiguration)
     config.videoCoverSelectionConfiguration = updateVideCoverSelectionConfiguration(config.videoCoverSelectionConfiguration)
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
@@ -259,21 +260,7 @@ class ViewController: UIViewController {
     configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
     configuration.galleryItemConfiguration.orderNumberTitleColor = .white
     
-    return configuration
-  }
-  
-  private func updateGalleryConfiguration(_ configuration: GalleryConfiguration) -> GalleryConfiguration {
-    var configuration = configuration
-    
-    configuration.multiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "multi_choise"))
-    configuration.cancelMultiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
-    configuration.backButtonConfiguration = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
-    
-    configuration.chooseSelectionButtonConfiguration.backgroundColor = .clear
-    configuration.chooseSelectionButtonConfiguration.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
-    
-    configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
-    configuration.galleryItemConfiguration.orderNumberTitleColor = .white
+    configuration.galleryTypeUnderlineColor = UIColor(red: 6, green: 188, blue: 193)
     
     return configuration
   }
@@ -512,9 +499,9 @@ class ViewController: UIViewController {
       imageConfiguration: ImageConfiguration(imageName: "ic_text_without_background"),
       selectedImageConfiguration: ImageConfiguration(imageName: "ic_text_with_background")
     )
-    configuration.doneButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    configuration.doneButton.textConfiguration?.color = UIColor(red: 6, green: 188, blue: 193)
     configuration.fontButton.borderColor = UIColor(red: 6, green: 188, blue: 193).cgColor
-    configuration.fontButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
+    configuration.fontButton.textConfiguration?.color = UIColor(red: 6, green: 188, blue: 193)
     
     return configuration
   }
@@ -596,7 +583,7 @@ class ViewController: UIViewController {
     
     configuration.resetButton.backgroundColor = UIColor(red: 6, green: 188, blue: 193)
     configuration.resetButton.cornerRadius = 4.0
-    configuration.resetButton.textConfiguration.color = .white
+    configuration.resetButton.textConfiguration?.color = .white
     configuration.toolTipLabel.color = .white
     configuration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
   
@@ -638,7 +625,8 @@ extension ViewController {
     
     let exportConfiguration = ExportVideoConfiguration(
       fileURL: videoURL,
-      quality: .preset(AVAssetExportPresetHighestQuality),
+      quality: .auto,
+      useHEVCCodecIfPossible: true,
       watermarkConfiguration: watermarkConfiguration
     )
     videoEditorSDK?.exportVideos(using: [exportConfiguration], completion: { (success, error) in
