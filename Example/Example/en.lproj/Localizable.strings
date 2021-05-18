@@ -49,7 +49,7 @@
 "Do you want to delete the last clip?" = "Do you want to delete the last clip?";
 
 /* Used in alert with Yes and No options */
-"Do you want to back to adding effects?" = "Return to editing effects?";
+"Return to editing effects?" = "Return to editing effects?";
 
 /* Error message that appears when clicking the Next button in the camera when the first part of split mode is not recorded */
 "First part not recorded" = "First part not recorded";
