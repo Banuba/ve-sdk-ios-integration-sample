@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
     videoEditorSDK = BanubaVideoEditor(
-      token: "PUT VIDEO EDITOR TOKEN",
+      token: "PUT FACEAR TOKEN",
       effectsToken: "u4fwA4rVK2P/nkHS/tKE7SxK7fK+1u0DuoAruXXgIJhuSI0aynki+8gGXUWAC1H3jBDYThexzTBxlPc0eq2x2mdwR/F+iL2gmVpXrC4mAXiEByjb5VpSqsJzbM/K9LGnEDByWZVRTzq8ZuvwKR7BCKU3f4Z7",
       cloudMasksToken: "PUT AR CLOUD ID",
       configuration: config,
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
   private func createVideoEditorConfiguration() -> VideoEditorConfig {
     var config = VideoEditorConfig()
     
-    config.audioBrowserConfiguration.config.mubertAudioConfig.pat = "Place your mubert token here"
+    AudioBrowserConfigurator.configure()
     
     var featureConfiguration = config.featureConfiguration
     featureConfiguration.isAudioBrowserEnabled = true
