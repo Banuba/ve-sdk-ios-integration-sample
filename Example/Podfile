@@ -12,5 +12,7 @@ target 'Example' do
   pod 'VideoEditor', '1.0.15.3'
   pod 'BanubaARCloudSDK', '1.0.15.2'
   pod 'BanubaAudioBrowserSDK', '1.0.15.2'
+  pod 'BanubaEffectPlayer', '1.0.15'
+  pod 'BanubaSDK', '1.0.15.2'
   pod 'lottie-ios', "3.1.8"
 end

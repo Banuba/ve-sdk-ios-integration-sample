@@ -12,6 +12,6 @@ import UIKit
 
 struct AudioBrowserConfigurator {
   static func configure() {
-    AudioBrowserConfig.shared.mubertAudioConfig.pat = "Put mubert pat token"
+    AudioBrowserConfig.shared.mubertAudioConfig.pat = "Put Mubert PAT"
   }
 }
