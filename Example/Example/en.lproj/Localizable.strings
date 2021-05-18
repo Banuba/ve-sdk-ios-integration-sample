@@ -145,6 +145,9 @@
 /* Speed screen info */
 "Recording speed %@" = "Recording speed %@";
 
+/* Network Unavailable info */
+"Network Unavailable" = "Network Unavailable";
+
 /* Screen name which will be visible if enable in configuration */
 "Single Trim Video Screen Name" = "Trim Video";
 
@@ -175,6 +178,12 @@
 "Reach maximum video duration" = "Reach maximum video duration";
 
 /* Music info alert */
+
+"Replace" = "Replace";
+"Delete" = "Delete";
+"Cancel" = "Cancel";
+"The soundtrack is alreay in use" = "The soundtrack is alreay in use";
+"Do you want to replace it with a different audio?" = "Do you want to replace it with a different audio?";
 "The soundtrack is alreay in use" = "The soundtrack is already in use";
 
 /* Disable timer option titiel */
@@ -398,6 +407,38 @@
 /* Confirmation message for discarding changes */
 "OverlayEditor.Do you want to reset all?" = "Discard changes?";
 
+// MARK: - Interactives
+ 
+/* Placeholder for interactive interests */
+"OverlayEditor.Intereset" = "Interest";
+
+/* Interactive test header */
+"OverlayEditor.Create test" = "Create test...";
+
+/* Interactive question header */
+"OverlayEditor.Create question" = "Create question...";
+
+/* Title for initial interactive test fields */
+"OverlayEditor.Variant %i" = "Variant %i";
+
+/* Title for additional interactive test fields */
+"OverlayEditor.Another option" = "Another option";
+
+/* Interactive poll title */
+"OverlayEditor.Create a poll" = "Create a poll";
+
+/* Toast when an interactive title is missing */
+"OverlayEditor.Add a question" = "Add a question";
+
+/* Add at least %i answer option */
+"OverlayEditor.Add at least %i answer option" = "Add at least %i answer option";
+
+/* Message when the correct answer appears in the interactive test */
+"OverlayEditor.Click here to correct the answer" = "Click here to correct the answer";
+
+/* Message when no interest is entered in the interest interactive */
+"OverlayEditor.Enter interest" = "Enter interest";
+
 // MARK: - AudioBrowser
 
 /* No internet connection title in alert */
@@ -453,4 +494,9 @@
 
 /* Helpers info message for providing acces to a user gallery */
 "com.banuba.videoEditor.recorder.additionalEffects.allowAccesToChangeBackgroundMessage" = "Allow access to Gallery to change the background";
+
+// MARK: - Cover
+"cover.thumbnail.title" = "Choose a frame from your video or an image from Gallery";
+"cover.gallery.button.title" = "Choose from Gallery";
+"cover.delete.button.title" = "Delete";
 
