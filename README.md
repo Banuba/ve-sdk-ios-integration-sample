@@ -16,6 +16,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 - [Starting a free trial](#Starting-a-free-trial)
 - [Supported media formats](#Supported-media-formats)
 - [Token](#Token)
+- [Connecting with AR cloud](#Connecting-with-AR-cloud)
 - [What can you customize?](#What-can-you-customize)
 - [Configure AR cloud](#Configure-AR-cloud)
 - [Getting Started](#Getting-Started)
@@ -81,7 +82,11 @@ Once you receive the token, put it [here](https://github.com/Banuba/ve-sdk-ios-i
 ## Token 
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
-Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29).
+Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29).  
+
+## Connecting with AR cloud  
+
+To decrease the app size, you can connect with our servers and pull AR filters from there. The effects will be downloaded whenever a user needs them. Please check out [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure AR Cloud in the SDK.
 
 
 ## What can you customize?
@@ -98,11 +103,6 @@ We understand that the client should have options to brand video editor to bring
 :x: Change screen order
 
 :exclamation: We do custom UX/UI changes as a separate contract. Please contact our sales@banuba.com.
-
-### Configure AR cloud
-
-To decrease the app size, you can have your application download filters and effects from a Banuba server. 
-Please check out the [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure the AR Cloud in the SDK.
 
 ### Disable Face AR 
 
