@@ -77,8 +77,6 @@ You should start with getting a trial token. It will grant you **14 days** to fr
 
 There is nothing complicated about it - [contact us](https://www.banuba.com/video-editor-sdk) or send an email to sales@banuba.com and we will send it to you. We can also send you a sample app so you can see how it works “under the hood”.
 
-Once you receive the token, put it [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29). One token can be used for Video Editor SDK and Face AR SDK. We can also send you a clientCloudid for the [AR cloud](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md), should you need it.
-
 ## Token 
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
