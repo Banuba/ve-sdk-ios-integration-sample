@@ -127,7 +127,7 @@ videoEditorConfig.recorderConfiguration.progressBarPosition = .top
 
 ```
 
-### 9. What happens after token expiration?
+### 9. How does video editor work when token expires?
 
 [Token](https://github.com/Banuba/ve-sdk-android-integration-sample#token) provided by sales managers has an expiration term to protect Video Editor SDK from malicious access. When the token expires the following happens:
  - video resolution will be lowered to 360p on camera, after trimmer and after export
