@@ -138,3 +138,25 @@ videoEditorConfig.recorderConfiguration.progressBarPosition = .top
  - after the first month the camera screen will be blurred and a full-screen watermark will be displayed
 
  Please keep your licence up to date to avoid unwanted behavior.
+ 
+ ### 9. Which buttons available if Face AR disabled?
+ 
+ AdditionalEffectsButtons contains options set which describes buttons' identifiers. 
+ 
+ Without Face AR you could use buttons with following identifiers. 
+ 
+ **Camera Screen**:
+ - sound
+ - toggle
+ - flashlight
+ - timer
+ - speed
+ - muteSound
+ 
+ **Postprocessing Screen**:
+ - sticker
+ - sound
+ - text
+ - effects
+ - time
+ - color
