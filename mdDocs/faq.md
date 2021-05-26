@@ -139,7 +139,7 @@ videoEditorConfig.recorderConfiguration.progressBarPosition = .top
 
  Please keep your licence up to date to avoid unwanted behavior.
  
- ### 9. Which buttons available if Face AR disabled?
+ ### 10. Which buttons available if Face AR disabled?
  
  AdditionalEffectsButtons contains options set which describes buttons' identifiers. 
  
