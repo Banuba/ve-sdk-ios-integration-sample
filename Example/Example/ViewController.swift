@@ -26,9 +26,7 @@ class ViewController: UIViewController {
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
     videoEditorSDK = BanubaVideoEditor(
-      token: "PUT FACEAR TOKEN",
-      effectsToken: "u4fwA4rVK2P/nkHS/tKE7SxK7fK+1u0DuoAruXXgIJhuSI0aynki+8gGXUWAC1H3jBDYThexzTBxlPc0eq2x2mdwR/F+iL2gmVpXrC4mAXiEByjb5VpSqsJzbM/K9LGnEDByWZVRTzq8ZuvwKR7BCKU3f4Z7",
-      cloudMasksToken: "PUT AR CLOUD ID",
+      token: "",
       configuration: config,
       analytics: Analytics(),
       externalViewControllerFactory: viewControllerFactory
@@ -55,6 +53,7 @@ class ViewController: UIViewController {
           duration: assset.duration
         )
       ),
+      isEditable: true,
       title: "My awesome track"
     )
     // Paste a music track as a track preset at the camera screen to record video with music
@@ -72,7 +71,6 @@ class ViewController: UIViewController {
     AudioBrowserConfigurator.configure()
     
     var featureConfiguration = config.featureConfiguration
-    featureConfiguration.isAudioBrowserEnabled = true
     featureConfiguration.supportsTrimRecordedVideo = true
     config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
     
@@ -248,7 +246,7 @@ class ViewController: UIViewController {
     return configuration
   }
   
-  private func updateCombinedGalleryConfiguration(_ configuration: CombinedGalleryConfiguration) -> CombinedGalleryConfiguration {
+  private func updateCombinedGalleryConfiguration(_ configuration: GalleryConfiguration) -> GalleryConfiguration {
     var configuration = configuration
     
     configuration.clearSelectionButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))

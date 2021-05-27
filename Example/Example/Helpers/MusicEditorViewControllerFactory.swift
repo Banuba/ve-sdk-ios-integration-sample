@@ -9,7 +9,6 @@
 import BanubaMusicEditorSDK
 import BanubaVideoEditorSDK
 import UIKit
-import BanubaAudioBrowserSDK
 
 /// Music editor view controller factory example
 class MusicEditorViewControllerFactory: MusicEditorExternalViewControllerFactory {

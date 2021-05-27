@@ -4,15 +4,18 @@ platform :ios, '11.0'
 use_frameworks! 
 
 target 'Example' do
-  pod 'BanubaVideoEditorSDK', '1.0.15.8'
-  pod 'BanubaMusicEditorSDK', '1.0.15.2'
-  pod 'BanubaOverlayEditorSDK', '1.0.15.2'
-  pod 'BanubaSDKSimple', '1.0.15.4'
-  pod 'BanubaSDKServicing', '1.0.15.3'
-  pod 'VideoEditor', '1.0.15.3'
-  pod 'BanubaARCloudSDK', '1.0.15.2'
-  pod 'BanubaAudioBrowserSDK', '1.0.15.2'
+  pod 'BanubaVideoEditorSDK', '1.0.16.1'
+  pod 'BanubaMusicEditorSDK', '1.0.16'
+  pod 'BanubaOverlayEditorSDK', '1.0.16'
+  pod 'BanubaSDKSimple', '1.0.16'
+  pod 'BanubaSDKServicing', '1.0.16'
+  pod 'VideoEditor', '1.0.16'
+  pod 'BanubaARCloudSDK', '1.0.16'
+  pod 'BanubaAudioBrowserSDK', '1.0.16'
   pod 'BanubaEffectPlayer', '1.0.15'
-  pod 'BanubaSDK', '1.0.15.2'
+  pod 'BanubaSDK', '1.0.16'
+  pod 'BanubaUtilities', '1.0.16'
+  pod 'BanubaVideoEditorGallerySDK', '1.0.16'
+  pod 'BanubaLicenseServicingSDK', '1.0.16'
   pod 'lottie-ios', "3.1.8"
 end
