@@ -1,281 +1,292 @@
 # Banuba VideoEditor SDK
 ## MusicEditorConfig
 
-- mainMusicViewControllerConfig: MainMusicViewControllerConfig
+The Music Editing screen is needed to add and configure a music track, audio recording, and combine multiple sounds for a video.
+
+Below are the configs for customizing the Music Editing screen.
+
+- [mainMusicViewControllerConfig: MainMusicViewControllerConfig](/Example/Example/Extension/MusicEditorConfig.swift#L8)
 
 MainMusicViewControllerConfig setups main screen style
 
-- videoTrackLineEditControllerConfig: VideoTrackLineEditViewControllerConfig
+- [videoTrackLineEditControllerConfig: VideoTrackLineEditViewControllerConfig](/Example/Example/Extension/MusicEditorConfig.swift#L9)
 
 VideoTrackLineEditViewControllerConfig setups video track line editing screen style
 
-- audioTrackLineEditControllerConfig: AudioTrackLineEditViewControllerConfig
+- [audioTrackLineEditControllerConfig: AudioTrackLineEditViewControllerConfig](/Example/Example/Extension/MusicEditorConfig.swift#L10)
 
 VideoTrackLineEditViewControllerConfig setups audio track line editing screen style
 
-- audioRecorderViewControllerConfig: AudioRecorderViewControllerConfig
+- [audioRecorderViewControllerConfig: AudioRecorderViewControllerConfig](/Example/Example/Extension/MusicEditorConfig.swift#L11)
 
 AudioRecorderViewControllerConfig setups audio recorder style
 
-- isAudioBrowserEnabled: Bool
+- [isAudioBrowserEnabled: Bool](/Example/Example/ViewController.swift#L73)
 
 Is audio browser enabled. (audioBrowser framework exist only)
 
 ## MainMusicViewControllerConfig
 
-- editButtons: [EditButtonConfig]
+- [editButtons: [EditButtonConfig]](/Example/Example/Extension/MusicEditorConfig.swift#L19)
 
 Array of adding buttons
 
-- editButtonsHeight: CGFloat
+- [editButtonsHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L43)
 
 Adding buttons container height
 
-- editCompositionButtons: [EditCompositionButtonConfig]
+- [editCompositionButtons: [EditCompositionButtonConfig]](/Example/Example/Extension/MusicEditorConfig.swift#L45)
 
 Array of edit composition buttons
 
-- controlButtons: [ControlButtonConfig]
+- [controlButtons: [ControlButtonConfig]](/Example/Example/Extension/MusicEditorConfig.swift#L64)
 
 Aray of control buttons
 
-- playerControlsHeight: CGFloat
+- [playerControlsHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L82)
 
 Сontrol buttons container height
 
-- audioWaveConfiguration: AudioWaveConfiguration
+- [audioWaveConfiguration: AudioWaveConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L83)
 
 AudioWaveConfiguration setups audio wave style
 
-- mainLabelColors: UIColor
+- [mainLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L84)
 
 Color for main titles color
 
-- additionalLabelColors: UIColor
+- [additionalLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L85)
 
 Color for additional titles color
 
-- speakerImageName: String
+- [speakerImageName: String](/Example/Example/Extension/MusicEditorConfig.swift#L86)
 
  Image name setups speaker image view
 
-- volumeLabel: TextButtonConfig
+- [volumeLabel: TextButtonConfig](/Example/Example/Extension/MusicEditorConfig.swift#L87)
 
 TextButtonConfig setups volume label title style
 
-- tracksLimit: Int
+- [tracksLimit: Int](/Example/Example/Extension/MusicEditorConfig.swift#L88)
 
 Number of maximum tracks
 
-- cursorColor: UIColor
+- [cursorColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L89)
 
 Cursor color
 
-- controlsBackgroundConfiguration: BackgroundConfiguration
+- [controlsBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L90)
 
 BackgroundConfiguration setups controls container background style
 
-- backgroundConfiguration: BackgroundConfiguration
+- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L91)
 
 BackgroundConfiguration setups main view background style
 
-- timelineCornerRadius: CGFloat
+- [timelineCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L92)
 
 Time line corner radius
 
 ![img](screenshots/MusicEditorMainScreen.png)
 
+
+
+
+
 ## AudioRecorderViewControllerConfig
 
-- rewindToStartButton: ControlButtonConfig?
+- [rewindToStartButton: ControlButtonConfig?](/Example/Example/Extension/MusicEditorConfig.swift#L100)
 
 ControlButtonConfig setups rewind to start button
 
-- playPauseButton: ControlButtonConfig
+- [playPauseButton: ControlButtonConfig](/Example/Example/Extension/MusicEditorConfig.swift#L106)
 
 ControlButtonConfig setups play pause button
 
-- playerControlsHeight: CGFloat
+- [playerControlsHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L112)
 
 Player controls height
 
-- recordButton: ControlButtonConfig
+- [recordButton: ControlButtonConfig](/Example/Example/Extension/MusicEditorConfig.swift#L114)
 
 ControlButtonConfig setups record button
 
-- backButtonImage: String
+- [backButtonImage: String](/Example/Example/Extension/MusicEditorConfig.swift#L120)
 
 Image name setups back button UIImage
 
-- resetButtonImage: String
-
-Image name setups reset button UIImage
-
-- doneButtonImage: String
+- [doneButtonImage: String](/Example/Example/Extension/MusicEditorConfig.swift#L121)
 
  Image name setups done button UIImage
 
-- dimViewColor: UIColor
+- [dimViewColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L122)
 
 Dim view color
 
-- additionalLabelColors: UIColor
+- [additionalLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L123)
 
 Additional labels color
 
-- startingRecordingTimerSeconds: TimeInterval
+- [startingRecordingTimerSeconds: TimeInterval](/Example/Example/Extension/MusicEditorConfig.swift#L124)
 
 Countdown to start recording
 
-- timerColor: UIColor
+- [timerColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L125)
 
 Timer color
 
-- cursorColor: UIColor
+- [cursorColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L126)
 
 Cursor color
 
-- backgroundConfiguration: BackgroundConfiguration
+- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L127)
 
 BackgroundConfiguration setups background view
 
-- playerControlsBackgroundConfiguration: BackgroundConfiguration
+- [playerControlsBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L128)
 
 BackgroundConfiguration setups player controls background view
 
-- timelineCornerRadius: CGFloat
+- [timelineCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L129)
 
 Time line corner radius
 
 ![img](screenshots/AudioRecorderScreen.png)
 
+
+
+
+
 ## VideoTrackLineEditViewControllerConfig
 
-- doneButtonImageName: String
+- [doneButtonImageName: String](/Example/Example/Extension/MusicEditorConfig.swift#L137)
 
 Image name setups done button UIImage
 
-- doneButtonTintColor: UIColor
+- [doneButtonTintColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L138)
 
 Done button tint color
 
-- sliderTintColor: UIColor
+- [sliderTintColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L139)
 
 Slider tint color
 
-- mainLabelColors: UIColor
+- [mainLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L140)
 
 Main labels color
 
-- additionalLabelColors: UIColor
+- [additionalLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L141)
 
 Additional labels colors
 
-- backgroundConfiguration: BackgroundConfiguration
+- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L142)
 
 BackgroundConfiguration setups background view
 
-- height: CGFloat
+- [height: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L143)
 
 Pop-up screen's height
 
 ![img](screenshots/VideoEditScreen.png)
 
+
+
+
 ## AudioTrackLineEditViewControllerConfig
 
-- audioWaveConfiguration: AudioWaveConfiguration
+- [audioWaveConfiguration: AudioWaveConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L151)
 
 AudioWaveConfiguration setups audio wave style
 
-- doneButtonImageName: String
+- [doneButtonImageName: String](/Example/Example/Extension/MusicEditorConfig.swift#L153)
 
 Image name setups done buttom UIImage
 
-- doneButtonTintColor: UIColor
+- [doneButtonTintColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L154)
 
 Done button tint color
 
-- sliderTintColor: UIColor
+- [sliderTintColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L155)
 
 Slider tint color
 
-- draggersColor: UIColor
+- [draggersColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L156)
 
 Draggers background color
 
-- draggerImageName: String?
+- [draggerImageName: String?](/Example/Example/Extension/MusicEditorConfig.swift#L157)
 
 Image name setups draggers additional UIImage
 
-- trimHeight: CGFloat
+- [trimHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L158)
 
 Trim container heught
 
-- trimBorderColor: UIColor
+- [trimBorderColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L159)
 
 Trim container border lines color
 
-- trimBorderWidth: CGFloat
+- [trimBorderWidth: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L160)
 
 Trim container border lines width
 
-- cursorHeight: CGFloat
+- [cursorHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L161)
 
 Cursor height
 
-- dimViewColor: UIColor
+- [dimViewColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L162)
 
 Dim view background color
 
-- mainLabelColors: UIColor
+- [mainLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L163)
 
 Main labels' title color
 
-- additionalLabelColors: UIColor
+- [additionalLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L164)
 
 Additional labels' title color
 
-- cursorColor: UIColor
+- [cursorColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L165)
 
 Cursor background color
 
-- draggersWidth: CGFloat
+- [draggersWidth: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L166)
 
 Draggers' view width
 
-- draggersLineColor: UIColor
+- [draggersLineColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L167)
 
 Draggers' central line view color
 
-- draggersCornerRadius: CGFloat
+- [draggersCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L168)
 
 Draggers' view corner radius
 
-- draggersLineWidth: CGFloat
+- [draggersLineWidth: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L169)
 
 Draggers' central line view width
 
-- draggersLineHeight: CGFloat
+- [draggersLineHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L170)
 
 Draggers' central line view height
 
-- numberOfLinesInDraggers: Int
+- [numberOfLinesInDraggers: Int](/Example/Example/Extension/MusicEditorConfig.swift#L171)
 
 Number of draggers' central lines
 
-- draggerLinesSpacing: CGFloat
+- [draggerLinesSpacing: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L172)
 
 Draggers' central lines spacing
 
-- draggersLineCornerRadius: CGFloat
+- [draggersLineCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L173)
 
 Draggers' central lines corner radius
 
-- backgroundConfiguration: BackgroundConfiguration
+- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L174)
 
 BackgroundConfiguration setups common container view background style
 
-- voiceFilterConfiguration: VoiceFilterConfiguration?
+- [voiceFilterConfiguration: VoiceFilterConfiguration?](/Example/Example/Extension/MusicEditorConfig.swift#L175)
 
 VoiceFilterConfiguration seups voice filter container view item style
 
