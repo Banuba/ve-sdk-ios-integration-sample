@@ -64,6 +64,7 @@ You can either include the filters in the app or have users download them from t
 | ----------- | ------------| ------------- |
 | 360p        | 360 x 640   | 800           |
 | 480p        | 480 x 854   | 2000          |
+| 540p        | 540 x 960   | 2000          |
 | HD          | 720 x 1280  | 4000          |
 | FHD         | 1080 x 1920 | 6400          |
 
@@ -73,9 +74,9 @@ Video Editor SDK classifies every device by its performance capabilities and use
 Nevertheless it is possible to customize it with `ExportVideoConfiguration`. Just put a required video quality into `ExportVideoInfo(resolution)` constructor. To be able to use your own quality parametrs please follow this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_resolution_configuration.md).
 
 See the **default bitrate (kbps)** for exported video (without audio) in the table below:
-| 360p(360 x 640) | 480p(480 x 854) | HD(720 x 1280) | FHD(1080 x 1920) |
-| --------------- | --------------- | -------------- | ---------------- |
-|              800|             2000|            4000|              6400|
+| 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) | HD(720 x 1280) | FHD(1080 x 1920) |
+| --------------- | --------------- | ---------------- | -------------- | ---------------- |
+|              800|             2000|              2000|            4000|              6400|
 
 ## Starting a free trial
 
