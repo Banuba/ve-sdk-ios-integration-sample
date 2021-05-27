@@ -30,43 +30,47 @@
 
   The timer option view background color
   
-  - [cornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L11)
+ - [backgroundViewColor: UIColor]
+  
+  The  background view background configuration(/Example/Example/Extension/HandsfreeConfiguration.swift#L11)
+  
+  - [cornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L12)
   
   The HandsFreeViewController corner radius
   
-  - [sliderCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L12)
+  - [sliderCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L13)
   
   The slider corner radius
   
-  - [barCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L13)
+  - [barCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L14)
   
   The bar corner radius
   
-  - [selectorEdgeInsets: UIEdgeInsets](/Example/Example/Extension/HandsfreeConfiguration.swift#L14)
+  - [selectorEdgeInsets: UIEdgeInsets](/Example/Example/Extension/HandsfreeConfiguration.swift#L15)
   
   The selector views edge insets
   
-  - [activeThumbAndLineColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L15)
+  - [activeThumbAndLineColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L16)
   
   The color of the activated switch of active lines in slider
   
-  - [inactiveThumbAndLineColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L16)
+  - [inactiveThumbAndLineColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L17)
   
   The color of the inactivated switch of inactive lines in slider
   
-  - [minVideoDuration: Double](/Example/Example/Extension/HandsfreeConfiguration.swift#L17)
+  - [minVideoDuration: Double](/Example/Example/Extension/HandsfreeConfiguration.swift#L18)
   
    The minimum value for video duration.
    Default 1.0
    
-   - [buttonCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L18)
+   - [buttonCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L19)
    
    The button CornerRadius
    
-   - [buttonBackgroundColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L19)
+   - [buttonBackgroundColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L20)
    
    The button background color
    
-   - [switchOnTintColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L20)
+   - [switchOnTintColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L21)
    
    The switch background color
