@@ -89,6 +89,10 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   Value provides the ability to dynamically changing the title of the song when new audio is adding
   
+  - shouldUseImageEffect: Bool
+  
+  Value provides the ability for enabling animation for slideshow
+  
   ![img](screenshots/RecorderConfiguration.jpg)
   
   ![img](screenshots/RecorderEffectsConfiguration.jpg)

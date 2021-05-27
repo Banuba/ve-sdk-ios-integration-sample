@@ -1,34 +1,108 @@
 # API for using client's audio content in the SDK
 ## Overview
 
-The user can apply audio tracks on camera and audio editor screens.
+The user can apply audio tracks on camera and music editor screens.
 
-The SDK can apply an audio track to a video, trim an audio track before applying, create new audio track as a composition of several applied audio tracks on video.
+The SDK can apply an audio track to a video, trim an audio track before applying, create a new audio track as a composition of several applied audio tracks on video.
 
-**NOTE: the VE SDK is not responsible for providing audio content. The client has to implement an integration with audio content provider.**
+There are 2 options how to pass audio content to Video Editor:
+
+- External Audio browser
+- Banuba Audio browser
+
+## Integration
+### External Audio browser
+
+To pass audio content to VE SDK you have to implement a factory that conforms ```MusicEditorExternalViewControllerFactory``` protocol. And put it to ```musicEditorFactory``` property in [ExternalViewControllerFactory](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L24). Your factory should contain the following methods:
+
+```swift
+// MARK: - External Audio Browser Factory
+protocol MusicEditorExternalViewControllerFactory: AnyObject {
+  /// contoller which will be used for presenting otherwise makeTrackSelectionViewController will be used
+  var audioBrowserController: TrackSelectionViewController? { get set }
+
+  /// should returns controller which provides audio content for VE SDK
+  /// - selectedAudioItem is currently selected audio item
+  func makeTrackSelectionViewController(selectedAudioItem: AudioItem?) -> TrackSelectionViewController?
+  /// should returns controller which provides effects audio content for VE SDK
+  /// Note: MainMusicViewControllerConfig should contains editButton with type .effect
+  func makeEffectSelectionViewController(selectedAudioItem: AudioItem?) -> EffectSelectionViewController?
+  /// should returns view for countdown animation in record button at music editor
+  func makeRecorderCountdownAnimatableView() -> MusicEditorCountdownAnimatableView?
+}
+```
+Where ```AudioItem``` is entity contains information about selected audio item in VE SDK:
+```swift
+// MARK: - AudioItem protocol
+protocol AudioItem {
+  var id: Int64 { get }
+  var url: URL { get }
+  var title: String? { get set }
+}
+```
+
+Your custom audio browser should conforms the following protocol:
+```swift
+protocol TrackSelectionViewController: UIViewController {
+  var trackSelectionDelegate: TrackSelectionViewControllerDelegate? { get set }
+}
+```
+Using ```trackSelectionDelegate``` you can notify VE SDK about actions at audio browser with following methods:
+```swift
+// MARK: - TrackSelectionViewController
+protocol TrackSelectionViewControllerDelegate: AnyObject {
+  func trackSelectionViewController(
+    viewController: TrackSelectionViewController,
+    didSelectFile url: URL,
+    title: String,
+    id: Int64
+  )
+  
+  func trackSelectionViewControllerDidCancel(
+    viewController: TrackSelectionViewController
+  )
+  
+  func trackSelectionViewController(
+    viewController: TrackSelectionViewController,
+    didStopUsingTrackWithId trackId: Int32
+  )
+}
+```
+
+**NOTE: The VE SDK is not responsible for providing audio content. The client has to implement an integration with an audio content provider.
+The VE SDK can't download music from external storage and import music tracks from Apple Music.**
+
+If you want to pass music from Apple Music to VE SDK you have to export media to temporary directory then pass music url to VE SDK using ```trackSelectionDelegate```. There is example how to export music from Apple Music:
+```swift
+let asset = AVURLAsset(url: url)
+let destination = FileManager.default
+  .temporaryDirectory
+  .appendingPathComponent("\(NSUUID().uuidString).caf")
+let exportSession = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetPassthrough)
+exportSession?.outputURL = destination
+exportSession?.outputFileType = AVFileType.caf
+exportSession?.exportAsynchronously() {
+  if let error = exportSession?.error {
+    completion(nil, error as NSError)
+  } else {
+    completion(destination, nil)
+  }
+}
+```
+
+### Banuba Audio browser
 
 ### Step 1
 
-Add a dependency into your pod file containing other VE SDK dependencies and setup its version (the latest is 0.0.13):
+Add the ```BanubaAudioBrowserSDK``` dependency into your pod file containing other VE SDK dependencies and setup its version (the latest is 0.0.15.2):
 
 ```swift
-pod 'BanubaAudioBrowserSDK', '0.0.14'
+pod 'BanubaAudioBrowserSDK', '0.0.15.2'
 
 ```
-Then update configuration to be able to open Audio Browser.
+### Step 2
 
-**NOTE: BanubaVideoEditor entity should be already initialized before your configuration updating.**
-
+Configure mubert token to use external music provider:
 ```swift
-guard var currentConfig = videoEditorSDK?.currentConfiguration else {
-   return 
-}
-
-currentConfig.audioBrowserConfiguration.config.mubertAudioConfig.pat = "Your mubert pat"
-
-var featureConfiguration = currentConfig.featureConfiguration
-featureConfiguration.isAudioBrowserEnabled = true
-currentConfig.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
-videoEditorSDK?.updateVideoEditorConfig(currentConfig)
-
+AudioBrowserConfig.shared.mubertAudioConfig.pat = "Your mubert pat"
 ```
