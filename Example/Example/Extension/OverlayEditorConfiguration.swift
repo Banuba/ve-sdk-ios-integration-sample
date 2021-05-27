@@ -98,10 +98,10 @@ extension ViewController {
   func updateTextEditorConfiguration(_ configuration: TextEditorConfiguration) -> TextEditorConfiguration {
     var configuration = configuration
     
-    configuration.doneButton.textConfiguration.color = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.doneButton.textConfiguration?.color = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.fontButton.borderColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.fontButton.backgroundColor = #colorLiteral(red: 0.609685123, green: 0.5531321764, blue: 0.4753085971, alpha: 0.1220836901)
-    configuration.fontButton.textConfiguration.color = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+    configuration.fontButton.textConfiguration?.color = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     
     configuration.textBackgroundButton = ImageButtonConfiguration(
       imageConfiguration: ImageConfiguration(imageName: "ic_text_without_background"),

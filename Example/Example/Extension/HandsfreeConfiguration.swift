@@ -4,7 +4,6 @@ import BanubaVideoEditorSDK
 extension ViewController {
   func updateHandsfreeConfiguration(_ configuration: HandsfreeConfiguration?) -> HandsfreeConfiguration? {
     guard var config = configuration else { return nil }
-    config.timerOptionBarConfiguration.disableOptionTitle = "Off"
     config.timerOptionBarConfiguration.selectorColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     config.timerOptionBarConfiguration.selectorTextColor = UIColor.black
     config.timerOptionBarConfiguration.optionBackgroundColor = UIColor.clear

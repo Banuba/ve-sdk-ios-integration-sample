@@ -126,25 +126,6 @@ class ViewController: UIViewController {
     return configuration
   }
   
-  private func updateTextEditorConfiguration(_ configuration: TextEditorConfiguration) -> TextEditorConfiguration {
-    var configuration = configuration
-    
-    configuration.alignmentImages = [
-      .left: ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_text_align_left")),
-      .center: ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_text_align_center")),
-      .right: ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_text_align_right"))
-    ]
-    configuration.textBackgroundButton = ImageButtonConfiguration(
-      imageConfiguration: ImageConfiguration(imageName: "ic_text_without_background"),
-      selectedImageConfiguration: ImageConfiguration(imageName: "ic_text_with_background")
-    )
-    configuration.doneButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
-    configuration.fontButton.borderColor = UIColor(red: 6, green: 188, blue: 193).cgColor
-    configuration.fontButton.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
-    
-    return configuration
-  }
-  
   private func updateSpeedSelectionConfiguration(_ configuration: SpeedSelectionConfiguration) -> SpeedSelectionConfiguration {
     var configuration = configuration
     
