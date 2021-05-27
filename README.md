@@ -303,6 +303,7 @@ Below see the list of screens with links to their detailed description and notes
 1. [Gallery screen](mdDocs/gallery_styles.md)
 1. [Alert screens](mdDocs/alert_styles.md)
 1. [Cover screen](mdDocs/cover_styles.md)
+1. [Hands Free screen](mdDocs/handsFree_styles.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 

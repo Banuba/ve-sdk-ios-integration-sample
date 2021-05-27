@@ -91,6 +91,7 @@ class ViewController: UIViewController {
     config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
     config.alertViewConfiguration = updateAlertViewConfiguration(config.alertViewConfiguration)
     config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
+    config.handsfreeConfiguration = updateHandsfreeConfiguration(config.handsfreeConfiguration)
     
     return config
   }
