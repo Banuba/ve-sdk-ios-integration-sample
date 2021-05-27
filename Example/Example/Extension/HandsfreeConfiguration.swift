@@ -8,6 +8,7 @@ extension ViewController {
     config.timerOptionBarConfiguration.optionCornerRadius = 0.0
     config.timerOptionBarConfiguration.optionTextColor = UIColor.white
     config.timerOptionBarConfiguration.backgroundColor = UIColor.black
+    config.timerOptionBarConfiguration.backgroundViewColor = #colorLiteral(red: 0.1254901961, green: 0.1294117647, blue: 0.1450980392, alpha: 1)
     config.timerOptionBarConfiguration.cornerRadius = 8.0
     config.timerOptionBarConfiguration.sliderCornerRadius = 8.0
     config.timerOptionBarConfiguration.barCornerRadius = 4.0
