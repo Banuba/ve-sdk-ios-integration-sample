@@ -30,9 +30,9 @@
 
   The timer option view background color
   
- - [backgroundViewColor: UIColor]
+ - [backgroundViewColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L11)
   
-  The  background view background configuration(/Example/Example/Extension/HandsfreeConfiguration.swift#L11)
+  The  background view background configuration
   
   - [cornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L12)
   
