@@ -1,2 +1,8 @@
 Pods/
 Example/Podfile.lock
+Pods/
+Example/Podfile.lock
+Example/fastlane
+Gemfile
+Example/Gemfile.lock
+*.mobileprovision
