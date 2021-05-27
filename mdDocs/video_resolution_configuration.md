@@ -8,7 +8,7 @@ Available resolutions:
 - 720p
 - 1080p
 
-```
+``` swift
     /// Export video with default 1280x720 (or 1920x1080/480x854 on required devices) resolution
     /// - Parameters:
     ///   - fileUrl: url where exported video should be stored.

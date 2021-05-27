@@ -58,4 +58,3 @@ Setups gallery state with video only
 Setups gallery state with photo only
 
 ![img](screenshots/GalleryScreen.png)
-

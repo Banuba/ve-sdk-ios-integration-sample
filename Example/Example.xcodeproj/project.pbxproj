@@ -10,6 +10,11 @@
 		18A89EDCE2E4BBC5BFDCD2A6 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EF8E3B8563B74AA5DC4A4F /* Pods_Example.framework */; };
 		510612852606839C00176389 /* AlertViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510612842606839C00176389 /* AlertViewConfiguration.swift */; };
 		51D07DE12607B27900BB48D9 /* CombinedGalleryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DE02607B27900BB48D9 /* CombinedGalleryConfiguration.swift */; };
+		51D07DE72607B87000BB48D9 /* EditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DE62607B87000BB48D9 /* EditorConfiguration.swift */; };
+		51D07DEB2607BCA400BB48D9 /* MusicEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DEA2607BCA400BB48D9 /* MusicEditorConfig.swift */; };
+		51D07DEF2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DEE2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift */; };
+		51D07DF42607D51E00BB48D9 /* RecorderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */; };
+		51D07DF82607DFFC00BB48D9 /* HandsfreeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */; };
 		634FAC04255C351900FB0DBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634FAC06255C351900FB0DBC /* Localizable.strings */; };
 		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
 		635E864525A5DA230035AB99 /* EffectSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635E864125A5DA230035AB99 /* EffectSelection.storyboard */; };
@@ -26,7 +31,7 @@
 		8A8C2515258CC35400FDED05 /* MusicEditorViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C250F258CC35400FDED05 /* MusicEditorViewControllerFactory.swift */; };
 		8A8C2516258CC35400FDED05 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2510258CC35400FDED05 /* ViewControllerFactory.swift */; };
 		8A8C2517258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2511258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift */; };
-		8A8C2518258CC35400FDED05 /* AudioBrowserAdoptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2512258CC35400FDED05 /* AudioBrowserAdoptor.swift */; };
+		8A8C2518258CC35400FDED05 /* AudioBrowserConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2512258CC35400FDED05 /* AudioBrowserConfigurator.swift */; };
 		8A8C2519258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2513258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift */; };
 		8AA67D0C258CDADE00D8FF7F /* LottieAnimation in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67D0B258CDADE00D8FF7F /* LottieAnimation */; };
 		8AA67D0E258CDB1300D8FF7F /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67D0D258CDB1300D8FF7F /* Music */; };
@@ -36,6 +41,11 @@
 		4583CD9AF3110FA7864EFF0B /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		510612842606839C00176389 /* AlertViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewConfiguration.swift; sourceTree = "<group>"; };
 		51D07DE02607B27900BB48D9 /* CombinedGalleryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedGalleryConfiguration.swift; sourceTree = "<group>"; };
+		51D07DE62607B87000BB48D9 /* EditorConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorConfiguration.swift; sourceTree = "<group>"; };
+		51D07DEA2607BCA400BB48D9 /* MusicEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicEditorConfig.swift; sourceTree = "<group>"; };
+		51D07DEE2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayEditorConfiguration.swift; sourceTree = "<group>"; };
+		51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderConfiguration.swift; sourceTree = "<group>"; };
+		51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsfreeConfiguration.swift; sourceTree = "<group>"; };
 		634FAC05255C351900FB0DBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		634FAC07255C357400FB0DBC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		635DB1AA2548541000B1C799 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
@@ -57,7 +67,7 @@
 		8A8C250F258CC35400FDED05 /* MusicEditorViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicEditorViewControllerFactory.swift; sourceTree = "<group>"; };
 		8A8C2510258CC35400FDED05 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		8A8C2511258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimationView+CountdownTimerAnimatableView.swift"; sourceTree = "<group>"; };
-		8A8C2512258CC35400FDED05 /* AudioBrowserAdoptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBrowserAdoptor.swift; sourceTree = "<group>"; };
+		8A8C2512258CC35400FDED05 /* AudioBrowserConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBrowserConfigurator.swift; sourceTree = "<group>"; };
 		8A8C2513258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimerViewControllerFactory.swift; sourceTree = "<group>"; };
 		8AA67CA8258CD5CA00D8FF7F /* BanubaAudioBrowserSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaAudioBrowserSDK.xcframework; path = ../BanubaAudioBrowserSDK.xcframework; sourceTree = "<group>"; };
 		8AA67D0B258CDADE00D8FF7F /* LottieAnimation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LottieAnimation; sourceTree = "<group>"; };
@@ -91,6 +101,11 @@
 			children = (
 				510612842606839C00176389 /* AlertViewConfiguration.swift */,
 				51D07DE02607B27900BB48D9 /* CombinedGalleryConfiguration.swift */,
+				51D07DE62607B87000BB48D9 /* EditorConfiguration.swift */,
+				51D07DEA2607BCA400BB48D9 /* MusicEditorConfig.swift */,
+				51D07DEE2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift */,
+				51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */,
+				51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -149,7 +164,7 @@
 			children = (
 				8A8C250E258CC35400FDED05 /* AnalyticsExample.swift */,
 				8A8C2511258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift */,
-				8A8C2512258CC35400FDED05 /* AudioBrowserAdoptor.swift */,
+				8A8C2512258CC35400FDED05 /* AudioBrowserConfigurator.swift */,
 				8A8C2513258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift */,
 				8A8C250F258CC35400FDED05 /* MusicEditorViewControllerFactory.swift */,
 				8A8C2510258CC35400FDED05 /* ViewControllerFactory.swift */,
@@ -293,15 +308,21 @@
 				8A8C2517258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift in Sources */,
 				8A8C2515258CC35400FDED05 /* MusicEditorViewControllerFactory.swift in Sources */,
 				8A8C2516258CC35400FDED05 /* ViewControllerFactory.swift in Sources */,
+				51D07DE72607B87000BB48D9 /* EditorConfiguration.swift in Sources */,
 				635E864825A5DA240035AB99 /* TrackPickerViewController.swift in Sources */,
+				51D07DEF2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift in Sources */,
+				51D07DF42607D51E00BB48D9 /* RecorderConfiguration.swift in Sources */,
 				639DA010254700290011C153 /* ViewController.swift in Sources */,
 				8A8C2518258CC35400FDED05 /* AudioBrowserAdoptor.swift in Sources */,
 				51D07DE12607B27900BB48D9 /* CombinedGalleryConfiguration.swift in Sources */,
+				8A8C2518258CC35400FDED05 /* AudioBrowserConfigurator.swift in Sources */,
 				510612852606839C00176389 /* AlertViewConfiguration.swift in Sources */,
 				8A8C2519258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift in Sources */,
+				51D07DEB2607BCA400BB48D9 /* MusicEditorConfig.swift in Sources */,
 				8A8C2514258CC35400FDED05 /* AnalyticsExample.swift in Sources */,
 				639DA00C254700290011C153 /* AppDelegate.swift in Sources */,
 				635E864725A5DA240035AB99 /* EffectPickerViewController.swift in Sources */,
+				51D07DF82607DFFC00BB48D9 /* HandsfreeConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,8 +483,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NEWUB88C7M;
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Example",
@@ -474,8 +495,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.Example;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.VESDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -491,8 +512,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NEWUB88C7M;
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Example",
@@ -503,8 +524,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.Example;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.VESDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
