@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18A89EDCE2E4BBC5BFDCD2A6 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EF8E3B8563B74AA5DC4A4F /* Pods_Example.framework */; };
 		510612852606839C00176389 /* AlertViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510612842606839C00176389 /* AlertViewConfiguration.swift */; };
+		51D07DEB2607BCA400BB48D9 /* MusicEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DEA2607BCA400BB48D9 /* MusicEditorConfig.swift */; };
 		51D07DEF2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DEE2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift */; };
 		51D07DF42607D51E00BB48D9 /* RecorderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */; };
 		51D07DF82607DFFC00BB48D9 /* HandsfreeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		4583CD9AF3110FA7864EFF0B /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		510612842606839C00176389 /* AlertViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewConfiguration.swift; sourceTree = "<group>"; };
+		51D07DEA2607BCA400BB48D9 /* MusicEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicEditorConfig.swift; sourceTree = "<group>"; };
 		51D07DEE2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayEditorConfiguration.swift; sourceTree = "<group>"; };
 		51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderConfiguration.swift; sourceTree = "<group>"; };
 		51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsfreeConfiguration.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				510612842606839C00176389 /* AlertViewConfiguration.swift */,
+				51D07DEA2607BCA400BB48D9 /* MusicEditorConfig.swift */,
 				51D07DEE2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift */,
 				51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */,
 				51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */,
@@ -306,6 +309,7 @@
 				8A8C2518258CC35400FDED05 /* AudioBrowserConfigurator.swift in Sources */,
 				510612852606839C00176389 /* AlertViewConfiguration.swift in Sources */,
 				8A8C2519258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift in Sources */,
+				51D07DEB2607BCA400BB48D9 /* MusicEditorConfig.swift in Sources */,
 				8A8C2514258CC35400FDED05 /* AnalyticsExample.swift in Sources */,
 				639DA00C254700290011C153 /* AppDelegate.swift in Sources */,
 				635E864725A5DA240035AB99 /* EffectPickerViewController.swift in Sources */,
