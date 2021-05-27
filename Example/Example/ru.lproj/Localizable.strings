@@ -41,6 +41,9 @@
 /* Used in alert with Yes and No options when resetting filters. */
 "Do you want to reset all?" = "Сбросить всё?";
 
+/* Used in alert with Yes and No options when resetting slideshow. */
+"Do you want to reset slideshow?" = "Cбросить слайдшоу?";
+
 /* Used in alert with Yes and No options */
 "Do you want to delete the last clip?" = "Удалить последний снятый отрезок видео?";
 
@@ -57,7 +60,8 @@
 "Second part is too short" = "Вторая часть слишком короткая";
 
 /* In-camera beautification (facial correction) enabled */
-"Beautifier" = "Бьютификатор";
+"Beautifier on" = "Бьютификатор вкл";
+"Beautifier off" = "Бьютификатор выкл";
 
 /* The light (flashlight) in the camera is on */
 "Flash" = "Подсветка";
@@ -137,6 +141,9 @@
 /* Speed screen name */
 "Speed" = "Скорость";
 
+/* Speed screen info */
+"Recording speed %@" = "Скорость записи %@";
+
 /* Screen name which will be visible if enable in configuration */
 "Single Trim Video Screen Name" = "Обрезать видео";
 
@@ -160,6 +167,13 @@
 
 /* Screen name which will be visible if enable in configuration at color filters screen */
 "Screen colors" = "Цвет видео";
+
+/* Music info alert */
+"Replace" = "Изменить";
+"Delete" = "Удалить";
+"Cancel" = "Отмена";
+"The soundtrack is alreay in use" = "Музыкальная дорожка уже используется";
+"Do you want to replace it with a different audio?" = "Хотите ли заменить её на другую?";
 
 // MARK: - Gifphy Screen
 
@@ -192,14 +206,14 @@
 /* Error if the format of the response from the server does not match the expected */
 "Unknown data format" = "Неожиданный формат данных";
 
-/* Used in alert with options Cancel and In settings. */
-"Gallery failed to open. Please allow access in device settings" = "Пожалуйста, разреши доступ к галерее в настройках";
+/* Used in alert re-asking permissions to Photos with Cancel and Settings options. */
+"Banuba.Camera.MissedGalleryPersmission" = "Разрешите доступ к фото. Пожалуйста, перейдите в настройки и предоставьте доступ.";
 
-/* Used in alert with options Cancel and In settings. */
-"Camera unavailable. Please allow access in device settings" = "Пожалуйста, разреши доступ к камере в настройках";
+/* Used in alert re-asking Camera & Microphone permissions with Settings option. */
+"Banuba.Camera.MissedCameraAndMicrophonePersmissions" = "Разрешите доступ к камере и микрофону, чтобы снимать и редактировать фото или видео, а также записывать аудио.";
 
 /* Used in a message to the user when access to the camera is denied through special options in the phone settings (such as 'Parental Control') */
-"Restricting access to camera" = "Доступ к камере ограничен";
+"Banuba.Camera.CameraAccessRestricted" = "Доступ к камере ограничен";
 
 /* Used in alert with options Cancel and In settings */
 "Microphone unavailable. Please allow access in device settings" = "Пожалуйста, разреши доступ к микрофону в настройках";
@@ -212,20 +226,17 @@
 /* The name of the button, by clicking on which you can go to the Settings application. */
 "Settings" = "В настройки";
 
+/* The name of the button, by clicking on which you can refuse missed permission alert message */
+"Settings.Close" = "Закрыть";
+
 /* Used in an alert with Yes and No when resetting effects. */
-"Reset effects?" = "Сбросить эффекты?";
+"Reset effects?" = "Отменить изменения?";
 
 /* Undo filters applied to video in the add filters screen */
-"Reset" = "Сбросить";
+"Undo" = "Сбросить";
 
 /* Finish button title */
 "Done" = "Готово";
-
-/* Used in alert with Yes and No options */
-"Upload video from device gallery?" = "Можно взять видео из галереи?";
-
-/*  Alert text on transition */
-"Upload photo from device gallery?" = "Можно взять фото из галереи?";
 
 /* OK button title in alert */
 "OK" = "ОК";
@@ -279,6 +290,9 @@
 /* No photo in gallery */
 "No matching photos found in gallery" = "В галерее не нашлось подходящих фото";
 
+/* No video in gallery */
+"No matching video found in gallery" = "В галерее не нашлось подходящих видео";
+
 /* User has selected too few photos in the galleryv */
 "Too few, at least %d photos needed" = "Слишком мало, надо хотя бы %d фото";
 
@@ -301,6 +315,9 @@
 
 /* Edit track volume button title */
 "MusicEditor.Volume" = "Громкость";
+
+/* Voice effect button title */
+"MusicEditor.VoiceEffect" = "Еффект";
 
 /* Edit track button title */
 "MusicEditor.Edit" = "Редактировать";
@@ -327,13 +344,26 @@
 "MusicEditor.Yes" = "Да";
 
 /* Discarding button title */
-"MusicEditor.No" = "Не";
+"MusicEditor.No" = "Нет";
 
 /* Confirmation message for discarding changes */
 "MusicEditor.Do you want to reset all?" = "Желаете сбросить все изменения?";
 
 /* Error message when a user tries to add tracks with reached limit */
 "MusicEditor.Max available tracks - %i" = "Максимальное количество треков - %i";
+
+/* Elf filter title */
+"com.banuba.musicEditor.elf" = "Эльф";
+/* Baritone filter title */
+"com.banuba.musicEditor.baritone" = "Баритон";
+/* Echo filter title */
+"com.banuba.musicEditor.echo" = "Эхо";
+/* Giant filter title */
+"com.banuba.musicEditor.giant" = "Гигант";
+/* Robot filter title */
+"com.banuba.musicEditor.robot" = "Робот";
+/* Squirrel filter title */
+"com.banuba.musicEditor.squirrel" = "Белка";
 
 // MARK: - Overlay Editor
 
@@ -364,9 +394,59 @@
 /* Confirmation message for discarding changes */
 "OverlayEditor.Do you want to reset all?" = "Желаете сбросить все изменения?";
 
+// MARK: - AudioBrowser
+
+/* No internet connection title in alert */
+"AudioBrowser.noInternetConnection" = "Проблемы с интернетом";
+
+/* Message for user if No internet connection */
+"AudioBrowser.checkConnectionMessage" = "Проверьте подключение и попробуйте еще раз";
+
+/* Retry button title */
+"AudioBrowser.retry" = "Еще раз";
+
+/* Allow access message */
+"AudioBrowser.allowAccessMessage" = "Чтобы использовать свою музыку, разрешите доступ к библиотеке Apple Music.";
+
+/* Allow button title */
+"AudioBrowser.allowAccess" = "Разрешить доступ";
+
+/* My files button title */
+"AudioBrowser.myFiles" = "Мои файлы";
+
 // MARK: - Hands-free
 
-"hands.free.timer.title" = "Обратный отсчет";
-"hands.free.video.mode.title" = "Режим автозаписи";
-"hands.free.video.drag.title" = "Перетащи для измененич длительности:";
-"hands.free.btn.title" = "НАЧАТЬ ЗАПИСЬ";
+"hands.free.timer.title" = "Таймер";
+"hands.free.video.mode.title" = "Свободные руки видео режим";
+"hands.free.video.drag.title" = "Перетащите чтобы выбрать продолжительность:";
+"hands.free.btn.title" = "Начать запись";
+"hands.free.seconds" = "%@ c";
+
+// MARK: - Video Editor
+
+/* Gallery image tab title */
+"BanubaVideoEditor.Gallery.ImageTabTitle" = "Изображение";
+
+/* Gallery video tab title */
+"BanubaVideoEditor.Gallery.VideoTabTitle" = "Видео";
+
+/* Gallery custom All Photos title */
+"BanubaVideoEditor.Gallery.AllPhotosTitle" = "Вce фото";
+
+/* Gallery Recent Photos title */
+"BanubaVideoEditor.Gallery.RecentPhotosTitle" = "Недавние";
+
+// MARK: - Effect additional media picker text resource
+
+/* No media files found in gallery for adding to the effect */
+"com.banuba.videoEditor.recorder.additionalEffects.NoMediaFound" = "В галерее не нашлось подходящих файлов";
+
+/* No media files found in gallery for adding to the effect */
+"com.banuba.videoEditor.recorder.additionalEffects.AllowAccess" = "Разрешите доступ";
+
+/* Helpers info message for changing video background */
+"com.banuba.videoEditor.recorder.additionalEffects.selectMediaToChangeBackgroundMessage" = "Выберите медиа чтобы изменить фон:";
+
+/* Helpers info message for providing acces to a user gallery */
+"com.banuba.videoEditor.recorder.additionalEffects.allowAccesToChangeBackgroundMessage" = "Разрешите доступ к галерее чтобы изменять фон";
+
