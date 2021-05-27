@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
     videoEditorSDK = BanubaVideoEditor(
-      token: "PUT VIDEO EDITOR TOKEN",
+      token: "PUT FACEAR TOKEN",
       effectsToken: "u4fwA4rVK2P/nkHS/tKE7SxK7fK+1u0DuoAruXXgIJhuSI0aynki+8gGXUWAC1H3jBDYThexzTBxlPc0eq2x2mdwR/F+iL2gmVpXrC4mAXiEByjb5VpSqsJzbM/K9LGnEDByWZVRTzq8ZuvwKR7BCKU3f4Z7",
       cloudMasksToken: "PUT AR CLOUD ID",
       configuration: config,
@@ -34,7 +34,6 @@ class ViewController: UIViewController {
       externalViewControllerFactory: viewControllerFactory
     )
     
-    musicEditorViewControllerFactory.videoEditorSDK = videoEditorSDK
     videoEditorSDK?.delegate = self
   }
   
@@ -70,14 +69,16 @@ class ViewController: UIViewController {
   private func createVideoEditorConfiguration() -> VideoEditorConfig {
     var config = VideoEditorConfig()
     
+    AudioBrowserConfigurator.configure()
+    
     var featureConfiguration = config.featureConfiguration
     featureConfiguration.isAudioBrowserEnabled = true
+    featureConfiguration.supportsTrimRecordedVideo = true
     config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
     
     config.isHandfreeEnabled = true
     config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
     config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
-    config.galleryConfiguration = updateGalleryConfiguration(config.galleryConfiguration)
     config.combinedGalleryConfiguration = updateCombinedGalleryConfiguration(config.combinedGalleryConfiguration)
     config.videoCoverSelectionConfiguration = updateVideCoverSelectionConfiguration(config.videoCoverSelectionConfiguration)
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
@@ -90,109 +91,9 @@ class ViewController: UIViewController {
     config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
     config.alertViewConfiguration = updateAlertViewConfiguration(config.alertViewConfiguration)
     config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
+    config.handsfreeConfiguration = updateHandsfreeConfiguration(config.handsfreeConfiguration)
     
     return config
-  }
-  
-  private func updateRecorderConfiguration(_ configuration: RecorderConfiguration) -> RecorderConfiguration {
-    var configuration = configuration
-    
-    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_nav_close"))
-    configuration.removeButtonImageName = "delete_videopart"
-    configuration.additionalEffectsButtons = [
-      AdditionalEffectsButtonConfiguration(
-        identifier: .beauty,
-        imageConfiguration: ImageConfiguration(imageName: "ic_beauty_off"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_beauty_on")
-      ),
-      AdditionalEffectsButtonConfiguration(
-        identifier: .sound,
-        imageConfiguration: ImageConfiguration(imageName: "ic_audio_off"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_audio_on"),
-        position: .bottom
-      ),
-      AdditionalEffectsButtonConfiguration(
-        identifier: .effects,
-        imageConfiguration: ImageConfiguration(imageName: "ic_filters_off"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_filters_on")
-      ),
-      AdditionalEffectsButtonConfiguration(
-        identifier: .masks,
-        imageConfiguration: ImageConfiguration(imageName: "ic_masks_off"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_masks_on")
-      ),
-      AdditionalEffectsButtonConfiguration(
-        identifier: .toggle,
-        imageConfiguration: ImageConfiguration(imageName: "ic_cam_front"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_cam_back_on")
-      ),
-      AdditionalEffectsButtonConfiguration(
-        identifier: .flashlight,
-        imageConfiguration: ImageConfiguration(imageName: "ic_flash_off"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_flash_on")
-      ),
-      AdditionalEffectsButtonConfiguration(
-        identifier: .timer,
-        imageConfiguration: ImageConfiguration(imageName: "ic_timer_off"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_timer_on")
-      ),
-      AdditionalEffectsButtonConfiguration(
-        identifier: .speed,
-        imageConfiguration: ImageConfiguration(imageName: "ic_speed_1x"),
-        selectedImageConfiguration: nil
-      ),
-      AdditionalEffectsButtonConfiguration(
-        identifier: .muteSound,
-        imageConfiguration: ImageConfiguration(imageName: "ic_mic_on"),
-        selectedImageConfiguration: ImageConfiguration(imageName: "ic_mic_off")
-      ),
-    ]
-    
-    configuration.speedButton = SpeedButtonConfiguration(
-      imageNameHalf: "ic_speed_0.5x",
-      imageNameNormal: "ic_speed_1x",
-      imageNameDouble: "ic_speed_2x",
-      imageNameTriple: "ic_speed_3x"
-    )
-    
-    configuration.timerConfiguration.defaultButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_timer_off"))
-    configuration.timerConfiguration.options = [
-      TimerConfiguration.TimerOptionConfiguration(
-        button: ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_timer_on")),
-        startingTimerSeconds: 3,
-        stoppingTimerSeconds: 0
-      )
-    ]
-    configuration.recordButtonConfiguration.normalImageName = "ic_record_normal"
-    configuration.recordButtonConfiguration.recordImageName = "ic_record_stop"
-    configuration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
-    configuration.recordButtonConfiguration.strokeColor = UIColor(red: 6, green: 188, blue: 193).cgColor
-    
-    configuration.timeLineConfiguration.progressBarColor = UIColor(red: 6, green: 188, blue: 193)
-    configuration.timeLineConfiguration.progressBarSelectColor = UIColor.white
-
-    let nextButtonTextConfiguration = TextConfiguration(
-      kern: 1.0,
-      font: UIFont.systemFont(ofSize: 12.0),
-      color: UIColor.white
-    )
-    let inactiveNextButtonTextConfiguration = TextConfiguration(
-      kern: 1.0,
-      font: UIFont.systemFont(ofSize: 12.0),
-      color: UIColor.white.withAlphaComponent(0.5)
-    )
-    configuration.saveButton = SaveButtonConfiguration(
-      textConfiguration: nextButtonTextConfiguration,
-      inactiveTextConfiguration: inactiveNextButtonTextConfiguration,
-      text: "NEXT",
-      width: 68.0,
-      height: 41.0,
-      cornerRadius: 4.0,
-      backgroundColor: UIColor(red: 6, green: 188, blue: 193),
-      inactiveBackgroundColor: UIColor(red: 6, green: 188, blue: 193).withAlphaComponent(0.5)
-    )
-    
-    return configuration
   }
   
   private func updateEditorConfiguration(_ configuration: EditorConfiguration) -> EditorConfiguration {
@@ -259,21 +160,7 @@ class ViewController: UIViewController {
     configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
     configuration.galleryItemConfiguration.orderNumberTitleColor = .white
     
-    return configuration
-  }
-  
-  private func updateGalleryConfiguration(_ configuration: GalleryConfiguration) -> GalleryConfiguration {
-    var configuration = configuration
-    
-    configuration.multiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "multi_choise"))
-    configuration.cancelMultiselectButtonConfiguration = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "cancel_cross"))
-    configuration.backButtonConfiguration = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
-    
-    configuration.chooseSelectionButtonConfiguration.backgroundColor = .clear
-    configuration.chooseSelectionButtonConfiguration.textConfiguration.color = UIColor(red: 6, green: 188, blue: 193)
-    
-    configuration.galleryItemConfiguration.orderNumberBackgroudColor = UIColor(red: 6, green: 188, blue: 193)
-    configuration.galleryItemConfiguration.orderNumberTitleColor = .white
+    configuration.galleryTypeUnderlineColor = UIColor(red: 6, green: 188, blue: 193)
     
     return configuration
   }
@@ -304,71 +191,6 @@ class ViewController: UIViewController {
       color: .white,
       alignment: .left
     )
-    
-    return configuration
-  }
-  
-  private func updateOverlayEditorConfiguraiton(_ configuration: OverlayEditorConfiguration) -> OverlayEditorConfiguration {
-    var configuration = configuration
-    
-    configuration.mainOverlayViewControllerConfig.controlButtons = [
-      OverlayControlButtonConfig(
-        type: .reset,
-        imageName: "ic_restart",
-        selectedImageName: nil
-      ),
-      OverlayControlButtonConfig(
-        type: .play,
-        imageName: "ic_editor_play",
-        selectedImageName: "ic_pause"
-      ),
-      OverlayControlButtonConfig(
-        type: .done,
-        imageName: "ic_done",
-        selectedImageName: nil
-      )
-    ]
-    
-    configuration.mainOverlayViewControllerConfig.addButtons = [
-      OverlayAddButtonConfig(
-        type: .text,
-        title: "Text",
-        titleColor: .white,
-        font: UIFont.systemFont(ofSize: 14.0),
-        imageName: "ic_AddText"
-      ),
-      OverlayAddButtonConfig(
-        type: .sticker,
-        title: "Sticker",
-        titleColor: .white,
-        font: UIFont.systemFont(ofSize: 14.0),
-        imageName: "ic_AddSticker"
-      )
-    ]
-    
-    configuration.mainOverlayViewControllerConfig.editCompositionButtons = [
-      OverlayEditButtonConfig(
-        type: .edit,
-        title: "Edit",
-        titleColor: .white,
-        font: UIFont.systemFont(ofSize: 14.0),
-        imageName: "ic_edit",
-        selectedImageName: nil
-      ),
-      OverlayEditButtonConfig(
-        type: .delete,
-        title: "Delete",
-        titleColor: .white,
-        font: UIFont.systemFont(ofSize: 14.0),
-        imageName: "ic_trash",
-        selectedImageName: nil
-      )
-    ]
-    
-    configuration.mainOverlayViewControllerConfig.resizeImageName = "ic_cut_arrow"
-    configuration.mainOverlayViewControllerConfig.draggerBackgroundColor = .clear
-    configuration.mainOverlayViewControllerConfig.draggersHorizontalInset = 10.0
-    configuration.mainOverlayViewControllerConfig.draggersHeight = 20.0
     
     return configuration
   }
@@ -469,7 +291,7 @@ class ViewController: UIViewController {
     
     configuration.resetButton.backgroundColor = UIColor(red: 6, green: 188, blue: 193)
     configuration.resetButton.cornerRadius = 4.0
-    configuration.resetButton.textConfiguration.color = .white
+    configuration.resetButton.textConfiguration?.color = .white
     configuration.toolTipLabel.color = .white
     configuration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
   
@@ -511,7 +333,8 @@ extension ViewController {
     
     let exportConfiguration = ExportVideoConfiguration(
       fileURL: videoURL,
-      quality: .preset(AVAssetExportPresetHighestQuality),
+      quality: .auto,
+      useHEVCCodecIfPossible: true,
       watermarkConfiguration: watermarkConfiguration
     )
     videoEditorSDK?.exportVideos(using: [exportConfiguration], completion: { (success, error) in
