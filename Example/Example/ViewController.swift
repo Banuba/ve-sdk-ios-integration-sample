@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
     videoEditorSDK = BanubaVideoEditor(
-      token: "PUT FACEAR TOKEN",
+      token: "Put video editor token here",
       configuration: config,
       analytics: Analytics(),
       externalViewControllerFactory: viewControllerFactory
