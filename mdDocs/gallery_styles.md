@@ -48,13 +48,3 @@ TextButtonConfiguration setups gallery type buttons' style
 - [galleryTypeUnderlineColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L45)
   
 Color for underline view
-
-- [isVideoEnabled: Bool](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L46)
-  
-Setups gallery state with video only
-
-- [isPhotoEnabled: Bool](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L47)
-  
-Setups gallery state with photo only
-
-![img](screenshots/GalleryScreen.png)
