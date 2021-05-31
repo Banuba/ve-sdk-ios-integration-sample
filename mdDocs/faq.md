@@ -111,3 +111,61 @@ videoEditorConfig.combinedGalleryConfiguration.shouldUseImageEffect = true
 All you need is just to set your color into **cursorColor: UIColor** parameter in MainOverlayViewControllerConfig entity.
 
 Default flag is false.
+
+### 8. I want to change progress bar position
+
+Progress bar position contains two types of layout:
+- top
+- bottom (**by default**)
+
+To change progress bar position you need to modify **progressBarPosition** property of **RecorderConfiguration** entity.
+
+```
+
+let videoEditorConfig = VideoEditorConfig()
+videoEditorConfig.recorderConfiguration.progressBarPosition = .top
+
+```
+
+### 9. How does video editor work when token expires?
+
+[Token](https://github.com/Banuba/ve-sdk-android-integration-sample#token) provided by sales managers has an expiration term to protect Video Editor SDK from malicious access. When the token expires the following happens:
+ - video resolution will be lowered to 360p on camera, after trimmer and after export
+ - Banuba watermark is applied to every exported video
+
+ Also [FaceAR SDK](https://docs.banuba.com/face-ar-sdk/overview/token_management) you may expect the following actions if the token expires:
+ - on the first expired month a watermark with "Powered by Banuba" label will be added on the top of both recorded and exported videos
+ - after the first month the camera screen will be blurred and a full-screen watermark will be displayed
+
+ Please keep your licence up to date to avoid unwanted behavior.
+ 
+ ### 10. Which buttons available if Face AR disabled?
+ 
+ AdditionalEffectsButtons contains options set which describes buttons' identifiers. 
+ 
+ Without Face AR you could use buttons with following identifiers. 
+ 
+ **Camera Screen**:
+ - sound
+ - toggle
+ - flashlight
+ - timer
+ - speed
+ - muteSound
+ 
+ **Postprocessing Screen**:
+ - sticker
+ - sound
+ - text
+ - effects
+ - time
+ - color
+
+ ### 10. I want to change screens' layout.
+ 
+ There are two screens which could be modified with additional layout:
+ 
+ - Camera
+ - Postprocessing
+
+To be able to change layout you need to set **useHorizontalVersion** equals true. This properties are parts of RecorderConfiguration and EditorConfiguration entities.

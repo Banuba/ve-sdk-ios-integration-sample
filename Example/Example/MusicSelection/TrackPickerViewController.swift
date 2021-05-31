@@ -37,8 +37,9 @@ extension TrackPickerViewController: UITableViewDataSource, UITableViewDelegate 
     trackSelectionDelegate?.trackSelectionViewController(
       viewController: self,
       didSelectFile: readyFiles[indexPath.row],
+      isEditable: true,
       title: readyFiles[indexPath.row].lastPathComponent,
-      id: Int64.random(in: 6..<1000))
+      id: Int32.random(in: 6..<1000))
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

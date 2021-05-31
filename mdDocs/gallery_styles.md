@@ -1,84 +1,50 @@
 # Banuba VideoEditor SDK
-## GalleryConfiguration
+## CombinedGalleryConfiguration
 
-- backButtonConfiguration: BackButtonConfiguration
+The CombinedGallery is used in app when you want to select a photo or video stored on your phone.
 
-BackButtonConfiguration setups back button style
+Use the properties below to customize the CombinedGallery.
 
-- titleConfiguration: TextConfiguration
-
-TextConfiguration setups title style
-
-- noVideoFoundTitleConfiguration: TextConfiguration
-
-TextConfiguration setups 'no video' title style
-
-- noVideoFoundSubtitleConfiguration: TextConfiguration
-
-TextConfiguration setups 'no video' subtitle style
-
-- multiselectButtonConfiguration: ImageButtonConfiguration
-
-ImageButtonConfiguration setups multiselect button style
-
-- cancelMultiselectButtonConfiguration: ImageButtonConfiguration
-
-ImageButtonConfiguration setups
-
-- chooseSelectionButtonConfiguration: SaveButtonConfiguration
-
-SaveButtonConfiguration setups done button style
-
-- galleryItemConfiguration: GalleryItemConfiguration
-
-GalleryItemConfiguration setups gallery item style for collection view cell
-
-- layoutConfiguration: GalleryLayoutConfiguration
-
-GalleryLayoutConfiguration setups collection view layout for gallery items
-
-- shouldUseImageEffect: Bool
-  
-Value provides the ability for enabling animation for slideshow
-
-![img](screenshots/GalleryScreen.png)
-
-## SlideShowConfiguration
-
-- videoResolution: VideoResolutionConfiguration
+- [videoResolution: VideoResolutionConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L9)
 
 VideoResolutionConfiguration setups editor options for rendering video
 
-- galleryItemConfiguration: GalleryItemConfiguration
+- [galleryItemConfiguration: GalleryItemConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L29)
 
 GalleryItemConfiguration setups gallery item style for collection view cell
 
-- closeButtonConfiguration: ImageButtonConfiguration
+- [closeButtonConfiguration: ImageButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L37)
 
 ImageButtonConfiguration setups close button style
 
-- albumButtonConfiguration: TextButtonConfiguration
+- [albumButtonConfiguration: TextButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L38)
 
 TextButtonConfiguration setups album button style
 
-- nextButtonConfiguration: SaveButtonConfiguration
+- [nextButtonConfiguration: SaveButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L39)
 
 SaveButtonConfiguration setups next button style
 
-- noPhotosLabelConfiguration: TextConfiguration
+- [noItemsLabelConfiguration: TextConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L40)
+  
+TextConfiguration setups 'no photos' and 'no videos' label title style
 
-TextConfiguration setups 'no photos' label title style
-
-- layoutConfiguration: GalleryLayoutConfiguration
-
+- [layoutConfiguration: GalleryLayoutConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L41)
+  
 GalleryLayoutConfiguration setups collection view layout for gallery items
 
-- topBarBlurColor: UIColor
-
+- [topBarBlurColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L42)
+ 
 Top bar blur color
 
-- clearSelectionButtonConfiguration: ImageButtonConfiguration
-
+- [clearSelectionButtonConfiguration: ImageButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L43)
+  
 ImageButtonConfiguration setups clear selection button style
 
-![img](screenshots/SlideShowScreen.png)
+- [galleryTypeButton: TextButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L44)
+  
+TextButtonConfiguration setups gallery type buttons' style
+
+- [galleryTypeUnderlineColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L45)
+  
+Color for underline view

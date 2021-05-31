@@ -4,9 +4,10 @@
 Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to quickly integrate short video functionality into your mobile app. On this page, we will explain how to do so on iOS.
 
 <p align="center">
-<img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="31.6%" height="auto">&nbsp;
-<img src="mdDocs/gif/audio_browser.gif" alt="Screenshot" width="31.6%" height="auto"/>&nbsp;
-<img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="31.6%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="23.7%" height="auto">&nbsp;
+<img src="mdDocs/gif/audio_browser.gif" alt="Screenshot" width="23.7%%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="23.7%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/pip_preview.gif" alt="Screenshot" width="23.7%" height="auto"/>&nbsp;
 </p>
 
 - [Requirements](#Requirements)
@@ -15,12 +16,13 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 - [Starting a free trial](#Starting-a-free-trial)
 - [Supported media formats](#Supported-media-formats)
 - [Token](#Token)
+- [Connecting with AR cloud](#Connecting-with-AR-cloud)
 - [What can you customize?](#What-can-you-customize)
 - [Configure AR cloud](#Configure-AR-cloud)
-- [Disable Face AR](#Disable-Face-AR)
 - [Getting Started](#Getting-Started)
     + [CocoaPods](#CocoaPods)
-    + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)
+    + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)  
+    + [Disable Face AR](#Disable-Face-AR)
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
@@ -68,18 +70,30 @@ To be able to use your own quality parametrs please follow this [guide](https://
 | 2x              | 800             | 2000            | 4000           | 6400             |
 | 3x              | 800             | 2000            | 4000           | 6400             |  
 
+## Export video quality params
+Video Editor SDK classifies every device by its performance capabilities and uses the most suitable quality params for the exported video.
+
+Nevertheless it is possible to customize it with `ExportVideoConfiguration`. Just put a required video quality into `ExportVideoInfo(resolution)` constructor. To be able to use your own quality parametrs please follow this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_resolution_configuration.md).
+
+See the **default bitrate (kbps)** for exported video (without audio) in the table below:
+| 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) | HD(720 x 1280) | FHD(1080 x 1920) |
+| --------------- | --------------- | ---------------- | -------------- | ---------------- |
+|              800|             2000|              2000|            4000|              6400|
+
 ## Starting a free trial
 
 You should start with getting a trial token. It will grant you **14 days** to freely play around with the AI Video Editor SDK and test its entire functionality the way you see fit.
 
 There is nothing complicated about it - [contact us](https://www.banuba.com/video-editor-sdk) or send an email to sales@banuba.com and we will send it to you. We can also send you a sample app so you can see how it works “under the hood”.
 
-Once you receive the token, put it [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29). One token can be used for Video Editor SDK and Face AR SDK. We can also send you a clientCloudid for the [AR cloud](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md), should you need it.
-
 ## Token 
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
-Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29).
+Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29).  
+
+## Connecting with AR cloud  
+
+To decrease the app size, you can connect with our servers and pull AR filters from there. The effects will be downloaded whenever a user needs them. Please check out [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure AR Cloud in the SDK.
 
 
 ## What can you customize?
@@ -91,23 +105,23 @@ We understand that the client should have options to brand video editor to bring
 :white_check_mark: Change text styles i.e. font, color. [See details](#Configure-screens)    
 :white_check_mark: Localize and change text resources. Default locale is :us:  
 :white_check_mark: Make content you want i.e. a number of video with different resolutions and durations, an audio file. [See details](#Configure-export-flow)  
-:white_check_mark: Customize video recording duration behavior. [See details](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_duration_configuration.md)  
-:x: Change layout  
+:white_check_mark: Customize video recording duration behavior. [See details](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_duration_configuration.md)   
+:white_check_mark: Settings for the camera. [See details](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/Add_description_configs_for_camera/mdDocs/config_camera.md#camera-config)   
+:x: Change layout **except** [Camera and Postprocessing screens](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/faq.md#10-i-want-to-change-screens-layout)
+
 :x: Change screen order
 
 :exclamation: We do custom UX/UI changes as a separate contract. Please contact our sales@banuba.com.
 
-### Configure AR cloud
-
-To decrease the app size, you can have your application download filters and effects from a Banuba server. 
-Please check out the [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure the AR Cloud in the SDK.
-
 ### Disable Face AR 
 
-Face AR SDK is optional for the video editor SDK and can be disabled. Please make these changes to disable it:
+Face AR SDK is optional for the video editor SDK and can be disabled. Please make the following changes in ```Podfile``` to disable it:
 
-- Remove the pod called ['BanubaEffectPlayer'](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile#L12) from the podfile.
-- Remove the pod ['BanubaSDK'](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile#L13) from the podfile.
+```diff
+-  pod 'BanubaEffectPlayer', '1.0.15'
+-  pod 'BanubaSDK', '1.0.15.2'
++  pod 'BanubaSDKSimple', '1.0.15.4'
+```
 
 Change 'isFaceAREnabled' to 'false' when creating an instance of BanubaVideoEditor.
 
@@ -266,7 +280,7 @@ func exportVideos(using configurations: [ExportVideoConfiguration], completion: 
 ///   - completion: completion: (success, error, image), execute on the background thread.
 func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
 ```  
-See the sample export video flow [here](/Example/Example/ViewController.swift#L599). You can find the detailed video export features [here](export_flow.md).
+See the sample export video flow [here](/Example/Example/ViewController.swift#L628). You can find the detailed video export features [here](export_flow.md).
 
 ### Configure audio content
 
@@ -290,6 +304,7 @@ Below see the list of screens with links to their detailed description and notes
 1. [Gallery screen](mdDocs/gallery_styles.md)
 1. [Alert screens](mdDocs/alert_styles.md)
 1. [Cover screen](mdDocs/cover_styles.md)
+1. [Hands Free screen](mdDocs/handsFree_styles.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
@@ -307,15 +322,20 @@ Stickers are interactive objects (gif images) that can be added to the video rec
 
 By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **giphyAPIKey** parameter in GifPickerConfiguration entity.
 
+### Configure the record button
+The record button is a main control on the camera screen which you can fully customize along with animations playing on tap.
+
+First of all look at [RecordButtonConfiguration](mdDocs/record_button_configuration.md) entity which you can customize in [Camera screen configuration quide](mdDocs/camera_styles.md). If it still not suits your needs you can create your own view for more information look [here](mdDocs/record_button_provider.md)
+
 ### Icons
 
 Any icon in the mobile video editor SDK can be replaced. This is how:
 
 1. Load custom images to the Assets catalog
-2. Locate the screen with an icon you want to change in the [VideoEditorConfig](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L35) entity
+2. Locate the screen with an icon you want to change in the [VideoEditorConfig](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L70) entity
 3. Find the specific element and override it with the resource name or use UIImage, if available.
 
-For [example](/Example/Example/ViewController.swift#L80), this is how you change a mask icon on the camera screen.
+For [example](/Example/Example/ViewController.swift#L123), this is how you change a mask icon on the camera screen.
 
 ### Localization
 
@@ -328,3 +348,8 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 
 ## Third party libraries
 [View](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/3rd_party_licences.md) information about third party libraries.
+
+## Migration guides
+
+[1.0.15](mdDocs/releases/1.0.15.md)  
+[1.0.16](mdDocs/releases/1.0.16.md)
