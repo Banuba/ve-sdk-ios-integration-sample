@@ -160,3 +160,12 @@ videoEditorConfig.recorderConfiguration.progressBarPosition = .top
  - effects
  - time
  - color
+
+ ### 10. I want to change screens' layout.
+ 
+ There are two screens which could be modified with additional layout:
+ 
+ - Camera
+ - Postprocessing
+
+To be able to change layout you need to set **useHorizontalVersion** equals true. This properties are parts of RecorderConfiguration and EditorConfiguration entities.
