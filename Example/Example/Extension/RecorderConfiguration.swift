@@ -56,7 +56,6 @@ extension ViewController {
     configuration.recordButtonConfiguration.recordImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
     configuration.recordButtonConfiguration.strokeColor = UIColor(red: 6, green: 188, blue: 193).cgColor
-    configuration.recordButtonConfiguration.spacingBetweenButtonAndCircular = 6
     
     
     
@@ -151,6 +150,7 @@ extension ViewController {
     configuration.loopAudioWhileRecording = true
     configuration.takeAudioDurationAsMaximum = false
     configuration.isDynamicMusicTitle = false
+    configuration.recordButtonConfiguration.spacingBetweenButtonAndCircular = 6
     
     return configuration
   }
