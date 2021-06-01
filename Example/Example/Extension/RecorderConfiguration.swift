@@ -56,6 +56,7 @@ extension ViewController {
     configuration.recordButtonConfiguration.recordImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
     configuration.recordButtonConfiguration.strokeColor = UIColor(red: 6, green: 188, blue: 193).cgColor
+    configuration.recordButtonConfiguration.spacingBetweenButtonAndCircular = 6
     
     
     
