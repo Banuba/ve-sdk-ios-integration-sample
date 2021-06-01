@@ -63,12 +63,12 @@ You can either include the filters in the app or have users download them from t
 ## Camera recording video quality params
 To be able to use your own quality parametrs please follow this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_resolution_configuration.md).
 
-| Recording speed | 360p(360 x 640) | 480p(480 x 854) | HD(720 x 1280) | FHD(1080 x 1920) |
-| --------------- | --------------- | --------------- | -------------- | ---------------- |
-| 1x(Default)     | 800             | 2000            | 4000           | 6400             |
-| 0.5x            | 800             | 2000            | 4000           | 6400             |
-| 2x              | 800             | 2000            | 4000           | 6400             |
-| 3x              | 800             | 2000            | 4000           | 6400             |  
+| Recording speed | 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) |  HD(720 x 1280) | FHD(1080 x 1920) |
+| --------------- | --------------- | --------------- | --------------- | --------------- | ---------------- |
+| 1x(Default)     | 800             | 2000            | 2000            | 4000            | 6400             |
+| 0.5x            | 800             | 2000            | 2000            | 4000            | 6400             |
+| 2x              | 800             | 2000            | 2000            | 4000            | 6400             |
+| 3x              | 800             | 2000            | 2000            | 4000            | 6400             |  
 
 ## Export video quality params
 Video Editor SDK classifies every device by its performance capabilities and uses the most suitable quality params for the exported video.
