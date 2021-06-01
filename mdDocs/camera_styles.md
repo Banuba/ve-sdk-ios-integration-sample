@@ -93,21 +93,14 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   Value provides the ability for enabling animation for slideshow
   
-  ![img](screenshots/RecorderConfiguration.jpg)
-  
-  ![img](screenshots/RecorderEffectsConfiguration.jpg)
+  ![img](screenshots/RecorderConfiguration.png)
   
   You can change the position for the music button, for this you need:
   
   In the array with additionalEffectsButtons, for the button with the identifier **.sound**, set up the [position](/Example/Example/Extension/RecorderConfiguration.swift#L72) property
+  
    - bottom
-   
-   <img src="screenshots/bottom.PNG" width="200" />
-   
    - center
-   
-   <img src="screenshots/center.PNG" width="200" />
-   
    - top
    
-   <img src="screenshots/top.PNG" width="200" />
+   <img src="screenshots/bottom.PNG" width="200" />  <img src="screenshots/center.PNG" width="200" />  <img src="screenshots/top.PNG" width="200" />
