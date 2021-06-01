@@ -169,3 +169,13 @@ videoEditorConfig.recorderConfiguration.progressBarPosition = .top
  - Postprocessing
 
 To be able to change layout you need to set **useHorizontalVersion** equals true. This properties are parts of RecorderConfiguration and EditorConfiguration entities.
+
+### 11. I want to change the position for the music button.
+
+The music button has three positions:
+
+  - bottom
+  - center
+  - top
+
+To change the location of the button, you need to set the desired value in the array with additionalEffectsButtons, for the button with the identifier **.sound**, set up the [position](/Example/Example/Extension/RecorderConfiguration.swift#L72) property. 
