@@ -86,6 +86,10 @@ Here we set up the styles for the recording screen. These configs are for custom
   This flag suggests that given audio duration setups maximum recording length
   
   - [isDynamicMusicTitle: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L152)
+
+   Spacing between button and circular timeline
+    
+   - [spacingBetweenButtonAndCircular: CGFloat](/Example/Example/Extension/RecorderConfiguration.swift#L153)
   
   Value provides the ability to dynamically changing the title of the song when new audio is adding
   
@@ -93,21 +97,14 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   Value provides the ability for enabling animation for slideshow
   
-  ![img](screenshots/RecorderConfiguration.jpg)
-  
-  ![img](screenshots/RecorderEffectsConfiguration.jpg)
+  ![img](screenshots/RecorderConfiguration.png)
   
   You can change the position for the music button, for this you need:
   
   In the array with additionalEffectsButtons, for the button with the identifier **.sound**, set up the [position](/Example/Example/Extension/RecorderConfiguration.swift#L72) property
+  
    - bottom
-   
-   <img src="screenshots/bottom.PNG" width="200" />
-   
    - center
-   
-   <img src="screenshots/center.PNG" width="200" />
-   
    - top
    
-   <img src="screenshots/top.PNG" width="200" />
+   <img src="screenshots/bottom.PNG" width="200" />  <img src="screenshots/center.PNG" width="200" />  <img src="screenshots/top.PNG" width="200" />

@@ -150,6 +150,7 @@ extension ViewController {
     configuration.loopAudioWhileRecording = true
     configuration.takeAudioDurationAsMaximum = false
     configuration.isDynamicMusicTitle = false
+    configuration.recordButtonConfiguration.spacingBetweenButtonAndCircular = 6
     
     return configuration
   }
