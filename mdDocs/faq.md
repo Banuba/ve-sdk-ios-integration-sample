@@ -175,16 +175,10 @@ To be able to change layout you need to set **useHorizontalVersion** equals true
 The music button consists of three positions:
 
   - bottom
-
-<img src="screenshots/bottom.PNG" width="200" />
-
   - center
-
-<img src="screenshots/center.PNG" width="200" />
-
   - top
 
-<img src="screenshots/center.PNG" width="200" />
+<img src="screenshots/bottom.PNG" width="150" /> <img src="screenshots/center.PNG" width="150" /> <img src="screenshots/top.PNG" width="150" />
 
 
 To be able to change the location of the button, you need to set the desired value in the array with additionalEffectsButtons, for the button with the identifier **.sound**, set up the [position](/Example/Example/Extension/RecorderConfiguration.swift#L72) property. 
