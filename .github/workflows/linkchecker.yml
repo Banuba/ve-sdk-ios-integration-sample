@@ -10,5 +10,5 @@ jobs:
       - uses: gaurav-nelson/github-action-markdown-link-check@1.0.8
         with:
           config-file: './md_link_check_config.json'
-          folder-path: "mddocs"
+          folder-path: "mdDocs"
           file-path: './README.md'
