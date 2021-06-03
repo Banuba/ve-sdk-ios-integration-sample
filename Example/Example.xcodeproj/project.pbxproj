@@ -10,6 +10,7 @@
 		18A89EDCE2E4BBC5BFDCD2A6 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EF8E3B8563B74AA5DC4A4F /* Pods_Example.framework */; };
 		510612852606839C00176389 /* AlertViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510612842606839C00176389 /* AlertViewConfiguration.swift */; };
 		5191FED7266755C300B842EA /* TrimConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191FED6266755C300B842EA /* TrimConfiguration.swift */; };
+		519D5B2A266905CC000A3B48 /* CoverConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D5B29266905CC000A3B48 /* CoverConfiguration.swift */; };
 		51D07DE12607B27900BB48D9 /* CombinedGalleryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DE02607B27900BB48D9 /* CombinedGalleryConfiguration.swift */; };
 		51D07DE72607B87000BB48D9 /* EditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DE62607B87000BB48D9 /* EditorConfiguration.swift */; };
 		51D07DEB2607BCA400BB48D9 /* MusicEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DEA2607BCA400BB48D9 /* MusicEditorConfig.swift */; };
@@ -42,6 +43,7 @@
 		4583CD9AF3110FA7864EFF0B /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		510612842606839C00176389 /* AlertViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewConfiguration.swift; sourceTree = "<group>"; };
 		5191FED6266755C300B842EA /* TrimConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimConfiguration.swift; sourceTree = "<group>"; };
+		519D5B29266905CC000A3B48 /* CoverConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverConfiguration.swift; sourceTree = "<group>"; };
 		51D07DE02607B27900BB48D9 /* CombinedGalleryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedGalleryConfiguration.swift; sourceTree = "<group>"; };
 		51D07DE62607B87000BB48D9 /* EditorConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorConfiguration.swift; sourceTree = "<group>"; };
 		51D07DEA2607BCA400BB48D9 /* MusicEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicEditorConfig.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */,
 				51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */,
 				5191FED6266755C300B842EA /* TrimConfiguration.swift */,
+				519D5B29266905CC000A3B48 /* CoverConfiguration.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				8A8C2516258CC35400FDED05 /* ViewControllerFactory.swift in Sources */,
 				51D07DE72607B87000BB48D9 /* EditorConfiguration.swift in Sources */,
 				635E864825A5DA240035AB99 /* TrackPickerViewController.swift in Sources */,
+				519D5B2A266905CC000A3B48 /* CoverConfiguration.swift in Sources */,
 				51D07DEF2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift in Sources */,
 				51D07DF42607D51E00BB48D9 /* RecorderConfiguration.swift in Sources */,
 				639DA010254700290011C153 /* ViewController.swift in Sources */,
