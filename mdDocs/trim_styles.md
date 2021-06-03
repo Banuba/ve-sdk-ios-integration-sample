@@ -1,39 +1,43 @@
 # Banuba VideoEditor SDK
 ## Single trim screen styles  
 
-- saveButton: SaveButtonConfiguration
+- [saveButton: SaveButtonConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L8)
 
 SaveButtonConfiguration setups save button style
 
-- backButton: BackButtonConfiguration
+- [backButton: BackButtonConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L14)
 
 BackButtonConfiguration setups save button style
 
-- throbber: SmallActivityIndicatorConfiguration
+- [rotateButton: ImageButtonConfiguration?](/Example/Example/Extension/TrimConfiguration.swift#L19)
+
+ImageButtonConfiguration setups rotate button style
+
+- [throbber: SmallActivityIndicatorConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L23)
 
 SmallActivityIndicatorConfiguration setups throbber style
 
-- trimTimeLineConfiguration: TrimTimeLineConfiguration
+- [trimTimeLineConfiguration: TrimTimeLineConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L26)
 
 TrimTimeLineConfiguration setups single time line bar style and options
 
-- trimTimeLineHeight: CGFloat
+- [trimTimeLineHeight: CGFloat](/Example/Example/Extension/TrimConfiguration.swift#L25)
 
 Time line height
 
-- playerControlConfiguration: PlayerControlConfiguration
+- [playerControlConfiguration: PlayerControlConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L32)
 
 PlayerControlConfiguration setups play/pause button style
 
-- backgroundConfiguration: BackgroundConfiguration
+- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L37)
 
 BackgroundConfiguration setups background view style
 
-- screenNameConfiguration: ScreenNameConfiguration
+- [screenNameConfiguration: ScreenNameConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L38)
 
 ScreenNameConfiguration setups screen title style
 
-- editedTimeLabelConfiguration: TimeLabelConfiguration
+- [editedTimeLabelConfiguration: TimeLabelConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L39)
 
  TimeLabelConfiguration setups current duration view style
   
@@ -41,51 +45,55 @@ ScreenNameConfiguration setups screen title style
 
 ## Multi trim screen styles  
 
-- saveButton: SaveButtonConfiguration
+- [saveButton: SaveButtonConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L50)
 
 SaveButtonConfiguration setups save button style
 
-- backButton: BackButtonConfiguration
+- [backButton: BackButtonConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L56)
 
 BackButtonConfiguration setups save button style
 
-- timeLimeConfiguration: TimeLineConfiguration
+- [rotateButton: ImageButtonConfiguration?](/Example/Example/Extension/TrimConfiguration.swift#L61)
+
+ImageButtonConfiguration setups rotate button style
+
+- [timeLimeConfiguration: TimeLineConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L65)
 
 TimeLineConfiguration setups multi time line bar style and options
 
-- trimTimeLineConfiguration: TrimTimeLineConfiguration
+- [trimTimeLineConfiguration: TrimTimeLineConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L66)
 
 TrimTimeLineConfiguration setups single time line bar style and options
 
-- trimTimeLineHeight: CGFloat
+- [trimTimeLineHeight: CGFloat](/Example/Example/Extension/TrimConfiguration.swift#L74)
 
 Time line height
 
-- playerControlConfiguration: PlayerControlConfiguration
+- [playerControlConfiguration: PlayerControlConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L75)
 
 PlayerControlConfiguration setups play/pause button style
 
-- backgroundConfiguration: BackgroundConfiguration
+- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L79)
 
 BackgroundConfiguration setups background view style
 
-- bottomViewBackgroundConfiguration: BackgroundConfiguration
+- [bottomViewBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L80)
 
 BackgroundConfiguration setups bottom background view style
 
-- screenNameConfiguration: ScreenNameConfiguration
+- [screenNameConfiguration: ScreenNameConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L81)
 
 ScreenNameConfiguration setups screen title style
 
-- trimSequenceEdgeInsets: UIEdgeInsets
+- [trimSequenceEdgeInsets: UIEdgeInsets](/Example/Example/Extension/TrimConfiguration.swift#L82)
 
 Trim sequence edge insets
 
-- trimSequenceHeight: CGFloat
+- [trimSequenceHeight: CGFloat](/Example/Example/Extension/TrimConfiguration.swift#L83)
 
 Trim sequence height
 
-- editedTimeLabelConfiguration: TimeLabelConfiguration
+- [editedTimeLabelConfiguration: TimeLabelConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L84)
 
 TimeLabelConfiguration setups current duration view style
 
@@ -93,51 +101,51 @@ TimeLabelConfiguration setups current duration view style
 
 ## Trim video parts screen styles  
 
-- videoResolutionConfiguration: VideoResolutionConfiguration
+- [videoResolutionConfiguration: VideoResolutionConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L95)
 
 VideoResolutionConfiguration setups editor options for rendering video
 
-- activityIndicatorConfiguration: SmallActivityIndicatorConfiguration
+- [activityIndicatorConfiguration: SmallActivityIndicatorConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L116)
 
 SmallActivityIndicatorConfiguration setups activity indicator style
 
-- deleteGalleryVideoPartButtonConfiguration: ImageButtonConfiguration
+- [deleteGalleryVideoPartButtonConfiguration: ImageButtonConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L117)
 
 ImageButtonConfiguration setups delete video part button style
 
-- galleryVideoPartsConfiguration: GalleryVideoPartsConfiguration
+- [galleryVideoPartsConfiguration: GalleryVideoPartsConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L120)
 
 GalleryVideoPartsConfiguration setups video parts styles
 
-- backButtonConfiguration: BackButtonConfiguration
+- [backButtonConfiguration: BackButtonConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L123)
 
 BackButtonConfiguration setups back button style
 
-- nextButtonConfiguration: SaveButtonConfiguration
+- [nextButtonConfiguration: SaveButtonConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L128)
 
 BackButtonConfiguration setups next button style
 
-- deleteToolTipLabel: TextConfiguration
+- [deleteToolTipLabel: TextConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L134)
 
 TextConfiguration setups delete video part button style
 
-- playerControlConfiguration: PlayerControlConfiguration
+- [playerControlConfiguration: PlayerControlConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L135)
 
 PlayerControlConfiguration setups play/pause button style
 
-- videoPartsBackgroundConfiguration: BackgroundConfiguration
+- [videoPartsBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L139)
 
 BackgroundConfiguration setups video parts background style
 
-- backgroundConfiguration: BackgroundConfiguration
+- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L140)
 
 BackgroundConfiguration setups background style
 
-- screenNameConfiguration: ScreenNameConfiguration
+- [screenNameConfiguration: ScreenNameConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L141)
 
 ScreenNameConfiguration setups screen title style
 
-- editedTimeLabelConfiguration: TimeLabelConfiguration
+- [editedTimeLabelConfiguration: TimeLabelConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L142)
 
 TimeLabelConfiguration setups current duration view style
 
