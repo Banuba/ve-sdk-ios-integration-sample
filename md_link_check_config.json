@@ -1,0 +1,12 @@
+{
+    "ignorePatterns": [
+        {
+            "pattern": "10.0.4.(?:[4-9]|10)*."
+        }
+    ],
+    "timeout": "3m",
+    "retryOn429": true,
+    "retryCount": 10,
+    "fallbackRetryDelay": "60m",
+    "aliveStatusCodes": [200, 206, 429]
+}
