@@ -48,3 +48,5 @@ TextButtonConfiguration setups gallery type buttons' style
 - [galleryTypeUnderlineColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L24)
   
 Color for underline view
+
+![img](screenshots/Gallery.png)
