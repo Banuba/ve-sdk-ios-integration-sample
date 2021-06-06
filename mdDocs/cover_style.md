@@ -77,3 +77,4 @@ The thumbnails Curosr Configuration
 
 The number of thumbnails
   
+![img](screenshots/VideoCoverSelectionConfiguration.png)
