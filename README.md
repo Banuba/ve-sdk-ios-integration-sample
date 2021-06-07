@@ -91,6 +91,8 @@ We offer а free 14-days trial for you could thoroughly test and assess Video Ed
 
 Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29).  
 
+Also you can load token from [Firebase](https://firebase.google.com/docs/database/android/start). [Check](mddocs/token_on_firebase.md) to configure firebase
+
 ## Connecting with AR cloud  
 
 To decrease the app size, you can connect with our servers and pull AR filters from there. The effects will be downloaded whenever a user needs them. Please check out [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure AR Cloud in the SDK.
