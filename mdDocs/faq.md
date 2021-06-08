@@ -91,9 +91,9 @@ To add your own icon that will be used to represent this particular effect in th
 The name of the icon resource must be the same as the graphic file within the /luts directory.
 As an example, check out how the black-and-white color filter is added:
 
-[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/luts/CF01.png) is a graphic file named C1.png within the /luts directory. It allows to turn the picture black-and-white.
+[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/Fix_links_404/Example/Example/luts/01%20Byers.png) is a graphic file named C1.png within the /luts directory. It allows to turn the picture black-and-white.
 
-[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/Filters%20Preview/CF01_preview.imageset) is an appropriate icon named CF01_preview.imageset within the drawable resource directory that is used as an icon within the list of effects
+[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/01%20Byers_preview.imageset/byers%403x.png) is an appropriate icon named CF01_preview.imageset within the drawable resource directory that is used as an icon within the list of effects
 
 ### 6. I want to enabled slideshow animation 
 
@@ -161,7 +161,7 @@ videoEditorConfig.recorderConfiguration.progressBarPosition = .top
  - time
  - color
 
- ### 10. I want to change screens' layout.
+ ### 11. I want to change screens' layout.
  
  There are two screens which could be modified with additional layout:
  
@@ -170,7 +170,7 @@ videoEditorConfig.recorderConfiguration.progressBarPosition = .top
 
 To be able to change layout you need to set **useHorizontalVersion** equals true. This properties are parts of RecorderConfiguration and EditorConfiguration entities.
 
-### 11. I want to change music button position.
+### 12. I want to change music button position.
 
 The music button consists of three positions:
 
