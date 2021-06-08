@@ -150,3 +150,4 @@ ScreenNameConfiguration setups screen title style
 TimeLabelConfiguration setups current duration view style
 
 ![img](screenshots/GalleryTrimConfiguration.png)
+![img](screenshots/GalleryTrimConfigurationDelete.png)

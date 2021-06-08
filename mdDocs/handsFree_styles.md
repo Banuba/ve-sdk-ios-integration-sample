@@ -74,3 +74,6 @@ Use the properties below to customize the Hands Free screen.
    - [switchOnTintColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L23)
    
    The switch background color
+
+  ![img](screenshots/HandsfreeConfiguration.png)
+  
