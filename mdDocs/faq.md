@@ -91,9 +91,9 @@ To add your own icon that will be used to represent this particular effect in th
 The name of the icon resource must be the same as the graphic file within the /luts directory.
 As an example, check out how the black-and-white color filter is added:
 
-[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/luts/01%20Byers.png) is a graphic file named C1.png within the /luts directory. It allows to turn the picture black-and-white.
+[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/luts/12%20Japan.png) is a graphic file named Japan.png within the /luts directory. It allows to turn the picture black-and-white.
 
-[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/01%20Byers_preview.imageset/byers%403x.png) is an appropriate icon named CF01_preview.imageset within the drawable resource directory that is used as an icon within the list of effects
+[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/12%20JAPAN_preview.imageset/japan%403x.png) is an appropriate icon named japan_preview.imageset within the drawable resource directory that is used as an icon within the list of effects
 
 ### 6. I want to enabled slideshow animation 
 
