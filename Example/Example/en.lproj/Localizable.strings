@@ -295,6 +295,51 @@
 /* Rapid effect name */
 "com.banuba.editor.effect.name.rapid" = "Rapid";
 
+/* Dslrkaleidoscope effect name*/
+"com.banuba.editor.effect.name.dslrkaleidoscope" = "Dslrkaleidoscope";
+
+/* DV Cam effect name */
+"com.banuba.editor.effect.name.dvcam" = "DV Cam";
+
+/* Glitch 2 effect name */
+"com.banuba.editor.effect.name.glitch2" = "Glitch 2";
+
+/* Heat map effect name */
+"com.banuba.editor.effect.name.heatmap" = "Heat Map";
+
+/* Kaleidoscope effect name */
+"com.banuba.editor.effect.name.kaleidoscope" = "Kaleidoscope";
+
+/* Lumiere */
+"com.banuba.editor.effect.name.lumiere" = "Lumiere";
+
+/* Pixel dynamic effect name */
+"com.banuba.editor.effect.name.pixelationdynamic" = "Pixel Dynamic";
+
+/* Pixel static effect name */
+"com.banuba.editor.effect.name.pixelationstatic" = "Pixel Static";
+
+/* Stars effect name */
+"com.banuba.editor.effect.name.stars" = "Stars";
+
+/* Transition effect name */
+"com.banuba.editor.effect.name.transition" = "Transition";
+
+/* Transition 2 effect name */
+"com.banuba.editor.effect.name.transition2" = "Transition 2";
+
+/* Transition 3 effect name */
+"com.banuba.editor.effect.name.transition3" = "Transition 3";
+
+/* Transition 4 */
+"com.banuba.editor.effect.name.transition4" = "Transition 4";
+
+/* VHS 2 effect name */
+"com.banuba.editor.effect.name.vhs2" = "VHS 2";
+
+/* Zoom 2 effect name */
+"com.banuba.editor.effect.name.zoom2" = "Zoom 2";
+
 // MARK: - GALLERY SCREEN / SLIDE SHOW
 
 /* No photo in the combined gallery */
