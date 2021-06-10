@@ -74,6 +74,36 @@ Use the properties below to customize the Hands Free screen.
    - [switchOnTintColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L23)
    
    The switch background color
+   
+   - [timerTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L24)
+   
+   The timer title color
+   
+   - [modeTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L25)
+    
+   The mode title color
+    
+   - [dragTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L26)
+    
+   The drag title color
+   
+   - [buttonTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L27)
+    
+   The button title color
+   
+   - [currentValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L28)
+    
+   The current value text color
+   
+   - [minimumValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L29)
+   
+   The minimum value text color
+   
+   - [maximumValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L23)
+   
+   The maximum value text color
 
   ![img](screenshots/HandsfreeConfiguration.png)
+  
+  ![img](screenshots/timerOptionBarColorConfiguration.png)
   
