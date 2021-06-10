@@ -291,9 +291,6 @@
 /* Glitch 2 effect name */
 "com.banuba.editor.effect.name.glitch2" = "Glitch 2";
 
-/*Glitch 3 effect name*/
-"com.banuba.editor.effect.name.glitch3" = "Glitch 3";
-
 /* Heat map effect name */
 "com.banuba.editor.effect.name.heatmap" = "Heat Map";
 
