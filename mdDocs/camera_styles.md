@@ -111,7 +111,7 @@ Here we set up the styles for the recording screen. These configs are for custom
 
 ## String resources
 
-![img](screenshots/AudioBrowserLocalizations.png)
+![img](screenshots/CameraScreenLocalizations.png)
 
 | Key        |      Value      |   Description |
 | ------------- | :----------- | :------------- |
