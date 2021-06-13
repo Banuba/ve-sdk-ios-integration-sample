@@ -181,3 +181,26 @@ Cursor color
 API key to interact with giphy service
 
 ![img](screenshots/GifScreen.png)
+
+
+## String resources
+
+![img](screenshots/OverlayLocalization.png)
+
+| Key        |      Value      |   Description |
+| ------------- | :----------- | :------------- |
+| OverlayEditor.Delete | Delete | Delete overlay item button title
+| OverlayEditor.Edit | Edit | Edit overlay item button title
+| OverlayEditor.Text | Text | Add text button title
+| OverlayEditor.Sticker | Sticker | Add sticker button title
+| OverlayEditor.Cancel | Cancel | Cancel button title
+| OverlayEditor.Done | Done | Done button title
+| OverlayEditor.Yes | Yes | Confirmation button title
+| OverlayEditor.No | No | Discarding button title
+| OverlayEditor.Do you want to reset all? | Discard changes? | Confirmation message for discarding changes
+| Search on giphy.com | Search on giphy.com | Hint, which is shown in the GIF objects search input field, if it is empty
+| Cancel | Cancel | Ability to cancel the search for GIF objects
+| No stickers found | No stickers found | Pictures not found by custom keyword
+| Problems with internet | Problems with internet |A heading showing that there are problems with the Internet connection
+| Check your connection and try again | Check your connection and try again | Advice to the user on further actions to solve this problem
+| Again | Again | Ability to load GIF objects again
