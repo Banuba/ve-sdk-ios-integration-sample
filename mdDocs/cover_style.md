@@ -78,3 +78,15 @@ The thumbnails Curosr Configuration
 The number of thumbnails
   
 ![img](screenshots/VideoCoverSelectionConfiguration.png)
+
+## String resources
+
+![img](screenshots/CoverLocalization.png)
+
+| Key        |      Value      |   Description |
+| ------------- | :----------- | :------------- |
+| cover.thumbnail.title | Choose a frame from your video or an image from Gallery | Choose image from Gallery label text
+| cover.gallery.button.title | Choose from Gallery | Choose image from Gallery button title
+| cover.delete.button.title | Delete | Delete button title
+| Cancel | Cancel | Ability to cancel
+| Done | Done | Finish button title
