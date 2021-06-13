@@ -43,3 +43,12 @@ Main title font
 Buttons' font
 
 ![img](screenshots/AlertScreen.png)
+
+## String resources
+
+![img](screenshots/AlertLocalization.png)
+
+| Key        |      Value      |   Description |
+| ------------- | :----------- | :------------- |
+| OK | OK | OK button title in alert
+| Cancel | Cancel | Ability to cancel
