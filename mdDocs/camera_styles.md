@@ -108,3 +108,5 @@ Here we set up the styles for the recording screen. These configs are for custom
    - top
    
    <img src="screenshots/bottom.PNG" width="200" />  <img src="screenshots/center.PNG" width="200" />  <img src="screenshots/top.PNG" width="200" />
+
+## String resources
