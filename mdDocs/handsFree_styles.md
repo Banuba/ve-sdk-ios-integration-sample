@@ -107,3 +107,14 @@ Use the properties below to customize the Hands Free screen.
   
   ![img](screenshots/timerOptionBarColorConfiguration.png)
   
+  ## String resources
+
+![img](screenshots/HandsFreeLocalization.png)
+
+| Key        |      Value      |   Description |
+| ------------- | :----------- | :------------- |
+| hands.free.timer.title | Сountdown | Timer title text
+| hands.free.video.mode.title | Hands-free video mode | Mode title text
+| hands.free.video.drag.title | Drag to set video duration: | Drag title text
+| hands.free.btn.title | START RECORDING | Start recording button title
+| hands.free.seconds | %@ s | Seconds
