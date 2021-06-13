@@ -46,9 +46,9 @@ Buttons' font
 
 ## String resources
 
-![img](screenshots/AlertLocalization.png)
-
 | Key        |      Value      |   Description |
 | ------------- | :----------- | :------------- |
 | OK | OK | OK button title in alert
 | Cancel | Cancel | Ability to cancel
+
+![img](screenshots/AlertLocalization.png)
