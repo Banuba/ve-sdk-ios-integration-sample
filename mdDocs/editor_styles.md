@@ -34,3 +34,19 @@ Indicates whether there will be a preview selection screen after the editor scre
 How the buttons appears on the screen
 
   ![img](screenshots/EditorConfiguration.png)
+  
+  
+## String resources
+
+![img](screenshots/EditorConfigurationLocalization.png)
+
+| Key        |      Value      |   Description |
+| ------------- | :----------- | :------------- |
+| com.banuba.recorder.sticker.title | Gif | Gif button title
+| com.banuba.recorder.text.title | Text | Text button title
+| com.banuba.recorder.effects.title |Effects | Effects button title
+| com.banuba.recorder.masks.title | Masks | Masks button title
+| com.banuba.recorder.sound.title | Music | Music button title
+| com.banuba.recorder.time.title | Time | Time button title
+| com.banuba.recorder.color.title | Filter | Filter button title
+| Next | Next | Next button title
