@@ -151,3 +151,14 @@ TimeLabelConfiguration setups current duration view style
 
 ![img](screenshots/GalleryTrimConfiguration.png)
 ![img](screenshots/GalleryTrimConfigurationDelete.png)
+
+## String resources
+
+![img](screenshots/TrimLocalization.png)
+
+| Key        |      Value      |   Description |
+| ------------- | :----------- | :------------- |
+| Drag to remove | Drag to remove | Hint on how to remove a piece of video
+| %d sec | %d sec | 'Seconds' for short
+| Done | Done | Finish button title
+| Next | Next | Move to next screen
