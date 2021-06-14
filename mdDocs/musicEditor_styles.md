@@ -295,3 +295,31 @@ VoiceFilterConfiguration seups voice filter container view item style
 VoiceFilterProvider setups voice filters provider
 
 ![img](screenshots/AudioEditScreen.png)
+
+## String resources
+
+![img](screenshots/MusicLocalization.png)
+
+| Key        |      Value      |   Description |
+| ------------- | :----------- | :------------- |
+| MusicEditor.Delete | Delete | Delete track button title
+| MusicEditor.Volume | Volume | Edit track volume button title
+| MusicEditor.VoiceEffect | Effect | Voice effect button title
+| MusicEditor.Edit | Edit | Edit track button title
+| MusicEditor.Tracks | Tracks | Add track button title
+| MusicEditor.Effects | Effects | Add effects button title
+| MusicEditor.Record | Record | Add voice record button title
+| MusicEditor.VideoVolume | Volume | Video volume title
+| MusicEditor.Duration | Duration | Audio duration title
+| MusicEditor.Cancel | Cancel | Cancel button title
+| MusicEditor.Yes | Yes | Confirmation button title
+| MusicEditor.No | No | Discarding button title
+| MusicEditor.Do you want to reset all? | Do you want to reset all? | Confirmation message for discarding changes
+| MusicEditor.Max available tracks - %i | Max available tracks - %i | Error message when a user tries to add tracks with reached limit
+| com.banuba.musicEditor.elf | Elf | Elf filter title
+| com.banuba.musicEditor.baritone | Baritone | Baritone filter title
+| com.banuba.musicEditor.echo | Echo | Echo filter title
+| com.banuba.musicEditor.giant | Giant | Giant filter title
+| com.banuba.musicEditor.robot | Robot | Robot filter title
+| com.banuba.musicEditor.squirrel | Squirrel | Squirrel filter title
+| Undo | Undo | Undo applied to video in the add sound screen
