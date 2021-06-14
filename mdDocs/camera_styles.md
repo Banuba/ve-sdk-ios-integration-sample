@@ -108,3 +108,52 @@ Here we set up the styles for the recording screen. These configs are for custom
    - top
    
    <img src="screenshots/bottom.PNG" width="200" />  <img src="screenshots/center.PNG" width="200" />  <img src="screenshots/top.PNG" width="200" />
+
+## String resources
+
+![img](screenshots/CameraScreenLocalizations.png)
+
+| Key        |      Value      |   Description |
+| ------------- | :----------- | :------------- |
+| Music | Music | Music selection screen title
+| Delete | Delete | Audio track delete action
+| Voice | Voice | Title on the screen of the voice recorder
+| Yes | Yes | Used when the question is answered yes
+| No | No | Used when answering a negative question
+| Error | Error | Title of the message if an error occurs
+| Next | Next | Move to next screen
+| Publish | Publish | Publish video
+| Back | Back | Return to the previous screen
+| Cancel | Cancel | Ability to cancel
+| BanubaVideoEditor.Settings.Later| Later | Alert action button title
+| BanubaVideoEditor.Settings.Discard | Discard | Alert action button title
+| Do you want to stop capturing and editing the video? | Do you want to stop capturing and editing the video? | Used in alert with Yes and No options when resetting filters.
+| Do you want to reset all? | Do you want to reset all? | Used in alert with Yes and No options when resetting filters.
+| Do you want to reset slideshow? | Do you want to reset slideshow? | Used in alert with Yes and No options when resetting slideshow.
+| Do you want to delete the last clip? | Do you want to delete the last clip? | Used in alert with Yes and No options
+| BanubaVideoEditor.NotFinishedVideoSequenceAlertQuestion | You have a new draft. Continue editing it? | Asking about continuing editing session
+| First part not recorded | First part not recorded | Error message that appears when clicking the Next button in the camera when the first part of split mode is not recorded
+| Mask not loaded | Mask not loaded | Error message received when trying to load a mask
+| Second part is too short | Second part is too short | An error message that appears when you click the Next button in the camera, when the second part of the video in split mode is not equal in length to the first part
+| Beautifier on/Beautifier off | Beautifier on/Beautifier off | Second part is too short
+| Flash | Light | The light (flashlight) in the camera is on
+| Too short. Please capture at least %d seconds | Too short. Please capture at least %d seconds | An error message that appears in the camera when the length of the recorded video is less than the minimum allowed duration
+| Maximum %d seconds. | Maximum %d seconds. | An error message that appears in the camera if the recorded video is longer than the maximum allowed length
+| Timer is off | Timer is off | Turning off the camera's auto timer
+| Max length %d sec | Max length %d sec | 'Seconds' for maximum
+| %d sec | %d sec | 'Seconds' for short
+| Choose video | Choose video | Screen title when multi-select mode is enabled on the video gallery screen
+| Choose | Choose | Name of the button in multi-select mode, which confirms the selection of user files and continues the process further
+| Sound | Sound | Built-in track volume description
+| Add | Add | Add extra audio track action
+| %i seconds timer is on | %i seconds timer is on | Enabling the countdown timer to automatically start shooting in the camera
+| Recording speed %@ | Recording speed %@ | Speed screen info
+| com.banuba.recorder.sound.title | Music | Music button title
+| com.banuba.recorder.beauty.title | Beauty | Beauty button title
+| com.banuba.recorder.color.title | Filter | Filter button title
+| com.banuba.recorder.masks.title | Masks | Masks button title
+| com.banuba.recorder.toggle.title | Toggle | Toggle button title
+| com.banuba.recorder.flashlight.title | Flashlight button title
+| com.banuba.recorder.timer.title | Timer | Timer button title
+| com.banuba.recorder.speed.title | Speed | Speed button title
+| com.banuba.recorder.muteSound.title | Sound | Sound button title
