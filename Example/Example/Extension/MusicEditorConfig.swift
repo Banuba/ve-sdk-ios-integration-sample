@@ -140,7 +140,7 @@ extension ViewController {
     configuration.mainLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.additionalLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.backgroundConfiguration.cornerRadius = 0.0
-    configuration.height = 50.0
+    configuration.height = 150.0
     return configuration
   }
   

@@ -118,7 +118,7 @@ extension ViewController {
       VideoTextColorPair(colors:
                           (
                             UIColor.white,
-                            UIColor.clear,
+                            UIColor.black,
                             UIColor.yellow,
                             UIColor.systemYellow
                           )
