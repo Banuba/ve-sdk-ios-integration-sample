@@ -47,7 +47,7 @@ protocol TrackSelectionViewController: UIViewController {
   var trackSelectionDelegate: TrackSelectionViewControllerDelegate? { get set }
 }
 ```
-Using ```trackSelectionDelegate``` you can notify VE SDK about actions at audio browser with following methods:
+Using ```trackSelectionDelegate``` you can notify Video Editor SDK about actions at audio browser with following methods:
 ```swift
 // MARK: - TrackSelectionViewController
 protocol TrackSelectionViewControllerDelegate: AnyObject {
