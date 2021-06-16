@@ -35,7 +35,7 @@ let provider = VideoEditorTokenProvider()
 <plist version="1.0">
 <dict>
 	<key>VideoEditorToken</key>
-	<string>Put VE SDK token here</string>
+	<string>Put Video Editor SDK token here</string>
 </dict>
 </plist>
 ```
