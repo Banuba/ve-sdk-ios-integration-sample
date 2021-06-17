@@ -16,6 +16,6 @@ target 'Example' do
   pod 'BanubaAudioBrowserSDK', '1.0.16.1'
   pod 'BanubaUtilities', '1.0.16'
   pod 'BanubaVideoEditorGallerySDK', '1.0.16'
-  pod 'BanubaLicenseServicingSDK', '1.0.16'
+  pod 'BanubaLicenseServicingSDK', '1.0.16.1'
   pod 'lottie-ios', "3.1.8"
 end
