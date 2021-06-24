@@ -194,7 +194,7 @@ public var musicMetadata: MusicEditorMetadata? { get }
 ...
 }
 ```
-MusicEditorMetadata contains the array of MusicEditorTrack which contains the following fields: 
+`MusicEditorMetadata` contains the array of `MusicEditorTrack` which contains the following fields: 
 
 ```swift
 // MARK: - MusicEditorTrack
