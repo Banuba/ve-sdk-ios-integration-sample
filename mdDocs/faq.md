@@ -182,3 +182,29 @@ The music button consists of three positions:
 
 
 To be able to change the location of the button, you need to set the desired value in the array with additionalEffectsButtons, for the button with the identifier **.sound**, set up the [position](/Example/Example/Extension/RecorderConfiguration.swift#L72) property. 
+
+### 13. How can I get a track name of the sound used in my video after export?
+```swift
+public class BanubaVideoEditor {
+/// Simple metadata of music composition settings
+public var musicMetadata: MusicEditorMetadata? { get }
+...
+
+```
+MusicEditorMetadata contains the array of MusicEditorTrack which contains the following fields: 
+
+```swift
+// MARK: - MusicEditorTrack
+public struct MusicEditorTrack: Codable {
+public var url: URL
+public var originalURL: URL
+public var title: String
+public var id: Int32
+```
+or if you want to know what track was played on the camera screen you can use:
+
+```swift
+public class BanubaVideoEditor {
+/// Music track which will be played on camera recording
+public var musicTrack: MediaTrack? { get }
+```
