@@ -185,26 +185,40 @@ To be able to change the location of the button, you need to set the desired val
 
 ### 13. How can I get a track name of the sound used in my video after export?
 ```swift
+/// Video Editor main entity and entry point.
+/// Can present and hide root view controller.
+/// Has default export method.
 public class BanubaVideoEditor {
 /// Simple metadata of music composition settings
 public var musicMetadata: MusicEditorMetadata? { get }
 ...
-
+}
 ```
 MusicEditorMetadata contains the array of MusicEditorTrack which contains the following fields: 
 
 ```swift
 // MARK: - MusicEditorTrack
 public struct MusicEditorTrack: Codable {
+///Track URL
 public var url: URL
+///Track original URL
 public var originalURL: URL
+///Track title
 public var title: String
+///Track id
 public var id: Int32
+...
+}
 ```
 or if you want to know what track was played on the camera screen you can use:
 
 ```swift
+/// Video Editor main entity and entry point.
+/// Can present and hide root view controller.
+/// Has default export method.
 public class BanubaVideoEditor {
 /// Music track which will be played on camera recording
 public var musicTrack: MediaTrack? { get }
+...
+}
 ```
