@@ -20,7 +20,7 @@ extension ViewController {
       imageName: "editor.rotate"
     )
     
-    configuration.throbber.activityLineWidth = 103.0
+    configuration.throbber.activityLineWidth = 3.0
     
     configuration.trimTimeLineHeight = 56.0
     configuration.trimTimeLineConfiguration.draggersCornerRadius = 8.0
