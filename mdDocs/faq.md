@@ -88,12 +88,89 @@ Color filters (LUTs) are special graphic files placed into the /luts directory i
 
 To add your own icon that will be used to represent this particular effect in the list, you should place it into the /assets folder.
 
-The name of the icon resource must be the same as the graphic file within the /luts directory.
-As an example, check out how the black-and-white color filter is added:
+The name of the icon resource must be the same as the graphic file `ID` the / luts directory.
 
-[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/luts/japan.png) is a graphic file named Japan.png within the /luts directory. It allows to turn the picture black-and-white.
+| Default image color filter | Name      | ID      |
+| ---------- | ---------  | ----------- |
+|<img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/glitch_preview.imageset/glitch-1.png" width="50"> | glitch | 101000
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/instant_preview.imageset/instant-1.png" width="50"> | instant  | 101001
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/grunge_preview.imageset/grunge-1.png" width="50">  | grunge | 101002
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/retro_preview.imageset/retro-1.png" width="50">  |  retro | 101003
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/pinkvine_preview.imageset/pinkvine-1.png" width="50">  |  pinkvine | 101004
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/england_preview.imageset/england-1.png" width="50">  |  england | 101005
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/spark_preview.imageset/spark-1.png" width="50">  |  spark | 101006
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/korben_preview.imageset/korben-1.png" width="50"> |  korben | 101007
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/remy_preview.imageset/remy-1.png" width="50"> |  remy | 101008
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/canada_preview.imageset/canada-1.png" width="50"> |  canada | 101009
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/sunny_preview.imageset/sunny-1.png" width="50">  |  sunny | 101010
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/egypt_preview.imageset/egypt-1.png" width="50"> |  egypt | 101011
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/new_zeland_preview.imageset/new_zeland-1.png" width="50">  |  new_zeland | 101012
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/chroma_preview.imageset/chroma-1.png" width="50"> |  chroma | 101013
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/byers_preview.imageset/byers-1.png" width="50"> |  byers | 101014
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/lilac_preview.imageset/lilac-1.png" width="50">  |  lilac | 101015
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/hyla_preview.imageset/hyla-1.png" width="50"> |  hyla | 101016
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/bubblegum_preview.imageset/bubblegum-1.png" width="50"> |  bubblegum | 101017
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/vinyl_preview.imageset/vinyl-1.png" width="50">  | vinyl | 101018
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/lux_preview.imageset/lux-1.png" width="50">  |  lux | 101019
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/japan_preview.imageset/japan-1.png" width="50">  |  japan | 101020
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/sunset_preview.imageset/sunset-1.png" width="50"> |  sunset | 101021
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/neon_preview.imageset/neon-1.png" width="50"> |  neon | 101022
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/chile_preview.imageset/chile-1.png" width="50"> |  chile | 101023
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/norway_preview.imageset/norway-1.png" width="50"> |  norway | 101024
 
-[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/japan_preview.imageset/japan-2.png) is an appropriate icon named japan_preview.imageset within the drawable resource directory that is used as an icon within the list of effects
+If you want to change the name, you need to specify the new name in the string resources:
+```swift
+/* glitch filter name */
+"com.banuba.filter.name.lux" = "lux";
+/* remy filter name */
+"com.banuba.filter.name.remy" = "remy";
+/* hyla filter name */
+"com.banuba.filter.name.hyla" = "hyla";
+/* neon filter name */
+"com.banuba.filter.name.neon" = "neon";
+/* retro filter name */
+"com.banuba.filter.name.retro" = "retro";
+/* sunny filter name */
+"com.banuba.filter.name.sunny" = "sunny";
+/* egypt filter name */
+"com.banuba.filter.name.egypt" = "egypt";
+/* spark filter name */
+"com.banuba.filter.name.spark" = "spark";
+/* byers filter name */
+"com.banuba.filter.name.byers" = "byers";
+/* lilac filter name */
+"com.banuba.filter.name.lilac" = "lilac";
+/* vinyl filter name */
+"com.banuba.filter.name.vinyl" = "vinyl";
+/* japan filter name */
+"com.banuba.filter.name.japan" = "japan";
+/* chile filter name */
+"com.banuba.filter.name.chile" = "chile";
+/* glitch filter name */
+"com.banuba.filter.name.glitch" = "glitch";
+/* grunge filter name */
+"com.banuba.filter.name.grunge" = "grunge";
+/* canada filter name */
+"com.banuba.filter.name.canada" = "canada";
+/* chroma filter name */
+"com.banuba.filter.name.chroma" = "chroma";
+/* norway filter name */
+"com.banuba.filter.name.norway" = "norway";
+/* korben filter name */
+"com.banuba.filter.name.korben" = "korben";
+/* sunset filter name */
+"com.banuba.filter.name.sunset" = "sunset";
+/* instant filter name */
+"com.banuba.filter.name.instant" = "instant";
+/* england filter name */
+"com.banuba.filter.name.england" = "england";
+/* pinkvine filter name */
+"com.banuba.filter.name.pinkvine" = "pinkvine";
+/* bubblegum filter name */
+"com.banuba.filter.name.bubblegum" = "bubblegum";
+/* new zeland filter name */
+"com.banuba.filter.name.new_zeland" = "new_zeland";
+```
 
 ### 6. I want to enabled slideshow animation 
 
