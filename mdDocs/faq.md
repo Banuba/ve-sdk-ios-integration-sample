@@ -183,7 +183,7 @@ The music button consists of three positions:
 
 To be able to change the location of the button, you need to set the desired value in the array with additionalEffectsButtons, for the button with the identifier **.sound**, set up the [position](/Example/Example/Extension/RecorderConfiguration.swift#L72) property. 
 
-### 13. How can I get a track name of the sound used in my video after export?
+### 13. How can I get a track name of the audio used in my video after export?
 ```swift
 /// Video Editor main entity and entry point.
 /// Can present and hide root view controller.
