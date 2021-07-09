@@ -301,6 +301,9 @@ public var musicTrack: MediaTrack? { get }
 ```
 
 ### 15. I want to check whether my token is expired.
+
+Available from **'1.0.16'** version
+
 ```swift
   /// Check whether token is expired
   /// - Parameters:
@@ -309,6 +312,12 @@ public var musicTrack: MediaTrack? { get }
     token: String
   ) -> Bool 
 ```
+For this you need to initialize, for example:
+```swift
+    let token: String = "Put token"
+    let result: Bool = videoEditorSDK.checkTokenExpiration(token: token)
+```
+
 if you are using `BanubaTokenStorageSDK` here is a usage example:
 
 ```swift
