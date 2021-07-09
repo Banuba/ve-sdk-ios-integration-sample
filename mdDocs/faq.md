@@ -312,7 +312,9 @@ Available from **'1.0.18'** version
     token: String
   ) -> Bool 
 ```
-For this you need to initialize, for example:
+For this you need to initialize `BanubaVideoEditor`and call the method `
+checkTokenExpiration(token: token)`
+, for example:
 ```swift
     let token: String = "Put token"
     let result: Bool = videoEditorSDK.checkTokenExpiration(token: token)
