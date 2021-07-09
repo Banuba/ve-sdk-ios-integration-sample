@@ -299,3 +299,15 @@ public var musicTrack: MediaTrack? { get }
 ...
 }
 ```
+
+### 14. I want to check whether my token is expired.
+```swift
+  /// Check whether token is expired
+  /// - Parameters:
+  ///   - token: your token that you want to verify.
+  public static func checkTheTokenExpiration(
+    token: String
+  ) -> Bool {
+...
+  }
+```
