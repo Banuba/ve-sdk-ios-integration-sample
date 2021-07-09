@@ -302,7 +302,7 @@ public var musicTrack: MediaTrack? { get }
 
 ### 15. I want to check whether my token is expired.
 
-Available from **'1.0.16'** version
+Available from **'1.0.18'** version
 
 ```swift
   /// Check whether token is expired
