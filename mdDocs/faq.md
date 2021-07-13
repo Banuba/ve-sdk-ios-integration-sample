@@ -299,6 +299,43 @@ public var musicTrack: MediaTrack? { get }
 ...
 }
 ```
+### 14 I want to change the font
+
+You can change the font for the whole video editor by calling in `VideoEditorConfig` this method:
+ 
+ ```swift
+  func applyFont(_ font: UIFont)
+```
+or change for each screen separately by calling the appropriate methods:
+```swift
+  func updateAlertFonts(_ font: UIFont)
+  
+  func updateRecorderFonts(_ font: UIFont)
+  
+  func updateMultiTrimFonts(_ font: UIFont)
+  
+  func updateEditorFonts(_ font: UIFont)
+  
+  func updateToastFonts(_ font: UIFont)
+  
+  func updateFullScreenActivityFonts(_ font: UIFont)
+  
+  func updateAlbumsFonts(_ font: UIFont)
+  
+  func updateTextEditorFonts(_ font: UIFont)
+  
+  func updateSlideShowFonts(_ font: UIFont)
+  
+  func updateTrimGalleryVideoFonts(_ font: UIFont)
+  
+  func updateFilterFonts(_ font: UIFont)
+  
+  func updateVideoCoverSelectionFonts(_ font: UIFont)
+  
+  func updateExtendedVideoCoverSelectionFonts(_ font: UIFont)
+```
+
+Changing the font does not affect its size. The font size will be taken by default or specified by you in the entity configuration.
 
 ### 15. I want to check whether my token is expired.
 
