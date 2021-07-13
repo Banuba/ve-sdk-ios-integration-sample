@@ -302,22 +302,22 @@ public var musicTrack: MediaTrack? { get }
 
 ### 15. I want to check whether my token is expired.
 
-Available from **'1.0.18'** version
+Starting from '1.0.18' version it is available to check if token is expired.
 
 ```swift
   /// Check whether token is expired
   /// - Parameters:
   ///   - token: your token that you want to verify.
-  public func checkTokenExpiration(
+  public func isTokenExpired(
     token: String
   ) -> Bool 
 ```
 For this you need to initialize `BanubaVideoEditor`and call the method `
-checkTokenExpiration(token: token)`
+isTokenExpired(token: token)`
 , for example:
 ```swift
     let token: String = "Put token"
-    let result: Bool = videoEditorSDK.checkTokenExpiration(token: token)
+    let result: Bool = videoEditorSDK.isTokenExpired(token: token)
 ```
 
 if you are using `BanubaTokenStorageSDK` here is a usage example:
@@ -325,10 +325,10 @@ if you are using `BanubaTokenStorageSDK` here is a usage example:
 ```swift
 self.loadToken { token in
       if let ve = self.videoEditorSDK {
-        _ = ve.checkTokenExpiration(token: token)
+        _ = ve.isTokenExpired(token: token)
       } else {
         self.createVideoEditorSDK {
-          _ = self.videoEditorSDK?.checkTokenExpiration(token: token)
+          _ = self.videoEditorSDK?.isTokenExpired(token: token)
         }
       }
     }
