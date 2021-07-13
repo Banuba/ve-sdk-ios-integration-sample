@@ -336,3 +336,33 @@ or change for each screen separately by calling the appropriate methods:
 ```
 
 Changing the font does not affect its size. The font size will be taken by default or specified by you in the entity configuration.
+
+### 15. I want to check whether my token is expired.
+
+Starting from '1.0.18' version it is available to check if token is expired.
+
+```swift
+  /// Check whether token is expired
+  /// - Parameters:
+  ///   - token: your token that you want to verify.
+  public static func isTokenExpired(
+    token: String
+  ) -> Bool 
+```
+You need to import `BanubaLicenseServicingSDK`.
+
+Then call the static method `isTokenExpired(token: String)` on the `License` entity. 
+
+For example:
+```swift
+    let token: String = "Put token"
+    let result: Bool = License.isTokenExpired(token: token)
+```
+
+if you are using `BanubaTokenStorageSDK` here is a usage example:
+
+```swift
+self.loadToken { token in
+     let result = License.isTokenExpired(token: token)
+}
+```
