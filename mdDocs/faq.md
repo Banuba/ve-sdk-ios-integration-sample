@@ -334,3 +334,5 @@ or change for each screen separately by calling the appropriate methods:
   
   func updateExtendedVideoCoverSelectionFonts(_ font: UIFont)
 ```
+
+Changing the font does not affect its size. The font size will be taken by default or specified by you in the entity configuration.
