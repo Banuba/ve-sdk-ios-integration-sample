@@ -86,7 +86,6 @@ class ViewController: UIViewController {
     config.speedSelectionConfiguration = updateSpeedSelectionConfiguration(config.speedSelectionConfiguration)
     config.trimGalleryVideoConfiguration = updateTrimGalleryVideoConfiguration(config.trimGalleryVideoConfiguration)
     config.multiTrimConfiguration = updateMultiTrimConfiguration(config.multiTrimConfiguration)
-    config.singleTrimConfiguration = updateSingleTrimConfiguration(config.singleTrimConfiguration)
     config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
     config.alertViewConfiguration = updateAlertViewConfiguration(config.alertViewConfiguration)
     config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
