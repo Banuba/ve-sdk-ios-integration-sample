@@ -36,20 +36,23 @@
 /* Ability to cancel */
 "Cancel" = "Cancel";
 
+/* Alert action button title */
+"BanubaVideoEditor.Settings.Later" = "Later";
+
+/* Alert action button title */
+"BanubaVideoEditor.Settings.Discard" = "Discard";
+
 /* Used in alert with Yes and No options when resetting filters. */
 "Do you want to stop capturing and editing the video?" = "Do you want to stop capturing and editing the video?";
 
 /* Used in alert with Yes and No options when resetting filters. */
 "Do you want to reset all?" = "Do you want to reset all?";
 
-/* Used in alert with Yes and No options when resetting slideshow. */
-"Do you want to reset slideshow?" = "Do you want to reset slideshow?";
-
 /* Used in alert with Yes and No options */
 "Do you want to delete the last clip?" = "Do you want to delete the last clip?";
 
-/* Used in alert with Yes and No options */
-"Return to editing effects?" = "Return to editing effects?";
+/* Used for alert message to continure editing video*/
+"BanubaVideoEditor.Camera.ContinueEditingVideoQuestion" = "You have a not finished video. Do you want to continue?";
 
 /* Error message that appears when clicking the Next button in the camera when the first part of split mode is not recorded */
 "First part not recorded" = "First part not recorded";
@@ -177,15 +180,6 @@
 
 "Reach maximum video duration" = "Reach maximum video duration";
 
-/* Music info alert */
-
-"Replace" = "Replace";
-"Delete" = "Delete";
-"Cancel" = "Cancel";
-"The soundtrack is alreay in use" = "The soundtrack is alreay in use";
-"Do you want to replace it with a different audio?" = "Do you want to replace it with a different audio?";
-"The soundtrack is alreay in use" = "The soundtrack is already in use";
-
 /* Disable timer option titiel */
 "Off" = "Off";
 
@@ -283,6 +277,9 @@
 /* Zoom effect name */
 "com.banuba.editor.effect.name.zoom" = "Zoom";
 
+/* Zoom 2 effect name */
+"com.banuba.editor.effect.name.zoom2" = "Zoom 2";
+
 /* Cathode effect name */
 "com.banuba.editor.effect.name.cathode" = "Cathode";
 
@@ -295,14 +292,17 @@
 /* Rapid effect name */
 "com.banuba.editor.effect.name.rapid" = "Rapid";
 
-/* Dslrkaleidoscope effect name*/
-"com.banuba.editor.effect.name.dslrkaleidoscope" = "Dslrkaleidoscope";
+/* DSLR Kaleidoscope effect name*/
+"com.banuba.editor.effect.name.dslrkaleidoscope" = "DSLR Kaleidoscope";
 
 /* DV Cam effect name */
 "com.banuba.editor.effect.name.dvcam" = "DV Cam";
 
 /* Glitch 2 effect name */
 "com.banuba.editor.effect.name.glitch2" = "Glitch 2";
+
+/*Glitch 3 effect name*/
+"com.banuba.editor.effect.name.glitch3" = "Glitch 3";
 
 /* Heat map effect name */
 "com.banuba.editor.effect.name.heatmap" = "Heat Map";
@@ -337,8 +337,83 @@
 /* VHS 2 effect name */
 "com.banuba.editor.effect.name.vhs2" = "VHS 2";
 
-/* Zoom 2 effect name */
-"com.banuba.editor.effect.name.zoom2" = "Zoom 2";
+// MARK: - Filter names
+
+/* glitch filter name */
+"com.banuba.filter.name.lux" = "lux";
+
+/* remy filter name */
+"com.banuba.filter.name.remy" = "remy";
+
+/* hyla filter name */
+"com.banuba.filter.name.hyla" = "hyla";
+
+/* neon filter name */
+"com.banuba.filter.name.neon" = "neon";
+
+/* retro filter name */
+"com.banuba.filter.name.retro" = "retro";
+
+/* sunny filter name */
+"com.banuba.filter.name.sunny" = "sunny";
+
+/* egypt filter name */
+"com.banuba.filter.name.egypt" = "egypt";
+
+/* spark filter name */
+"com.banuba.filter.name.spark" = "spark";
+
+/* byers filter name */
+"com.banuba.filter.name.byers" = "byers";
+
+/* lilac filter name */
+"com.banuba.filter.name.lilac" = "lilac";
+
+/* vinyl filter name */
+"com.banuba.filter.name.vinyl" = "vinyl";
+
+/* japan filter name */
+"com.banuba.filter.name.japan" = "japan";
+
+/* chile filter name */
+"com.banuba.filter.name.chile" = "chile";
+
+/* glitch filter name */
+"com.banuba.filter.name.glitch" = "glitch";
+
+/* grunge filter name */
+"com.banuba.filter.name.grunge" = "grunge";
+
+/* canada filter name */
+"com.banuba.filter.name.canada" = "canada";
+
+/* chroma filter name */
+"com.banuba.filter.name.chroma" = "chroma";
+
+/* norway filter name */
+"com.banuba.filter.name.norway" = "norway";
+
+/* korben filter name */
+"com.banuba.filter.name.korben" = "korben";
+
+/* sunset filter name */
+"com.banuba.filter.name.sunset" = "sunset";
+
+/* instant filter name */
+"com.banuba.filter.name.instant" = "instant";
+
+/* england filter name */
+"com.banuba.filter.name.england" = "england";
+
+/* pinkvine filter name */
+"com.banuba.filter.name.pinkvine" = "pinkvine";
+
+/* bubblegum filter name */
+"com.banuba.filter.name.bubblegum" = "bubblegum";
+
+/* new zeland filter name */
+"com.banuba.filter.name.new_zeland" = "new_zeland";
+
 
 // MARK: - GALLERY SCREEN / SLIDE SHOW
 
@@ -350,9 +425,6 @@
 
 /* No video in gallery */
 "No matching video found in gallery" = "No videos found";
-
-/* User has selected too few photos in the gallery */
-"Too few, at least %d photos needed" = "Too few, at least %d photos needed";
 
 /* User selected too many photos in the gallery */
 "Too much, %d - max number of photos" = "Too much, %d - max number of photos";
@@ -504,6 +576,15 @@
 /* My files button title */
 "AudioBrowser.myFiles" = "My Files";
 
+"audioBrowser.search.by.categories" = "Search by categories";
+"audioBrowser.search.by.groups" = "Search by groups";
+"audioBrowser.search.by.tracks" = "Search by tracks";
+"audioBrowser.use" = "Use";
+"audioBrowser.show.more" = "Show more";
+"audioBrowser.stop.using" = "Stop using";
+"audioBrowser.my.library" = "My library";
+"audioBrowser.no.matches" = "No matches";
+
 // MARK: - Hands-free
 
 "hands.free.timer.title" = "Сountdown";
@@ -526,6 +607,21 @@
 /* Gallery Recent Photos title */
 "BanubaVideoEditor.Gallery.RecentPhotosTitle" = "Recent";
 
+/* Gallery selection hint */
+"BanubaVideoEditor.Gallery.SelectItems" = "Select items";
+
+/* Import single video template */
+"BanubaVideoEditor.Gallery.ImportSingleVideo" = "Import 1 video";
+
+/* Import multiple videos template */
+"BanubaVideoEditor.Gallery.ImportMultipleVideos" = "Import %d videos";
+
+/* Import single image template */
+"BanubaVideoEditor.Gallery.ImportSingleImage" = "Import 1 image";
+
+/* Import multiple images template */
+"BanubaVideoEditor.Gallery.ImportMultipleImages" = "Import %d images";
+
 // MARK: - Effect additional media picker text resource
 
 /* No media files found in gallery for adding to the effect */
@@ -544,4 +640,55 @@
 "cover.thumbnail.title" = "Choose a frame from your video or an image from Gallery";
 "cover.gallery.button.title" = "Choose from Gallery";
 "cover.delete.button.title" = "Delete";
+
+// MARK: - PIP
+
+"pip.switch.camera.title" = "Switch";
+"pip.square.camera.title" = "Square";
+"pip.round.camera.title" = "Round";
+"pip.floating.camera.title" = "Floating";
+"pip.react.camera.title" = "React";
+"pip.original.camera.title" = "Original";
+"pip.centered.camera.title" = "Centered";
+"pip.left.right.camera.title" = "Lefr & Right";
+"pip.top.bottom.camera.title" = "Top & Bottom";
+"pip.layout.settings.title" = "Layout Settings";
+
+// MARK: - Drafts
+/* Drafts button title */
+"BanubaVideoEditor.Gallery.DraftsTitle" = "Drafts";
+/* Draft actions subtitle */
+"BanubaVideoEditor.Gallery.DraftTitle" = "Draft";
+/* Draft remove action name */
+"BanubaVideoEditor.Gallery.DraftRemoveActionName" = "Remove";
+/* Displays hint about drafts location */
+"BanubaVideoEditor.Recorder.DraftHintMessage" = "You can find your draft in the Gallery";
+/* Used in alert with Yes and No options when resetting current sequence */
+"BanubaVideoEditor.Draft.SaveDraftQuestion" = "Do you want to save the draft?";
+/* Displayed when current sequence saved to drafts */
+"BanubaVideoEditor.Draft.DraftSavedMessage" = "Draft saved";
+/* Displays message about no saved drafts */
+"BanubaVideoEditor.Draft.EmptyDraftsMessage" = "No Drafts";
+/* Ask a user about completion removing a draft */
+"BanubaVideoEditor.Draft.RemoveDraftMessage" = "Do you want to remove draft?";
+/* Ask a user about completion updating a draft */
+"BanubaVideoEditor.Draft.UpdateDraftMessage" = "Do you want to update draft?";
+
+//MARK: - Additional buttons
+"com.banuba.recorder.link.title" = "Link";
+"com.banuba.recorder.color.title" = "Filter";
+"com.banuba.recorder.sticker.title" = "Gif";
+"com.banuba.recorder.text.title" = "Text";
+"com.banuba.recorder.time.title" = "Time";
+"com.banuba.recorder.sound.title" = "Music";
+"com.banuba.recorder.effects.title" = "Effects";
+"com.banuba.recorder.toggle.title" = "Toggle";
+"com.banuba.recorder.flashlight.title" = "Flashlight";
+"com.banuba.recorder.timer.title" = "Timer";
+"com.banuba.recorder.speed.title" = "Speed";
+"com.banuba.recorder.beauty.title" = "Beauty";
+"com.banuba.recorder.masks.title" = "Masks";
+"com.banuba.recorder.muteSound.title" = "Sound";
+"com.banuba.recorder.interactive.title" = "Interactive";
+"com.banuba.recorder.pip.title" = "Pip";
 
