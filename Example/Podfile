@@ -4,7 +4,7 @@ platform :ios, '11.0'
 use_frameworks! 
 
 target 'Example' do
-  pod 'BanubaTokenStorageSDK', '1.0.17'
+  pod 'BanubaTokenStorageSDK', '1.0.17.2'
   pod 'BanubaVideoEditorSDK', '1.0.17'
   pod 'BanubaMusicEditorSDK', '1.0.17'
   pod 'BanubaOverlayEditorSDK', '1.0.17'
@@ -19,5 +19,5 @@ target 'Example' do
   pod 'BanubaUtilities', '1.0.17'
   pod 'BanubaVideoEditorGallerySDK', '1.0.17'
   pod 'BanubaLicenseServicingSDK', '1.0.17'
-  pod 'lottie-ios', "3.1.8"
+  pod 'lottie-ios'
 end
