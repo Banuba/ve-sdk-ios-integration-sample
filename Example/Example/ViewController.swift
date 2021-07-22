@@ -75,6 +75,7 @@ class ViewController: UIViewController {
     config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
     
     config.isHandfreeEnabled = true
+    config.gifPickerConfiguration = updateGifPickerConfiguration(config.gifPickerConfiguration)
     config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
     config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
     config.combinedGalleryConfiguration = updateCombinedGalleryConfiguration(config.combinedGalleryConfiguration)
