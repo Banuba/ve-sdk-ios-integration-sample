@@ -75,6 +75,7 @@ class ViewController: UIViewController {
     config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
     
     config.isHandfreeEnabled = true
+    config.gifPickerConfiguration = updateGifPickerConfiguration(config.gifPickerConfiguration)
     config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
     config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
     config.combinedGalleryConfiguration = updateCombinedGalleryConfiguration(config.combinedGalleryConfiguration)
@@ -86,7 +87,6 @@ class ViewController: UIViewController {
     config.speedSelectionConfiguration = updateSpeedSelectionConfiguration(config.speedSelectionConfiguration)
     config.trimGalleryVideoConfiguration = updateTrimGalleryVideoConfiguration(config.trimGalleryVideoConfiguration)
     config.multiTrimConfiguration = updateMultiTrimConfiguration(config.multiTrimConfiguration)
-    config.singleTrimConfiguration = updateSingleTrimConfiguration(config.singleTrimConfiguration)
     config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
     config.alertViewConfiguration = updateAlertViewConfiguration(config.alertViewConfiguration)
     config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)

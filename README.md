@@ -93,10 +93,9 @@ Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-int
 
 Also you can load token from [Firebase](https://firebase.google.com/docs/database/android/start). [Check](mdDocs/token_on_firebase.md) to configure firebase
 
-## Connecting with AR cloud  
+## Connecting with AR cloud
 
-To decrease the app size, you can connect with our servers and pull AR filters from there. The effects will be downloaded whenever a user needs them. Please check out [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) to configure AR Cloud in the SDK.
-
+To decrease the app size, you can connect with our servers and pull AR filters from there. The effects will be downloaded whenever a user needs them. Please check out [step-by-step guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/ar_cloud.md) guide to configure AR Cloud in the Video Editor SDK.
 
 ## What can you customize?
 
@@ -286,7 +285,7 @@ See the sample export video flow [here](/Example/Example/ViewController.swift#L6
 
 ### Configure audio content
 
-Banuba Video Editor SDK can trim audio tracks, merge them, and apply them to a video. It doesn’t include music or sounds. However, it can be integrated with [Mubert](https://mubert.com/) and get music from there. Moreover, the users can add audio files from their phones to the editor. 
+Banuba Video Editor SDK can trim audio tracks, merge them, and apply them to a video. It doesn’t include music or sounds. However, it can be integrated with [Mubert](https://mubert.com/) and get music from it (requires additional contract with them). Moreover, the users can add audio files from internal memory (downloaded library) from the phone. 
 
 Integrating audio content is simple. See this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/audio_content.md#step-1).
 
@@ -329,6 +328,20 @@ By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to lo
 The record button is a main control on the camera screen which you can fully customize along with animations playing on tap.
 
 First of all look at [RecordButtonConfiguration](mdDocs/record_button_configuration.md) entity which you can customize in [Camera screen configuration quide](mdDocs/camera_styles.md). If it still not suits your needs you can create your own view for more information look [here](mdDocs/record_button_provider.md)
+
+### Configure media content
+
+AI Video Editor SDK is provided with its own solution for media content (i.e. images and videos) selection - the gallery screen. To use it as a part of SDK just add the ```BanubaVideoEditorGallerySDK``` pod to your podfile:
+```diff
+target 'Example' do
+  pod 'BanubaVideoEditorSDK'
+  ...
++  pod 'BanubaVideoEditorGallerySDK'
+}
+```
+The gallery provided by the SDK is fully customizable according to [this guide](mdDocs/gallery_styles.md). 
+
+Also there is an option to use **your own implementation of the gallery**. This is available according to this [step-by-step guide](mddocs/configure_external_gallery.md). 
 
 ### Icons
 

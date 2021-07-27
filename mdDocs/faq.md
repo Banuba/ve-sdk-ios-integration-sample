@@ -88,12 +88,89 @@ Color filters (LUTs) are special graphic files placed into the /luts directory i
 
 To add your own icon that will be used to represent this particular effect in the list, you should place it into the /assets folder.
 
-The name of the icon resource must be the same as the graphic file within the /luts directory.
-As an example, check out how the black-and-white color filter is added:
+The name of the icon resource must be the same as the graphic file `ID` the / luts directory.
 
-[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/luts/japan.png) is a graphic file named Japan.png within the /luts directory. It allows to turn the picture black-and-white.
+| Default image color filter | Name      | ID      |
+| ---------- | ---------  | ----------- |
+|<img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101000_preview.imageset/glitch-1.png" width="50"> | glitch | 101000
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101001_preview.imageset/instant-1.png" width="50"> | instant  | 101001
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101002_preview.imageset/grunge-1.png" width="50">  | grunge | 101002
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101003_preview.imageset/retro-1.png" width="50">  |  retro | 101003
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101004_preview.imageset/pinkvine-1.png" width="50">  |  pinkvine | 101004
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101005_preview.imageset/england-1.png" width="50">  |  england | 101005
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101006_preview.imageset/spark-1.png" width="50">  |  spark | 101006
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101007_preview.imageset/korben-1.png" width="50"> |  korben | 101007
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101008_preview.imageset/remy-1.png" width="50"> |  remy | 101008
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101009_preview.imageset/canada-1.png" width="50"> |  canada | 101009
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101010_preview.imageset/sunny-1.png" width="50">  |  sunny | 101010
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101011_preview.imageset/egypt-1.png" width="50"> |  egypt | 101011
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101012_preview.imageset/new_zeland-1.png" width="50">  |  new_zeland | 101012
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101013_preview.imageset/chroma-1.png" width="50"> |  chroma | 101013
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101014_preview.imageset/byers-1.png" width="50"> |  byers | 101014
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101015_preview.imageset/lilac-1.png" width="50">  |  lilac | 101015
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101016_preview.imageset/hyla-1.png" width="50"> |  hyla | 101016
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101017_preview.imageset/bubblegum-1.png" width="50"> |  bubblegum | 101017
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101018_preview.imageset/vinyl-1.png" width="50">  | vinyl | 101018
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101019_preview.imageset/lux-1.png" width="50">  |  lux | 101019
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101020_preview.imageset/japan-1.png" width="50">  |  japan | 101020
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101021_preview.imageset/sunset-1.png" width="50"> |  sunset | 101021
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101022_preview.imageset/neon-1.png" width="50"> |  neon | 101022
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101023_preview.imageset/chile-1.png" width="50"> |  chile | 101023
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101024_preview.imageset/norway-1.png" width="50"> |  norway | 101024
 
-[Here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/japan_preview.imageset/japan-2.png) is an appropriate icon named japan_preview.imageset within the drawable resource directory that is used as an icon within the list of effects
+If you want to change the name, you need to specify the new name in the string resources:
+```swift
+/* glitch filter name */
+"com.banuba.filter.name.lux" = "lux";
+/* remy filter name */
+"com.banuba.filter.name.remy" = "remy";
+/* hyla filter name */
+"com.banuba.filter.name.hyla" = "hyla";
+/* neon filter name */
+"com.banuba.filter.name.neon" = "neon";
+/* retro filter name */
+"com.banuba.filter.name.retro" = "retro";
+/* sunny filter name */
+"com.banuba.filter.name.sunny" = "sunny";
+/* egypt filter name */
+"com.banuba.filter.name.egypt" = "egypt";
+/* spark filter name */
+"com.banuba.filter.name.spark" = "spark";
+/* byers filter name */
+"com.banuba.filter.name.byers" = "byers";
+/* lilac filter name */
+"com.banuba.filter.name.lilac" = "lilac";
+/* vinyl filter name */
+"com.banuba.filter.name.vinyl" = "vinyl";
+/* japan filter name */
+"com.banuba.filter.name.japan" = "japan";
+/* chile filter name */
+"com.banuba.filter.name.chile" = "chile";
+/* glitch filter name */
+"com.banuba.filter.name.glitch" = "glitch";
+/* grunge filter name */
+"com.banuba.filter.name.grunge" = "grunge";
+/* canada filter name */
+"com.banuba.filter.name.canada" = "canada";
+/* chroma filter name */
+"com.banuba.filter.name.chroma" = "chroma";
+/* norway filter name */
+"com.banuba.filter.name.norway" = "norway";
+/* korben filter name */
+"com.banuba.filter.name.korben" = "korben";
+/* sunset filter name */
+"com.banuba.filter.name.sunset" = "sunset";
+/* instant filter name */
+"com.banuba.filter.name.instant" = "instant";
+/* england filter name */
+"com.banuba.filter.name.england" = "england";
+/* pinkvine filter name */
+"com.banuba.filter.name.pinkvine" = "pinkvine";
+/* bubblegum filter name */
+"com.banuba.filter.name.bubblegum" = "bubblegum";
+/* new zeland filter name */
+"com.banuba.filter.name.new_zeland" = "new_zeland";
+```
 
 ### 6. I want to enabled slideshow animation 
 
@@ -182,3 +259,80 @@ The music button consists of three positions:
 
 
 To be able to change the location of the button, you need to set the desired value in the array with additionalEffectsButtons, for the button with the identifier **.sound**, set up the [position](/Example/Example/Extension/RecorderConfiguration.swift#L72) property. 
+
+### 13. How can I get a track name of the audio used in my video after export?
+```swift
+/// Video Editor main entity and entry point.
+/// Can present and hide root view controller.
+/// Has default export method.
+public class BanubaVideoEditor {
+/// Simple metadata of music composition settings
+public var musicMetadata: MusicEditorMetadata? { get }
+...
+}
+```
+`MusicEditorMetadata` contains the array of `MusicEditorTrack` which contains the following fields: 
+
+```swift
+// MARK: - MusicEditorTrack
+public struct MusicEditorTrack: Codable {
+///Track URL
+public var url: URL
+///Track original URL
+public var originalURL: URL
+///Track title
+public var title: String
+///Track id
+public var id: Int32
+...
+}
+```
+or if you want to know what track was played on the camera screen you can use:
+
+```swift
+/// Video Editor main entity and entry point.
+/// Can present and hide root view controller.
+/// Has default export method.
+public class BanubaVideoEditor {
+/// Music track which will be played on camera recording
+public var musicTrack: MediaTrack? { get }
+...
+}
+```
+### 14 I want to change the font
+
+You can change the font for the whole video editor by calling in `VideoEditorConfig` this method:
+ 
+ ```swift
+  func applyFont(_ font: UIFont)
+```
+or change for each screen separately by calling the appropriate methods:
+```swift
+  func updateAlertFonts(_ font: UIFont)
+  
+  func updateRecorderFonts(_ font: UIFont)
+  
+  func updateMultiTrimFonts(_ font: UIFont)
+  
+  func updateEditorFonts(_ font: UIFont)
+  
+  func updateToastFonts(_ font: UIFont)
+  
+  func updateFullScreenActivityFonts(_ font: UIFont)
+  
+  func updateAlbumsFonts(_ font: UIFont)
+  
+  func updateTextEditorFonts(_ font: UIFont)
+  
+  func updateSlideShowFonts(_ font: UIFont)
+  
+  func updateTrimGalleryVideoFonts(_ font: UIFont)
+  
+  func updateFilterFonts(_ font: UIFont)
+  
+  func updateVideoCoverSelectionFonts(_ font: UIFont)
+  
+  func updateExtendedVideoCoverSelectionFonts(_ font: UIFont)
+```
+
+Changing the font does not affect its size. The font size will be taken by default or specified by you in the entity configuration.
