@@ -329,6 +329,20 @@ The record button is a main control on the camera screen which you can fully cus
 
 First of all look at [RecordButtonConfiguration](mdDocs/record_button_configuration.md) entity which you can customize in [Camera screen configuration quide](mdDocs/camera_styles.md). If it still not suits your needs you can create your own view for more information look [here](mdDocs/record_button_provider.md)
 
+### Configure media content
+
+AI Video Editor SDK is provided with its own solution for media content (i.e. images and videos) selection - the gallery screen. To use it as a part of SDK just add the ```BanubaVideoEditorGallerySDK``` pod to your podfile:
+```diff
+target 'Example' do
+  pod 'BanubaVideoEditorSDK'
+  ...
++  pod 'BanubaVideoEditorGallerySDK'
+}
+```
+The gallery provided by the SDK is fully customizable according to [this guide](mdDocs/gallery_styles.md). 
+
+Also there is an option to use **your own implementation of the gallery**. This is available according to this [step-by-step guide](mddocs/configure_external_gallery.md). 
+
 ### Icons
 
 Any icon in the mobile video editor SDK can be replaced. This is how:

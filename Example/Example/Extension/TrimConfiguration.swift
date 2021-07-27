@@ -2,48 +2,6 @@ import UIKit
 import BanubaVideoEditorSDK
 
 extension ViewController {
-  func updateSingleTrimConfiguration(_ configuration: SingleTrimConfiguration) -> SingleTrimConfiguration {
-    var configuration = configuration
-    
-    configuration.saveButton.cornerRadius = 4.0
-    configuration.saveButton.backgroundColor = .clear
-    configuration.saveButton.textConfiguration.color = UIColor(
-      red: 6, green: 188, blue: 193
-    )
-    
-    configuration.backButton.position = .left
-    configuration.backButton = BackButtonConfiguration(
-      imageConfiguration: ImageConfiguration(imageName: "back_arrow")
-    )
-    
-    configuration.rotateButton?.imageConfiguration = ImageConfiguration(
-      imageName: "editor.rotate"
-    )
-    
-    configuration.throbber.activityLineWidth = 3.0
-    
-    configuration.trimTimeLineHeight = 56.0
-    configuration.trimTimeLineConfiguration.draggersCornerRadius = 8.0
-    configuration.trimTimeLineConfiguration.draggerImageName = "trim_left"
-    configuration.trimTimeLineConfiguration.trimControlsColor = UIColor(
-      red: 250, green: 62, blue: 118
-    )
-    
-    configuration.playerControlConfiguration = PlayerControlConfiguration(
-      playButtonImageName: "ic_play",
-      pauseButtonImageName: "ic_trim_pause"
-    )
-    
-    configuration.backgroundConfiguration.cornerRadius = .zero
-    configuration.screenNameConfiguration.style = nil
-    configuration.editedTimeLabelConfiguration.cornerRadius = .zero
-    configuration.editedTimeLabelConfiguration.errorColor = UIColor(
-      red: 250, green: 62, blue: 118
-    )
-
-    return configuration
-  }
-  
   func updateMultiTrimConfiguration(_ configuration: MultiTrimConfiguration) -> MultiTrimConfiguration {
     var configuration = configuration
     
