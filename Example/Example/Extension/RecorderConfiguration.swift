@@ -105,7 +105,7 @@ extension ViewController {
         identifier: .muteSound,
         imageConfiguration: ImageConfiguration(imageName: "ic_mic_on"),
         selectedImageConfiguration: ImageConfiguration(imageName: "ic_mic_off")
-      ),
+      )
     ]
     
     configuration.speedButton = SpeedButtonConfiguration(
