@@ -72,6 +72,7 @@ class ViewController: UIViewController {
     
     var featureConfiguration = config.featureConfiguration
     featureConfiguration.supportsTrimRecordedVideo = true
+    featureConfiguration.isMuteCameraAudioEnabled = true
     config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
     
     config.isHandfreeEnabled = true
@@ -155,7 +156,8 @@ extension ViewController {
       fileURL: videoURL,
       quality: .auto,
       useHEVCCodecIfPossible: true,
-      watermarkConfiguration: watermarkConfiguration
+      watermarkConfiguration: watermarkConfiguration,
+      gifSettings: GifSettings(duration: 0.3)
     )
     videoEditorSDK?.exportVideos(using: [exportConfiguration], completion: { (success, error) in
       DispatchQueue.main.async {
