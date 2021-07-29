@@ -368,4 +368,5 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 ## Migration guides
 
 [1.0.15](mdDocs/releases/1.0.15.md)  
-[1.0.16](mdDocs/releases/1.0.16.md)
+[1.0.16](mdDocs/releases/1.0.16.md)  
+[1.0.17](mdDocs/releases/1.0.17.md)
