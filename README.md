@@ -341,7 +341,7 @@ target 'Example' do
 ```
 The gallery provided by the SDK is fully customizable according to [this guide](mdDocs/gallery_styles.md). 
 
-Also there is an option to use **your own implementation of the gallery**. This is available according to this [step-by-step guide](mddocs/configure_external_gallery.md). 
+Also there is an option to use **your own implementation of the gallery**. This is available according to this [step-by-step guide](mdDocs/configure_external_gallery.md). 
 
 ### Icons
 
