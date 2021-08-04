@@ -12,6 +12,7 @@ import UIKit
 
 /// Music editor view controller factory example
 class MusicEditorViewControllerFactory: MusicEditorExternalViewControllerFactory {
+  var audioBrowserController: TrackSelectionViewController?
 
   func makeTrackSelectionViewController(selectedAudioItem: AudioItem?) -> TrackSelectionViewController? {
     let controller = UIStoryboard(
