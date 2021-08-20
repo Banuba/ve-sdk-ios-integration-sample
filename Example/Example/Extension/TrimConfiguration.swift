@@ -104,4 +104,13 @@ extension ViewController {
     
     return configuration
   }
+  
+  func updateAspectsConfiguration(_ configuration: AspectsConfiguration) -> AspectsConfiguration {
+    var configuration = configuration
+    
+    configuration.doneButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_done"))
+    configuration.cancelButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_close"))
+    
+    return configuration
+  }
 }
