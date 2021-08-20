@@ -85,26 +85,15 @@ class ViewController: UIViewController {
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
     config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
     config.textEditorConfiguration = updateTextEditorConfiguration(config.textEditorConfiguration)
-    config.speedSelectionConfiguration = updateSpeedSelectionConfiguration(config.speedSelectionConfiguration)
     config.trimGalleryVideoConfiguration = updateTrimGalleryVideoConfiguration(config.trimGalleryVideoConfiguration)
     config.multiTrimConfiguration = updateMultiTrimConfiguration(config.multiTrimConfiguration)
     config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
     config.alertViewConfiguration = updateAlertViewConfiguration(config.alertViewConfiguration)
     config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
     config.handsfreeConfiguration = updateHandsfreeConfiguration(config.handsfreeConfiguration)
+    config.aspectsConfiguration = updateAspectsConfiguration(config.aspectsConfiguration)
     
     return config
-  }
-  
-  private func updateSpeedSelectionConfiguration(_ configuration: SpeedSelectionConfiguration) -> SpeedSelectionConfiguration {
-    var configuration = configuration
-    
-    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "back_arrow"))
-    configuration.speedBarConfiguration.speedItemBackgroundColor = UIColor(red: 18, green: 38, blue: 58)
-    configuration.speedBarConfiguration.selectorColor = UIColor(red: 6, green: 188, blue: 193)
-    configuration.speedBarConfiguration.selectorTextColor = UIColor.white
-    
-    return configuration
   }
   
   private func updateFilterConfiguration(_ configuration: FilterConfiguration) -> FilterConfiguration {
@@ -117,6 +106,12 @@ class ViewController: UIViewController {
     configuration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
   
     configuration.effectItemConfiguration.cornerRadius = 4.0
+    
+    configuration.controlButtons = [
+      FilterControlButtonConfig(type: .cancel, imageName: "ic_close", selectedImageName: nil),
+      FilterControlButtonConfig(type: .play, imageName: "ic_editor_play", selectedImageName: "ic_pause"),
+      FilterControlButtonConfig(type: .done, imageName: "ic_done", selectedImageName: nil),
+    ]
     
     return configuration
   }

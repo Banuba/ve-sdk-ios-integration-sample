@@ -108,25 +108,25 @@ extension ViewController {
       )
     ]
     
-    configuration.speedButton = SpeedButtonConfiguration(
-      imageNameHalf: "ic_speed_0.5x",
-      imageNameNormal: "ic_speed_1x",
-      imageNameDouble: "ic_speed_2x",
-      imageNameTriple: "ic_speed_3x"
-    )
+    configuration.speedBarButtons.imageNameHalf = "ic_speed_0.5x"
+    configuration.speedBarButtons.imageNameNormal = "ic_speed_1x"
+    configuration.speedBarButtons.imageNameDouble = "ic_speed_2x"
+    configuration.speedBarButtons.imageNameTriple = "ic_speed_3x"
+    configuration.speedBarButtons.selectedTitleColor = UIColor(red: 6, green: 188, blue: 193)
     
     let galleryButton: RoundedButtonConfiguration = RoundedButtonConfiguration(
       textConfiguration: TextConfiguration(
         kern: 0.0,
         font: UIFont.systemFont(ofSize: 12.0),
-        color: UIColor.clear
+        color: UIColor.white,
+        text: NSLocalizedString("com.banuba.recorder.gallery.title", comment: "")
       ),
       cornerRadius: 3,
       backgroundColor: UIColor.clear,
       borderWidth: 0
     )
-    
     configuration.galleryButton = galleryButton
+    
     configuration.emptyGalleryImageName = "multi_choise"
     
     configuration.timerConfiguration.defaultButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_timer_off"))

@@ -683,3 +683,12 @@
 "com.banuba.recorder.interactive.title" = "Интерактивы";
 "com.banuba.recorder.pip.title" = "Пип";
 
+// MARK: - 1.0.18
+/* Gallery button title */
+"com.banuba.recorder.gallery.title" = "Галерея";
+
+/* An error message that appears in the trimmer when user tryed to use too long video */
+"com.banuba.TooLongVideoMessageFormat" = "Продолжительность видео должна составлять от %d до %d секунд";
+
+/* Gallery empty selection message */
+"BanubaVideoEditor.Gallery.EmptySelectionMessage" = "Выберите хотя бы 1 файл";
