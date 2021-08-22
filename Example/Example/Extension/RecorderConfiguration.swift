@@ -105,6 +105,11 @@ extension ViewController {
         identifier: .muteSound,
         imageConfiguration: ImageConfiguration(imageName: "ic_mic_on"),
         selectedImageConfiguration: ImageConfiguration(imageName: "ic_mic_off")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .pip,
+        imageConfiguration: ImageConfiguration(imageName: "camera_control.pip_on"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "camera_control.pip_off")
       )
     ]
     
