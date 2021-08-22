@@ -245,9 +245,7 @@ extension ViewController {
             ) else {
               return
             }
-            DispatchQueue.main.async {
-              //self.startActivity()
-            }
+            
             let manager = FileManager.default
             let targetURL = manager.temporaryDirectory.appendingPathComponent("\(UUID().uuidString).mp4")
             
@@ -258,14 +256,12 @@ extension ViewController {
             exportSession.exportAsynchronously {
               DispatchQueue.main.async {
                 guard exportSession.status == .completed else {
-                  //self.stopActivity()
                   groupHandler()
                   return
                 }
                 
                 let exportedAsset = AVURLAsset(url: targetURL)
                 resultUrls.append(exportedAsset.url)
-                //self.stopActivity()
                 groupHandler()
               }
             }
@@ -285,7 +281,7 @@ extension ViewController {
             withPIPVideoItem: resultUrls[.zero],
             from: self,
             animated: true,
-            completion: {print("openPIP")}
+            completion: nil
           )
         }
         
