@@ -16,6 +16,7 @@
 		51D07DEF2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DEE2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift */; };
 		51D07DF42607D51E00BB48D9 /* RecorderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */; };
 		51D07DF82607DFFC00BB48D9 /* HandsfreeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */; };
+		51E97A5A26CFC5E500E0E4C4 /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E97A5926CFC5E500E0E4C4 /* VideoPicker.swift */; };
 		634FAC04255C351900FB0DBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634FAC06255C351900FB0DBC /* Localizable.strings */; };
 		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
 		635E864525A5DA230035AB99 /* EffectSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635E864125A5DA230035AB99 /* EffectSelection.storyboard */; };
@@ -49,6 +50,7 @@
 		51D07DEE2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayEditorConfiguration.swift; sourceTree = "<group>"; };
 		51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderConfiguration.swift; sourceTree = "<group>"; };
 		51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsfreeConfiguration.swift; sourceTree = "<group>"; };
+		51E97A5926CFC5E500E0E4C4 /* VideoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPicker.swift; sourceTree = "<group>"; };
 		634FAC05255C351900FB0DBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		634FAC07255C357400FB0DBC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		635DB1AA2548541000B1C799 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				8A8C2513258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift */,
 				8A8C250F258CC35400FDED05 /* MusicEditorViewControllerFactory.swift */,
 				8A8C2510258CC35400FDED05 /* ViewControllerFactory.swift */,
+				51E97A5926CFC5E500E0E4C4 /* VideoPicker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				51D07DEB2607BCA400BB48D9 /* MusicEditorConfig.swift in Sources */,
 				8A8C2514258CC35400FDED05 /* AnalyticsExample.swift in Sources */,
 				639DA00C254700290011C153 /* AppDelegate.swift in Sources */,
+				51E97A5A26CFC5E500E0E4C4 /* VideoPicker.swift in Sources */,
 				635E864725A5DA240035AB99 /* EffectPickerViewController.swift in Sources */,
 				51D07DF82607DFFC00BB48D9 /* HandsfreeConfiguration.swift in Sources */,
 			);

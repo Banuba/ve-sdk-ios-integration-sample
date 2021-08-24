@@ -20,4 +20,8 @@ target 'Example' do
   pod 'BanubaEffectPlayer', '1.0.17'
   pod 'BanubaSDK', '1.0.17.1'
   pod 'lottie-ios'
+  pod "BSImagePicker"
+  pod "BanubaEffectPlayer", "1.0.17"
+  pod "BanubaSDK", "1.0.17.1"
+  
 end
