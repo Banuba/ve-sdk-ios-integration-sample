@@ -38,6 +38,7 @@ protocol AudioItem {
   var id: Int64 { get }
   var url: URL { get }
   var title: String? { get set }
+  var isEditable: Boo { get set }
 }
 ```
 
@@ -54,8 +55,9 @@ protocol TrackSelectionViewControllerDelegate: AnyObject {
   func trackSelectionViewController(
     viewController: TrackSelectionViewController,
     didSelectFile url: URL,
+    isEditable: Bool,
     title: String,
-    id: Int64
+    id: Int32
   )
   
   func trackSelectionViewControllerDidCancel(
@@ -97,12 +99,13 @@ exportSession?.exportAsynchronously() {
 Add the ```BanubaAudioBrowserSDK``` dependency into your pod file containing other Video Editor SDK dependencies and setup its version (the latest is 0.0.15.2):
 
 ```swift
-pod 'BanubaAudioBrowserSDK', '0.0.15.2'
+pod 'BanubaAudioBrowserSDK', '1.0.18'
 
 ```
 ### Step 2
 
 Configure mubert token to use external music provider:
 ```swift
-AudioBrowserConfig.shared.mubertAudioConfig.pat = "Your mubert pat"
+let mubertPat = "Your mubert pat"
+BanubaAudioBrowser.setMubertPat(mubertPat)
 ```
