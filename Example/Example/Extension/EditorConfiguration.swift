@@ -71,7 +71,7 @@ extension ViewController {
     configuration.saveButton.height = 42.0
     configuration.saveButton.title.style.color = .white
     
-    configuration.backButton = BackButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_nav_back_arrow"))
+    configuration.backButton = BackButtonConfiguration(imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration(imageName: "ic_nav_back_arrow"))
     
     configuration.isVideoCoverSelectionEnabled = true
     configuration.useHorizontalVersion = false

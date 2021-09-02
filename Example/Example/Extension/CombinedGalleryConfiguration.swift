@@ -13,13 +13,13 @@ extension ViewController {
     configuration.galleryItemConfiguration.durationLabelBackgroundColor = UIColor.clear
     configuration.galleryItemConfiguration.activityIndicatorConfiguration.activityLineWidth = 2.0
     configuration.galleryItemConfiguration.cornerRadius = 0.0
-    configuration.closeButtonConfiguration.imageConfiguration = ImageConfiguration(imageName: "camera_control.back")
+    configuration.closeButtonConfiguration.imageConfiguration = BanubaVideoEditorSDK.ImageConfiguration(imageName: "camera_control.back")
     configuration.albumButtonConfiguration.style.color = UIColor.yellow
     configuration.nextButtonConfiguration.text = "Next"
     configuration.noItemsLabelConfiguration.alignment = .center
     configuration.layoutConfiguration.numberOfItemsPerRow = 2
     configuration.topBarBlurColor = UIColor.yellow
-    configuration.clearSelectionButtonConfiguration.imageConfiguration = ImageConfiguration(imageName: "camera_control.back")
+    configuration.clearSelectionButtonConfiguration.imageConfiguration = BanubaVideoEditorSDK.ImageConfiguration(imageName: "camera_control.back")
     configuration.galleryTypeButton.style.color = UIColor.yellow
     configuration.galleryTypeUnderlineColor = UIColor.yellow
     
