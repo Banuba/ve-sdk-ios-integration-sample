@@ -366,3 +366,8 @@ self.loadToken { token in
      let result = License.isTokenExpired(token: token)
 }
 ```
+### 16. The file “luts” couldn’t be opened because there is no such file.
+
+This error occurs because your application bundle doesn't contains required luts folder.
+
+You need to copy [luts](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) folder to your project.
