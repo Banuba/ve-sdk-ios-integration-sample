@@ -371,3 +371,67 @@ self.loadToken { token in
 This error occurs because your application bundle doesn't contains required luts folder.
 
 You need to copy [luts](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) folder to your project.
+
+### 17. I want to add audio filters 
+
+Filters availability depends on the token. However, in order for them to be available, you need to add an implementation of the VoiceFilterProvider entity.
+
+Example how to inherit VoiceFilterProvider to your own entity:
+
+```swift
+import BanubaMusicEditorSDK
+import UIKit
+
+/// Example voice filter provider
+struct ExampleVoiceFilterProvider: VoiceFilterProvider {
+  private let filters: [VoiceFilter]
+  
+  // MARK: - VoiceFilterProvider
+  
+  func provideFilters() -> [VoiceFilter] {
+    return filters
+  }
+  
+  init() {
+    filters = [
+      VoiceFilter(
+        type: .elf,
+        title: NSLocalizedString("com.banuba.musicEditor.elf", comment: "Elf filter title"),
+        image: UIImage(named:"elf")
+      ),
+      VoiceFilter(
+        type: .baritone,
+        title: NSLocalizedString("com.banuba.musicEditor.baritone", comment: "Baritone filter title"),
+        image: UIImage(named:"baritone")
+      ),
+      VoiceFilter(
+        type: .echo,
+        title: NSLocalizedString("com.banuba.musicEditor.echo", comment: "Echo filter title"),
+        image: UIImage(named:"echo")
+      ),
+      VoiceFilter(
+        type: .giant,
+        title: NSLocalizedString("com.banuba.musicEditor.giant", comment: "Giant filter title"),
+        image: UIImage(named:"giant")
+      ),
+      VoiceFilter(
+        type: .robot,
+        title: NSLocalizedString("com.banuba.musicEditor.robot", comment: "Robot filter title"),
+        image: UIImage(named:"robot")
+      ),
+      VoiceFilter(
+        type: .squirrel,
+        title: NSLocalizedString("com.banuba.musicEditor.squirrel", comment: "Squirrel filter title"),
+        image: UIImage(named:"squirrel")
+      )
+    ]
+  }
+}
+```
+
+Then the instance of the ExampleVoiceFilterProvider needs to be passed to the configuration.
+
+```swift
+  var config = VideoEditorConfig()
+  config.musicEditorConfiguration.audioTrackLineEditControllerConfig.voiceFilterProvider = ExampleVoiceFilterProvider()
+```
