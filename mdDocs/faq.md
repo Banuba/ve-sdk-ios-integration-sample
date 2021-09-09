@@ -366,7 +366,78 @@ self.loadToken { token in
      let result = License.isTokenExpired(token: token)
 }
 ```
-### 16. I want to change icons and name for effects.
+
+### 16. The file “luts” couldn’t be opened because there is no such file.
+
+This error occurs because your application bundle doesn't contains required luts folder.
+
+You need to copy [luts](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) folder to your project.
+
+### 17. I want to add audio filters 
+
+Filters availability depends on the token. However, in order for them to be available, you need to add an implementation of the VoiceFilterProvider entity.
+
+Example how to inherit VoiceFilterProvider to your own entity:
+
+```swift
+import BanubaMusicEditorSDK
+import UIKit
+
+/// Example voice filter provider
+struct ExampleVoiceFilterProvider: VoiceFilterProvider {
+  private let filters: [VoiceFilter]
+  
+  // MARK: - VoiceFilterProvider
+  
+  func provideFilters() -> [VoiceFilter] {
+    return filters
+  }
+  
+  init() {
+    filters = [
+      VoiceFilter(
+        type: .elf,
+        title: NSLocalizedString("com.banuba.musicEditor.elf", comment: "Elf filter title"),
+        image: UIImage(named:"elf")
+      ),
+      VoiceFilter(
+        type: .baritone,
+        title: NSLocalizedString("com.banuba.musicEditor.baritone", comment: "Baritone filter title"),
+        image: UIImage(named:"baritone")
+      ),
+      VoiceFilter(
+        type: .echo,
+        title: NSLocalizedString("com.banuba.musicEditor.echo", comment: "Echo filter title"),
+        image: UIImage(named:"echo")
+      ),
+      VoiceFilter(
+        type: .giant,
+        title: NSLocalizedString("com.banuba.musicEditor.giant", comment: "Giant filter title"),
+        image: UIImage(named:"giant")
+      ),
+      VoiceFilter(
+        type: .robot,
+        title: NSLocalizedString("com.banuba.musicEditor.robot", comment: "Robot filter title"),
+        image: UIImage(named:"robot")
+      ),
+      VoiceFilter(
+        type: .squirrel,
+        title: NSLocalizedString("com.banuba.musicEditor.squirrel", comment: "Squirrel filter title"),
+        image: UIImage(named:"squirrel")
+      )
+    ]
+  }
+}
+```
+
+Then the instance of the ExampleVoiceFilterProvider needs to be passed to the configuration.
+
+```swift
+  var config = VideoEditorConfig()
+  config.musicEditorConfiguration.audioTrackLineEditControllerConfig.voiceFilterProvider = ExampleVoiceFilterProvider()
+```
+
+### 18. I want to change icons and name for effects.
 
 The name of the icon for the effect must match the identifier of the effect.
 Below is a table with the name, ID and icon of the default effect.
@@ -401,93 +472,4 @@ Below is a table with the name, ID and icon of the default effect.
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Effects%20Preview/102014_preview.imageset/ic_zoom2.png" width="50"> | Zoom 2 | 102014
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Effects%20Preview/102013_preview.imageset/ic_transition4.png" width="50"> | Transition 4 | 102013
 
-In order to change the name of the effect, you need to do it in the localization file.
-Below are the keys for each effect with a default name.
-
-```swift
-// MARK: - Effects names
-
-/* Soul effect name */
-"com.banuba.editor.effect.name.soul" = "Soul";
-
-/* TV Foam effect name */
-"com.banuba.editor.effect.name.tv-foam" = "TV-Foam";
-
-/* VHS video effect name */
-"com.banuba.editor.effect.name.vhs" = "VHS";
-
-/* Flash video effect name */
-"com.banuba.editor.effect.name.flash" = "Flash";
-
-/* Rave effect name */
-"com.banuba.editor.effect.name.rave" = "Rave";
-
-/* Glitch effect name */
-"com.banuba.editor.effect.name.glitch" = "Glitch";
-
-/* Acid whip effect name */
-"com.banuba.editor.effect.name.acid-whip" = "Acid whip";
-
-/* Zoom effect name */
-"com.banuba.editor.effect.name.zoom" = "Zoom";
-
-/* Zoom 2 effect name */
-"com.banuba.editor.effect.name.zoom2" = "Zoom 2";
-
-/* Cathode effect name */
-"com.banuba.editor.effect.name.cathode" = "Cathode";
-
-/* Polaroid effect name */
-"com.banuba.editor.effect.name.polaroid" = "Polaroid";
-
-/* Slow motion effect name */
-"com.banuba.editor.effect.name.slow-motion" = "Slow mo";
-
-/* Rapid effect name */
-"com.banuba.editor.effect.name.rapid" = "Rapid";
-
-/* DSLR Kaleidoscope effect name*/
-"com.banuba.editor.effect.name.dslrkaleidoscope" = "DSLR Kaleidoscope";
-
-/* DV Cam effect name */
-"com.banuba.editor.effect.name.dvcam" = "DV Cam";
-
-/* Glitch 2 effect name */
-"com.banuba.editor.effect.name.glitch2" = "Glitch 2";
-
-/*Glitch 3 effect name*/
-"com.banuba.editor.effect.name.glitch3" = "Glitch 3";
-
-/* Heat map effect name */
-"com.banuba.editor.effect.name.heatmap" = "Heat Map";
-
-/* Kaleidoscope effect name */
-"com.banuba.editor.effect.name.kaleidoscope" = "Kaleidoscope";
-
-/* Lumiere */
-"com.banuba.editor.effect.name.lumiere" = "Lumiere";
-
-/* Pixel dynamic effect name */
-"com.banuba.editor.effect.name.pixelationdynamic" = "Pixel Dynamic";
-
-/* Pixel static effect name */
-"com.banuba.editor.effect.name.pixelationstatic" = "Pixel Static";
-
-/* Stars effect name */
-"com.banuba.editor.effect.name.stars" = "Stars";
-
-/* Transition effect name */
-"com.banuba.editor.effect.name.transition" = "Transition";
-
-/* Transition 2 effect name */
-"com.banuba.editor.effect.name.transition2" = "Transition 2";
-
-/* Transition 3 effect name */
-"com.banuba.editor.effect.name.transition3" = "Transition 3";
-
-/* Transition 4 */
-"com.banuba.editor.effect.name.transition4" = "Transition 4";
-
-/* VHS 2 effect name */
-"com.banuba.editor.effect.name.vhs2" = "VHS 2";
-```
+In order to change the name of the effect, you need to do it in the [localization file](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings#L254).

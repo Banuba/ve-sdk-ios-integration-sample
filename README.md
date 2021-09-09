@@ -141,6 +141,9 @@ Example:
 ```
 
 ## Getting Started
+
+:exclamation: **Important:** Do not forget to copy all the resources that the sample contains, such as the **luts folder and etc**.
+
 ### CocoaPods
 
 The easiest way to integrate the Video Editor SDK in your mobile app is through [CocoaPods](https://cocoapods.org). If you haven’t used this dependency manager before, see the [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html).
