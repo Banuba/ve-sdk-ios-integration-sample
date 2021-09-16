@@ -1,0 +1,160 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BanubaARCloudSDK",
+        "repositoryURL": "https://github.com/Banuba/BanubaARCloudSDK-IOS",
+        "state": {
+          "branch": "main",
+          "revision": "0c43b013465cfcc8cd778115ab0afb1008a6634a",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaAudioBrowserSDK",
+        "repositoryURL": "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS",
+        "state": {
+          "branch": "main",
+          "revision": "1b7d9dc06abf5ac85b43d99fa8f2a49511343be3",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaEffectPlayer",
+        "repositoryURL": "https://github.com/Banuba/BanubaEffectPlayer-iOS",
+        "state": {
+          "branch": "master",
+          "revision": "a8382b08570990244e1632c2f22e3e8bc14eb6a0",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaLicenseServicingSDK",
+        "repositoryURL": "https://github.com/Banuba/BanubaLicenseServicingSDK",
+        "state": {
+          "branch": "master",
+          "revision": "e63b335608c8f29ec9204183f7a986ba3acec55f",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaMusicEditorSDK",
+        "repositoryURL": "https://github.com/Banuba/BanubaMusicEditorSDK-iOS",
+        "state": {
+          "branch": "master",
+          "revision": "28c867981c48a20c18dd355741f80e02d42f51c2",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaOverlayEditorSDK",
+        "repositoryURL": "https://github.com/Banuba/BanubaOverlayEditorSDK-iOS",
+        "state": {
+          "branch": "master",
+          "revision": "d389011ecba3dc347ed3bb7338810fea2c4e0cb0",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaSdk",
+        "repositoryURL": "https://github.com/Banuba/BanubaSDK-iOS",
+        "state": {
+          "branch": "master",
+          "revision": "97cf9fce1adb8de4a2b95dc8778540adc1a630ce",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaSDKServicing",
+        "repositoryURL": "https://github.com/Banuba/BanubaSDKServicing-iOS",
+        "state": {
+          "branch": "main",
+          "revision": "cd73c89f6e94675a54fe3bfeaed4e10f4e314e44",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaSdkSimple",
+        "repositoryURL": "https://github.com/Banuba/BanubaSDKSimple-IOS",
+        "state": {
+          "branch": "main",
+          "revision": "58b812500f7cf584620424810b397d6878fae161",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaUtilities",
+        "repositoryURL": "https://github.com/Banuba/BanubaUtilities-iOS",
+        "state": {
+          "branch": "master",
+          "revision": "3186c50f3748a6acd3a1f960cb9e7133c3de838c",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaVideoEditorEffectsSDK",
+        "repositoryURL": "https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS",
+        "state": {
+          "branch": "master",
+          "revision": "6ae88ef4603fa41d634e1b3b289fefa5e731eb90",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaVideoEditorGallerySDK",
+        "repositoryURL": "https://github.com/Banuba/BanubaVideoEditorGallerySDK",
+        "state": {
+          "branch": "master",
+          "revision": "466c29193ca1c8353c9a4778cca8240e12cd3b2b",
+          "version": null
+        }
+      },
+      {
+        "package": "BanubaVideoEditorSDK",
+        "repositoryURL": "https://github.com/Banuba/BanubaVideoEditorSDK-iOS",
+        "state": {
+          "branch": "master",
+          "revision": "cf6f21b3d8f27269228dbb0ecd3fdd58469a4528",
+          "version": null
+        }
+      },
+      {
+        "package": "BNBLicenseUtils",
+        "repositoryURL": "https://github.com/Banuba/BNBLicenseUtils-iOS",
+        "state": {
+          "branch": "main",
+          "revision": "5ed6f8a9927a46e8f33755ce239a733b3d1c0da3",
+          "version": null
+        }
+      },
+      {
+        "package": "BSImagePicker",
+        "repositoryURL": "https://github.com/mikaoj/BSImagePicker",
+        "state": {
+          "branch": null,
+          "revision": "750f26abd0fafbcc4124adef436251888a7c962a",
+          "version": "3.3.1"
+        }
+      },
+      {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios",
+        "state": {
+          "branch": null,
+          "revision": "79a0b70547f7c40ea54c67487f935fa2f2eaaadc",
+          "version": "3.2.3"
+        }
+      },
+      {
+        "package": "VideoEditor",
+        "repositoryURL": "https://github.com/Banuba/VideoEditor-iOS",
+        "state": {
+          "branch": "master",
+          "revision": "8566963ee3ff4a3efd6b102f4ef51bc3c67d0a20",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
