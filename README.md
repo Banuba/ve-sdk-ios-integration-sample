@@ -184,7 +184,7 @@ Please, refer VideoEditor SDK SPM dependencies:
 <p align="center">
 <img src="mdDocs/ExactVersion.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
-4. Download.
+4. Download the latest module version.
 
 ### CocoaPods
 
