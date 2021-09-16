@@ -174,15 +174,15 @@ Please, refer VideoEditor SDK SPM dependencies:
 
 1. Open App project -> navigate to SwiftPackages tab.
 <p align="center">
-<img src="mdDocs/SPMTab" alt="Screenshot" width="80%" height="auto">&nbsp;
+<img src="mdDocs/SPMTab.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
 2. Tap 'plus' button -> type relevant SDK repo url.
 <p align="center">
-<img src="mdDocs/SDKUrl" alt="Screenshot" width="80%" height="auto">&nbsp;
+<img src="mdDocs/SDKUrl.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
 3. Choose 'exact' release version -> type newest SDK version.
 <p align="center">
-<img src="mdDocs/ExactVersion" alt="Screenshot" width="80%" height="auto">&nbsp;
+<img src="mdDocs/ExactVersion.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
 4. Download.
 
