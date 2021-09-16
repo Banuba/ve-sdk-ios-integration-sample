@@ -20,6 +20,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 - [What can you customize?](#What-can-you-customize)
 - [Configure AR cloud](#Configure-AR-cloud)
 - [Getting Started](#Getting-Started)
+    + [SwiftPackageManager](#SwiftPackageManager)
     + [CocoaPods](#CocoaPods)
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)  
     + [Disable Face AR](#Disable-Face-AR)
@@ -144,9 +145,48 @@ Example:
 
 :exclamation: **Important:** Do not forget to copy all the resources that the sample contains, such as the **luts folder and etc**.
 
-### CocoaPods
 
-The easiest way to integrate the Video Editor SDK in your mobile app is through [CocoaPods](https://cocoapods.org). If you haven’t used this dependency manager before, see the [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html).
+The easiest ways to integrate the Video Editor SDK in your mobile app are through [CocoaPods](https://cocoapods.org) or [SwiftPackageManager](https://developer.apple.com/documentation/swift_packages). If you haven’t used this dependency managers before, see the [Cocoapods Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) and [SPM Getting Started Guide](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
+
+### SwiftPackageManager
+
+Important: Sample intergration of SPM and VideoEditor is in [spm branch](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/spm)
+
+Please, refer VideoEditor SDK SPM dependencies:
+
+| SDK Name                    | Repo URL                                                  |
+| --------------------------- | --------------------------------------------------------- |
+| BanubaSDKServicing          | https://github.com/Banuba/BanubaSDKServicing-iOS          |
+| BNBLicenseUtils             | https://github.com/Banuba/BNBLicenseUtils-iOS             |
+| BanubaUtilities             | https://github.com/Banuba/BanubaUtilities-iOS             |
+| BanubaLicenseServicingSDK   | https://github.com/Banuba/BanubaLicenseServicingSDK       |
+| BanubaVideoEditorGallerySDK | https://github.com/Banuba/BanubaVideoEditorGallerySDK     |
+| BanubaOverlayEditorSDK      | https://github.com/Banuba/BanubaLicenseServicingSDK       |
+| BanubaMusicEditorSDK        | https://github.com/Banuba/BanubaMusicEditorSDK-iOS        |
+| VideoEditor                 | https://github.com/Banuba/BanubaLicenseServicingSDK       |
+| BanubaAudioBrowserSDK       | https://github.com/Banuba/BanubaAudioBrowserSDK-iOS       |
+| BanubaSDKSimple             | https://github.com/Banuba/BanubaSDKSimple-IOS             |
+| BanubaVideoEditorEffectsSDK | https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS |
+| BanubaARCloudSDK            | https://github.com/Banuba/BanubaARCloudSDK-IOS            |
+| BanubaSDK                   | https://github.com/Banuba/BanubaSDK-iOS                   |
+| BanubaVideoEditorSDK        | https://github.com/Banuba/BanubaVideoEditorSDK-iOS        |
+| BanubaEffectPlayer          | https://github.com/Banuba/BanubaEffectPlayer-iOS          |
+
+1. Open App project -> navigate to SwiftPackages tab.
+<p align="center">
+<img src="mdDocs/SPMTab" alt="Screenshot" width="80%" height="auto">&nbsp;
+</p>
+2. Tap 'plus' button -> type relevant SDK repo url.
+<p align="center">
+<img src="mdDocs/SDKUrl" alt="Screenshot" width="80%" height="auto">&nbsp;
+</p>
+3. Choose 'exact' release version -> type newest SDK version.
+<p align="center">
+<img src="mdDocs/ExactVersion" alt="Screenshot" width="80%" height="auto">&nbsp;
+</p>
+4. Download.
+
+### CocoaPods
 
 Important: Make sure that you have CocoaPods version >= 1.9.0 installed. Check your CocoaPods version using this command [pod --version]
 
