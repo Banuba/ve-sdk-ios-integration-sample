@@ -96,7 +96,7 @@ exportSession?.exportAsynchronously() {
 
 ### Step 1
 
-Add the ```BanubaAudioBrowserSDK``` dependency into your pod file containing other Video Editor SDK dependencies and setup its version (the latest is 0.0.15.2):
+Add the ```BanubaAudioBrowserSDK``` dependency into your pod file containing other Video Editor SDK dependencies and setup its version:
 
 ```swift
 pod 'BanubaAudioBrowserSDK', '1.0.18'
