@@ -115,30 +115,14 @@ We understand that the client should have options to brand video editor to bring
 
 :exclamation: We do custom UX/UI changes as a separate contract. Please contact our sales@banuba.com.
 
-### Disable Face AR 
+### Face AR 
 
-Face AR SDK is optional for the video editor SDK and can be disabled. Please make the following changes in ```Podfile``` to disable it:
+Face AR SDK is optional for the video editor SDK and would be disabled if it is not included in your token. If you don't use Face AR SDK make the following changes in ```Podfile``` to remove it:
 
 ```diff
 -  pod 'BanubaEffectPlayer', '1.0.15'
 -  pod 'BanubaSDK', '1.0.15.2'
 +  pod 'BanubaSDKSimple', '1.0.15.4'
-```
-
-Change 'isFaceAREnabled' to 'false' when creating an instance of BanubaVideoEditor.
-
-Example:
-
-```
- videoEditorSDK = BanubaVideoEditor(
-   token: YourClientToken,
-   effectsToken: YourEffectsToken,
-   isFaceAREnabled: false, // CHANGE to 'false' here
-   cloudMasksToken: YourCloudMasksToken,
-   configuration: YourConfig,
-   analytics: YourAnalyticsExample,
-   externalViewControllerFactory: YourExternalViewControllerFactory
-)
 ```
 
 ## Getting Started
