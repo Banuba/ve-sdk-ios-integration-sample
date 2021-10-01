@@ -18,7 +18,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 - [Token](#Token)
 - [Connecting with AR cloud](#Connecting-with-AR-cloud)
 - [What can you customize?](#What-can-you-customize)
-- [Configure AR cloud](#Configure-AR-cloud)
+- [Configure AR cloud](#Connecting-with-AR-cloud)
 - [Getting Started](#Getting-Started)
     + [SwiftPackageManager](#SwiftPackageManager)
     + [CocoaPods](#CocoaPods)
