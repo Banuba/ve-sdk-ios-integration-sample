@@ -30,6 +30,9 @@
 /* Ability to cancel */
 "Cancel" = "Отмена";
 
+"alert.reset.all.title" = "Сбросить все?";
+"alert.reset.all.message" = "";
+
 /* Alert action button title */
 "BanubaVideoEditor.Settings.Later" = "Позже";
 
@@ -42,16 +45,22 @@
 "Off" = "Выкл.";
 
 /* Used in alert with Yes and No options when resetting filters. */
-"Do you want to stop capturing and editing the video?" = "Прервать съемку и монтаж нового видео?";
+"alert.stop.capturing.video.title" = "Прервать съемку и монтаж нового видео?";
+"alert.stop.capturing.video.message" = "";
 
 /* Used in alert with Yes and No options when resetting filters. */
-"Do you want to reset all?" = "Сбросить всё?";
+"record.screen.reset.all.title" = "Сбросить все?";
+"editor.screen.reset.all.title" = "Сбросить все?";
+"record.screen.reset.all.message" = "";
+"editor.screen.reset.all.message" = "";
 
 /* Used in alert with Yes and No options */
-"Do you want to delete the last clip?" = "Удалить последний снятый отрезок видео?";
+"alert.delete.last.clip.title" = "Удалить последнее видео?";
+"alert.delete.last.clip.message" = "";
 
 /* Used for alert message to continure editing video*/
-"BanubaVideoEditor.Camera.ContinueEditingVideoQuestion" = "У вас есть не законченное видео. Желаете продолжить?";
+"alert.camera.continue.editing.video.question.title" = "У вас есть не законченное видео. Желаете продолжить?";
+"alert.camera.continue.editing.video.question.message" = "";
 
 /* Error message that appears when clicking the Next button in the camera when the first part of split mode is not recorded */
 "First part not recorded" = "Первая часть сплита не записана";
@@ -71,6 +80,9 @@
 
 /* An error message that appears in the camera when the length of the recorded video is less than the minimum allowed duration */
 "Too short. Please capture at least %d seconds" = "Слишком короткий отрезок, нужно снять хотя бы %d секунд";
+
+/* An error message that appears in the trimmer when user tryed to use too long video */
+"com.banuba.TooLongVideoMessageFormat" = "Продолжительность видео должна составлять от %d до %d секунд";
 
 /* An error message that appears in the camera if the recorded video is longer than the maximum allowed length */
  "Maximum %d seconds." = "Максимум %d секунд";
@@ -206,16 +218,20 @@
 "Unknown data format" = "Неожиданный формат данных";
 
 /* Used in alert re-asking permissions to Photos with Cancel and Settings options. */
-"Banuba.Camera.MissedGalleryPersmission" = "Разрешите доступ к фото. Пожалуйста, перейдите в настройки и предоставьте доступ.";
+"banuba.camera.alert.missed.gallery.persmission.title" = "Разрешите доступ к фото. Пожалуйста, перейдите в настройки и предоставьте доступ.";
+"banuba.camera.alert.missed.gallery.persmission.message" = "";
+
 
 /* Used in alert re-asking Camera & Microphone permissions with Settings option. */
 "Banuba.Camera.MissedCameraAndMicrophonePersmissions" = "Разрешите доступ к камере и микрофону, чтобы снимать и редактировать фото или видео, а также записывать аудио.";
 
 /* Used in a message to the user when access to the camera is denied through special options in the phone settings (such as 'Parental Control') */
-"Banuba.Camera.CameraAccessRestricted" = "Доступ к камере ограничен";
+"banuba.alert.camera.access.restricted.title" = "Доступ к камере ограничен";
+"banuba.alert.camera.access.restricted.message" = "";
 
 /* Used in alert with options Cancel and In settings */
-"Microphone unavailable. Please allow access in device settings" = "Пожалуйста, разреши доступ к микрофону в настройках";
+"alert.microphone.unavailable.title" = "Пожалуйста, разреши доступ к микрофону в настройках";
+"alert.microphone.unavailable.message" = "";
 
 /* Message when opening the trimmer screen */
 "Choose %i seconds" = "Выберете %d секунд";
@@ -229,7 +245,8 @@
 "Settings.Close" = "Закрыть";
 
 /* Used in an alert with Yes and No when resetting effects. */
-"Reset effects?" = "Отменить изменения?";
+"alert.reset.effects.title" = "Отменить изменения?";
+"alert.reset.effects.message" = "";
 
 /* Undo filters applied to video in the add filters screen */
 "Undo" = "Сбросить";
@@ -468,7 +485,8 @@
 "MusicEditor.No" = "Нет";
 
 /* Confirmation message for discarding changes */
-"MusicEditor.Do you want to reset all?" = "Желаете сбросить все изменения?";
+"com.banuba.musicEditor.mainScreen.resetAll.title" = "Сбросить изменения?";
+"com.banuba.musicEditor.mainScreen.resetAll.message" = "";
 
 /* Error message when a user tries to add tracks with reached limit */
 "MusicEditor.Max available tracks - %i" = "Максимальное количество треков - %i";
@@ -513,7 +531,10 @@
 "OverlayEditor.No" = "Нет";
 
 /* Confirmation message for discarding changes */
-"OverlayEditor.Do you want to reset all?" = "Желаете сбросить все изменения?";
+"com.banuba.overlayEditor.mainScreen.resetAll.title" = "Cбросить изменения?";
+"com.banuba.overlayEditor.mainScreen.resetAll.message" = "";
+"com.banuba.overlayEditor.mainScreen.resetAll.agree" = "Сбросить";
+"com.banuba.overlayEditor.mainScreen.resetAll.disagree" = "Отмена";
 
 // MARK: - Interactives
 
@@ -575,6 +596,9 @@
 "audioBrowser.stop.using" = "Сбросить трек";
 "audioBrowser.my.library" = "Моя библиотека";
 "audioBrowser.no.matches" = "Нет совпадений";
+"audioBrowser.no.tracks" = "Нет треков";
+
+"feature.disabled.audiobrowser" = "Музыкальный браузер по умолчанию не входит в ваш пакет. Вы можете добавить свою музыку.";
 
 // MARK: - Hands-free
 
@@ -613,6 +637,9 @@
 /* Import multiple images template */
 "BanubaVideoEditor.Gallery.ImportMultipleImages" = "Выбрать %d фото";
 
+/* Gallery empty selection message */
+"BanubaVideoEditor.Gallery.EmptySelectionMessage" = "Выберите хотя бы 1 файл";
+
 // MARK: - Effect additional media picker text resource
 
 /* No media files found in gallery for adding to the effect */
@@ -645,6 +672,8 @@
 "pip.top.bottom.camera.title" = "Пейзажный";
 "pip.layout.settings.title" = "Настройки макета";
 
+"feature.disabled.pip" = "Картинка в картинке не входит в ваш пакет. Свяжитесь с менеджером аккаунта, чтобы получить его.";
+
 // MARK: - Drafts
 /* Drafts button title */
 "BanubaVideoEditor.Gallery.DraftsTitle" = "Черновики";
@@ -655,15 +684,24 @@
 /* Displays hint about drafts location */
 "BanubaVideoEditor.Recorder.DraftHintMessage" = "Вы можете найти свой черновик в галерее";
 /* Used in alert with Yes and No options when resetting current sequence */
-"BanubaVideoEditor.Draft.SaveDraftQuestion" = "Сохранить в черновики?";
+"com.banuba.BanubaVideoEditor.draft.question.title" = "Сохранить черновик?";
+"com.banuba.BanubaVideoEditor.draft.question.message" = "";
+"com.banuba.BanubaVideoEditor.draft.question.agree" = "Сохранить";
+"com.banuba.BanubaVideoEditor.draft.question.disagree" = "Отмена";
 /* Displayed when current sequence saved to drafts  */
 "BanubaVideoEditor.Draft.DraftSavedMessage" = "Черновик сохранен";
 /* Displays message about no saved drafts */
 "BanubaVideoEditor.Draft.EmptyDraftsMessage" = "Черновиков не нашлось";
 /* Ask a user about completion removing a draft */
-"BanubaVideoEditor.Draft.RemoveDraftMessage" = "Желаете удалить черновик?";
+"com.banuba.BanubaVideoEditor.draft.remove.title" = "Удалить черновик?";
+"com.banuba.BanubaVideoEditor.draft.remove.message" = "";
+"com.banuba.BanubaVideoEditor.draft.remove.agree" = "Удалить";
+"com.banuba.BanubaVideoEditor.draft.remove.disagree" = "Отмена";
 /* Ask a user about completion updating a draft */
-"BanubaVideoEditor.Draft.UpdateDraftMessage" = "Желаете обновить черновик?";
+"com.banuba.BanubaVideoEditor.draft.update.title" = "Обновить черновик?";
+"com.banuba.BanubaVideoEditor.draft.update.message" = "";
+"com.banuba.BanubaVideoEditor.draft.update.agree" = "Обновить";
+"com.banuba.BanubaVideoEditor.draft.update.disagree" = "Отмена";
 
 //MARK: - Additional buttons
 "com.banuba.recorder.link.title" = "Ссылка";
@@ -683,12 +721,51 @@
 "com.banuba.recorder.interactive.title" = "Интерактивы";
 "com.banuba.recorder.pip.title" = "Пип";
 
-// MARK: - 1.0.18
 /* Gallery button title */
 "com.banuba.recorder.gallery.title" = "Галерея";
 
-/* An error message that appears in the trimmer when user tryed to use too long video */
-"com.banuba.TooLongVideoMessageFormat" = "Продолжительность видео должна составлять от %d до %d секунд";
+/* Aspect title for cells*/
+"com.banuba.videoEditor.aspect.original" = "Оригинал";
+"com.banuba.videoEditor.aspect.16:9" = "16:9";
+"com.banuba.videoEditor.aspect.9:16" = "9:16";
+"com.banuba.videoEditor.aspect.4:3" = "4:3";
+"com.banuba.videoEditor.aspect.4:5" = "4:5";
 
-/* Gallery empty selection message */
-"BanubaVideoEditor.Gallery.EmptySelectionMessage" = "Выберите хотя бы 1 файл";
+/* Text editor font names */
+"com.banuba.textEditor.fontName.regular" = "Обычный";
+"com.banuba.textEditor.fontName.italic" = "Курсив";
+"com.banuba.textEditor.fontName.bold" = "Полужирный";
+"com.banuba.textEditor.fontName.baskerville" = "Баскервиль";
+"com.banuba.textEditor.fontName.courier" = "Курьер";
+"com.banuba.textEditor.fontName.palatino" = "Палатино";
+"com.banuba.textEditor.fontName.noteworthy" = "Примечательный";
+"com.banuba.textEditor.fontName.papyrus" = "Папирус";
+"com.banuba.textEditor.fontName.sinhala" = "Сингальский";
+"com.banuba.textEditor.fontName.menlo" = "Менло";
+"com.banuba.textEditor.fontName.emoji" = "Эмодзи";
+
+// MARK: - Alert
+
+/* Titles for alert buttons */
+
+/* discard all alert type for record screen */
+"com.banuba.alert.discardAllRecord.agreeButtonTitle" = "Сбросить";
+"com.banuba.alert.discardAllRecord.disagreeButtonTitle" = "Отмена";
+/* discard all alert type for editor screen */
+"com.banuba.alert.discardAllEditor.agreeButtonTitle" = "Сбросить";
+"com.banuba.alert.discardAllEditor.disagreeButtonTitle" = "Отмена";
+/* not finished video alert type */
+"com.banuba.alert.notFinishedVideo.agreeButtonTitle" = "Продолжить";
+"com.banuba.alert.notFinishedVideo.disagreeButtonTitle" = "Отмена";
+/* discard changes alert type */
+"com.banuba.alert.discardChanges.agreeButtonTitle" = "Сбросить";
+"com.banuba.alert.discardChanges.disagreeButtonTitle" = "Отмена";
+/* delete segment alert type */
+"com.banuba.alert.deleteSegment.agreeButtonTitle" = "Удалить";
+"com.banuba.alert.deleteSegment.disagreeButtonTitle" = "Отмена";
+/* discard effects alert type */
+"com.banuba.alert.discardEffects.agreeButtonTitle" = "Сбросить";
+"com.banuba.alert.discardEffects.disagreeButtonTitle" = "Отмена";
+/* discard music alert type */
+"com.banuba.alert.discardMusic.agreeButtonTitle" = "Сбросить";
+"com.banuba.alert.discardMusic.disagreeButtonTitle" = "Отмена";

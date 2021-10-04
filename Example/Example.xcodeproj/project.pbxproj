@@ -585,120 +585,120 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaSDKServicing-iOS";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE0126F353E20072AF33 /* XCRemoteSwiftPackageReference "BNBLicenseUtils-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BNBLicenseUtils-iOS";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE0426F353F20072AF33 /* XCRemoteSwiftPackageReference "BanubaUtilities-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaUtilities-iOS";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE0726F354070072AF33 /* XCRemoteSwiftPackageReference "BanubaLicenseServicingSDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaLicenseServicingSDK";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE0A26F354580072AF33 /* XCRemoteSwiftPackageReference "BanubaVideoEditorGallerySDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorGallerySDK";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE0D26F354740072AF33 /* XCRemoteSwiftPackageReference "BanubaOverlayEditorSDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaOverlayEditorSDK-iOS";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE1026F354AD0072AF33 /* XCRemoteSwiftPackageReference "BanubaMusicEditorSDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaMusicEditorSDK-iOS";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE1326F354C60072AF33 /* XCRemoteSwiftPackageReference "VideoEditor-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/VideoEditor-iOS";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE1626F355030072AF33 /* XCRemoteSwiftPackageReference "BanubaAudioBrowserSDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE1926F355150072AF33 /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaSDKSimple-IOS";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE1C26F355250072AF33 /* XCRemoteSwiftPackageReference "BanubaVideoEditorEffectsSDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE1F26F355460072AF33 /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaARCloudSDK-IOS";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE2526F3556D0072AF33 /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaSDK-iOS";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE2826F3557E0072AF33 /* XCRemoteSwiftPackageReference "BanubaVideoEditorSDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorSDK-iOS";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE2B26F355AA0072AF33 /* XCRemoteSwiftPackageReference "BanubaEffectPlayer-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaEffectPlayer-iOS";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.19.0;
 			};
 		};
 		8AD7FE2E26F358370072AF33 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {

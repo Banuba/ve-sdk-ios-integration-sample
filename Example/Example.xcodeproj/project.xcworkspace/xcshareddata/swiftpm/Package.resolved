@@ -5,126 +5,126 @@
         "package": "BanubaARCloudSDK",
         "repositoryURL": "https://github.com/Banuba/BanubaARCloudSDK-IOS",
         "state": {
-          "branch": "main",
-          "revision": "0c43b013465cfcc8cd778115ab0afb1008a6634a",
-          "version": null
+          "branch": null,
+          "revision": "ddb7960a4365567f39caba89e35105e3364a78d6",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaAudioBrowserSDK",
         "repositoryURL": "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS",
         "state": {
-          "branch": "main",
-          "revision": "1b7d9dc06abf5ac85b43d99fa8f2a49511343be3",
-          "version": null
+          "branch": null,
+          "revision": "aa0ed2a6aecb61f51cbcc344e58fb608b2e0db6f",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaEffectPlayer",
         "repositoryURL": "https://github.com/Banuba/BanubaEffectPlayer-iOS",
         "state": {
-          "branch": "master",
-          "revision": "a8382b08570990244e1632c2f22e3e8bc14eb6a0",
-          "version": null
+          "branch": null,
+          "revision": "12e2de0e2aa4a22c04fb546a646266ccda39c7c1",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaLicenseServicingSDK",
         "repositoryURL": "https://github.com/Banuba/BanubaLicenseServicingSDK",
         "state": {
-          "branch": "master",
-          "revision": "e63b335608c8f29ec9204183f7a986ba3acec55f",
-          "version": null
+          "branch": null,
+          "revision": "2c62f2db0a2ad5816b440c90c8d11eed2bdaf45f",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaMusicEditorSDK",
         "repositoryURL": "https://github.com/Banuba/BanubaMusicEditorSDK-iOS",
         "state": {
-          "branch": "master",
-          "revision": "28c867981c48a20c18dd355741f80e02d42f51c2",
-          "version": null
+          "branch": null,
+          "revision": "eaa4378d09bddac4a4f7afcf092fb1b018276e73",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaOverlayEditorSDK",
         "repositoryURL": "https://github.com/Banuba/BanubaOverlayEditorSDK-iOS",
         "state": {
-          "branch": "master",
-          "revision": "d389011ecba3dc347ed3bb7338810fea2c4e0cb0",
-          "version": null
+          "branch": null,
+          "revision": "9c9ab1b9fafcf1a53f280d075546e277724cedec",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaSdk",
         "repositoryURL": "https://github.com/Banuba/BanubaSDK-iOS",
         "state": {
-          "branch": "master",
-          "revision": "97cf9fce1adb8de4a2b95dc8778540adc1a630ce",
-          "version": null
+          "branch": null,
+          "revision": "bab0fe0711e0723112c70eecd6be5bff9474f8e2",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaSDKServicing",
         "repositoryURL": "https://github.com/Banuba/BanubaSDKServicing-iOS",
         "state": {
-          "branch": "main",
-          "revision": "cd73c89f6e94675a54fe3bfeaed4e10f4e314e44",
-          "version": null
+          "branch": null,
+          "revision": "5cabd0be3aecc8d9c83ded05643fa82925802135",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaSdkSimple",
         "repositoryURL": "https://github.com/Banuba/BanubaSDKSimple-IOS",
         "state": {
-          "branch": "main",
-          "revision": "58b812500f7cf584620424810b397d6878fae161",
-          "version": null
+          "branch": null,
+          "revision": "15ccaa88913ac183ad78096f8361e67e01efe1ee",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaUtilities",
         "repositoryURL": "https://github.com/Banuba/BanubaUtilities-iOS",
         "state": {
-          "branch": "master",
-          "revision": "3186c50f3748a6acd3a1f960cb9e7133c3de838c",
-          "version": null
+          "branch": null,
+          "revision": "8155897151bee97282f148ace54767ca3290931e",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaVideoEditorEffectsSDK",
         "repositoryURL": "https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS",
         "state": {
-          "branch": "master",
-          "revision": "6ae88ef4603fa41d634e1b3b289fefa5e731eb90",
-          "version": null
+          "branch": null,
+          "revision": "351d1c8690541330edc5f813dd556bbae53dfa35",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaVideoEditorGallerySDK",
         "repositoryURL": "https://github.com/Banuba/BanubaVideoEditorGallerySDK",
         "state": {
-          "branch": "master",
-          "revision": "466c29193ca1c8353c9a4778cca8240e12cd3b2b",
-          "version": null
+          "branch": null,
+          "revision": "6ad739a7273537fae3bb8b1f3ae49a834624a353",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BanubaVideoEditorSDK",
         "repositoryURL": "https://github.com/Banuba/BanubaVideoEditorSDK-iOS",
         "state": {
-          "branch": "master",
-          "revision": "cf6f21b3d8f27269228dbb0ecd3fdd58469a4528",
-          "version": null
+          "branch": null,
+          "revision": "bed1504f8a495f3ca6b02118d7db13e4eda68ae9",
+          "version": "1.19.0"
         }
       },
       {
         "package": "BNBLicenseUtils",
         "repositoryURL": "https://github.com/Banuba/BNBLicenseUtils-iOS",
         "state": {
-          "branch": "main",
+          "branch": null,
           "revision": "5ed6f8a9927a46e8f33755ce239a733b3d1c0da3",
-          "version": null
+          "version": "1.19.0"
         }
       },
       {
@@ -149,9 +149,9 @@
         "package": "VideoEditor",
         "repositoryURL": "https://github.com/Banuba/VideoEditor-iOS",
         "state": {
-          "branch": "master",
-          "revision": "8566963ee3ff4a3efd6b102f4ef51bc3c67d0a20",
-          "version": null
+          "branch": null,
+          "revision": "7161733080131958869389eee469749e69dd1bc2",
+          "version": "1.19.0"
         }
       }
     ]
