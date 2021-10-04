@@ -165,10 +165,16 @@ extension ViewController {
       fileURL: videoURL,
       quality: .auto,
       useHEVCCodecIfPossible: true,
-      watermarkConfiguration: watermarkConfiguration,
+      watermarkConfiguration: watermarkConfiguration
+    )
+    
+    let exportConfig = ExportConfiguration(
+      videoConfigurations: [exportConfiguration],
+      isCoverEnabled: true,
       gifSettings: GifSettings(duration: 0.3)
     )
-    videoEditorSDK?.exportVideos(using: [exportConfiguration], completion: { (success, error) in
+    
+    videoEditorSDK?.export(using: exportConfig, completion: { success, error, exportCoverImages in
       DispatchQueue.main.async {
         // Clear video editor session data
         self.videoEditorSDK?.clearSessionData()
