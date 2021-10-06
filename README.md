@@ -22,7 +22,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
     + [SwiftPackageManager](#SwiftPackageManager)
     + [CocoaPods](#CocoaPods)
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)  
-    + [Disable Face AR](#Disable-Face-AR)
+    + [Disable Face AR](#Face-AR)
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
