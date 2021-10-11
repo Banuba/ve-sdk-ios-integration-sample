@@ -198,7 +198,7 @@ API key to interact with giphy service
 | OverlayEditor.Yes | Yes | Confirmation button title
 | OverlayEditor.No | No | Discarding button title
 | OverlayEditor.Do you want to reset all? | Discard changes? | Confirmation message for discarding changes
-| Search on giphy.com | Search on giphy.com | Hint, which is shown in the GIF objects search input field, if it is empty
+| com.banuba.searchGif.placeholder | Search GIPHY | Hint, which is shown in the GIF objects search input field, if it is empty
 | Cancel | Cancel | Ability to cancel the search for GIF objects
 | No stickers found | No stickers found | Pictures not found by custom keyword
 | Problems with internet | Problems with internet |A heading showing that there are problems with the Internet connection
