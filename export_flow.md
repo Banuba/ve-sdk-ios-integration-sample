@@ -2,37 +2,35 @@
 
 Please consider the following examples to configure your export flow.
 ``` swift
- /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution
+ /// Export several configurable video
   /// - Parameters:
-  ///   - fileUrl: url where exported video should be stored.
-  ///   - completion: completion: (success, error), execute on background thread.
-  func exportVideo(fileUrl: URL, completion: @escaping (Bool, Error?) -> Void)
-  
-  /// Export video with default 1280x720 (or 1920x1080 on required devices) resolution and cover image
-  /// - Parameters:
-  ///   - fileUrl: url where exported video should be stored.
-  ///   - completion: completion: (success, error, image), execute on background thread.
-  /// Preconfigue WatermarkConfiguration in configuration file otherwise will be used default configuration. Default cover image video indent is 0.5 second.
-  func exportVideoWithCoverImage(fileUrl: URL, completion: @escaping (Bool, Error?, UIImage) -> Void)
-  
-  /// Export several configurable video
-  /// - Parameters:
-  ///   - configurations: contains configurations for exporting videos such as file url,
-  ///    watermark and video quality
-  ///   - completion: completion: (success, error), execute on the background thread.
-  func exportVideos(using configurations: [ExportVideoConfiguration], completion: (Bool,Error?)->Void)
-  
-  /// Export several configurable video with cover image
-  /// - Parameters:
-  ///   - configurations: contains configurations for exporting videos such as file url,
-  ///    watermark and video quality
-  ///   - completion: completion: (success, error, image), execute on the background thread.
-  func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
+  ///   - configuration: contains configurations for exporting videos such as file url,
+  ///    watermark and video quality and etc.
+  ///   - completion: completion: (success, error, exportCoverImages), execute on background thread.
+  public func export(
+    using configuration: ExportConfiguration,
+    completion: @escaping ((_ success: Bool, _ error: Error?, _ exportCoverImages: ExportCoverImages?)->Void)
+  )
 ```  
 
 ## Export video configuration
 Below is the sample with available configurations for export video.
 ``` swift
+public struct ExportConfiguration {
+    /// Export Video Configuration
+    public let videoConfigurations: [ExportVideoConfiguration]
+    /// Is cover image/gif exporting enabled
+    public let isCoverEnabled: Bool
+    /// The configuration for gif
+    public var gifSettings: GifSettings?
+    /// ExportVideoConfiguration constructor.
+    public init(
+      videoConfigurations: [ExportVideoConfiguration],
+      isCoverEnabled: Bool,
+      gifSettings: GifSettings?
+    )
+}
+
 /// Export Video Configuration
 public struct ExportVideoConfiguration {
   /// The video file URL.
