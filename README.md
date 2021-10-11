@@ -333,6 +333,8 @@ Stickers are interactive objects (gif images) that can be added to the video rec
 
 By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **giphyAPIKey** parameter in GifPickerConfiguration entity.
 
+GIPHY doesn't charge for their content. The one thing they do require is attribution. Also, there is no commercial aspect to the current version of the product (no advertisements, etc.) To use it, please, add "Search GIPHY" text attribution to the search bar.
+
 ### Configure the record button
 The record button is a main control on the camera screen which you can fully customize along with animations playing on tap.
 
