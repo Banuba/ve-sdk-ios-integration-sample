@@ -7,7 +7,7 @@ Use the properties below to customize the Editor screen.
 
 - [additionalEffectsButtons: [AdditionalEffectsButtonConfiguration]](/Example/Example/Extension/EditorConfiguration.swift#L8)
 
-AdditionalEffectsButtonConfiguration array setups all of the camera screen control buttons' styles
+AdditionalEffectsButtonConfiguration array setups all of the editor screen control buttons' styles
 
 - [additionalEffectsButtonsBottomOffset: CGFloat](/Example/Example/Extension/EditorConfiguration.swift#L46)
 
