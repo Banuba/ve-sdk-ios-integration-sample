@@ -473,3 +473,13 @@ Below is a table with the name, ID and icon of the default effect.
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Effects%20Preview/102013_preview.imageset/ic_transition4.png" width="50"> | Transition 4 | 102013
 
 In order to change the name of the effect, you need to do it in the [localization file](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings#L254).
+
+### 19. I want to turn off Drafts feature.
+
+To turn off Drafts feature just disable it in FeatureConfiguration entity:
+
+```swift
+  var config = VideoEditorConfig()
+  config.featureConfiguration.isDraftsEnabled = false
+```
+
