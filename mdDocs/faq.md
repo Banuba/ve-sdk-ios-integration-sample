@@ -480,6 +480,6 @@ To turn off Drafts feature just disable it in FeatureConfiguration entity:
 
 ```swift
   var config = VideoEditorConfig()
-  config.featureConfiguration.isDraftsEnabled = false
+  config.featureConfiguration.draftsConfig = .disabled
 ```
 
