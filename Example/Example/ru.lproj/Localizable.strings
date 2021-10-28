@@ -190,7 +190,7 @@
 
 /* Hint, which is shown in the GIF objects search input field, if it is empty */
 
-"Search on giphy.com" = "Поиск на giphy.com";
+"Search on giphy.com" = "Search GIPHY";
 
 /* Ability to cancel the search for GIF objects */
 "Cancel" = "Отмена";
