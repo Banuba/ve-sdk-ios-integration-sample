@@ -324,7 +324,36 @@ The SDK allows overriding icons, colors, typefaces and many more configuration e
 
 ### Configure masks and filters order
 
+The SDK allows to reorder masks and filters in the way you need. To achieve this use the property ```preferredLutsOrder``` and ```preferredMasksOrder```
 
+``` swift
+ let config = VideoEditorConfig()
+ 
+ // Sorting for the record screen
+ config.recorderConfiguration.recorderEffectsConfiguration.preferredLutsOrder = [
+   "egypt",
+   "norway",
+   "japan"
+ ]
+ 
+ config.recorderConfiguration.recorderEffectsConfiguration.preferredMasksOrder = [
+   "XYScanner",
+   "Background"
+ ]
+ 
+ // Sorting for the post processing screen
+ config.filterConfiguration.preferredLutsOrder = [
+   "byers",
+   "sunset",
+   "vinyl"
+ ]
+ 
+ config.filterConfiguration.preferredMasksOrder = [
+   "XYScanner",
+   "Background"
+ ]
+ 
+``` 
 
 ### Configure watermark
 

@@ -169,7 +169,7 @@ For now, it's possible to turn off the trimmer screen after the camera screen.
 
 The trimmer screen will still be accessible after importing media files from the gallery.
 
-To disable it just change the ```propertysupportsTrimRecordedVideo``` to false in ```FeatureConfiguration``` entity.
+To disable it just change the property ```supportsTrimRecordedVideo``` to ```false``` in ```FeatureConfiguration``` entity.
 
 ``` swift
 func createVideoEditorConfig() -> VideoEditorConfig {
