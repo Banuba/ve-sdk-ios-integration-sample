@@ -27,6 +27,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
+    + [Configure masks and filters order](#Configure-masks-and-filters-order)
     + [Configure watermark](#Configure-watermark)
     + [Configure stickers content](#Configure-stickers-content)
     + [Icons](#Icons)
@@ -104,7 +105,8 @@ We understand that the client should have options to brand video editor to bring
 
 :white_check_mark: Use your branded icons. [See details](#Configure-screens)  
 :white_check_mark: Use you branded colors. [See details](#Configure-screens)  
-:white_check_mark: Change text styles i.e. font, color. [See details](#Configure-screens)    
+:white_check_mark: Change text styles i.e. font, color. [See details](#Configure-screens)
+:white_check_mark: Masks and filters order. [See details](#Configure-screens)  
 :white_check_mark: Localize and change text resources. Default locale is :us:  
 :white_check_mark: Make content you want i.e. a number of video with different resolutions and durations, an audio file. [See details](#Configure-export-flow)  
 :white_check_mark: Customize video recording duration behavior. [See details](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_duration_configuration.md)   
@@ -319,6 +321,10 @@ Below see the list of screens with links to their detailed description and notes
 1. [Audio Browser screen](mdDocs/audioBrowser.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
+
+### Configure masks and filters order
+
+
 
 ### Configure watermark
 

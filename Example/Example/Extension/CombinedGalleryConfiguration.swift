@@ -22,6 +22,7 @@ extension ViewController {
     configuration.clearSelectionButtonConfiguration.imageConfiguration = BanubaVideoEditorSDK.ImageConfiguration(imageName: "camera_control.back")
     configuration.galleryTypeButton.style.color = UIColor.yellow
     configuration.galleryTypeUnderlineColor = UIColor.yellow
+    configuration.visibleTabsInGallery = [.video, .photo]
     
     return configuration
   }

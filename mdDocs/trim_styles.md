@@ -162,3 +162,23 @@ TimeLabelConfiguration setups current duration view style
 | %d sec | %d sec | 'Seconds' for short
 | Done | Done | Finish button title
 | Next | Next | Move to next screen
+
+## Disable trim screen
+
+For now, it's possible to turn off the trimmer screen after the camera screen.
+
+The trimmer screen will still be accessible after importing media files from the gallery.
+
+To disable it just change the ```propertysupportsTrimRecordedVideo``` to false in ```FeatureConfiguration``` entity.
+
+``` swift
+func createVideoEditorConfig() -> VideoEditorConfig {
+  var config = VideoEditorConfig()
+  ...
+  // Default is false
+  config.featureConfiguration.supportsTrimRecorderVideo = true
+  ...
+  return config
+}
+
+```
