@@ -109,3 +109,39 @@ Configure mubert token to use external music provider:
 let mubertPat = "Your mubert pat"
 BanubaAudioBrowser.setMubertPat(mubertPat)
 ```
+
+### Step 4
+
+You need to implement the protocol ``` MusicEditorExternalViewControllerFactory ```
+
+See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Helpers/MusicEditorViewControllerFactory.swift#L14).
+Your class should have variable methods which are below:
+```swift
+  var audioBrowserController: TrackSelectionViewController?
+  
+  func makeTrackSelectionViewController(selectedAudioItem: AudioItem?) -> TrackSelectionViewController? {
+    return nil
+  }
+  
+  func makeEffectSelectionViewController(selectedAudioItem: AudioItem?) -> EffectSelectionViewController? {
+    return nil
+  }
+  
+  func makeRecorderCountdownAnimatableView() -> MusicEditorCountdownAnimatableView? {
+    return nil
+  }
+```
+### Step 5
+
+The class in which you have implemented the ``` MusicEditorExternalViewControllerFactory ``` protocol must be passed to ```musicEditorFactory```.
+
+See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L30).
+
+### Step 6
+
+You can configure to receive only remote and local music.
+```swift
+  /// True - Remote music available.
+  /// False - Only local music available.
+AudioBrowserConfig.shared.isExternalMusicEnabled = true
+```
