@@ -1,6 +1,25 @@
 # FAQ  
-
 These are the answers to the most common questions asked about our SDK.
+
+1. [How do I start/stop recording with a tap?](#1-how-do-i-startstop-recording-with-a-tap)
+2. [How do I add an AR mask to the app (without AR cloud)](#2how-do-i-add-an-ar-mask-to-the-app-without-ar-cloud)
+3. [How do I start the Video Editor with a preselected audio track?](#3-how-do-i-start-the-video-editor-with-a-preselected-audio-track)
+4. [How do I use the Video Editor several times from different entry points?](#4-how-do-i-use-the-video-editor-several-times-from-different-entry-points)
+5. [How do I add a color filter (LUT)?](#5-how-do-i-add-a-color-filter-lut)
+6. [I want to enabled slideshow animation](#6-i-want-to-enabled-slideshow-animation)
+7. [I want to change cursor color](#7-i-want-to-change-cursor-color)
+8. [I want to change progress bar position](#8-i-want-to-change-progress-bar-position)
+9. [How does video editor work when token expires?](#9-how-does-video-editor-work-when-token-expires)
+10. [Which buttons available if Face AR disabled?](#10-which-buttons-available-if-face-ar-disabled)
+11. [I want to change screens' layout.](#11-i-want-to-change-screens-layout)
+12. [ I want to change music button position.](#12-i-want-to-change-music-button-position)
+13. [How can I get a track name of the audio used in my video after export?](#13-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
+14. [I want to change the font](#14-i-want-to-change-the-font)
+15. [I want to check whether my token is expired.](#15-i-want-to-check-whether-my-token-is-expired)
+16. [The file “luts” couldn’t be opened because there is no such file.](#16-the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
+17. [I want to add audio filters](#17-i-want-to-add-audio-filters)
+18. [ I want to change icons and name for effects.](#18-i-want-to-change-icons-and-name-for-effects)
+19. [ I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
 
 ### 1. How do I start/stop recording with a tap?
   
