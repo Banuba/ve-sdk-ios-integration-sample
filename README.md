@@ -31,7 +31,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
     + [Configure stickers content](#Configure-stickers-content)
     + [Icons](#Icons)
     + [Localization](#Localization)
-- [FAQ](#FAQ)
+- [FAQ](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/faq.md)
 - [Third party libraries](#Third-party-libraries)
 
 ## Requirements
