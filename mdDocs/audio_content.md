@@ -112,10 +112,16 @@ BanubaAudioBrowser.setMubertPat(mubertPat)
 
 ### Step 4
 
-You need to implement the protocol ``` MusicEditorExternalViewControllerFactory ```
-
-See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Helpers/MusicEditorViewControllerFactory.swift#L14).
-Your class should have variable methods which are below:
+Your class should conforms ```MusicEditorExternalViewControllerFactory``` protocol.
+```swift
+public protocol MusicEditorExternalViewControllerFactory: AnyObject {
+  var audioBrowserController: TrackSelectionViewController? { get set }
+  func makeTrackSelectionViewController(selectedAudioItem: AudioItem?) -> TrackSelectionViewController?
+  func makeEffectSelectionViewController(selectedAudioItem: AudioItem?) -> EffectSelectionViewController?
+  func makeRecorderCountdownAnimatableView() -> MusicEditorCountdownAnimatableView?
+}
+```
+Your class should have variable and methods which are below:
 ```swift
   var audioBrowserController: TrackSelectionViewController?
   
@@ -131,6 +137,8 @@ Your class should have variable methods which are below:
     return nil
   }
 ```
+See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Helpers/MusicEditorViewControllerFactory.swift#L14).
+
 ### Step 5
 
 The class in which you have implemented the ``` MusicEditorExternalViewControllerFactory ``` protocol must be passed to ```musicEditorFactory```.
