@@ -38,7 +38,9 @@ protocol AudioItem {
   var id: Int64 { get }
   var url: URL { get }
   var title: String? { get set }
-  var isEditable: Boo { get set }
+  /// True - display track with which the video was recorded and allow users to edit it.
+  /// False - track will be playing but not displayed.
+  var isEditable: Bool { get set }
 }
 ```
 

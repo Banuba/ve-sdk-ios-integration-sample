@@ -9,6 +9,10 @@ Use the properties below to customize the CombinedGallery.
 
 VideoResolutionConfiguration setups editor options for rendering video
 
+- [visibleTabsInGallery: GalleryMediaType](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L25)
+
+GalleryMediaType setups visible tabs for gallery
+
 - [galleryItemConfiguration: GalleryItemConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L8)
 
 GalleryItemConfiguration setups gallery item style for collection view cell

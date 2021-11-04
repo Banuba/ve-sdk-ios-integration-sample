@@ -483,3 +483,11 @@ To turn off Drafts feature just disable it in FeatureConfiguration entity:
   config.featureConfiguration.draftsConfig = .disabled
 ```
 
+### 20. I want to change visible tabs in gallery
+
+To setup visible tabs for gallery just configure it in CombinedGalleryConfiguration entity:
+
+```swift
+  var config = VideoEditorConfig()
+  config.combinedGalleryConfiguration.visibleTabsInGallery = [.video, .photo]
+```
