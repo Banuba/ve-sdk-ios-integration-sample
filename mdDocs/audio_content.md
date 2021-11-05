@@ -112,7 +112,7 @@ BanubaAudioBrowser.setMubertPat(mubertPat)
 
 ### Step 4
 
-Your class should conforms ```MusicEditorExternalViewControllerFactory``` protocol.
+Your class should implement ```MusicEditorExternalViewControllerFactory``` protocol.
 ```swift
 public protocol MusicEditorExternalViewControllerFactory: AnyObject {
   var audioBrowserController: TrackSelectionViewController? { get set }
@@ -121,7 +121,7 @@ public protocol MusicEditorExternalViewControllerFactory: AnyObject {
   func makeRecorderCountdownAnimatableView() -> MusicEditorCountdownAnimatableView?
 }
 ```
-Your class should have variable and methods which are below:
+Your class should have variable and methods below:
 ```swift
   var audioBrowserController: TrackSelectionViewController?
   
@@ -147,9 +147,9 @@ See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/bl
 
 ### Step 6
 
-You can configure to receive only remote and local music.
+Banuba Audiobrowser can be configured to work with online music providers or local audio files.
 ```swift
-  /// True - Remote music available.
-  /// False - Only local music available.
+  // True - Music provider tracks available.
+  // False - Only local audio files available.
 AudioBrowserConfig.shared.isExternalMusicEnabled = true
 ```
