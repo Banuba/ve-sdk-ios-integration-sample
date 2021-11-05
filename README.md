@@ -40,8 +40,8 @@ This is what you need to run the AI Video Editor SDK
 
 - iPhone devices 6+
 - Swift 5+
-- Xcode 12.4+
-- iOS 11.0+
+- Xcode 13.0+
+- iOS 12.0+
 Unfortunately, It isn't optimized for iPads.
 
 ## Dependencies
@@ -91,7 +91,7 @@ There is nothing complicated about it - [contact us](https://www.banuba.com/vide
 ## Token 
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
-Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29).  
+Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L35).  
 
 Also you can load token from [Firebase](https://firebase.google.com/docs/database/android/start). [Check](mdDocs/token_on_firebase.md) to configure firebase
 
@@ -122,9 +122,9 @@ We understand that the client should have options to brand video editor to bring
 Face AR SDK is optional for the video editor SDK and would be disabled if it is not included in your token. If you don't use Face AR SDK make the following changes in ```Podfile``` to remove it:
 
 ```diff
--  pod 'BanubaEffectPlayer', '1.0.15'
--  pod 'BanubaSDK', '1.0.15.2'
-+  pod 'BanubaSDKSimple', '1.0.15.4'
+-  pod 'BanubaEffectPlayer', '1.0.19'
+-  pod 'BanubaSDK', '1.0.19.1'
++  pod 'BanubaSDKSimple', '1.0.19.1'
 ```
 
 ## Getting Started
@@ -174,7 +174,7 @@ Please, refer VideoEditor SDK SPM dependencies:
 
 ### CocoaPods
 
-Important: Make sure that you have CocoaPods version >= 1.9.0 installed. Check your CocoaPods version using this command [pod --version]
+Important: Make sure that you have CocoaPods version >= 1.9.0 installed. Check your CocoaPods version using this command ```pod --version```
 
 Please, refer to the example of [Podfile](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile) lines which you need to add.
 
@@ -187,9 +187,9 @@ Please, refer to the example of [Podfile](https://github.com/Banuba/ve-sdk-ios-i
    pod init
    ```
 3. Install the Video Editor SDK for the provided Xcode workspace with:
-```sh
-pod install
-```
+   ```sh
+   pod install
+   ```
 4. Open Example.xcworkspace with Xcode and run the project.
 
 ### Start Video Editor from ViewController
@@ -199,7 +199,7 @@ import BanubaVideoEditorSDK
 
 class ViewController: UIViewController {
 
-  private var videoEditorSDK: BanubaVideoEditorSDK?
+  private var videoEditorSDK: BanubaVideoEditor?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -220,25 +220,23 @@ class ViewController: UIViewController {
   
   private func initVideoEditor() {
     let configuration = VideoEditorConfig()
-    videoEditorSDK = BanubaVideoEditorSDK(
+    videoEditorSDK = BanubaVideoEditor(
       token: "place client token here",
-      effectsToken: "place effects token here",
       configuration: configuration,
       analytics: nil,
       externalViewControllerFactory: nil
     )
     videoEditorSDK?.delegate = self
   }
-  ...
 }
 
 // MARK: - Handle Video Editor lifecycle
-extension ViewController: BanubaVideoEditorSDKDelegate {
-  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditorSDK) {
+extension ViewController: BanubaVideoEditorDelegate {
+  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
   
-  func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK) {
+  func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
 }

@@ -124,12 +124,12 @@ The name of the icon resource must be the same as the graphic file `ID` the / lu
 |  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101009_preview.imageset/canada-1.png" width="50"> |  canada | 101009
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101010_preview.imageset/sunny-1.png" width="50">  |  sunny | 101010
 |  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101011_preview.imageset/egypt-1.png" width="50"> |  egypt | 101011
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101012_preview.imageset/new_zeland-1.png" width="50">  |  new_zeland | 101012
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101012_preview.imageset/new_zeland-1.png" width="50">  |  bright | 101012
 |  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101013_preview.imageset/chroma-1.png" width="50"> |  chroma | 101013
 |  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101014_preview.imageset/byers-1.png" width="50"> |  byers | 101014
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101015_preview.imageset/lilac-1.png" width="50">  |  lilac | 101015
 |  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101016_preview.imageset/hyla-1.png" width="50"> |  hyla | 101016
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101017_preview.imageset/bubblegum-1.png" width="50"> |  bubblegum | 101017
+|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101017_preview.imageset/bubblegum-1.png" width="50"> |  vivid | 101017
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101018_preview.imageset/vinyl-1.png" width="50">  | vinyl | 101018
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101019_preview.imageset/lux-1.png" width="50">  |  lux | 101019
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101020_preview.imageset/japan-1.png" width="50">  |  japan | 101020
@@ -141,55 +141,55 @@ The name of the icon resource must be the same as the graphic file `ID` the / lu
 If you want to change the name, you need to specify the new name in the string resources:
 ```swift
 /* glitch filter name */
-"com.banuba.filter.name.lux" = "lux";
+"com.banuba.filter.name.lux" = "Lux";
 /* remy filter name */
-"com.banuba.filter.name.remy" = "remy";
+"com.banuba.filter.name.remy" = "Remy";
 /* hyla filter name */
-"com.banuba.filter.name.hyla" = "hyla";
+"com.banuba.filter.name.hyla" = "Hyla";
 /* neon filter name */
-"com.banuba.filter.name.neon" = "neon";
+"com.banuba.filter.name.neon" = "Neon";
 /* retro filter name */
-"com.banuba.filter.name.retro" = "retro";
+"com.banuba.filter.name.retro" = "Retro";
 /* sunny filter name */
-"com.banuba.filter.name.sunny" = "sunny";
+"com.banuba.filter.name.sunny" = "Sunny";
 /* egypt filter name */
-"com.banuba.filter.name.egypt" = "egypt";
+"com.banuba.filter.name.egypt" = "Egypt";
 /* spark filter name */
-"com.banuba.filter.name.spark" = "spark";
+"com.banuba.filter.name.spark" = "Spark";
 /* byers filter name */
-"com.banuba.filter.name.byers" = "byers";
+"com.banuba.filter.name.byers" = "Byers";
 /* lilac filter name */
-"com.banuba.filter.name.lilac" = "lilac";
+"com.banuba.filter.name.lilac" = "Lilac";
 /* vinyl filter name */
-"com.banuba.filter.name.vinyl" = "vinyl";
+"com.banuba.filter.name.vinyl" = "Vinyl";
 /* japan filter name */
-"com.banuba.filter.name.japan" = "japan";
+"com.banuba.filter.name.japan" = "Japan";
 /* chile filter name */
-"com.banuba.filter.name.chile" = "chile";
+"com.banuba.filter.name.chile" = "Chile";
 /* glitch filter name */
-"com.banuba.filter.name.glitch" = "glitch";
+"com.banuba.filter.name.glitch" = "Glitch";
 /* grunge filter name */
-"com.banuba.filter.name.grunge" = "grunge";
+"com.banuba.filter.name.grunge" = "Grunge";
 /* canada filter name */
-"com.banuba.filter.name.canada" = "canada";
+"com.banuba.filter.name.canada" = "Canada";
 /* chroma filter name */
-"com.banuba.filter.name.chroma" = "chroma";
+"com.banuba.filter.name.chroma" = "Chroma";
 /* norway filter name */
-"com.banuba.filter.name.norway" = "norway";
+"com.banuba.filter.name.norway" = "Norway";
 /* korben filter name */
-"com.banuba.filter.name.korben" = "korben";
+"com.banuba.filter.name.korben" = "Korben";
 /* sunset filter name */
-"com.banuba.filter.name.sunset" = "sunset";
+"com.banuba.filter.name.sunset" = "Sunset";
 /* instant filter name */
-"com.banuba.filter.name.instant" = "instant";
+"com.banuba.filter.name.instant" = "Instant";
 /* england filter name */
-"com.banuba.filter.name.england" = "england";
+"com.banuba.filter.name.england" = "England";
 /* pinkvine filter name */
-"com.banuba.filter.name.pinkvine" = "pinkvine";
-/* bubblegum filter name */
-"com.banuba.filter.name.bubblegum" = "bubblegum";
-/* new zeland filter name */
-"com.banuba.filter.name.new_zeland" = "new_zeland";
+"com.banuba.filter.name.pinkvine" = "Pinkvine";
+/* vivid filter name */
+"com.banuba.filter.name.vivid" = "Vivid";
+/* bright filter name */
+"com.banuba.filter.name.bright" = "Bright";
 ```
 
 ### 6. I want to enabled slideshow animation 
