@@ -416,9 +416,9 @@ You need to copy [luts](https://github.com/Banuba/ve-sdk-ios-integration-sample/
 
 ### 17. I want to add audio filters 
 
-Filters availability depends on the token. However, in order for them to be available, you need to add an implementation of the VoiceFilterProvider entity.
+Filters availability depends on the token. However, in order for them to be available, you need to add an implementation of the ```VoiceFilterProvider``` entity.
 
-Example how to inherit VoiceFilterProvider to your own entity:
+Example how to inherit ```VoiceFilterProvider``` to your own entity:
 
 ```swift
 import BanubaMusicEditorSDK
@@ -517,18 +517,20 @@ In order to change the name of the effect, you need to do it in the [localizatio
 
 ### 19. I want to turn off Drafts feature.
 
-To turn off Drafts feature just disable it in FeatureConfiguration entity:
+To turn off Drafts feature just disable it in ```FeatureConfiguration``` entity:
 
 ```swift
   var config = VideoEditorConfig()
+  
   config.featureConfiguration.draftsConfig = .disabled
 ```
 
 ### 20. I want to change visible tabs in gallery
 
-To setup visible tabs for gallery just configure it in CombinedGalleryConfiguration entity:
+To setup visible tabs for gallery just configure it in ```CombinedGalleryConfiguration``` entity:
 
 ```swift
   var config = VideoEditorConfig()
+  
   config.combinedGalleryConfiguration.visibleTabsInGallery = [.video, .photo]
 ```
