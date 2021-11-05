@@ -291,7 +291,7 @@ To export video after the editing is complete use these method:
     completion: @escaping ((_ success: Bool, _ error: Error?, _ exportCoverImages: ExportCoverImages?)->Void)
   )
 ```  
-See the sample export video flow [here](/Example/Example/ViewController.swift#L628). You can find the detailed video export features [here](export_flow.md).
+See the sample export video flow [here](/Example/Example/ViewController.swift#L177). You can find the detailed video export features [here](export_flow.md).
 
 ### Configure audio content
 

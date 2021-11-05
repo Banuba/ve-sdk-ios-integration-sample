@@ -112,31 +112,31 @@ The name of the icon resource must be the same as the graphic file `ID` the / lu
 
 | Default image color filter | Name      | ID      |
 | ---------- | ---------  | ----------- |
-|<img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101000_preview.imageset/glitch-1.png" width="50"> | glitch | 101000
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101001_preview.imageset/instant-1.png" width="50"> | instant  | 101001
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101000_preview.imageset/glitch-1.png" width="50"> | glitch | 101000
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101001_preview.imageset/instant-1.png" width="50"> | instant  | 101001
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101002_preview.imageset/grunge-1.png" width="50">  | grunge | 101002
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101003_preview.imageset/retro-1.png" width="50">  |  retro | 101003
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101004_preview.imageset/pinkvine-1.png" width="50">  |  pinkvine | 101004
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101005_preview.imageset/england-1.png" width="50">  |  england | 101005
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101006_preview.imageset/spark-1.png" width="50">  |  spark | 101006
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101007_preview.imageset/korben-1.png" width="50"> |  korben | 101007
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101008_preview.imageset/remy-1.png" width="50"> |  remy | 101008
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101009_preview.imageset/canada-1.png" width="50"> |  canada | 101009
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101007_preview.imageset/korben-1.png" width="50"> |  korben | 101007
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101008_preview.imageset/remy-1.png" width="50"> |  remy | 101008
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101009_preview.imageset/canada-1.png" width="50"> |  canada | 101009
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101010_preview.imageset/sunny-1.png" width="50">  |  sunny | 101010
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101011_preview.imageset/egypt-1.png" width="50"> |  egypt | 101011
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101012_preview.imageset/new_zeland-1.png" width="50">  |  bright | 101012
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101013_preview.imageset/chroma-1.png" width="50"> |  chroma | 101013
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101014_preview.imageset/byers-1.png" width="50"> |  byers | 101014
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101015_preview.imageset/lilac-1.png" width="50">  |  lilac | 101015
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101016_preview.imageset/hyla-1.png" width="50"> |  hyla | 101016
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101017_preview.imageset/bubblegum-1.png" width="50"> |  vivid | 101017
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101018_preview.imageset/vinyl-1.png" width="50">  | vinyl | 101018
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101019_preview.imageset/lux-1.png" width="50">  |  lux | 101019
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101020_preview.imageset/japan-1.png" width="50">  |  japan | 101020
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101021_preview.imageset/sunset-1.png" width="50"> |  sunset | 101021
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101022_preview.imageset/neon-1.png" width="50"> |  neon | 101022
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101023_preview.imageset/chile-1.png" width="50"> |  chile | 101023
-|  <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101024_preview.imageset/norway-1.png" width="50"> |  norway | 101024
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101013_preview.imageset/chroma-1.png" width="50"> |  chroma | 101011
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101014_preview.imageset/byers-1.png" width="50"> |  byers | 101012
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101015_preview.imageset/lilac-1.png" width="50">  |  lilac | 101013
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101012_preview.imageset/new_zeland-1.png" width="50">  |  bright | 101014
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101016_preview.imageset/hyla-1.png" width="50"> |  hyla | 101015
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101018_preview.imageset/vinyl-1.png" width="50">  | vinyl | 101016
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101019_preview.imageset/lux-1.png" width="50">  |  lux | 101017
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101011_preview.imageset/egypt-1.png" width="50"> |  egypt | 101018
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101020_preview.imageset/japan-1.png" width="50">  |  japan | 101019
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101021_preview.imageset/sunset-1.png" width="50"> |  sunset | 101020
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101017_preview.imageset/bubblegum-1.png" width="50"> |  vivid | 101021
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101022_preview.imageset/neon-1.png" width="50"> |  neon | 101022
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101023_preview.imageset/chile-1.png" width="50"> |  chile | 101023
+| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101024_preview.imageset/norway-1.png" width="50"> |  norway | 101024
 
 If you want to change the name, you need to specify the new name in the string resources:
 ```swift
