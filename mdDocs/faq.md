@@ -12,14 +12,14 @@ These are the answers to the most common questions asked about our SDK.
 9. [How does video editor work when token expires?](#9-how-does-video-editor-work-when-token-expires)
 10. [Which buttons available if Face AR disabled?](#10-which-buttons-available-if-face-ar-disabled)
 11. [I want to change screens' layout.](#11-i-want-to-change-screens-layout)
-12. [ I want to change music button position.](#12-i-want-to-change-music-button-position)
+12. [I want to change music button position.](#12-i-want-to-change-music-button-position)
 13. [How can I get a track name of the audio used in my video after export?](#13-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
 14. [I want to change the font.](#14-i-want-to-change-the-font)
 15. [I want to check whether my token is expired.](#15-i-want-to-check-whether-my-token-is-expired)
 16. [The file “luts” couldn’t be opened because there is no such file.](#16-the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
 17. [I want to add audio filters.](#17-i-want-to-add-audio-filters)
-18. [ I want to change icons and name for effects.](#18-i-want-to-change-icons-and-name-for-effects)
-19. [ I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
+18. [I want to change icons and name for effects.](#18-i-want-to-change-icons-and-name-for-effects)
+19. [I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
 
 ### 1. How do I start/stop recording with a tap?
   
