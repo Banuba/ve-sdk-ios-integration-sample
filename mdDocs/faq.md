@@ -28,8 +28,9 @@ By default, the user must hold the “record” button to film and release it to
 
 To change that, set the **captureButtonMode** property of the RecorderConfiguration entity to .video.
 
-``` json
+```swift
  var config = VideoEditorConfig()
+ 
  config.recorderConfiguration.captureButtonMode = .video
 ```
 
@@ -45,21 +46,20 @@ A mask is a bundle of files within a specific folder in the YourProject/bundleEf
 
 To do so, add the MediaTrack instance as a parameter to the presentVideoEditor method.
 
-```
+```swift
 videoEditorSDK?.presentVideoEditor(
-      from: YourViewController,
-      animated: true,
-      musicTrack: MediaTrack(...),
-      completion: {...}
-    )
+  from: YourViewController,
+  animated: true,
+  musicTrack: MediaTrack(...),
+  completion: nil
+)
 ```
 
 ### 4. How do I use the Video Editor several times from different entry points?
 
 Before you want to use VideoEditor again, you need to deinitialize your current editor instance in your [entry point class scope](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L675). You need to set 'yourVideoEditorSdkInstance' = nil after following funcs called([done](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L660) and [cancel](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L678)).
 
-```
-
+```swift
 // Video Editor Delegate implementation example
 extension ViewController: BanubaVideoEditorDelegate {
   func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
@@ -85,21 +85,18 @@ extension ViewController: BanubaVideoEditorDelegate {
     )
   }
 }
-
 ```
 
 Use the following approach if you want to [create BanubaVideoEditor instance](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L42) again. 
 
 For example on your tap button action:
 
-```
-
-@IBAction func videoEditorButtonTapped(...) {
+```swift
+@IBAction func videoEditorButtonTapped(_ sender: UIButton) {
    if 'yourVideoEditorSdkInstance' = nil {
       'yourVideoEditorSdkInstance' = BanubaVideoEditor(...)
    }
 }
-
 ```
 
 ### 5. How do I add a color filter (LUT)?
@@ -192,22 +189,25 @@ If you want to change the name, you need to specify the new name in the string r
 "com.banuba.filter.name.bright" = "Bright";
 ```
 
-### 6. I want to enabled slideshow animation 
+### 6. I want to enable slideshow animation 
 
-To be able to turn off slideshow animation use following property of RecorderConfiguration and CombinedGalleryConfiguration entities.
+To be able to turn off slideshow animation use following property of ```RecorderConfiguration``` and ```CombinedGalleryConfiguration``` entities.
 
-```
-let videoEditorConfig = VideoEditorConfig()
+```swift
+let config = VideoEditorConfig()
 
-videoEditorConfig.recorderConfiguration.shouldUseImageEffect = true
-videoEditorConfig.combinedGalleryConfiguration.shouldUseImageEffect = true
-
+config.combinedGalleryConfiguration.isPhotoSequenceAnimationEnabled = true
+config.recorderConfiguration.isPhotoSequenceAnimationEnabled = true
 ```
 ### 7. I want to change cursor color
 
-All you need is just to set your color into **cursorColor: UIColor** parameter in MainOverlayViewControllerConfig entity.
+All you need is just to set your color into ```cursorColor``` parameter in ```MainOverlayViewControllerConfig``` entity.
 
-Default flag is false.
+```swift
+let config = VideoEditorConfig()
+
+config.overlayEditorConfiguration.mainOverlayViewControllerConfig.cursorColor = .white
+```
 
 ### 8. I want to change progress bar position
 
@@ -215,13 +215,12 @@ Progress bar position contains two types of layout:
 - top
 - bottom (**by default**)
 
-To change progress bar position you need to modify **progressBarPosition** property of **RecorderConfiguration** entity.
+To change progress bar position you need to modify ```progressBarPosition``` property of ```RecorderConfiguration``` entity.
 
-```
+```swift
+let config = VideoEditorConfig()
 
-let videoEditorConfig = VideoEditorConfig()
-videoEditorConfig.recorderConfiguration.progressBarPosition = .top
-
+config.recorderConfiguration.progressBarPosition = .top
 ```
 
 ### 9. How does video editor work when token expires?
@@ -238,7 +237,7 @@ videoEditorConfig.recorderConfiguration.progressBarPosition = .top
  
  ### 10. Which buttons available if Face AR disabled?
  
- AdditionalEffectsButtons contains options set which describes buttons' identifiers. 
+ AdditionalEffectsButtons contains options set which describes buttons identifiers. 
  
  Without Face AR you could use buttons with following identifiers. 
  
@@ -258,14 +257,21 @@ videoEditorConfig.recorderConfiguration.progressBarPosition = .top
  - time
  - color
 
- ### 11. I want to change screens' layout.
+ ### 11. I want to change screens layout.
  
  There are two screens which could be modified with additional layout:
  
  - Camera
  - Postprocessing
 
-To be able to change layout you need to set **useHorizontalVersion** equals true. This properties are parts of RecorderConfiguration and EditorConfiguration entities.
+To be able to change layout you need to set ```useHorizontalVersion``` equals ```true```. This properties are parts of ```RecorderConfiguration``` and ```EditorConfiguration``` entities.
+
+```swift
+let config = VideoEditorConfig()
+
+config.recorderConfiguration.useHorizontalVersion = true
+config.editorConfiguration.useHorizontalVersion = true
+```
 
 ### 12. I want to change music button position.
 
@@ -277,8 +283,21 @@ The music button consists of three positions:
 
 <img src="screenshots/bottom.PNG" width="150" /> <img src="screenshots/center.PNG" width="150" /> <img src="screenshots/top.PNG" width="150" />
 
+To be able to change the location of the button, you need to set the desired value in the array with additionalEffectsButtons, for the button with the identifier ```.sound```, set up the ```position``` property.
 
-To be able to change the location of the button, you need to set the desired value in the array with additionalEffectsButtons, for the button with the identifier **.sound**, set up the [position](/Example/Example/Extension/RecorderConfiguration.swift#L72) property. 
+```swift
+let config = VideoEditorConfig()
+
+config.recorderConfiguration.additionalEffectsButtons = [
+  AdditionalEffectsButtonConfiguration(
+    identifier: .sound,
+    imageConfiguration: ImageConfiguration(imageName: ""),
+    selectedImageConfiguration: ImageConfiguration(imageName: ""),
+    titlePosition: .bottom,
+    position: .top
+  ),
+] 
+```
 
 ### 13. How can I get a track name of the audio used in my video after export?
 ```swift
@@ -304,6 +323,8 @@ public var originalURL: URL
 public var title: String
 ///Track id
 public var id: Int32
+/// Track volume
+public var volume: Float
 ...
 }
 ```
@@ -323,36 +344,36 @@ public var musicTrack: MediaTrack? { get }
 
 You can change the font for the whole video editor by calling in `VideoEditorConfig` this method:
  
- ```swift
+```swift
   func applyFont(_ font: UIFont)
 ```
 or change for each screen separately by calling the appropriate methods:
 ```swift
-  func updateAlertFonts(_ font: UIFont)
+  func updateFullScreenActivityFonts(_ font: UIFont)
   
   func updateRecorderFonts(_ font: UIFont)
   
-  func updateMultiTrimFonts(_ font: UIFont)
+  func updateAlbumsFonts(_ font: UIFont)
   
   func updateEditorFonts(_ font: UIFont)
   
   func updateToastFonts(_ font: UIFont)
   
-  func updateFullScreenActivityFonts(_ font: UIFont)
-  
-  func updateAlbumsFonts(_ font: UIFont)
-  
   func updateTextEditorFonts(_ font: UIFont)
   
   func updateSlideShowFonts(_ font: UIFont)
   
-  func updateTrimGalleryVideoFonts(_ font: UIFont)
+  func updateTrimVideoFonts(_ font: UIFont)
+  
+  func updateTrimVideosFonts(_ font: UIFont)
   
   func updateFilterFonts(_ font: UIFont)
   
   func updateVideoCoverSelectionFonts(_ font: UIFont)
   
   func updateExtendedVideoCoverSelectionFonts(_ font: UIFont)
+  
+  func updateAlertFonts(_ font: UIFont)
 ```
 
 Changing the font does not affect its size. The font size will be taken by default or specified by you in the entity configuration.
@@ -454,6 +475,7 @@ Then the instance of the ExampleVoiceFilterProvider needs to be passed to the co
 
 ```swift
   var config = VideoEditorConfig()
+  
   config.musicEditorConfiguration.audioTrackLineEditControllerConfig.voiceFilterProvider = ExampleVoiceFilterProvider()
 ```
 
