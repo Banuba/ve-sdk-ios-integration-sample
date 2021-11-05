@@ -121,7 +121,7 @@ public protocol MusicEditorExternalViewControllerFactory: AnyObject {
   func makeRecorderCountdownAnimatableView() -> MusicEditorCountdownAnimatableView?
 }
 ```
-Your class should have variable and methods below:
+Here's the example of the methods implementation for using Banuba Audiobrowser:
 ```swift
   var audioBrowserController: TrackSelectionViewController?
   
@@ -137,7 +137,7 @@ Your class should have variable and methods below:
     return nil
   }
 ```
-See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Helpers/MusicEditorViewControllerFactory.swift#L14).
+See an example in sample [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Helpers/MusicEditorViewControllerFactory.swift#L14).
 
 ### Step 5
 
