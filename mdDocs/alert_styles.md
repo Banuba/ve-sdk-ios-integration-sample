@@ -26,7 +26,7 @@ Refuse button background color
 
 Agree button background color
 
-- [refuseButtonTextConfig: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L17)
+- [refuseButtonTextConfig: TextButtonConfiguration](/Example/Example/Extension/AlertViewConfiguration.swift#L17)
 
 Refuse button text configuratin
 
