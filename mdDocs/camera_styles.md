@@ -15,7 +15,7 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   BackButtonConfiguration setups back button style
   
-  - [backToDraftsButton: BanubaButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L53)
+  - [backToDraftsButton: BanubaButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   BanubaButtonConfiguration setups back to drafts button
   
@@ -23,19 +23,19 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   ImageName setups remove button UIImage
   
-  - [progressLabelConfiguration: TextConfiguration?](/Example/Example/Extension/RecorderConfiguration.swift#L53)
+  - [progressLabelConfiguration: TextConfiguration?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   Setups top progress label style. Only for horizontal recorder.
   
-  - [floatingLineViewConfiguration: TextConfiguration?](/Example/Example/Extension/RecorderConfiguration.swift#L53)
+  - [floatingLineViewConfiguration: TextConfiguration?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   Setups top floating line view style.
   
-  - [floatingLineViewWidth: CGFloat?](/Example/Example/Extension/RecorderConfiguration.swift#L53)
+  - [floatingLineViewWidth: CGFloat?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   Setup width for floatingLineView. Default is 150.
   
-  - [сaptureButtonMode: CaptureButtonMode](/Example/Example/Extension/RecorderConfiguration.swift#L54)
+  - [сaptureButtonMode: CaptureButtonMode](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   CaptureButtonMode contains two varieties:
   1. Mixed. Photo and video camera functionality.
@@ -45,7 +45,7 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   RecordButtonConfiguration setups capture button style
   
-  - [recordButtonProvider: RecordButtonProvider?](/Example/Example/Extension/RecorderConfiguration.swift#L55)
+  - [recordButtonProvider: RecordButtonProvider?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   RecordButtonProvider provides access to the possibility for creating capture button
   
@@ -109,27 +109,27 @@ Here we set up the styles for the recording screen. These configs are for custom
 
    Spacing between button and circular timeline
    
-  - [isDefaultFrontCamera: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L152)
+  - [isDefaultFrontCamera: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
 
   Value provides the ability to open front camera by default
   
-  - [isMusicTitleFloatingLineEnabled: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L152)
+  - [isMusicTitleFloatingLineEnabled: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
 
   Value setups music title floating view is enabled state
     
-  - [useHEVCCodecIfPossible: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L152)
+  - [useHEVCCodecIfPossible: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
 
   The intermediate video will encoded with HEVC (H.265) encoder if it is available on the current device. Better quality, low size, better performance
     
-  - [isPhotoSequenceAnimationEnabled: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L152)
+  - [isPhotoSequenceAnimationEnabled: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
 
   Should use animation for photo sequences
     
-  - [progressBarPosition: ProgressBarPosition](/Example/Example/Extension/RecorderConfiguration.swift#L153)
+  - [progressBarPosition: ProgressBarPosition](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   Presentation of progress bar. Default is bottom
   
-  - muteMicrophoneForPIP: Bool
+  - [muteMicrophoneForPIP: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   Mute microphone on PIP screen. Default is false.
   
