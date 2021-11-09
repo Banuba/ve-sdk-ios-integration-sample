@@ -147,9 +147,9 @@ Please, refer VideoEditor SDK SPM dependencies:
 | BanubaUtilities             | https://github.com/Banuba/BanubaUtilities-iOS             |
 | BanubaLicenseServicingSDK   | https://github.com/Banuba/BanubaLicenseServicingSDK       |
 | BanubaVideoEditorGallerySDK | https://github.com/Banuba/BanubaVideoEditorGallerySDK     |
-| BanubaOverlayEditorSDK      | https://github.com/Banuba/BanubaLicenseServicingSDK       |
+| BanubaOverlayEditorSDK      | https://github.com/Banuba/BanubaOverlayEditorSDK-iOS      |
 | BanubaMusicEditorSDK        | https://github.com/Banuba/BanubaMusicEditorSDK-iOS        |
-| VideoEditor                 | https://github.com/Banuba/BanubaLicenseServicingSDK       |
+| VideoEditor                 | https://github.com/Banuba/VideoEditor-iOS                 |
 | BanubaAudioBrowserSDK       | https://github.com/Banuba/BanubaAudioBrowserSDK-iOS       |
 | BanubaSDKSimple             | https://github.com/Banuba/BanubaSDKSimple-IOS             |
 | BanubaVideoEditorEffectsSDK | https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS |
