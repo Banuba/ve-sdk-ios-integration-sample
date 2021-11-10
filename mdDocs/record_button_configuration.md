@@ -22,7 +22,11 @@ public struct RecordButtonConfiguration {
   public var width: CGFloat
   /// Record button height
   public var height: CGFloat
-  /// Button resize scale for capture state
-  public var recordingScale: CGFloat
+  /// Button outer layer resize scale for capture state
+  public var outerLayerScale: CGFloat
+  /// Button inner layer resize scale for capture state
+  public var innerLayerScale: CGFloat
+  /// Spacing between button and circular timeline
+  public var spacingBetweenButtonAndCircular: CGFloat
 }
 ```  

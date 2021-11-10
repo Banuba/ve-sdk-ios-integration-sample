@@ -6,7 +6,7 @@ Styles for the Hands Free screen are configured here. This screen is needed to t
 
 Use the properties below to customize the Hands Free screen.
 
- - [disableOptionTitle: String](/Example/Example/Extension/HandsfreeConfiguration.swift#L7)
+ - [timerDisabledOptionTitle: String](/Example/Example/Extension/HandsfreeConfiguration.swift#L7)
  
  Showing the title for the timer
  
@@ -14,11 +14,11 @@ Use the properties below to customize the Hands Free screen.
  
  The selector view color
  
-  - [selectorTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L9)
+ - [selectorTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L9)
  
  The selector view text color
  
-  - [optionBackgroundColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L10)
+ - [optionBackgroundColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L10)
  
  The timer option selection view background color
  
@@ -32,76 +32,83 @@ Use the properties below to customize the Hands Free screen.
  
  - [backgroundColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L13)
 
-  The timer option view background color
+ The timer option view background color
   
-  - [cornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L14)
+ - [backgroundViewColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L13)
+
+ The  background view background configuration
   
-  The HandsFreeViewController corner radius
+ - [cornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L14)
   
-  - [sliderCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L15)
+ The HandsFreeViewController corner radius
   
-  The slider corner radius
+ - [sliderCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L15)
   
-  - [barCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L16)
+ The slider corner radius
   
-  The bar corner radius
+ - [barCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L16)
   
-  - [selectorEdgeInsets: UIEdgeInsets](/Example/Example/Extension/HandsfreeConfiguration.swift#L17)
+ The bar corner radius
   
-  The selector views edge insets
+ - [selectorEdgeInsets: UIEdgeInsets](/Example/Example/Extension/HandsfreeConfiguration.swift#L17)
   
-  - [activeThumbAndLineColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L18)
+ The selector views edge insets
   
-  The color of the activated switch of active lines in slider
+ - [activeThumbAndLineColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L18)
   
-  - [inactiveThumbAndLineColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L19)
+ The color of the activated switch of active lines in slider
   
-  The color of the inactivated switch of inactive lines in slider
+ - [inactiveThumbAndLineColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L19)
   
-  - [minVideoDuration: Double](/Example/Example/Extension/HandsfreeConfiguration.swift#L20)
+ The color of the inactivated switch of inactive lines in slider
   
-   The minimum value for video duration.
-   Default 1.0
+ - [minVideoDuration: Double](/Example/Example/Extension/HandsfreeConfiguration.swift#L20)
+  
+ The minimum value for video duration. Default 1.0
    
-   - [buttonCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L21)
+ - [buttonCornerRadius: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L21)
    
-   The button CornerRadius
+ The button CornerRadius
    
-   - [buttonBackgroundColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L22)
+ - [buttonBackgroundColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L22)
    
-   The button background color
+ The button background color
    
-   - [switchOnTintColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L23)
+ - [switchOnTintColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L23)
    
-   The switch background color
+ The switch background color
    
-   - [timerTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L24)
+ - [timerTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L24)
    
-   The timer title color
+ The timer title color
    
-   - [modeTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L25)
+ - [modeTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L25)
     
-   The mode title color
+ The mode title color
     
-   - [dragTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L26)
+ - [dragTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L26)
     
-   The drag title color
+ The drag title color
    
-   - [buttonTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L27)
+ - [buttonTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L27)
+      
+ The button title color
+   
+ - [currentValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L28)
     
-   The button title color
+ The current value text color
    
-   - [currentValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L28)
-    
-   The current value text color
+ - [minimumValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L29)
    
-   - [minimumValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L29)
+ The minimum value text color
    
-   The minimum value text color
+ - [maximumValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L30)
    
-   - [maximumValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L30)
+ The maximum value text color
    
-   The maximum value text color
+ - [thumbLineViewColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L30)
+   
+ The thumb line view color
 
   ![img](screenshots/HandsfreeConfiguration.png)
   

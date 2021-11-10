@@ -18,3 +18,4 @@
 | audioBrowser.stop.using | Stop using | Stop using button title
 | audioBrowser.my.library | My library | My library button title
 | audioBrowser.no.matches | No matches | No matches placeholder text
+| audioBrowser.no.tracks | No tracks | No tracks placeholder text
