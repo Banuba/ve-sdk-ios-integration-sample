@@ -414,7 +414,8 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 
 ## Migration guides
 
-[1.0.15](mdDocs/releases/1.0.15.md)  
-[1.0.16](mdDocs/releases/1.0.16.md)  
-[1.0.17](mdDocs/releases/1.0.17.md)  
-[1.0.18](mdDocs/releases/1.0.18.md)
+[1.0.15](https://www.notion.so/vebanuba/1-0-15-c871422c06254f5f955952d1ffa5a51b)  
+[1.0.16](https://www.notion.so/vebanuba/1-0-16-4dff1bb8bde2433697860ad77e17215c)  
+[1.0.17](https://www.notion.so/vebanuba/1-0-17-24148881b66d48a5a7daa0a891a4cc3f)  
+[1.0.18](https://www.notion.so/vebanuba/1-0-18-d30441bdb9c44bfcb7f12d20b69a9977)
+[1.0.19](https://www.notion.so/vebanuba/1-19-0-7954637332964fc6ba87f477db112fdf)
