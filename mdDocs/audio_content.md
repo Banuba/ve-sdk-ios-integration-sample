@@ -59,6 +59,7 @@ protocol TrackSelectionViewControllerDelegate: AnyObject {
     didSelectFile url: URL,
     isEditable: Bool,
     title: String,
+    /// The id parameter should be a Int32 number from 6 to it's maximum value
     id: Int32
   )
   
