@@ -2,54 +2,62 @@ import UIKit
 import BanubaVideoEditorSDK
 
 extension ViewController {
-  func updateMultiTrimConfiguration(_ configuration: MultiTrimConfiguration) -> MultiTrimConfiguration {
+  func updateTrimVideosConfiguration(_ configuration: TrimVideosConfiguration) -> TrimVideosConfiguration {
     var configuration = configuration
     
-    configuration.saveButton.cornerRadius = 4.0
-    configuration.saveButton.backgroundColor = .clear
-    configuration.saveButton.textConfiguration.color = UIColor(
-      red: 6, green: 188, blue: 193
+    configuration.backButtonConfiguration = ImageButtonConfiguration(
+      imageConfiguration: ImageConfiguration(imageName: "ic_close")
     )
     
-    configuration.backButton.position = .left
-    configuration.backButton = BackButtonConfiguration(
-      imageConfiguration: ImageConfiguration(imageName: "back_arrow")
+    configuration.nextButtonConfiguration = ImageButtonConfiguration(
+    imageConfiguration: ImageConfiguration(imageName: "ic_done")
     )
     
-    configuration.rotateButton?.imageConfiguration = ImageConfiguration(
-      imageName: "editor.rotate"
+    configuration.editVideoItemTitleConfiguration = TextConfiguration(
+      font: .systemFont(ofSize: 11.0),
+      color: .white
+    )
+  
+    configuration.editVideoItems = [
+      TrimVideoCompositionEditItem(
+        title: NSLocalizedString("com.banuba.trim.rotateEditButtonTitle", comment: ""),
+        icon: ImageConfiguration(imageName: "ic_rotate"),
+        type: .rotate
+      ),
+      TrimVideoCompositionEditItem(
+        title: NSLocalizedString("com.banuba.trim.deleteEditButtonTitle", comment: ""),
+        icon: ImageConfiguration(imageName: "ic_trash"),
+        type: .delete
+      ),
+      TrimVideoCompositionEditItem(
+        title: NSLocalizedString("com.banuba.trim.trimEditButtonTitle", comment: ""),
+        icon: ImageConfiguration(imageName: "ic_split"),
+        type: .trim
+      ),
+    ]
+    
+    configuration.addGalleryVideoImageButtonConfiguration = ImageButtonConfiguration(
+      imageConfiguration: ImageConfiguration(imageName: "btn_add_video_sticky")
     )
     
-    configuration.timeLimeConfiguration.itemsCornerRadius = .zero
-    configuration.trimTimeLineConfiguration.draggersCornerRadius = 8.0
-    configuration.trimTimeLineConfiguration.draggerImageName = "trim_left"
-    configuration.trimTimeLineConfiguration.doneButtonConfiguration.style.color = UIColor(
-      red: 6, green: 188, blue: 193
+    configuration.addGalleryVideoButtonBackgroundConfiguration = BackgroundConfiguration(
+      cornerRadius: 4.0,
+      color: UIColor.clear
     )
-    configuration.trimTimeLineConfiguration.trimControlsColor = UIColor(
+    
+    configuration.trimTimelineConfiguration.trimContentCornerRadius = .zero
+    configuration.trimTimelineConfiguration.draggerConfiguration.backgroundConfiguraiton.cornerRadius = 8.0
+    configuration.trimTimelineConfiguration.draggerConfiguration.draggerImageName = "trim_left"
+    configuration.trimTimelineConfiguration.controlsColor = UIColor(
       red: 250, green: 62, blue: 118
     )
-    configuration.trimTimeLineHeight = 50.0
     configuration.playerControlConfiguration = PlayerControlConfiguration(
       playButtonImageName: "ic_play",
       pauseButtonImageName: "ic_trim_pause"
     )
     configuration.backgroundConfiguration.cornerRadius = .zero
-    configuration.bottomViewBackgroundConfiguration.cornerRadius = .zero
     configuration.screenNameConfiguration.style = nil
-    configuration.trimSequenceEdgeInsets = .zero
-    configuration.trimSequenceHeight = 10.0
-    configuration.editedTimeLabelConfiguration.cornerRadius = .zero
-    configuration.editedTimeLabelConfiguration.errorColor = UIColor(
-      red: 250, green: 62, blue: 118
-    )
     
-    return configuration
-  }
-  
-  func updateTrimGalleryVideoConfiguration(_ configuration: TrimGalleryVideoConfiguration) -> TrimGalleryVideoConfiguration {
-    var configuration = configuration
-
     configuration.videoResolutionConfiguration = VideoResolutionConfiguration(
       default: .hd1920x1080,
       resolutions: [
@@ -70,37 +78,27 @@ extension ViewController {
       ],
       defaultThumbnailHeight: 400.0
     )
-
-    configuration.activityIndicatorConfiguration.activityLineWidth = 3.0
-    configuration.deleteGalleryVideoPartButtonConfiguration = ImageButtonConfiguration(
-      imageConfiguration: ImageConfiguration(imageName: "ic_delete_video_part")
-    )
-    configuration.galleryVideoPartsConfiguration.videoPartConfiguration.cornerRadius = .zero
-    configuration.galleryVideoPartsConfiguration.addGalleryVideoPartImageName = "add_video_part"
     
-    configuration.backButtonConfiguration.position = .left
-    configuration.backButtonConfiguration = BackButtonConfiguration(
-      imageConfiguration: ImageConfiguration(imageName: "back_arrow")
+    return configuration
+  }
+  
+  func updateTrimVideoConfiguration(_ configuration: TrimVideoConfiguration) -> TrimVideoConfiguration {
+    var configuration = configuration
+    
+    configuration.backButton = ImageButtonConfiguration(
+      imageConfiguration: ImageConfiguration(imageName: "ic_close")
     )
     
-    configuration.nextButtonConfiguration.cornerRadius = 4.0
-    configuration.nextButtonConfiguration.backgroundColor = .clear
-    configuration.nextButtonConfiguration.textConfiguration.color = UIColor(
-      red: 6, green: 188, blue: 193
+    configuration.saveButton = ImageButtonConfiguration(
+    imageConfiguration: ImageConfiguration(imageName: "ic_done")
     )
     
-    configuration.deleteToolTipLabel.color = UIColor.white
     configuration.playerControlConfiguration = PlayerControlConfiguration(
       playButtonImageName: "ic_play",
       pauseButtonImageName: "ic_trim_pause"
     )
-    configuration.videoPartsBackgroundConfiguration.cornerRadius = .zero
     configuration.backgroundConfiguration.cornerRadius = .zero
     configuration.screenNameConfiguration.style = nil
-    configuration.editedTimeLabelConfiguration.cornerRadius = .zero
-    configuration.editedTimeLabelConfiguration.errorColor = UIColor(
-      red: 250, green: 62, blue: 118
-    )
     
     return configuration
   }
