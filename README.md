@@ -158,7 +158,7 @@ Please, refer VideoEditor SDK SPM dependencies:
 | BanubaVideoEditorSDK        | https://github.com/Banuba/BanubaVideoEditorSDK-iOS        |
 | BanubaEffectPlayer          | https://github.com/Banuba/BanubaEffectPlayer-iOS          |
 | BanubaTokenStorageSDK       | https://github.com/Banuba/BanubaTokenStorageSDK-iOS       |
-| BanubaVideoEditorTrimSDK    | https://github.com/Banuba/BanubaVideoEditorTrimSDK-IOS    |
+| BanubaVideoEditorTrimSDK    | https://github.com/Banuba/BanubaVideoEditorTrimSDK-iOS    |
 
 1. Open App project -> navigate to SwiftPackages tab.
 <p align="center">
