@@ -10,37 +10,37 @@ Please use the properties below to configure the AlertController.
 
 Container corner radius
 
-- [buttonRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L8)
+- [refuseButtonRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L9)
 
-Buttons' radius
+Refuse button radius
 
-- [refuseButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L9)
+- [agreeButtonRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L8)
+
+Agree button radius
+
+- [refuseButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L24)
 
 Refuse button background color
 
-- [refuseButtonTextColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L10)
-
-Refuse button text color
-
-- [agreeButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L11)
+- [agreeButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L25)
 
 Agree button background color
 
-- [agreeButtonTextColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L12)
+- [refuseButtonTextConfig: TextButtonConfiguration](/Example/Example/Extension/AlertViewConfiguration.swift#L17)
 
-Agree button text color
+Refuse button text configuratin
 
-- [titleAligment: NSTextAlignment](/Example/Example/Extension/AlertViewConfiguration.swift#L13)
+- [agreeButtonTextConfig: TextButtonConfiguration](/Example/Example/Extension/AlertViewConfiguration.swift#L10)
 
-Main title aligment
+Agree button text configuratin
 
-- [titleFont: UIFont](/Example/Example/Extension/AlertViewConfiguration.swift#L14)
+- [titleTextConfig: TextConfiguration](/Example/Example/Extension/AlertViewConfiguration.swift#L27)
 
-Main title font
+Main title text configuratin
 
-- [buttonsFont: UIFont](/Example/Example/Extension/AlertViewConfiguration.swift#L15)
+- [messageTextCongig: TextConfiguration?](/Example/Example/Extension/AlertViewConfiguration.swift#L27)
 
-Buttons' font
+Message text configuration
 
 ![img](screenshots/AlertScreen.png)
 

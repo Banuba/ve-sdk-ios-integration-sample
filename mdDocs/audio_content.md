@@ -38,7 +38,9 @@ protocol AudioItem {
   var id: Int64 { get }
   var url: URL { get }
   var title: String? { get set }
-  var isEditable: Boo { get set }
+  /// True - display track with which the video was recorded and allow users to edit it.
+  /// False - track will be playing but not displayed.
+  var isEditable: Bool { get set }
 }
 ```
 
@@ -57,6 +59,7 @@ protocol TrackSelectionViewControllerDelegate: AnyObject {
     didSelectFile url: URL,
     isEditable: Bool,
     title: String,
+    /// The id parameter should be a Int32 number from 6 to it's maximum value
     id: Int32
   )
   
@@ -96,7 +99,7 @@ exportSession?.exportAsynchronously() {
 
 ### Step 1
 
-Add the ```BanubaAudioBrowserSDK``` dependency into your pod file containing other Video Editor SDK dependencies and setup its version (the latest is 0.0.15.2):
+Add the ```BanubaAudioBrowserSDK``` dependency into your pod file containing other Video Editor SDK dependencies and setup its version:
 
 ```swift
 pod 'BanubaAudioBrowserSDK', '1.0.18'
@@ -108,4 +111,48 @@ Configure mubert token to use external music provider:
 ```swift
 let mubertPat = "Your mubert pat"
 BanubaAudioBrowser.setMubertPat(mubertPat)
+```
+
+### Step 4
+
+Your class should implement ```MusicEditorExternalViewControllerFactory``` protocol.
+```swift
+public protocol MusicEditorExternalViewControllerFactory: AnyObject {
+  var audioBrowserController: TrackSelectionViewController? { get set }
+  func makeTrackSelectionViewController(selectedAudioItem: AudioItem?) -> TrackSelectionViewController?
+  func makeEffectSelectionViewController(selectedAudioItem: AudioItem?) -> EffectSelectionViewController?
+  func makeRecorderCountdownAnimatableView() -> MusicEditorCountdownAnimatableView?
+}
+```
+Here's the example of the methods implementation for using Banuba Audiobrowser:
+```swift
+  var audioBrowserController: TrackSelectionViewController?
+  
+  func makeTrackSelectionViewController(selectedAudioItem: AudioItem?) -> TrackSelectionViewController? {
+    return nil
+  }
+  
+  func makeEffectSelectionViewController(selectedAudioItem: AudioItem?) -> EffectSelectionViewController? {
+    return nil
+  }
+  
+  func makeRecorderCountdownAnimatableView() -> MusicEditorCountdownAnimatableView? {
+    return nil
+  }
+```
+See an example in sample [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Helpers/MusicEditorViewControllerFactory.swift#L14).
+
+### Step 5
+
+The class in which you have implemented the ``` MusicEditorExternalViewControllerFactory ``` protocol must be passed to ```musicEditorFactory```.
+
+See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L30).
+
+### Step 6
+
+Banuba Audiobrowser can be configured to work with online music providers or local audio files.
+```swift
+  // True - Music provider tracks available.
+  // False - Only local audio files available.
+AudioBrowserConfig.shared.isExternalMusicEnabled = true
 ```

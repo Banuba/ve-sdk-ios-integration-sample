@@ -59,14 +59,14 @@ Implement custom `UIViewController` inherited from `GalleryViewController`
             /// Use this field to control maximum selection items.
             public let selectedItemsCount: Int?
             /// Setups picker mode if isMultiselectModeEnabled is false.
-        /// Otherwise, multiselection mode enabled.
-        public let isMultiselectModeEnabled: Bool
-        /// Setups gallery video duration fetched from user gallery supported by BanubaVideoEditorSDK.
-        /// By default is 3.0
-        public let minimumGalleryVideoDuration: TimeInterval
-        /// Setups allowed media types which user can select in gallery
-        public let allowedMediaTypes: [GalleryMediaType]
-    }
+            /// Otherwise, multiselection mode enabled.
+            public let isMultiselectModeEnabled: Bool
+            /// Setups gallery video duration fetched from user gallery supported by BanubaVideoEditorSDK.
+            /// By default is 3.0
+            public let minimumGalleryVideoDuration: TimeInterval
+            /// Setups allowed media types which user can select in gallery
+            public let allowedMediaTypes: [GalleryMediaType]
+        }
 
     @objc public enum GalleryMediaType: Int, CaseIterable {
         case video

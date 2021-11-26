@@ -29,6 +29,7 @@
 		639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA0162547002C0011C153 /* LaunchScreen.storyboard */; };
 		8A32EED0258CB5430098F852 /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EECF258CB5430098F852 /* bundleEffects */; };
 		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
+		8A4B87E7275150AB00DAF964 /* BanubaVideoEditorTrimSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8A4B87E6275150AB00DAF964 /* BanubaVideoEditorTrimSDK */; };
 		8A8C2514258CC35400FDED05 /* AnalyticsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C250E258CC35400FDED05 /* AnalyticsExample.swift */; };
 		8A8C2515258CC35400FDED05 /* MusicEditorViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C250F258CC35400FDED05 /* MusicEditorViewControllerFactory.swift */; };
 		8A8C2516258CC35400FDED05 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2510258CC35400FDED05 /* ViewControllerFactory.swift */; };
@@ -101,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD7FE0C26F354580072AF33 /* BanubaVideoEditorGallerySDK in Frameworks */,
+				8A4B87E7275150AB00DAF964 /* BanubaVideoEditorTrimSDK in Frameworks */,
 				8AD7FE1526F354C60072AF33 /* VideoEditor in Frameworks */,
 				8AD7FE1826F355030072AF33 /* BanubaAudioBrowserSDK in Frameworks */,
 				8AD7FE0026F353CE0072AF33 /* BanubaSDKServicing in Frameworks */,
@@ -246,6 +248,7 @@
 				8AD7FE2C26F355AA0072AF33 /* BanubaEffectPlayer */,
 				8AD7FE2F26F358370072AF33 /* Lottie */,
 				8AD7FE3226F358720072AF33 /* BSImagePicker */,
+				8A4B87E6275150AB00DAF964 /* BanubaVideoEditorTrimSDK */,
 			);
 			productName = Example;
 			productReference = 639DA008254700290011C153 /* Example.app */;
@@ -293,6 +296,7 @@
 				8AD7FE2B26F355AA0072AF33 /* XCRemoteSwiftPackageReference "BanubaEffectPlayer-iOS" */,
 				8AD7FE2E26F358370072AF33 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				8AD7FE3126F358720072AF33 /* XCRemoteSwiftPackageReference "BSImagePicker" */,
+				8A4B87E5275150AB00DAF964 /* XCRemoteSwiftPackageReference "BanubaVideoEditorTrimSDK-iOS" */,
 			);
 			productRefGroup = 639DA009254700290011C153 /* Products */;
 			projectDirPath = "";
@@ -581,12 +585,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8A4B87E5275150AB00DAF964 /* XCRemoteSwiftPackageReference "BanubaVideoEditorTrimSDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorTrimSDK-iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 1.20.0;
+			};
+		};
 		8AD7FDFE26F353CE0072AF33 /* XCRemoteSwiftPackageReference "BanubaSDKServicing-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaSDKServicing-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE0126F353E20072AF33 /* XCRemoteSwiftPackageReference "BNBLicenseUtils-iOS" */ = {
@@ -594,7 +606,7 @@
 			repositoryURL = "https://github.com/Banuba/BNBLicenseUtils-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE0426F353F20072AF33 /* XCRemoteSwiftPackageReference "BanubaUtilities-iOS" */ = {
@@ -602,7 +614,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaUtilities-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE0726F354070072AF33 /* XCRemoteSwiftPackageReference "BanubaLicenseServicingSDK" */ = {
@@ -610,7 +622,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaLicenseServicingSDK";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE0A26F354580072AF33 /* XCRemoteSwiftPackageReference "BanubaVideoEditorGallerySDK" */ = {
@@ -618,7 +630,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorGallerySDK";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE0D26F354740072AF33 /* XCRemoteSwiftPackageReference "BanubaOverlayEditorSDK-iOS" */ = {
@@ -626,7 +638,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaOverlayEditorSDK-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE1026F354AD0072AF33 /* XCRemoteSwiftPackageReference "BanubaMusicEditorSDK-iOS" */ = {
@@ -634,7 +646,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaMusicEditorSDK-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE1326F354C60072AF33 /* XCRemoteSwiftPackageReference "VideoEditor-iOS" */ = {
@@ -642,7 +654,7 @@
 			repositoryURL = "https://github.com/Banuba/VideoEditor-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE1626F355030072AF33 /* XCRemoteSwiftPackageReference "BanubaAudioBrowserSDK-iOS" */ = {
@@ -650,7 +662,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE1926F355150072AF33 /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */ = {
@@ -658,7 +670,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDKSimple-IOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE1C26F355250072AF33 /* XCRemoteSwiftPackageReference "BanubaVideoEditorEffectsSDK-iOS" */ = {
@@ -666,7 +678,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE1F26F355460072AF33 /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */ = {
@@ -674,7 +686,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaARCloudSDK-IOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE2526F3556D0072AF33 /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */ = {
@@ -682,7 +694,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDK-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE2826F3557E0072AF33 /* XCRemoteSwiftPackageReference "BanubaVideoEditorSDK-iOS" */ = {
@@ -690,7 +702,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorSDK-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE2B26F355AA0072AF33 /* XCRemoteSwiftPackageReference "BanubaEffectPlayer-iOS" */ = {
@@ -698,7 +710,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaEffectPlayer-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 1.19.0;
+				version = 1.20.0;
 			};
 		};
 		8AD7FE2E26F358370072AF33 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
@@ -720,6 +732,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8A4B87E6275150AB00DAF964 /* BanubaVideoEditorTrimSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A4B87E5275150AB00DAF964 /* XCRemoteSwiftPackageReference "BanubaVideoEditorTrimSDK-iOS" */;
+			productName = BanubaVideoEditorTrimSDK;
+		};
 		8AD7FDFF26F353CE0072AF33 /* BanubaSDKServicing */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8AD7FDFE26F353CE0072AF33 /* XCRemoteSwiftPackageReference "BanubaSDKServicing-iOS" */;

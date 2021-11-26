@@ -9,6 +9,10 @@ Use the properties below to customize the CombinedGallery.
 
 VideoResolutionConfiguration setups editor options for rendering video
 
+- [visibleTabsInGallery: GalleryMediaType](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L25)
+
+GalleryMediaType setups visible tabs for gallery
+
 - [galleryItemConfiguration: GalleryItemConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L8)
 
 GalleryItemConfiguration setups gallery item style for collection view cell
@@ -48,6 +52,38 @@ TextButtonConfiguration setups gallery type buttons' style
 - [galleryTypeUnderlineColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L24)
   
 Color for underline view
+
+- [draftsButtonConfiguration: SaveButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+  
+SaveButtonConfiguration setups drafts button style
+
+- [isPhotoSequenceAnimationEnabled: Bool](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+  
+Should use animation for photo sequences
+
+- [importItemsLabelConfiguration: TextConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+  
+TextConfiguration setups import items label style
+
+- [bottomViewConfiguration: BackgroundConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+  
+BackgroundConfiguration setups configuration of bottom view
+
+- [isDraftsHidden: Bool](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+  
+Setups drafts button visibility. VE SDK setups this field to true for picker mode displaying and etc
+
+- [visibleTabsInGallery: GalleryMediaType](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+  
+Setup visible tabs for gallery
+  
+- [isCloseButtonHidden: Bool](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+  
+Describes if close button hidden
+  
+- [backgroundColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+  
+Setups view background color
 
 ![img](screenshots/Gallery.png)
 

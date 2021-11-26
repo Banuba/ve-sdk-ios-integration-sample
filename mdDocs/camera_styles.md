@@ -14,12 +14,28 @@ Here we set up the styles for the recording screen. These configs are for custom
   - [backButton: BackButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L52)
   
   BackButtonConfiguration setups back button style
-
+  
+  - [backToDraftsButton: BanubaButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+  
+  BanubaButtonConfiguration setups back to drafts button
+  
   - [removeButtonImageName: String](/Example/Example/Extension/RecorderConfiguration.swift#L53)
   
   ImageName setups remove button UIImage
   
-  - [сaptureButtonMode: CaptureButtonMode](/Example/Example/Extension/RecorderConfiguration.swift#L54)
+  - [progressLabelConfiguration: TextConfiguration?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+  
+  Setups top progress label style. Only for horizontal recorder.
+  
+  - [floatingLineViewConfiguration: TextConfiguration?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+  
+  Setups top floating line view style.
+  
+  - [floatingLineViewWidth: CGFloat?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+  
+  Setup width for floatingLineView. Default is 150.
+  
+  - [сaptureButtonMode: CaptureButtonMode](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   CaptureButtonMode contains two varieties:
   1. Mixed. Photo and video camera functionality.
@@ -29,11 +45,15 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   RecordButtonConfiguration setups capture button style
   
+  - [recordButtonProvider: RecordButtonProvider?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+  
+  RecordButtonProvider provides access to the possibility for creating capture button
+  
   - [additionalEffectsButtons: [AdditionalEffectsButtonConfiguration]](/Example/Example/Extension/RecorderConfiguration.swift#L62)
   
-   AdditionalEffectsButtonConfiguration array setups all of the camera screen control buttons' styles
+  AdditionalEffectsButtonConfiguration array setups all of the camera screen control buttons' styles
   
-  - [speedButton: SpeedButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L111)
+  - [speedBarButtons: [SpeedBarButtonsConfiguration]](/Example/Example/Extension/RecorderConfiguration.swift#L62)
   
   SpeedButtonConfiguration setups speed button style
  
@@ -88,14 +108,30 @@ Here we set up the styles for the recording screen. These configs are for custom
   - [isDynamicMusicTitle: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L152)
 
    Spacing between button and circular timeline
+   
+  - [isDefaultFrontCamera: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+
+  Value provides the ability to open front camera by default
+  
+  - [isMusicTitleFloatingLineEnabled: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+
+  Value setups music title floating view is enabled state
     
-   - [spacingBetweenButtonAndCircular: CGFloat](/Example/Example/Extension/RecorderConfiguration.swift#L153)
+  - [useHEVCCodecIfPossible: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+
+  The intermediate video will encoded with HEVC (H.265) encoder if it is available on the current device. Better quality, low size, better performance
+    
+  - [isPhotoSequenceAnimationEnabled: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+
+  Should use animation for photo sequences
+    
+  - [progressBarPosition: ProgressBarPosition](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
-  Value provides the ability to dynamically changing the title of the song when new audio is adding
+  Presentation of progress bar. Default is bottom
   
-  - shouldUseImageEffect: Bool
+  - [muteMicrophoneForPIP: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
-  Value provides the ability for enabling animation for slideshow
+  Mute microphone on PIP screen. Default is false.
   
   ![img](screenshots/RecorderConfiguration.png)
   

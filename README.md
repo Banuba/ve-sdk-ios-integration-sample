@@ -4,10 +4,11 @@
 Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to quickly integrate short video functionality into your mobile app. On this page, we will explain how to do so on iOS.
 
 <p align="center">
-<img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="23.7%" height="auto">&nbsp;
-<img src="mdDocs/gif/audio_browser.gif" alt="Screenshot" width="23.7%%" height="auto"/>&nbsp;
-<img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="23.7%" height="auto"/>&nbsp;
-<img src="mdDocs/gif/pip_preview.gif" alt="Screenshot" width="23.7%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/gif_background.gif" alt="Screenshot" width="19%" height="auto">&nbsp;
+<img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="19%" height="auto">&nbsp;
+<img src="mdDocs/gif/audio_browser.gif" alt="Screenshot" width="19%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="19%" height="auto"/>&nbsp;
+<img src="mdDocs/gif/pip_preview.gif" alt="Screenshot" width="19%" height="auto"/>&nbsp;
 </p>
 
 - [Requirements](#Requirements)
@@ -18,20 +19,20 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 - [Token](#Token)
 - [Connecting with AR cloud](#Connecting-with-AR-cloud)
 - [What can you customize?](#What-can-you-customize)
-- [Configure AR cloud](#Configure-AR-cloud)
 - [Getting Started](#Getting-Started)
     + [SwiftPackageManager](#SwiftPackageManager)
     + [CocoaPods](#CocoaPods)
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)  
-    + [Disable Face AR](#Disable-Face-AR)
+    + [Face AR](#Face-AR)
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
+    + [Configure masks and filters order](#Configure-masks-and-filters-order)
     + [Configure watermark](#Configure-watermark)
     + [Configure stickers content](#Configure-stickers-content)
     + [Icons](#Icons)
     + [Localization](#Localization)
-- [FAQ](#FAQ)
+- [FAQ](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/faq.md)
 - [Third party libraries](#Third-party-libraries)
 
 ## Requirements
@@ -39,8 +40,8 @@ This is what you need to run the AI Video Editor SDK
 
 - iPhone devices 6+
 - Swift 5+
-- Xcode 12.4+
-- iOS 11.0+
+- Xcode 13.0+
+- iOS 12.0+
 Unfortunately, It isn't optimized for iPads.
 
 ## Dependencies
@@ -90,7 +91,7 @@ There is nothing complicated about it - [contact us](https://www.banuba.com/vide
 ## Token 
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
-Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L29).  
+Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L35).  
 
 Also you can load token from [Firebase](https://firebase.google.com/docs/database/android/start). [Check](mdDocs/token_on_firebase.md) to configure firebase
 
@@ -104,7 +105,8 @@ We understand that the client should have options to brand video editor to bring
 
 :white_check_mark: Use your branded icons. [See details](#Configure-screens)  
 :white_check_mark: Use you branded colors. [See details](#Configure-screens)  
-:white_check_mark: Change text styles i.e. font, color. [See details](#Configure-screens)    
+:white_check_mark: Change text styles i.e. font, color. [See details](#Configure-screens)  
+:white_check_mark: Masks and filters order. [See details](#Configure-masks-and-filters-order)  
 :white_check_mark: Localize and change text resources. Default locale is :us:  
 :white_check_mark: Make content you want i.e. a number of video with different resolutions and durations, an audio file. [See details](#Configure-export-flow)  
 :white_check_mark: Customize video recording duration behavior. [See details](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_duration_configuration.md)   
@@ -115,30 +117,14 @@ We understand that the client should have options to brand video editor to bring
 
 :exclamation: We do custom UX/UI changes as a separate contract. Please contact our sales@banuba.com.
 
-### Disable Face AR 
+### Face AR 
 
-Face AR SDK is optional for the video editor SDK and can be disabled. Please make the following changes in ```Podfile``` to disable it:
+Face AR SDK is optional for the video editor SDK and would be disabled if it is not included in your token. If you don't use Face AR SDK make the following changes in ```Podfile``` to remove it:
 
 ```diff
--  pod 'BanubaEffectPlayer', '1.0.15'
--  pod 'BanubaSDK', '1.0.15.2'
-+  pod 'BanubaSDKSimple', '1.0.15.4'
-```
-
-Change 'isFaceAREnabled' to 'false' when creating an instance of BanubaVideoEditor.
-
-Example:
-
-```
- videoEditorSDK = BanubaVideoEditor(
-   token: YourClientToken,
-   effectsToken: YourEffectsToken,
-   isFaceAREnabled: false, // CHANGE to 'false' here
-   cloudMasksToken: YourCloudMasksToken,
-   configuration: YourConfig,
-   analytics: YourAnalyticsExample,
-   externalViewControllerFactory: YourExternalViewControllerFactory
-)
+-  pod 'BanubaEffectPlayer', '1.0.19'
+-  pod 'BanubaSDK', '1.0.19.1'
++  pod 'BanubaSDKSimple', '1.0.19.1'
 ```
 
 ## Getting Started
@@ -161,9 +147,9 @@ Please, refer VideoEditor SDK SPM dependencies:
 | BanubaUtilities             | https://github.com/Banuba/BanubaUtilities-iOS             |
 | BanubaLicenseServicingSDK   | https://github.com/Banuba/BanubaLicenseServicingSDK       |
 | BanubaVideoEditorGallerySDK | https://github.com/Banuba/BanubaVideoEditorGallerySDK     |
-| BanubaOverlayEditorSDK      | https://github.com/Banuba/BanubaLicenseServicingSDK       |
+| BanubaOverlayEditorSDK      | https://github.com/Banuba/BanubaOverlayEditorSDK-iOS      |
 | BanubaMusicEditorSDK        | https://github.com/Banuba/BanubaMusicEditorSDK-iOS        |
-| VideoEditor                 | https://github.com/Banuba/BanubaLicenseServicingSDK       |
+| VideoEditor                 | https://github.com/Banuba/VideoEditor-iOS                 |
 | BanubaAudioBrowserSDK       | https://github.com/Banuba/BanubaAudioBrowserSDK-iOS       |
 | BanubaSDKSimple             | https://github.com/Banuba/BanubaSDKSimple-IOS             |
 | BanubaVideoEditorEffectsSDK | https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS |
@@ -171,6 +157,8 @@ Please, refer VideoEditor SDK SPM dependencies:
 | BanubaSDK                   | https://github.com/Banuba/BanubaSDK-iOS                   |
 | BanubaVideoEditorSDK        | https://github.com/Banuba/BanubaVideoEditorSDK-iOS        |
 | BanubaEffectPlayer          | https://github.com/Banuba/BanubaEffectPlayer-iOS          |
+| BanubaTokenStorageSDK       | https://github.com/Banuba/BanubaTokenStorageSDK-iOS       |
+| BanubaVideoEditorTrimSDK    | https://github.com/Banuba/BanubaVideoEditorTrimSDK-iOS    |
 
 1. Open App project -> navigate to SwiftPackages tab.
 <p align="center">
@@ -188,7 +176,7 @@ Please, refer VideoEditor SDK SPM dependencies:
 
 ### CocoaPods
 
-Important: Make sure that you have CocoaPods version >= 1.9.0 installed. Check your CocoaPods version using this command [pod --version]
+Important: Make sure that you have CocoaPods version >= 1.9.0 installed. Check your CocoaPods version using this command ```pod --version```
 
 Please, refer to the example of [Podfile](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile) lines which you need to add.
 
@@ -201,9 +189,9 @@ Please, refer to the example of [Podfile](https://github.com/Banuba/ve-sdk-ios-i
    pod init
    ```
 3. Install the Video Editor SDK for the provided Xcode workspace with:
-```sh
-pod install
-```
+   ```sh
+   pod install
+   ```
 4. Open Example.xcworkspace with Xcode and run the project.
 
 ### Start Video Editor from ViewController
@@ -213,7 +201,7 @@ import BanubaVideoEditorSDK
 
 class ViewController: UIViewController {
 
-  private var videoEditorSDK: BanubaVideoEditorSDK?
+  private var videoEditorSDK: BanubaVideoEditor?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -234,25 +222,23 @@ class ViewController: UIViewController {
   
   private func initVideoEditor() {
     let configuration = VideoEditorConfig()
-    videoEditorSDK = BanubaVideoEditorSDK(
+    videoEditorSDK = BanubaVideoEditor(
       token: "place client token here",
-      effectsToken: "place effects token here",
       configuration: configuration,
       analytics: nil,
       externalViewControllerFactory: nil
     )
     videoEditorSDK?.delegate = self
   }
-  ...
 }
 
 // MARK: - Handle Video Editor lifecycle
-extension ViewController: BanubaVideoEditorSDKDelegate {
-  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditorSDK) {
+extension ViewController: BanubaVideoEditorDelegate {
+  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
   
-  func videoEditorDone(_ videoEditor: BanubaVideoEditorSDK) {
+  func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
 }
@@ -294,37 +280,20 @@ public func presentVideoEditor(
 
 ### Configure export flow
 
-To export video after the editing is complete use these methods:
+To export video after the editing is complete use these method:
 
 ``` swift
-/// Export video with default 1280x720 (or 1920x1080 on required devices) resolution
-/// - Parameters:
-///   - fileUrl: url where exported video should be stored.
-///   - completion: completion: (success, error), execute on background thread.
-func exportVideo(fileUrl: URL, completion: @escaping (Bool, Error?) -> Void)
-  
-/// Export video with default 1280x720 (or 1920x1080 on required devices) resolution and cover image
-/// - Parameters:
-///   - fileUrl: url where exported video should be stored.
-///   - completion: completion: (success, error, image), execute on background thread.
-/// Preconfigue WatermarkConfiguration in configuration file otherwise will be used default configuration. Default cover image video indent is 0.5 second.
-func exportVideoWithCoverImage(fileUrl: URL, completion: @escaping (Bool, Error?, UIImage) -> Void)
-  
-/// Export several configurable video
-/// - Parameters:
-///   - configurations: contains configurations for exporting videos such as file url,
-///    watermark and video quality
-///   - completion: completion: (success, error), execute on the background thread.
-func exportVideos(using configurations: [ExportVideoConfiguration], completion: (Bool,Error?)->Void)
-  
-/// Export several configurable video with cover image
-/// - Parameters:
-///   - configurations: contains configurations for exporting videos such as file url,
-///    watermark and video quality
-///   - completion: completion: (success, error, image), execute on the background thread.
-func exportVideosWithCoverImage(using configurations: [ExportVideoConfiguration], completion: (_Bool, Error?, UIImage)->Void)
+  /// Export several configurable video
+  /// - Parameters:
+  ///   - configuration: contains configurations for exporting videos such as file url,
+  ///    watermark and video quality and etc.
+  ///   - completion: completion: (success, error, exportCoverImages), execute on background thread.
+  public func export(
+    using configuration: ExportConfiguration,
+    completion: @escaping ((_ success: Bool, _ error: Error?, _ exportCoverImages: ExportCoverImages?)->Void)
+  )
 ```  
-See the sample export video flow [here](/Example/Example/ViewController.swift#L628). You can find the detailed video export features [here](export_flow.md).
+See the sample export video flow [here](/Example/Example/ViewController.swift#L177). You can find the detailed video export features [here](export_flow.md).
 
 ### Configure audio content
 
@@ -353,6 +322,39 @@ Below see the list of screens with links to their detailed description and notes
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
+### Configure masks and filters order
+
+The SDK allows to reorder masks and filters in the way you need. To achieve this use the property ```preferredLutsOrder``` and ```preferredMasksOrder```
+
+``` swift
+ let config = VideoEditorConfig()
+ 
+ // Sorting for the record screen
+ config.recorderConfiguration.recorderEffectsConfiguration.preferredLutsOrder = [
+   "egypt",
+   "norway",
+   "japan"
+ ]
+ 
+ config.recorderConfiguration.recorderEffectsConfiguration.preferredMasksOrder = [
+   "XYScanner",
+   "Background"
+ ]
+ 
+ // Sorting for the post processing screen
+ config.filterConfiguration.preferredLutsOrder = [
+   "byers",
+   "sunset",
+   "vinyl"
+ ]
+ 
+ config.filterConfiguration.preferredMasksOrder = [
+   "XYScanner",
+   "Background"
+ ]
+ 
+``` 
+
 ### Configure watermark
 
 You can add a branded image that would appear on videos that users export. 
@@ -366,6 +368,8 @@ See this [example](/Example/Example/ViewController.swift#L629) for details.
 Stickers are interactive objects (gif images) that can be added to the video recording to add more fun for users. 
 
 By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **giphyAPIKey** parameter in GifPickerConfiguration entity.
+
+GIPHY doesn't charge for their content. The one thing they do require is attribution. Also, there is no commercial aspect to the current version of the product (no advertisements, etc.) To use it, please, [add "Search GIPHY" text attribution](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/update_placeholder_for_search_gif/mdDocs/overlayEditor_styles.md#string-resources) to the search bar.
 
 ### Configure the record button
 The record button is a main control on the camera screen which you can fully customize along with animations playing on tap.
@@ -410,7 +414,8 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 
 ## Migration guides
 
-[1.0.15](mdDocs/releases/1.0.15.md)  
-[1.0.16](mdDocs/releases/1.0.16.md)  
-[1.0.17](mdDocs/releases/1.0.17.md)  
-[1.0.18](mdDocs/releases/1.0.18.md)
+[1.0.15](https://www.notion.so/vebanuba/1-0-15-c871422c06254f5f955952d1ffa5a51b)  
+[1.0.16](https://www.notion.so/vebanuba/1-0-16-4dff1bb8bde2433697860ad77e17215c)  
+[1.0.17](https://www.notion.so/vebanuba/1-0-17-24148881b66d48a5a7daa0a891a4cc3f)  
+[1.0.18](https://www.notion.so/vebanuba/1-0-18-d30441bdb9c44bfcb7f12d20b69a9977)  
+[1.0.19](https://www.notion.so/vebanuba/1-19-0-7954637332964fc6ba87f477db112fdf)

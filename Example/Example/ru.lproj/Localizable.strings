@@ -190,7 +190,7 @@
 
 /* Hint, which is shown in the GIF objects search input field, if it is empty */
 
-"Search on giphy.com" = "Поиск на giphy.com";
+"com.banuba.searchGif.placeholder" = "Search GIPHY";
 
 /* Ability to cancel the search for GIF objects */
 "Cancel" = "Отмена";
@@ -245,7 +245,7 @@
 "Settings.Close" = "Закрыть";
 
 /* Used in an alert with Yes and No when resetting effects. */
-"alert.reset.effects.title" = "Отменить изменения?";
+"alert.reset.effects.title" = "Сбросить изменения?";
 "alert.reset.effects.message" = "";
 
 /* Undo filters applied to video in the add filters screen */
@@ -349,79 +349,79 @@
 // MARK: - Filter names
 
 /* glitch filter name */
-"com.banuba.filter.name.lux" = "lux";
+"com.banuba.filter.name.lux" = "Lux";
 
 /* remy filter name */
-"com.banuba.filter.name.remy" = "remy";
+"com.banuba.filter.name.remy" = "Remy";
 
 /* hyla filter name */
-"com.banuba.filter.name.hyla" = "hyla";
+"com.banuba.filter.name.hyla" = "Hyla";
 
 /* neon filter name */
-"com.banuba.filter.name.neon" = "neon";
+"com.banuba.filter.name.neon" = "Neon";
 
 /* retro filter name */
-"com.banuba.filter.name.retro" = "retro";
+"com.banuba.filter.name.retro" = "Retro";
 
 /* sunny filter name */
-"com.banuba.filter.name.sunny" = "sunny";
+"com.banuba.filter.name.sunny" = "Sunny";
 
 /* egypt filter name */
-"com.banuba.filter.name.egypt" = "egypt";
+"com.banuba.filter.name.egypt" = "Egypt";
 
 /* spark filter name */
-"com.banuba.filter.name.spark" = "spark";
+"com.banuba.filter.name.spark" = "Spark";
 
 /* byers filter name */
-"com.banuba.filter.name.byers" = "byers";
+"com.banuba.filter.name.byers" = "Byers";
 
 /* lilac filter name */
-"com.banuba.filter.name.lilac" = "lilac";
+"com.banuba.filter.name.lilac" = "Lilac";
 
 /* vinyl filter name */
-"com.banuba.filter.name.vinyl" = "vinyl";
+"com.banuba.filter.name.vinyl" = "Vinyl";
 
 /* japan filter name */
-"com.banuba.filter.name.japan" = "japan";
+"com.banuba.filter.name.japan" = "Japan";
 
 /* chile filter name */
-"com.banuba.filter.name.chile" = "chile";
+"com.banuba.filter.name.chile" = "Chile";
 
 /* glitch filter name */
-"com.banuba.filter.name.glitch" = "glitch";
+"com.banuba.filter.name.glitch" = "Glitch";
 
 /* grunge filter name */
-"com.banuba.filter.name.grunge" = "grunge";
+"com.banuba.filter.name.grunge" = "Grunge";
 
 /* canada filter name */
-"com.banuba.filter.name.canada" = "canada";
+"com.banuba.filter.name.canada" = "Canada";
 
 /* chroma filter name */
-"com.banuba.filter.name.chroma" = "chroma";
+"com.banuba.filter.name.chroma" = "Chroma";
 
 /* norway filter name */
-"com.banuba.filter.name.norway" = "norway";
+"com.banuba.filter.name.norway" = "Norway";
 
 /* korben filter name */
-"com.banuba.filter.name.korben" = "korben";
+"com.banuba.filter.name.korben" = "Korben";
 
 /* sunset filter name */
-"com.banuba.filter.name.sunset" = "sunset";
+"com.banuba.filter.name.sunset" = "Sunset";
 
 /* instant filter name */
-"com.banuba.filter.name.instant" = "instant";
+"com.banuba.filter.name.instant" = "Instant";
 
 /* england filter name */
-"com.banuba.filter.name.england" = "england";
+"com.banuba.filter.name.england" = "England";
 
 /* pinkvine filter name */
-"com.banuba.filter.name.pinkvine" = "pinkvine";
+"com.banuba.filter.name.pinkvine" = "Pinkvine";
 
-/* bubblegum filter name */
-"com.banuba.filter.name.bubblegum" = "bubblegum";
+/* vivid filter name */
+"com.banuba.filter.name.vivid" = "Vivid";
 
-/* new zeland filter name */
-"com.banuba.filter.name.new_zeland" = "new_zeland";
+/* bright filter name */
+"com.banuba.filter.name.bright" = "Bright";
 
 // MARK: - GALLERY SCREEN / SLIDE SHOW
 
@@ -769,3 +769,21 @@
 /* discard music alert type */
 "com.banuba.alert.discardMusic.agreeButtonTitle" = "Сбросить";
 "com.banuba.alert.discardMusic.disagreeButtonTitle" = "Отмена";
+
+/* need to update iOS alert */
+"com.banuba.alert.needToUpdateIos.title" = "К сожалению, минимальная поддерживаемая версия - iOS 12.";
+"com.banuba.alert.needToUpdateIos.message" = "Вы должны выполнить обновление до ios 12.0, чтобы использовать это приложение.";
+
+// MARK: - Trim
+/* Edit video rotate button title */
+"com.banuba.trim.rotateEditButtonTitle" = "Поворот";
+/* Edit video split button title */
+"com.banuba.trim.splitEditButtonTitle" = "Разделить";
+/* Edit video crop button title */
+"com.banuba.trim.cropEditButtonTitle" = "Обрезать";
+/* Edit video delete button title */
+"com.banuba.trim.deleteEditButtonTitle" = "Удалить";
+/* Edit video trim button title */
+"com.banuba.trim.trimEditButtonTitle" = "Подрезать";
+/* Reordering video tool tip label message */
+"com.banuba.trim.reorderingToolTip" = "Потяни чтобы переместить";

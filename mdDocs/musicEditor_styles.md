@@ -21,10 +21,6 @@ VideoTrackLineEditViewControllerConfig setups audio track line editing screen st
 
 AudioRecorderViewControllerConfig setups audio recorder style
 
-- [isAudioBrowserEnabled: Bool](/Example/Example/ViewController.swift#L73)
-
-Is audio browser enabled. (audioBrowser framework exist only)
-
 ## MainMusicViewControllerConfig
 
 - [editButtons: [EditButtonConfig]](/Example/Example/Extension/MusicEditorConfig.swift#L19)
@@ -86,6 +82,18 @@ BackgroundConfiguration setups main view background style
 - [timelineCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L92)
 
 Time line corner radius
+
+- [previewViewBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L92)
+
+BackgroundConfiguration setups preview view background style
+
+- [videoControlsViewBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L92)
+
+BackgroundConfiguration setups video controls view background style
+
+- [alertConfig: AlertViewConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L92)
+
+Configuration for alertView
 
 ![img](screenshots/MusicEditorMainScreen.png)
 
@@ -150,6 +158,10 @@ BackgroundConfiguration setups player controls background view
 - [timelineCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L129)
 
 Time line corner radius
+
+- [resetButton: RoundedButtonConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L129)
+
+RoundedButtonConfiguration setups reset button style
 
 ![img](screenshots/AudioRecorderScreen.png)
 
@@ -294,6 +306,10 @@ VoiceFilterConfiguration seups voice filter container view item style
 
 VoiceFilterProvider setups voice filters provider
 
+- isVoiceFilterHidden: Bool
+
+Voice Filter will be hidden if voiceFilterProvider is nil
+
 ![img](screenshots/AudioEditScreen.png)
 
 ## String resources
@@ -314,7 +330,7 @@ VoiceFilterProvider setups voice filters provider
 | MusicEditor.Cancel | Cancel | Cancel button title
 | MusicEditor.Yes | Yes | Confirmation button title
 | MusicEditor.No | No | Discarding button title
-| MusicEditor.Do you want to reset all? | Do you want to reset all? | Confirmation message for discarding changes
+| com.banuba.musicEditor.mainScreen.resetAll.title | Discard changes? | Confirmation message for discarding changes
 | MusicEditor.Max available tracks - %i | Max available tracks - %i | Error message when a user tries to add tracks with reached limit
 | com.banuba.musicEditor.elf | Elf | Elf filter title
 | com.banuba.musicEditor.baritone | Baritone | Baritone filter title

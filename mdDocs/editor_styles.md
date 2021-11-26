@@ -7,7 +7,7 @@ Use the properties below to customize the Editor screen.
 
 - [additionalEffectsButtons: [AdditionalEffectsButtonConfiguration]](/Example/Example/Extension/EditorConfiguration.swift#L8)
 
-AdditionalEffectsButtonConfiguration array setups all of the camera screen control buttons' styles
+AdditionalEffectsButtonConfiguration array setups all of the editor screen control buttons' styles
 
 - [additionalEffectsButtonsBottomOffset: CGFloat](/Example/Example/Extension/EditorConfiguration.swift#L46)
 
@@ -32,6 +32,18 @@ Indicates whether there will be a preview selection screen after the editor scre
 - [useHorizontalVersion: Bool](/Example/Example/Extension/EditorConfiguration.swift#L77)
 
 How the buttons appears on the screen
+
+- [useHEVCCodecIfPossible: Bool](/Example/Example/Extension/EditorConfiguration.swift#L6)
+
+Enables using HEVC codec on export if .auto export configuration is used
+
+- [isVideoAspectFillEnabled: Bool](/Example/Example/Extension/EditorConfiguration.swift#L6)
+
+Enables filling screen with aspected video. If this property is false the video will be fully displayed with black lines at the corners. Default value is true
+
+- [backgroundColor: UIColor](/Example/Example/Extension/EditorConfiguration.swift#L6)
+
+Setups background color. Default is black
 
   ![img](screenshots/EditorConfiguration.png)
   

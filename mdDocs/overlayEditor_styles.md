@@ -9,6 +9,10 @@ Below are the configs for customizing the Overlay Editor screen.
 
 MainOverlayViewControllerConfig setups main overlay screen
 
+- [overlayType: OverlayAddButtonConfig](/Example/Example/Extension/OverlayEditorConfiguration.swift#L10)
+
+Types of editing overlay items. Can be .text or .sticker
+
 - [interactivesConfig: InteractivesConfiguration?](/Example/Example/Extension/OverlayEditorConfiguration.swift#L11)
 
 InteractivesConfiguration setups interactive views styles
@@ -20,7 +24,11 @@ Default Configuration
 
 ## MainOverlayViewControllerConfig
 
-- [editButtons: [OverlayEditorEditButtonConfig]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L19)
+- [editButtons: [OverlayAddButtonConfig]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L19)
+
+Array of adding buttons
+
+- [addButtons: [OverlayAddButtonConfig]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L19)
 
 Array of adding buttons
 
@@ -104,6 +112,14 @@ Time labels offset
 
 Top items offset
 
+- [alertConfig: AlertViewConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L93)
+
+Configuration for alertView
+
+- [previewViewBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L93)
+
+BackgroundConfiguration setups preview view background style
+
 ![img](screenshots/MainOverlayScreen.png)
 
 ## TextEditorConfiguration
@@ -112,9 +128,13 @@ Top items offset
 
 RoundedButtonConfiguration setups done button style
 
-- [fontButton: RoundedButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L102)
+- [fontButton: ImageButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L102)
 
 RoundedButtonConfiguration setups choosing font button style
+
+- [colorButton: ImageButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L102)
+
+ImageButtonConfiguration setups filling background color button
 
 - [textBackgroundButton: ImageButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L104)
 
@@ -143,6 +163,10 @@ ScreenNameConfiguration setups screen title style
 - [palleteInsets: UIEdgeInsets](/Example/Example/Extension/OverlayEditorConfiguration.swift#L145)
 
 Color pallete inset
+
+- [fontInsets: UIEdgeInsets](/Example/Example/Extension/OverlayEditorConfiguration.swift#L145)
+
+Font inset
 
 - [selectionColorBehavior: TextEditSelectionColorBehavior](/Example/Example/Extension/OverlayEditorConfiguration.swift#L147)
 
@@ -197,8 +221,8 @@ API key to interact with giphy service
 | OverlayEditor.Done | Done | Done button title
 | OverlayEditor.Yes | Yes | Confirmation button title
 | OverlayEditor.No | No | Discarding button title
-| OverlayEditor.Do you want to reset all? | Discard changes? | Confirmation message for discarding changes
-| Search on giphy.com | Search on giphy.com | Hint, which is shown in the GIF objects search input field, if it is empty
+| com.banuba.overlayEditor.mainScreen.resetAll.title | Discard changes? | Confirmation message for discarding changes
+| com.banuba.searchGif.placeholder | Search GIPHY | Hint, which is shown in the GIF objects search input field, if it is empty
 | Cancel | Cancel | Ability to cancel the search for GIF objects
 | No stickers found | No stickers found | Pictures not found by custom keyword
 | Problems with internet | Problems with internet |A heading showing that there are problems with the Internet connection

@@ -99,8 +99,8 @@ class ViewController: UIViewController {
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
     config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
     config.textEditorConfiguration = updateTextEditorConfiguration(config.textEditorConfiguration)
-    config.trimGalleryVideoConfiguration = updateTrimGalleryVideoConfiguration(config.trimGalleryVideoConfiguration)
-    config.multiTrimConfiguration = updateMultiTrimConfiguration(config.multiTrimConfiguration)
+    config.trimVideoConfiguration = updateTrimVideoConfiguration(config.trimVideoConfiguration)
+    config.trimVideosConfiguration = updateTrimVideosConfiguration(config.trimVideosConfiguration)
     config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
     config.alertViewConfiguration = updateAlertViewConfiguration(config.alertViewConfiguration)
     config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
@@ -168,13 +168,13 @@ extension ViewController {
       watermarkConfiguration: watermarkConfiguration
     )
     
-    let config = ExportConfiguration(
+    let exportConfig = ExportConfiguration(
       videoConfigurations: [exportConfiguration],
       isCoverEnabled: true,
       gifSettings: GifSettings(duration: 0.3)
     )
     
-    videoEditorSDK?.export(using: config, completion: { (success, error, exportCoverImages)  in
+    videoEditorSDK?.export(using: exportConfig, completion: { success, error, exportCoverImages in
       DispatchQueue.main.async {
         // Clear video editor session data
         self.videoEditorSDK?.clearSessionData()
