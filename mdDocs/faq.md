@@ -555,18 +555,6 @@ You can get information about the text applied on the video:
 ```swift
   let videoText = videoEditorSDK?.metadata?.textOnVideoMetadata 
 ```
-You can get information about the aspect applied in the video:
-```swift
-  let videoAspect = videoEditorSDK?.videoMetadta?.aspect
-```
-You can find out if this video has been recovered from a draft:
-```swift
-  let videoIsDrafted = videoEditorSDK?.videoMetadta?.isDrafted
-```
-You can get the name of the video:
-```swift
-  let videoName = videoEditorSDK?.videoMetadta?.name
-```
 You can get data about the track that was applied on the recording screen:
 ```swift
   let videoMusicTrack = videoEditorSDK?.musicTrack
