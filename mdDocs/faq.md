@@ -6,7 +6,7 @@ These are the answers to the most common questions asked about our SDK.
 3. [How do I start the Video Editor with a preselected audio track?](#3-how-do-i-start-the-video-editor-with-a-preselected-audio-track)
 4. [How do I use the Video Editor several times from different entry points?](#4-how-do-i-use-the-video-editor-several-times-from-different-entry-points)
 5. [How do I add a color filter (LUT)?](#5-how-do-i-add-a-color-filter-lut)
-6. [I want to enabled slideshow animation.](#6-i-want-to-enabled-slideshow-animation)
+6. [I want to enabled slideshow animation.](#6-i-want-to-enable-slideshow-animation)
 7. [I want to change cursor color.](#7-i-want-to-change-cursor-color)
 8. [I want to change progress bar position.](#8-i-want-to-change-progress-bar-position)
 9. [How does video editor work when token expires?](#9-how-does-video-editor-work-when-token-expires)
@@ -21,6 +21,7 @@ These are the answers to the most common questions asked about our SDK.
 18. [I want to change icons and name for effects.](#18-i-want-to-change-icons-and-name-for-effects)
 19. [I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
 20. [I want to change visible tabs in gallery.](#20-i-want-to-change-visible-tabs-in-gallery)
+21. [I want to get the metadata of the exported video]()
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -533,4 +534,44 @@ To setup visible tabs for gallery just configure it in ```CombinedGalleryConfigu
   var config = VideoEditorConfig()
   
   config.combinedGalleryConfiguration.visibleTabsInGallery = [.video, .photo]
+```
+
+### 21. I want to get the metadata of the exported video
+
+In order to find out which filter, effects, masks and music was applied to the video, you need to refer to the entity ```videoEditorSDK```.
+You can get data about the filter that was applied to the video:
+```swift
+  let videoFilter = videoEditorSDK?.metadata?.colorOnVideoMetadata
+```
+You can get an array of effects that have been applied to the video:
+```swift
+  let videoEffects = videoEditorSDK?.metadata?.effectsOnVideoMetadata
+```
+You can get GIFs applied on video:
+```swift
+  let videoGif = videoEditorSDK?.metadata?.gifOnVideoMetadata 
+```
+You can get information about the text applied on the video:
+```swift
+  let videoText = videoEditorSDK?.metadata?.textOnVideoMetadata 
+```
+You can get information about the aspect applied in the video:
+```swift
+  let videoAspect = videoEditorSDK?.videoMetadta?.aspect
+```
+You can find out if this video has been recovered from a draft:
+```swift
+  let videoIsDrafted = videoEditorSDK?.videoMetadta?.isDrafted
+```
+You can get the name of the video:
+```swift
+  let videoName = videoEditorSDK?.videoMetadta?.name
+```
+You can get data about the track that was applied on the recording screen:
+```swift
+  let videoMusicTrack = videoEditorSDK?.musicTrack
+```
+You can get information about all the tracks that have been added on the edit screen:
+```swift
+  let videoTracks = videoEditorSDK?.musicMetadata?.tracks
 ```
