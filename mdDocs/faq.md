@@ -541,7 +541,7 @@ To setup visible tabs for gallery just configure it in ```CombinedGalleryConfigu
 In order to find out which filter, effects, masks and music was applied to the video, you need to refer to the entity ```videoEditorSDK```.
 
 ```swift
-// to get filter
+// to get color filter
 let videoFilter = videoEditorSDK?.metadata?.colorOnVideoMetadata
 // to get effects
 let videoEffects = videoEditorSDK?.metadata?.effectsOnVideoMetadata
@@ -549,8 +549,8 @@ let videoEffects = videoEditorSDK?.metadata?.effectsOnVideoMetadata
 let videoGif = videoEditorSDK?.metadata?.gifOnVideoMetadata
 // to get texts
 let videoText = videoEditorSDK?.metadata?.textOnVideoMetadata
-// to get music track with record screen
+// to get music track from record screen
 let videoMusicTrack = videoEditorSDK?.musicTrack
-// to get music tracks with editor screen
+// to get music tracks from editor screen
 let videoTracks = videoEditorSDK?.musicMetadata?.tracks
 ```
