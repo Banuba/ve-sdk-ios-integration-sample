@@ -539,27 +539,19 @@ To setup visible tabs for gallery just configure it in ```CombinedGalleryConfigu
 ### 21. I want to get the metadata of the exported video
 
 In order to find out which filter, effects, masks and music was applied to the video, you need to refer to the entity ```videoEditorSDK```.
+
 You can get data about the filter that was applied to the video:
 ```swift
-  let videoFilter = videoEditorSDK?.metadata?.colorOnVideoMetadata
-```
-You can get an array of effects that have been applied to the video:
-```swift
-  let videoEffects = videoEditorSDK?.metadata?.effectsOnVideoMetadata
-```
-You can get GIFs applied on video:
-```swift
-  let videoGif = videoEditorSDK?.metadata?.gifOnVideoMetadata 
-```
-You can get information about the text applied on the video:
-```swift
-  let videoText = videoEditorSDK?.metadata?.textOnVideoMetadata 
-```
-You can get data about the track that was applied on the recording screen:
-```swift
-  let videoMusicTrack = videoEditorSDK?.musicTrack
-```
-You can get information about all the tracks that have been added on the edit screen:
-```swift
-  let videoTracks = videoEditorSDK?.musicMetadata?.tracks
+// to get filter
+let videoFilter = videoEditorSDK?.metadata?.colorOnVideoMetadata
+// to get effects
+let videoEffects = videoEditorSDK?.metadata?.effectsOnVideoMetadata
+// to get gifs
+let videoGif = videoEditorSDK?.metadata?.gifOnVideoMetadata
+// to get texts
+let videoText = videoEditorSDK?.metadata?.textOnVideoMetadata
+// to get music track with record screen
+let videoMusicTrack = videoEditorSDK?.musicTrack
+// to get music tracks with editor screen
+let videoTracks = videoEditorSDK?.musicMetadata?.tracks
 ```
