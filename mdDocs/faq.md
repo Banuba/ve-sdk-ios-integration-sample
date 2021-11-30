@@ -21,7 +21,7 @@ These are the answers to the most common questions asked about our SDK.
 18. [I want to change icons and name for effects.](#18-i-want-to-change-icons-and-name-for-effects)
 19. [I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
 20. [I want to change visible tabs in gallery.](#20-i-want-to-change-visible-tabs-in-gallery)
-21. [I want to get exported video metadata.](#21-i-want-to-get-the-metadata-of-the-exported-video)
+21. [I want to get exported video metadata.](#21-i-want-to-get-exported-video-metadata)
 
 ### 1. How do I start/stop recording with a tap?
   
