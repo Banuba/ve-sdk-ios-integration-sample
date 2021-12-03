@@ -142,7 +142,7 @@ extension ViewController {
       )
     ]
     
-    configuration.backgroundConfiguration.cornerRadius = .zero
+    configuration.additionalPaletteBackgroundConfiguration.cornerRadius = .zero
     configuration.screenNameConfiguration.style = nil
     configuration.palleteInsets = .zero
     
