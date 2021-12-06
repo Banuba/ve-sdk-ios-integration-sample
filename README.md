@@ -24,6 +24,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
     + [CocoaPods](#CocoaPods)
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)  
     + [Face AR](#Face-AR)
+    + [Picture in picture](#Picture-in-picture)
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
@@ -126,6 +127,10 @@ Face AR SDK is optional for the video editor SDK and would be disabled if it is 
 -  pod 'BanubaSDK', '1.0.19.1'
 +  pod 'BanubaSDKSimple', '1.0.19.1'
 ```
+
+### Picture in picture
+
+Picture in picture mode is optional for the video editor SDK and would be disabled if it is not included in your token. More about how to configure it you can find [here](pip_configuration.md)
 
 ## Getting Started
 
