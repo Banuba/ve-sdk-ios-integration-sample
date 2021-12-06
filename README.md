@@ -130,8 +130,8 @@ Face AR SDK is optional for the video editor SDK and would be disabled if it is 
 
 ### Picture in picture
 
-Picture in picture mode is optional for the video editor SDK and would be disabled if it is not included in your token. More about how to configure it you can find [here](mdDocs/pip_configuration.md)
-Use ```presentVideoEditor``` method to start Video Editor with picture in picture mode
+Picture in picture mode is optional for the video editor SDK and would be disabled if it is not included in your token. More about how to configure it you can find [here](mdDocs/pip_configuration.md).
+Use ```presentVideoEditor``` method to start Video Editor in picture in picture mode
 
 ```swift
 videoEditorSDK?.presentVideoEditor(
