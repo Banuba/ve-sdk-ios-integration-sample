@@ -15,7 +15,7 @@ public struct PIPSettingsConfiguration {
 }
 ``` 
 
-Picture in picture supports four modes ```.floating```, ```.topBottom```, ```.react```, ```.leftRight```. You can customize the order of this modes and which of them will be available
+Picture in picture supports four modes ```.floating```, ```.topBottom```, ```.react```, ```.leftRight```. You can customize the order of this modes and which of them will be available.
 Use PIPSelectableCellConfiguration to achieve this
 
 ## PIPSelectableCellConfiguration
@@ -60,7 +60,10 @@ public struct PIPSelectableCellConfiguration {
 var config = VideoEditorConfig()
 
 config.pipSettingsConfiguration?.layoutSettingsButtonsConfiguration = [
-  PIPSelectableCellConfiguration()
+  PIPSelectableCellConfiguration(identifier: .floating),
+  PIPSelectableCellConfiguration(identifier: .react),
+  PIPSelectableCellConfiguration(identifier: .topBottom),
+  PIPSelectableCellConfiguration(identifier: .leftRight),
 ]
 ``` 
 
