@@ -51,7 +51,7 @@ extension ViewController {
     
     configuration.backButton = BackButtonConfiguration(imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration(imageName: "ic_nav_close"))
     configuration.removeButtonImageName = "delete_videopart"
-    configuration.captureButtonMode = .mixed
+    configuration.captureButtonMode = .video
     configuration.recordButtonConfiguration.normalImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.recordImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
