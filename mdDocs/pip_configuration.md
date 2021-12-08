@@ -1,5 +1,25 @@
-# Banuba VideoEditor SDK
-## PIPSettingsConfiguration
+# Picture in picture
+
+Picture in picture mode is optional for the video editor SDK and would be disabled if it is not included in your token.
+Use ```presentVideoEditor``` method to start Video Editor in picture in picture mode
+
+```swift
+/// - Parameters:
+///   - pipVideoItem: A url to video located on a phone.
+///   - hostController: The view controller to display over.
+///   - animated: Pass true to animate the presentation.
+///   - musicTrack: Music track which will be played on camera recording.
+///   - completion: The block to execute after the presentation finishes.
+public func presentVideoEditor(
+  withPIPVideoItem pipVideoItem: URL,
+  from hostController: UIViewController,
+  animated: Bool,
+  musicTrack: MediaTrack? = nil,
+  completion: (() -> Void)?
+)
+```
+
+## PIP Configuration
 
 ``` swift
 /// The picture in picture mode configuration

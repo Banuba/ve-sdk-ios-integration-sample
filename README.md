@@ -24,7 +24,6 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
     + [CocoaPods](#CocoaPods)
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)  
     + [Face AR](#Face-AR)
-    + [Picture in picture](#Picture-in-picture)
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
@@ -126,27 +125,6 @@ Face AR SDK is optional for the video editor SDK and would be disabled if it is 
 -  pod 'BanubaEffectPlayer', '1.0.19'
 -  pod 'BanubaSDK', '1.0.19.1'
 +  pod 'BanubaSDKSimple', '1.0.19.1'
-```
-
-### Picture in picture
-
-Picture in picture mode is optional for the video editor SDK and would be disabled if it is not included in your token. More about how to configure it you can find [here](mdDocs/pip_configuration.md).
-Use ```presentVideoEditor``` method to start Video Editor in picture in picture mode
-
-```swift
-/// - Parameters:
-///   - pipVideoItem: A url to video located on a phone.
-///   - hostController: The view controller to display over.
-///   - animated: Pass true to animate the presentation.
-///   - musicTrack: Music track which will be played on camera recording.
-///   - completion: The block to execute after the presentation finishes.
-public func presentVideoEditor(
-  withPIPVideoItem pipVideoItem: URL,
-  from hostController: UIViewController,
-  animated: Bool,
-  musicTrack: MediaTrack? = nil,
-  completion: (() -> Void)?
-)
 ```
 
 ## Getting Started
@@ -341,6 +319,7 @@ Below see the list of screens with links to their detailed description and notes
 1. [Cover screen](mdDocs/cover_style.md)
 1. [Hands Free screen](mdDocs/handsFree_styles.md)
 1. [Audio Browser screen](mdDocs/audioBrowser.md)
+1. [Picture in picture](#Picture-in-picture)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
