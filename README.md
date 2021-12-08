@@ -319,7 +319,7 @@ Below see the list of screens with links to their detailed description and notes
 1. [Cover screen](mdDocs/cover_style.md)
 1. [Hands Free screen](mdDocs/handsFree_styles.md)
 1. [Audio Browser screen](mdDocs/audioBrowser.md)
-1. [Picture in picture](#Picture-in-picture)
+1. [Picture in picture](mdDocs/pip_configuration.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
