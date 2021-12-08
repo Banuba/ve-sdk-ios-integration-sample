@@ -83,7 +83,7 @@ config.pipSettingsConfiguration?.layoutSettingsButtonsConfiguration = [
   PIPSelectableCellConfiguration(identifier: .floating),
   PIPSelectableCellConfiguration(identifier: .react),
   PIPSelectableCellConfiguration(identifier: .topBottom),
-  PIPSelectableCellConfiguration(identifier: .leftRight),
+  PIPSelectableCellConfiguration(identifier: .leftRight)
 ]
 ``` 
 
