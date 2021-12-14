@@ -10,38 +10,23 @@ import BSImagePicker
 
 class ViewController: UIViewController {
   
-  private var videoEditorSDK: BanubaVideoEditor?
+  // MARK: - IBOutlet
+  @IBOutlet weak var openVEButton: UIButton!
+  @IBOutlet weak var openPIPButton: UIButton!
+  @IBOutlet weak var activinyIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var label: UILabel!
   
+  // MARK: - VideoEditorSDK
+  private var videoEditorSDK: BanubaVideoEditor?
+  // MARK: - life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    activinyIndicator.isHidden = true
   }
-  
-  private func initVideoEditor(completion: @escaping () -> Void) {
-    guard videoEditorSDK == nil else {
-      completion()
-      return
-    }
-    
-    let config = createVideoEditorConfiguration()
-    
-    let viewControllerFactory = ViewControllerFactory()
-    let musicEditorViewControllerFactory = MusicEditorViewControllerFactory()
-    viewControllerFactory.musicEditorFactory = musicEditorViewControllerFactory
-    viewControllerFactory.countdownTimerViewFactory = CountdownTimerViewControllerFactory()
-    viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
-    
-    videoEditorSDK = BanubaVideoEditor(
-      token: "Put video editor token here",
-      configuration: config,
-      analytics: Analytics(),
-      externalViewControllerFactory: viewControllerFactory
-    )
-    
-    videoEditorSDK?.delegate = self
-    completion()
-  }
-  
+}
+
+// MARK: - IBAction
+extension ViewController {
   @IBAction func openVideoEditorAction(_ sender: Any) {
     initVideoEditor() {
       let musicURL = Bundle.main.bundleURL
@@ -77,8 +62,36 @@ class ViewController: UIViewController {
       self.openGallery()
     }
   }
-  
-  
+}
+// MARK: - initVideoEditor
+extension ViewController {
+  private func initVideoEditor(completion: @escaping () -> Void) {
+    guard videoEditorSDK == nil else {
+      completion()
+      return
+    }
+    
+    let config = createVideoEditorConfiguration()
+    
+    let viewControllerFactory = ViewControllerFactory()
+    let musicEditorViewControllerFactory = MusicEditorViewControllerFactory()
+    viewControllerFactory.musicEditorFactory = musicEditorViewControllerFactory
+    viewControllerFactory.countdownTimerViewFactory = CountdownTimerViewControllerFactory()
+    viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
+    
+    videoEditorSDK = BanubaVideoEditor(
+      token: "Put video editor token here",
+      configuration: config,
+      analytics: Analytics(),
+      externalViewControllerFactory: viewControllerFactory
+    )
+    
+    videoEditorSDK?.delegate = self
+    completion()
+  }
+}
+// MARK: - Configuration helpers
+extension ViewController {
   private func createVideoEditorConfiguration() -> VideoEditorConfig {
     var config = VideoEditorConfig()
     
@@ -149,6 +162,7 @@ class ViewController: UIViewController {
 // MARK: - Export example
 extension ViewController {
   func exportVideo() {
+    changeVisualState(isHidden: false)
     let manager = FileManager.default
     let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
     if manager.fileExists(atPath: videoURL.path) {
@@ -179,23 +193,40 @@ extension ViewController {
         // Clear video editor session data
         self.videoEditorSDK?.clearSessionData()
         if success {
-          self.playVideoAtURL(videoURL)
+          /// If you want play exported video
+//          self.playVideoAtURL(videoURL)
+         
+          /// if you want share exported video
+          self.shareResultVideo(urls: [videoURL])
         }
         self.videoEditorSDK = nil
       }
     })
   }
   
+  /// For demonstration purpose let's play exported video
   private func playVideoAtURL(_ videoURL: URL) {
     let player = AVPlayer(url: videoURL)
     let playerController = AVPlayerViewController()
     playerController.player = player
     present(playerController, animated: true) {
-        player.play()
+      player.play()
+    }
+  }
+  
+  /// For demonstration purpose lets share exported video
+  private func shareResultVideo(urls: [URL]) {
+    let shareController = UIActivityViewController(
+      activityItems: urls,
+      applicationActivities: nil
+    )
+    present(shareController, animated: true) {
+      self.changeVisualState(isHidden: true)
     }
   }
 }
 
+// MARK: - BanubaVideoEditorDelegate
 extension ViewController: BanubaVideoEditorDelegate {
   func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
     videoEditor.dismissVideoEditor(animated: true) { [weak self] in
@@ -300,6 +331,21 @@ extension ViewController {
           presentingHandler()
         }
       }
+    }
+  }
+}
+
+// MARK: - Helpers
+extension ViewController {
+  private func changeVisualState(isHidden: Bool) {
+    activinyIndicator.isHidden = isHidden
+    label.isHidden = isHidden
+    openVEButton.isHidden = !isHidden
+    openPIPButton.isHidden = !isHidden
+    if isHidden {
+      activinyIndicator.stopAnimating()
+    } else {
+      activinyIndicator.startAnimating()
     }
   }
 }

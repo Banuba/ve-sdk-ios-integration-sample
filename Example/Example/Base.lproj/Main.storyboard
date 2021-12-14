@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -74,15 +74,38 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EnL-Th-bB1">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exporting..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjQ-Du-lVI">
+                                <rect key="frame" x="0.0" y="400.5" width="414" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eaG-xR-MaB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UCZ-29-s3y" secondAttribute="bottom" constant="40" id="9A1-rA-jyi"/>
+                            <constraint firstItem="EnL-Th-bB1" firstAttribute="top" secondItem="QjQ-Du-lVI" secondAttribute="bottom" constant="8" id="LY8-Jh-fFB"/>
                             <constraint firstItem="UCZ-29-s3y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="NI7-yk-H9s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QjQ-Du-lVI" secondAttribute="trailing" id="RNT-u0-XGG"/>
+                            <constraint firstItem="EnL-Th-bB1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p4j-mx-pqv"/>
+                            <constraint firstItem="EnL-Th-bB1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tQS-Sw-wtv"/>
+                            <constraint firstItem="QjQ-Du-lVI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uqT-Qa-hhw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCZ-29-s3y" secondAttribute="trailing" constant="40" id="xbJ-hG-4xm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activinyIndicator" destination="EnL-Th-bB1" id="Rkx-87-Bs5"/>
+                        <outlet property="label" destination="QjQ-Du-lVI" id="QeA-xs-Cxi"/>
+                        <outlet property="openPIPButton" destination="Xjq-v9-Kyb" id="qrf-C7-9TT"/>
+                        <outlet property="openVEButton" destination="6jh-xc-CaM" id="tKV-tI-AqI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
