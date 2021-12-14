@@ -560,3 +560,11 @@ let videoMusicTrack = videoEditorSDK?.musicTrack
 // to get music tracks from editor screen
 let videoTracks = videoEditorSDK?.musicMetadata?.tracks
 ```
+### 22. I want to save video to gallery
+
+In order to save the exported video to the gallery or share it you will need ```UIActivityViewController```.
+You can read more about this controller in the [apple documentation](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller).
+
+An example of the implementation of this controller is in the [sample](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L200).
+
+You just need to transfer the [URL](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L167) of the exported video there.
