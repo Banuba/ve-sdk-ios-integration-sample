@@ -162,7 +162,7 @@ extension ViewController {
 // MARK: - Export example
 extension ViewController {
   func exportVideo() {
-    changeVisualState(isHidden: false)
+    setupActivityIndicatorHidden(false)
     let manager = FileManager.default
     let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
     if manager.fileExists(atPath: videoURL.path) {
@@ -221,7 +221,7 @@ extension ViewController {
       applicationActivities: nil
     )
     present(shareController, animated: true) {
-      self.changeVisualState(isHidden: true)
+      self.setupActivityIndicatorHidden(true)
     }
   }
 }
@@ -337,7 +337,7 @@ extension ViewController {
 
 // MARK: - Helpers
 extension ViewController {
-  private func changeVisualState(isHidden: Bool) {
+  private func setupActivityIndicatorHidden(_ isHidden: Bool) {
     activinyIndicator.isHidden = isHidden
     label.isHidden = isHidden
     openVEButton.isHidden = !isHidden
