@@ -13,7 +13,7 @@ class ViewController: UIViewController {
   // MARK: - IBOutlet
   @IBOutlet weak var openVEButton: UIButton!
   @IBOutlet weak var openPIPButton: UIButton!
-  @IBOutlet weak var activinyIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var label: UILabel!
   
   // MARK: - VideoEditorSDK
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
   // MARK: - life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    activinyIndicator.isHidden = true
+    activityIndicator.isHidden = true
   }
 }
 
@@ -338,14 +338,14 @@ extension ViewController {
 // MARK: - Helpers
 extension ViewController {
   private func setupActivityIndicatorHidden(_ isHidden: Bool) {
-    activinyIndicator.isHidden = isHidden
+    activityIndicator.isHidden = isHidden
     label.isHidden = isHidden
     openVEButton.isHidden = !isHidden
     openPIPButton.isHidden = !isHidden
     if isHidden {
-      activinyIndicator.stopAnimating()
+      activityIndicator.stopAnimating()
     } else {
-      activinyIndicator.startAnimating()
+      activityIndicator.startAnimating()
     }
   }
 }
