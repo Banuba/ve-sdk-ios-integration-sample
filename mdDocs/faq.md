@@ -22,6 +22,7 @@ These are the answers to the most common questions asked about our SDK.
 19. [I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
 20. [I want to change visible tabs in gallery.](#20-i-want-to-change-visible-tabs-in-gallery)
 21. [I want to get exported video metadata.](#21-i-want-to-get-exported-video-metadata)
+22. [I want to save video to gallery.](#22-i-want-to-save-video-to-gallery)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -560,3 +561,11 @@ let videoMusicTrack = videoEditorSDK?.musicTrack
 // to get music tracks from editor screen
 let videoTracks = videoEditorSDK?.musicMetadata?.tracks
 ```
+### 22. I want to save video to gallery
+
+To save the exported video to the gallery or share it, use ```UIActivityViewController```.
+You can learn more about this controller in [apple documentation](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller).
+
+An example of this controller implementation is in the [sample](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L200).
+
+You just need to transfer the [URL](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L167) of the exported video there.
