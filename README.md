@@ -144,7 +144,7 @@ Please add a [link](https://github.com/Banuba/spm) to the collection of packages
 <p align="center">
 <img src="mdDocs/SPMTab.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
-2. Tap 'plus' button -> type relevant SDK repo [url](https://github.com/Banuba/spm) .
+2. Tap 'plus' button -> type package collections repo url.
 <p align="center">
 <img src="mdDocs/SDKUrl.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
