@@ -157,7 +157,7 @@ A window will appear in which there will be lists with all possible modules.
 
 Please check the boxes for the modules you need to install and click the 'Add Package' button.
 <p align="center">
-<img src="mdDocs/collectionSPM.png" alt="Screenshot" width="60%" height="auto">&nbsp;
+<img src="screenshots/mdDocs/collectionSPM.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
 5. Download the latest module version.
 
