@@ -4,7 +4,7 @@ platform :ios, '11.0'
 use_frameworks! 
 
 target 'Example' do
-  pod 'BanubaVideoEditorSDK', '1.20.1'
+  pod 'BanubaVideoEditorSDK', '1.20.2'
   pod 'BanubaMusicEditorSDK', '1.20.1'
   pod 'BanubaOverlayEditorSDK', '1.20.1'
   pod 'BanubaSDKSimple', '1.20.1'
@@ -12,7 +12,7 @@ target 'Example' do
   pod 'VideoEditor', '1.20.1'
   pod 'BanubaUtilities', '1.20.1'
   pod 'BanubaVideoEditorEffectsSDK', '1.20.1'
-  pod 'BanubaLicenseServicingSDK', '1.20.1'
+  pod 'BanubaLicenseServicingSDK', '1.20.2'
   pod 'BanubaTokenStorageSDK', '1.20.1'
   pod 'BNBLicenseUtils', '1.20.1'
   pod 'BanubaARCloudSDK', '1.20.1'
