@@ -148,12 +148,12 @@ Please add a [link](https://github.com/Banuba/spm) to the collection of packages
 <p align="center">
 <img src="mdDocs/SDKUrl.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
-3. Choose 'Exact Vrsion' release version -> type newest SDK version.
+3. Choose 'Exact Version' release version -> type newest SDK version.
 <p align="center">
 <img src="mdDocs/ExactVersion.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
 4. Tap 'Add Package' button.
-A window will appear in which there will be lists with all possible modules. 
+The lists with all available modules will appear in the displayed window. 
 
 Please check the boxes for the modules you need to install and click the 'Add Package' button.
 <p align="center">
