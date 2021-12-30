@@ -22,6 +22,7 @@ These are the answers to the most common questions asked about our SDK.
 19. [I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
 20. [I want to change visible tabs in gallery.](#20-i-want-to-change-visible-tabs-in-gallery)
 21. [I want to get exported video metadata.](#21-i-want-to-get-exported-video-metadata)
+22. [I want to change codec type from h264 to h265.](#22-i-want-to-change-codec-type-from-h264-to-h265)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -311,7 +312,7 @@ public var musicMetadata: MusicEditorMetadata? { get }
 ...
 }
 ```
-`MusicEditorMetadata` contains the array of `MusicEditorTrack` which contains the following fields: 
+`MusicEditorMetadata` contains the array of `MusicEditorTrack` which contains the following fields: 
 
 ```swift
 // MARK: - MusicEditorTrack
@@ -559,4 +560,30 @@ let videoText = videoEditorSDK?.metadata?.textOnVideoMetadata
 let videoMusicTrack = videoEditorSDK?.musicTrack
 // to get music tracks from editor screen
 let videoTracks = videoEditorSDK?.musicMetadata?.tracks
+```
+### 22. I want to change codec type from h264 to h265.
+
+All you need is just to set ```useHEVCCodecIfPossible``` to ```true``` in ```VideoEditorConfig, ExportVideoInfo or ExportVideoConfiguration ``` entity.
+The first one you need when you create ```BanubaVideoEditor```, two last ones - when you prepare a video to export.
+
+```swift
+  var config = VideoEditorConfig()
+  config.recorderConfiguration.useHEVCCodecIfPossible = true
+
+  let videoEditorSDK = BanubaVideoEditor(
+    token: ...,
+    configuration: config
+  )
+
+  let exportVideoInfo = ExportVideoInfo(
+    resolution: ...,
+    useHEVCCodecIfPossible: true
+  )
+
+  let configuration = ExportVideoConfiguration(
+    fileURL: ...,
+    quality: ...,
+    useHEVCCodecIfPossible: true,
+    watermarkConfiguration: ...
+  )
 ```
