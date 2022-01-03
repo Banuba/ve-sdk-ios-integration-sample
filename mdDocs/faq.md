@@ -527,7 +527,17 @@ To turn off Drafts feature just disable it in ```FeatureConfiguration``` entity:
   config.featureConfiguration.draftsConfig = .disabled
 ```
 
-### 20. I want to change visible tabs in gallery
+### 20. I want to turn off Cover screen.
+
+To turn off Cover screen just disable it in ```FeatureConfiguration``` entity:
+
+```swift
+  var config = VideoEditorConfig()
+  
+  config.featureConfiguration.isVideoCoverSelectionEnabled = false
+```
+
+### 21. I want to change visible tabs in gallery
 
 To setup visible tabs for gallery just configure it in ```CombinedGalleryConfiguration``` entity:
 
@@ -537,7 +547,7 @@ To setup visible tabs for gallery just configure it in ```CombinedGalleryConfigu
   config.combinedGalleryConfiguration.visibleTabsInGallery = [.video, .photo]
 ```
 
-### 21. I want to get exported video metadata
+### 22. I want to get exported video metadata
 
 In order to find out which filter, effects, masks and music was applied to the video, you need to refer to the instance of the entity ```BanubaVideoEditor```.
 
@@ -561,7 +571,7 @@ let videoMusicTrack = videoEditorSDK?.musicTrack
 // to get music tracks from editor screen
 let videoTracks = videoEditorSDK?.musicMetadata?.tracks
 ```
-### 22. I want to change codec type from h264 to h265.
+### 23. I want to change codec type from h264 to h265.
 
 All you need is just to set ```useHEVCCodecIfPossible``` to ```true``` in ```VideoEditorConfig, ExportVideoInfo or ExportVideoConfiguration ``` entity.
 The first one you need when you create ```BanubaVideoEditor```, two last ones - when you prepare a video to export.
