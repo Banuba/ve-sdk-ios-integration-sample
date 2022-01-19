@@ -46,13 +46,18 @@ A mask is a bundle of files within a specific folder in the YourProject/bundleEf
 
 ### 3. How do I start the Video Editor with a preselected audio track?
 
-To do so, add the MediaTrack instance as a parameter to the presentVideoEditor method.
+To do so, add the MediaTrack instance as a parameter to the  `VideoEditorLaunchConfig` which used for starting video editor method.
 
 ```swift
-videoEditorSDK?.presentVideoEditor(
-  from: YourViewController,
-  animated: true,
+let cameraLaunchConfig = VideoEditorLaunchConfig(
+  entryPoint: .camera,
+  hostController: self,
   musicTrack: MediaTrack(...),
+  animated: true
+)
+
+videoEditorSDK?.presentVideoEditor(
+  withLaunchConfiguration: cameraLaunchConfig,
   completion: nil
 )
 ```

@@ -214,6 +214,9 @@
 /* Message displayed when there is no internet connection */
 "You don't seem to be connected to the internet. \nPlease try again" = "Не получается соединиться с интернетом.\nПожалуйста, попробуй еще раз";
 
+/* Message displayed when media file cannot be downloaded */
+"Cannot download media file from your iCloud" = "Не удалось загрузить медиа файл из вашего iCloud";
+
 /* Error if the format of the response from the server does not match the expected */
 "Unknown data format" = "Неожиданный формат данных";
 
@@ -597,6 +600,8 @@
 "audioBrowser.my.library" = "Моя библиотека";
 "audioBrowser.no.matches" = "Нет совпадений";
 "audioBrowser.no.tracks" = "Нет треков";
+/* Track format for displaying mubert track title*/
+"audioBrowser.mubertTrackFormat" = "Трек %d";
 
 "feature.disabled.audiobrowser" = "Музыкальный браузер по умолчанию не входит в ваш пакет. Вы можете добавить свою музыку.";
 
@@ -787,3 +792,7 @@
 "com.banuba.trim.trimEditButtonTitle" = "Подрезать";
 /* Reordering video tool tip label message */
 "com.banuba.trim.reorderingToolTip" = "Потяни чтобы переместить";
+/* Delete single video error message */
+"com.banuba.trim.deleteLastClipErrorMessage" = "Последнее видео не может быть удалено";
+/* Split video part error message */
+"com.banuba.trim.splitErrorMessage" = "Выбрана недопустимая позиция";

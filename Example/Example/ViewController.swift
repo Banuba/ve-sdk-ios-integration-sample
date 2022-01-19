@@ -46,11 +46,15 @@ extension ViewController {
         isEditable: true,
         title: "My awesome track"
       )
-      // Paste a music track as a track preset at the camera screen to record video with music
+      
+      let cameraLaunchConfig = VideoEditorLaunchConfig(
+        entryPoint: .camera,
+        hostController: self,
+        musicTrack: nil, // Paste a music track as a track preset at the camera screen to record video with music
+        animated: true
+      )
       self.videoEditorSDK?.presentVideoEditor(
-        from: self,
-        animated: true,
-        musicTrack: nil,
+        withLaunchConfiguration: cameraLaunchConfig,
         completion: nil
       )
     }
@@ -80,7 +84,7 @@ extension ViewController {
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
     videoEditorSDK = BanubaVideoEditor(
-      token: "Put video editor token here",
+      token: "Put your token here",
       configuration: config,
       analytics: Analytics(),
       externalViewControllerFactory: viewControllerFactory
@@ -262,8 +266,6 @@ extension ViewController {
           forVideo: asset,
           options: .none
         ) { [weak self] (asset, _, _) in
-          
-          guard let self = self else { return }
           guard let asset = asset else { return }
           
           let groupHandler = {
@@ -314,10 +316,15 @@ extension ViewController {
         let presentingHandler = {  [weak self] in
           guard let self = self, !resultUrls.isEmpty else { return }
           
+          let pipLaunchConfig = VideoEditorLaunchConfig(
+            entryPoint: .pip,
+            hostController: self,
+            pipVideoItem: resultUrls[.zero],
+            musicTrack: nil,
+            animated: true
+          )
           self.videoEditorSDK?.presentVideoEditor(
-            withPIPVideoItem: resultUrls[.zero],
-            from: self,
-            animated: true,
+            withLaunchConfiguration: pipLaunchConfig,
             completion: nil
           )
         }
