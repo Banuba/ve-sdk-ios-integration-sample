@@ -46,11 +46,15 @@ extension ViewController {
         isEditable: true,
         title: "My awesome track"
       )
-      // Paste a music track as a track preset at the camera screen to record video with music
+      
+      let launchConfig = VideoEditorLaunchConfig(
+        entryPoint: .camera,
+        hostController: self,
+        musicTrack: nil, // Paste a music track as a track preset at the camera screen to record video with music
+        animated: true
+      )
       self.videoEditorSDK?.presentVideoEditor(
-        from: self,
-        animated: true,
-        musicTrack: nil,
+        withLaunchConfiguration: launchConfig,
         completion: nil
       )
     }
@@ -262,8 +266,6 @@ extension ViewController {
           forVideo: asset,
           options: .none
         ) { [weak self] (asset, _, _) in
-          
-          guard let self = self else { return }
           guard let asset = asset else { return }
           
           let groupHandler = {
@@ -314,10 +316,15 @@ extension ViewController {
         let presentingHandler = {  [weak self] in
           guard let self = self, !resultUrls.isEmpty else { return }
           
+          let launchConfig = VideoEditorLaunchConfig(
+            entryPoint: .pip,
+            hostController: self,
+            pipVideoItem: resultUrls[.zero],
+            musicTrack: nil,
+            animated: true
+          )
           self.videoEditorSDK?.presentVideoEditor(
-            withPIPVideoItem: resultUrls[.zero],
-            from: self,
-            animated: true,
+            withLaunchConfiguration: launchConfig,
             completion: nil
           )
         }

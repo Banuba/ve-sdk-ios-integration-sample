@@ -122,9 +122,9 @@ We understand that the client should have options to brand video editor to bring
 Face AR SDK is optional for the video editor SDK and would be disabled if it is not included in your token. If you don't use Face AR SDK make the following changes in ```Podfile``` to remove it:
 
 ```diff
--  pod 'BanubaEffectPlayer', '1.0.19'
--  pod 'BanubaSDK', '1.0.19.1'
-+  pod 'BanubaSDKSimple', '1.0.19.1'
+-  pod 'BanubaEffectPlayer', '1.21.0'
+-  pod 'BanubaSDK', '1.21.0'
++  pod 'BanubaSDKSimple', '1.21.0'
 ```
 
 ## Getting Started
@@ -199,10 +199,13 @@ class ViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
+    let launchConfig = VideoEditorLaunchConfig(
+        entryPoint: .camera,
+        hostController: self,
+        animated: true
+    )
     videoEditorSDK?.presentVideoEditor(
-      from: self,
-      animated: true,
-      musicTrack: nil,
+      withLaunchConfiguration: launchConfig,
       completion: nil
     )
   }
@@ -232,38 +235,58 @@ extension ViewController: BanubaVideoEditorDelegate {
 
 ```  
 
-The Video Editor has several entry points. It can be launched on the camera screen and on the trimmer screen with predefined videos:
+The Video Editor has one entry point:
 
 ``` swift
-/// Modally presents Video editor's root view controller
-/// - Parameters:
-///   - hostController: The view controller to display over.
-///   - animated: Pass true to animate the presentation.
-///   - musicTrack: Music track which will be played on camera recording.
-///   - completion: The block to execute after the presentation finishes.
-public func presentVideoEditor(
-  from hostController: UIViewController,
-  animated: Bool,
-  musicTrack: MediaTrack? = nil,
-  completion: (() -> Void)?
-)
-          
-/// Modally presents Video editor's trim view controller with pre-defined videos
-/// - Parameters:
-///   - videoItems: An array with urls to videos located on a phone.
-///   - hostController: The view controller to display over.
-///   - animated: Pass true to animate the presentation.
-///   - musicTrack: Music track which will be played on camera recording.
-///   - completion: The block to execute after the presentation finishes.
-public func presentVideoEditor(
-  withVideoItems videoItems: [URL],
-  from hostController: UIViewController,
-  animated: Bool,
-  musicTrack: MediaTrack? = nil, 
+/// Modally presents Video editor's  view controller with pre-defined configuration
+  /// - Parameters:
+  ///   - configuration: contains configurations for launching Video editor's screen
+  ///   - completion: The block to execute after the presentation finishes.
+func presentVideoEditor(
+  withLaunchConfiguration configuration: VideoEditorLaunchConfig,
   completion: (() -> Void)?
 )
 ```  
 
+`VideoEditorLaunchConfig` contains the following fields:
+``` swift
+/// The video editor launch configuration
+@objc class VideoEditorLaunchConfig: NSObject {
+  /// Setups VE start screen.
+  var entryPoint: PresentEventOptions.EntryPoint
+  /// The view controller to display over.
+  var hostController: UIViewController
+  /// An array with urls to videos located on a phone.
+  var videoItems: [URL]?
+  /// A url to video located on a phone.
+  var pipVideoItem: URL?
+  /// Music track which will be played on camera recording.
+  var musicTrack: MediaTrack?
+  /// Pass true to animate the presentation.
+  var animated: Bool
+  
+  // MARK: - Init
+  init(
+    entryPoint: PresentEventOptions.EntryPoint,
+    hostController: UIViewController,
+    videoItems: [URL]? = nil,
+    pipVideoItem: URL? = nil,
+    musicTrack: MediaTrack? = nil,
+    animated: Bool
+  ) {
+	...
+	}
+}
+
+/// EntryPoint describes what kind of entry point is used in video editor navigation flow
+public enum EntryPoint: String, Codable {
+	case camera
+	case pip
+	case trimmer
+	case editor
+	case drafts
+}
+``` 
 
 ### Configure export flow
 
@@ -407,4 +430,5 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 [1.0.17](https://www.notion.so/vebanuba/1-0-17-24148881b66d48a5a7daa0a891a4cc3f)  
 [1.0.18](https://www.notion.so/vebanuba/1-0-18-d30441bdb9c44bfcb7f12d20b69a9977)  
 [1.0.19](https://www.notion.so/vebanuba/1-19-0-7954637332964fc6ba87f477db112fdf)  
-[1.0.20](https://www.notion.so/vebanuba/1-20-0-39fe7f401a4b49ce9697e3abb8bf56b7)  
+[1.20.0](https://www.notion.so/vebanuba/1-20-0-39fe7f401a4b49ce9697e3abb8bf56b7)  
+[1.21.0](https://www.notion.so/vebanuba/1-21-0-6220edd4fd244cf28a997825a369203b)

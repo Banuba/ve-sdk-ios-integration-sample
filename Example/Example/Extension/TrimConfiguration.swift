@@ -25,6 +25,11 @@ extension ViewController {
         type: .rotate
       ),
       TrimVideoCompositionEditItem(
+        title: NSLocalizedString("com.banuba.trim.splitEditButtonTitle", comment: ""),
+        icon: ImageConfiguration(imageName: "ic_split"),
+        type: .split
+      ),
+      TrimVideoCompositionEditItem(
         title: NSLocalizedString("com.banuba.trim.deleteEditButtonTitle", comment: ""),
         icon: ImageConfiguration(imageName: "ic_trash"),
         type: .delete
