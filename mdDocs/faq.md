@@ -49,7 +49,7 @@ A mask is a bundle of files within a specific folder in the YourProject/bundleEf
 To do so, add the MediaTrack instance as a parameter to the  `VideoEditorLaunchConfig` which used for starting video editor method.
 
 ```swift
-let launchConfig = VideoEditorLaunchConfig(
+let cameraLaunchConfig = VideoEditorLaunchConfig(
   entryPoint: .camera,
   hostController: self,
   musicTrack: MediaTrack(...),
@@ -57,7 +57,7 @@ let launchConfig = VideoEditorLaunchConfig(
 )
 
 videoEditorSDK?.presentVideoEditor(
-  withLaunchConfiguration: launchConfig,
+  withLaunchConfiguration: cameraLaunchConfig,
   completion: nil
 )
 ```
