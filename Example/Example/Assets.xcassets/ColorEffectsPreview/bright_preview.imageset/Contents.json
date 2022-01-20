@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bubblegum.png",
+      "filename" : "bright.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bubblegum-1.png",
+      "filename" : "bright-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bubblegum-2.png",
+      "filename" : "bright-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -84,7 +84,7 @@ extension ViewController {
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
     videoEditorSDK = BanubaVideoEditor(
-      token: "Put your token here",
+      token: "Put your video editor token here",
       configuration: config,
       analytics: Analytics(),
       externalViewControllerFactory: viewControllerFactory

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "new_zeland.png",
+      "filename" : "vivid.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "new_zeland-1.png",
+      "filename" : "vivid-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "new_zeland-2.png",
+      "filename" : "vivid-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
