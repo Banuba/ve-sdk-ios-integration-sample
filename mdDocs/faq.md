@@ -108,93 +108,17 @@ For example on your tap button action:
 
 ### 5. How do I add a color filter (LUT)?
 
-Color filters (LUTs) are special graphic files placed into the /luts directory inside the host project folder.
+Color Filters (LUTs) are special graphics files that are placed in the / [luts directory](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) inside the main project folder.
 
-To add your own icon that will be used to represent this particular effect in the list, you should place it into the /assets folder.
+To add your own icon to be used to represent that specific effect in the list, you must place it in the / [assets folder](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/Filters%20Preview).
 
-The name of the icon resource must be the same as the graphic file `ID` the / luts directory.
+The icon resource name must match the image file name in the / luts directory and end with ```_preview```.
 
-| Default image color filter | Name      | ID      |
-| ---------- | ---------  | ----------- |
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101000_preview.imageset/glitch-1.png" width="50"> | glitch | 101000
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101001_preview.imageset/instant-1.png" width="50"> | instant  | 101001
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101002_preview.imageset/grunge-1.png" width="50">  | grunge | 101002
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101003_preview.imageset/retro-1.png" width="50">  |  retro | 101003
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101004_preview.imageset/pinkvine-1.png" width="50">  |  pinkvine | 101004
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101005_preview.imageset/england-1.png" width="50">  |  england | 101005
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101006_preview.imageset/spark-1.png" width="50">  |  spark | 101006
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101007_preview.imageset/korben-1.png" width="50"> |  korben | 101007
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101008_preview.imageset/remy-1.png" width="50"> |  remy | 101008
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101009_preview.imageset/canada-1.png" width="50"> |  canada | 101009
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101010_preview.imageset/sunny-1.png" width="50">  |  sunny | 101010
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101013_preview.imageset/chroma-1.png" width="50"> |  chroma | 101011
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101014_preview.imageset/byers-1.png" width="50"> |  byers | 101012
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101015_preview.imageset/lilac-1.png" width="50">  |  lilac | 101013
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101012_preview.imageset/new_zeland-1.png" width="50">  |  bright | 101014
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101016_preview.imageset/hyla-1.png" width="50"> |  hyla | 101015
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101018_preview.imageset/vinyl-1.png" width="50">  | vinyl | 101016
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101019_preview.imageset/lux-1.png" width="50">  |  lux | 101017
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101011_preview.imageset/egypt-1.png" width="50"> |  egypt | 101018
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101020_preview.imageset/japan-1.png" width="50">  |  japan | 101019
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101021_preview.imageset/sunset-1.png" width="50"> |  sunset | 101020
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101017_preview.imageset/bubblegum-1.png" width="50"> |  vivid | 101021
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101022_preview.imageset/neon-1.png" width="50"> |  neon | 101022
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101023_preview.imageset/chile-1.png" width="50"> |  chile | 101023
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101024_preview.imageset/norway-1.png" width="50"> |  norway | 101024
+The display name for the resource is set in the [localization files](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings#L353).
 
-If you want to change the name, you need to specify the new name in the string resources:
-```swift
-/* glitch filter name */
-"com.banuba.filter.name.lux" = "Lux";
-/* remy filter name */
-"com.banuba.filter.name.remy" = "Remy";
-/* hyla filter name */
-"com.banuba.filter.name.hyla" = "Hyla";
-/* neon filter name */
-"com.banuba.filter.name.neon" = "Neon";
-/* retro filter name */
-"com.banuba.filter.name.retro" = "Retro";
-/* sunny filter name */
-"com.banuba.filter.name.sunny" = "Sunny";
-/* egypt filter name */
-"com.banuba.filter.name.egypt" = "Egypt";
-/* spark filter name */
-"com.banuba.filter.name.spark" = "Spark";
-/* byers filter name */
-"com.banuba.filter.name.byers" = "Byers";
-/* lilac filter name */
-"com.banuba.filter.name.lilac" = "Lilac";
-/* vinyl filter name */
-"com.banuba.filter.name.vinyl" = "Vinyl";
-/* japan filter name */
-"com.banuba.filter.name.japan" = "Japan";
-/* chile filter name */
-"com.banuba.filter.name.chile" = "Chile";
-/* glitch filter name */
-"com.banuba.filter.name.glitch" = "Glitch";
-/* grunge filter name */
-"com.banuba.filter.name.grunge" = "Grunge";
-/* canada filter name */
-"com.banuba.filter.name.canada" = "Canada";
-/* chroma filter name */
-"com.banuba.filter.name.chroma" = "Chroma";
-/* norway filter name */
-"com.banuba.filter.name.norway" = "Norway";
-/* korben filter name */
-"com.banuba.filter.name.korben" = "Korben";
-/* sunset filter name */
-"com.banuba.filter.name.sunset" = "Sunset";
-/* instant filter name */
-"com.banuba.filter.name.instant" = "Instant";
-/* england filter name */
-"com.banuba.filter.name.england" = "England";
-/* pinkvine filter name */
-"com.banuba.filter.name.pinkvine" = "Pinkvine";
-/* vivid filter name */
-"com.banuba.filter.name.vivid" = "Vivid";
-/* bright filter name */
-"com.banuba.filter.name.bright" = "Bright";
-```
+The key for the translation string must start with ```com.banuba.filter.name.{lut file name}``` and end with the name of the lut file.
+
+
 
 ### 6. I want to enable slideshow animation 
 
