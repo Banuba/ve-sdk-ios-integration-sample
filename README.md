@@ -19,11 +19,12 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 - [Token](#Token)
 - [Connecting with AR cloud](#Connecting-with-AR-cloud)
 - [What can you customize?](#What-can-you-customize)
-- [Getting Started](#Getting-Started)
+- [Integration](#Integration)
     + [SwiftPackageManager](#SwiftPackageManager)
     + [CocoaPods](#CocoaPods)
     + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)  
     + [Face AR](#Face-AR)
+ - [Customization](#Customization)
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
@@ -127,7 +128,7 @@ Face AR SDK is optional for the video editor SDK and would be disabled if it is 
 +  pod 'BanubaSDKSimple', '1.21.0'
 ```
 
-## Getting Started
+## Integration
 
 :exclamation: **Important:** Do not forget to copy all the resources that the sample contains, such as the **luts folder and etc**.
 
@@ -287,6 +288,8 @@ public enum EntryPoint: String, Codable {
 	case drafts
 }
 ``` 
+
+## Customization
 
 ### Configure export flow
 
