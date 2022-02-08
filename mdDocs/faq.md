@@ -24,8 +24,8 @@ These are the answers to the most common questions asked about our SDK.
 21. [I want to change visible tabs in gallery.](#21-i-want-to-change-visible-tabs-in-gallery)
 22. [I want to get exported video metadata.](#22-i-want-to-get-exported-video-metadata)
 23. [I want to change codec type from h264 to h265.](#23-i-want-to-change-codec-type-from-h264-to-h265)
-24. [How do I specify the video file saving directory?](#23-how-do-i-specify-the-video-file-saving-directory)
-25. [How do I change the duration of the image display in a slideshow?](#24-how-do-i-change-the-duration-of-the-image-display-in-a-slideshow)
+24. [How do I specify the video file saving directory?](#24-how-do-i-specify-the-video-file-saving-directory)
+25. [How do I change the duration of the image display in a slideshow?](#25-how-do-i-change-the-duration-of-the-image-display-in-a-slideshow)
 
 ### 1. How do I start/stop recording with a tap?
   
