@@ -23,6 +23,8 @@ These are the answers to the most common questions asked about our SDK.
 20. [I want to change visible tabs in gallery.](#20-i-want-to-change-visible-tabs-in-gallery)
 21. [I want to get exported video metadata.](#21-i-want-to-get-exported-video-metadata)
 22. [I want to change codec type from h264 to h265.](#22-i-want-to-change-codec-type-from-h264-to-h265)
+23. [How do I specify the video file saving directory?](#23-how-do-i-specify-the-video-file-saving-directory)
+24. [How do I change the duration of the image display in a slideshow?](#24-how-do-i-change-the-duration-of-the-image-display-in-a-slideshow)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -515,4 +517,28 @@ The first one you need when you create ```BanubaVideoEditor```, two last ones - 
     useHEVCCodecIfPossible: true,
     watermarkConfiguration: ...
   )
+```
+
+### 23. How do I specify the video file saving directory?
+
+In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
+
+```swift
+  let exportVideoConfigurations: [ExportVideoConfiguration] = [
+    ExportVideoConfiguration(
+      fileURL: fileURL,
+      quality: .auto,
+      useHEVCCodecIfPossible: true,
+      watermarkConfiguration: watermarkConfiguration
+  )
+]
+```
+
+### 24. How do I change the duration of the image display in a slideshow?
+
+To setup image display duration just configure it in ```VideoEditorDurationConfig``` entity:
+
+```swift
+  var config = VideoEditorConfig()
+  config.videoDurationConfiguration.slideshowDuration = 3.0
 ```
