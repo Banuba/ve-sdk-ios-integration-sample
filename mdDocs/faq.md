@@ -555,7 +555,7 @@ To setup image display duration just configure it in ```VideoEditorDurationConfi
   config.videoDurationConfiguration.slideshowDuration = 3.0
 ```
 
-### 26. The problem of using bitcode without optional frameworks.
+### 26. The problem of using optional frameworks and bitcode together.
 
 Now you can enable bitcode in your project only if it includes all VideoEditor frameworks(optional and required). 
 
