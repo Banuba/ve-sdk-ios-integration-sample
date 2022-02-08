@@ -21,10 +21,10 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 - [What can you customize?](#What-can-you-customize)
 - [Face AR](#Face-AR)
 - [Integration](#Integration)
-    + [Step 1: Setup SDK dependencies with SPM or Cocoapods](#Step-1:-Setup-SDK-dependencies-with-SPM-or-Cocoapods)
-       + [SwiftPackageManager](#SwiftPackageManager)
+    + [Step 1. Setup SDK dependencies with SPM or Cocoapods](#Step-1.-Setup-SDK-dependencies-with-SPM-or-Cocoapods)
+       + [SwiftPackageManager](#Swift-Package-Manager)
        + [CocoaPods](#CocoaPods)
-    + [Step 2: Start Video Editor from ViewController](#Step-2:-Start-Video-Editor-from-ViewController)  
+    + [Step 2. Start Video Editor from ViewController](#Step-2.-Start-Video-Editor-from-ViewController)  
  - [Customization](#Customization)
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
@@ -133,7 +133,7 @@ Face AR SDK is optional for the video editor SDK and would be disabled if it is 
 
 :exclamation: **Important:** Do not forget to copy all the resources that the sample contains, such as the **luts folder and etc**.
 
-### Step 1: Setup SDK dependencies with SPM or Cocoapods
+### Step 1. Setup SDK dependencies with SPM or Cocoapods
 
 The easiest ways to integrate the Video Editor SDK in your mobile app are through [CocoaPods](https://cocoapods.org) or [SwiftPackageManager](https://developer.apple.com/documentation/swift_packages). If you haven’t used this dependency managers before, see the [Cocoapods Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) and [SPM Getting Started Guide](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
 
@@ -184,7 +184,7 @@ Please, refer to the example of [Podfile](https://github.com/Banuba/ve-sdk-ios-i
    ```
 4. Open Example.xcworkspace with Xcode and run the project.
 
-### Step 2: Start Video Editor from ViewController
+### Step 2. Start Video Editor from ViewController
 
 ``` swift
 import BanubaVideoEditorSDK
