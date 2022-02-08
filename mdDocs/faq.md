@@ -20,11 +20,12 @@ These are the answers to the most common questions asked about our SDK.
 17. [I want to add audio filters.](#17-i-want-to-add-audio-filters)
 18. [I want to change icons and name for effects.](#18-i-want-to-change-icons-and-name-for-effects)
 19. [I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
-20. [I want to change visible tabs in gallery.](#20-i-want-to-change-visible-tabs-in-gallery)
-21. [I want to get exported video metadata.](#21-i-want-to-get-exported-video-metadata)
-22. [I want to change codec type from h264 to h265.](#22-i-want-to-change-codec-type-from-h264-to-h265)
-23. [How do I specify the video file saving directory?](#23-how-do-i-specify-the-video-file-saving-directory)
-24. [How do I change the duration of the image display in a slideshow?](#24-how-do-i-change-the-duration-of-the-image-display-in-a-slideshow)
+20. [I want to turn off Cover screen.](#20-i-want-to-turn-off-cover-screen)
+21. [I want to change visible tabs in gallery.](#21-i-want-to-change-visible-tabs-in-gallery)
+22. [I want to get exported video metadata.](#22-i-want-to-get-exported-video-metadata)
+23. [I want to change codec type from h264 to h265.](#23-i-want-to-change-codec-type-from-h264-to-h265)
+24. [How do I specify the video file saving directory?](#23-how-do-i-specify-the-video-file-saving-directory)
+25. [How do I change the duration of the image display in a slideshow?](#24-how-do-i-change-the-duration-of-the-image-display-in-a-slideshow)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -458,7 +459,17 @@ To turn off Drafts feature just disable it in ```FeatureConfiguration``` entity:
   config.featureConfiguration.draftsConfig = .disabled
 ```
 
-### 20. I want to change visible tabs in gallery
+### 20. I want to turn off Cover screen.
+
+To turn off Cover screen just disable it in ```FeatureConfiguration``` entity:
+
+```swift
+  var config = VideoEditorConfig()
+  
+  config.featureConfiguration.isVideoCoverSelectionEnabled = false
+```
+
+### 21. I want to change visible tabs in gallery
 
 To setup visible tabs for gallery just configure it in ```CombinedGalleryConfiguration``` entity:
 
@@ -468,7 +479,7 @@ To setup visible tabs for gallery just configure it in ```CombinedGalleryConfigu
   config.combinedGalleryConfiguration.visibleTabsInGallery = [.video, .photo]
 ```
 
-### 21. I want to get exported video metadata
+### 22. I want to get exported video metadata
 
 In order to find out which filter, effects, masks and music was applied to the video, you need to refer to the instance of the entity ```BanubaVideoEditor```.
 
@@ -492,7 +503,7 @@ let videoMusicTrack = videoEditorSDK?.musicTrack
 // to get music tracks from editor screen
 let videoTracks = videoEditorSDK?.musicMetadata?.tracks
 ```
-### 22. I want to change codec type from h264 to h265.
+### 23. I want to change codec type from h264 to h265.
 
 All you need is just to set ```useHEVCCodecIfPossible``` to ```true``` in ```VideoEditorConfig, ExportVideoInfo or ExportVideoConfiguration ``` entity.
 The first one you need when you create ```BanubaVideoEditor```, two last ones - when you prepare a video to export.
@@ -519,7 +530,7 @@ The first one you need when you create ```BanubaVideoEditor```, two last ones - 
   )
 ```
 
-### 23. How do I specify the video file saving directory?
+### 24. How do I specify the video file saving directory?
 
 In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
 
@@ -534,7 +545,7 @@ In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
 ]
 ```
 
-### 24. How do I change the duration of the image display in a slideshow?
+### 25. How do I change the duration of the image display in a slideshow?
 
 To setup image display duration just configure it in ```VideoEditorDurationConfig``` entity:
 
