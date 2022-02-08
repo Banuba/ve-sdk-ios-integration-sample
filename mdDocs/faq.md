@@ -26,7 +26,7 @@ These are the answers to the most common questions asked about our SDK.
 23. [I want to change codec type from h264 to h265.](#23-i-want-to-change-codec-type-from-h264-to-h265)
 24. [How do I specify the video file saving directory?](#24-how-do-i-specify-the-video-file-saving-directory)
 25. [How do I change the duration of the image display in a slideshow?](#25-how-do-i-change-the-duration-of-the-image-display-in-a-slideshow)
-26. [The problem of using optional frameworks and bitcode together](#26-the-problem-of-using-optional-frameworks-and-bitcode-together)
+26. [The problem of using optional frameworks and bitcode together.](#26-the-problem-of-using-optional-frameworks-and-bitcode-together)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -555,10 +555,10 @@ To setup image display duration just configure it in ```VideoEditorDurationConfi
   config.videoDurationConfiguration.slideshowDuration = 3.0
 ```
 
-### 26. The problem of using bitcode without optional frameworks
+### 26. The problem of using bitcode without optional frameworks.
 
 Now you can enable bitcode in your project only if it includes all VideoEditor frameworks(optional and required). 
 
 These are restrictions on the use of bitcode by Apple and at the moment it cannot be bypassed from our side.
 
-If you don't use optional frameworks, you should disable bitcode in order to successfully upload your app to the Apple Connect
+If you don't use optional frameworks, you should disable bitcode in order to successfully upload your app to the Apple Connect.
