@@ -25,7 +25,7 @@ These are the answers to the most common questions asked about our SDK.
 22. [I want to get exported video metadata.](#22-i-want-to-get-exported-video-metadata)
 23. [I want to change codec type from h264 to h265.](#23-i-want-to-change-codec-type-from-h264-to-h265)
 24. [How do I specify the video file saving directory?](#24-how-do-i-specify-the-video-file-saving-directory)
-25. [How do I change the duration of the image display in a slideshow?](#25-how-do-i-change-the-duration-of-the-image-display-in-a-slideshow)
+25. [How do I change the video duration?](#25-how-do-i-change-the-video-duration)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -545,11 +545,29 @@ In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
 ]
 ```
 
-### 25. How do I change the duration of the image display in a slideshow?
+### 25. How do I change the video duration?
 
-To setup image display duration just configure it in ```VideoEditorDurationConfig``` entity:
+To setup video duration just configure it in ```VideoEditorDurationConfig``` entity:
 
 ```swift
-  var config = VideoEditorConfig()
-  config.videoDurationConfiguration.slideshowDuration = 3.0
+  public struct VideoEditorDurationConfig {
+  /// The video maximum duration
+  /// Default is 60.0.
+  public var maximumVideoDuration: TimeInterval
+  /// The video minimum duration captured from a camera
+  /// Default is 3.0.
+  public var minimumDurationFromCamera: TimeInterval
+  /// The video minimum duration from a gallery
+  /// Default is 0.3.
+  public var minimumDurationFromGallery: TimeInterval
+  /// The video minimum duration
+  /// Default is 1.0.
+  public var minimumVideoDuration: TimeInterval
+  /// The video part minimum duration at trimmer
+  /// Default is 0.3.
+  public var minimumTrimmedPartDuration: TimeInterval
+  /// The video duration created from photo at camera and gallery
+  /// Default is 3.0
+  public var slideshowDuration: TimeInterval
+}
 ```
