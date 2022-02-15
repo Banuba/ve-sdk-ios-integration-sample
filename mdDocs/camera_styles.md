@@ -5,35 +5,35 @@ Here we set up the styles for the recording screen. These configs are for custom
 
    - [videoResolution: VideoResolutionConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L9)
    
-  VideoResolutionConfiguration setups camera options for capturing and rendering video
+  VideoResolutionConfiguration sets up the camera options for capturing and rendering video
   
   - [saveButton: SaveButtonConfiguration?](/Example/Example/Extension/RecorderConfiguration.swift#L41)
   
-  SaveButtonConfiguration setups save button style
+  SaveButtonConfiguration sets up the save button style
 
   - [backButton: BackButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L52)
   
-  BackButtonConfiguration setups back button style
+  BackButtonConfiguration sets up the back button style
   
   - [backToDraftsButton: BanubaButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
-  BanubaButtonConfiguration setups back to drafts button
+  BanubaButtonConfiguration sets up the back to drafts button
   
   - [removeButtonImageName: String](/Example/Example/Extension/RecorderConfiguration.swift#L53)
   
-  ImageName setups remove button UIImage
+  ImageName sets up the remove button UIImage
   
   - [progressLabelConfiguration: TextConfiguration?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
-  Setups top progress label style. Only for horizontal recorder.
+  Sets up the top progress label style. Only for horizontal recorder.
   
   - [floatingLineViewConfiguration: TextConfiguration?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
-  Setups top floating line view style.
+  Sets up the top floating line view style.
   
   - [floatingLineViewWidth: CGFloat?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
-  Setup width for floatingLineView. Default is 150.
+  Sets up the width for floatingLineView. Default is 150.
   
   - [сaptureButtonMode: CaptureButtonMode](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
@@ -43,51 +43,51 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   - [recordButtonConfiguration: RecordButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L55)
   
-  RecordButtonConfiguration setups capture button style
+  RecordButtonConfiguration sets up the capture button style
   
   - [recordButtonProvider: RecordButtonProvider?](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
-  RecordButtonProvider provides access to the possibility for creating capture button
+  RecordButtonProvider provides access to the possibility for creating a custom capture button
   
   - [additionalEffectsButtons: [AdditionalEffectsButtonConfiguration]](/Example/Example/Extension/RecorderConfiguration.swift#L62)
   
-  AdditionalEffectsButtonConfiguration array setups all of the camera screen control buttons' styles
+  AdditionalEffectsButtonConfiguration array sets up all of the camera screen control buttons' styles
   
   - [speedBarButtons: [SpeedBarButtonsConfiguration]](/Example/Example/Extension/RecorderConfiguration.swift#L62)
   
-  SpeedButtonConfiguration setups speed button style
+  SpeedButtonConfiguration sets up the speed button style
  
   - [galleryButton: RoundedButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L129)
   
-  RoundedButtonConfiguration setups gallery button style
+  RoundedButtonConfiguration sets up the gallery button style
   
   - [emptyGalleryImageName: String](/Example/Example/Extension/RecorderConfiguration.swift#L130)
  
-  Image name setups gallery button image for empty gallery state
+  Image name sets up the gallery button image for empty gallery state
  
   - [timerConfiguration: TimerConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L132)
   
-  TimerConfiguration setups timer functionality options
+  TimerConfiguration sets up the timer functionality options
   
   - [timeLineConfiguration: TimeLineConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L141)
   
-  TimeLineConfiguration setups progress bar style for sequences
+  TimeLineConfiguration sets up the progress bar style for sequences
   
   - [regularRecordButtonPosition: CGFloat](/Example/Example/Extension/RecorderConfiguration.swift#L144)
   
-  Value setups capture button posttion according to the screen bottom
+  This value sets up the capture button posttion according to the screen bottom
   
   - [recorderEffectsConfiguration: RecorderEffectsConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L145)
   
-  RecorderEffectsConfiguration setups effects list style
+  RecorderEffectsConfiguration sets up the effects list style
   
   - [leftControlsBottomOffsetFromCaptureButton: CGFloat](/Example/Example/Extension/RecorderConfiguration.swift#L146)
   
-  Value setups left controls posttions according to the capture button bottom
+  This value sets up the left controls position according to the capture button bottom
   
   - [leftControlsLeftOffset: CGFloat](/Example/Example/Extension/RecorderConfiguration.swift#L147)
   
-  Value setups left controls posttions according to the capture button leading
+  This value sets up the left controls position according to the capture button leading edge
   
   - [sequenceHeight: CGFloat](/Example/Example/Extension/RecorderConfiguration.swift#L148)
   
@@ -103,7 +103,7 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   - [takeAudioDurationAsMaximum: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L151)
   
-  This flag suggests that given audio duration setups maximum recording length
+  This flag suggests that the given audio duration determines the maximum recording length
   
   - [isDynamicMusicTitle: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L152)
 
@@ -111,15 +111,15 @@ Here we set up the styles for the recording screen. These configs are for custom
    
   - [isDefaultFrontCamera: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
 
-  Value provides the ability to open front camera by default
+  This value provides the ability to open the front camera by default
   
   - [isMusicTitleFloatingLineEnabled: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
 
-  Value setups music title floating view is enabled state
+  This value sets up whether the music title floating view is enabled
     
   - [useHEVCCodecIfPossible: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
 
-  The intermediate video will encoded with HEVC (H.265) encoder if it is available on the current device. Better quality, low size, better performance
+  The intermediate video will encoded with HEVC (H.265) encoder if it is available on the current device. Better quality, smaller size, better performance
     
   - [isPhotoSequenceAnimationEnabled: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
 
