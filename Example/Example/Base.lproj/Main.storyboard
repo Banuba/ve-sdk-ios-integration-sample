@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,22 +13,22 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="2s2-7l-yhx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="UCZ-29-s3y">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="rMu-UV-sNA">
                                 <rect key="frame" x="40" y="711" width="334" height="111"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jh-xc-CaM">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h43-SA-IBI">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="LnZ-Zm-yMW"/>
-                                            <constraint firstAttribute="height" constant="50" id="adW-pT-op1"/>
+                                            <constraint firstAttribute="height" constant="50" id="E8n-HA-84k"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="gOO-2H-cbW"/>
                                         </constraints>
                                         <state key="normal" title="Open Video Editor">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -43,15 +43,15 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="openVideoEditorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdO-qW-CDd"/>
+                                            <action selector="openVideoEditorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8qN-E9-rmq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjq-v9-Kyb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-aH-mDK">
                                         <rect key="frame" x="0.0" y="61" width="334" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Myn-Rn-NEH"/>
-                                            <constraint firstAttribute="height" constant="50" id="mA3-lE-JtA"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="5Y4-C9-Rtw"/>
+                                            <constraint firstAttribute="height" constant="50" id="j0D-0k-Km3"/>
                                         </constraints>
                                         <state key="normal" title="PIP">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,20 +69,43 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="PIPAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hU-tj-GLa"/>
+                                            <action selector="PIPAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MhB-ul-BV2"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SEf-wl-7Bn">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exporting..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGN-hx-1rT">
+                                <rect key="frame" x="0.0" y="400.5" width="414" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EyD-I4-4hu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="7r0-fU-7Mg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UCZ-29-s3y" secondAttribute="bottom" constant="40" id="9A1-rA-jyi"/>
-                            <constraint firstItem="UCZ-29-s3y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="NI7-yk-H9s"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCZ-29-s3y" secondAttribute="trailing" constant="40" id="xbJ-hG-4xm"/>
+                            <constraint firstItem="SEf-wl-7Bn" firstAttribute="centerY" secondItem="2s2-7l-yhx" secondAttribute="centerY" id="0hg-Ew-vu2"/>
+                            <constraint firstItem="7r0-fU-7Mg" firstAttribute="trailing" secondItem="iGN-hx-1rT" secondAttribute="trailing" id="7s5-NI-EQc"/>
+                            <constraint firstItem="SEf-wl-7Bn" firstAttribute="centerX" secondItem="2s2-7l-yhx" secondAttribute="centerX" id="9vx-Mz-MZy"/>
+                            <constraint firstItem="7r0-fU-7Mg" firstAttribute="bottom" secondItem="rMu-UV-sNA" secondAttribute="bottom" constant="40" id="B2b-hE-lSu"/>
+                            <constraint firstItem="7r0-fU-7Mg" firstAttribute="trailing" secondItem="rMu-UV-sNA" secondAttribute="trailing" constant="40" id="GLq-LA-cnX"/>
+                            <constraint firstItem="SEf-wl-7Bn" firstAttribute="top" secondItem="iGN-hx-1rT" secondAttribute="bottom" constant="8" id="IoF-L2-NFY"/>
+                            <constraint firstItem="rMu-UV-sNA" firstAttribute="leading" secondItem="7r0-fU-7Mg" secondAttribute="leading" constant="40" id="eI0-Bt-Mbz"/>
+                            <constraint firstItem="iGN-hx-1rT" firstAttribute="leading" secondItem="7r0-fU-7Mg" secondAttribute="leading" id="zfp-7V-aDB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="SEf-wl-7Bn" id="i92-C6-QNw"/>
+                        <outlet property="label" destination="iGN-hx-1rT" id="YNv-EB-Cb8"/>
+                        <outlet property="openPIPButton" destination="dOu-aH-mDK" id="n97-mH-quK"/>
+                        <outlet property="openVEButton" destination="h43-SA-IBI" id="Pzp-hc-YcQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
