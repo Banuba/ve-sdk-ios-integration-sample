@@ -27,6 +27,7 @@ These are the answers to the most common questions asked about our SDK.
 24. [How do I specify the video file saving directory?](#24-how-do-i-specify-the-video-file-saving-directory)
 25. [How do I change the video duration?](#25-how-do-i-change-the-video-duration)
 26. [The problem of using optional frameworks and bitcode together.](#26-the-problem-of-using-optional-frameworks-and-bitcode-together)
+27. [How do I change the launguage (how do I add new locale support)?](#27-how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -580,3 +581,11 @@ Now you can enable bitcode in your project only if it includes all VideoEditor f
 These are restrictions on the use of bitcode by Apple and at the moment it cannot be bypassed from our side.
 
 If you don't use optional frameworks, you should disable bitcode in order to successfully upload your app to the Apple Connect.
+
+### 27. How do I change the launguage (how do I add new locale support)?
+
+There is no special language switching mechanism in the Video Editor SDK (VE SDK).
+
+Out of the box, the VE SDK includes support for two locales: English (default) and Russian. If you need to support any other locales, you can do it according to the standard iOS way. See how [Create locale directories and resource files](https://developer.apple.com/documentation/xcode/localization) for more details. After adding a new locale resource file into your application with integrated VE SDK, you need to re-define the VE SDK strings keys with new locale string values.
+To do that you need to add all needed string keys in the new locale `Localizable.strings` file. You can find the main VE SDK string keys you need in the [Configure screens](https://github.com/Banuba/ve-sdk-ios-integration-sample#Configure-screens) doc page. E.g. string keys of the Overlay screen you can find [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/overlayEditor_styles.md#string-resources).
+The newly added locale will be applied after the device language is changed by system settings.
