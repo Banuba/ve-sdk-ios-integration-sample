@@ -589,3 +589,14 @@ There is no special language switching mechanism in the Video Editor SDK (VE SDK
 Out of the box, the VE SDK includes support for two locales: English (default) and Russian. If you need to support any other locales, you can do it according to the standard iOS way. See how [Create locale directories and resource files](https://developer.apple.com/documentation/xcode/localization) for more details. After adding a new locale resource file into your application with integrated VE SDK, you need to re-define the VE SDK strings keys with new locale string values.
 To do that you need to add all needed string keys in the new locale `Localizable.strings` file. You can find the main VE SDK string keys you need in the [Configure screens](https://github.com/Banuba/ve-sdk-ios-integration-sample#Configure-screens) doc page. E.g. string keys of the Overlay screen you can find [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/overlayEditor_styles.md#string-resources).
 The newly added locale will be applied after the device language is changed by system settings.
+
+### 28. How can I change the resolution of the exported video?
+
+To save the video in the format you want, you just need to add the appropriate ```PathComponent``` when creating the video URL.
+```swift
+let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
+```
+
+See example in [sample](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L171).
+
+See all formats supported for video export [here](https://github.com/Banuba/ve-sdk-ios-integration-sample#supported-media-formats).
