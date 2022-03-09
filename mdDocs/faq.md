@@ -28,6 +28,7 @@ These are the answers to the most common questions asked about our SDK.
 25. [How do I change the video duration?](#25-how-do-i-change-the-video-duration)
 26. [The problem of using optional frameworks and bitcode together.](#26-the-problem-of-using-optional-frameworks-and-bitcode-together)
 27. [How do I change the launguage (how do I add new locale support)?](#27-how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
+28. [How can I change the resolution of the exported video?](#28-how-can-i-change-the-resolution-of-the-exported-video)
 
 ### 1. How do I start/stop recording with a tap?
   
