@@ -146,10 +146,10 @@ extension ViewController {
     configuration.screenNameConfiguration.style = nil
     configuration.palleteInsets = .zero
     
-    configuration.selectionColorBehavior = TextEditSelectionBorderAnimationBehavior(
-      defaultBorderWidth: 3.0,
-      selectedBorderWidth: 8.0
-    )
+//    configuration.selectionColorBehavior = TextEditSelectionBorderAnimationBehavior(
+//      defaultBorderWidth: 3.0,
+//      selectedBorderWidth: 8.0
+//    )
     
     configuration.colorItemConfiguration = TextEditColorItemConfiguration(
       borderColor: UIColor.white,
