@@ -65,16 +65,13 @@ extension ViewController {
       defaultThumbnailHeight: 400.0
     )
     
-    configuration.saveButton.background.color = UIColor(red: 6, green: 188, blue: 193)
+    configuration.saveButton.background.color = UIColor(red: 6, green: 188, blue: 193, alpha: 1)
     configuration.saveButton.background.cornerRadius = 4.0
     configuration.saveButton.width = 68.0
     configuration.saveButton.height = 42.0
     configuration.saveButton.title.style.color = .white
     
     configuration.backButton = BackButtonConfiguration(imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration(imageName: "ic_nav_back_arrow"))
-    
-    configuration.isVideoCoverSelectionEnabled = true
-    configuration.useHorizontalVersion = false
     
     return configuration
   }

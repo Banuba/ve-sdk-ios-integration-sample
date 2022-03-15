@@ -7,6 +7,7 @@ import AVFoundation
 import AVKit
 import Photos
 import BSImagePicker
+import VEExportSDK
 
 class ViewController: UIViewController {
   
@@ -111,7 +112,6 @@ extension ViewController {
     config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
     config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
     config.combinedGalleryConfiguration = updateCombinedGalleryConfiguration(config.combinedGalleryConfiguration)
-    config.videoCoverSelectionConfiguration = updateVideCoverSelectionConfiguration(config.videoCoverSelectionConfiguration)
     config.extendedVideoCoverSelectionConfiguration = updateVideCoverSelectionConfiguration(config.extendedVideoCoverSelectionConfiguration)
     config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
     config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
@@ -130,7 +130,7 @@ extension ViewController {
   private func updateFilterConfiguration(_ configuration: FilterConfiguration) -> FilterConfiguration {
     var configuration = configuration
     
-    configuration.resetButton.backgroundColor = UIColor(red: 6, green: 188, blue: 193)
+    configuration.resetButton.backgroundColor = UIColor(red: 6, green: 188, blue: 193, alpha: 1)
     configuration.resetButton.cornerRadius = 4.0
     configuration.resetButton.textConfiguration?.color = .white
     configuration.toolTipLabel.color = .white
@@ -154,7 +154,7 @@ extension ViewController {
         gradientType: .color(
           SmallActivityIndicatorConfiguration.GradientColorConfiguration(
             angle: 0.0,
-            colors: [UIColor(red: 6, green: 188, blue: 193).cgColor, UIColor.white.cgColor]
+            colors: [UIColor(red: 6, green: 188, blue: 193, alpha: 1).cgColor, UIColor.white.cgColor]
           )
         ),
         activityLineWidth: 3.0

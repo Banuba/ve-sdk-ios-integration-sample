@@ -3,7 +3,7 @@ import BanubaMusicEditorSDK
 
 class EffectPickerViewController: UIViewController, EffectSelectionViewController {
   
-  weak var delegate: EffectSelectionViewControllerDelegate?
+  weak var effectSelectionDelegate: EffectSelectionViewControllerDelegate?
   
   var readyFiles = [URL]()
   
@@ -16,7 +16,7 @@ class EffectPickerViewController: UIViewController, EffectSelectionViewControlle
   }
   
   @IBAction func closeEffectSelection(_ sender: UIButton) {
-    delegate?.effectSelectionViewControllerDidCancel(viewController: self)
+    effectSelectionDelegate?.effectSelectionViewControllerDidCancel(viewController: self)
   }
 }
 
@@ -33,7 +33,7 @@ extension EffectPickerViewController: UITableViewDataSource, UITableViewDelegate
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    delegate?.effectSelectionViewController(
+    effectSelectionDelegate?.effectSelectionViewController(
       viewController: self,
       didSelectFile: readyFiles[indexPath.row],
       isEditable: true,

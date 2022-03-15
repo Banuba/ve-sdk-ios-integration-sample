@@ -308,8 +308,8 @@
 /* Rapid effect name */
 "com.banuba.editor.effect.name.rapid" = "Rapid";
 
-/* DSLR Kaleidoscope effect name*/
-"com.banuba.editor.effect.name.dslrkaleidoscope" = "DSLR Kaleidoscope";
+/* Mirror 2 effect name*/
+"com.banuba.editor.effect.name.mirror2" = "Mirror 2";
 
 /* DV Cam effect name */
 "com.banuba.editor.effect.name.dvcam" = "DV Cam";
@@ -323,8 +323,8 @@
 /* Heat map effect name */
 "com.banuba.editor.effect.name.heatmap" = "Heat Map";
 
-/* Kaleidoscope effect name */
-"com.banuba.editor.effect.name.kaleidoscope" = "Kaleidoscope";
+/* Mirror effect name */
+"com.banuba.editor.effect.name.mirror" = "Mirror";
 
 /* Lumiere */
 "com.banuba.editor.effect.name.lumiere" = "Lumiere";
@@ -334,6 +334,9 @@
 
 /* Pixel static effect name */
 "com.banuba.editor.effect.name.pixelationstatic" = "Pixel Static";
+
+/* Pixelate effect name */
+"com.banuba.editor.effect.name.pixelate" = "Pixelate";
 
 /* Stars effect name */
 "com.banuba.editor.effect.name.stars" = "Stars";
@@ -526,6 +529,12 @@
 /* Add sticker button title */
 "OverlayEditor.Sticker" = "Sticker";
 
+/* Add square blur button title */
+"OverlayEditor.Square.Pixelate" = "Square";
+
+/* Add circle Pixelate button title */
+"OverlayEditor.Circle.Pixelate" = "Circle";
+
 /* Cancel button title */
 "OverlayEditor.Cancel" = "Cancel";
 
@@ -629,6 +638,10 @@
 /* Gallery custom All Photos title */
 "BanubaVideoEditor.Gallery.AllPhotosTitle" = "All Photos";
 
+/* Gallery header info title */
+"BanubaVideoEditor.Gallery.HeaderInfoTitle" = "Update files %@ to choose more photos";
+"BanubaVideoEditor.Gallery.HeaderInfoColoredTitle" = "settings";
+
 /* Gallery Recent Photos title */
 "BanubaVideoEditor.Gallery.RecentPhotosTitle" = "Recent";
 
@@ -719,6 +732,7 @@
 "com.banuba.recorder.link.title" = "Link";
 "com.banuba.recorder.color.title" = "Filter";
 "com.banuba.recorder.sticker.title" = "Gif";
+"com.banuba.recorder.pixalate.title" = "Pixelate";
 "com.banuba.recorder.text.title" = "Text";
 "com.banuba.recorder.time.title" = "Time";
 "com.banuba.recorder.sound.title" = "Music";
