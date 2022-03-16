@@ -437,4 +437,5 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 [1.0.19](https://www.notion.so/vebanuba/1-19-0-7954637332964fc6ba87f477db112fdf)  
 [1.20.0](https://www.notion.so/vebanuba/1-20-0-39fe7f401a4b49ce9697e3abb8bf56b7)  
 [1.21.0](https://www.notion.so/vebanuba/1-21-0-6220edd4fd244cf28a997825a369203b)
+
 [1.22.0](https://www.notion.so/vebanuba/1-22-0-f1256f7ede8a4595a0a8c82b75cc98f8)
