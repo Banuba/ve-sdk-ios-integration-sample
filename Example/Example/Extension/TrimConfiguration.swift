@@ -54,7 +54,7 @@ extension ViewController {
     configuration.trimTimelineConfiguration.draggerConfiguration.backgroundConfiguraiton.cornerRadius = 8.0
     configuration.trimTimelineConfiguration.draggerConfiguration.draggerImageName = "trim_left"
     configuration.trimTimelineConfiguration.controlsColor = UIColor(
-      red: 250, green: 62, blue: 118
+      red: 250, green: 62, blue: 118, alpha: 1
     )
     configuration.playerControlConfiguration = PlayerControlConfiguration(
       playButtonImageName: "ic_play",

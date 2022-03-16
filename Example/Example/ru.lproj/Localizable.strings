@@ -304,8 +304,8 @@
 /* Rapid effect name */
 "com.banuba.editor.effect.name.rapid" = "2x";
 
-/* DSLR Kaleidoscope effect name*/
-"com.banuba.editor.effect.name.dslrkaleidoscope" = "DSLR Kaleidoscope";
+/* Mirror 2 effect name*/
+"com.banuba.editor.effect.name.mirror2" = "Mirror 2";
 
 /* DV Cam effect name */
 "com.banuba.editor.effect.name.dvcam" = "DV Cam";
@@ -319,8 +319,8 @@
 /* Heat map effect name */
 "com.banuba.editor.effect.name.heatmap" = "Heat Map";
 
-/* Kaleidoscope effect name */
-"com.banuba.editor.effect.name.kaleidoscope" = "Kaleidoscope";
+/* Mirror effect name */
+"com.banuba.editor.effect.name.mirror" = "Mirror";
 
 /* Lumiere */
 "com.banuba.editor.effect.name.lumiere" = "Lumiere";
@@ -330,6 +330,9 @@
 
 /* Pixel static effect name */
 "com.banuba.editor.effect.name.pixelationstatic" = "Pixel Static";
+
+/* Pixelate effect name */
+"com.banuba.editor.effect.name.pixelate" = "Pixelate";
 
 /* Stars effect name */
 "com.banuba.editor.effect.name.stars" = "Stars";
@@ -521,6 +524,12 @@
 /* Add sticker button title */
 "OverlayEditor.Sticker" = "Стикер";
 
+/* Add square blur button title */
+"OverlayEditor.Square.Pixelate" = "Квадрат";
+
+/* Add circle Pixelate button title */
+"OverlayEditor.Circle.Pixelate" = "Круг";
+
 /* Cancel button title */
 "OverlayEditor.Cancel" = "Отменить";
 
@@ -624,6 +633,10 @@
 /* Gallery custom All Photos title */
 "BanubaVideoEditor.Gallery.AllPhotosTitle" = "Вce фото";
 
+/* Gallery header info title */
+"BanubaVideoEditor.Gallery.HeaderInfoTitle" = "Открыть %@, чтобы разрешить доступ к фотографиям";
+"BanubaVideoEditor.Gallery.HeaderInfoColoredTitle" = "настройки";
+
 /* Gallery Recent Photos title */
 "BanubaVideoEditor.Gallery.RecentPhotosTitle" = "Недавние";
 
@@ -712,6 +725,7 @@
 "com.banuba.recorder.link.title" = "Ссылка";
 "com.banuba.recorder.color.title" = "Фильтры";
 "com.banuba.recorder.sticker.title" = "Стикеры";
+"com.banuba.recorder.pixalate.title" = "Блюр";
 "com.banuba.recorder.text.title" = "Текст";
 "com.banuba.recorder.time.title" = " Скорость";
 "com.banuba.recorder.sound.title" = "Музыка";
