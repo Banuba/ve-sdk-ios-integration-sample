@@ -43,7 +43,8 @@ public struct ExportVideoConfiguration {
   public let useHEVCCodecIfPossible: Bool
 }
 ```
-  :exclamation: **Before using high resolutions instead of automatic, low or medium, make sure that the devices on which you will be exporting can support such a resolution from our list of recommended ones, because we do not guarantee high resolution performance and crash free states on low devices.**
+  :exclamation: **We recommend using standard resolution, shush is set up by default. We understand your requirements might be different, so we give you an option to manage the resolution.
+Doing that make sure the devices that exports video does support such a resolution. On a low device high resolution may cause crashes and freezes.**
   
   Export Quality has to configured by ExportQuality enumeration:
 ``` swift
