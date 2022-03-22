@@ -43,7 +43,8 @@ public struct ExportVideoConfiguration {
   public let useHEVCCodecIfPossible: Bool
 }
 ```
-
+  :exclamation: **Before using high resolutions instead of automatic, low or medium, make sure that the devices on which you will be exporting can support such a resolution from our list of recommended ones, because we do not guarantee high resolution performance and crash free states on low devices.**
+  
   Export Quality has to configured by ExportQuality enumeration:
 ``` swift
 /// Export video quality.
@@ -58,10 +59,20 @@ public enum ExportQuality {
 public class ExportVideoInfo {
     /// Specifid quality for exporting video.
     public enum Resolution : String {
-        case ld360
-        case md480
-        case hd720
-        case fullHd1080
+      /// 1440p 
+      case qhd1440
+      /// 1080p
+      case fullHd1080
+      /// 720p
+      case hd720
+      /// 540p
+      case md540
+      /// 480p
+      case md480
+      /// 360p
+      case ld360
+      /// original
+      case original
     }
 
     /// Specified video quality.
