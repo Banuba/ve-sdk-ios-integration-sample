@@ -10,6 +10,8 @@ target 'Example' do
   pod 'BanubaMusicEditorSDK', '1.22.0'
   pod 'BanubaOverlayEditorSDK', '1.22.0'
   pod 'BanubaSDKSimple', '1.22.0'
+  pod 'BanubaEffectPlayer', '1.22.0'
+  pod 'BanubaSDK', '1.22.0'
   pod 'BanubaSDKServicing', '1.22.0'
   pod 'VideoEditor', '1.22.0'
   pod 'BanubaUtilities', '1.22.0'
