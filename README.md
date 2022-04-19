@@ -95,7 +95,7 @@ We offer а free 14-days trial for you could thoroughly test and assess Video Ed
 
 Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/97ebccf9e52b31db92586709cc6afa55decb9d75/Example/Example/ViewController.swift#L83).  
 
-Also you can load token from [Firebase](https://firebase.google.com/docs/database/android/start). [Check](mdDocs/token_on_firebase.md) to configure firebase
+Also you can load token from [Firebase](https://firebase.google.com/docs/database/ios/start). [Check](mdDocs/token_on_firebase.md) to configure firebase
 
 ## Connecting with AR cloud
 
