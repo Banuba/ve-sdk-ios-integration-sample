@@ -422,6 +422,67 @@ Any text in the mobile video editor SDK can be changed. To edit text resources, 
 
 Don’t change the keys (values on the left), only the values on the right. Otherwise, the button names and other texts will not show.
 
+## Analytics
+
+The SDK generates simple metadata analytics in JSON file that you can use in your application. 
+You need to make sure that analytics collection is enabled in your token. 
+After export, the analytics as a row is available in the entity:
+```swift
+let analytics: String? = videoEditorSDK?.metadata?.analyticsMetadataJSON
+```
+Output example:
+```JSON
+{
+  "export_duration": 18.613733167,
+  "export_success": true,
+  "camera_effects": [
+    "mask:Beauty",
+    "mask:HairGradient_Avocado",
+    "neon.png"
+  ],
+  "video_resolutions": [
+    "default854x480"
+  ],
+  "os_version": "12.4.7",
+  "video_count": 1,
+  "post_processing_effects": [
+    "101",
+    "202",
+    "mask:2_5D_HeadphoneMusic"
+  ],
+  "token": "commercial",
+  "video_duration": 19.433333333333334,
+  "sdk_version": "1.22.0",
+  "video_sources": [
+    {
+      "startTime": "0.0",
+      "title": "3CE046B1-9308-44A5-8AC4-E14B5C273F1D",
+      "endTime": "3.0",
+      "type": "camera"
+    },
+    {
+      "startTime": "3.0",
+      "title": "1120F49A-F04C-49BF-B586-0307897B9E74",
+      "endTime": "12.8",
+      "type": "gallery"
+    },
+    {
+      "startTime": "12.8",
+      "title": "82A8C971-04D0-4677-BA3C-61DD2EFB6BAD",
+      "endTime": "15.8",
+      "type": "camera"
+    },
+    {
+      "startTime": "15.8",
+      "title": "D1B9EC82-02BB-4052-B97E-1CFA3489BC3B",
+      "endTime": "18.458333333333336",
+      "type": "camera"
+    }
+  ]
+}
+```
+
+
 ## FAQ  
 Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to your questions.
 
