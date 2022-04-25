@@ -29,7 +29,6 @@ These are the answers to the most common questions asked about our SDK.
 26. [The problem of using optional frameworks and bitcode together.](#26-the-problem-of-using-optional-frameworks-and-bitcode-together)
 27. [How do I change the launguage (how do I add new locale support)?](#27-how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
 28. [How can I change the extension of the exported video?](#28-how-can-i-change-the-extension-of-the-exported-video)
-29. [How to use analytics?](#29-how-to-use-analytics)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -602,63 +601,3 @@ let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
 See example in [sample](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L171).
 
 See all formats supported for video export [here](https://github.com/Banuba/ve-sdk-ios-integration-sample#supported-media-formats).
-
-### 29. How to use analytics?
-
-You need to make sure that analytics collection is enabled in your token.
-After export, the analytics as a row is available in the entity:
-```swift
-
-let analytics: String? = videoEditorSDK?.metadata?.analyticsMetadataJSON
-```
-Output example:
-```JSON
-{
-  "export_duration": 18.613733167,
-  "export_success": true,
-  "camera_effects": [
-    "mask:Beauty",
-    "mask:HairGradient_Avocado",
-    "neon.png"
-  ],
-  "video_resolutions": [
-    "default854x480"
-  ],
-  "os_version": "12.4.7",
-  "video_count": 1,
-  "post_processing_effects": [
-    "101",
-    "202",
-    "mask:2_5D_HeadphoneMusic"
-  ],
-  "token": "commercial",
-  "video_duration": 19.433333333333334,
-  "sdk_version": "1.22.0",
-  "video_sources": [
-    {
-      "startTime": "0.0",
-      "title": "3CE046B1-9308-44A5-8AC4-E14B5C273F1D",
-      "endTime": "3.0",
-      "type": "camera"
-    },
-    {
-      "startTime": "3.0",
-      "title": "1120F49A-F04C-49BF-B586-0307897B9E74",
-      "endTime": "12.8",
-      "type": "gallery"
-    },
-    {
-      "startTime": "12.8",
-      "title": "82A8C971-04D0-4677-BA3C-61DD2EFB6BAD",
-      "endTime": "15.8",
-      "type": "camera"
-    },
-    {
-      "startTime": "15.8",
-      "title": "D1B9EC82-02BB-4052-B97E-1CFA3489BC3B",
-      "endTime": "18.458333333333336",
-      "type": "camera"
-    }
-  ]
-}
-```
