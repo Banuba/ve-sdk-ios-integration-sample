@@ -29,6 +29,7 @@ These are the answers to the most common questions asked about our SDK.
 26. [The problem of using optional frameworks and bitcode together.](#26-the-problem-of-using-optional-frameworks-and-bitcode-together)
 27. [How do I change the launguage (how do I add new locale support)?](#27-how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
 28. [How can I change the extension of the exported video?](#28-how-can-i-change-the-extension-of-the-exported-video)
+29. [How to use analytics](#29-how-to-use-analytics)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -601,3 +602,12 @@ let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
 See example in [sample](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L171).
 
 See all formats supported for video export [here](https://github.com/Banuba/ve-sdk-ios-integration-sample#supported-media-formats).
+
+### 29. How to use analytics?
+
+You need to make sure that analytics collection is enabled in your token.
+After export, the analytics as a row is available in the entity:
+```swift
+
+let analytics: String? = videoEditorSDK?.metadata?.analyticsMetadataJSON
+```
