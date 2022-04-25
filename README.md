@@ -427,6 +427,7 @@ Don’t change the keys (values on the left), only the values on the right. Othe
 
 The SDK generates simple metadata analytics in JSON file that you can use in your application. 
 You need to make sure that analytics collection is enabled in your token. 
+
 After export, the analytics as a row is available in the entity:
 ```swift
 let analytics: String? = videoEditorSDK?.metadata?.analyticsMetadataJSON
