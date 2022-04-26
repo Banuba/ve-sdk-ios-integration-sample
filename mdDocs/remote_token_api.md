@@ -10,9 +10,8 @@ private func loadToken(completion: @escaping (String) -> Void) {
     )
     let provider = VideoEditorTokenProvider(tokenProvider: remoteTokenProvider)
     
-    startActivity(isStopExportButtonHidden: false, text: "Loading")
-    
     provider.loadToken() { [weak self] error, token in
-      self?.stopActivity()
     ...
+
+    }
 ```
