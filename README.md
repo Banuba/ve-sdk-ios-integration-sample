@@ -409,7 +409,7 @@ Also there is an option to use **your own implementation of the gallery**. This 
 
 ### Configure additional Video Editor SDK features
 
-1. [Transition effects](mddocs/transitions_styles.md)
+1. [Transition effects](mdDocs/transitions_styles.md)
 
 ### Icons
 
