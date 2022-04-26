@@ -31,8 +31,11 @@
 
  ![img](screenshots/transitions_1.png)
 
- As a part of the trimmer timeline, styling attributes of transition icons are placed in **TrimTimeLineConfiguration** entity with **transitionIcons** dictionary property:
+ As a part of the trimmer timeline, styling attributes of transition icons are placed in `TrimTimeLineConfiguration` entity with `transitionIcons` dictionary property:
 
+Transitions icons property is following dictionary `[TransitionType: TransitionActionConfiguration]`.
+
+`TransitionActionConfiguration` struct:
 ``` swift
   /// Image configuration
   let imageConfiguration: ImageConfiguration
@@ -54,7 +57,7 @@
 
  For transitions preview and selection there is a helper ui screen on the trimmer. 
 
- To customize this screen there are following attributes in the **VideoEditorConfig** entity with **transitionsConfiguration** property:
+ To customize this screen there are following attributes in the `VideoEditorConfig` entity with `transitionsConfiguration` property:
 
  ``` swift
   /// Setups image for cancel button
@@ -73,9 +76,9 @@
 
  ## Customizing transition effects
 
- There are 10 transition effects available to use within AI Video Editor SDK. Additional "empty" effect is provided to leave the segue between videos without any transition effect.
+ There are 10 transition effects available to use within AI Video Editor SDK. Additional "normal" effect is provided to leave the segue between videos without any transition effect.
 
- Every transition effect has its own **string identifier**: 
+ Every transition effect has its own **string identifier** with `TransitionType` entiry: 
 
 ``` swift
 public enum TransitionType: String, Codable, CaseIterable {
@@ -106,7 +109,7 @@ public enum TransitionType: String, Codable, CaseIterable {
 
  The identifier is used in naming of the ios resources related to every transition effect icon.
 
- Timeline icons could be setupped from **EffectsListConfiguration** entity with **effects** property:
+ Timeline icons could be setupped from `EffectsListConfiguration` entity with `effects` property:
  
  ``` swift
  public struct EffectsListConfiguration {
@@ -117,7 +120,7 @@ public enum TransitionType: String, Codable, CaseIterable {
 }
 ```
 
-EffectListItemConfiguration has the following structure:
+`EffectListItemConfiguration` has the following structure:
 
 ``` swift
 public struct EffectListItemConfiguration {
