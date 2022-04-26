@@ -32,6 +32,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
     + [Configure masks and filters order](#Configure-masks-and-filters-order)
     + [Configure watermark](#Configure-watermark)
     + [Configure stickers content](#Configure-stickers-content)
+    + [Configure additional Video Editor SDK features](#Configure-additional-Video-Editor-SDK-features)
     + [Icons](#Icons)
     + [Localization](#Localization)
 - [FAQ](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/faq.md)
@@ -405,6 +406,10 @@ target 'Example' do
 The gallery provided by the SDK is fully customizable according to [this guide](mdDocs/gallery_styles.md). 
 
 Also there is an option to use **your own implementation of the gallery**. This is available according to this [step-by-step guide](mdDocs/configure_external_gallery.md). 
+
+### Configure additional Video Editor SDK features
+
+1. [Transition effects](mdDocs/transitions_styles.md)
 
 ### Icons
 
