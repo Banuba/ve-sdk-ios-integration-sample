@@ -12,6 +12,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 </p>
 
 - [Requirements](#Requirements)
+- [Framework dependencies](#Framework-dependencies)
 - [Dependencies](#Dependencies)
 - [SDKs size](#SDKs-size)
 - [Starting a free trial](#Starting-a-free-trial)
@@ -47,6 +48,30 @@ This is what you need to run the AI Video Editor SDK
 - Xcode 13.0+
 - iOS 12.0+
 Unfortunately, It isn't optimized for iPads.
+
+## Framework dependencies
+
+Our SDK contains dependencies on native libraries, as well as third-party ones.
+Below are listed our native frameworks dependencies:
+
+1. Foundation
+1. AV Foundation
+1. UI Kit
+1. AV Kit
+1. Core media
+1. Core video
+1. Core graphics
+1. GL Kit
+1. Photos
+1. OpenGLES
+1. MetalKit
+1. SystemConfiguration
+1. OSLog
+1. GLProgram
+1. MediaPlayer
+1. Accelerate
+
+Dependencies on third-party libraries and their licenses you could view [here](mdDocs/3rd_party_licences.md).
 
 ## Dependencies
 
