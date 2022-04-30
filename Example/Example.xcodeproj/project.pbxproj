@@ -9,24 +9,6 @@
 /* Begin PBXBuildFile section */
 		510612852606839C00176389 /* AlertViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510612842606839C00176389 /* AlertViewConfiguration.swift */; };
 		5191FED7266755C300B842EA /* TrimConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191FED6266755C300B842EA /* TrimConfiguration.swift */; };
-		51998D1427E25997006938C2 /* BNBLicenseUtilsPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D1327E25997006938C2 /* BNBLicenseUtilsPackage */; };
-		51998D1627E25997006938C2 /* BanubaARCloudSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D1527E25997006938C2 /* BanubaARCloudSDKPackage */; };
-		51998D1827E25997006938C2 /* BanubaAudioBrowserSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D1727E25997006938C2 /* BanubaAudioBrowserSDKPackage */; };
-		51998D1A27E25997006938C2 /* BanubaEffectPlayerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D1927E25997006938C2 /* BanubaEffectPlayerPackage */; };
-		51998D1C27E25997006938C2 /* BanubaLicenseServicingSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D1B27E25997006938C2 /* BanubaLicenseServicingSDKPackage */; };
-		51998D1E27E25997006938C2 /* BanubaMusicEditorSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D1D27E25997006938C2 /* BanubaMusicEditorSDKPackage */; };
-		51998D2027E25997006938C2 /* BanubaOverlayEditorSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D1F27E25997006938C2 /* BanubaOverlayEditorSDKPackage */; };
-		51998D2227E25997006938C2 /* BanubaSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D2127E25997006938C2 /* BanubaSDKPackage */; };
-		51998D2427E25997006938C2 /* BanubaSDKServicingPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D2327E25997006938C2 /* BanubaSDKServicingPackage */; };
-		51998D2627E25997006938C2 /* BanubaSDKSimplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D2527E25997006938C2 /* BanubaSDKSimplePackage */; };
-		51998D2827E25997006938C2 /* BanubaUtilitiesPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D2727E25997006938C2 /* BanubaUtilitiesPackage */; };
-		51998D2A27E25997006938C2 /* BanubaVideoEditorGallerySDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D2927E25997006938C2 /* BanubaVideoEditorGallerySDKPackage */; };
-		51998D2C27E25997006938C2 /* BanubaVideoEditorSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D2B27E25997006938C2 /* BanubaVideoEditorSDKPackage */; };
-		51998D2E27E25997006938C2 /* BanubaVideoEditorTrimSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D2D27E25997006938C2 /* BanubaVideoEditorTrimSDKPackage */; };
-		51998D3027E25997006938C2 /* VEEffectsSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D2F27E25997006938C2 /* VEEffectsSDKPackage */; };
-		51998D3227E25997006938C2 /* VEExportSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D3127E25997006938C2 /* VEExportSDKPackage */; };
-		51998D3427E25997006938C2 /* VEPlaybackSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D3327E25997006938C2 /* VEPlaybackSDKPackage */; };
-		51998D3627E25997006938C2 /* VideoEditorPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51998D3527E25997006938C2 /* VideoEditorPackage */; };
 		519D5B2A266905CC000A3B48 /* CoverConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D5B29266905CC000A3B48 /* CoverConfiguration.swift */; };
 		51D07DE12607B27900BB48D9 /* CombinedGalleryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DE02607B27900BB48D9 /* CombinedGalleryConfiguration.swift */; };
 		51D07DE72607B87000BB48D9 /* EditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DE62607B87000BB48D9 /* EditorConfiguration.swift */; };
@@ -34,6 +16,24 @@
 		51D07DEF2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DEE2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift */; };
 		51D07DF42607D51E00BB48D9 /* RecorderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */; };
 		51D07DF82607DFFC00BB48D9 /* HandsfreeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */; };
+		51DBB135281D72FD00C62E23 /* BNBLicenseUtilsPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB134281D72FD00C62E23 /* BNBLicenseUtilsPackage */; };
+		51DBB137281D72FD00C62E23 /* BanubaARCloudSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB136281D72FD00C62E23 /* BanubaARCloudSDKPackage */; };
+		51DBB139281D72FD00C62E23 /* BanubaAudioBrowserSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB138281D72FD00C62E23 /* BanubaAudioBrowserSDKPackage */; };
+		51DBB13B281D72FD00C62E23 /* BanubaEffectPlayerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB13A281D72FD00C62E23 /* BanubaEffectPlayerPackage */; };
+		51DBB13D281D72FD00C62E23 /* BanubaLicenseServicingSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB13C281D72FD00C62E23 /* BanubaLicenseServicingSDKPackage */; };
+		51DBB13F281D72FD00C62E23 /* BanubaMusicEditorSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB13E281D72FD00C62E23 /* BanubaMusicEditorSDKPackage */; };
+		51DBB141281D72FD00C62E23 /* BanubaOverlayEditorSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB140281D72FD00C62E23 /* BanubaOverlayEditorSDKPackage */; };
+		51DBB143281D72FD00C62E23 /* BanubaSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB142281D72FD00C62E23 /* BanubaSDKPackage */; };
+		51DBB145281D72FD00C62E23 /* BanubaSDKServicingPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB144281D72FD00C62E23 /* BanubaSDKServicingPackage */; };
+		51DBB147281D72FD00C62E23 /* BanubaSDKSimplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB146281D72FD00C62E23 /* BanubaSDKSimplePackage */; };
+		51DBB149281D72FD00C62E23 /* BanubaUtilitiesPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB148281D72FD00C62E23 /* BanubaUtilitiesPackage */; };
+		51DBB14B281D72FD00C62E23 /* BanubaVideoEditorGallerySDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB14A281D72FD00C62E23 /* BanubaVideoEditorGallerySDKPackage */; };
+		51DBB14D281D72FD00C62E23 /* BanubaVideoEditorSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB14C281D72FD00C62E23 /* BanubaVideoEditorSDKPackage */; };
+		51DBB14F281D72FD00C62E23 /* BanubaVideoEditorTrimSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB14E281D72FD00C62E23 /* BanubaVideoEditorTrimSDKPackage */; };
+		51DBB151281D72FD00C62E23 /* VEEffectsSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB150281D72FD00C62E23 /* VEEffectsSDKPackage */; };
+		51DBB153281D72FD00C62E23 /* VEExportSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB152281D72FD00C62E23 /* VEExportSDKPackage */; };
+		51DBB155281D72FD00C62E23 /* VEPlaybackSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB154281D72FD00C62E23 /* VEPlaybackSDKPackage */; };
+		51DBB157281D72FD00C62E23 /* VideoEditorPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51DBB156281D72FD00C62E23 /* VideoEditorPackage */; };
 		51E97A5A26CFC5E500E0E4C4 /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E97A5926CFC5E500E0E4C4 /* VideoPicker.swift */; };
 		634FAC04255C351900FB0DBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634FAC06255C351900FB0DBC /* Localizable.strings */; };
 		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
@@ -103,26 +103,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51998D2E27E25997006938C2 /* BanubaVideoEditorTrimSDKPackage in Frameworks */,
-				51998D1A27E25997006938C2 /* BanubaEffectPlayerPackage in Frameworks */,
-				51998D2C27E25997006938C2 /* BanubaVideoEditorSDKPackage in Frameworks */,
-				51998D3027E25997006938C2 /* VEEffectsSDKPackage in Frameworks */,
-				51998D2227E25997006938C2 /* BanubaSDKPackage in Frameworks */,
-				51998D1C27E25997006938C2 /* BanubaLicenseServicingSDKPackage in Frameworks */,
-				51998D1E27E25997006938C2 /* BanubaMusicEditorSDKPackage in Frameworks */,
-				51998D2427E25997006938C2 /* BanubaSDKServicingPackage in Frameworks */,
-				51998D1627E25997006938C2 /* BanubaARCloudSDKPackage in Frameworks */,
-				51998D3227E25997006938C2 /* VEExportSDKPackage in Frameworks */,
+				51DBB14F281D72FD00C62E23 /* BanubaVideoEditorTrimSDKPackage in Frameworks */,
+				51DBB13B281D72FD00C62E23 /* BanubaEffectPlayerPackage in Frameworks */,
+				51DBB14D281D72FD00C62E23 /* BanubaVideoEditorSDKPackage in Frameworks */,
+				51DBB151281D72FD00C62E23 /* VEEffectsSDKPackage in Frameworks */,
+				51DBB143281D72FD00C62E23 /* BanubaSDKPackage in Frameworks */,
+				51DBB13D281D72FD00C62E23 /* BanubaLicenseServicingSDKPackage in Frameworks */,
+				51DBB13F281D72FD00C62E23 /* BanubaMusicEditorSDKPackage in Frameworks */,
+				51DBB145281D72FD00C62E23 /* BanubaSDKServicingPackage in Frameworks */,
+				51DBB137281D72FD00C62E23 /* BanubaARCloudSDKPackage in Frameworks */,
+				51DBB153281D72FD00C62E23 /* VEExportSDKPackage in Frameworks */,
 				8AD7FE3026F358370072AF33 /* Lottie in Frameworks */,
-				51998D2827E25997006938C2 /* BanubaUtilitiesPackage in Frameworks */,
-				51998D1827E25997006938C2 /* BanubaAudioBrowserSDKPackage in Frameworks */,
-				51998D1427E25997006938C2 /* BNBLicenseUtilsPackage in Frameworks */,
+				51DBB149281D72FD00C62E23 /* BanubaUtilitiesPackage in Frameworks */,
+				51DBB139281D72FD00C62E23 /* BanubaAudioBrowserSDKPackage in Frameworks */,
+				51DBB135281D72FD00C62E23 /* BNBLicenseUtilsPackage in Frameworks */,
 				8AD7FE3326F358720072AF33 /* BSImagePicker in Frameworks */,
-				51998D2027E25997006938C2 /* BanubaOverlayEditorSDKPackage in Frameworks */,
-				51998D3627E25997006938C2 /* VideoEditorPackage in Frameworks */,
-				51998D3427E25997006938C2 /* VEPlaybackSDKPackage in Frameworks */,
-				51998D2627E25997006938C2 /* BanubaSDKSimplePackage in Frameworks */,
-				51998D2A27E25997006938C2 /* BanubaVideoEditorGallerySDKPackage in Frameworks */,
+				51DBB141281D72FD00C62E23 /* BanubaOverlayEditorSDKPackage in Frameworks */,
+				51DBB157281D72FD00C62E23 /* VideoEditorPackage in Frameworks */,
+				51DBB155281D72FD00C62E23 /* VEPlaybackSDKPackage in Frameworks */,
+				51DBB147281D72FD00C62E23 /* BanubaSDKSimplePackage in Frameworks */,
+				51DBB14B281D72FD00C62E23 /* BanubaVideoEditorGallerySDKPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,24 +237,24 @@
 			packageProductDependencies = (
 				8AD7FE2F26F358370072AF33 /* Lottie */,
 				8AD7FE3226F358720072AF33 /* BSImagePicker */,
-				51998D1327E25997006938C2 /* BNBLicenseUtilsPackage */,
-				51998D1527E25997006938C2 /* BanubaARCloudSDKPackage */,
-				51998D1727E25997006938C2 /* BanubaAudioBrowserSDKPackage */,
-				51998D1927E25997006938C2 /* BanubaEffectPlayerPackage */,
-				51998D1B27E25997006938C2 /* BanubaLicenseServicingSDKPackage */,
-				51998D1D27E25997006938C2 /* BanubaMusicEditorSDKPackage */,
-				51998D1F27E25997006938C2 /* BanubaOverlayEditorSDKPackage */,
-				51998D2127E25997006938C2 /* BanubaSDKPackage */,
-				51998D2327E25997006938C2 /* BanubaSDKServicingPackage */,
-				51998D2527E25997006938C2 /* BanubaSDKSimplePackage */,
-				51998D2727E25997006938C2 /* BanubaUtilitiesPackage */,
-				51998D2927E25997006938C2 /* BanubaVideoEditorGallerySDKPackage */,
-				51998D2B27E25997006938C2 /* BanubaVideoEditorSDKPackage */,
-				51998D2D27E25997006938C2 /* BanubaVideoEditorTrimSDKPackage */,
-				51998D2F27E25997006938C2 /* VEEffectsSDKPackage */,
-				51998D3127E25997006938C2 /* VEExportSDKPackage */,
-				51998D3327E25997006938C2 /* VEPlaybackSDKPackage */,
-				51998D3527E25997006938C2 /* VideoEditorPackage */,
+				51DBB134281D72FD00C62E23 /* BNBLicenseUtilsPackage */,
+				51DBB136281D72FD00C62E23 /* BanubaARCloudSDKPackage */,
+				51DBB138281D72FD00C62E23 /* BanubaAudioBrowserSDKPackage */,
+				51DBB13A281D72FD00C62E23 /* BanubaEffectPlayerPackage */,
+				51DBB13C281D72FD00C62E23 /* BanubaLicenseServicingSDKPackage */,
+				51DBB13E281D72FD00C62E23 /* BanubaMusicEditorSDKPackage */,
+				51DBB140281D72FD00C62E23 /* BanubaOverlayEditorSDKPackage */,
+				51DBB142281D72FD00C62E23 /* BanubaSDKPackage */,
+				51DBB144281D72FD00C62E23 /* BanubaSDKServicingPackage */,
+				51DBB146281D72FD00C62E23 /* BanubaSDKSimplePackage */,
+				51DBB148281D72FD00C62E23 /* BanubaUtilitiesPackage */,
+				51DBB14A281D72FD00C62E23 /* BanubaVideoEditorGallerySDKPackage */,
+				51DBB14C281D72FD00C62E23 /* BanubaVideoEditorSDKPackage */,
+				51DBB14E281D72FD00C62E23 /* BanubaVideoEditorTrimSDKPackage */,
+				51DBB150281D72FD00C62E23 /* VEEffectsSDKPackage */,
+				51DBB152281D72FD00C62E23 /* VEExportSDKPackage */,
+				51DBB154281D72FD00C62E23 /* VEPlaybackSDKPackage */,
+				51DBB156281D72FD00C62E23 /* VideoEditorPackage */,
 			);
 			productName = Example;
 			productReference = 639DA008254700290011C153 /* Example.app */;
@@ -287,7 +287,7 @@
 			packageReferences = (
 				8AD7FE2E26F358370072AF33 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				8AD7FE3126F358720072AF33 /* XCRemoteSwiftPackageReference "BSImagePicker" */,
-				51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */,
+				51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */,
 			);
 			productRefGroup = 639DA009254700290011C153 /* Products */;
 			projectDirPath = "";
@@ -575,12 +575,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */ = {
+		51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/spm";
 			requirement = {
-				kind = exactVersion;
-				version = 1.22.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 		8AD7FE2E26F358370072AF33 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
@@ -602,94 +602,94 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		51998D1327E25997006938C2 /* BNBLicenseUtilsPackage */ = {
+		51DBB134281D72FD00C62E23 /* BNBLicenseUtilsPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BNBLicenseUtilsPackage;
 		};
-		51998D1527E25997006938C2 /* BanubaARCloudSDKPackage */ = {
+		51DBB136281D72FD00C62E23 /* BanubaARCloudSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaARCloudSDKPackage;
 		};
-		51998D1727E25997006938C2 /* BanubaAudioBrowserSDKPackage */ = {
+		51DBB138281D72FD00C62E23 /* BanubaAudioBrowserSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaAudioBrowserSDKPackage;
 		};
-		51998D1927E25997006938C2 /* BanubaEffectPlayerPackage */ = {
+		51DBB13A281D72FD00C62E23 /* BanubaEffectPlayerPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaEffectPlayerPackage;
 		};
-		51998D1B27E25997006938C2 /* BanubaLicenseServicingSDKPackage */ = {
+		51DBB13C281D72FD00C62E23 /* BanubaLicenseServicingSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaLicenseServicingSDKPackage;
 		};
-		51998D1D27E25997006938C2 /* BanubaMusicEditorSDKPackage */ = {
+		51DBB13E281D72FD00C62E23 /* BanubaMusicEditorSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaMusicEditorSDKPackage;
 		};
-		51998D1F27E25997006938C2 /* BanubaOverlayEditorSDKPackage */ = {
+		51DBB140281D72FD00C62E23 /* BanubaOverlayEditorSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaOverlayEditorSDKPackage;
 		};
-		51998D2127E25997006938C2 /* BanubaSDKPackage */ = {
+		51DBB142281D72FD00C62E23 /* BanubaSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaSDKPackage;
 		};
-		51998D2327E25997006938C2 /* BanubaSDKServicingPackage */ = {
+		51DBB144281D72FD00C62E23 /* BanubaSDKServicingPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaSDKServicingPackage;
 		};
-		51998D2527E25997006938C2 /* BanubaSDKSimplePackage */ = {
+		51DBB146281D72FD00C62E23 /* BanubaSDKSimplePackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaSDKSimplePackage;
 		};
-		51998D2727E25997006938C2 /* BanubaUtilitiesPackage */ = {
+		51DBB148281D72FD00C62E23 /* BanubaUtilitiesPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaUtilitiesPackage;
 		};
-		51998D2927E25997006938C2 /* BanubaVideoEditorGallerySDKPackage */ = {
+		51DBB14A281D72FD00C62E23 /* BanubaVideoEditorGallerySDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaVideoEditorGallerySDKPackage;
 		};
-		51998D2B27E25997006938C2 /* BanubaVideoEditorSDKPackage */ = {
+		51DBB14C281D72FD00C62E23 /* BanubaVideoEditorSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaVideoEditorSDKPackage;
 		};
-		51998D2D27E25997006938C2 /* BanubaVideoEditorTrimSDKPackage */ = {
+		51DBB14E281D72FD00C62E23 /* BanubaVideoEditorTrimSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaVideoEditorTrimSDKPackage;
 		};
-		51998D2F27E25997006938C2 /* VEEffectsSDKPackage */ = {
+		51DBB150281D72FD00C62E23 /* VEEffectsSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = VEEffectsSDKPackage;
 		};
-		51998D3127E25997006938C2 /* VEExportSDKPackage */ = {
+		51DBB152281D72FD00C62E23 /* VEExportSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = VEExportSDKPackage;
 		};
-		51998D3327E25997006938C2 /* VEPlaybackSDKPackage */ = {
+		51DBB154281D72FD00C62E23 /* VEPlaybackSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = VEPlaybackSDKPackage;
 		};
-		51998D3527E25997006938C2 /* VideoEditorPackage */ = {
+		51DBB156281D72FD00C62E23 /* VideoEditorPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 51998D1227E25997006938C2 /* XCRemoteSwiftPackageReference "spm" */;
+			package = 51DBB133281D72FD00C62E23 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = VideoEditorPackage;
 		};
 		8AD7FE2F26F358370072AF33 /* Lottie */ = {
