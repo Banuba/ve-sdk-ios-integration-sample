@@ -81,8 +81,30 @@ To use the face masks, you will also need the [Face AR SDK](https://www.banuba.c
 
 | Options | Mb      | Note |
 | -------- | --------- | ----- |
-| :white_check_mark: Face AR SDK + bitcode enabled  | 42 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
-| :x: Face AR SDK + bitcode enabled | 19 | no AR effects  |  
+| :white_check_mark: Face AR SDK + bitcode enabled  | 60 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
+| :x: Face AR SDK + bitcode enabled | 47 | no AR effects  |
+
+| Modul | Approximate size in AppStore. Mb |
+| -------- | --------- |
+| BanubaARCloudSDK | 1,2
+| BanubaAudioBrowserSDK | 1,61
+| EffectPlayer | 37,45
+| BanubaLicenseServicingSDK | 0,42
+| BanubaMusicEditorSDK | 1,715
+| BanubaOverlayEditorSDK | 2,003
+| BanubsSDK | 1,225
+| BanubaSDKServicing | 0,21
+| BanubaSDKSimple | 1,085
+| BanubaTokenStorageSDK | 0,175
+| BanubaUtilities | 3,5
+| VEEffectsSDK | 1,47
+| BanubaVideoEditorGallerySDK | 0,595
+| BanubaVideoEditorSDK | 8,715
+| BanubaVideoEditorTrimSDK | 0,42
+| BNBLicenseUtils | 1,005
+| VEExportSDK | 1,22
+| VEPlaybackSDK | 0,273
+| VideoEditor | 1,4
 
 You can either include the filters in the app or have users download them from the [AR cloud](https://www.banuba.com/facear-sdk/face-filters) to decrease the app size. 
 
