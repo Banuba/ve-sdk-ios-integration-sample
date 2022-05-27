@@ -88,9 +88,8 @@ extension ViewController {
     let banubaClientToken = <#Place your token here#>
     
     videoEditorSDK = BanubaVideoEditor(
-      token: banubaClientToken,
+      token: token,
       configuration: config,
-      analytics: Analytics(),
       externalViewControllerFactory: viewControllerFactory
     )
     
