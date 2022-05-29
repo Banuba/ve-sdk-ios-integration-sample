@@ -84,27 +84,27 @@ To use the face masks, you will also need the [Face AR SDK](https://www.banuba.c
 | :white_check_mark: Face AR SDK + bitcode enabled  | 60 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
 | :x: Face AR SDK + bitcode enabled | 47 | no AR effects  |
 
-| Modul | Approximate size in AppStore. Mb |
-| -------- | --------- |
-| BanubaARCloudSDK | 1,2
-| BanubaAudioBrowserSDK | 1,61
-| EffectPlayer | 37,45
-| BanubaLicenseServicingSDK | 0,42
-| BanubaMusicEditorSDK | 1,715
-| BanubaOverlayEditorSDK | 2,003
-| BanubsSDK | 1,225
-| BanubaSDKServicing | 0,21
-| BanubaSDKSimple | 1,085
-| BanubaTokenStorageSDK | 0,175
-| BanubaUtilities | 3,5
-| VEEffectsSDK | 1,47
-| BanubaVideoEditorGallerySDK | 0,595
-| BanubaVideoEditorSDK | 8,715
-| BanubaVideoEditorTrimSDK | 0,42
-| BNBLicenseUtils | 1,005
-| VEExportSDK | 1,22
-| VEPlaybackSDK | 0,273
-| VideoEditor | 1,4
+|№ | Moduls | arm64. Mb| x86_64. Mb | CodeResources. Mb | assets. Mb | Total resources. Mb | xcframework. Mb | Size without resources. Mb | Approximate size in AppStore. Mb |
+| -------- | --------- | ----- | -------- | --------- | ----- | -------- | --------- | ----- | -------- |
+| 1 | BanubaARCloudSDK | 2,3 |	1,1 | 0,1 | 0 |	0,1 | 3,4 | 3,3 | 1,2 |
+| 2 | BanubaAudioBrowserSDK | 6,9 | 8,1 | 7 | 0,367 | 7,367 | 15 | 7,633 | 1,61 |
+| 3 | EffectPlayer | 108 | 58 | 70 | 0 | 70 | 166 | 96 | 37,45 |
+| 4 | BanubaLicenseServicingSDK | 1,6 | 1,3 | 0,012 | 0 | 0,012 | 2,9 | 2,888 | 0,42 |
+| 5 | BanubaMusicEditorSDK | 9,1 | 6,6 | 0,012 | 0,187 | 0,199 | 15,7 | 15,501 | 1,715 |
+| 6 | BanubaOverlayEditorSDK | 17 | 7,5 | 0,014 | 0,88 | 0,894 | 24,5 |	23,606 | 2,003 |
+| 7 | BanubsSDK | 6,6 |	4,8 | 0,006 | 0 | 0,006 | 11,4 | 11,394 | 1,225 |
+| 8 | BanubaSDKServicing | 0,901 | 0,792 | 0,012 | 0 | 0,012 | 1,693 | 1,681 | 0,21 |
+| 9 | BanubaSDKSimple |	5,8 | 4,2 | 0,03 | 0 | 0,03 | 10 | 9,97 | 1,085 |
+| 10 | BanubaTokenStorageSDK | 0,73 | 0,65 | 0,012 | 0 | 0,012 | 1,38 |	1,368 |	0,175 |
+| 11 | BanubaUtilities | 9,4 | 7,2 | 0,011 | 0 | 0,011 | 16,6 | 16,589 | 3,5 |
+| 12 | VEEffectsSDK | 12,5 | 6,3 | 0,01 | 0 | 0,01 | 18,8 | 18,79 | 1,47 |
+| 13 | BanubaVideoEditorGallerySDK | 3,3 | 2,5 | 0,016 | 0,087 | 0,103 | 5,8 | 5,697 | 0,595 |
+| 14 | BanubaVideoEditorSDK | 48,3 | 31,7 | 2,8 | 2,9 | 5,7 | 80 | 74,3 | 8,715 |
+| 15 | BanubaVideoEditorTrimSDK | 1,9 |	1,6 | 0,09 | 0 | 0,09 |	3,5 | 3,41 | 0,42 |
+| 16 | BNBLicenseUtils | 3 | 3,5 | 3 | 0 | 3 | 6,5 | 3,5 | 1,005 |
+| 17 | VEExportSDK | 1,5 | 1,2 | 0,09 | 0 | 0,09 | 2,7 | 2,61 |	1,22 |
+| 18 | VEPlaybackSDK | 1,2 | 0,959 | 0,09 | 0 |	0,09 | 2,159 | 2,069 | 0,273 |
+| 19 | VideoEditor | 6,1 | 4,2 | 0,06 | 0,128 |	0,188 |	10,3 | 10,112 |	1,4 |
 
 You can either include the filters in the app or have users download them from the [AR cloud](https://www.banuba.com/facear-sdk/face-filters) to decrease the app size. 
 
