@@ -30,7 +30,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
-    + [Configure masks and filters order](#Configure-masks-and-filters-order)
+    + [Configure masks, fx and filters order](#Configure-masks-fx-and-filters-order)
     + [Configure watermark](#Configure-watermark)
     + [Configure stickers content](#Configure-stickers-content)
     + [Configure additional Video Editor SDK features](#Configure-additional-Video-Editor-SDK-features)
@@ -136,7 +136,7 @@ We understand that the client should have options to brand video editor to bring
 :white_check_mark: Use your branded icons. [See details](#Configure-screens)  
 :white_check_mark: Use you branded colors. [See details](#Configure-screens)  
 :white_check_mark: Change text styles i.e. font, color. [See details](#Configure-screens)  
-:white_check_mark: Masks and filters order. [See details](#Configure-masks-and-filters-order)  
+:white_check_mark: Masks, fx and filters order. [See details](#Configure-masks-fx-and-filters-order)  
 :white_check_mark: Localize and change text resources. Default locale is :us:  
 :white_check_mark: Make content you want i.e. a number of video with different resolutions and durations, an audio file. [See details](#Configure-export-flow)  
 :white_check_mark: Customize video recording duration behavior. [See details](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_duration_configuration.md)   
@@ -152,9 +152,9 @@ We understand that the client should have options to brand video editor to bring
 Face AR SDK is optional for the video editor SDK and would be disabled if it is not included in your token. If you don't use Face AR SDK make the following changes in ```Podfile``` to remove it:
 
 ```diff
--  pod 'BanubaEffectPlayer', '1.21.0'
--  pod 'BanubaSDK', '1.21.0'
-+  pod 'BanubaSDKSimple', '1.21.0'
+-  pod 'BanubaEffectPlayer', '1.23.0'
+-  pod 'BanubaSDK', '1.23.0'
++  pod 'BanubaSDKSimple', '1.23.0'
 ```
 
 ## Integration
@@ -246,7 +246,6 @@ class ViewController: UIViewController {
     videoEditorSDK = BanubaVideoEditor(
       token: "place client token here",
       configuration: configuration,
-      analytics: nil,
       externalViewControllerFactory: nil
     )
     videoEditorSDK?.delegate = self
@@ -305,17 +304,17 @@ func presentVideoEditor(
     musicTrack: MediaTrack? = nil,
     animated: Bool
   ) {
-	...
-	}
+  ...
+ }
 }
 
 /// EntryPoint describes what kind of entry point is used in video editor navigation flow
 public enum EntryPoint: String, Codable {
-	case camera
-	case pip
-	case trimmer
-	case editor
-	case drafts
+  case camera
+  case pip
+  case trimmer
+  case editor
+  case drafts
 }
 ``` 
 
@@ -397,6 +396,12 @@ The SDK allows to reorder masks and filters in the way you need. To achieve this
    "Background"
  ]
  
+ config.filterConfiguration.preferredVideoEffectOrderAndSet = [
+  VisualEffectApplicatorType.acid,
+  VisualEffectApplicatorType.dvCam
+  ...
+]
+ 
 ``` 
 
 ### Configure watermark
@@ -427,7 +432,7 @@ AI Video Editor SDK is provided with its own solution for media content (i.e. im
 target 'Example' do
   pod 'BanubaVideoEditorSDK'
   ...
-+  pod 'BanubaVideoEditorGallerySDK'
++  pod 'BanubaVideoEditorGallerySDK', '1.23.0'
 }
 ```
 The gallery provided by the SDK is fully customizable according to [this guide](mdDocs/gallery_styles.md). 
@@ -532,3 +537,4 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 [1.20.0](https://www.notion.so/vebanuba/1-20-0-39fe7f401a4b49ce9697e3abb8bf56b7)  
 [1.21.0](https://www.notion.so/vebanuba/1-21-0-6220edd4fd244cf28a997825a369203b)  
 [1.22.0](https://www.notion.so/vebanuba/1-22-0-f1256f7ede8a4595a0a8c82b75cc98f8)
+[1.23.0](https://www.notion.so/vebanuba/1-23-4db3e390e3e54b93b54514ca6ea5a7b4)
