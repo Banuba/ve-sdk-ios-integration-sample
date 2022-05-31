@@ -1,7 +1,5 @@
 # Transition effects
 
- **Feature is upcoming in 1.23 release.**
-
  ## Overview
 
  Transitions are visual effects applying to the segue between two videos.
@@ -72,6 +70,9 @@ Transitions icons property is following dictionary `[TransitionType: TransitionA
   public var effects: [EffectListItemConfiguration]
   /// Setups default need effect from
   public var defaultEffect: EffectListItemConfiguration.`Type`
+  /// Setups the primary aspect. Hides aspects button if it's value is not nil.
+  /// Default is nil.
+  public var primaryAspect: AspectRatio?
  ```
 
  ## Customizing transition effects
