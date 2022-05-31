@@ -30,7 +30,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
-    + [Configure masks, fx and filters order](#Configure-masks-fx-and-filters-order)
+    + [Configure masks, video effects and filters order](#Configure-masks-fx-and-filters-order)
     + [Configure watermark](#Configure-watermark)
     + [Configure stickers content](#Configure-stickers-content)
     + [Configure additional Video Editor SDK features](#Configure-additional-Video-Editor-SDK-features)
@@ -365,7 +365,7 @@ Below see the list of screens with links to their detailed description and notes
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
-### Configure masks, fx and filters order
+### Configure masks, video effects and filters order
 
 The SDK allows to reorder masks and filters in the way you need. To achieve this use the property ```preferredLutsOrder``` and ```preferredMasksOrder```
 
