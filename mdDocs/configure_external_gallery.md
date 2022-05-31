@@ -178,7 +178,6 @@ Provide your custom gallery to `BanubaVideoEditorSDK`. Please follow these steps
     videoEditorSDK = BanubaVideoEditor(
         token: token,
         configuration: config,
-        analytics: Analytics(),
         externalViewControllerFactory: viewControllerFactory
     )
 ```

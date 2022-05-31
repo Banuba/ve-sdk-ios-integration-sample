@@ -90,7 +90,6 @@ extension ViewController {
     videoEditorSDK = BanubaVideoEditor(
       token: banubaClientToken,
       configuration: config,
-      analytics: Analytics(),
       externalViewControllerFactory: viewControllerFactory
     )
     
