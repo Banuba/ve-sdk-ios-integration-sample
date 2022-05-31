@@ -57,5 +57,9 @@ public struct AspectsConfiguration {
     /// Setups default aspect
     /// Default is .original
     public var defaultAspect: BanubaUtilities.AspectRatio
+    
+    /// Setups the primary aspect. Hides aspects button if it's value is not nil.
+    /// Default is nil.
+    public var primaryAspect: AspectRatio?
 }
 ```
