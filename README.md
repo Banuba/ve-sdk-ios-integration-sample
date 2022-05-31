@@ -365,7 +365,7 @@ Below see the list of screens with links to their detailed description and notes
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
-### Configure masks and filters order
+### Configure masks, fx and filters order
 
 The SDK allows to reorder masks and filters in the way you need. To achieve this use the property ```preferredLutsOrder``` and ```preferredMasksOrder```
 
