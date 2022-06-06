@@ -103,7 +103,7 @@ extension ViewController {
     return configuration
   }
   
-  func updateAspectsConfiguration(_ configuration: AspectsConfiguration) -> AspectsConfiguration {
+  func updateAspectsConfiguration(_ configuration: EffectsListConfiguration) -> EffectsListConfiguration {
     var configuration = configuration
     
     configuration.doneButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_done"))
