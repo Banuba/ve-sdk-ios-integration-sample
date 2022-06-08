@@ -9,7 +9,7 @@ ImageButtonConfiguration setups save button style
 
 ImageButtonConfiguration setups save button style
 
-- [trimTimeLineConfiguration: TrimTimeLineConfiguration?](/Example/Example/Extension/TrimConfiguration.swift#L19)
+- [trimTimeLineConfiguration: TrimTimeLineConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L19)
 
 TrimTimeLineConfiguration setups single time line bar style and options
 
@@ -24,6 +24,14 @@ PlayerControlConfiguration setups play/pause button style
 - [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L25)
 
 BackgroundConfiguration setups background view style
+
+- [controlsPanelBackgroundColor: UIColor](/Example/Example/Extension/TrimConfiguration.swift#L25)
+
+Setups controls panel background color. Default is .clear
+
+- [trimmerPanelBackgroundColor: UIColor](/Example/Example/Extension/TrimConfiguration.swift#L25)
+
+Setups trimmer panel background color. Default is .clear
 
 - [screenNameConfiguration: ScreenNameConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L37)
 
@@ -48,6 +56,10 @@ BackButtonConfiguration setups back button style
 - [nextButtonConfiguration: ImageButtonConfiguration?](/Example/Example/Extension/TrimConfiguration.swift#L61)
 
 BackButtonConfiguration setups next button style
+
+- [controlsPanelBackgroundColor: UIColor](/Example/Example/Extension/TrimConfiguration.swift#L75)
+
+Setups navigation controls panel background color. Default is .clear
 
 - [playerControlConfiguration: PlayerControlConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L75)
 
@@ -101,9 +113,9 @@ TextConfiguration setups video parts reordering tool tip text style
 
 TrimTimeLineConfiguration setups single time line bar style and options
 
-- [timelinePointsPerSecond: CGFloat](/Example/Example/Extension/TrimConfiguration.swift#L38)
+- [isGalleryButtonHidden: Bool](/Example/Example/Extension/TrimConfiguration.swift#L38)
 
-Setups points per second on timeline. Default is 45.0
+Hide gallery button. Default is false.
 
 ![img](screenshots/MultiTrimConfiguration.png)
 ![img](screenshots/MultiTrimConfiguration2.png)
@@ -138,6 +150,10 @@ VideoResolutionConfiguration setups trim options for rendering video
 - draggerConfiguration: DraggerConfiguration
 
 Dragger configuration setup draggers style
+
+- transitionIcons: [TransitionType: TransitionActionConfiguration]?
+
+Transition icons
 
 ![img](screenshots/GalleryTrimConfiguration.png)
 
