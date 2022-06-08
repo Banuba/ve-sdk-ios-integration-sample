@@ -53,7 +53,7 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   AdditionalEffectsButtonConfiguration array sets up all of the camera screen control buttons' styles
   
-  - [speedBarButtons: [SpeedBarButtonsConfiguration]](/Example/Example/Extension/RecorderConfiguration.swift#L62)
+  - [speedBarButtons: SpeedBarButtonsConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L62)
   
   SpeedButtonConfiguration sets up the speed button style
  
@@ -93,10 +93,6 @@ Here we set up the styles for the recording screen. These configs are for custom
   
   Sequence bar height
   
-  - [useHorizontalVersion: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L149)
-  
-  How the buttons appears on the screen
-  
   - [loopAudioWhileRecording: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L150)
   
   Loop audio while recording video if music is selected
@@ -132,6 +128,18 @@ Here we set up the styles for the recording screen. These configs are for custom
   - [muteMicrophoneForPIP: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   Mute microphone on PIP screen. Default is false.
+  
+  - [isAudioRateEqualsVideoSpeed: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+  
+  Applies video speed to audio player rate. Default is false.
+  
+  - [isGalleryButtonHidden: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+  
+  Hide gallery button. Default is false.
+  
+  - [supportMultiRecords: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
+  
+  If recorded video can consist of more than one sequence. Default is true.
   
   ![img](screenshots/RecorderConfiguration.png)
   
