@@ -88,7 +88,7 @@ To use the face masks, you will also need the [Face AR SDK](https://www.banuba.c
 | -------- | --------- | ----- | -------- | --------- | ----- | -------- | --------- | ----- | -------- |
 | 1 | BanubaARCloudSDK | 2,3 |	1,1 | 0,1 | 0 |	0,1 | 3,4 | 3,3 | 1,2 |
 | 2 | BanubaAudioBrowserSDK | 6,9 | 8,1 | 7 | 0,367 | 7,367 | 15 | 7,633 | 1,61 |
-| 3 | EffectPlayer | 108 | 58 | 70 | 0 | 70 | 166 | 96 | 37,45 |
+| 3 | BanubaEffectPlayer | 108 | 58 | 70 | 0 | 70 | 166 | 96 | 37,45 |
 | 4 | BanubaLicenseServicingSDK | 1,6 | 1,3 | 0,012 | 0 | 0,012 | 2,9 | 2,888 | 0,42 |
 | 5 | BanubaMusicEditorSDK | 9,1 | 6,6 | 0,012 | 0,187 | 0,199 | 15,7 | 15,501 | 1,715 |
 | 6 | BanubaOverlayEditorSDK | 17 | 7,5 | 0,014 | 0,88 | 0,894 | 24,5 |	23,606 | 2,003 |
@@ -253,9 +253,9 @@ class ViewController: UIViewController {
     super.viewDidAppear(animated)
 
     let launchConfig = VideoEditorLaunchConfig(
-        entryPoint: .camera,
-        hostController: self,
-        animated: true
+      entryPoint: .camera,
+      hostController: self,
+      animated: true
     )
     videoEditorSDK?.presentVideoEditor(
       withLaunchConfiguration: launchConfig,
@@ -399,11 +399,13 @@ The SDK allows to reorder masks and filters in the way you need. To achieve this
    "egypt",
    "norway",
    "japan"
+   ...
  ]
  
  config.recorderConfiguration.recorderEffectsConfiguration.preferredMasksOrder = [
    "XYScanner",
    "Background"
+   ...
  ]
  
  // Sorting for the post processing screen
@@ -411,11 +413,13 @@ The SDK allows to reorder masks and filters in the way you need. To achieve this
    "byers",
    "sunset",
    "vinyl"
+   ...
  ]
  
  config.filterConfiguration.preferredMasksOrder = [
    "XYScanner",
    "Background"
+   ...
  ]
  
  config.filterConfiguration.preferredVideoEffectOrderAndSet = [
