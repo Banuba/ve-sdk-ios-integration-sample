@@ -7,7 +7,7 @@ Use ```presentVideoEditor``` method to start Video Editor in picture in picture 
 /// - Parameters:
 ///   - configuration: contains configurations for launching Video editor's screen
 ///   - completion: The block to execute after the presentation finishes.
-config = VideoEditorLaunchConfig(
+let config = VideoEditorLaunchConfig(
   entryPoint: .pip,
   hostController: self,
   pipVideoItem: resultUrls[.zero],
