@@ -13,6 +13,10 @@ MainOverlayViewControllerConfig setups main overlay screen
 
 Types of editing overlay items. Can be .text or .sticker
 
+- [selectedOverlayItem: OverlayItem?](/Example/Example/Extension/OverlayEditorConfiguration.swift#L11)
+
+Selected overlay item. If nil passed overlay editor will be opened for creation a new one
+
 - [interactivesConfig: InteractivesConfiguration?](/Example/Example/Extension/OverlayEditorConfiguration.swift#L11)
 
 InteractivesConfiguration setups interactive views styles
@@ -152,9 +156,9 @@ Pallete of filling colors
 
 Array of text fonts
 
-- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L143)
+- [additionalPaletteBackgroundConfiguration: [BackgroundConfiguration]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L128)
 
-BackgroundConfiguration setups background view style
+Setup background color for additional palette with fonts or colors
 
 - [screenNameConfiguration: ScreenNameConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L144)
 
@@ -171,8 +175,8 @@ Font inset
 - [selectionColorBehavior: TextEditSelectionColorBehavior](/Example/Example/Extension/OverlayEditorConfiguration.swift#L147)
 
  TextEditSelectionColorBehavior setups text editr selection color behavior
-
-- [colorItemConfiguration: TextEditColorItemConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L152)
+ 
+ - [colorItemConfiguration: TextEditColorItemConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L152)
 
 TextEditColorItemConfiguration setups pallete's color items' configuration 
 
