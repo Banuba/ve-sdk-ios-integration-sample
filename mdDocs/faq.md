@@ -11,24 +11,23 @@ These are the answers to the most common questions asked about our SDK.
 8. [I want to change progress bar position.](#8-i-want-to-change-progress-bar-position)
 9. [How does video editor work when token expires?](#9-how-does-video-editor-work-when-token-expires)
 10. [Which buttons available if Face AR disabled?](#10-which-buttons-available-if-face-ar-disabled)
-11. [I want to change screens' layout.](#11-i-want-to-change-screens-layout)
-12. [I want to change music button position.](#12-i-want-to-change-music-button-position)
-13. [How can I get a track name of the audio used in my video after export?](#13-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
-14. [I want to change the font.](#14-i-want-to-change-the-font)
-15. [I want to check whether my token is expired.](#15-i-want-to-check-whether-my-token-is-expired)
-16. [The file “luts” couldn’t be opened because there is no such file.](#16-the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
-17. [I want to add audio filters.](#17-i-want-to-add-audio-filters)
-18. [I want to change icons and name for effects.](#18-i-want-to-change-icons-and-name-for-effects)
-19. [I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
-20. [I want to turn off Cover screen.](#20-i-want-to-turn-off-cover-screen)
-21. [I want to change visible tabs in gallery.](#21-i-want-to-change-visible-tabs-in-gallery)
-22. [I want to get exported video metadata.](#22-i-want-to-get-exported-video-metadata)
-23. [I want to change codec type from h264 to h265.](#23-i-want-to-change-codec-type-from-h264-to-h265)
-24. [How do I specify the video file saving directory?](#24-how-do-i-specify-the-video-file-saving-directory)
-25. [How do I change the video duration?](#25-how-do-i-change-the-video-duration)
-26. [The problem of using optional frameworks and bitcode together.](#26-the-problem-of-using-optional-frameworks-and-bitcode-together)
-27. [How do I change the launguage (how do I add new locale support)?](#27-how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
-28. [How can I change the extension of the exported video?](#28-how-can-i-change-the-extension-of-the-exported-video)
+11. [I want to change music button position.](#12-i-want-to-change-music-button-position)
+12. [How can I get a track name of the audio used in my video after export?](#13-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
+13. [I want to change the font.](#14-i-want-to-change-the-font)
+14. [I want to check whether my token is expired.](#15-i-want-to-check-whether-my-token-is-expired)
+15. [The file “luts” couldn’t be opened because there is no such file.](#16-the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
+16. [I want to add audio filters.](#17-i-want-to-add-audio-filters)
+17. [I want to change icons and name for effects.](#18-i-want-to-change-icons-and-name-for-effects)
+18. [I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
+19. [I want to turn off Cover screen.](#20-i-want-to-turn-off-cover-screen)
+20. [I want to change visible tabs in gallery.](#21-i-want-to-change-visible-tabs-in-gallery)
+21. [I want to get exported video metadata.](#22-i-want-to-get-exported-video-metadata)
+22. [I want to change codec type from h264 to h265.](#23-i-want-to-change-codec-type-from-h264-to-h265)
+23. [How do I specify the video file saving directory?](#24-how-do-i-specify-the-video-file-saving-directory)
+24. [How do I change the video duration?](#25-how-do-i-change-the-video-duration)
+25. [The problem of using optional frameworks and bitcode together.](#26-the-problem-of-using-optional-frameworks-and-bitcode-together)
+26. [How do I change the launguage (how do I add new locale support)?](#27-how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
+27. [How can I change the extension of the exported video?](#28-how-can-i-change-the-extension-of-the-exported-video)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -194,23 +193,7 @@ config.recorderConfiguration.progressBarPosition = .top
  - time
  - color
 
- ### 11. I want to change screens layout.
- 
- There are two screens which could be modified with additional layout:
- 
- - Camera
- - Postprocessing
-
-To be able to change layout you need to set ```useHorizontalVersion``` equals ```true```. This properties are parts of ```RecorderConfiguration``` and ```EditorConfiguration``` entities.
-
-```swift
-let config = VideoEditorConfig()
-
-config.recorderConfiguration.useHorizontalVersion = true
-config.editorConfiguration.useHorizontalVersion = true
-```
-
-### 12. I want to change music button position.
+### 11. I want to change music button position.
 
 The music button consists of three positions:
 
@@ -236,7 +219,7 @@ config.recorderConfiguration.additionalEffectsButtons = [
 ] 
 ```
 
-### 13. How can I get a track name of the audio used in my video after export?
+### 12. How can I get a track name of the audio used in my video after export?
 ```swift
 /// Video Editor main entity and entry point.
 /// Can present and hide root view controller.
@@ -277,7 +260,7 @@ public var musicTrack: MediaTrack? { get }
 ...
 }
 ```
-### 14 I want to change the font
+### 13. I want to change the font
 
 You can change the font for the whole video editor by calling in `VideoEditorConfig` this method:
  
@@ -306,8 +289,6 @@ or change for each screen separately by calling the appropriate methods:
   
   func updateFilterFonts(_ font: UIFont)
   
-  func updateVideoCoverSelectionFonts(_ font: UIFont)
-  
   func updateExtendedVideoCoverSelectionFonts(_ font: UIFont)
   
   func updateAlertFonts(_ font: UIFont)
@@ -315,7 +296,7 @@ or change for each screen separately by calling the appropriate methods:
 
 Changing the font does not affect its size. The font size will be taken by default or specified by you in the entity configuration.
 
-### 15. I want to check whether my token is expired.
+### 14. I want to check whether my token is expired.
 
 Starting from '1.0.18' version it is available to check if token is expired.
 
@@ -345,13 +326,13 @@ self.loadToken { token in
 }
 ```
 
-### 16. The file “luts” couldn’t be opened because there is no such file.
+### 15. The file “luts” couldn’t be opened because there is no such file.
 
 This error occurs because your application bundle doesn't contains required luts folder.
 
 You need to copy [luts](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) folder to your project.
 
-### 17. I want to add audio filters 
+### 16. I want to add audio filters 
 
 Filters availability depends on the token. However, in order for them to be available, you need to add an implementation of the ```VoiceFilterProvider``` entity.
 
@@ -416,7 +397,7 @@ Then the instance of the ExampleVoiceFilterProvider needs to be passed to the co
   config.musicEditorConfiguration.audioTrackLineEditControllerConfig.voiceFilterProvider = ExampleVoiceFilterProvider()
 ```
 
-### 18. I want to change icons and name for effects.
+### 17. I want to change icons and name for effects.
 
 The name of the icon for the effect must match the identifier of the effect.
 Below is a table with the name, ID and icon of the default effect.
@@ -452,7 +433,7 @@ Below is a table with the name, ID and icon of the default effect.
 
 In order to change the name of the effect, you need to do it in the [localization file](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings#L254).
 
-### 19. I want to turn off Drafts feature.
+### 18. I want to turn off Drafts feature.
 
 To turn off Drafts feature just disable it in ```FeatureConfiguration``` entity:
 
@@ -462,7 +443,7 @@ To turn off Drafts feature just disable it in ```FeatureConfiguration``` entity:
   config.featureConfiguration.draftsConfig = .disabled
 ```
 
-### 20. I want to turn off Cover screen.
+### 19. I want to turn off Cover screen.
 
 To turn off Cover screen just disable it in ```FeatureConfiguration``` entity:
 
@@ -472,7 +453,7 @@ To turn off Cover screen just disable it in ```FeatureConfiguration``` entity:
   config.featureConfiguration.isVideoCoverSelectionEnabled = false
 ```
 
-### 21. I want to change visible tabs in gallery
+### 20. I want to change visible tabs in gallery
 
 To setup visible tabs for gallery just configure it in ```CombinedGalleryConfiguration``` entity:
 
@@ -482,7 +463,7 @@ To setup visible tabs for gallery just configure it in ```CombinedGalleryConfigu
   config.combinedGalleryConfiguration.visibleTabsInGallery = [.video, .photo]
 ```
 
-### 22. I want to get exported video metadata
+### 21. I want to get exported video metadata
 
 In order to find out which filter, effects, masks and music was applied to the video, you need to refer to the instance of the entity ```BanubaVideoEditor```.
 
@@ -506,7 +487,7 @@ let videoMusicTrack = videoEditorSDK?.musicTrack
 // to get music tracks from editor screen
 let videoTracks = videoEditorSDK?.musicMetadata?.tracks
 ```
-### 23. I want to change codec type from h264 to h265.
+### 22. I want to change codec type from h264 to h265.
 
 All you need is just to set ```useHEVCCodecIfPossible``` to ```true``` in ```VideoEditorConfig, ExportVideoInfo or ExportVideoConfiguration ``` entity.
 The first one you need when you create ```BanubaVideoEditor```, two last ones - when you prepare a video to export.
@@ -533,7 +514,7 @@ The first one you need when you create ```BanubaVideoEditor```, two last ones - 
   )
 ```
 
-### 24. How do I specify the video file saving directory?
+### 23. How do I specify the video file saving directory?
 
 In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
 
@@ -548,7 +529,7 @@ In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
 ]
 ```
 
-### 25. How do I change the video duration?
+### 24. How do I change the video duration?
 
 To setup video duration just configure it in ```VideoEditorDurationConfig``` entity:
 
@@ -575,7 +556,7 @@ To setup video duration just configure it in ```VideoEditorDurationConfig``` ent
 }
 ```
 
-### 26. The problem of using optional frameworks and bitcode together.
+### 25. The problem of using optional frameworks and bitcode together.
 
 Now you can enable bitcode in your project only if it includes all VideoEditor frameworks(optional and required). 
 
@@ -583,7 +564,7 @@ These are restrictions on the use of bitcode by Apple and at the moment it canno
 
 If you don't use optional frameworks, you should disable bitcode in order to successfully upload your app to the Apple Connect.
 
-### 27. How do I change the launguage (how do I add new locale support)?
+### 26. How do I change the launguage (how do I add new locale support)?
 
 There is no special language switching mechanism in the Video Editor SDK (VE SDK).
 
@@ -591,7 +572,7 @@ Out of the box, the VE SDK includes support for two locales: English (default) a
 To do that you need to add all needed string keys in the new locale `Localizable.strings` file. You can find the main VE SDK string keys you need in the [Configure screens](https://github.com/Banuba/ve-sdk-ios-integration-sample#Configure-screens) doc page. E.g. string keys of the Overlay screen you can find [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/overlayEditor_styles.md#string-resources).
 The newly added locale will be applied after the device language is changed by system settings.
 
-### 28. How can I change the extension of the exported video?
+### 27. How can I change the extension of the exported video?
 
 To save the video in the format you want, you just need to add the appropriate ```PathComponent``` when creating the video URL.
 ```swift
