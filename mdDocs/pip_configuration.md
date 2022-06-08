@@ -5,17 +5,17 @@ Use ```presentVideoEditor``` method to start Video Editor in picture in picture 
 
 ```swift
 /// - Parameters:
-///   - pipVideoItem: A url to video located on a phone.
-///   - hostController: The view controller to display over.
-///   - animated: Pass true to animate the presentation.
-///   - musicTrack: Music track which will be played on camera recording.
+///   - configuration: contains configurations for launching Video editor's screen
 ///   - completion: The block to execute after the presentation finishes.
-public func presentVideoEditor(
-  withPIPVideoItem pipVideoItem: URL,
-  from hostController: UIViewController,
-  animated: Bool,
-  musicTrack: MediaTrack? = nil,
-  completion: (() -> Void)?
+config = VideoEditorLaunchConfig(
+  entryPoint: .pip,
+  hostController: self,
+  pipVideoItem: resultUrls[.zero],
+  animated: true
+)
+videoEditorSDK?.presentVideoEditor(
+  withLaunchConfiguration: config,
+  completion: nil
 )
 ```
 
