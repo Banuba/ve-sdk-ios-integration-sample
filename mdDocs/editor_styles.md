@@ -25,14 +25,6 @@ SaveButtonConfiguration setups save button style
 
 BackButtonConfiguration setups back button style
 
-- [isVideoCoverSelectionEnabled: Bool](/Example/Example/Extension/EditorConfiguration.swift#L76)
-
-Indicates whether there will be a preview selection screen after the editor screen
-
-- [useHorizontalVersion: Bool](/Example/Example/Extension/EditorConfiguration.swift#L77)
-
-How the buttons appears on the screen
-
 - [useHEVCCodecIfPossible: Bool](/Example/Example/Extension/EditorConfiguration.swift#L6)
 
 Enables using HEVC codec on export if .auto export configuration is used
