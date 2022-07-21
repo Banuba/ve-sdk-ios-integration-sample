@@ -9,7 +9,7 @@ extension ViewController {
     configuration.audioRecorderViewControllerConfig = updateAudioRecorderViewControllerConfig(configuration.audioRecorderViewControllerConfig)
     configuration.audioTrackLineEditControllerConfig = updateAudioTrackLineEditControllerConfig(configuration.audioTrackLineEditControllerConfig)
     configuration.videoTrackLineEditControllerConfig = updateVideoTrackLineEditControllerConfig(configuration.videoTrackLineEditControllerConfig)
-    
+    configuration.audioTrackLineEditControllerConfig.voiceFilterProvider = SandboxVoiceFilterProvider()
     return configuration
   }
   
@@ -43,6 +43,14 @@ extension ViewController {
     configuration.editButtonsHeight = 50.0
     
     configuration.editCompositionButtons = [
+      EditCompositionButtonConfig(
+        font: UIFont.systemFont(ofSize: 14.0),
+        type: .voiceEffect,
+        title: "Voice",
+        titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+        imageName: "voice",
+        selectedImageName: nil
+      ),
       EditCompositionButtonConfig(
         font: UIFont.systemFont(ofSize: 14.0),
         type: .edit,

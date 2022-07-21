@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5104FE4028897DBB009D62D1 /* SandboxVoiceFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104FE3F28897DBB009D62D1 /* SandboxVoiceFilterProvider.swift */; };
 		510612852606839C00176389 /* AlertViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510612842606839C00176389 /* AlertViewConfiguration.swift */; };
 		5191FED7266755C300B842EA /* TrimConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191FED6266755C300B842EA /* TrimConfiguration.swift */; };
 		519D5B2A266905CC000A3B48 /* CoverConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D5B29266905CC000A3B48 /* CoverConfiguration.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		000454435D9A99C5824D7623 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6D65A113E9C49259A2357C /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		5104FE3F28897DBB009D62D1 /* SandboxVoiceFilterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxVoiceFilterProvider.swift; sourceTree = "<group>"; };
 		510612842606839C00176389 /* AlertViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewConfiguration.swift; sourceTree = "<group>"; };
 		5191FED6266755C300B842EA /* TrimConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimConfiguration.swift; sourceTree = "<group>"; };
 		519D5B29266905CC000A3B48 /* CoverConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverConfiguration.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				8A8C250F258CC35400FDED05 /* MusicEditorViewControllerFactory.swift */,
 				8A8C2510258CC35400FDED05 /* ViewControllerFactory.swift */,
 				51E97A5926CFC5E500E0E4C4 /* VideoPicker.swift */,
+				5104FE3F28897DBB009D62D1 /* SandboxVoiceFilterProvider.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				8A8C2517258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift in Sources */,
 				8A8C2515258CC35400FDED05 /* MusicEditorViewControllerFactory.swift in Sources */,
 				8A8C2516258CC35400FDED05 /* ViewControllerFactory.swift in Sources */,
+				5104FE4028897DBB009D62D1 /* SandboxVoiceFilterProvider.swift in Sources */,
 				51D07DE72607B87000BB48D9 /* EditorConfiguration.swift in Sources */,
 				635E864825A5DA240035AB99 /* TrackPickerViewController.swift in Sources */,
 				519D5B2A266905CC000A3B48 /* CoverConfiguration.swift in Sources */,
