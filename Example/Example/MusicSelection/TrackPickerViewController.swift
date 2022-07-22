@@ -39,6 +39,7 @@ extension TrackPickerViewController: UITableViewDataSource, UITableViewDelegate 
       didSelectFile: readyFiles[indexPath.row],
       isEditable: true,
       title: readyFiles[indexPath.row].lastPathComponent,
+      additionalTitle: "Additional title",
       id: Int32.random(in: 6..<1000))
   }
   
