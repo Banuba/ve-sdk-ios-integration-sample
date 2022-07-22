@@ -12,6 +12,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 </p>
 
 - [Requirements](#Requirements)
+- [Framework dependencies](#Framework-dependencies)
 - [Dependencies](#Dependencies)
 - [SDKs size](#SDKs-size)
 - [Starting a free trial](#Starting-a-free-trial)
@@ -19,19 +20,23 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 - [Token](#Token)
 - [Connecting with AR cloud](#Connecting-with-AR-cloud)
 - [What can you customize?](#What-can-you-customize)
-- [Getting Started](#Getting-Started)
-    + [SwiftPackageManager](#SwiftPackageManager)
-    + [CocoaPods](#CocoaPods)
-    + [Start Video Editor from ViewController](#Start-Video-Editor-from-ViewController)  
-    + [Face AR](#Face-AR)
+- [Face AR](#Face-AR)
+- [Integration](#Integration)
+    + [Step 1. Setup SDK dependencies with SPM or Cocoapods](#Step-1-Setup-SDK-dependencies-with-SPM-or-Cocoapods)
+       + [SwiftPackageManager](#Swift-Package-Manager)
+       + [CocoaPods](#CocoaPods)
+    + [Step 2. Start Video Editor from ViewController](#Step-2-Start-Video-Editor-from-ViewController)  
+ - [Customization](#Customization)
     + [Configure export flow](#Configure-export-flow)
     + [Configure audio content](#Configure-audio-content)
     + [Configure screens](#Configure-screens)
-    + [Configure masks and filters order](#Configure-masks-and-filters-order)
+    + [Configure masks, video effects and filters order](#Configure-masks-video-effects-and-filters-order)
     + [Configure watermark](#Configure-watermark)
     + [Configure stickers content](#Configure-stickers-content)
+    + [Configure additional Video Editor SDK features](#Configure-additional-Video-Editor-SDK-features)
     + [Icons](#Icons)
     + [Localization](#Localization)
+- [Analytics](#Analytics)
 - [FAQ](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/faq.md)
 - [Third party libraries](#Third-party-libraries)
 
@@ -44,6 +49,30 @@ This is what you need to run the AI Video Editor SDK
 - iOS 12.0+
 Unfortunately, It isn't optimized for iPads.
 
+## Framework dependencies
+
+Our SDK contains dependencies on native libraries, as well as third-party ones.
+Below are listed our native frameworks dependencies:
+
+1. Foundation
+1. AV Foundation
+1. UI Kit
+1. AV Kit
+1. Core media
+1. Core video
+1. Core graphics
+1. GL Kit
+1. Photos
+1. OpenGLES
+1. MetalKit
+1. SystemConfiguration
+1. OSLog
+1. GLProgram
+1. MediaPlayer
+1. Accelerate
+
+Dependencies on third-party libraries and their licenses you could view [here](mdDocs/3rd_party_licences.md).
+
 ## Dependencies
 
 To use the face masks, you will also need the [Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). It is optional, however, the other features will work without it. 
@@ -52,8 +81,30 @@ To use the face masks, you will also need the [Face AR SDK](https://www.banuba.c
 
 | Options | Mb      | Note |
 | -------- | --------- | ----- |
-| :white_check_mark: Face AR SDK + bitcode enabled  | 42 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
-| :x: Face AR SDK + bitcode enabled | 19 | no AR effects  |  
+| :white_check_mark: Face AR SDK + bitcode enabled  | 60 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
+| :x: Face AR SDK + bitcode enabled | 47 | no AR effects  |
+
+|№ | Moduls | arm64. Mb| x86_64. Mb | CodeResources. Mb | assets. Mb | Total resources. Mb | xcframework. Mb | Size without resources. Mb | Approximate size in AppStore. Mb |
+| -------- | --------- | ----- | -------- | --------- | ----- | -------- | --------- | ----- | -------- |
+| 1 | BanubaARCloudSDK | 2,3 |	1,1 | 0,1 | 0 |	0,1 | 3,4 | 3,3 | 1,2 |
+| 2 | BanubaAudioBrowserSDK | 6,9 | 8,1 | 7 | 0,367 | 7,367 | 15 | 7,633 | 1,61 |
+| 3 | BanubaEffectPlayer | 108 | 58 | 70 | 0 | 70 | 166 | 96 | 37,45 |
+| 4 | BanubaLicenseServicingSDK | 1,6 | 1,3 | 0,012 | 0 | 0,012 | 2,9 | 2,888 | 0,42 |
+| 5 | BanubaMusicEditorSDK | 9,1 | 6,6 | 0,012 | 0,187 | 0,199 | 15,7 | 15,501 | 1,715 |
+| 6 | BanubaOverlayEditorSDK | 17 | 7,5 | 0,014 | 0,88 | 0,894 | 24,5 |	23,606 | 2,003 |
+| 7 | BanubsSDK | 6,6 |	4,8 | 0,006 | 0 | 0,006 | 11,4 | 11,394 | 1,225 |
+| 8 | BanubaSDKServicing | 0,901 | 0,792 | 0,012 | 0 | 0,012 | 1,693 | 1,681 | 0,21 |
+| 9 | BanubaSDKSimple |	5,8 | 4,2 | 0,03 | 0 | 0,03 | 10 | 9,97 | 1,085 |
+| 10 | BanubaTokenStorageSDK | 0,73 | 0,65 | 0,012 | 0 | 0,012 | 1,38 |	1,368 |	0,175 |
+| 11 | BanubaUtilities | 9,4 | 7,2 | 0,011 | 0 | 0,011 | 16,6 | 16,589 | 3,5 |
+| 12 | VEEffectsSDK | 12,5 | 6,3 | 0,01 | 0 | 0,01 | 18,8 | 18,79 | 1,47 |
+| 13 | BanubaVideoEditorGallerySDK | 3,3 | 2,5 | 0,016 | 0,087 | 0,103 | 5,8 | 5,697 | 0,595 |
+| 14 | BanubaVideoEditorSDK | 48,3 | 31,7 | 2,8 | 2,9 | 5,7 | 80 | 74,3 | 8,715 |
+| 15 | BanubaVideoEditorTrimSDK | 1,9 |	1,6 | 0,09 | 0 | 0,09 |	3,5 | 3,41 | 0,42 |
+| 16 | BNBLicenseUtils | 3 | 3,5 | 3 | 0 | 3 | 6,5 | 3,5 | 1,005 |
+| 17 | VEExportSDK | 1,5 | 1,2 | 0,09 | 0 | 0,09 | 2,7 | 2,61 |	1,22 |
+| 18 | VEPlaybackSDK | 1,2 | 0,959 | 0,09 | 0 |	0,09 | 2,159 | 2,069 | 0,273 |
+| 19 | VideoEditor | 6,1 | 4,2 | 0,06 | 0,128 |	0,188 |	10,3 | 10,112 |	1,4 |
 
 You can either include the filters in the app or have users download them from the [AR cloud](https://www.banuba.com/facear-sdk/face-filters) to decrease the app size. 
 
@@ -91,9 +142,10 @@ There is nothing complicated about it - [contact us](https://www.banuba.com/vide
 ## Token 
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
-Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L35).  
-
-Also you can load token from [Firebase](https://firebase.google.com/docs/database/android/start). [Check](mdDocs/token_on_firebase.md) to configure firebase
+There are three options where to put your token:
+- Inside the app: [read here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/97ebccf9e52b31db92586709cc6afa55decb9d75/Example/Example/ViewController.swift#L83).
+- In the Firebase (what will allow your users not to update the app every time the token is updated): [Firebase setup guide](https://firebase.google.com/docs/database/android/start), [SDK configuration for Firebase](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/token_on_firebase.md).
+- In the remote server: [SDK configuration for this case](https://github.com/Banuba/ve-sdk-ios-integration-sample/new/Update_token_configure/mdDocs). 
 
 ## Connecting with AR cloud
 
@@ -106,7 +158,7 @@ We understand that the client should have options to brand video editor to bring
 :white_check_mark: Use your branded icons. [See details](#Configure-screens)  
 :white_check_mark: Use you branded colors. [See details](#Configure-screens)  
 :white_check_mark: Change text styles i.e. font, color. [See details](#Configure-screens)  
-:white_check_mark: Masks and filters order. [See details](#Configure-masks-and-filters-order)  
+:white_check_mark: Masks, video effects and filters order. [See details](#Configure-masks-video-effects-and-filters-order)  
 :white_check_mark: Localize and change text resources. Default locale is :us:  
 :white_check_mark: Make content you want i.e. a number of video with different resolutions and durations, an audio file. [See details](#Configure-export-flow)  
 :white_check_mark: Customize video recording duration behavior. [See details](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/video_duration_configuration.md)   
@@ -122,57 +174,45 @@ We understand that the client should have options to brand video editor to bring
 Face AR SDK is optional for the video editor SDK and would be disabled if it is not included in your token. If you don't use Face AR SDK make the following changes in ```Podfile``` to remove it:
 
 ```diff
--  pod 'BanubaEffectPlayer', '1.0.19'
--  pod 'BanubaSDK', '1.0.19.1'
-+  pod 'BanubaSDKSimple', '1.0.19.1'
+-  pod 'BanubaEffectPlayer', '1.23.0'
+-  pod 'BanubaSDK', '1.23.0'
++  pod 'BanubaSDKSimple', '1.23.0'
 ```
 
-## Getting Started
+## Integration
 
 :exclamation: **Important:** Do not forget to copy all the resources that the sample contains, such as the **luts folder and etc**.
 
+### Step 1. Setup SDK dependencies with SPM or Cocoapods
 
 The easiest ways to integrate the Video Editor SDK in your mobile app are through [CocoaPods](https://cocoapods.org) or [SwiftPackageManager](https://developer.apple.com/documentation/swift_packages). If you haven’t used this dependency managers before, see the [Cocoapods Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) and [SPM Getting Started Guide](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
 
-### SwiftPackageManager
+### Swift Package Manager
 
 Important: Sample intergration of SPM and VideoEditor is in [spm branch](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/spm)
 
-Please, refer VideoEditor SDK SPM dependencies:
-
-| SDK Name                    | Repo URL                                                  |
-| --------------------------- | --------------------------------------------------------- |
-| BanubaSDKServicing          | https://github.com/Banuba/BanubaSDKServicing-iOS          |
-| BNBLicenseUtils             | https://github.com/Banuba/BNBLicenseUtils-iOS             |
-| BanubaUtilities             | https://github.com/Banuba/BanubaUtilities-iOS             |
-| BanubaLicenseServicingSDK   | https://github.com/Banuba/BanubaLicenseServicingSDK       |
-| BanubaVideoEditorGallerySDK | https://github.com/Banuba/BanubaVideoEditorGallerySDK     |
-| BanubaOverlayEditorSDK      | https://github.com/Banuba/BanubaOverlayEditorSDK-iOS      |
-| BanubaMusicEditorSDK        | https://github.com/Banuba/BanubaMusicEditorSDK-iOS        |
-| VideoEditor                 | https://github.com/Banuba/VideoEditor-iOS                 |
-| BanubaAudioBrowserSDK       | https://github.com/Banuba/BanubaAudioBrowserSDK-iOS       |
-| BanubaSDKSimple             | https://github.com/Banuba/BanubaSDKSimple-IOS             |
-| BanubaVideoEditorEffectsSDK | https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS |
-| BanubaARCloudSDK            | https://github.com/Banuba/BanubaARCloudSDK-IOS            |
-| BanubaSDK                   | https://github.com/Banuba/BanubaSDK-iOS                   |
-| BanubaVideoEditorSDK        | https://github.com/Banuba/BanubaVideoEditorSDK-iOS        |
-| BanubaEffectPlayer          | https://github.com/Banuba/BanubaEffectPlayer-iOS          |
-| BanubaTokenStorageSDK       | https://github.com/Banuba/BanubaTokenStorageSDK-iOS       |
-| BanubaVideoEditorTrimSDK    | https://github.com/Banuba/BanubaVideoEditorTrimSDK-iOS    |
+Please add a [link](https://github.com/Banuba/spm) to the collection of packages:
 
 1. Open App project -> navigate to SwiftPackages tab.
 <p align="center">
 <img src="mdDocs/SPMTab.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
-2. Tap 'plus' button -> type relevant SDK repo url.
+2. Tap 'plus' button -> type package collections repo url.
 <p align="center">
 <img src="mdDocs/SDKUrl.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
-3. Choose 'exact' release version -> type newest SDK version.
+3. Choose 'Exact Version' release version -> type newest SDK version.
 <p align="center">
 <img src="mdDocs/ExactVersion.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
-4. Download the latest module version.
+4. Tap 'Add Package' button.
+The lists with all available modules will appear in the displayed window. 
+
+Please check the boxes for the modules you need to install and click the 'Add Package' button.
+<p align="center">
+<img src="mdDocs/screenshots/collectionSPM.png" alt="Screenshot" width="60%" height="auto">&nbsp;
+</p>
+5. Download the latest module version.
 
 ### CocoaPods
 
@@ -194,7 +234,7 @@ Please, refer to the example of [Podfile](https://github.com/Banuba/ve-sdk-ios-i
    ```
 4. Open Example.xcworkspace with Xcode and run the project.
 
-### Start Video Editor from ViewController
+### Step 2. Start Video Editor from ViewController
 
 ``` swift
 import BanubaVideoEditorSDK
@@ -212,10 +252,13 @@ class ViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: .camera,
+      hostController: self,
+      animated: true
+    )
     videoEditorSDK?.presentVideoEditor(
-      from: self,
-      animated: true,
-      musicTrack: nil,
+      withLaunchConfiguration: launchConfig,
       completion: nil
     )
   }
@@ -225,7 +268,6 @@ class ViewController: UIViewController {
     videoEditorSDK = BanubaVideoEditor(
       token: "place client token here",
       configuration: configuration,
-      analytics: nil,
       externalViewControllerFactory: nil
     )
     videoEditorSDK?.delegate = self
@@ -245,38 +287,60 @@ extension ViewController: BanubaVideoEditorDelegate {
 
 ```  
 
-The Video Editor has several entry points. It can be launched on the camera screen and on the trimmer screen with predefined videos:
+The Video Editor has one entry point:
 
 ``` swift
-/// Modally presents Video editor's root view controller
-/// - Parameters:
-///   - hostController: The view controller to display over.
-///   - animated: Pass true to animate the presentation.
-///   - musicTrack: Music track which will be played on camera recording.
-///   - completion: The block to execute after the presentation finishes.
-public func presentVideoEditor(
-  from hostController: UIViewController,
-  animated: Bool,
-  musicTrack: MediaTrack? = nil,
-  completion: (() -> Void)?
-)
-          
-/// Modally presents Video editor's trim view controller with pre-defined videos
-/// - Parameters:
-///   - videoItems: An array with urls to videos located on a phone.
-///   - hostController: The view controller to display over.
-///   - animated: Pass true to animate the presentation.
-///   - musicTrack: Music track which will be played on camera recording.
-///   - completion: The block to execute after the presentation finishes.
-public func presentVideoEditor(
-  withVideoItems videoItems: [URL],
-  from hostController: UIViewController,
-  animated: Bool,
-  musicTrack: MediaTrack? = nil, 
+/// Modally presents Video editor's  view controller with pre-defined configuration
+  /// - Parameters:
+  ///   - configuration: contains configurations for launching Video editor's screen
+  ///   - completion: The block to execute after the presentation finishes.
+func presentVideoEditor(
+  withLaunchConfiguration configuration: VideoEditorLaunchConfig,
   completion: (() -> Void)?
 )
 ```  
 
+`VideoEditorLaunchConfig` contains the following fields:
+``` swift
+/// The video editor launch configuration
+@objc class VideoEditorLaunchConfig: NSObject {
+  /// Setups VE start screen.
+  var entryPoint: PresentEventOptions.EntryPoint
+  /// The view controller to display over.
+  var hostController: UIViewController
+  /// An array with urls to videos located on a phone.
+  var videoItems: [URL]?
+  /// A url to video located on a phone.
+  var pipVideoItem: URL?
+  /// Music track which will be played on camera recording.
+  var musicTrack: MediaTrack?
+  /// Pass true to animate the presentation.
+  var animated: Bool
+  
+  // MARK: - Init
+  init(
+    entryPoint: PresentEventOptions.EntryPoint,
+    hostController: UIViewController,
+    videoItems: [URL]? = nil,
+    pipVideoItem: URL? = nil,
+    musicTrack: MediaTrack? = nil,
+    animated: Bool
+  ) {
+  ...
+ }
+}
+
+/// EntryPoint describes what kind of entry point is used in video editor navigation flow
+public enum EntryPoint: String, Codable {
+  case camera
+  case pip
+  case trimmer
+  case editor
+  case drafts
+}
+``` 
+
+## Customization
 
 ### Configure export flow
 
@@ -319,10 +383,11 @@ Below see the list of screens with links to their detailed description and notes
 1. [Cover screen](mdDocs/cover_style.md)
 1. [Hands Free screen](mdDocs/handsFree_styles.md)
 1. [Audio Browser screen](mdDocs/audioBrowser.md)
+1. [Picture in picture](mdDocs/pip_configuration.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
-### Configure masks and filters order
+### Configure masks, video effects and filters order
 
 The SDK allows to reorder masks and filters in the way you need. To achieve this use the property ```preferredLutsOrder``` and ```preferredMasksOrder```
 
@@ -334,11 +399,13 @@ The SDK allows to reorder masks and filters in the way you need. To achieve this
    "egypt",
    "norway",
    "japan"
+   ...
  ]
  
  config.recorderConfiguration.recorderEffectsConfiguration.preferredMasksOrder = [
    "XYScanner",
    "Background"
+   ...
  ]
  
  // Sorting for the post processing screen
@@ -346,12 +413,20 @@ The SDK allows to reorder masks and filters in the way you need. To achieve this
    "byers",
    "sunset",
    "vinyl"
+   ...
  ]
  
  config.filterConfiguration.preferredMasksOrder = [
    "XYScanner",
    "Background"
+   ...
  ]
+ 
+ config.filterConfiguration.preferredVideoEffectOrderAndSet = [
+  VisualEffectApplicatorType.acid,
+  VisualEffectApplicatorType.dvCam
+  ...
+]
  
 ``` 
 
@@ -383,12 +458,16 @@ AI Video Editor SDK is provided with its own solution for media content (i.e. im
 target 'Example' do
   pod 'BanubaVideoEditorSDK'
   ...
-+  pod 'BanubaVideoEditorGallerySDK'
++  pod 'BanubaVideoEditorGallerySDK', '1.23.0'
 }
 ```
 The gallery provided by the SDK is fully customizable according to [this guide](mdDocs/gallery_styles.md). 
 
 Also there is an option to use **your own implementation of the gallery**. This is available according to this [step-by-step guide](mdDocs/configure_external_gallery.md). 
+
+### Configure additional Video Editor SDK features
+
+1. [Transition effects](mdDocs/transitions_styles.md)
 
 ### Icons
 
@@ -406,6 +485,68 @@ Any text in the mobile video editor SDK can be changed. To edit text resources, 
 
 Don’t change the keys (values on the left), only the values on the right. Otherwise, the button names and other texts will not show.
 
+## Analytics
+
+The SDK generates simple metadata analytics in JSON file that you can use in your application. 
+You need to make sure that analytics collection is enabled in your token. 
+
+After export, the analytics as a row is available in the entity:
+```swift
+let analytics: String? = videoEditorSDK?.metadata?.analyticsMetadataJSON
+```
+Output example:
+```JSON
+{
+  "export_duration": 18.613733167,
+  "export_success": true,
+  "camera_effects": [
+    "mask:Beauty",
+    "mask:HairGradient_Avocado",
+    "neon.png"
+  ],
+  "video_resolutions": [
+    "default854x480"
+  ],
+  "os_version": "12.4.7",
+  "video_count": 1,
+  "post_processing_effects": [
+    "101",
+    "202",
+    "mask:2_5D_HeadphoneMusic"
+  ],
+  "token": "commercial",
+  "video_duration": 19.433333333333334,
+  "sdk_version": "1.22.0",
+  "video_sources": [
+    {
+      "startTime": "0.0",
+      "title": "3CE046B1-9308-44A5-8AC4-E14B5C273F1D",
+      "endTime": "3.0",
+      "type": "camera"
+    },
+    {
+      "startTime": "3.0",
+      "title": "1120F49A-F04C-49BF-B586-0307897B9E74",
+      "endTime": "12.8",
+      "type": "gallery"
+    },
+    {
+      "startTime": "12.8",
+      "title": "82A8C971-04D0-4677-BA3C-61DD2EFB6BAD",
+      "endTime": "15.8",
+      "type": "camera"
+    },
+    {
+      "startTime": "15.8",
+      "title": "D1B9EC82-02BB-4052-B97E-1CFA3489BC3B",
+      "endTime": "18.458333333333336",
+      "type": "camera"
+    }
+  ]
+}
+```
+
+
 ## FAQ  
 Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to your questions.
 
@@ -418,4 +559,8 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 [1.0.16](https://www.notion.so/vebanuba/1-0-16-4dff1bb8bde2433697860ad77e17215c)  
 [1.0.17](https://www.notion.so/vebanuba/1-0-17-24148881b66d48a5a7daa0a891a4cc3f)  
 [1.0.18](https://www.notion.so/vebanuba/1-0-18-d30441bdb9c44bfcb7f12d20b69a9977)  
-[1.0.19](https://www.notion.so/vebanuba/1-19-0-7954637332964fc6ba87f477db112fdf)
+[1.0.19](https://www.notion.so/vebanuba/1-19-0-7954637332964fc6ba87f477db112fdf)  
+[1.20.0](https://www.notion.so/vebanuba/1-20-0-39fe7f401a4b49ce9697e3abb8bf56b7)  
+[1.21.0](https://www.notion.so/vebanuba/1-21-0-6220edd4fd244cf28a997825a369203b)  
+[1.22.0](https://www.notion.so/vebanuba/1-22-0-f1256f7ede8a4595a0a8c82b75cc98f8)  
+[1.23.0](https://www.notion.so/vebanuba/1-23-4db3e390e3e54b93b54514ca6ea5a7b4)

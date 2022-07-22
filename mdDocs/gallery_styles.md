@@ -1,33 +1,41 @@
 # Banuba VideoEditor SDK
-## CombinedGalleryConfiguration
+## GalleryConfiguration
 
 The CombinedGallery is used in app when you want to select a photo or video stored on your phone.
 
 Use the properties below to customize the CombinedGallery.
 
-- [videoResolution: VideoResolutionConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+- [videoResolution: VideoResolution](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
 
-VideoResolutionConfiguration setups editor options for rendering video
-
-- [visibleTabsInGallery: GalleryMediaType](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L25)
-
-GalleryMediaType setups visible tabs for gallery
+VideoResolution setups editor options for rendering video
 
 - [galleryItemConfiguration: GalleryItemConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L8)
 
 GalleryItemConfiguration setups gallery item style for collection view cell
 
+- [visibleTabsInGallery: GalleryMediaType](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L25)
+
+GalleryMediaType setups visible tabs for gallery
+
 - [closeButtonConfiguration: ImageButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L16)
 
 ImageButtonConfiguration setups close button style
 
-- [albumButtonConfiguration: TextButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L17)
+- [albumButtonConfiguration: TextButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L16)
 
 TextButtonConfiguration setups album button style
+
+- [collectionInfoHeaderConfiguration: CollectionInfoHeaderConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L16)
+
+CollectionInfoHeaderConfiguration setups gallery header view
 
 - [nextButtonConfiguration: SaveButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L18)
 
 SaveButtonConfiguration setups next button style
+
+- [draftsButtonConfiguration: SaveButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+  
+SaveButtonConfiguration setups drafts button style
 
 - [noItemsLabelConfiguration: TextConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L19)
   
@@ -52,10 +60,6 @@ TextButtonConfiguration setups gallery type buttons' style
 - [galleryTypeUnderlineColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L24)
   
 Color for underline view
-
-- [draftsButtonConfiguration: SaveButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
-  
-SaveButtonConfiguration setups drafts button style
 
 - [isPhotoSequenceAnimationEnabled: Bool](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
   
@@ -84,6 +88,10 @@ Describes if close button hidden
 - [backgroundColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
   
 Setups view background color
+
+- [maximumSelectedCountFromGallery: Int](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7)
+  
+The maximum number of items can be selected from gallery. Default is 50.
 
 ![img](screenshots/Gallery.png)
 

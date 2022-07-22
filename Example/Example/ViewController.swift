@@ -84,8 +84,11 @@ extension ViewController {
     viewControllerFactory.countdownTimerViewFactory = CountdownTimerViewControllerFactory()
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
+    /// Video editor requires token. Please follow steps described in https://github.com/Banuba/ve-sdk-ios-integration-sample#token
+    let banubaClientToken = <#Place your token here#>
+    
     videoEditorSDK = BanubaVideoEditor(
-      token: "Put your video editor token here",
+      token: banubaClientToken,
       configuration: config,
       externalViewControllerFactory: viewControllerFactory
     )
@@ -158,7 +161,16 @@ extension ViewController {
       ),
       activityLineWidth: 3.0
     )
-
+    
+    configuration.activityIndicator = SmallActivityIndicatorConfiguration(
+      gradientType: .color(
+        SmallActivityIndicatorConfiguration.GradientColorConfiguration(
+          angle: 0.0,
+          colors: [UIColor(red: 6, green: 188, blue: 193, alpha: 1).cgColor, UIColor.white.cgColor]
+        )
+      ),
+      activityLineWidth: 3.0
+    )
     return configuration
   }
 }
@@ -198,8 +210,7 @@ extension ViewController {
         self.videoEditorSDK?.clearSessionData()
         if success {
           /// If you want play exported video
-          //          self.playVideoAtURL(videoURL)
-          
+//          self.playVideoAtURL(videoURL)
           /// if you want share exported video
           self.shareResultVideo(urls: [videoURL])
         }
@@ -356,4 +367,3 @@ extension ViewController {
     }
   }
 }
-

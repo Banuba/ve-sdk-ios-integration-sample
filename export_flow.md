@@ -43,7 +43,9 @@ public struct ExportVideoConfiguration {
   public let useHEVCCodecIfPossible: Bool
 }
 ```
-
+  :exclamation: **We recommend using standard resolution, shush is set up by default. We understand your requirements might be different, so we give you an option to manage the resolution.
+Doing that make sure the devices that exports video does support such a resolution. On a low device high resolution may cause crashes and freezes.**
+  
   Export Quality has to configured by ExportQuality enumeration:
 ``` swift
 /// Export video quality.
@@ -58,10 +60,20 @@ public enum ExportQuality {
 public class ExportVideoInfo {
     /// Specifid quality for exporting video.
     public enum Resolution : String {
-        case ld360
-        case md480
-        case hd720
-        case fullHd1080
+      /// 1440p 
+      case qhd1440
+      /// 1080p
+      case fullHd1080
+      /// 720p
+      case hd720
+      /// 540p
+      case md540
+      /// 480p
+      case md480
+      /// 360p
+      case ld360
+      /// original
+      case original
     }
 
     /// Specified video quality.
@@ -101,3 +113,12 @@ public struct WatermarkConfiguration {
 
 }
 ```
+
+## Save video to gallery
+
+To save the exported video to the gallery or share it, use ```UIActivityViewController```.
+You can learn more about this controller in [apple documentation](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller).
+
+An example of this controller implementation is in the [sample](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L200).
+
+You just need to transfer the [URL](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L167) of the exported video there.

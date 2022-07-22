@@ -50,7 +50,7 @@
 "alert.stop.capturing.video.message" = "";
 
 /* Used in alert with Yes and No options when resetting filters. */
-"record.screen.reset.all.title" = "Reset all?";
+"record.screen.reset.all.title" = "Want to reset changes?";
 "editor.screen.reset.all.title" = "Reset all?";
 "record.screen.reset.all.message" = "";
 "editor.screen.reset.all.message" = "";
@@ -219,6 +219,9 @@
 /* Message displayed when there is no internet connection */
 "You don't seem to be connected to the internet. \nPlease try again" = "You don't seem to be connected to the internet. \nPlease try again";
 
+/* Message displayed when media file cannot be downloaded */
+"Cannot download media file from your iCloud" = "Cannot download media file from your iCloud";
+
 /* Error if the format of the response from the server does not match the expected */
 "Unknown data format" = "Unknown data format";
 
@@ -353,6 +356,9 @@
 /* VHS 2 effect name */
 "com.banuba.editor.effect.name.vhs2" = "VHS 2";
 
+/* Open trimmer button name (for dradt) */
+"com.banuba.editor.openTrimButtonTitle" ="Adjust Clips";
+
 // MARK: - Filter names
 
 /* glitch filter name */
@@ -442,11 +448,8 @@
 /* No video in gallery */
 "No matching video found in gallery" = "No videos found";
 
-/* User selected too many photos in the gallery */
-"Too much, %d - max number of photos" = "Too much, %d - max number of photos";
-
-/* Shown when the user tries to add a file to import beyond what is possible */
-"You can choose %i videos" = "You can choose %i videos";
+/* User selected too many files in the gallery */
+"You can select only %d files" = "You can select only %d files";
 
 /* Failed to download photos for slideshow */
 "Error loading images" = "Error loading images";
@@ -611,15 +614,18 @@
 "audioBrowser.my.library" = "My library";
 "audioBrowser.no.matches" = "No matches";
 "audioBrowser.no.tracks" = "No tracks";
+/* Track format for displaying mubert track title*/
+"audioBrowser.mubertTrackFormat" = "Track %d";
+
+/* Wrong Mubert key error text */
+"audioBrowser.wrongPatError" = "Mubert key is missing. In order to get it contact Banuba rep.";
 
 "feature.disabled.audiobrowser" = "Default music browser is not included in your package. You can plugin your own music.";
 
 // MARK: - Hands-free
-
-"hands.free.timer.title" = "Сountdown";
 "hands.free.video.mode.title" = "Hands-free video mode";
 "hands.free.video.drag.title" = "Drag to set video duration:";
-"hands.free.btn.title" = "START RECORDING";
+"hands.free.btn.title" = "Start countdown";
 "hands.free.seconds" = "%@ s";
 
 // MARK: - Video Editor
@@ -640,6 +646,15 @@
 /* Gallery Recent Photos title */
 "BanubaVideoEditor.Gallery.RecentPhotosTitle" = "Recent";
 
+/* Gallery previe select button name*/
+"BanubaVideoEditor.Gallery.SelectItemName" = "Select";
+
+/* Gallery previe deselect button name*/
+"BanubaVideoEditor.Gallery.DeselectItemName" = "Deselect";
+
+/* Damaged file from gallery */
+"BanubaVideoEditor.Gallery.DamagedFile" = "Damaged file";
+
 /* Gallery selection hint */
 "BanubaVideoEditor.Gallery.SelectItems" = "Select items";
 
@@ -648,6 +663,9 @@
 
 /* Import multiple videos template */
 "BanubaVideoEditor.Gallery.ImportMultipleVideos" = "Import %d videos";
+
+/* Import multiple videos template */
+"BanubaVideoEditor.Gallery.ImportMultipleVideosAndPhotos" = "Import %d videos and photos";
 
 /* Import single image template */
 "BanubaVideoEditor.Gallery.ImportSingleImage" = "Import 1 image";
@@ -697,10 +715,11 @@
 "BanubaVideoEditor.Gallery.DraftsTitle" = "Drafts";
 /* Draft actions subtitle */
 "BanubaVideoEditor.Gallery.DraftTitle" = "Draft";
+/* Draft edit action name */
+"BanubaVideoEditor.Gallery.DraftEditActionName" = "Edit";
 /* Draft remove action name */
 "BanubaVideoEditor.Gallery.DraftRemoveActionName" = "Remove";
-/* Displays hint about drafts location */
-"BanubaVideoEditor.Recorder.DraftHintMessage" = "You can find your draft in the Gallery";
+
 /* Used in alert with Yes and No options when resetting current sequence */
 "com.banuba.BanubaVideoEditor.draft.question.title" = "Do you want to save the draft?";
 "com.banuba.BanubaVideoEditor.draft.question.message" = "";
@@ -722,6 +741,13 @@
 "com.banuba.BanubaVideoEditor.draft.update.message" = "";
 "com.banuba.BanubaVideoEditor.draft.update.agree" = "Update";
 "com.banuba.BanubaVideoEditor.draft.update.disagree" = "Cancel";
+"com.banuba.BanubaVideoEditor.draft.lose.message" = "Note! You will lose the current editing settings. Continue?";
+"com.banuba.BanubaVideoEditor.draft.lose.agree" ="Adjust Clips";
+
+/* Editor, back button menu. Edit draft mode */
+"com.banuba.BanubaVideoEditor.draft.discardChangesAction" = "Discard changes";
+"com.banuba.BanubaVideoEditor.draft.updateAction" = "Update draft";
+
 
 //MARK: - Additional buttons
 "com.banuba.recorder.link.title" = "Link";
@@ -752,6 +778,22 @@
 "com.banuba.videoEditor.aspect.4:3" = "4:3";
 "com.banuba.videoEditor.aspect.4:5" = "4:5";
 
+/* Transitions title for cells*/
+"com.banuba.videoEditor.transition.none" = "None";
+"com.banuba.videoEditor.transition.whipDown" = "Whip down";
+"com.banuba.videoEditor.transition.whipUp" = "Whip up";
+"com.banuba.videoEditor.transition.whipRight" = "Whip right";
+"com.banuba.videoEditor.transition.whipLeft" = "Whip left";
+"com.banuba.videoEditor.transition.scrollDown" = "Scroll down";
+"com.banuba.videoEditor.transition.scrollUp" = "Scroll up";
+"com.banuba.videoEditor.transition.scrollRight" = "Scroll right";
+"com.banuba.videoEditor.transition.scrollLeft" = "Scroll left";
+"com.banuba.videoEditor.transition.spinRight" = "Spin";
+"com.banuba.videoEditor.transition.fade" = "Fade";
+
+/* Transition disabled alert message */
+"com.banuba.videoEditor.transition.disabledToastMessage" = "The clip must be longer than 0.5 sec to apply transition.";
+
 /* Text editor font names */
 "com.banuba.textEditor.fontName.regular" = "Regular";
 "com.banuba.textEditor.fontName.italic" = "Italic";
@@ -770,6 +812,7 @@
 /* Titles for alert buttons */
 
 /* discard all alert type for record screen */
+"com.banuba.alert.discardAllRecord.additionalButtonTitle" = "Start over";
 "com.banuba.alert.discardAllRecord.agreeButtonTitle" = "Reset";
 "com.banuba.alert.discardAllRecord.disagreeButtonTitle" = "Cancel";
 /* discard all alert type for editor screen */
@@ -795,6 +838,12 @@
 "com.banuba.alert.needToUpdateIos.title" = "Sorry, minimum supported version is iOS 12.";
 "com.banuba.alert.needToUpdateIos.message" = "You must update to ios 12.0 in order to use this application.";
 
+/* remove and start over record video */
+"com.banuba.trim.startOverRecordVideoTitle" = "Want to record a new video?";
+"com.banuba.trim.startOverRecordVideoMessage" = "";
+"com.banuba.trim.startOverRecordVideoAgreeButtonTitle" = "Start over";
+"com.banuba.trim.startOverRecordVideoDisagreeButtonTitle" = "Discard";
+
 // MARK: - Trim
 /* Edit video rotate button title */
 "com.banuba.trim.rotateEditButtonTitle" = "Rotate";
@@ -808,3 +857,11 @@
 "com.banuba.trim.trimEditButtonTitle" = "Trim";
 /* Reordering video tool tip label message */
 "com.banuba.trim.reorderingToolTip" = "Drag to swap";
+/* Delete single video error message */
+"com.banuba.trim.deleteLastClipErrorMessage" = "The last clip can't  be deleted";
+/* Split video part error message */
+"com.banuba.trim.splitErrorMessage" = "The selected position is invalid";
+
+// MARK: - Capture button modes
+"com.banuba.record.captureButtonVideoMode" = "VIDEO";
+"com.banuba.record.captureButtonPhotoMode" = "PHOTO";

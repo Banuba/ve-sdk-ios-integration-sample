@@ -6,21 +6,28 @@ These are the answers to the most common questions asked about our SDK.
 3. [How do I start the Video Editor with a preselected audio track?](#3-how-do-i-start-the-video-editor-with-a-preselected-audio-track)
 4. [How do I use the Video Editor several times from different entry points?](#4-how-do-i-use-the-video-editor-several-times-from-different-entry-points)
 5. [How do I add a color filter (LUT)?](#5-how-do-i-add-a-color-filter-lut)
-6. [I want to enabled slideshow animation.](#6-i-want-to-enabled-slideshow-animation)
+6. [I want to enabled slideshow animation.](#6-i-want-to-enable-slideshow-animation)
 7. [I want to change cursor color.](#7-i-want-to-change-cursor-color)
 8. [I want to change progress bar position.](#8-i-want-to-change-progress-bar-position)
 9. [How does video editor work when token expires?](#9-how-does-video-editor-work-when-token-expires)
 10. [Which buttons available if Face AR disabled?](#10-which-buttons-available-if-face-ar-disabled)
-11. [I want to change screens' layout.](#11-i-want-to-change-screens-layout)
-12. [I want to change music button position.](#12-i-want-to-change-music-button-position)
-13. [How can I get a track name of the audio used in my video after export?](#13-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
-14. [I want to change the font.](#14-i-want-to-change-the-font)
-15. [I want to check whether my token is expired.](#15-i-want-to-check-whether-my-token-is-expired)
-16. [The file “luts” couldn’t be opened because there is no such file.](#16-the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
-17. [I want to add audio filters.](#17-i-want-to-add-audio-filters)
-18. [I want to change icons and name for effects.](#18-i-want-to-change-icons-and-name-for-effects)
-19. [I want to turn off Drafts feature.](#19-i-want-to-turn-off-drafts-feature)
+11. [I want to change music button position.](#11-i-want-to-change-music-button-position)
+12. [How can I get a track name of the audio used in my video after export?](#12-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
+13. [I want to change the font.](#13-i-want-to-change-the-font)
+14. [I want to check whether my token is expired.](#14-i-want-to-check-whether-my-token-is-expired)
+15. [The file “luts” couldn’t be opened because there is no such file.](#15-the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
+16. [I want to add audio filters.](#16-i-want-to-add-audio-filters)
+17. [I want to change icons and name for effects.](#17-i-want-to-change-icons-and-name-for-effects)
+18. [I want to turn off Drafts feature.](#18-i-want-to-turn-off-drafts-feature)
+19. [I want to turn off Cover screen.](#19-i-want-to-turn-off-cover-screen)
 20. [I want to change visible tabs in gallery.](#20-i-want-to-change-visible-tabs-in-gallery)
+21. [I want to get exported video metadata.](#21-i-want-to-get-exported-video-metadata)
+22. [I want to change codec type from h264 to h265.](#22-i-want-to-change-codec-type-from-h264-to-h265)
+23. [How do I specify the video file saving directory?](#23-how-do-i-specify-the-video-file-saving-directory)
+24. [How do I change the video duration?](#24-how-do-i-change-the-video-duration)
+25. [The problem of using optional frameworks and bitcode together.](#25-the-problem-of-using-optional-frameworks-and-bitcode-together)
+26. [How do I change the launguage (how do I add new locale support)?](#26-how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
+27. [How can I change the extension of the exported video?](#27-how-can-i-change-the-extension-of-the-exported-video)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -44,13 +51,18 @@ A mask is a bundle of files within a specific folder in the YourProject/bundleEf
 
 ### 3. How do I start the Video Editor with a preselected audio track?
 
-To do so, add the MediaTrack instance as a parameter to the presentVideoEditor method.
+To do so, add the MediaTrack instance as a parameter to the  `VideoEditorLaunchConfig` which used for starting video editor method.
 
 ```swift
-videoEditorSDK?.presentVideoEditor(
-  from: YourViewController,
-  animated: true,
+let cameraLaunchConfig = VideoEditorLaunchConfig(
+  entryPoint: .camera,
+  hostController: self,
   musicTrack: MediaTrack(...),
+  animated: true
+)
+
+videoEditorSDK?.presentVideoEditor(
+  withLaunchConfiguration: cameraLaunchConfig,
   completion: nil
 )
 ```
@@ -101,93 +113,17 @@ For example on your tap button action:
 
 ### 5. How do I add a color filter (LUT)?
 
-Color filters (LUTs) are special graphic files placed into the /luts directory inside the host project folder.
+Color Filters (LUTs) are special graphics files that are placed in the / [luts directory](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) inside the main project folder.
 
-To add your own icon that will be used to represent this particular effect in the list, you should place it into the /assets folder.
+To add your own icon to be used to represent that specific effect in the list, you must place it in the / [assets folder](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/Filters%20Preview).
 
-The name of the icon resource must be the same as the graphic file `ID` the / luts directory.
+The icon resource name must match the image file name in the / luts directory and end with ```_preview```.
 
-| Default image color filter | Name      | ID      |
-| ---------- | ---------  | ----------- |
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101000_preview.imageset/glitch-1.png" width="50"> | glitch | 101000
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101001_preview.imageset/instant-1.png" width="50"> | instant  | 101001
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101002_preview.imageset/grunge-1.png" width="50">  | grunge | 101002
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101003_preview.imageset/retro-1.png" width="50">  |  retro | 101003
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101004_preview.imageset/pinkvine-1.png" width="50">  |  pinkvine | 101004
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101005_preview.imageset/england-1.png" width="50">  |  england | 101005
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101006_preview.imageset/spark-1.png" width="50">  |  spark | 101006
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101007_preview.imageset/korben-1.png" width="50"> |  korben | 101007
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101008_preview.imageset/remy-1.png" width="50"> |  remy | 101008
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101009_preview.imageset/canada-1.png" width="50"> |  canada | 101009
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101010_preview.imageset/sunny-1.png" width="50">  |  sunny | 101010
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101013_preview.imageset/chroma-1.png" width="50"> |  chroma | 101011
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101014_preview.imageset/byers-1.png" width="50"> |  byers | 101012
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101015_preview.imageset/lilac-1.png" width="50">  |  lilac | 101013
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101012_preview.imageset/new_zeland-1.png" width="50">  |  bright | 101014
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101016_preview.imageset/hyla-1.png" width="50"> |  hyla | 101015
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101018_preview.imageset/vinyl-1.png" width="50">  | vinyl | 101016
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101019_preview.imageset/lux-1.png" width="50">  |  lux | 101017
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101011_preview.imageset/egypt-1.png" width="50"> |  egypt | 101018
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101020_preview.imageset/japan-1.png" width="50">  |  japan | 101019
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101021_preview.imageset/sunset-1.png" width="50"> |  sunset | 101020
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101017_preview.imageset/bubblegum-1.png" width="50"> |  vivid | 101021
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101022_preview.imageset/neon-1.png" width="50"> |  neon | 101022
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101023_preview.imageset/chile-1.png" width="50"> |  chile | 101023
-| <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Filters%20Preview/101024_preview.imageset/norway-1.png" width="50"> |  norway | 101024
+The display name for the resource is set in the [localization files](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings#L353).
 
-If you want to change the name, you need to specify the new name in the string resources:
-```swift
-/* glitch filter name */
-"com.banuba.filter.name.lux" = "Lux";
-/* remy filter name */
-"com.banuba.filter.name.remy" = "Remy";
-/* hyla filter name */
-"com.banuba.filter.name.hyla" = "Hyla";
-/* neon filter name */
-"com.banuba.filter.name.neon" = "Neon";
-/* retro filter name */
-"com.banuba.filter.name.retro" = "Retro";
-/* sunny filter name */
-"com.banuba.filter.name.sunny" = "Sunny";
-/* egypt filter name */
-"com.banuba.filter.name.egypt" = "Egypt";
-/* spark filter name */
-"com.banuba.filter.name.spark" = "Spark";
-/* byers filter name */
-"com.banuba.filter.name.byers" = "Byers";
-/* lilac filter name */
-"com.banuba.filter.name.lilac" = "Lilac";
-/* vinyl filter name */
-"com.banuba.filter.name.vinyl" = "Vinyl";
-/* japan filter name */
-"com.banuba.filter.name.japan" = "Japan";
-/* chile filter name */
-"com.banuba.filter.name.chile" = "Chile";
-/* glitch filter name */
-"com.banuba.filter.name.glitch" = "Glitch";
-/* grunge filter name */
-"com.banuba.filter.name.grunge" = "Grunge";
-/* canada filter name */
-"com.banuba.filter.name.canada" = "Canada";
-/* chroma filter name */
-"com.banuba.filter.name.chroma" = "Chroma";
-/* norway filter name */
-"com.banuba.filter.name.norway" = "Norway";
-/* korben filter name */
-"com.banuba.filter.name.korben" = "Korben";
-/* sunset filter name */
-"com.banuba.filter.name.sunset" = "Sunset";
-/* instant filter name */
-"com.banuba.filter.name.instant" = "Instant";
-/* england filter name */
-"com.banuba.filter.name.england" = "England";
-/* pinkvine filter name */
-"com.banuba.filter.name.pinkvine" = "Pinkvine";
-/* vivid filter name */
-"com.banuba.filter.name.vivid" = "Vivid";
-/* bright filter name */
-"com.banuba.filter.name.bright" = "Bright";
-```
+The key for the translation string must start with ```com.banuba.filter.name.{lut file name}``` and end with the name of the lut file.
+
+
 
 ### 6. I want to enable slideshow animation 
 
@@ -257,23 +193,7 @@ config.recorderConfiguration.progressBarPosition = .top
  - time
  - color
 
- ### 11. I want to change screens layout.
- 
- There are two screens which could be modified with additional layout:
- 
- - Camera
- - Postprocessing
-
-To be able to change layout you need to set ```useHorizontalVersion``` equals ```true```. This properties are parts of ```RecorderConfiguration``` and ```EditorConfiguration``` entities.
-
-```swift
-let config = VideoEditorConfig()
-
-config.recorderConfiguration.useHorizontalVersion = true
-config.editorConfiguration.useHorizontalVersion = true
-```
-
-### 12. I want to change music button position.
+### 11. I want to change music button position.
 
 The music button consists of three positions:
 
@@ -299,7 +219,7 @@ config.recorderConfiguration.additionalEffectsButtons = [
 ] 
 ```
 
-### 13. How can I get a track name of the audio used in my video after export?
+### 12. How can I get a track name of the audio used in my video after export?
 ```swift
 /// Video Editor main entity and entry point.
 /// Can present and hide root view controller.
@@ -310,7 +230,7 @@ public var musicMetadata: MusicEditorMetadata? { get }
 ...
 }
 ```
-`MusicEditorMetadata` contains the array of `MusicEditorTrack` which contains the following fields: 
+`MusicEditorMetadata` contains the array of `MusicEditorTrack` which contains the following fields: 
 
 ```swift
 // MARK: - MusicEditorTrack
@@ -340,7 +260,7 @@ public var musicTrack: MediaTrack? { get }
 ...
 }
 ```
-### 14 I want to change the font
+### 13. I want to change the font
 
 You can change the font for the whole video editor by calling in `VideoEditorConfig` this method:
  
@@ -369,8 +289,6 @@ or change for each screen separately by calling the appropriate methods:
   
   func updateFilterFonts(_ font: UIFont)
   
-  func updateVideoCoverSelectionFonts(_ font: UIFont)
-  
   func updateExtendedVideoCoverSelectionFonts(_ font: UIFont)
   
   func updateAlertFonts(_ font: UIFont)
@@ -378,7 +296,7 @@ or change for each screen separately by calling the appropriate methods:
 
 Changing the font does not affect its size. The font size will be taken by default or specified by you in the entity configuration.
 
-### 15. I want to check whether my token is expired.
+### 14. I want to check whether my token is expired.
 
 Starting from '1.0.18' version it is available to check if token is expired.
 
@@ -408,13 +326,13 @@ self.loadToken { token in
 }
 ```
 
-### 16. The file “luts” couldn’t be opened because there is no such file.
+### 15. The file “luts” couldn’t be opened because there is no such file.
 
 This error occurs because your application bundle doesn't contains required luts folder.
 
 You need to copy [luts](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) folder to your project.
 
-### 17. I want to add audio filters 
+### 16. I want to add audio filters 
 
 Filters availability depends on the token. However, in order for them to be available, you need to add an implementation of the ```VoiceFilterProvider``` entity.
 
@@ -479,7 +397,7 @@ Then the instance of the ExampleVoiceFilterProvider needs to be passed to the co
   config.musicEditorConfiguration.audioTrackLineEditControllerConfig.voiceFilterProvider = ExampleVoiceFilterProvider()
 ```
 
-### 18. I want to change icons and name for effects.
+### 17. I want to change icons and name for effects.
 
 The name of the icon for the effect must match the identifier of the effect.
 Below is a table with the name, ID and icon of the default effect.
@@ -515,7 +433,7 @@ Below is a table with the name, ID and icon of the default effect.
 
 In order to change the name of the effect, you need to do it in the [localization file](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings#L254).
 
-### 19. I want to turn off Drafts feature.
+### 18. I want to turn off Drafts feature.
 
 To turn off Drafts feature just disable it in ```FeatureConfiguration``` entity:
 
@@ -523,6 +441,16 @@ To turn off Drafts feature just disable it in ```FeatureConfiguration``` entity:
   var config = VideoEditorConfig()
   
   config.featureConfiguration.draftsConfig = .disabled
+```
+
+### 19. I want to turn off Cover screen.
+
+To turn off Cover screen just disable it in ```FeatureConfiguration``` entity:
+
+```swift
+  var config = VideoEditorConfig()
+  
+  config.featureConfiguration.isVideoCoverSelectionEnabled = false
 ```
 
 ### 20. I want to change visible tabs in gallery
@@ -534,3 +462,123 @@ To setup visible tabs for gallery just configure it in ```CombinedGalleryConfigu
   
   config.combinedGalleryConfiguration.visibleTabsInGallery = [.video, .photo]
 ```
+
+### 21. I want to get exported video metadata
+
+In order to find out which filter, effects, masks and music was applied to the video, you need to refer to the instance of the entity ```BanubaVideoEditor```.
+
+Instance:
+```swift
+
+let videoEditorSDK = BanubaVideoEditor(
+  ...
+)
+
+// to get color filter
+let videoFilter = videoEditorSDK?.metadata?.colorOnVideoMetadata
+// to get effects
+let videoEffects = videoEditorSDK?.metadata?.effectsOnVideoMetadata
+// to get gifs
+let videoGif = videoEditorSDK?.metadata?.gifOnVideoMetadata
+// to get texts
+let videoText = videoEditorSDK?.metadata?.textOnVideoMetadata
+// to get music track from record screen
+let videoMusicTrack = videoEditorSDK?.musicTrack
+// to get music tracks from editor screen
+let videoTracks = videoEditorSDK?.musicMetadata?.tracks
+```
+### 22. I want to change codec type from h264 to h265.
+
+All you need is just to set ```useHEVCCodecIfPossible``` to ```true``` in ```VideoEditorConfig, ExportVideoInfo or ExportVideoConfiguration ``` entity.
+The first one you need when you create ```BanubaVideoEditor```, two last ones - when you prepare a video to export.
+
+```swift
+  var config = VideoEditorConfig()
+  config.recorderConfiguration.useHEVCCodecIfPossible = true
+
+  let videoEditorSDK = BanubaVideoEditor(
+    token: ...,
+    configuration: config
+  )
+
+  let exportVideoInfo = ExportVideoInfo(
+    resolution: ...,
+    useHEVCCodecIfPossible: true
+  )
+
+  let configuration = ExportVideoConfiguration(
+    fileURL: ...,
+    quality: ...,
+    useHEVCCodecIfPossible: true,
+    watermarkConfiguration: ...
+  )
+```
+
+### 23. How do I specify the video file saving directory?
+
+In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
+
+```swift
+  let exportVideoConfigurations: [ExportVideoConfiguration] = [
+    ExportVideoConfiguration(
+      fileURL: fileURL,
+      quality: .auto,
+      useHEVCCodecIfPossible: true,
+      watermarkConfiguration: watermarkConfiguration
+  )
+]
+```
+
+### 24. How do I change the video duration?
+
+To setup video duration just configure it in ```VideoEditorDurationConfig``` entity:
+
+```swift
+  public struct VideoEditorDurationConfig {
+  /// The video maximum duration
+  /// Default is 60.0.
+  public var maximumVideoDuration: TimeInterval
+  /// The video minimum duration captured from a camera
+  /// Default is 3.0.
+  public var minimumDurationFromCamera: TimeInterval
+  /// The video minimum duration from a gallery
+  /// Default is 0.3.
+  public var minimumDurationFromGallery: TimeInterval
+  /// The video minimum duration
+  /// Default is 1.0.
+  public var minimumVideoDuration: TimeInterval
+  /// The video part minimum duration at trimmer
+  /// Default is 0.3.
+  public var minimumTrimmedPartDuration: TimeInterval
+  /// The video duration created from photo at camera and gallery
+  /// Default is 3.0
+  public var slideshowDuration: TimeInterval
+}
+```
+
+### 25. The problem of using optional frameworks and bitcode together.
+
+Now you can enable bitcode in your project only if it includes all VideoEditor frameworks(optional and required). 
+
+These are restrictions on the use of bitcode by Apple and at the moment it cannot be bypassed from our side.
+
+If you don't use optional frameworks, you should disable bitcode in order to successfully upload your app to the Apple Connect.
+
+### 26. How do I change the launguage (how do I add new locale support)?
+
+There is no special language switching mechanism in the Video Editor SDK (VE SDK).
+
+Out of the box, the VE SDK includes support for two locales: English (default) and Russian. If you need to support any other locales, you can do it according to the standard iOS way. See how [Create locale directories and resource files](https://developer.apple.com/documentation/xcode/localization) for more details. After adding a new locale resource file into your application with integrated VE SDK, you need to re-define the VE SDK strings keys with new locale string values.
+To do that you need to add all needed string keys in the new locale `Localizable.strings` file. You can find the main VE SDK string keys you need in the [Configure screens](https://github.com/Banuba/ve-sdk-ios-integration-sample#Configure-screens) doc page. E.g. string keys of the Overlay screen you can find [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/overlayEditor_styles.md#string-resources).
+The newly added locale will be applied after the device language is changed by system settings.
+
+### 27. How can I change the extension of the exported video?
+
+To save the video in the format you want, you just need to add the appropriate ```PathComponent``` when creating the video URL.
+```swift
+let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
+```
+
+See example in [sample](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L171).
+
+See all formats supported for video export [here](https://github.com/Banuba/ve-sdk-ios-integration-sample#supported-media-formats).

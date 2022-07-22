@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "bubblegum.png",
+      "filename" : "vibration.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bubblegum-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bubblegum-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

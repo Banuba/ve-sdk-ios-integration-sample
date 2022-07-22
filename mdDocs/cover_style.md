@@ -1,36 +1,4 @@
 # Banuba VideoEditor SDK
-##  SimpleVideoCoverSelectionConfiguration
-
-- [cancelButton: TextButtonConfiguration](/Example/Example/Extension/CoverConfiguration.swift#L8)
-
-TextButtonConfiguration setups cancel button style
-
-- [doneButton: RoundedButtonConfiguration](/Example/Example/Extension/CoverConfiguration.swift#L9)
-
-RoundedButtonConfiguration setups done button style
-
-- [toolTipLabel: TextConfiguration](/Example/Example/Extension/CoverConfiguration.swift#L25)
-
-TextConfiguration setups tool tip label
-
-- [sliderColor: UIColor](/Example/Example/Extension/CoverConfiguration.swift#L32)
-
-Slider color
-
-- [sliderMinTrackTintColor: UIColor](/Example/Example/Extension/CoverConfiguration.swift#L33)
-
-Slider min state color
-
-- [sliderMaxTrackTintColor: UIColor](/Example/Example/Extension/CoverConfiguration.swift#L34)
-
-Slider max state color
-
-- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/CoverConfiguration.swift#L35)
-
-BackgroundConfiguration setups background view configuration
-
-![img](screenshots/CoverScreen.png)
-
 ##  VideoCoverSelectionConfiguration
 
 - [cancelButton: RoundedButtonConfiguration](/Example/Example/Extension/CoverConfiguration.swift#L42)
@@ -76,6 +44,10 @@ The thumbnails Curosr Configuration
 - [numberOfThumbnails: Int](/Example/Example/Extension/CoverConfiguration.swift#L58)
 
 The number of thumbnails
+
+- [galleryImageCompressionQuality: CGFloat](/Example/Example/Extension/CoverConfiguration.swift#L58)
+
+Gallery image compression quality. Default is 0.6
   
 ![img](screenshots/VideoCoverSelectionConfiguration.png)
 

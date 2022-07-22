@@ -10,7 +10,7 @@ Please add snapshot `banubaToken` in your [Firebase Realtime Database](https://f
 
 Add following dependency to pod file. Run pod install.
 ```
- pod 'BanubaTokenStorageSDK', 'Specify Version'
+ pod 'BanubaTokenStorageSDK', '1.23.0'
 ```
 
 ### Step 3
@@ -102,7 +102,6 @@ provider.loadToken() { [weak self] (error, token) in
   self.videoEditorSDK = BanubaVideoEditor(
     token: token,
     configuration: self.config,
-    analytics: Analytics(),
     externalViewControllerFactory: viewControllerFactory
   )
 }

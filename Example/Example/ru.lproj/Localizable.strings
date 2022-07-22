@@ -49,7 +49,7 @@
 "alert.stop.capturing.video.message" = "";
 
 /* Used in alert with Yes and No options when resetting filters. */
-"record.screen.reset.all.title" = "Сбросить все?";
+"record.screen.reset.all.title" = "Удалить изменения?";
 "editor.screen.reset.all.title" = "Сбросить все?";
 "record.screen.reset.all.message" = "";
 "editor.screen.reset.all.message" = "";
@@ -214,6 +214,9 @@
 /* Message displayed when there is no internet connection */
 "You don't seem to be connected to the internet. \nPlease try again" = "Не получается соединиться с интернетом.\nПожалуйста, попробуй еще раз";
 
+/* Message displayed when media file cannot be downloaded */
+"Cannot download media file from your iCloud" = "Не удалось загрузить медиа файл из вашего iCloud";
+
 /* Error if the format of the response from the server does not match the expected */
 "Unknown data format" = "Неожиданный формат данных";
 
@@ -349,6 +352,9 @@
 /* VHS 2 effect name */
 "com.banuba.editor.effect.name.vhs2" = "VHS 2";
 
+/* Open trimmer button name (for dradt) */
+"com.banuba.editor.openTrimButtonTitle" ="Коррекция";
+
 // MARK: - Filter names
 
 /* glitch filter name */
@@ -437,11 +443,8 @@
 /* No video in gallery */
 "No matching video found in gallery" = "В галерее не нашлось подходящих видео";
 
-/* Shown when the user tries to add a file to import beyond what is possible */
-"You can choose %i videos" = "Вы можете выбрать %i видео";
-
-/* User selected too many photos in the gallery */
-"Too much, %d - max number of photos" = "Слишком много, %d – макс количество фото";
+/* User selected too many files in the gallery */
+"You can select only %d files" = "Вы можете выбрать только %d файлов";
 
 /* Failed to download photos for slideshow */
 "Error loading images" = "Ошибка загрузки изображений";
@@ -606,15 +609,18 @@
 "audioBrowser.my.library" = "Моя библиотека";
 "audioBrowser.no.matches" = "Нет совпадений";
 "audioBrowser.no.tracks" = "Нет треков";
+/* Track format for displaying mubert track title*/
+"audioBrowser.mubertTrackFormat" = "Трек %d";
+
+/* Wrong Mubert key error text */
+"audioBrowser.wrongPatError" = "Ключ сервиса ‘Муберт’ отсутствует. Чтобы получить его, свяжитесь с представителем Banuba.";
 
 "feature.disabled.audiobrowser" = "Музыкальный браузер по умолчанию не входит в ваш пакет. Вы можете добавить свою музыку.";
 
 // MARK: - Hands-free
-
-"hands.free.timer.title" = "Обратный отсчет";
 "hands.free.video.mode.title" = "Hands-free видео режим";
 "hands.free.video.drag.title" = "Установите продолжительность видео:";
-"hands.free.btn.title" = "НАЧАТЬ ЗАПИСЬ";
+"hands.free.btn.title" = "Начать отсчёт";
 "hands.free.seconds" = "%@ с";
 
 // MARK: - Video Editor
@@ -628,12 +634,21 @@
 /* Gallery custom All Photos title */
 "BanubaVideoEditor.Gallery.AllPhotosTitle" = "Вce фото";
 
+/* Gallery previe select button name*/
+"BanubaVideoEditor.Gallery.SelectItemName" = "Выбрать";
+
+/* Gallery previe deselect button name*/
+"BanubaVideoEditor.Gallery.DeselectItemName" = "Отменить";
+
 /* Gallery header info title */
 "BanubaVideoEditor.Gallery.HeaderInfoTitle" = "Открыть %@, чтобы разрешить доступ к фотографиям";
 "BanubaVideoEditor.Gallery.HeaderInfoColoredTitle" = "настройки";
 
 /* Gallery Recent Photos title */
 "BanubaVideoEditor.Gallery.RecentPhotosTitle" = "Недавние";
+
+/* Damaged file from gallery */
+"BanubaVideoEditor.Gallery.DamagedFile" = "Поврежденный файл";
 
 /* Gallery selection hint */
 "BanubaVideoEditor.Gallery.SelectItems" = "Выберите элементы";
@@ -643,6 +658,9 @@
 
 /* Import multiple videos template */
 "BanubaVideoEditor.Gallery.ImportMultipleVideos" = "Выбрать %d видео";
+
+/* Import multiple videos template */
+"BanubaVideoEditor.Gallery.ImportMultipleVideosAndPhotos" = "Выбрать %d видео и фото";
 
 /* Import single image template */
 "BanubaVideoEditor.Gallery.ImportSingleImage" = "Выбрать 1 фото";
@@ -692,10 +710,11 @@
 "BanubaVideoEditor.Gallery.DraftsTitle" = "Черновики";
 /* Draft actions subtitle */
 "BanubaVideoEditor.Gallery.DraftTitle" = "Черновик";
+/* Draft edit action name */
+"BanubaVideoEditor.Gallery.DraftEditActionName" = "Изменить";
 /* Draft remove action name */
 "BanubaVideoEditor.Gallery.DraftRemoveActionName" = "Удалить";
-/* Displays hint about drafts location */
-"BanubaVideoEditor.Recorder.DraftHintMessage" = "Вы можете найти свой черновик в галерее";
+
 /* Used in alert with Yes and No options when resetting current sequence */
 "com.banuba.BanubaVideoEditor.draft.question.title" = "Сохранить черновик?";
 "com.banuba.BanubaVideoEditor.draft.question.message" = "";
@@ -715,6 +734,10 @@
 "com.banuba.BanubaVideoEditor.draft.update.message" = "";
 "com.banuba.BanubaVideoEditor.draft.update.agree" = "Обновить";
 "com.banuba.BanubaVideoEditor.draft.update.disagree" = "Отмена";
+"com.banuba.BanubaVideoEditor.draft.lose.message" = "Внимание! Вы потеряете текущие настройки редактирования. Продолжить?";
+"com.banuba.BanubaVideoEditor.draft.lose.agree" ="Продолжить";
+"com.banuba.BanubaVideoEditor.draft.discardChangesAction" = "Отменить изменения";
+"com.banuba.BanubaVideoEditor.draft.updateAction" = "Обновить драфт";
 
 //MARK: - Additional buttons
 "com.banuba.recorder.link.title" = "Ссылка";
@@ -745,6 +768,22 @@
 "com.banuba.videoEditor.aspect.4:3" = "4:3";
 "com.banuba.videoEditor.aspect.4:5" = "4:5";
 
+/* Transitions title for cells*/
+"com.banuba.videoEditor.transition.none" = "Нет";
+"com.banuba.videoEditor.transition.whipDown" = "Размытие\nвниз";
+"com.banuba.videoEditor.transition.whipUp" = "Размытие\nвверх";
+"com.banuba.videoEditor.transition.whipRight" = "Размытие\nвправо";
+"com.banuba.videoEditor.transition.whipLeft" = "Размытие\nвлево";
+"com.banuba.videoEditor.transition.scrollDown" = "Сдвиг\nвниз";
+"com.banuba.videoEditor.transition.scrollUp" = "Сдвиг\nвверх";
+"com.banuba.videoEditor.transition.scrollRight" = "Сдвиг\nвправо";
+"com.banuba.videoEditor.transition.scrollLeft" = "Сдвиг\nвлево";
+"com.banuba.videoEditor.transition.spinRight" = "Враще-\nние";
+"com.banuba.videoEditor.transition.fade" = "Затемне-\nние";
+
+/* Transition disabled alert message */
+"com.banuba.videoEditor.transition.disabledToastMessage" = "Видео должно быть длиннее 0.5 сек чтобы прменить переход.";
+
 /* Text editor font names */
 "com.banuba.textEditor.fontName.regular" = "Обычный";
 "com.banuba.textEditor.fontName.italic" = "Курсив";
@@ -763,8 +802,9 @@
 /* Titles for alert buttons */
 
 /* discard all alert type for record screen */
-"com.banuba.alert.discardAllRecord.agreeButtonTitle" = "Сбросить";
-"com.banuba.alert.discardAllRecord.disagreeButtonTitle" = "Отмена";
+"com.banuba.alert.discardAllRecord.additionalButtonTitle" = "Переснять";
+"com.banuba.alert.discardAllRecord.agreeButtonTitle" = "Выйти";
+"com.banuba.alert.discardAllRecord.disagreeButtonTitle" = "Закрыть";
 /* discard all alert type for editor screen */
 "com.banuba.alert.discardAllEditor.agreeButtonTitle" = "Сбросить";
 "com.banuba.alert.discardAllEditor.disagreeButtonTitle" = "Отмена";
@@ -788,6 +828,12 @@
 "com.banuba.alert.needToUpdateIos.title" = "К сожалению, минимальная поддерживаемая версия - iOS 12.";
 "com.banuba.alert.needToUpdateIos.message" = "Вы должны выполнить обновление до ios 12.0, чтобы использовать это приложение.";
 
+/* remove and start over record video */
+"com.banuba.trim.startOverRecordVideoTitle" = "Хотите записать новое видео?";
+"com.banuba.trim.startOverRecordVideoMessage" = "";
+"com.banuba.trim.startOverRecordVideoAgreeButtonTitle" = "Начать сначала";
+"com.banuba.trim.startOverRecordVideoDisagreeButtonTitle" = "Отказаться";
+
 // MARK: - Trim
 /* Edit video rotate button title */
 "com.banuba.trim.rotateEditButtonTitle" = "Поворот";
@@ -801,3 +847,11 @@
 "com.banuba.trim.trimEditButtonTitle" = "Подрезать";
 /* Reordering video tool tip label message */
 "com.banuba.trim.reorderingToolTip" = "Потяни чтобы переместить";
+/* Delete single video error message */
+"com.banuba.trim.deleteLastClipErrorMessage" = "Последнее видео не может быть удалено";
+/* Split video part error message */
+"com.banuba.trim.splitErrorMessage" = "Выбрана недопустимая позиция";
+
+// MARK: - Capture button modes
+"com.banuba.record.captureButtonVideoMode" = "ВИДЕО";
+"com.banuba.record.captureButtonPhotoMode" = "ФОТО";

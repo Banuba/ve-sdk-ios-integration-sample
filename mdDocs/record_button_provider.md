@@ -21,7 +21,9 @@ public protocol RecordButton: UIView {
 
 public protocol RecordButtonDelegate: AnyObject {
   func recordButtonDidTakePhoto(_ recordButton: RecordButton)
+  func recordButtonDidCancelTakePhoto(_ recordButton: RecordButton)
   func recordButtonDidStartVideoRecording(_ recordButton: RecordButton)
+  func recordButtonDidZoomingVideoRecording(_ recordButton: RecordButton, recognizer: UILongPressGestureRecognizer)
   func recordButtonDidStopVideoRecording(_ recordButton: RecordButton)
 }
 ``` 
