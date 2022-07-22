@@ -564,3 +564,4 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 [1.21.0](https://www.notion.so/vebanuba/1-21-0-6220edd4fd244cf28a997825a369203b)  
 [1.22.0](https://www.notion.so/vebanuba/1-22-0-f1256f7ede8a4595a0a8c82b75cc98f8)  
 [1.23.0](https://www.notion.so/vebanuba/1-23-4db3e390e3e54b93b54514ca6ea5a7b4)
+[1.24.0](https://www.notion.so/vebanuba/1-24-53aa73ae3d3b4c268e5865a4523f8965)
