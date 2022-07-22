@@ -51,7 +51,8 @@ extension ViewController {
     
     configuration.backButton = BackButtonConfiguration(imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration(imageName: "ic_nav_close"))
     configuration.removeButtonImageName = "delete_videopart"
-    configuration.captureButtonMode = .video
+    configuration.captureButtonModes = [.video]
+//    configuration.captureButtonMode = .video
     configuration.recordButtonConfiguration.normalImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.recordImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
@@ -154,7 +155,7 @@ extension ViewController {
     configuration.loopAudioWhileRecording = true
     configuration.takeAudioDurationAsMaximum = false
     configuration.isDynamicMusicTitle = false
-    configuration.recordButtonConfiguration.spacingBetweenButtonAndCircular = 6
+//    configuration.recordButtonConfiguration.spacingBetweenButtonAndCircular = 6
     
     return configuration
   }

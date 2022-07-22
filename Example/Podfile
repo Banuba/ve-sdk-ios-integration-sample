@@ -4,27 +4,27 @@ platform :ios, '11.0'
 use_frameworks! 
 
 target 'Example' do
-  pod 'BanubaARCloudSDK', '1.23.0' #optional
-  pod 'BanubaVideoEditorSDK', '1.23.0'
-  pod 'BanubaAudioBrowserSDK', '1.23.0' #optional
-  pod 'BanubaMusicEditorSDK', '1.23.0'
-  pod 'BanubaOverlayEditorSDK', '1.23.0'
-  pod 'BanubaSDKSimple', '1.23.0'
+  pod 'BanubaARCloudSDK', '1.24.0' #optional
+  pod 'BanubaVideoEditorSDK', '1.24.0'
+  pod 'BanubaAudioBrowserSDK', '1.24.0' #optional
+  pod 'BanubaMusicEditorSDK', '1.24.0'
+  pod 'BanubaOverlayEditorSDK', '1.24.0'
+  pod 'BanubaSDKSimple', '1.24.0'
   pod 'BanubaEffectPlayer', '1.23.0'
-  pod 'BanubaSDK', '1.23.0'
-  pod 'BanubaSDKServicing', '1.23.0'
-  pod 'VideoEditor', '1.23.0'
-  pod 'BanubaUtilities', '1.23.0'
-  pod 'BanubaVideoEditorGallerySDK', '1.23.0' #optional
-  pod 'BanubaVideoEditorTrimSDK', '1.23.0'
-  pod 'BanubaLicenseServicingSDK', '1.23.0'
-  pod 'BanubaTokenStorageSDK', '1.23.0' #optional
+  pod 'BanubaSDK', '1.24.0'
+  pod 'BanubaSDKServicing', '1.24.0'
+  pod 'VideoEditor', '1.24.0'
+  pod 'BanubaUtilities', '1.24.0'
+  pod 'BanubaVideoEditorGallerySDK', '1.24.0' #optional
+  pod 'BanubaVideoEditorTrimSDK', '1.24.0'
+  pod 'BanubaLicenseServicingSDK', '1.24.0'
+  pod 'BanubaTokenStorageSDK', '1.24.0' #optional
 
-  pod 'BNBLicenseUtils', '1.22.1'
+  pod 'BNBLicenseUtils', '1.24.0'
   
-  pod 'VEExportSDK', '1.23.0'
-  pod 'VEEffectsSDK', '1.23.0'
-  pod 'VEPlaybackSDK', '1.23.0'
+  pod 'VEExportSDK', '1.24.0'
+  pod 'VEEffectsSDK', '1.24.0'
+  pod 'VEPlaybackSDK', '1.24.0'
   
   
   pod 'lottie-ios'
