@@ -174,9 +174,9 @@ We understand that the client should have options to brand video editor to bring
 Face AR SDK is optional for the video editor SDK and would be disabled if it is not included in your token. If you don't use Face AR SDK make the following changes in ```Podfile``` to remove it:
 
 ```diff
--  pod 'BanubaEffectPlayer', '1.23.0'
--  pod 'BanubaSDK', '1.23.0'
-+  pod 'BanubaSDKSimple', '1.23.0'
+-  pod 'BanubaEffectPlayer', '1.24.0'
+-  pod 'BanubaSDK', '1.24.0'
++  pod 'BanubaSDKSimple', '1.24.0'
 ```
 
 ## Integration
