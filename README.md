@@ -174,9 +174,9 @@ We understand that the client should have options to brand video editor to bring
 Face AR SDK is optional for the video editor SDK and would be disabled if it is not included in your token. If you don't use Face AR SDK make the following changes in ```Podfile``` to remove it:
 
 ```diff
--  pod 'BanubaEffectPlayer', '1.23.0'
--  pod 'BanubaSDK', '1.23.0'
-+  pod 'BanubaSDKSimple', '1.23.0'
+-  pod 'BanubaEffectPlayer', '1.24.0'
+-  pod 'BanubaSDK', '1.24.0'
++  pod 'BanubaSDKSimple', '1.24.0'
 ```
 
 ## Integration
@@ -303,31 +303,49 @@ func presentVideoEditor(
 `VideoEditorLaunchConfig` contains the following fields:
 ``` swift
 /// The video editor launch configuration
-@objc class VideoEditorLaunchConfig: NSObject {
+@objc public class VideoEditorLaunchConfig: NSObject {
   /// Setups VE start screen.
-  var entryPoint: PresentEventOptions.EntryPoint
+  public var entryPoint: PresentEventOptions.EntryPoint
   /// The view controller to display over.
-  var hostController: UIViewController
+  public var hostController: UIViewController
   /// An array with urls to videos located on a phone.
-  var videoItems: [URL]?
+  public var videoItems: [URL]?
+  /// Drafted launch config
+  public var draftedLaunchConfig: DraftedLaunchConfig?
   /// A url to video located on a phone.
-  var pipVideoItem: URL?
+  public var pipVideoItem: URL?
   /// Music track which will be played on camera recording.
-  var musicTrack: MediaTrack?
+  public var musicTrack: MediaTrack?
   /// Pass true to animate the presentation.
-  var animated: Bool
+  public var animated: Bool
+  
+  /// Describes config from drafts launching
+  public struct DraftedLaunchConfig {
+    /// Drafted video sequence
+    public var draftedVideoSequence: VideoSequence
+    /// Drafts feature config
+    public var draftsConfig: DraftsFeatureConfig
+    // MARK: - Init
+    public init(
+      draftedVideoSequence: VideoSequence,
+      draftsConfig: DraftsFeatureConfig
+    ) {
+      ...
+    }
+  }
   
   // MARK: - Init
-  init(
+  public init(
     entryPoint: PresentEventOptions.EntryPoint,
     hostController: UIViewController,
     videoItems: [URL]? = nil,
     pipVideoItem: URL? = nil,
+    draftedLaunchConfig: DraftedLaunchConfig? = nil,
     musicTrack: MediaTrack? = nil,
     animated: Bool
   ) {
-  ...
- }
+    ...
+  }
 }
 
 /// EntryPoint describes what kind of entry point is used in video editor navigation flow
@@ -564,3 +582,4 @@ Please visit our [FAQ page](mdDocs/faq.md) to find more technical answers to you
 [1.21.0](https://www.notion.so/vebanuba/1-21-0-6220edd4fd244cf28a997825a369203b)  
 [1.22.0](https://www.notion.so/vebanuba/1-22-0-f1256f7ede8a4595a0a8c82b75cc98f8)  
 [1.23.0](https://www.notion.so/vebanuba/1-23-4db3e390e3e54b93b54514ca6ea5a7b4)
+[1.24.0](https://www.notion.so/vebanuba/1-24-53aa73ae3d3b4c268e5865a4523f8965)
