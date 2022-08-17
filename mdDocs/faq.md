@@ -606,3 +606,10 @@ To use your own names for the mode switching buttons, you need to specify them i
 "com.banuba.record.captureButtonVideoMode" = "VIDEO";
 "com.banuba.record.captureButtonPhotoMode" = "PHOTO";
 ```
+
+You can also change the size, color, rounding of corners, etc.
+To do this, you need to use the configs below:
+```swift
+  config.recorderConfiguration.photoCaptureButtonConfiguration
+  config.recorderConfiguration.videoCaptureButtonConfiguration
+```
