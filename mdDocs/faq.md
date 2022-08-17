@@ -599,3 +599,10 @@ Please note that in photo mode, the speed and sound recording buttons will be ab
 In video mode, press once to start video recording, press again to end video recording. If you long press the button, the video will be recorded until you release the record button.
 
 In photo mode, a photo is taken when you stop touching the record button.
+
+To use your own names for the mode switching buttons, you need to specify them in the localization file.
+```swift
+// MARK: - Capture button modes
+"com.banuba.record.captureButtonVideoMode" = "VIDEO";
+"com.banuba.record.captureButtonPhotoMode" = "PHOTO";
+```
