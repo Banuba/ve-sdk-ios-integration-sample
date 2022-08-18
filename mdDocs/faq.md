@@ -28,6 +28,7 @@ These are the answers to the most common questions asked about our SDK.
 25. [The problem of using optional frameworks and bitcode together.](#25-the-problem-of-using-optional-frameworks-and-bitcode-together)
 26. [How do I change the launguage (how do I add new locale support)?](#26-how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
 27. [How can I change the extension of the exported video?](#27-how-can-i-change-the-extension-of-the-exported-video)
+28. [How to set buttons for video modes?](#28-how-to-set-buttons-for-video-modes)
 
 ### 1. How do I start/stop recording with a tap?
   
@@ -581,3 +582,34 @@ let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
 See example in [sample](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L171).
 
 See all formats supported for video export [here](https://github.com/Banuba/ve-sdk-ios-integration-sample#supported-media-formats).
+
+### 28. How to set buttons for video modes?
+
+Necessary modes for shooting must be specified in the array ```captureButtonModes```.
+```swift
+  config.recorderConfiguration.captureButtonModes = [.photo, .video]
+```
+You can set both modes or any of them to choose from.
+If two video recording modes are set, a switch will appear under the record button.
+
+<img src="screenshots/video_modes.png" width="700"/>
+
+Please note that in photo mode, the speed and sound recording buttons will be absent.
+
+In video mode, press once to start video recording, press again to end video recording. If you long press the button, the video will be recorded until you release the record button.
+
+In photo mode, a photo is taken when you stop touching the record button.
+
+To use your own names for the mode switching buttons, you need to specify them in the localization file.
+```swift
+// MARK: - Capture button modes
+"com.banuba.record.captureButtonVideoMode" = "VIDEO";
+"com.banuba.record.captureButtonPhotoMode" = "PHOTO";
+```
+
+You can also change the size, color, rounding of corners, etc.
+To do this, you need to use the configs below:
+```swift
+  config.recorderConfiguration.photoCaptureButtonConfiguration
+  config.recorderConfiguration.videoCaptureButtonConfiguration
+```
