@@ -203,7 +203,19 @@ extension ViewController {
 //          self.playVideoAtURL(videoURL)
          
           /// if you want share exported video
-          self.shareResultVideo(urls: [videoURL])
+          
+          if let config = self.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration {
+            BanubaVideoEditor.presentSharingViewController(
+              from: self,
+              configuration: config,
+              mainVideoUrl: videoURL,
+              videoUrls: [videoURL],
+              previewImage: exportCoverImages?.coverImage ?? UIImage(),
+              animated: true
+            ) {
+              self.setupActivityIndicatorHidden(true)
+            }
+          }
         }
         self.videoEditorSDK = nil
       }
@@ -217,17 +229,6 @@ extension ViewController {
     playerController.player = player
     present(playerController, animated: true) {
       player.play()
-    }
-  }
-  
-  /// For demonstration purpose lets share exported video
-  private func shareResultVideo(urls: [URL]) {
-    let shareController = UIActivityViewController(
-      activityItems: urls,
-      applicationActivities: nil
-    )
-    present(shareController, animated: true) {
-      self.setupActivityIndicatorHidden(true)
     }
   }
 }
