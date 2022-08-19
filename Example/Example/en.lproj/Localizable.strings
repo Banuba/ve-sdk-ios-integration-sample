@@ -865,3 +865,12 @@
 // MARK: - Capture button modes
 "com.banuba.record.captureButtonVideoMode" = "VIDEO";
 "com.banuba.record.captureButtonPhotoMode" = "PHOTO";
+
+/* Sharing other button */
+"sharing.other.title" = "Other";
+
+/* Sharing video main title */
+"sharing.video.title" = "Share video";
+
+/* Error if sharing application is not installed */
+"sharing.app.not.installed" = "Sorry the application is not installed";

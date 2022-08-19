@@ -855,3 +855,12 @@
 // MARK: - Capture button modes
 "com.banuba.record.captureButtonVideoMode" = "ВИДЕО";
 "com.banuba.record.captureButtonPhotoMode" = "ФОТО";
+
+/* Sharing other button */
+"sharing.other.title" = "Другое";
+
+/* Sharing video main title */
+"sharing.video.title" = "Поделиться Видео";
+
+/* Error if sharing application is not installed */
+"sharing.app.not.installed" = "К сожалению, приложение не установлено";
