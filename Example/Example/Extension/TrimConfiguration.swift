@@ -9,8 +9,8 @@ extension ViewController {
       imageConfiguration: ImageConfiguration(imageName: "ic_close")
     )
     
-    configuration.nextButtonConfiguration = ImageButtonConfiguration(
-    imageConfiguration: ImageConfiguration(imageName: "ic_done")
+    configuration.nextButtonConfiguration = ImageTextButtonConfiguration(
+      imageConfiguration: ImageConfiguration(imageName: "ic_done")
     )
     
     configuration.editVideoItemTitleConfiguration = TextConfiguration(
