@@ -56,7 +56,24 @@ extension ViewController {
   }
   
   @IBAction func PIPAction(_ sender: Any) {
+    var config = createVideoEditorConfiguration()
+    config.trimVideosConfiguration.editVideoItems = [
+      TrimVideoCompositionEditItem(
+        title: "trim",
+        icon: ImageConfiguration(imageName: "trim.edit.trim"),
+        type: .trim
+      ),
+      TrimVideoCompositionEditItem(
+        title: "delete",
+        icon: ImageConfiguration(imageName: "trim.edit.delete"),
+        type: .delete
+      )
+    ]
+    
+    config.editorConfiguration.additionalEffectsButtons = []
+    
     initVideoEditor {
+      self.videoEditorSDK?.updateVideoEditorConfig(config)
       self.openGallery()
     }
   }
