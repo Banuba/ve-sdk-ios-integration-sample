@@ -1,23 +1,31 @@
 
 # Banuba VideoEditor SDK
 ## Hands Free screen styles 
-### @protocol: HandsfreeConfiguration
+### struct HandsfreeConfiguration.TimerOptionBarConfiguration
 
 Styles for the Hands Free screen are configured here. This screen is needed to turn the timer on and off, set the time to stop video recording.
 
 Use the properties below to customize the Hands Free screen.
 
- - [timerDisabledOptionTitle: String](/Example/Example/Extension/HandsfreeConfiguration.swift#L7)
- 
- Showing the title for the timer
- 
  - [selectorColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L8)
  
  The selector view color
  
  - [selectorTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L9)
  
- The selector view text color
+ The selector view text color.
+ 
+ - [selectorTextFont: UIFont](/Example/Example/Extension/HandsfreeConfiguration.swift#L32)
+    
+ The selector view text font.
+
+ - [selectorBorderWidth: CGFloat](/Example/Example/Extension/HandsfreeConfiguration.swift#L33)
+ 
+ The selector view border width.
+ 
+ - [selectorBorderColor: CGColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L34)
+ 
+ The selector view border color.
  
  - [optionBackgroundColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L10)
  
@@ -30,6 +38,10 @@ Use the properties below to customize the Hands Free screen.
  - [optionTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L12)
  
  The view text color
+ 
+ - [optionTextFont: UIFont](/Example/Example/Extension/HandsfreeConfiguration.swift#L35)
+ 
+ The view text font.
  
  - [backgroundColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L13)
 
@@ -79,10 +91,6 @@ Use the properties below to customize the Hands Free screen.
    
  The switch background color
    
- - [timerTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L24)
-   
- The timer title color
-   
  - [modeTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L25)
     
  The mode title color
@@ -94,6 +102,14 @@ Use the properties below to customize the Hands Free screen.
  - [buttonTitleColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L27)
       
  The button title color
+ 
+ - [buttonTitleFont: UIFont](/Example/Example/Extension/HandsfreeConfiguration.swift#L37)
+
+ The button title font.
+ 
+ - [dragTitleFont: UIFont](/Example/Example/Extension/HandsfreeConfiguration.swift#L36)
+
+ The drag title font.
    
  - [currentValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L28)
     
@@ -106,10 +122,30 @@ Use the properties below to customize the Hands Free screen.
  - [maximumValueTextColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L30)
    
  The maximum value text color
+ 
+ - [currentValueTextFont: UIFont](/Example/Example/Extension/HandsfreeConfiguration.swift#L38)
+
+ The current value text font.
+ 
+ - [minimumValueTextFont: UIFont](/Example/Example/Extension/HandsfreeConfiguration.swift#L39)
+ 
+ The minimum value text font.
+ 
+ - [maximumValueTextFont: UIFont](/Example/Example/Extension/HandsfreeConfiguration.swift#L40)
+
+ The maximum value text font.
    
  - [thumbLineViewColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L30)
    
  The thumb line view color
+ 
+ - [thumbLineViewBackgroundColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L41)
+
+ The thumb line view background color
+ 
+ - [cursorViewColor: UIColor](/Example/Example/Extension/HandsfreeConfiguration.swift#L42)
+
+ The cursor view color.
 
   ![img](screenshots/HandsfreeConfiguration.png)
   
