@@ -32,6 +32,28 @@ extension ViewController {
       text: nil,
       shadow: nil
     )
+    config.additionalButtonRadius = 4.0
+    config.additionalButtonBackgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+    config.refuseButtonBorderConfiguration = BorderButtonConfiguration(
+      borderWidth: .zero,
+      borderColor: UIColor.clear.cgColor
+    )
+    config.agreeButtonBorderConfiguration = BorderButtonConfiguration(
+      borderWidth: .zero,
+      borderColor: UIColor.clear.cgColor
+    )
+    config.additionalButtonBorderConfiguration = BorderButtonConfiguration(
+      borderWidth: .zero,
+      borderColor: UIColor.clear.cgColor
+    )
+    config.additionalButtonTextConfig = TextButtonConfiguration(
+      style: TextConfiguration(
+        font: UIFont.boldSystemFont(ofSize: 15.0),
+        color: .black
+      ),
+      text: nil
+    )
+    config.preferredStatusBarStyle = .default
 
     return config
   }
