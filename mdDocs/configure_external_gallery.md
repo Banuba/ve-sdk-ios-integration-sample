@@ -164,7 +164,8 @@ Provide your custom gallery to `BanubaVideoEditorSDK`. Please follow these steps
         var musicEditorFactory: MusicEditorExternalViewControllerFactory?
         var countdownTimerViewFactory: CountdownTimerViewFactory?
         var exposureViewFactory: AnimatableViewFactory?
-        //MARK: - ExternalViewControllerFactory variale
+        
+        //MARK: - ExternalViewControllerFactory protocols variale
         var galleryViewControllerFactory: GalleryViewControllerFactory?
     }
     ...
