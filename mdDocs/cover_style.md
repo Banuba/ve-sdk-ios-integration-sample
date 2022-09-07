@@ -48,6 +48,10 @@ The number of thumbnails
 - [galleryImageCompressionQuality: CGFloat](/Example/Example/Extension/CoverConfiguration.swift#L58)
 
 Gallery image compression quality. Default is 0.6
+
+- [preferredStatusBarStyle: UIStatusBarStyle](/Example/Example/Extension/CoverConfiguration.swift#L23)
+
+The style of the status bar.
   
 ![img](screenshots/VideoCoverSelectionConfiguration.png)
 
