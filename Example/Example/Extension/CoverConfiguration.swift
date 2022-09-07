@@ -20,6 +20,7 @@ extension ViewController {
     configuration.previewBackgroundConfiguration.color = .clear
     configuration.thumbnailsCursorConfiguration.imageConfiguration = ImageConfiguration(imageName: "thumb")
     configuration.numberOfThumbnails = 12
+    configuration.preferredStatusBarStyle = .default
     return configuration
   }
 }
