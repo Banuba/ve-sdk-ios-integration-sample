@@ -6,6 +6,8 @@ Styles for the Hands Free screen are configured here. This screen is needed to t
 
 Use the properties below to customize the Hands Free screen.
 
+@protocol: HandsfreeConfiguration
+
  - [timerDisabledOptionTitle: String](/Example/Example/Extension/HandsfreeConfiguration.swift#L7)
  
  Showing the title for the timer
