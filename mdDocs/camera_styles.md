@@ -120,15 +120,47 @@ Here we set up the styles for the recording screen. These configs are for custom
   - [isPhotoSequenceAnimationEnabled: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
 
   Should use animation for photo sequences
-    
-  - [progressBarPosition: ProgressBarPosition](/Example/Example/Extension/RecorderConfiguration.swift#L7)
-  
-  Presentation of progress bar. Default is bottom
   
   - [muteMicrophoneForPIP: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   Mute microphone on PIP screen. Default is false.
   
+  - [isAudioRateEqualsVideoSpeed: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L158)
+  
+  Applies video speed to audio player rate. Default is false.
+      
+  - [isGalleryButtonHidden: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L159)
+  
+  Hide gallery button. Defaults is false.
+  
+  - [supportMultiRecords: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L160)
+  
+  If recorded video can consist of more than one sequence. Default is true.
+  
+  - [videoCaptureButtonConfiguration: BanubaUtilities.RoundedButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L172)
+  
+  Video capture button mode setup configuration
+  
+  - [photoCaptureButtonConfiguration: BanubaUtilities.RoundedButtonConfiguration](/Example/Example/Extension/RecorderConfiguration.swift#L184)
+  
+  Photo capture button mode setup configuration
+  
+  - [backroundMusicContainerConfiguration: BanubaUtilities.BackgroundConfiguration?](/Example/Example/Extension/RecorderConfiguration.swift#L190)
+  
+  Special for top centered music button config
+      
+  - [floatingViewSeparatedLines: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L192)
+  
+  Is floating view supports two lines
+  
+  - [effectSelectorContainerCornerRadius: CGFloat](/Example/Example/Extension/RecorderConfiguration.swift#L193)
+  
+  Effect selector container corner radius. Default is 8.0
+  
+  - [preferredStatusBarStyle: UIStatusBarStyle](/Example/Example/Extension/RecorderConfiguration.swift#L194)
+  
+  The style of the status bar.
+        
   - [isAudioRateEqualsVideoSpeed: Bool](/Example/Example/Extension/RecorderConfiguration.swift#L7)
   
   Applies video speed to audio player rate. Default is false.
