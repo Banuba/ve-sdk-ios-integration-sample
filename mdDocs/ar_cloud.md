@@ -10,7 +10,7 @@ AR cloud is fully compatible with both Video Editor and Face AR products.
 Add line to pod file .  
 
 ```
-  pod 'BanubaARCloudSDK', '1.23.0'
+  pod 'BanubaARCloudSDK', '1.24.0'
 ```
 
 ### Step 2
