@@ -155,7 +155,43 @@ extension ViewController {
     configuration.loopAudioWhileRecording = true
     configuration.takeAudioDurationAsMaximum = false
     configuration.isDynamicMusicTitle = false
-//    configuration.recordButtonConfiguration.spacingBetweenButtonAndCircular = 6
+    configuration.isAudioRateEqualsVideoSpeed = true
+    configuration.isGalleryButtonHidden = false
+    configuration.supportMultiRecords = true
+    
+    let videoCaptureButton: RoundedButtonConfiguration = RoundedButtonConfiguration(
+      textConfiguration: TextConfiguration(
+        kern: .zero,
+        font: .systemFont(ofSize: 14, weight: .regular),
+        color: UIColor.white
+      ),
+      cornerRadius: .zero,
+      backgroundColor: UIColor.clear,
+      borderWidth: .zero
+    )
+    configuration.videoCaptureButtonConfiguration = videoCaptureButton
+    
+    let photoButton: RoundedButtonConfiguration = RoundedButtonConfiguration(
+      textConfiguration: TextConfiguration(
+        kern: .zero,
+        font: .systemFont(ofSize: 14, weight: .regular),
+        color: UIColor.white
+      ),
+      cornerRadius: .zero,
+      backgroundColor: UIColor.clear,
+      borderWidth: .zero
+    )
+    configuration.photoCaptureButtonConfiguration = photoButton
+    
+    let backroundMusicContainer = BackgroundConfiguration(
+      cornerRadius: 20.0,
+      color: .black.withAlphaComponent(0.3)
+    )
+    configuration.backroundMusicContainerConfiguration = backroundMusicContainer
+    
+    configuration.floatingViewSeparatedLines = true
+    configuration.effectSelectorContainerCornerRadius = 8.0
+    configuration.preferredStatusBarStyle = .default
     
     return configuration
   }
