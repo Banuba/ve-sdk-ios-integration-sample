@@ -30,6 +30,7 @@ extension ViewController {
     config.timerOptionBarConfiguration.maximumValueTextColor = UIColor.white
     
     config.timerOptionBarConfiguration.selectorTextFont = .systemFont(ofSize: 14.0)
+    config.timerOptionBarConfiguration.selectorBorderWidth =  .zero
     config.timerOptionBarConfiguration.selectorBorderColor = UIColor.clear.cgColor
     config.timerOptionBarConfiguration.optionTextFont = .systemFont(ofSize: 14.0)
     config.timerOptionBarConfiguration.dragTitleFont = .systemFont(ofSize: 17.0)
