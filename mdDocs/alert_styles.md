@@ -18,6 +18,10 @@ Refuse button radius
 
 Agree button radius
 
+- [additionalButtonRadius: CGFloat](/Example/Example/Extension/AlertViewConfiguration.swift#L35)
+    
+ Additional button radius
+
 - [refuseButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L24)
 
 Refuse button background color
@@ -26,9 +30,29 @@ Refuse button background color
 
 Agree button background color
 
+- [additionalButtonBackgroundColor: UIColor](/Example/Example/Extension/AlertViewConfiguration.swift#L36)
+    
+Additional button background color
+
+- [refuseButtonBorderConfiguration: BanubaUtilities.BorderButtonConfiguration](/Example/Example/Extension/AlertViewConfiguration.swift#L37)
+
+Refuse button border configuration
+
+- [agreeButtonBorderConfiguration: BanubaUtilities.BorderButtonConfiguration](/Example/Example/Extension/AlertViewConfiguration.swift#L41)
+
+Agree button border configuration
+
+- [additionalButtonBorderConfiguration: BanubaUtilities.BorderButtonConfiguration](/Example/Example/Extension/AlertViewConfiguration.swift#L45)
+
+Additional button border configuration
+
 - [refuseButtonTextConfig: TextButtonConfiguration](/Example/Example/Extension/AlertViewConfiguration.swift#L17)
 
 Refuse button text configuratin
+
+- [additionalButtonTextConfig: BanubaUtilities.TextButtonConfiguration](/Example/Example/Extension/AlertViewConfiguration.swift#L49)
+
+Additional button text configuratin
 
 - [agreeButtonTextConfig: TextButtonConfiguration](/Example/Example/Extension/AlertViewConfiguration.swift#L10)
 
@@ -38,9 +62,13 @@ Agree button text configuratin
 
 Main title text configuratin
 
-- [messageTextCongig: TextConfiguration?](/Example/Example/Extension/AlertViewConfiguration.swift#L27)
+- [messageTextConfig: TextConfiguration?](/Example/Example/Extension/AlertViewConfiguration.swift#L27)
 
 Message text configuration
+
+- [preferredStatusBarStyle: UIStatusBarStyle](/Example/Example/Extension/AlertViewConfiguration.swift#L56)
+
+The style of the status bar.
 
 ![img](screenshots/AlertScreen.png)
 
