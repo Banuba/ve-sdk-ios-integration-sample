@@ -28,6 +28,16 @@ extension ViewController {
     config.timerOptionBarConfiguration.currentValueTextColor = UIColor.white
     config.timerOptionBarConfiguration.minimumValueTextColor = UIColor.white
     config.timerOptionBarConfiguration.maximumValueTextColor = UIColor.white
+    
+    config.timerOptionBarConfiguration.selectorBorderColor = UIColor.clear.cgColor
+    config.timerOptionBarConfiguration.optionTextFont = .systemFont(ofSize: 14.0)
+    config.timerOptionBarConfiguration.dragTitleFont = .systemFont(ofSize: 17.0)
+    config.timerOptionBarConfiguration.buttonTitleFont = .systemFont(ofSize: 12, weight: .bold)
+    config.timerOptionBarConfiguration.currentValueTextFont = .systemFont(ofSize: 12.0)
+    config.timerOptionBarConfiguration.minimumValueTextFont = .systemFont(ofSize: 12.0)
+    config.timerOptionBarConfiguration.maximumValueTextFont = .systemFont(ofSize: 12.0)
+    config.timerOptionBarConfiguration.thumbLineViewBackgroundColor = UIColor.black
+    config.timerOptionBarConfiguration.cursorViewColor = UIColor.white
     return config
   }
 }
