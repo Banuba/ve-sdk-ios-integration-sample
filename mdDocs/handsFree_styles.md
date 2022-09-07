@@ -1,12 +1,11 @@
 
 # Banuba VideoEditor SDK
-## Hands Free screen styles  
+## Hands Free screen styles 
+### @protocol: HandsfreeConfiguration
 
 Styles for the Hands Free screen are configured here. This screen is needed to turn the timer on and off, set the time to stop video recording.
 
 Use the properties below to customize the Hands Free screen.
-
-@protocol: HandsfreeConfiguration
 
  - [timerDisabledOptionTitle: String](/Example/Example/Extension/HandsfreeConfiguration.swift#L7)
  
