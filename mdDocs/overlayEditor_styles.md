@@ -17,10 +17,6 @@ Types of editing overlay items. Can be .text or .sticker
 
 Selected overlay item. If nil passed overlay editor will be opened for creation a new one
 
-- [interactivesConfig: InteractivesConfiguration?](/Example/Example/Extension/OverlayEditorConfiguration.swift#L11)
-
-InteractivesConfiguration setups interactive views styles
-
 - var `default`: OverlayEditorConfiguration
 
 Default Configuration
@@ -84,9 +80,17 @@ Image name setups resize draggers UIImage
 
 Draggers horizontal inset
 
+- [draggersWidth: CGFloat?](/Example/Example/Extension/OverlayEditorConfiguration.swift#L96)
+
+Draggers views' width
+
 - [draggersHeight: CGFloat?](/Example/Example/Extension/OverlayEditorConfiguration.swift#L86)
 
 Draggers views' height
+
+- [draggersImageHeight: CGFloat?](/Example/Example/Extension/OverlayEditorConfiguration.swift#L95)
+
+Draggers view'h images height
 
 - [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L87)
 
@@ -108,6 +112,10 @@ Time line corner raduis
 
 Draggers views' background color
 
+- [draggerCornerRadius: CGFloat?](/Example/Example/Extension/OverlayEditorConfiguration.swift#L94)
+
+Draggers views' corner radius.
+
 - [timeLabelsOffset: CGFloat](/Example/Example/Extension/OverlayEditorConfiguration.swift#L92)
 
 Time labels offset
@@ -128,43 +136,43 @@ BackgroundConfiguration setups preview view background style
 
 ## TextEditorConfiguration
 
-- [doneButton: RoundedButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L101)
+- [doneButton: RoundedButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L104)
 
 RoundedButtonConfiguration setups done button style
 
-- [fontButton: ImageButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L102)
+- [fontButton: ImageButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L105)
 
 RoundedButtonConfiguration setups choosing font button style
 
-- [colorButton: ImageButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L102)
+- [colorButton: ImageButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L105)
 
 ImageButtonConfiguration setups filling background color button
 
-- [textBackgroundButton: ImageButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L104)
+- [textBackgroundButton: ImageButtonConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L113)
 
 ImageButtonConfiguration setups filling background color button
 
-- [alignmentImages: [VideoTextAligment: ImageButtonConfiguration]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L111)
+- [alignmentImages: [VideoTextAligment: ImageButtonConfiguration]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L118)
 
 Images for aligment states button
 
-- [palette: [VideoTextColorPair]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L117)
+- [palette: [VideoTextColorPair]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L124)
 
 Pallete of filling colors
 
-- [fonts: [VideoTextFont]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L128)
+- [fonts: [VideoTextFont]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L135)
 
 Array of text fonts
 
-- [additionalPaletteBackgroundConfiguration: [BackgroundConfiguration]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L128)
+- [additionalPaletteBackgroundConfiguration: [BackgroundConfiguration]](/Example/Example/Extension/OverlayEditorConfiguration.swift#L150)
 
 Setup background color for additional palette with fonts or colors
 
-- [screenNameConfiguration: ScreenNameConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L144)
+- [screenNameConfiguration: ScreenNameConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L151)
 
 ScreenNameConfiguration setups screen title style
 
-- [palleteInsets: UIEdgeInsets](/Example/Example/Extension/OverlayEditorConfiguration.swift#L145)
+- [palleteInsets: UIEdgeInsets](/Example/Example/Extension/OverlayEditorConfiguration.swift#L152)
 
 Color pallete inset
 
@@ -172,13 +180,17 @@ Color pallete inset
 
 Font inset
 
-- [selectionColorBehavior: TextEditSelectionColorBehavior](/Example/Example/Extension/OverlayEditorConfiguration.swift#L147)
+- [selectionColorBehavior: TextEditSelectionColorBehavior](/Example/Example/Extension/OverlayEditorConfiguration.swift#L154)
 
  TextEditSelectionColorBehavior setups text editr selection color behavior
  
- - [colorItemConfiguration: TextEditColorItemConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L152)
+ - [colorItemConfiguration: TextEditColorItemConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L159)
 
 TextEditColorItemConfiguration setups pallete's color items' configuration 
+
+- [fontItemConfiguration: TextEditFontItemConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L164)
+
+TextEditFontItemConfiguration setups pallete font items' configuration
 
 - cursorColor: UIColor
 
@@ -188,23 +200,23 @@ Cursor color
 
 ## GifPickerConfiguration
 
-- [regularFont: UIFont](/Example/Example/Extension/OverlayEditorConfiguration.swift#L162)
+- [regularFont: UIFont](/Example/Example/Extension/OverlayEditorConfiguration.swift#L177)
 
 Regular font for controls
 
-- [boldFont: UIFont](/Example/Example/Extension/OverlayEditorConfiguration.swift#L163)
+- [boldFont: UIFont](/Example/Example/Extension/OverlayEditorConfiguration.swift#L178)
 
 Bold font for controls
 
-- [activityConfiguration: SmallActivityIndicatorConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L164)
+- [activityConfiguration: SmallActivityIndicatorConfiguration](/Example/Example/Extension/OverlayEditorConfiguration.swift#L179)
 
 SmallActivityIndicatorConfiguration setups activity indicator style
 
-- [cursorColor: UIColor](/Example/Example/Extension/OverlayEditorConfiguration.swift#L165)
+- [cursorColor: UIColor](/Example/Example/Extension/OverlayEditorConfiguration.swift#L180)
 
 Cursor color
 
-- [giphyAPIKey: String?](/Example/Example/Extension/OverlayEditorConfiguration.swift#L166)
+- [giphyAPIKey: String?](/Example/Example/Extension/OverlayEditorConfiguration.swift#L181)
 
 API key to interact with giphy service
 
