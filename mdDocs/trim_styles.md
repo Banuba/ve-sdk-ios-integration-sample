@@ -121,7 +121,7 @@ TrimTimeLineConfiguration setups single time line bar style and options
 
 Hide gallery button. Default is false.
 
-- [preferredStatusBarStyle: UIStatusBarStyle]()
+- [preferredStatusBarStyle: UIStatusBarStyle](/Example/Example/Extension/TrimConfiguration.swift#L1)
 
 The style of the status bar.
 
