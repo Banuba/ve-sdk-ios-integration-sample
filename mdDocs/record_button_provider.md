@@ -13,13 +13,13 @@ Then make a new class implements ``RecordButton`` protocol
 public protocol RecordButton: UIView {
   var delegate: RecordButtonDelegate? { get set }
   var configuration: RecordButtonConfiguration? { get set }
-  func updateVideoRecordingProgress(_ progress: Double)
   func changeViewToIdleState()
   func changeViewToRecordingState()
   func reset()
 }
 
 public protocol RecordButtonDelegate: AnyObject {
+   var captureButtonMode: CaptureButtonViewMode { get }
   func recordButtonDidTakePhoto(_ recordButton: RecordButton)
   func recordButtonDidCancelTakePhoto(_ recordButton: RecordButton)
   func recordButtonDidStartVideoRecording(_ recordButton: RecordButton)
