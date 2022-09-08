@@ -310,6 +310,54 @@ VoiceFilterProvider setups voice filters provider
 
 Voice Filter will be hidden if voiceFilterProvider is nil
 
+
+
+## AudioWaveConfiguration
+ 
+  - [isRandomWaveColor: Bool](/Example/Example/Extension/MusicEditorConfig.swift#L159)
+
+  Is random wave color enabled
+  
+  - [backgroundColor: UIColor?](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+  
+  Background color view
+  
+  - [waveBorderColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+
+  Time line border color
+  
+  - [waveCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+
+  Time lime corner radius
+  
+  - [waveLinesColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L160)
+
+  Audio wave lines color
+ 
+  - [borderWidth: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+
+  Time line border width
+  
+  - [height: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+
+  Time line height
+  
+  - [maxWaveHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+  
+  Max audio wave height
+  
+  - [audioTitleFont: UIFont?](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+
+  Audio title font
+  
+  - [audioTitleColor: UIColor?](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+
+  Audio title color
+  
+  - [bottomOffset: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+
+  Time line bottom offset
+
 ![img](screenshots/AudioEditScreen.png)
 
 ## String resources
