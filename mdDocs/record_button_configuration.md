@@ -18,15 +18,21 @@ public struct RecordButtonConfiguration {
   public var normalImageName: String
   /// Image name setups core image for record state
   public var recordImageName: String
+  /// Image name setups core image for photo state
+  public var photoImageName: String
   /// Record button width
   public var width: CGFloat
   /// Record button height
   public var height: CGFloat
-  /// Button outer layer resize scale for capture state
-  public var outerLayerScale: CGFloat
-  /// Button inner layer resize scale for capture state
-  public var innerLayerScale: CGFloat
-  /// Spacing between button and circular timeline
-  public var spacingBetweenButtonAndCircular: CGFloat
+  /// Setup default color
+  public var defaultColorButton: UIColor
+  /// Setup color for video record state
+  public var videoRecordColorButton: UIColor
+  /// Setup color for take a photo state
+  public var takePhotoColorButton: UIColor
+  /// Setup full color for external circle
+  public var externalCircleFullColor: CGColor
+  /// Setup stroke color for external circle
+  public var externalCircleStrokeColor: CGColor
 }
 ```  
