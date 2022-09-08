@@ -79,7 +79,7 @@ Transitions icons property is following dictionary `[TransitionType: TransitionA
 
  There are 10 transition effects available to use within AI Video Editor SDK. Additional "normal" effect is provided to leave the segue between videos without any transition effect.
 
- Every transition effect has its own **string identifier** with `TransitionType` entiry: 
+ Every transition effect has its own **string identifier** with `TransitionType` entity: 
 
 ``` swift
 public enum TransitionType: String, Codable, CaseIterable {
