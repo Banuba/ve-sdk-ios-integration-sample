@@ -13,14 +13,19 @@ public struct VideoEditorDurationConfig {
   /// Default is 3.0.
   public var minimumDurationFromCamera: TimeInterval
   /// The video minimum duration from a gallery
-  /// Default is 3.0.
+  /// Default is 0.3.
   public var minimumDurationFromGallery: TimeInterval
   /// The video minimum duration
-  /// Default is 3.0.
+  /// Default is 1.0.
   public var minimumVideoDuration: TimeInterval
   /// The video part minimum duration at trimmer
-  /// Default is 2.0.
+  /// Default is 0.3.
   public var minimumTrimmedPartDuration: TimeInterval
+  /// The video duration created from photo at camera and gallery
+  /// Default is 3.0
+  public var slideshowDuration: TimeInterval
+  
+  private var tolerance: TimeInterval = 0.035
 }
 ```
 
