@@ -91,6 +91,9 @@ extension ViewController {
     configuration.draggerBackgroundColor = UIColor.white
     configuration.timeLabelsOffset = .zero
     configuration.itemsTopOffset = .zero
+    configuration.draggerCornerRadius = nil
+    configuration.draggersImageHeight = 25.0
+    configuration.draggersWidth = nil
     
     return configuration
   }
@@ -156,6 +159,14 @@ extension ViewController {
     configuration.colorItemConfiguration = TextEditColorItemConfiguration(
       borderColor: UIColor.white,
       borderWidth: 3.0
+    )
+    
+    configuration.fontItemConfiguration = TextEditFontItemConfiguration(
+      titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+      fontSize: 16.0,
+      cornerRadius: 4.0,
+      backgroundColor: .clear,
+      isBackgroundViewHidden: false
     )
     
     return configuration
