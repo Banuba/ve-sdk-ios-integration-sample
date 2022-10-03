@@ -8,7 +8,6 @@ extension ViewController {
     var configuration = configuration
     
     configuration.mainOverlayViewControllerConfig = updateMainOverlayViewControllerConfig(configuration.mainOverlayViewControllerConfig)
-    configuration.interactivesConfig = nil
     
     return configuration
   }

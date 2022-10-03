@@ -21,14 +21,17 @@
 /* Move to next screen */
 "Next" = "Дальше";
 
-/* Publish video */
-"Publish" = "Опубликовать";
-
 /* Return to the previous screen */
 "Back" = "Назад";
 
 /* Ability to cancel */
 "Cancel" = "Отмена";
+
+/* Ability to close */
+"Close" = "Закрыть";
+
+/* Ability to close */
+"CLOSE" = "ЗАКРЫТЬ";
 
 "alert.reset.all.title" = "Сбросить все?";
 "alert.reset.all.message" = "";
@@ -99,9 +102,6 @@
 /* 'Seconds' for short */
 "%d sec" = "%d сек";
 
-/* Screen title when multi-select mode is enabled on the video gallery screen */
-"Choose video" = "Выберете видео";
-
 /* Name of the button in multi-select mode, which confirms the selection of user files and continues the process further */
 "Choose" = "Выбрать";
 
@@ -116,18 +116,12 @@
 
 /* Step one of two to edit your avatar: take a photo */
 "Make cover photo" = "Пожалуйста, сделай фото на обложку";
-
-/* The first step of two when taking a profile photo using the camera */
-"Step 1 / 2" = "Шаг 1 / 2";
     
 /* Step two of two when taking a profile photo using the camera */
 "Step 2 / 2" = "Шаг 2 / 2";
     
 /* Description of the zone selection screen for the user avatar when taking pictures on the profile screen */
 "Crop your profile photo for feed and comments" = "Круглая аватарка нужна для потока и комментариев";
-
-/* Suggestion to choose a cover for a video before publishing it online */
-"Choose cover" = "Пожалуйста, выбери обложку для видео";
     
 /* Hint on how to apply visual filters or time filter to video */
 "Press and hold" = "Нажми и держи";
@@ -137,18 +131,9 @@
  
 /* Screen title with video from phone gallery */
 "Gallery" = "Галерея";
-    
-/* Shows instead of a blank screen on the Gallery screen */
-"No files found" = "В галерее нет подходящих видео";
-
-/* Shows instead of a blank screen on the Gallery screen */
-"Videos should be longer than 5 seconds" = "Вполне возможно, что они короче 5 секунд";
 
 /* Activity signature */
 "LOADING" = "ЗАГРУЗКА";
-
-/* Text under the trobber when downloading a video */
-"VIDEO IS\nLOADING" = "ВИДЕО\nСКАЧИВАЕТСЯ";
 
 /* Message about downloading videos from iCloud in the window for selecting videos saved on the mobile device */
 "Video is uploading from iCloud" = "Видео загружаются из iCloud";
@@ -167,9 +152,6 @@
 
 /* Screen name which will be visible if enable in configuration */
 "Multi Trim Video Screen Name" = "Обрезать несколько видео";
-
-/* Screen name which will be visible if enable in configuration */
-"Multi Trim Video Item Screen Name" = "Обрезать видео";
 
 /* Recorder mask effect screen name */
 "Mask Effect Screen Name" = "Маска";
@@ -235,9 +217,6 @@
 /* Used in alert with options Cancel and In settings */
 "alert.microphone.unavailable.title" = "Пожалуйста, разреши доступ к микрофону в настройках";
 "alert.microphone.unavailable.message" = "";
-
-/* Message when opening the trimmer screen */
-"Choose %i seconds" = "Выберете %d секунд";
 
 // MARK: - Settings
 
@@ -434,9 +413,6 @@
 
 // MARK: - GALLERY SCREEN / SLIDE SHOW
 
-/* No photo in the combined gallery */
-"No matching files found in gallery" = "В галерее не нашлось подходящих файлов";
-
 /* No photo in gallery */
 "No matching photos found in gallery" = "В галерее не нашлось подходящих фото";
 
@@ -446,9 +422,6 @@
 /* User selected too many files in the gallery */
 "You can select only %d files" = "Вы можете выбрать только %d файлов";
 
-/* Failed to download photos for slideshow */
-"Error loading images" = "Ошибка загрузки изображений";
-
 /* Failed to export a video */
 "Failed to create video" = "Не удалось создать видео";
 
@@ -456,9 +429,6 @@
 
 /* Delete track button title */
 "MusicEditor.Delete" = "Удалить";
-
-/* Edit track volume button title */
-"MusicEditor.Volume" = "Громкость";
 
 /* Voice effect button title */
 "MusicEditor.VoiceEffect" = "Эффект";
@@ -480,15 +450,6 @@
 
 /* Audio duration title */
 "MusicEditor.Duration" = "Длительность";
-
-/* Cancel button title */
-"MusicEditor.Cancel" = "Отменить";
-
-/* Confirmation button title */
-"MusicEditor.Yes" = "Да";
-
-/* Discarding button title */
-"MusicEditor.No" = "Нет";
 
 /* Confirmation message for discarding changes */
 "com.banuba.musicEditor.mainScreen.resetAll.title" = "Сбросить изменения?";
@@ -548,38 +509,6 @@
 "com.banuba.overlayEditor.mainScreen.resetAll.agree" = "Сбросить";
 "com.banuba.overlayEditor.mainScreen.resetAll.disagree" = "Отмена";
 
-// MARK: - Interactives
-
-/* Placeholder for interactive interests */
-"OverlayEditor.Intereset" = "Интерес";
-
-/* Interactive test header */
-"OverlayEditor.Create test" = "Создайте тест…";
-
-/* Interactive question header */
-"OverlayEditor.Create question" = "Задайте вопрос…";
-
-/* Title for initial interactive test fields */
-"OverlayEditor.Variant %i" = "Вариант %i";
-
-/* Title for additional interactive test fields */
-"OverlayEditor.Another option" = "Еще вариант";
-
-/* Interactive poll title */
-"OverlayEditor.Create a poll" = "Создайте опрос";
-
-/* Toast when an interactive title is missing */
-"OverlayEditor.Add a question" = "Добавьте вопрос";
-
-/* Add at least %i answer option */
-"OverlayEditor.Add at least %i answer option" = "Добавьте хотя бы %i варианта ответа";
-
-/* Message when the correct answer appears in the interactive test */
-"OverlayEditor.Click here to correct the answer" = "Нажмите здесь, чтобы сделать ответ правильным";
-
-/* Message when no interest is entered in the interest interactive */
-"OverlayEditor.Enter interest" = "Введите интерес";
-
 // MARK: - AudioBrowser
 
 /* No internet connection title in alert */
@@ -618,7 +547,6 @@
 "feature.disabled.audiobrowser" = "Музыкальный браузер по умолчанию не входит в ваш пакет. Вы можете добавить свою музыку.";
 
 // MARK: - Hands-free
-"hands.free.video.mode.title" = "Hands-free видео режим";
 "hands.free.video.drag.title" = "Установите продолжительность видео:";
 "hands.free.btn.title" = "Начать отсчёт";
 "hands.free.seconds" = "%@ с";
@@ -649,6 +577,9 @@
 
 /* Damaged file from gallery */
 "BanubaVideoEditor.Gallery.DamagedFile" = "Поврежденный файл";
+
+/* Export video from gallery failed */
+"BanubaVideoEditor.Gallery.ExportVideoFailed" = "Загрузка была прервана";
 
 /* Gallery selection hint */
 "BanubaVideoEditor.Gallery.SelectItems" = "Выберите элементы";
@@ -755,7 +686,6 @@
 "com.banuba.recorder.beauty.title" = "Ретушь";
 "com.banuba.recorder.masks.title" = "Маски";
 "com.banuba.recorder.muteSound.title" = "Звук";
-"com.banuba.recorder.interactive.title" = "Интерактивы";
 "com.banuba.recorder.pip.title" = "Пип";
 
 /* Gallery button title */
@@ -823,6 +753,13 @@
 /* discard music alert type */
 "com.banuba.alert.discardMusic.agreeButtonTitle" = "Сбросить";
 "com.banuba.alert.discardMusic.disagreeButtonTitle" = "Отмена";
+/* progress view alert type */
+"com.banuba.alert.progressView.agreeButtonTitle" = "Повторить";
+"com.banuba.alert.progressView.disagreeButtonTitle" = "Отмена";
+"com.banuba.alert.progressView.importingMedia" = "Загрузка медиа";
+"com.banuba.alert.progressView.exportingVideo" = "Экспорт видео";
+"com.banuba.alert.progressView.tooltipMessage" = "Пожалуйста, не блокируйте экран и не переходите в другие приложения";
+"com.banuba.alert.progressView.exportVideoInterrupted" = "Экспорт был прерван";
 
 /* need to update iOS alert */
 "com.banuba.alert.needToUpdateIos.title" = "К сожалению, минимальная поддерживаемая версия - iOS 12.";

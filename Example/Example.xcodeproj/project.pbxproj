@@ -33,7 +33,6 @@
 		8A8C2515258CC35400FDED05 /* MusicEditorViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C250F258CC35400FDED05 /* MusicEditorViewControllerFactory.swift */; };
 		8A8C2516258CC35400FDED05 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2510258CC35400FDED05 /* ViewControllerFactory.swift */; };
 		8A8C2517258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2511258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift */; };
-		8A8C2518258CC35400FDED05 /* AudioBrowserConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2512258CC35400FDED05 /* AudioBrowserConfigurator.swift */; };
 		8A8C2519258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2513258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift */; };
 		8AA67D0C258CDADE00D8FF7F /* LottieAnimation in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67D0B258CDADE00D8FF7F /* LottieAnimation */; };
 		8AA67D0E258CDB1300D8FF7F /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67D0D258CDB1300D8FF7F /* Music */; };
@@ -73,7 +72,6 @@
 		8A8C250F258CC35400FDED05 /* MusicEditorViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicEditorViewControllerFactory.swift; sourceTree = "<group>"; };
 		8A8C2510258CC35400FDED05 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		8A8C2511258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimationView+CountdownTimerAnimatableView.swift"; sourceTree = "<group>"; };
-		8A8C2512258CC35400FDED05 /* AudioBrowserConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBrowserConfigurator.swift; sourceTree = "<group>"; };
 		8A8C2513258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimerViewControllerFactory.swift; sourceTree = "<group>"; };
 		8AA67CA8258CD5CA00D8FF7F /* BanubaAudioBrowserSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaAudioBrowserSDK.xcframework; path = ../BanubaAudioBrowserSDK.xcframework; sourceTree = "<group>"; };
 		8AA67D0B258CDADE00D8FF7F /* LottieAnimation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LottieAnimation; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				8A8C2511258CC35400FDED05 /* AnimationView+CountdownTimerAnimatableView.swift */,
-				8A8C2512258CC35400FDED05 /* AudioBrowserConfigurator.swift */,
 				8A8C2513258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift */,
 				8A8C250F258CC35400FDED05 /* MusicEditorViewControllerFactory.swift */,
 				8A8C2510258CC35400FDED05 /* ViewControllerFactory.swift */,
@@ -326,9 +323,7 @@
 				51D07DEF2607C8BE00BB48D9 /* OverlayEditorConfiguration.swift in Sources */,
 				51D07DF42607D51E00BB48D9 /* RecorderConfiguration.swift in Sources */,
 				639DA010254700290011C153 /* ViewController.swift in Sources */,
-				8A8C2518258CC35400FDED05 /* AudioBrowserConfigurator.swift in Sources */,
 				51D07DE12607B27900BB48D9 /* CombinedGalleryConfiguration.swift in Sources */,
-				8A8C2518258CC35400FDED05 /* AudioBrowserConfigurator.swift in Sources */,
 				510612852606839C00176389 /* AlertViewConfiguration.swift in Sources */,
 				8A8C2519258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift in Sources */,
 				5191FED7266755C300B842EA /* TrimConfiguration.swift in Sources */,

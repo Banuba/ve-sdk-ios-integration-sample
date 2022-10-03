@@ -1,6 +1,0 @@
-framework module BanubaEffectPlayer {
-  umbrella header "BanubaEffectPlayer.h"
-
-  export *
-  module * { export * }
-}
