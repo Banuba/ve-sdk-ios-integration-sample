@@ -102,7 +102,8 @@ extension ViewController {
   private func createVideoEditorConfiguration() -> VideoEditorConfig {
     var config = VideoEditorConfig()
     
-    AudioBrowserConfigurator.configure()
+    config.audioBrowserConfiguration.mubertAudioConfig.pat = "Put Mubert PAT"
+    config.audioBrowserConfiguration.musicSource = .allSources
     
     var featureConfiguration = config.featureConfiguration
     featureConfiguration.supportsTrimRecordedVideo = true
@@ -194,7 +195,10 @@ extension ViewController {
       gifSettings: GifSettings(duration: 0.3)
     )
     
-    videoEditorSDK?.export(using: exportConfig, completion: { success, error, exportCoverImages in
+    videoEditorSDK?.export(
+      using: exportConfig,
+      exportProgress: nil,
+      completion: { success, error, exportCoverImages in
       DispatchQueue.main.async {
         // Clear video editor session data
         self.videoEditorSDK?.clearSessionData()
