@@ -102,7 +102,7 @@ extension ViewController {
   private func createVideoEditorConfiguration() -> VideoEditorConfig {
     var config = VideoEditorConfig()
     
-    config.audioBrowserConfiguration.mubertAudioConfig.pat = "Put Mubert PAT"
+    config.audioBrowserConfiguration.mubertAudioConfig.pat = "SET MUBERT API KEY"
     config.audioBrowserConfiguration.musicSource = .allSources
     
     var featureConfiguration = config.featureConfiguration
