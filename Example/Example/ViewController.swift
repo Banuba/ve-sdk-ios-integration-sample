@@ -204,7 +204,7 @@ extension ViewController {
       gifSettings: GifSettings(duration: 0.3)
     )
     
-    videoEditorSDK?.export(using: exportConfig, completion: { success, error, exportCoverImages in
+      videoEditorSDK?.export(using: exportConfig, exportProgress: nil, completion: { success, error, exportCoverImages in
       DispatchQueue.main.async {
         // Clear video editor session data
         self.videoEditorSDK?.clearSessionData()

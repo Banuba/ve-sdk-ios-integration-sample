@@ -6,3 +6,4 @@ Example/fastlane
 Gemfile
 Example/Gemfile.lock
 *.mobileprovision
+xcuserdata

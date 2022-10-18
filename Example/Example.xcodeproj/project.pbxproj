@@ -598,8 +598,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/spm";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.25.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
