@@ -8,6 +8,7 @@ import AVKit
 import Photos
 import BSImagePicker
 import VEExportSDK
+import BanubaAudioBrowserSDK
 
 class ViewController: UIViewController {
   
@@ -80,7 +81,8 @@ extension ViewController {
     
     let viewControllerFactory = ViewControllerFactory()
     let musicEditorViewControllerFactory = MusicEditorViewControllerFactory()
-    viewControllerFactory.musicEditorFactory = musicEditorViewControllerFactory
+    // Uncomment to use custom audio browser
+//    viewControllerFactory.musicEditorFactory = musicEditorViewControllerFactory
     viewControllerFactory.countdownTimerViewFactory = CountdownTimerViewControllerFactory()
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
@@ -102,8 +104,8 @@ extension ViewController {
   private func createVideoEditorConfiguration() -> VideoEditorConfig {
     var config = VideoEditorConfig()
     
-    config.audioBrowserConfiguration.mubertAudioConfig.pat = "SET MUBERT API KEY"
-    config.audioBrowserConfiguration.musicSource = .allSources
+    BanubaAudioBrowser.setMubertPat("SET MUBERT API KEY")
+    AudioBrowserConfig.shared.musicSource = .allSources
     
     var featureConfiguration = config.featureConfiguration
     featureConfiguration.supportsTrimRecordedVideo = true
