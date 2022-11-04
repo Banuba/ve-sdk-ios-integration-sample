@@ -121,14 +121,9 @@ extension ViewController {
     ]
     
     configuration.palette = [
-      VideoTextColorPair(colors:
-                          (
-                            UIColor.white,
-                            UIColor.black,
-                            UIColor.yellow,
-                            UIColor.systemYellow
-                          )
-      )
+      VideoTextColorPair(colors:( .clear, .white, .white, .darkGray)),
+      VideoTextColorPair(colors:( .clear, .yellow, .yellow, .white)),
+      VideoTextColorPair(colors:( .clear, .gray, .gray, .white))
     ]
     
     configuration.fonts = [
