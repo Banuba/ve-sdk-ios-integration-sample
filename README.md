@@ -18,6 +18,7 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
 - [Starting a free trial](#Starting-a-free-trial)
 - [Supported media formats](#Supported-media-formats)
 - [Token](#Token)
+- [Passing Apple Store review](#Passing-Apple-Store-review)
 - [Connecting with AR cloud](#Connecting-with-AR-cloud)
 - [What can you customize?](#What-can-you-customize)
 - [Face AR](#Face-AR)
@@ -26,16 +27,16 @@ Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you
        + [SwiftPackageManager](#Swift-Package-Manager)
        + [CocoaPods](#CocoaPods)
     + [Step 2. Start Video Editor from ViewController](#Step-2-Start-Video-Editor-from-ViewController)  
- - [Customization](#Customization)
-    + [Configure export flow](#Configure-export-flow)
-    + [Configure audio content](#Configure-audio-content)
-    + [Configure screens](#Configure-screens)
-    + [Configure masks, video effects and filters order](#Configure-masks-video-effects-and-filters-order)
-    + [Configure watermark](#Configure-watermark)
-    + [Configure stickers content](#Configure-stickers-content)
-    + [Configure additional Video Editor SDK features](#Configure-additional-Video-Editor-SDK-features)
-    + [Icons](#Icons)
-    + [Localization](#Localization)
+- [Customization](#Customization)
+   + [Configure export flow](#Configure-export-flow)
+   + [Configure audio content](#Configure-audio-content)
+   + [Configure screens](#Configure-screens)
+   + [Configure masks, video effects and filters order](#Configure-masks-video-effects-and-filters-order)
+   + [Configure watermark](#Configure-watermark)
+   + [Configure stickers content](#Configure-stickers-content)
+   + [Configure additional Video Editor SDK features](#Configure-additional-Video-Editor-SDK-features)
+   + [Icons](#Icons)
+   + [Localization](#Localization)
 - [Analytics](#Analytics)
 - [FAQ](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/faq.md)
 - [Third party libraries](#Third-party-libraries)
@@ -145,7 +146,11 @@ We offer а free 14-days trial for you could thoroughly test and assess Video Ed
 There are three options where to put your token:
 - Inside the app: [read here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/97ebccf9e52b31db92586709cc6afa55decb9d75/Example/Example/ViewController.swift#L83).
 - In the Firebase (what will allow your users not to update the app every time the token is updated): [Firebase setup guide](https://firebase.google.com/docs/database/android/start), [SDK configuration for Firebase](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/token_on_firebase.md).
-- In the remote server: [SDK configuration for this case](https://github.com/Banuba/ve-sdk-ios-integration-sample/new/Update_token_configure/mdDocs). 
+- In the remote server: [SDK configuration for this case](https://github.com/Banuba/ve-sdk-ios-integration-sample/new/Update_token_configure/mdDocs).  
+
+## Passing Apple Store review
+Unfortunately Apple Store may reject your app due to use of TrueDepth API. 
+Please [follow guidelines](mdDocs/passing_apple_review.md) to successfully pass Apple Store review.
 
 ## Connecting with AR cloud
 
