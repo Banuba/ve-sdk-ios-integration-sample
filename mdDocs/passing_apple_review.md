@@ -33,9 +33,9 @@ We use TrueDepth API technologies (ARKit, with automatic estimation of the real-
 **Question 3**  
 Will the data be shared with any third parties? Where will this information be stored?  
 
-**Answer 3**
+**Answer 3**  
 We do not share information with third parties, do not store or process in any other way the data which we accessed and used via TrueDepth API. For more information about TrueDepth API technologies you may [visit](https://support.apple.com/en-us/HT208108).  
 
 
 ### Did not help?  
-Please [file new ticket](https://share.hsforms.com/1qI_6D87_QXuaZzKvFdTRdw2z03d) to the support team. We will help you as soon as possible.
+Please [file new ticket](https://share.hsforms.com/1qI_6D87_QXuaZzKvFdTRdw2z03d) to support team. We will help you as soon as possible.

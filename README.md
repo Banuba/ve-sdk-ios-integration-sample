@@ -149,7 +149,7 @@ There are three options where to put your token:
 - In the remote server: [SDK configuration for this case](https://github.com/Banuba/ve-sdk-ios-integration-sample/new/Update_token_configure/mdDocs).  
 
 ## Passing Apple Store review
-Unfortunately Apple Store may reject your app due to use of TrueDepth API. 
+Unfortunately Apple Store may reject your app due to use of TrueDepth API.  
 Please [follow guidelines](mdDocs/passing_apple_review.md) to successfully pass Apple Store review.
 
 ## Connecting with AR cloud
