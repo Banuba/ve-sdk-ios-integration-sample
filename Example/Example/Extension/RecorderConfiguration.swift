@@ -45,8 +45,8 @@ extension ViewController {
       width: 68.0,
       height: 41.0,
       cornerRadius: 4.0,
-      backgroundColor: UIColor(red: 6, green: 188, blue: 193, alpha: 1),
-      inactiveBackgroundColor: UIColor(red: 6, green: 188, blue: 193, alpha: 1).withAlphaComponent(0.5)
+      backgroundColor: .irisBlue,
+      inactiveBackgroundColor: .irisBlue.withAlphaComponent(0.5)
     )
     
     configuration.backButton = BackButtonConfiguration(imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration(imageName: "ic_nav_close"))
@@ -56,7 +56,7 @@ extension ViewController {
     configuration.recordButtonConfiguration.normalImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.recordImageName = "ic_record_normal"
     configuration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
-    configuration.recordButtonConfiguration.strokeColor = UIColor(red: 6, green: 188, blue: 193, alpha: 1).cgColor
+    configuration.recordButtonConfiguration.strokeColor = UIColor.irisBlue.cgColor
     
     
     
@@ -118,7 +118,7 @@ extension ViewController {
     configuration.speedBarButtons.imageNameNormal = "ic_speed_1x"
     configuration.speedBarButtons.imageNameDouble = "ic_speed_2x"
     configuration.speedBarButtons.imageNameTriple = "ic_speed_3x"
-    configuration.speedBarButtons.selectedTitleColor = UIColor(red: 6, green: 188, blue: 193, alpha: 1)
+    configuration.speedBarButtons.selectedTitleColor = .irisBlue
     
     let galleryButton: RoundedButtonConfiguration = RoundedButtonConfiguration(
       textConfiguration: TextConfiguration(
@@ -144,8 +144,8 @@ extension ViewController {
       )
     ]
     
-    configuration.timeLineConfiguration.progressBarColor = UIColor(red: 6, green: 188, blue: 193, alpha: 1)
-    configuration.timeLineConfiguration.progressBarSelectColor = UIColor.white
+    configuration.timeLineConfiguration.progressBarColor = .irisBlue
+    configuration.timeLineConfiguration.progressBarSelectColor = .white
     
     configuration.regularRecordButtonPosition = 10.0
     configuration.recorderEffectsConfiguration.cornerRadius = 0.0

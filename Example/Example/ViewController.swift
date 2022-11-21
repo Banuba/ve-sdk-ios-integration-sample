@@ -135,7 +135,7 @@ extension ViewController {
   private func updateFilterConfiguration(_ configuration: FilterConfiguration) -> FilterConfiguration {
     var configuration = configuration
     
-    configuration.resetButton.backgroundColor = UIColor(red: 6, green: 188, blue: 193, alpha: 1)
+    configuration.resetButton.backgroundColor = .irisBlue
     configuration.resetButton.cornerRadius = 4.0
     configuration.resetButton.textConfiguration?.color = .white
     configuration.toolTipLabel.color = .white
@@ -159,7 +159,7 @@ extension ViewController {
         gradientType: .color(
           SmallActivityIndicatorConfiguration.GradientColorConfiguration(
             angle: 0.0,
-            colors: [UIColor(red: 6, green: 188, blue: 193, alpha: 1).cgColor, UIColor.white.cgColor]
+            colors: [UIColor.irisBlue.cgColor, UIColor.white.cgColor]
           )
         ),
         activityLineWidth: 3.0

@@ -18,6 +18,7 @@
 		51D07DF42607D51E00BB48D9 /* RecorderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */; };
 		51D07DF82607DFFC00BB48D9 /* HandsfreeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */; };
 		51E97A5A26CFC5E500E0E4C4 /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E97A5926CFC5E500E0E4C4 /* VideoPicker.swift */; };
+		634A06E5292B85DD003D4A18 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A06E4292B85DD003D4A18 /* Styles.swift */; };
 		634FAC04255C351900FB0DBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634FAC06255C351900FB0DBC /* Localizable.strings */; };
 		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
 		635E864525A5DA230035AB99 /* EffectSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635E864125A5DA230035AB99 /* EffectSelection.storyboard */; };
@@ -53,6 +54,7 @@
 		51D07DF32607D51E00BB48D9 /* RecorderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderConfiguration.swift; sourceTree = "<group>"; };
 		51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsfreeConfiguration.swift; sourceTree = "<group>"; };
 		51E97A5926CFC5E500E0E4C4 /* VideoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPicker.swift; sourceTree = "<group>"; };
+		634A06E4292B85DD003D4A18 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		634FAC05255C351900FB0DBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		634FAC07255C357400FB0DBC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		635DB1AA2548541000B1C799 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				51D07DF72607DFFC00BB48D9 /* HandsfreeConfiguration.swift */,
 				5191FED6266755C300B842EA /* TrimConfiguration.swift */,
 				519D5B29266905CC000A3B48 /* CoverConfiguration.swift */,
+				634A06E4292B85DD003D4A18 /* Styles.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				51D07DF42607D51E00BB48D9 /* RecorderConfiguration.swift in Sources */,
 				639DA010254700290011C153 /* ViewController.swift in Sources */,
 				51D07DE12607B27900BB48D9 /* CombinedGalleryConfiguration.swift in Sources */,
+				634A06E5292B85DD003D4A18 /* Styles.swift in Sources */,
 				510612852606839C00176389 /* AlertViewConfiguration.swift in Sources */,
 				8A8C2519258CC35400FDED05 /* CountdownTimerViewControllerFactory.swift in Sources */,
 				5191FED7266755C300B842EA /* TrimConfiguration.swift in Sources */,
