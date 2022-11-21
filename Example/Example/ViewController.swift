@@ -15,16 +15,9 @@ class ViewController: UIViewController {
   // MARK: - IBOutlet
   @IBOutlet weak var openVEButton: UIButton!
   @IBOutlet weak var openPIPButton: UIButton!
-  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-  @IBOutlet weak var label: UILabel!
   
   // MARK: - VideoEditorSDK
   private var videoEditorSDK: BanubaVideoEditor?
-  // MARK: - life cycle
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    activityIndicator.isHidden = true
-  }
 }
 
 // MARK: - IBAction
@@ -60,7 +53,6 @@ extension ViewController {
         completion: nil
       )
     }
-    
   }
   
   @IBAction func PIPAction(_ sender: Any) {
@@ -69,6 +61,7 @@ extension ViewController {
     }
   }
 }
+
 // MARK: - initVideoEditor
 extension ViewController {
   private func initVideoEditor(completion: @escaping () -> Void) {
@@ -171,7 +164,17 @@ extension ViewController {
 // MARK: - Export example
 extension ViewController {
   func exportVideo() {
-    setupActivityIndicatorHidden(false)
+    // Present progress view
+    let progressViewController = ProgressViewController.makeViewController()
+    
+    progressViewController.message = "Exporting"
+    
+    progressViewController.cancelHandler = { [weak self] in
+      self?.videoEditorSDK?.stopExport()
+    }
+    
+    present(progressViewController, animated: true)
+    
     let manager = FileManager.default
     let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
     if manager.fileExists(atPath: videoURL.path) {
@@ -199,31 +202,36 @@ extension ViewController {
     
     videoEditorSDK?.export(
       using: exportConfig,
-      exportProgress: nil,
+      exportProgress: { progress in
+        DispatchQueue.main.async {
+          progressViewController.updateProgressView(with: Float(progress))
+        }
+      },
       completion: { success, error, exportCoverImages in
       DispatchQueue.main.async {
-        // Clear video editor session data
-        self.videoEditorSDK?.clearSessionData()
-        if success {
-          /// If you want play exported video
+        // Hide progress view
+        progressViewController.dismiss(animated: true) {
+          // Clear video editor session data
+          self.videoEditorSDK?.clearSessionData()
+          if success {
+            /// If you want to play exported video
 //          self.playVideoAtURL(videoURL)
-         
-          /// if you want share exported video
-          
-          if let config = self.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration {
-            BanubaVideoEditor.presentSharingViewController(
-              from: self,
-              configuration: config,
-              mainVideoUrl: videoURL,
-              videoUrls: [videoURL],
-              previewImage: exportCoverImages?.coverImage ?? UIImage(),
-              animated: true
-            ) {
-              self.setupActivityIndicatorHidden(true)
+            
+            /// if you want share exported video
+            if let config = self.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration {
+              BanubaVideoEditor.presentSharingViewController(
+                from: self,
+                configuration: config,
+                mainVideoUrl: videoURL,
+                videoUrls: [videoURL],
+                previewImage: exportCoverImages?.coverImage ?? UIImage(),
+                animated: true,
+                completion: nil
+              )
             }
           }
+          self.videoEditorSDK = nil
         }
-        self.videoEditorSDK = nil
       }
     })
   }
@@ -254,7 +262,7 @@ extension ViewController: BanubaVideoEditorDelegate {
   }
 }
 
-//MARK: - PIP Helpers
+// MARK: - PIP Helpers
 extension ViewController {
   private func openGallery() {
     VideoPicker().pickVideo(
@@ -274,7 +282,7 @@ extension ViewController {
         PHImageManager.default().requestAVAsset(
           forVideo: asset,
           options: .none
-        ) { [weak self] (asset, _, _) in
+        ) { (asset, _, _) in
           guard let asset = asset else { return }
           
           let groupHandler = {
@@ -347,21 +355,6 @@ extension ViewController {
           presentingHandler()
         }
       }
-    }
-  }
-}
-
-// MARK: - Helpers
-extension ViewController {
-  private func setupActivityIndicatorHidden(_ isHidden: Bool) {
-    activityIndicator.isHidden = isHidden
-    label.isHidden = isHidden
-    openVEButton.isHidden = !isHidden
-    openPIPButton.isHidden = !isHidden
-    if isHidden {
-      activityIndicator.stopAnimating()
-    } else {
-      activityIndicator.startAnimating()
     }
   }
 }
