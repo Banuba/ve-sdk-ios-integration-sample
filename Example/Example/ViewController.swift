@@ -207,18 +207,18 @@ extension ViewController {
           progressViewController.updateProgressView(with: Float(progress))
         }
       },
-      completion: { success, error, exportCoverImages in
+      completion: { [weak self] success, error, exportCoverImages in
       DispatchQueue.main.async {
         // Hide progress view
         progressViewController.dismiss(animated: true) {
           // Clear video editor session data
-          self.videoEditorSDK?.clearSessionData()
+          self?.videoEditorSDK?.clearSessionData()
           if success {
             /// If you want to play exported video
 //          self.playVideoAtURL(videoURL)
             
-            /// if you want share exported video
-            if let config = self.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration {
+            /// If you want to share exported video
+            if let self = self, let config = self.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration {
               BanubaVideoEditor.presentSharingViewController(
                 from: self,
                 configuration: config,
@@ -230,7 +230,7 @@ extension ViewController {
               )
             }
           }
-          self.videoEditorSDK = nil
+          self?.videoEditorSDK = nil
         }
       }
     })
