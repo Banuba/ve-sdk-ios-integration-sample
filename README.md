@@ -138,10 +138,10 @@ See the **default bitrate (kbps)** for exported video (without audio) in the tab
 
 You should start with getting a trial token. It will grant you **14 days** to freely play around with the AI Video Editor SDK and test its entire functionality the way you see fit.
 
-There is nothing complicated about it - [contact us](https://www.banuba.com/video-editor-sdk) or send an email to sales@banuba.com and we will send it to you. We can also send you a sample app so you can see how it works “under the hood”.
+There is nothing complicated about it - [contact us](https://www.banuba.com/video-editor-sdk) or send an email to sales@banuba.com and we will send it to you. We can also send you a sample app so you can see how it works "under the hood".
 
 ## Token 
-We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
+We offer a free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
 There are three options where to put your token:
 - Inside the app: [read here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/97ebccf9e52b31db92586709cc6afa55decb9d75/Example/Example/ViewController.swift#L83).
@@ -190,7 +190,7 @@ Face AR SDK is optional for the video editor SDK and would be disabled if it is 
 
 ### Step 1. Setup SDK dependencies with SPM or Cocoapods
 
-The easiest ways to integrate the Video Editor SDK in your mobile app are through [CocoaPods](https://cocoapods.org) or [SwiftPackageManager](https://developer.apple.com/documentation/swift_packages). If you haven’t used this dependency managers before, see the [Cocoapods Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) and [SPM Getting Started Guide](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
+The easiest ways to integrate the Video Editor SDK in your mobile app are through [CocoaPods](https://cocoapods.org) or [SwiftPackageManager](https://developer.apple.com/documentation/swift_packages). If you haven't used this dependency managers before, see the [Cocoapods Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) and [SPM Getting Started Guide](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
 
 ### Swift Package Manager
 
@@ -374,17 +374,19 @@ To export video after the editing is complete use these method:
   /// - Parameters:
   ///   - configuration: contains configurations for exporting videos such as file url,
   ///    watermark and video quality and etc.
+  ///   - exportProgress: callback of current export progress.
   ///   - completion: completion: (success, error, exportCoverImages), execute on background thread.
   public func export(
     using configuration: ExportConfiguration,
+    exportProgress: ((TimeInterval) -> Void)?,
     completion: @escaping ((_ success: Bool, _ error: Error?, _ exportCoverImages: ExportCoverImages?)->Void)
   )
 ```  
-See the sample export video flow [here](/Example/Example/ViewController.swift#L177). You can find the detailed video export features [here](export_flow.md).
+See the sample export video flow [here](/Example/Example/ViewController.swift#L166). You can find the detailed video export features [here](export_flow.md).
 
 ### Configure audio content
 
-Banuba Video Editor SDK can trim audio tracks, merge them, and apply them to a video. It doesn’t include music or sounds. However, it can be integrated with [Mubert](https://mubert.com/) and get music from it (requires additional contract with them). Moreover, the users can add audio files from internal memory (downloaded library) from the phone. 
+Banuba Video Editor SDK can trim audio tracks, merge them, and apply them to a video. It doesn't include music or sounds. However, it can be integrated with [Mubert](https://mubert.com/) and get music from it (requires additional contract with them). Moreover, the users can add audio files from internal memory (downloaded library) from the phone. 
 
 Integrating audio content is simple. See this [guide](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/audio_content.md#step-1).
 
@@ -392,7 +394,7 @@ Integrating audio content is simple. See this [guide](https://github.com/Banuba/
 
 Each screen can be modified to your liking. You can change icons, colors, text and its font, button titles, and much more. 
 
-Note that layouts and screen order can’t be changed. You can, however, [ask](https://www.banuba.com/video-editor-sdk#form) us to customize the mobile video editor UI as a separate contract. 
+Note that layouts and screen order can't be changed. You can, however, [ask](https://www.banuba.com/video-editor-sdk#form) us to customize the mobile video editor UI as a separate contract. 
 
 Below see the list of screens with links to their detailed description and notes on modifying them
 
@@ -459,7 +461,7 @@ You can add a branded image that would appear on videos that users export.
 
 To do so, create and configure the WatermarkConfiguration structure, then add it to the ExportVideoConfiguration entity. 
 
-See this [example](/Example/Example/ViewController.swift#L629) for details.
+See this [example](/Example/Example/ViewController.swift#L184) for details.
 
 ### Configure stickers content
 
@@ -497,16 +499,16 @@ Also there is an option to use **your own implementation of the gallery**. This 
 Any icon in the mobile video editor SDK can be replaced. This is how:
 
 1. Load custom images to the Assets catalog
-2. Locate the screen with an icon you want to change in the [VideoEditorConfig](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L70) entity
+2. Locate the screen with an icon you want to change in the [VideoEditorConfig](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L97) entity
 3. Find the specific element and override it with the resource name or use UIImage, if available.
 
-For [example](/Example/Example/ViewController.swift#L123), this is how you change a mask icon on the camera screen.
+For [example](/Example/Example/Extension/RecorderConfiguration.swift#L80), this is how you change a mask icon on the camera screen.
 
 ### Localization
 
 Any text in the mobile video editor SDK can be changed. To edit text resources, download the file with strings [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings), change whatever you need, and put the new file into your app.
 
-Don’t change the keys (values on the left), only the values on the right. Otherwise, the button names and other texts will not show.
+Don't change the keys (values on the left), only the values on the right. Otherwise, the button names and other texts will not show.
 
 ## Analytics
 
