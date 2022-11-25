@@ -146,7 +146,7 @@ We offer а free 14-days trial for you could thoroughly test and assess Video Ed
 There are three options where to put your token:
 - Inside the app: [read here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/97ebccf9e52b31db92586709cc6afa55decb9d75/Example/Example/ViewController.swift#L83).
 - In the Firebase (what will allow your users not to update the app every time the token is updated): [Firebase setup guide](https://firebase.google.com/docs/database/android/start), [SDK configuration for Firebase](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/token_on_firebase.md).
-- In the remote server: [SDK configuration for this case](https://github.com/Banuba/ve-sdk-ios-integration-sample/new/Update_token_configure/mdDocs).  
+- In the remote server: [SDK configuration for this case](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/remote_token_api.md).  
 
 ## Passing Apple Store review
 Unfortunately Apple Store may reject your app due to use of TrueDepth API.  
