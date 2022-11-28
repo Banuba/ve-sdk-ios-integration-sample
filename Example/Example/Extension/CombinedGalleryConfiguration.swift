@@ -5,7 +5,6 @@ import VideoEditor
 extension ViewController {
   func updateCombinedGalleryConfiguration(_ configuration: GalleryConfiguration) -> GalleryConfiguration {
     configuration.videoResolution = .hd1920x1080
-    configuration.draftsButtonConfiguration.textConfiguration.color = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.nextButtonConfiguration.backgroundColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.galleryItemConfiguration.orderNumberBackgroudColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
     configuration.galleryItemConfiguration.orderNumberTitleColor = UIColor.black
