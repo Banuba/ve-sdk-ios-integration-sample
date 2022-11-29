@@ -9,19 +9,19 @@ extension ViewController {
     configuration.videoResolution = VideoResolutionConfiguration(
       default: .hd1920x1080,
       resolutions: [
-        .iPhone5S: .hd1280x720,
+        .iPhone5s: .hd1280x720,
         .iPhone6: .default854x480,
-        .iPhone6S: .hd1280x720,
-        .iPhone6plus: .default854x480,
-        .iPhone6Splus: .hd1280x720,
+        .iPhone6s: .hd1280x720,
+        .iPhone6Plus: .default854x480,
+        .iPhone6sPlus: .hd1280x720,
         .iPhoneSE: .hd1280x720,
       ],
       thumbnailHeights: [
-        .iPhone5S: 200.0,
+        .iPhone5s: 200.0,
         .iPhone6: 80.0,
-        .iPhone6S: 200.0,
-        .iPhone6plus: 80.0,
-        .iPhone6Splus: 200.0,
+        .iPhone6s: 200.0,
+        .iPhone6Plus: 80.0,
+        .iPhone6sPlus: 200.0,
         .iPhoneSE: 200.0,
       ],
       defaultThumbnailHeight: 400.0
