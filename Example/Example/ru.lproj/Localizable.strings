@@ -761,6 +761,10 @@
 /* Gallery button title */
 "com.banuba.recorder.gallery.title" = "Галерея";
 
+/* Recorder video duration */
+"com.banuba.recorder.secondsFormat" = "%d сек";
+"com.banuba.recorder.minutesFormat" = "%d мин";
+
 /* Aspect title for cells*/
 "com.banuba.videoEditor.aspect.original" = "Оригинал";
 "com.banuba.videoEditor.aspect.16:9" = "16:9";
