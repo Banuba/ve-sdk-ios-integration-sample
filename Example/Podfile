@@ -4,27 +4,30 @@ platform :ios, '12.0'
 use_frameworks! 
 
 target 'Example' do
-  pod 'BanubaARCloudSDK', '1.26.0' #optional
-  pod 'BanubaVideoEditorSDK', '1.26.0'
-  pod 'BanubaAudioBrowserSDK', '1.26.0' #optional
-  pod 'BanubaMusicEditorSDK', '1.26.0'
-  pod 'BanubaOverlayEditorSDK', '1.26.0'
-  pod 'BanubaSDKSimple', '1.26.0'
-  pod 'BanubaEffectPlayer', '1.26.0'
-  pod 'BanubaSDK', '1.26.0'
-  pod 'BanubaSDKServicing', '1.26.0'
-  pod 'VideoEditor', '1.26.0'
-  pod 'BanubaUtilities', '1.26.0'
-  pod 'BanubaVideoEditorGallerySDK', '1.26.0' #optional
-  pod 'BanubaVideoEditorTrimSDK', '1.26.0'
-  pod 'BanubaLicenseServicingSDK', '1.26.0'
-  pod 'BanubaTokenStorageSDK', '1.26.0' #optional
-
-  pod 'BNBLicenseUtils', '1.26.0'
   
-  pod 'VEExportSDK', '1.26.0'
-  pod 'VEEffectsSDK', '1.26.0'
-  pod 'VEPlaybackSDK', '1.26.0'
+	banuba_sdk_version = '1.26.1'
+  
+  pod 'BanubaARCloudSDK', banuba_sdk_version #optional
+  pod 'BanubaVideoEditorSDK', banuba_sdk_version
+  pod 'BanubaAudioBrowserSDK', banuba_sdk_version #optional
+  pod 'BanubaMusicEditorSDK', banuba_sdk_version
+  pod 'BanubaOverlayEditorSDK', banuba_sdk_version
+  pod 'BanubaSDKSimple', banuba_sdk_version
+  pod 'BanubaEffectPlayer', banuba_sdk_version
+  pod 'BanubaSDK', banuba_sdk_version
+  pod 'BanubaSDKServicing', banuba_sdk_version
+  pod 'VideoEditor', banuba_sdk_version
+  pod 'BanubaUtilities', banuba_sdk_version
+  pod 'BanubaVideoEditorGallerySDK', banuba_sdk_version #optional
+  pod 'BanubaVideoEditorTrimSDK', banuba_sdk_version
+  pod 'BanubaLicenseServicingSDK', banuba_sdk_version
+  pod 'BanubaTokenStorageSDK', banuba_sdk_version #optional
+
+  pod 'BNBLicenseUtils', banuba_sdk_version
+  
+  pod 'VEExportSDK', banuba_sdk_version
+  pod 'VEEffectsSDK', banuba_sdk_version
+  pod 'VEPlaybackSDK', banuba_sdk_version
   
   
   pod 'lottie-ios'
