@@ -5,7 +5,7 @@ use_frameworks!
 
 target 'Example' do
   
-	banuba_sdk_version = '1.26.1'
+  banuba_sdk_version = '1.26.1'
   
   pod 'BanubaARCloudSDK', banuba_sdk_version #optional
   pod 'BanubaVideoEditorSDK', banuba_sdk_version
