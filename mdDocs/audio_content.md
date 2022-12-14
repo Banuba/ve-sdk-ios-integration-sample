@@ -102,7 +102,7 @@ exportSession?.exportAsynchronously() {
 Add the ```BanubaAudioBrowserSDK``` dependency into your pod file containing other Video Editor SDK dependencies and setup its version:
 
 ```swift
-pod 'BanubaAudioBrowserSDK', '1.23.0'
+pod 'BanubaAudioBrowserSDK', '1.26.0'
 
 ```
 ### Step 2
@@ -152,6 +152,7 @@ See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/bl
 
 Banuba Audiobrowser can be configured to work with online music providers, local audio files or with all sources. To control this behaviour customize ```musicSource``` property:
 ```swift
+
 AudioBrowserConfig.shared.musicSource = .local
 
 // Available options
