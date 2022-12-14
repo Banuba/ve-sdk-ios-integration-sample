@@ -153,7 +153,7 @@ See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/bl
 Banuba Audiobrowser can be configured to work with online music providers, local audio files or with all sources. To control this behaviour customize ```musicSource``` property:
 ```swift
 
-AudioBrowserConfig.shared.musicSource = .local
+AudioBrowserConfig.shared.musicSource = .mubert
 
 // Available options
 @objc public enum AudioBrowserMusicSource: Int, CaseIterable {
