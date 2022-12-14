@@ -150,9 +150,17 @@ See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/bl
 
 ### Step 6
 
-Banuba Audiobrowser can be configured to work with online music providers or local audio files.
+Banuba Audiobrowser can be configured to work with online music providers, local audio files or with all sources. To control this behaviour customize ```musicSource``` property:
 ```swift
-  // True - Music provider tracks available.
-  // False - Only local audio files available.
-AudioBrowserConfig.shared.isExternalMusicEnabled = true
+AudioBrowserConfig.shared.musicSource = .local
+
+// Available options
+@objc public enum AudioBrowserMusicSource: Int, CaseIterable {
+  /// enables only Mubert music in AudioBrowser
+  case mubert = 1
+  /// disables Mubert music. Only local music with my files will be available
+  case localStorageWithMyFiles = 2
+  /// all sources are enabled
+  case allSources = 3
+}
 ```
