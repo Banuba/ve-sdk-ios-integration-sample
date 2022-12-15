@@ -21,7 +21,6 @@ target 'Example' do
   pod 'BanubaVideoEditorGallerySDK', banuba_sdk_version #optional
   pod 'BanubaVideoEditorTrimSDK', banuba_sdk_version
   pod 'BanubaLicenseServicingSDK', banuba_sdk_version
-  pod 'BanubaTokenStorageSDK', banuba_sdk_version #optional
 
   pod 'BNBLicenseUtils', banuba_sdk_version
   
