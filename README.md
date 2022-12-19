@@ -29,7 +29,7 @@ Feel free to [contact us](https://www.banuba.com/video-editor-sdk#form) if you h
 
 1. Clone the repository
 2. Open the project in XCode
-3. [Add your token](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/97ebccf9e52b31db92586709cc6afa55decb9d75/Example/Example/ViewController.swift#L83)
+3. [Add your token](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/97ebccf9e52b31db92586709cc6afa55decb9d75/Example/Example/AppDelegate.swift#L9)
 4. Run sample application in XCode
 
 ### Integration guide
