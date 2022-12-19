@@ -5,8 +5,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  /// Video editor requires token. Please follow steps described in https://github.com/Banuba/ve-sdk-ios-integration-sample#token
-  static let banubaClientToken: String = <#Please set your Banuba Video Editor SDK token here#>
+  // License token is required to start Video Editor SDK
+  static let licenseToken: String = <#Enter your license token#>
   
   func application(
     _ application: UIApplication,
