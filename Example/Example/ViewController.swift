@@ -80,7 +80,7 @@ extension ViewController {
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
     videoEditorSDK = BanubaVideoEditor(
-      token: AppDelegate.banubaClientToken,
+      token: AppDelegate.licenseToken,
       configuration: config,
       externalViewControllerFactory: viewControllerFactory
     )
