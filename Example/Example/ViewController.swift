@@ -79,11 +79,8 @@ extension ViewController {
     viewControllerFactory.countdownTimerViewFactory = CountdownTimerViewControllerFactory()
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
-    /// Video editor requires token. Please follow steps described in https://github.com/Banuba/ve-sdk-ios-integration-sample#token
-    let banubaClientToken = <#Place your token here#>
-    
     videoEditorSDK = BanubaVideoEditor(
-      token: banubaClientToken,
+      token: AppDelegate.licenseToken,
       configuration: config,
       externalViewControllerFactory: viewControllerFactory
     )
