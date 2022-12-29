@@ -404,7 +404,7 @@ Integrating audio content is simple. See this [guide](audio_content.md#step-1).
 
 Each screen can be modified to your liking. You can change icons, colors, text and its font, button titles, and much more.
 
-Note that layouts and screen order can't be changed. You can, however, [ask](https://www.banuba.com/video-editor-sdk#form) us to customize the mobile video editor UI as a separate contract.
+Note that layouts and screen order can't be changed. You can, however, [ask](https://www.banuba.com/faq/kb-tickets/new) us to customize the mobile video editor UI as a separate contract.
 
 Below see the list of screens with links to their detailed description and notes on modifying them
 
