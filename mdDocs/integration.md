@@ -25,7 +25,6 @@
 - [Framework dependencies](#Framework-dependencies)
 - [Dependencies](#Dependencies)
 - [SDKs size](#SDKs-size)
-- [Starting a free trial](#Starting-a-free-trial)
 - [Supported media formats](#Supported-media-formats)
 - [Token](#Token)
 - [Passing Apple Store review](#Passing-Apple-Store-review)
@@ -143,12 +142,6 @@ See the **default bitrate (kbps)** for exported video (without audio) in the tab
 | 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) | HD(720 x 1280) | FHD(1080 x 1920) |
 | --------------- | --------------- | ---------------- | -------------- | ---------------- |
 |              800|             2000|              2000|            4000|              6400|
-
-## Starting a free trial
-
-You should start with getting a trial token. It will grant you **14 days** to freely play around with the AI Video Editor SDK and test its entire functionality the way you see fit.
-
-There is nothing complicated about it - [contact us](https://www.banuba.com/video-editor-sdk) or send an email to sales@banuba.com and we will send it to you. We can also send you a sample app so you can see how it works "under the hood".
 
 ## Token
 We offer a free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
