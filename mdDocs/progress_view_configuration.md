@@ -1,7 +1,7 @@
 # Banuba VideoEditor SDK
 ##  ProgressViewConfiguration
 
-```ProgressViewController``` helps users to determine progress of asyncrounous operations in ```BanubaVideoEditor```. It can be long operation in Gallery with importing some users video or with export video activity. To see example of customization ```ProgressView``` see this [example](/Example/Example/ViewController.swift#L4). To apply customization for Gallery you have to update appropriate [configuration in VideoEditorConfiguration](/Example/Example/Extension/ProgressViewConfiguration.swift#L121). To apply customization for Export process refer to [these lines](/Example/Example/Extension/ProgressViewConfiguration.swift#L168)
+```ProgressViewController``` helps users to determine progress of asynchronous operations in ```BanubaVideoEditor```. It can be long operation in Gallery with importing some users video or with export video activity. To see example of customization ```ProgressView``` see this [example](/Example/Example/Extension/ProgressViewConfiguration.swift#L4). To apply customization for Gallery you have to update appropriate [configuration in VideoEditorConfiguration](/Example/Example/ViewConrtoller.swift#L121). To apply customization for Export process refer to [these lines](/Example/Example/ViewController.swift#L168)
 
 ![img](screenshots/ProgressViewConfiguration.png)
 
