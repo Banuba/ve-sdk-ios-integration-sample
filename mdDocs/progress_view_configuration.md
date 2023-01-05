@@ -1,7 +1,7 @@
 # Banuba VideoEditor SDK
-##  ProgressViewConfiguration
+## Media progress screen
 
-```ProgressViewController``` helps users to determine progress of asynchronous operations in ```BanubaVideoEditor```. It can be long operation in Gallery with importing some users video or with export video activity. To see example of customization ```ProgressView``` see this [example](/Example/Example/Extension/ProgressViewConfiguration.swift#L4). To apply customization for Gallery you have to update appropriate [configuration in VideoEditorConfiguration](/Example/Example/ViewController.swift#L121). To apply customization for Export process refer to [these lines](/Example/Example/ViewController.swift#L168)
+```ProgressViewController``` shows progress while long asynchronous task is in progress i.e. import media from gallery or export media content. Follow this guide to customize. ProgressView. To apply customization for Gallery you have to update appropriate configuration in VideoEditorConfiguration. To apply customization for Export process refer to these lines
 
 ![img](screenshots/ProgressViewConfiguration.png)
 
