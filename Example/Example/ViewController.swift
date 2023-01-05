@@ -118,6 +118,7 @@ extension ViewController {
     config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
     config.handsfreeConfiguration = updateHandsfreeConfiguration(config.handsfreeConfiguration)
     config.aspectsConfiguration = updateAspectsConfiguration(config.aspectsConfiguration)
+    config.progressViewConfiguration = updateProgressViewConfiguration(config.progressViewConfiguration)
     
     return config
   }
@@ -164,6 +165,7 @@ extension ViewController {
     // Present progress view
     let progressViewController = ProgressViewController.makeViewController()
     
+    progressViewController.configuration = updateProgressViewConfiguration(progressViewController.configuration!)
     progressViewController.message = "Exporting"
     
     progressViewController.cancelHandler = { [weak self] in
