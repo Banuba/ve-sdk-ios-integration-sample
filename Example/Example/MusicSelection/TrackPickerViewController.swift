@@ -40,7 +40,8 @@ extension TrackPickerViewController: UITableViewDataSource, UITableViewDelegate 
       isEditable: true,
       title: readyFiles[indexPath.row].lastPathComponent,
       additionalTitle: "Additional title",
-      id: Int32.random(in: 6..<1000))
+      uuid: UUID()
+    )
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
