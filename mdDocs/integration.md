@@ -18,14 +18,13 @@
 [1.26.0](https://www.notion.so/vebanuba/1-26-0-5e65daee7e8c41e2bebbf4d8a50e1cc4)  
 [1.26.1](https://www.notion.so/vebanuba/1-26-1-0edacf053a88499cbb51e6f065274dd3)  
 [1.26.2](https://www.notion.so/vebanuba/1-26-2-2aa271695c974ac7b90799a0b2a108d9)  
-
+[1.26.3](https://www.notion.so/vebanuba/1-26-3-8c4fb0d732eb4f2582b3aaeab28ef399)
 
 ## Integration
 - [Requirements](#Requirements)
 - [Framework dependencies](#Framework-dependencies)
 - [Dependencies](#Dependencies)
 - [SDKs size](#SDKs-size)
-- [Starting a free trial](#Starting-a-free-trial)
 - [Supported media formats](#Supported-media-formats)
 - [Token](#Token)
 - [Passing Apple Store review](#Passing-Apple-Store-review)
@@ -142,12 +141,6 @@ See the **default bitrate (kbps)** for exported video (without audio) in the tab
 | 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) | HD(720 x 1280) | FHD(1080 x 1920) |
 | --------------- | --------------- | ---------------- | -------------- | ---------------- |
 |              800|             2000|              2000|            4000|              6400|
-
-## Starting a free trial
-
-You should start with getting a trial token. It will grant you **14 days** to freely play around with the AI Video Editor SDK and test its entire functionality the way you see fit.
-
-There is nothing complicated about it - [contact us](https://www.banuba.com/video-editor-sdk) or send an email to sales@banuba.com and we will send it to you. We can also send you a sample app so you can see how it works "under the hood".
 
 ## Token
 We offer a free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
@@ -400,7 +393,7 @@ Integrating audio content is simple. See this [guide](audio_content.md#step-1).
 
 Each screen can be modified to your liking. You can change icons, colors, text and its font, button titles, and much more.
 
-Note that layouts and screen order can't be changed. You can, however, [ask](https://www.banuba.com/video-editor-sdk#form) us to customize the mobile video editor UI as a separate contract.
+Note that layouts and screen order can't be changed. You can, however, [ask](https://www.banuba.com/faq/kb-tickets/new) us to customize the mobile video editor UI as a separate contract.
 
 Below see the list of screens with links to their detailed description and notes on modifying them
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -74,16 +74,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License token is invalid" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjT-6f-aCn">
+                                <rect key="frame" x="108.00000000000001" y="418.33333333333331" width="174.33333333333337" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UCZ-29-s3y" secondAttribute="bottom" constant="40" id="9A1-rA-jyi"/>
+                            <constraint firstItem="DjT-6f-aCn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GC8-cD-P1W"/>
                             <constraint firstItem="UCZ-29-s3y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="NI7-yk-H9s"/>
+                            <constraint firstItem="DjT-6f-aCn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fgQ-pP-206"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCZ-29-s3y" secondAttribute="trailing" constant="40" id="xbJ-hG-4xm"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="invalidTokenMessageLabel" destination="DjT-6f-aCn" id="L3o-68-VF9"/>
                         <outlet property="openPIPButton" destination="Xjq-v9-Kyb" id="qrf-C7-9TT"/>
                         <outlet property="openVEButton" destination="6jh-xc-CaM" id="tKV-tI-AqI"/>
                     </connections>

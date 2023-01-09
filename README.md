@@ -22,15 +22,17 @@ Before you commit to a license, you are free to test all the features of the SDK
 We will get back to you with the trial token.
 You can store the token within the app.
 
-Feel free to [contact us](https://www.banuba.com/video-editor-sdk#form) if you have any questions.
+Feel free to [contact us](https://www.banuba.com/faq/kb-tickets/new) if you have any questions.
 
 ### Start SDK
 :exclamation: __The token **IS REQUIRED** to run sample and an integration in your app.__
 
 1. Clone the repository
-2. Open the project in XCode
-3. [Add your token](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/97ebccf9e52b31db92586709cc6afa55decb9d75/Example/Example/ViewController.swift#L83)
-4. Run sample application in XCode
+2. Install CocoaPods dependencies. Open **Example** directory ```cd Example``` and run ```pod install``` in terminal.
+3. Open the project in XCode
+4. Open **Signing & Capabilities** tab in Target settings and select your Development Team.
+5. [Add your token](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/AppDelegate.swift#L9)
+6. Run sample application in XCode
 
 ### Integration guide
 Follow iOS [Integration Guide](mdDocs/integration.md) to integrate and customize Video Editor SDK into your iOS project.  

@@ -2,10 +2,11 @@ source 'https://github.com/Banuba/specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '12.0'
 use_frameworks! 
+inhibit_all_warnings!
 
 target 'Example' do
   
-  banuba_sdk_version = '1.26.2'
+  banuba_sdk_version = '1.26.3'
   
   pod 'BanubaARCloudSDK', banuba_sdk_version #optional
   pod 'BanubaVideoEditorSDK', banuba_sdk_version
@@ -29,7 +30,7 @@ target 'Example' do
   pod 'VEPlaybackSDK', banuba_sdk_version
   
   
-  pod 'lottie-ios'
+  pod 'lottie-ios', '3.4.3'
   pod "BSImagePicker"
   
 end
