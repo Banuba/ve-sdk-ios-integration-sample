@@ -19,7 +19,7 @@ class CountdownTimerViewControllerFactory: CountdownTimerViewFactory {
     guard let lottieAnimationFilePath = Bundle.main.path(forResource: "data", ofType: "json", inDirectory: "LottieAnimation") else {
         fatalError("Wrong Lottie file path")
     }
-    let animationView = AnimationView(filePath: lottieAnimationFilePath)
+    let animationView = LottieAnimationView(filePath: lottieAnimationFilePath)
     return animationView
   }
 }

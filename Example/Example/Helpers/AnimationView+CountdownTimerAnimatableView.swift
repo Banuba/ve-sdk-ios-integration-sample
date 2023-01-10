@@ -10,15 +10,15 @@ import BanubaVideoEditorSDK
 import Lottie
 
 // Example countdown timer view using Lottie
-extension AnimationView: CountdownTimerAnimatableView {
+extension LottieAnimationView: CountdownTimerAnimatableView {
   private static var _countdownDigit: Int = 0
   
   public var countdownDigit: Int {
     get {
-      AnimationView._countdownDigit
+      LottieAnimationView._countdownDigit
     }
     set {
-      AnimationView._countdownDigit = newValue
+      LottieAnimationView._countdownDigit = newValue
     }
   }
   

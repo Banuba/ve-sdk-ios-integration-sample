@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -86,6 +86,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License token is invalid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8c-mM-Wvp">
+                                <rect key="frame" x="120" y="445" width="174.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7r0-fU-7Mg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -94,14 +100,17 @@
                             <constraint firstItem="7r0-fU-7Mg" firstAttribute="trailing" secondItem="iGN-hx-1rT" secondAttribute="trailing" id="7s5-NI-EQc"/>
                             <constraint firstItem="SEf-wl-7Bn" firstAttribute="centerX" secondItem="2s2-7l-yhx" secondAttribute="centerX" id="9vx-Mz-MZy"/>
                             <constraint firstItem="7r0-fU-7Mg" firstAttribute="bottom" secondItem="rMu-UV-sNA" secondAttribute="bottom" constant="40" id="B2b-hE-lSu"/>
+                            <constraint firstItem="U8c-mM-Wvp" firstAttribute="centerX" secondItem="7r0-fU-7Mg" secondAttribute="centerX" id="CBK-EA-CKO"/>
                             <constraint firstItem="7r0-fU-7Mg" firstAttribute="trailing" secondItem="rMu-UV-sNA" secondAttribute="trailing" constant="40" id="GLq-LA-cnX"/>
                             <constraint firstItem="SEf-wl-7Bn" firstAttribute="top" secondItem="iGN-hx-1rT" secondAttribute="bottom" constant="8" id="IoF-L2-NFY"/>
+                            <constraint firstItem="U8c-mM-Wvp" firstAttribute="centerY" secondItem="7r0-fU-7Mg" secondAttribute="centerY" id="SL0-JB-Ztf"/>
                             <constraint firstItem="rMu-UV-sNA" firstAttribute="leading" secondItem="7r0-fU-7Mg" secondAttribute="leading" constant="40" id="eI0-Bt-Mbz"/>
                             <constraint firstItem="iGN-hx-1rT" firstAttribute="leading" secondItem="7r0-fU-7Mg" secondAttribute="leading" id="zfp-7V-aDB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="SEf-wl-7Bn" id="i92-C6-QNw"/>
+                        <outlet property="invalidTokenMessageLabel" destination="U8c-mM-Wvp" id="oOh-u1-pkz"/>
                         <outlet property="label" destination="iGN-hx-1rT" id="YNv-EB-Cb8"/>
                         <outlet property="openPIPButton" destination="dOu-aH-mDK" id="n97-mH-quK"/>
                         <outlet property="openVEButton" destination="h43-SA-IBI" id="Pzp-hc-YcQ"/>

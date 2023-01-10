@@ -16,7 +16,8 @@ class ViewController: UIViewController {
   @IBOutlet weak var openPIPButton: UIButton!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var label: UILabel!
-  
+  @IBOutlet weak var invalidTokenMessageLabel: UILabel!
+    
   // MARK: - VideoEditorSDK
   private var videoEditorSDK: BanubaVideoEditor?
   // MARK: - life cycle
@@ -29,13 +30,15 @@ class ViewController: UIViewController {
 // MARK: - IBAction
 extension ViewController {
   @IBAction func openVideoEditorAction(_ sender: Any) {
-    initVideoEditor() {
+    initVideoEditor() { isTokenValid in
+      guard isTokenValid else { return }
       let musicURL = Bundle.main.bundleURL
         .appendingPathComponent("Music/long", isDirectory: true)
         .appendingPathComponent("long_music_2.wav")
       let assset = AVURLAsset(url: musicURL)
       let musicTrackPreset = MediaTrack(
-        id: CMPersistentTrackID.random(in: 6..<CMPersistentTrackID.max),
+        uuid: UUID(),
+        id: nil,
         url: musicURL,
         timeRange: MediaTrackTimeRange(
           startTime: .zero,
@@ -63,16 +66,17 @@ extension ViewController {
   }
   
   @IBAction func PIPAction(_ sender: Any) {
-    initVideoEditor {
+    initVideoEditor { isTokenValid in
+      guard isTokenValid else { return }
       self.openGallery()
     }
   }
 }
 // MARK: - initVideoEditor
 extension ViewController {
-  private func initVideoEditor(completion: @escaping () -> Void) {
+  private func initVideoEditor(completion: @escaping (Bool) -> Void) {
     guard videoEditorSDK == nil else {
-      completion()
+      videoEditorSDK?.getLicenseState(completion: completion)
       return
     }
     
@@ -84,17 +88,27 @@ extension ViewController {
     viewControllerFactory.countdownTimerViewFactory = CountdownTimerViewControllerFactory()
     viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
     
-    /// Video editor requires token. Please follow steps described in https://github.com/Banuba/ve-sdk-ios-integration-sample#token
-    let banubaClientToken = <#Place your token here#>
-    
     videoEditorSDK = BanubaVideoEditor(
-      token: banubaClientToken,
+      token: AppDelegate.licenseToken,
       configuration: config,
       externalViewControllerFactory: viewControllerFactory
     )
     
     videoEditorSDK?.delegate = self
-    completion()
+    
+    if videoEditorSDK == nil {
+      invalidTokenMessageLabel.isHidden = false
+      return
+    }
+    videoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
+      if isValid {
+        print("✅ License is active, all good")
+      } else {
+        print("❌ License is either revoked or expired")
+      }
+      self?.invalidTokenMessageLabel.isHidden = isValid
+      completion(isValid)
+    })
   }
 }
 // MARK: - Configuration helpers
@@ -277,7 +291,7 @@ extension ViewController {
         PHImageManager.default().requestAVAsset(
           forVideo: asset,
           options: .none
-        ) { [weak self] (asset, _, _) in
+        ) { (asset, _, _) in
           guard let asset = asset else { return }
           
           let groupHandler = {
@@ -346,7 +360,8 @@ extension ViewController {
           return
         }
         
-        self.initVideoEditor() {
+        self.initVideoEditor() { isTokenValid in
+          guard isTokenValid else { return }
           presentingHandler()
         }
       }
