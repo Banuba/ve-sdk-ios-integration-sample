@@ -13,7 +13,7 @@ There are 2 options how to pass audio content to Video Editor:
 ## Integration
 ### External Audio browser
 
-To pass audio content to Video Editor SDK you have to implement a factory that conforms ```MusicEditorExternalViewControllerFactory``` protocol. And put it to ```musicEditorFactory``` property in [ExternalViewControllerFactory](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L24). Your factory should contain the following methods:
+To pass audio content to Video Editor SDK you have to implement a factory that conforms ```MusicEditorExternalViewControllerFactory``` protocol. And put it to ```musicEditorFactory``` property in [ExternalViewControllerFactory](../Example/Example/ViewController.swift#L24). Your factory should contain the following methods:
 
 ```swift
 // MARK: - External Audio Browser Factory
@@ -140,13 +140,13 @@ Here's the example of the methods implementation for using Banuba Audiobrowser:
     return nil
   }
 ```
-See an example in sample [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Helpers/MusicEditorViewControllerFactory.swift#L14).
+See an example in sample [here](../Example/Example/Helpers/MusicEditorViewControllerFactory.swift#L14).
 
 ### Step 5
 
 The class in which you have implemented the ``` MusicEditorExternalViewControllerFactory ``` protocol must be passed to ```musicEditorFactory```.
 
-See an example [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L30).
+See an example [here](../Example/Example/ViewController.swift#L30).
 
 ### Step 6
 

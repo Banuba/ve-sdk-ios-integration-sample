@@ -119,6 +119,6 @@ public struct WatermarkConfiguration {
 To save the exported video to the gallery or share it, use ```UIActivityViewController```.
 You can learn more about this controller in [apple documentation](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller).
 
-An example of this controller implementation is in the [sample](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L200).
+An example of this controller implementation is in the [sample](../Example/Example/ViewController.swift#L200).
 
-You just need to transfer the [URL](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L167) of the exported video there.
+You just need to transfer the [URL](../Example/Example/ViewController.swift#L167) of the exported video there.

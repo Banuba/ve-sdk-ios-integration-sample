@@ -147,7 +147,7 @@ See the **default bitrate (kbps)** for exported video (without audio) in the tab
 We offer a free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
 There are three options where to put your token:
-- Inside the app: [read here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/AppDelegate.swift#L9).
+- Inside the app: [read here](/Example/Example/AppDelegate.swift#L9).
 - In the Firebase (what will allow your users not to update the app every time the token is updated): [Firebase setup guide](https://firebase.google.com/docs/database/android/start), [SDK configuration for Firebase](token_on_firebase.md).
 - In the remote server: [SDK configuration for this case](remote_token_api.md).
 
@@ -226,7 +226,7 @@ Please check the boxes for the modules you need to install and click the 'Add Pa
 
 Important: Make sure that you have CocoaPods version >= 1.9.0 installed. Check your CocoaPods version using this command ```pod --version```
 
-Please, refer to the example of [Podfile](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Podfile) lines which you need to add.
+Please, refer to the example of [Podfile](/Example/Podfile) lines which you need to add.
 
 1. Make sure to have CocoaPods installed, e.g. via Homebrew:
    ```sh
@@ -502,14 +502,14 @@ Also there is an option to use **your own implementation of the gallery**. This 
 Any icon in the mobile video editor SDK can be replaced. This is how:
 
 1. Load custom images to the Assets catalog
-2. Locate the screen with an icon you want to change in the [VideoEditorConfig](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L97) entity
+2. Locate the screen with an icon you want to change in the [VideoEditorConfig](/Example/Example/ViewController.swift#L97) entity
 3. Find the specific element and override it with the resource name or use UIImage, if available.
 
 For [example](/Example/Example/Extension/RecorderConfiguration.swift#L80), this is how you change a mask icon on the camera screen.
 
 ### Localization
 
-Any text in the mobile video editor SDK can be changed. To edit text resources, download the file with strings [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings), change whatever you need, and put the new file into your app.
+Any text in the mobile video editor SDK can be changed. To edit text resources, download the file with strings [here](/Example/Example/en.lproj/Localizable.strings), change whatever you need, and put the new file into your app.
 
 Don't change the keys (values on the left), only the values on the right. Otherwise, the button names and other texts will not show.
 

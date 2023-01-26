@@ -31,7 +31,7 @@ Feel free to [contact us](https://www.banuba.com/faq/kb-tickets/new) if you have
 2. Install CocoaPods dependencies. Open **Example** directory ```cd Example``` and run ```pod install``` in terminal.
 3. Open the project in XCode
 4. Open **Signing & Capabilities** tab in Target settings and select your Development Team.
-5. [Add your token](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/AppDelegate.swift#L9)
+5. [Add your token](/Example/Example/AppDelegate.swift#L9)
 6. Run sample application in XCode
 
 ### Integration guide

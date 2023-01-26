@@ -120,7 +120,7 @@ To add your own icon to be used to represent that specific effect in the list, y
 
 The icon resource name must match the image file name in the / luts directory and end with ```_preview```.
 
-The display name for the resource is set in the [localization files](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings#L353).
+The display name for the resource is set in the [localization files](../Example/Example/en.lproj/Localizable.strings#L353).
 
 The key for the translation string must start with ```com.banuba.filter.name.{lut file name}``` and end with the name of the lut file.
 
@@ -431,7 +431,7 @@ Below is a table with the name, ID and icon of the default effect.
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Effects%20Preview/104000_preview.imageset/btn_slowmotion2.png" width="50"> | 0.5x | 104000
 | <img src="https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/Assets.xcassets/Effects%20Preview/104001_preview.imageset/btn_rapid2.png" width="50"> | 2x | 104001
 
-In order to change the name of the effect, you need to do it in the [localization file](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings#L254).
+In order to change the name of the effect, you need to do it in the [localization file](../Example/Example/en.lproj/Localizable.strings#L254).
 
 ### 18. I want to turn off Drafts feature.
 
@@ -569,7 +569,7 @@ If you don't use optional frameworks, you should disable bitcode in order to suc
 There is no special language switching mechanism in the Video Editor SDK (VE SDK).
 
 Out of the box, the VE SDK includes support for two locales: English (default) and Russian. If you need to support any other locales, you can do it according to the standard iOS way. See how [Create locale directories and resource files](https://developer.apple.com/documentation/xcode/localization) for more details. After adding a new locale resource file into your application with integrated VE SDK, you need to re-define the VE SDK strings keys with new locale string values.
-To do that you need to add all needed string keys in the new locale `Localizable.strings` file. You can find the main VE SDK string keys you need in the [Configure screens](https://github.com/Banuba/ve-sdk-ios-integration-sample#Configure-screens) doc page. E.g. string keys of the Overlay screen you can find [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/overlayEditor_styles.md#string-resources).
+To do that you need to add all needed string keys in the new locale `Localizable.strings` file. You can find the main VE SDK string keys you need in the [Configure screens](https://github.com/Banuba/ve-sdk-ios-integration-sample#Configure-screens) doc page. E.g. string keys of the Overlay screen you can find [here](overlayEditor_styles.md#string-resources).
 The newly added locale will be applied after the device language is changed by system settings.
 
 ### 27. How can I change the extension of the exported video?
@@ -579,9 +579,9 @@ To save the video in the format you want, you just need to add the appropriate `
 let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
 ```
 
-See example in [sample](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/ViewController.swift#L171).
+See example in [sample](../Example/Example/ViewController.swift#L171).
 
-See all formats supported for video export [here](https://github.com/Banuba/ve-sdk-ios-integration-sample#supported-media-formats).
+See all formats supported for video export [here](integration.md#supported-media-formats).
 
 ### 28. How to set buttons for video modes?
 

@@ -42,7 +42,7 @@ Implement custom `UIViewController` inherited from `GalleryViewController`
         }
     ```
 
-- `configuration` contains UI configuration. All details you can find [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/gallery_styles.md)
+- `configuration` contains UI configuration. All details you can find [here](gallery_styles.md)
 - `selectionBehaviour` contains gallery settings
 
     ```swift
