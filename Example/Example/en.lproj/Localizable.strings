@@ -185,6 +185,9 @@
 /* Pictures not found by custom keyword */
 "No stickers found" = "No stickers found";
 
+/* Stickers search can not be performed due to missing API key */
+"Giphy API key missing" = "Stickers will appear here when you set up Giphy key";
+
 /* A heading showing that there are problems with the Internet connection */
 "Problems with internet" = "Problems with internet";
 
@@ -314,8 +317,8 @@
 /* Pixel static effect name */
 "com.banuba.editor.effect.name.pixelationstatic" = "Pixel Static";
 
-/* Pixelate effect name */
-"com.banuba.editor.effect.name.pixelate" = "Pixelate";
+/* Blur effect name */
+"com.banuba.editor.effect.name.blur" = "Blur";
 
 /* Stars effect name */
 "com.banuba.editor.effect.name.stars" = "Stars";
@@ -494,10 +497,10 @@
 "OverlayEditor.Sticker" = "Sticker";
 
 /* Add square blur button title */
-"OverlayEditor.Square.Pixelate" = "Square";
+"OverlayEditor.Square.Blur" = "Square";
 
-/* Add circle Pixelate button title */
-"OverlayEditor.Circle.Pixelate" = "Circle";
+/* Add circle Blur button title */
+"OverlayEditor.Circle.Blur" = "Circle";
 
 /* Cancel button title */
 "OverlayEditor.Cancel" = "Cancel";
@@ -686,7 +689,7 @@
 "com.banuba.recorder.link.title" = "Link";
 "com.banuba.recorder.color.title" = "Filter";
 "com.banuba.recorder.sticker.title" = "Gif";
-"com.banuba.recorder.pixalate.title" = "Pixelate";
+"com.banuba.recorder.blur.title" = "Blur";
 "com.banuba.recorder.text.title" = "Text";
 "com.banuba.recorder.time.title" = "Time";
 "com.banuba.recorder.sound.title" = "Music";
@@ -817,3 +820,7 @@
 
 /* Error if sharing application is not installed */
 "sharing.app.not.installed" = "Sorry the application is not installed";
+
+// MARK: - Expired license screen
+"com.banuba.expiredLicense.infoLabel" = "Video content creation is temporarily unavailable";
+"com.banuba.expiredLicense.cancelButtonTitle" = "Close";
