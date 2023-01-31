@@ -18,7 +18,7 @@
 [1.26.0](https://www.notion.so/vebanuba/1-26-0-5e65daee7e8c41e2bebbf4d8a50e1cc4)  
 [1.26.1](https://www.notion.so/vebanuba/1-26-1-0edacf053a88499cbb51e6f065274dd3)  
 [1.26.2](https://www.notion.so/vebanuba/1-26-2-2aa271695c974ac7b90799a0b2a108d9)  
-
+[1.26.3](https://www.notion.so/vebanuba/1-26-3-8c4fb0d732eb4f2582b3aaeab28ef399)
 
 ## Integration
 - [Requirements](#Requirements)
@@ -105,16 +105,15 @@ To use the face masks, you will also need the [Face AR SDK](https://www.banuba.c
 | 7 | BanubsSDK | 6,6 |	4,8 | 0,006 | 0 | 0,006 | 11,4 | 11,394 | 1,225 |
 | 8 | BanubaSDKServicing | 0,901 | 0,792 | 0,012 | 0 | 0,012 | 1,693 | 1,681 | 0,21 |
 | 9 | BanubaSDKSimple |	5,8 | 4,2 | 0,03 | 0 | 0,03 | 10 | 9,97 | 1,085 |
-| 10 | BanubaTokenStorageSDK | 0,73 | 0,65 | 0,012 | 0 | 0,012 | 1,38 |	1,368 |	0,175 |
-| 11 | BanubaUtilities | 9,4 | 7,2 | 0,011 | 0 | 0,011 | 16,6 | 16,589 | 3,5 |
-| 12 | VEEffectsSDK | 12,5 | 6,3 | 0,01 | 0 | 0,01 | 18,8 | 18,79 | 1,47 |
-| 13 | BanubaVideoEditorGallerySDK | 3,3 | 2,5 | 0,016 | 0,087 | 0,103 | 5,8 | 5,697 | 0,595 |
-| 14 | BanubaVideoEditorSDK | 48,3 | 31,7 | 2,8 | 2,9 | 5,7 | 80 | 74,3 | 8,715 |
-| 15 | BanubaVideoEditorTrimSDK | 1,9 |	1,6 | 0,09 | 0 | 0,09 |	3,5 | 3,41 | 0,42 |
-| 16 | BNBLicenseUtils | 3 | 3,5 | 3 | 0 | 3 | 6,5 | 3,5 | 1,005 |
-| 17 | VEExportSDK | 1,5 | 1,2 | 0,09 | 0 | 0,09 | 2,7 | 2,61 |	1,22 |
-| 18 | VEPlaybackSDK | 1,2 | 0,959 | 0,09 | 0 |	0,09 | 2,159 | 2,069 | 0,273 |
-| 19 | VideoEditor | 6,1 | 4,2 | 0,06 | 0,128 |	0,188 |	10,3 | 10,112 |	1,4 |
+| 10 | BanubaUtilities | 9,4 | 7,2 | 0,011 | 0 | 0,011 | 16,6 | 16,589 | 3,5 |
+| 11 | VEEffectsSDK | 12,5 | 6,3 | 0,01 | 0 | 0,01 | 18,8 | 18,79 | 1,47 |
+| 12 | BanubaVideoEditorGallerySDK | 3,3 | 2,5 | 0,016 | 0,087 | 0,103 | 5,8 | 5,697 | 0,595 |
+| 13 | BanubaVideoEditorSDK | 48,3 | 31,7 | 2,8 | 2,9 | 5,7 | 80 | 74,3 | 8,715 |
+| 14 | BanubaVideoEditorTrimSDK | 1,9 |	1,6 | 0,09 | 0 | 0,09 |	3,5 | 3,41 | 0,42 |
+| 15 | BNBLicenseUtils | 3 | 3,5 | 3 | 0 | 3 | 6,5 | 3,5 | 1,005 |
+| 16 | VEExportSDK | 1,5 | 1,2 | 0,09 | 0 | 0,09 | 2,7 | 2,61 |	1,22 |
+| 17 | VEPlaybackSDK | 1,2 | 0,959 | 0,09 | 0 |	0,09 | 2,159 | 2,069 | 0,273 |
+| 18 | VideoEditor | 6,1 | 4,2 | 0,06 | 0,128 |	0,188 |	10,3 | 10,112 |	1,4 |
 
 You can either include the filters in the app or have users download them from the [AR cloud](https://www.banuba.com/facear-sdk/face-filters) to decrease the app size.
 
@@ -146,10 +145,7 @@ See the **default bitrate (kbps)** for exported video (without audio) in the tab
 ## Token
 We offer a free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
-There are three options where to put your token:
-- Inside the app: [read here](/Example/Example/AppDelegate.swift#L9).
-- In the Firebase (what will allow your users not to update the app every time the token is updated): [Firebase setup guide](https://firebase.google.com/docs/database/android/start), [SDK configuration for Firebase](token_on_firebase.md).
-- In the remote server: [SDK configuration for this case](remote_token_api.md).
+After receiving a token you can [initialize BanubaVideoEditor](../Example/Example/ViewController.swift#L86) with this token.
 
 ## Passing Apple Store review
 Unfortunately Apple Store may reject your app due to use of TrueDepth API.  
