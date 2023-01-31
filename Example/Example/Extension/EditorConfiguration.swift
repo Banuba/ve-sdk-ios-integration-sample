@@ -40,6 +40,11 @@ extension ViewController {
         identifier: .color,
         imageConfiguration: ImageConfiguration(imageName: "ic_filters_off"),
         selectedImageConfiguration: ImageConfiguration(imageName: "ic_filters_on")
+      ),
+      AdditionalEffectsButtonConfiguration(
+        identifier: .blur,
+        imageConfiguration: ImageConfiguration(imageName: "blur_inactive"),
+        selectedImageConfiguration: ImageConfiguration(imageName: "blur_active")
       )
     ]
     

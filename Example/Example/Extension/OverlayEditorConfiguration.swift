@@ -30,6 +30,24 @@ extension ViewController {
         titleColor: .white,
         font: UIFont.systemFont(ofSize: 14.0),
         imageName: "ic_AddSticker"
+      ),
+      
+      OverlayAddButtonConfig(
+        type: .blur,
+        title: "Circle",
+        titleColor: .white,
+        font: UIFont.systemFont(ofSize: 14.0),
+        imageName: "circle_blur",
+        drawableFigure: .circle
+      ),
+      
+      OverlayAddButtonConfig(
+        type: .blur,
+        title: "Square",
+        titleColor: .white,
+        font: UIFont.systemFont(ofSize: 14.0),
+        imageName: "square_blur",
+        drawableFigure: .square
       )
     ]
     
