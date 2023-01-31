@@ -96,6 +96,9 @@
 /* Pictures not found by custom keyword */
 "No stickers found" = "Стикеры не найдены";
 
+/* Stickers search can not be performed due to missing API key */
+"Giphy API key missing" = "Здесь появятся стикеры, когда вы укажите ключ Giphy";
+
 /*'Seconds' for maximum */
 "Max length %d sec" = "Максимум %d сек";
 
@@ -310,8 +313,8 @@
 /* Pixel static effect name */
 "com.banuba.editor.effect.name.pixelationstatic" = "Pixel Static";
 
-/* Pixelate effect name */
-"com.banuba.editor.effect.name.pixelate" = "Pixelate";
+/* Blur effect name */
+"com.banuba.editor.effect.name.blur" = "Blur";
 
 /* Stars effect name */
 "com.banuba.editor.effect.name.stars" = "Stars";
@@ -489,10 +492,10 @@
 "OverlayEditor.Sticker" = "Стикер";
 
 /* Add square blur button title */
-"OverlayEditor.Square.Pixelate" = "Квадрат";
+"OverlayEditor.Square.Blur" = "Квадрат";
 
-/* Add circle Pixelate button title */
-"OverlayEditor.Circle.Pixelate" = "Круг";
+/* Add circle Blur button title */
+"OverlayEditor.Circle.Blur" = "Круг";
 
 /* Cancel button title */
 "OverlayEditor.Cancel" = "Отменить";
@@ -677,7 +680,7 @@
 "com.banuba.recorder.link.title" = "Ссылка";
 "com.banuba.recorder.color.title" = "Фильтры";
 "com.banuba.recorder.sticker.title" = "Стикеры";
-"com.banuba.recorder.pixalate.title" = "Блюр";
+"com.banuba.recorder.blur.title" = "Блюр";
 "com.banuba.recorder.text.title" = "Текст";
 "com.banuba.recorder.time.title" = " Скорость";
 "com.banuba.recorder.sound.title" = "Музыка";
@@ -808,3 +811,7 @@
 
 /* Error if sharing application is not installed */
 "sharing.app.not.installed" = "К сожалению, приложение не установлено";
+
+// MARK: - Expired license screen
+"com.banuba.expiredLicense.infoLabel" = "Создание видео временно недоступно";
+"com.banuba.expiredLicense.cancelButtonTitle" = "Закрыть";
