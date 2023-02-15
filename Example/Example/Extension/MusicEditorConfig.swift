@@ -37,6 +37,13 @@ extension ViewController {
         title: "Record",
         titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
         imageName: "ic_voice_recording"
+      ),
+      EditButtonConfig(
+        font: UIFont.systemFont(ofSize: 14.0),
+        type: .volume,
+        title: "Volume",
+        titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+        imageName: "ic-volume"
       )
     ]
     
