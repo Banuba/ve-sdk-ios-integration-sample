@@ -53,10 +53,10 @@
 ## Requirements
 This is what you need to run the AI Video Editor SDK
 
-- iPhone devices 6+
+- iPhone devices 6s+
 - Swift 5+
-- Xcode 13.0+
-- iOS 12.0+
+- Xcode 14.0+
+- iOS 13.0+
   Unfortunately, It isn't optimized for iPads.
 
 ## Framework dependencies
