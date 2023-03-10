@@ -27,7 +27,7 @@ Feel free to [contact us](https://www.banuba.com/faq/kb-tickets/new) if you have
 6. Run sample application in XCode
 
 ### Quickstart Guide
-Our [Quickstart Guide](mdDocs/integration.md) will help you to quickly integrate and customize Video Editor SDK into your iOS project.
+Our [Quickstart Guide](mdDocs/quickstart.md) will help you to quickly integrate and customize Video Editor SDK into your iOS project.
 
 ## Requirements
 This is what you need to run the AI Video Editor SDK
