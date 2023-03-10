@@ -1,35 +1,8 @@
-## Banuba Video Editor SDK on iOS
+# Quickstart Guide
 
-## Releases
- 
-[1.0.17](https://www.notion.so/vebanuba/1-0-17-24148881b66d48a5a7daa0a891a4cc3f)  
-[1.0.18](https://www.notion.so/vebanuba/1-0-18-d30441bdb9c44bfcb7f12d20b69a9977)  
-[1.0.19](https://www.notion.so/vebanuba/1-19-0-7954637332964fc6ba87f477db112fdf)  
-[1.20.0](https://www.notion.so/vebanuba/1-20-0-39fe7f401a4b49ce9697e3abb8bf56b7)  
-[1.21.0](https://www.notion.so/vebanuba/1-21-0-6220edd4fd244cf28a997825a369203b)  
-[1.22.0](https://www.notion.so/vebanuba/1-22-0-f1256f7ede8a4595a0a8c82b75cc98f8)  
-[1.23.0](https://www.notion.so/vebanuba/1-23-4db3e390e3e54b93b54514ca6ea5a7b4)  
-[1.24.0](https://www.notion.so/vebanuba/1-24-53aa73ae3d3b4c268e5865a4523f8965)  
-[1.24.1](https://www.notion.so/vebanuba/1-24-1-e58f326d4be44a05b63634a3cccd39dc)  
-[1.24.2](https://www.notion.so/vebanuba/1-24-2-f8713ca9230746cbaeefa7244945a071)  
-[1.25.0](https://www.notion.so/vebanuba/1-25-0-c164f6893eda4ad99d8c02a7566f7f45)  
-[1.25.1](https://www.notion.so/vebanuba/1-25-1-393368bbe1ab4c0dbf480a8c30ac5904)  
-[1.25.2](https://www.notion.so/vebanuba/1-25-2-937992cc6249447b81a4ca218a4ef097)  
-[1.26.0](https://www.notion.so/vebanuba/1-26-0-5e65daee7e8c41e2bebbf4d8a50e1cc4)  
-[1.26.1](https://www.notion.so/vebanuba/1-26-1-0edacf053a88499cbb51e6f065274dd3)  
-[1.26.2](https://www.notion.so/vebanuba/1-26-2-2aa271695c974ac7b90799a0b2a108d9)  
-[1.26.3](https://www.notion.so/vebanuba/1-26-3-8c4fb0d732eb4f2582b3aaeab28ef399)
-
-## Integration
-- [Requirements](#Requirements)
-- [Framework dependencies](#Framework-dependencies)
-- [Dependencies](#Dependencies)
-- [SDKs size](#SDKs-size)
-- [Supported media formats](#Supported-media-formats)
-- [Token](#Token)
-- [Passing Apple Store review](#Passing-Apple-Store-review)
+- [Prerequisites](#Prerequisites)
+- [Concepts](#Concepts)
 - [Connecting with AR cloud](#Connecting-with-AR-cloud)
-- [What can you customize?](#What-can-you-customize)
 - [Face AR](#Face-AR)
 - [Integration](#Integration)
     + [Step 1. Setup SDK dependencies with SPM or Cocoapods](#Step-1-Setup-SDK-dependencies-with-SPM-or-Cocoapods)
@@ -46,81 +19,22 @@
     + [Configure additional Video Editor SDK features](#Configure-additional-Video-Editor-SDK-features)
     + [Icons](#Icons)
     + [Localization](#Localization)
-- [Analytics](#Analytics)
-- [FAQ](faq.md)
-- [Third party libraries](#Third-party-libraries)
+- [Advanced integration](#Advanced-integration)
+- [FAQ](#FAQ.md)
+- [Dependencies and licenses](#Dependencies-and-licenses)
+- [Releases](#Releases)
 
-## Requirements
-This is what you need to run the AI Video Editor SDK
+## Prerequisites
+:exclamation: The license token **IS REQUIRED** to use Video Editor SDK in your app.  
+Please check [Installation](../README.md#Installation) out guide if the license token is not set.  
+Use the license token to [start Video Editor](#Step-2-Start-Video-Editor-from-ViewController)
 
-- iPhone devices 6s+
-- Swift 5+
-- Xcode 14.0+
-- iOS 13.0+
-  Unfortunately, It isn't optimized for iPads.
-
-## Framework dependencies
-
-Our SDK contains dependencies on native libraries, as well as third-party ones.
-Below are listed our native frameworks dependencies:
-
-1. Foundation
-1. AV Foundation
-1. UI Kit
-1. AV Kit
-1. Core media
-1. Core video
-1. Core graphics
-1. GL Kit
-1. Photos
-1. OpenGLES
-1. MetalKit
-1. SystemConfiguration
-1. OSLog
-1. GLProgram
-1. MediaPlayer
-1. Accelerate
-
-Dependencies on third-party libraries and their licenses you could view [here](3rd_party_licences.md).
-
-## Dependencies
-
-To use the face masks, you will also need the [Face AR SDK](https://www.banuba.com/facear-sdk/face-filters). It is optional, however, the other features will work without it.
-
-## SDKs size
-
-| Options | Mb      | Note |
-| -------- | --------- | ----- |
-| :white_check_mark: Face AR SDK + bitcode enabled  | 60 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
-| :x: Face AR SDK + bitcode enabled | 47 | no AR effects  |
-
-|№ | Moduls | arm64. Mb| x86_64. Mb | CodeResources. Mb | assets. Mb | Total resources. Mb | xcframework. Mb | Size without resources. Mb | Approximate size in AppStore. Mb |
-| -------- | --------- | ----- | -------- | --------- | ----- | -------- | --------- | ----- | -------- |
-| 1 | BanubaARCloudSDK | 2,3 |	1,1 | 0,1 | 0 |	0,1 | 3,4 | 3,3 | 1,2 |
-| 2 | BanubaAudioBrowserSDK | 6,9 | 8,1 | 7 | 0,367 | 7,367 | 15 | 7,633 | 1,61 |
-| 3 | BanubaEffectPlayer | 108 | 58 | 70 | 0 | 70 | 166 | 96 | 37,45 |
-| 4 | BanubaLicenseServicingSDK | 1,6 | 1,3 | 0,012 | 0 | 0,012 | 2,9 | 2,888 | 0,42 |
-| 5 | BanubaMusicEditorSDK | 9,1 | 6,6 | 0,012 | 0,187 | 0,199 | 15,7 | 15,501 | 1,715 |
-| 6 | BanubaOverlayEditorSDK | 17 | 7,5 | 0,014 | 0,88 | 0,894 | 24,5 |	23,606 | 2,003 |
-| 7 | BanubsSDK | 6,6 |	4,8 | 0,006 | 0 | 0,006 | 11,4 | 11,394 | 1,225 |
-| 8 | BanubaSDKServicing | 0,901 | 0,792 | 0,012 | 0 | 0,012 | 1,693 | 1,681 | 0,21 |
-| 9 | BanubaSDKSimple |	5,8 | 4,2 | 0,03 | 0 | 0,03 | 10 | 9,97 | 1,085 |
-| 10 | BanubaUtilities | 9,4 | 7,2 | 0,011 | 0 | 0,011 | 16,6 | 16,589 | 3,5 |
-| 11 | VEEffectsSDK | 12,5 | 6,3 | 0,01 | 0 | 0,01 | 18,8 | 18,79 | 1,47 |
-| 12 | BanubaVideoEditorGallerySDK | 3,3 | 2,5 | 0,016 | 0,087 | 0,103 | 5,8 | 5,697 | 0,595 |
-| 13 | BanubaVideoEditorSDK | 48,3 | 31,7 | 2,8 | 2,9 | 5,7 | 80 | 74,3 | 8,715 |
-| 14 | BanubaVideoEditorTrimSDK | 1,9 |	1,6 | 0,09 | 0 | 0,09 |	3,5 | 3,41 | 0,42 |
-| 15 | BNBLicenseUtils | 3 | 3,5 | 3 | 0 | 3 | 6,5 | 3,5 | 1,005 |
-| 16 | VEExportSDK | 1,5 | 1,2 | 0,09 | 0 | 0,09 | 2,7 | 2,61 |	1,22 |
-| 17 | VEPlaybackSDK | 1,2 | 0,959 | 0,09 | 0 |	0,09 | 2,159 | 2,069 | 0,273 |
-| 18 | VideoEditor | 6,1 | 4,2 | 0,06 | 0,128 |	0,188 |	10,3 | 10,112 |	1,4 |
-
-You can either include the filters in the app or have users download them from the [AR cloud](https://www.banuba.com/facear-sdk/face-filters) to decrease the app size.
-
-## Supported media formats
-| Audio      | Video      | Images      |
-| ---------- | ---------  | ----------- |
-|.mp3, .aac, .wav, <br>.m4a, .flac, .aiff |.mp4, .mov, .m4v| .bmp, .gif, .heic, <br>.jpeg, .jpg, .png, .tiff
+## Concepts
+- Export - the process of making video in video editor.
+- Slideshow - the feature that allows to create short video from single or multiple images.
+- PIP - short Picture-in-Picture feature.
+- Trimmer - trimmer screen where the user can trim, merge, change aspects
+- Editor - editor the screen where the user can manage effects and audio. Normally the next screen after trimmer.
 
 ## Camera recording video quality params
 To be able to use your own quality parametrs please follow this [guide](video_resolution_configuration.md).
@@ -142,36 +56,9 @@ See the **default bitrate (kbps)** for exported video (without audio) in the tab
 | --------------- | --------------- | ---------------- | -------------- | ---------------- |
 |              800|             2000|              2000|            4000|              6400|
 
-## Token
-We offer a free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
-
-After receiving a token you can [initialize BanubaVideoEditor](../Example/Example/ViewController.swift#L86) with this token.
-
-## Passing Apple Store review
-Unfortunately Apple Store may reject your app due to use of TrueDepth API.  
-Please [follow guidelines](passing_apple_review.md) to successfully pass Apple Store review.
-
 ## Connecting with AR cloud
 
 To decrease the app size, you can connect with our servers and pull AR filters from there. The effects will be downloaded whenever a user needs them. Please check out [step-by-step guide](ar_cloud.md) guide to configure AR Cloud in the Video Editor SDK.
-
-## What can you customize?
-
-We understand that the client should have options to brand video editor to bring its own experience to the market. Therefore we provide list of options to customize:
-
-:white_check_mark: Use your branded icons. [See details](#Configure-screens)  
-:white_check_mark: Use you branded colors. [See details](#Configure-screens)  
-:white_check_mark: Change text styles i.e. font, color. [See details](#Configure-screens)  
-:white_check_mark: Masks, video effects and filters order. [See details](#Configure-masks-video-effects-and-filters-order)  
-:white_check_mark: Localize and change text resources. Default locale is :us:  
-:white_check_mark: Make content you want i.e. a number of video with different resolutions and durations, an audio file. [See details](#Configure-export-flow)  
-:white_check_mark: Customize video recording duration behavior. [See details](video_duration_configuration.md)   
-:white_check_mark: Settings for the camera. [See details](config_camera.md#camera-config)   
-:x: Change layout **except** [Camera and Postprocessing screens](faq.md#10-i-want-to-change-screens-layout)
-
-:x: Change screen order
-
-:exclamation: We do custom UX/UI changes as a separate contract. Please contact our sales@banuba.com.
 
 ### Face AR
 
@@ -570,9 +457,54 @@ Output example:
 }
 ```
 
+## Advanced integration
+Video editor has built in UI/UX experience and provides a number of customizations you can use to meet your requirements.
+
+**AVAILABLE**  
+:white_check_mark: Use your branded icons. [See details](#Configure-screens)  
+:white_check_mark: Use you branded colors. [See details](#Configure-screens)  
+:white_check_mark: Change text styles i.e. font, color. [See details](#Configure-screens)  
+:white_check_mark: Localize and change text resources. Default locale is :us:  
+:white_check_mark: Make content you want i.e. a number of video with different resolutions  and durations, an audio file. [See details](#Configure-export-flow)  
+:white_check_mark: Masks and filters order. [See details](#Configure-masks-video-effects-and-filters-order)
+
+NOT AVAILABLE  
+:x: Change layout  
+:x: Change order of screens after entry point
+
+Learn [Advanced integration guide](advanced_integration.md) to know more about features and customizations.
 
 ## FAQ
-Please visit our [FAQ page](faq.md) to find more technical answers to your questions.
+Visit [FAQ](faq.md) if you are experiencing any issues with an integration.
 
-## Third party libraries
-[View](3rd_party_licences.md) information about third party libraries.
+## Dependencies and licenses
+1. [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters) ```Optional```.
+2. Foundation
+3. AV Foundation
+4. UI Kit
+5. AV Kit
+6. Core media
+7. Core video
+8. Core graphics
+9. GL Kit
+10. Photos
+11. OpenGLES
+12. MetalKit
+13. SystemConfiguration
+14. OSLog
+15. GLProgram
+16. MediaPlayer
+17. Accelerate
+
+[See all dependencies and licenses](3rd_party_licences.md)
+
+## Releases 
+[1.25.0](https://www.notion.so/vebanuba/1-25-0-c164f6893eda4ad99d8c02a7566f7f45)    
+[1.25.1](https://www.notion.so/vebanuba/1-25-1-393368bbe1ab4c0dbf480a8c30ac5904)  
+[1.25.2](https://www.notion.so/vebanuba/1-25-2-937992cc6249447b81a4ca218a4ef097)  
+[1.26.0](https://www.notion.so/vebanuba/1-26-0-5e65daee7e8c41e2bebbf4d8a50e1cc4)    
+[1.26.1](https://www.notion.so/vebanuba/1-26-1-0edacf053a88499cbb51e6f065274dd3)   
+[1.26.2](https://www.notion.so/vebanuba/1-26-2-2aa271695c974ac7b90799a0b2a108d9)   
+[1.26.3](https://www.notion.so/vebanuba/1-26-3-8c4fb0d732eb4f2582b3aaeab28ef399)  
+[1.26.4](https://www.notion.so/vebanuba/1-26-4-294c72f4be5944938a4e506c65435333)  
+[1.26.5](https://www.notion.so/vebanuba/1-26-5-91785d18a6c64c6e86dc48ca06e3d458)

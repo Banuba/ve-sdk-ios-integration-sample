@@ -1,36 +1,45 @@
 # FAQ  
 These are the answers to the most common questions asked about our SDK.
 
-1. [How do I start/stop recording with a tap?](#1-how-do-i-startstop-recording-with-a-tap)
-2. [How do I add an AR mask to the app (without AR cloud).](#2how-do-i-add-an-ar-mask-to-the-app-without-ar-cloud)
-3. [How do I start the Video Editor with a preselected audio track?](#3-how-do-i-start-the-video-editor-with-a-preselected-audio-track)
-4. [How do I use the Video Editor several times from different entry points?](#4-how-do-i-use-the-video-editor-several-times-from-different-entry-points)
-5. [How do I add a color filter (LUT)?](#5-how-do-i-add-a-color-filter-lut)
-6. [I want to enabled slideshow animation.](#6-i-want-to-enable-slideshow-animation)
-7. [I want to change cursor color.](#7-i-want-to-change-cursor-color)
-8. [I want to change progress bar position.](#8-i-want-to-change-progress-bar-position)
-9. [How does video editor work when token expires?](#9-how-does-video-editor-work-when-token-expires)
-10. [Which buttons available if Face AR disabled?](#10-which-buttons-available-if-face-ar-disabled)
-11. [I want to change music button position.](#11-i-want-to-change-music-button-position)
-12. [How can I get a track name of the audio used in my video after export?](#12-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
-13. [I want to change the font.](#13-i-want-to-change-the-font)
-14. [I want to check whether my token is expired.](#14-i-want-to-check-whether-my-token-is-expired)
-15. [The file “luts” couldn’t be opened because there is no such file.](#15-the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
-16. [I want to add audio filters.](#16-i-want-to-add-audio-filters)
-17. [I want to change icons and name for effects.](#17-i-want-to-change-icons-and-name-for-effects)
-18. [I want to turn off Drafts feature.](#18-i-want-to-turn-off-drafts-feature)
-19. [I want to turn off Cover screen.](#19-i-want-to-turn-off-cover-screen)
-20. [I want to change visible tabs in gallery.](#20-i-want-to-change-visible-tabs-in-gallery)
-21. [I want to get exported video metadata.](#21-i-want-to-get-exported-video-metadata)
-22. [I want to change codec type from h264 to h265.](#22-i-want-to-change-codec-type-from-h264-to-h265)
-23. [How do I specify the video file saving directory?](#23-how-do-i-specify-the-video-file-saving-directory)
-24. [How do I change the video duration?](#24-how-do-i-change-the-video-duration)
-25. [The problem of using optional frameworks and bitcode together.](#25-the-problem-of-using-optional-frameworks-and-bitcode-together)
-26. [How do I change the launguage (how do I add new locale support)?](#26-how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
-27. [How can I change the extension of the exported video?](#27-how-can-i-change-the-extension-of-the-exported-video)
-28. [How to set buttons for video modes?](#28-how-to-set-buttons-for-video-modes)
+- [What is the size of Video Editor SDK size?](#What-is-the-size-of-Video-Editor-SDK-size?)
+- [How do I start/stop recording with a tap?](#how-do-i-startstop-recording-with-a-tap)
+- [How do I add an AR mask to the app (without AR cloud).](#how-do-i-add-an-ar-mask-to-the-app-without-ar-cloud)
+- [How do I start the Video Editor with a preselected audio track?](#how-do-i-start-the-video-editor-with-a-preselected-audio-track)
+- [How do I use the Video Editor several times from different entry points?](#how-do-i-use-the-video-editor-several-times-from-different-entry-points)
+- [How do I add a color filter (LUT)?](#how-do-i-add-a-color-filter-lut)
+- [I want to enabled slideshow animation.](#i-want-to-enable-slideshow-animation)
+- [I want to change cursor color.](#i-want-to-change-cursor-color)
+- [I want to change progress bar position.](#i-want-to-change-progress-bar-position)
+- [How does video editor work when token expires?](#how-does-video-editor-work-when-token-expires)
+- [Which buttons available if Face AR disabled?](#which-buttons-available-if-face-ar-disabled)
+- [I want to change music button position.](#i-want-to-change-music-button-position)
+- [How can I get a track name of the audio used in my video after export?](#12-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
+- [I want to change the font.](#i-want-to-change-the-font)
+- [I want to check whether my token is expired.](#i-want-to-check-whether-my-token-is-expired)
+- [The file “luts” couldn’t be opened because there is no such file.](#15-the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
+- [I want to add audio filters.](#i-want-to-add-audio-filters)
+- [I want to change icons and name for effects.](#i-want-to-change-icons-and-name-for-effects)
+- [I want to turn off Drafts feature.](#i-want-to-turn-off-drafts-feature)
+- [I want to turn off Cover screen.](#i-want-to-turn-off-cover-screen)
+- [I want to change visible tabs in gallery.](#i-want-to-change-visible-tabs-in-gallery)
+- [I want to get exported video metadata.](#i-want-to-get-exported-video-metadata)
+- [I want to change codec type from h264 to h265.](#i-want-to-change-codec-type-from-h264-to-h265)
+- [How do I specify the video file saving directory?](#how-do-i-specify-the-video-file-saving-directory)
+- [How do I change the video duration?](#how-do-i-change-the-video-duration)
+- [The problem of using optional frameworks and bitcode together.](#the-problem-of-using-optional-frameworks-and-bitcode-together)
+- [How do I change the launguage (how do I add new locale support)?](#how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
+- [How can I change the extension of the exported video?](#how-can-i-change-the-extension-of-the-exported-video)
+- [How to set buttons for video modes?](#how-to-set-buttons-for-video-modes)
 
-### 1. How do I start/stop recording with a tap?
+### What is the size of Video Editor SDK size?
+| Options | Mb      | Note |
+| -------- | --------- | ----- |
+| :white_check_mark: Face AR SDK + bitcode enabled  | 60 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
+| :x: Face AR SDK + bitcode enabled | 47 | no AR effects  |
+
+You can either include the AR filters in the app or have users download them from the [AR cloud](#Configure-AR-cloud) to dramatically decrease the app size.
+
+### How do I start/stop recording with a tap?
   
 By default, the user must hold the “record” button to film and release it to stop filming. 
 
@@ -42,7 +51,7 @@ To change that, set the **captureButtonMode** property of the RecorderConfigurat
  config.recorderConfiguration.captureButtonMode = .video
 ```
 
-### 2.How do I add an AR mask to the app (without AR cloud)
+### How do I add an AR mask to the app (without AR cloud)
 
 If you don’t want to pull the masks from the backend, you can include them in the app itself. 
 
@@ -50,7 +59,7 @@ A mask is a bundle of files within a specific folder in the YourProject/bundleEf
 
  **Note** Please, don’t change the name of the bundleEffects folder, otherwise, the app will not work. If it doesn’t exist already, create it manually.
 
-### 3. How do I start the Video Editor with a preselected audio track?
+### How do I start the Video Editor with a preselected audio track?
 
 To do so, add the MediaTrack instance as a parameter to the  `VideoEditorLaunchConfig` which used for starting video editor method.
 
@@ -68,7 +77,7 @@ videoEditorSDK?.presentVideoEditor(
 )
 ```
 
-### 4. How do I use the Video Editor several times from different entry points?
+### How do I use the Video Editor several times from different entry points?
 
 Before you want to use VideoEditor again, you need to deinitialize your current editor instance in your [entry point class scope](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L675). You need to set 'yourVideoEditorSdkInstance' = nil after following funcs called([done](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L660) and [cancel](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/d9733e78a6a752dd8fad849f6aa6d5553eb07f56/Example/Example/ViewController.swift#L678)).
 
@@ -112,7 +121,7 @@ For example on your tap button action:
 }
 ```
 
-### 5. How do I add a color filter (LUT)?
+### How do I add a color filter (LUT)?
 
 Color Filters (LUTs) are special graphics files that are placed in the / [luts directory](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) inside the main project folder.
 
@@ -126,7 +135,7 @@ The key for the translation string must start with ```com.banuba.filter.name.{lu
 
 
 
-### 6. I want to enable slideshow animation 
+### I want to enable slideshow animation 
 
 To be able to turn off slideshow animation use following property of ```RecorderConfiguration``` and ```CombinedGalleryConfiguration``` entities.
 
@@ -136,7 +145,7 @@ let config = VideoEditorConfig()
 config.combinedGalleryConfiguration.isPhotoSequenceAnimationEnabled = true
 config.recorderConfiguration.isPhotoSequenceAnimationEnabled = true
 ```
-### 7. I want to change cursor color
+### I want to change cursor color
 
 All you need is just to set your color into ```cursorColor``` parameter in ```MainOverlayViewControllerConfig``` entity.
 
@@ -146,7 +155,7 @@ let config = VideoEditorConfig()
 config.overlayEditorConfiguration.mainOverlayViewControllerConfig.cursorColor = .white
 ```
 
-### 8. I want to change progress bar position
+### I want to change progress bar position
 
 Progress bar position contains two types of layout:
 - top
@@ -160,7 +169,7 @@ let config = VideoEditorConfig()
 config.recorderConfiguration.progressBarPosition = .top
 ```
 
-### 9. How does video editor work when token expires?
+### How does video editor work when token expires?
 
 [Token](https://github.com/Banuba/ve-sdk-android-integration-sample#token) provided by sales managers has an expiration term to protect Video Editor SDK from malicious access. When the token expires the following happens:
  - video resolution will be lowered to 360p on camera, after trimmer and after export
@@ -172,7 +181,7 @@ config.recorderConfiguration.progressBarPosition = .top
 
  Please keep your licence up to date to avoid unwanted behavior.
  
- ### 10. Which buttons available if Face AR disabled?
+ ### Which buttons available if Face AR disabled?
  
  AdditionalEffectsButtons contains options set which describes buttons identifiers. 
  
@@ -194,7 +203,7 @@ config.recorderConfiguration.progressBarPosition = .top
  - time
  - color
 
-### 11. I want to change music button position.
+### I want to change music button position.
 
 The music button consists of three positions:
 
@@ -220,7 +229,7 @@ config.recorderConfiguration.additionalEffectsButtons = [
 ] 
 ```
 
-### 12. How can I get a track name of the audio used in my video after export?
+### How can I get a track name of the audio used in my video after export?
 ```swift
 /// Video Editor main entity and entry point.
 /// Can present and hide root view controller.
@@ -261,7 +270,7 @@ public var musicTrack: MediaTrack? { get }
 ...
 }
 ```
-### 13. I want to change the font
+### I want to change the font
 
 You can change the font for the whole video editor by calling in `VideoEditorConfig` this method:
  
@@ -297,7 +306,7 @@ or change for each screen separately by calling the appropriate methods:
 
 Changing the font does not affect its size. The font size will be taken by default or specified by you in the entity configuration.
 
-### 14. I want to check whether my token is expired.
+### I want to check whether my token is expired.
 
 Starting from '1.0.18' version it is available to check if token is expired.
 
@@ -327,13 +336,13 @@ self.loadToken { token in
 }
 ```
 
-### 15. The file “luts” couldn’t be opened because there is no such file.
+### The file “luts” couldn’t be opened because there is no such file.
 
 This error occurs because your application bundle doesn't contains required luts folder.
 
 You need to copy [luts](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) folder to your project.
 
-### 16. I want to add audio filters 
+### I want to add audio filters 
 
 Filters availability depends on the token. However, in order for them to be available, you need to add an implementation of the ```VoiceFilterProvider``` entity.
 
@@ -398,7 +407,7 @@ Then the instance of the ExampleVoiceFilterProvider needs to be passed to the co
   config.musicEditorConfiguration.audioTrackLineEditControllerConfig.voiceFilterProvider = ExampleVoiceFilterProvider()
 ```
 
-### 17. I want to change icons and name for effects.
+### I want to change icons and name for effects.
 
 The name of the icon for the effect must match the identifier of the effect.
 Below is a table with the name, ID and icon of the default effect.
@@ -433,7 +442,7 @@ Below is a table with the name, ID and icon of the default effect.
 
 In order to change the name of the effect, you need to do it in the [localization file](../Example/Example/en.lproj/Localizable.strings#L254).
 
-### 18. I want to turn off Drafts feature.
+### I want to turn off Drafts feature.
 
 To turn off Drafts feature just disable it in ```FeatureConfiguration``` entity:
 
@@ -443,7 +452,7 @@ To turn off Drafts feature just disable it in ```FeatureConfiguration``` entity:
   config.featureConfiguration.draftsConfig = .disabled
 ```
 
-### 19. I want to turn off Cover screen.
+### I want to turn off Cover screen.
 
 To turn off Cover screen just disable it in ```FeatureConfiguration``` entity:
 
@@ -453,7 +462,7 @@ To turn off Cover screen just disable it in ```FeatureConfiguration``` entity:
   config.featureConfiguration.isVideoCoverSelectionEnabled = false
 ```
 
-### 20. I want to change visible tabs in gallery
+### I want to change visible tabs in gallery
 
 To setup visible tabs for gallery just configure it in ```CombinedGalleryConfiguration``` entity:
 
@@ -463,7 +472,7 @@ To setup visible tabs for gallery just configure it in ```CombinedGalleryConfigu
   config.combinedGalleryConfiguration.visibleTabsInGallery = [.video, .photo]
 ```
 
-### 21. I want to get exported video metadata
+### I want to get exported video metadata
 
 In order to find out which filter, effects, masks and music was applied to the video, you need to refer to the instance of the entity ```BanubaVideoEditor```.
 
@@ -487,7 +496,7 @@ let videoMusicTrack = videoEditorSDK?.musicTrack
 // to get music tracks from editor screen
 let videoTracks = videoEditorSDK?.musicMetadata?.tracks
 ```
-### 22. I want to change codec type from h264 to h265.
+### I want to change codec type from h264 to h265.
 
 All you need is just to set ```useHEVCCodecIfPossible``` to ```true``` in ```VideoEditorConfig, ExportVideoInfo or ExportVideoConfiguration ``` entity.
 The first one you need when you create ```BanubaVideoEditor```, two last ones - when you prepare a video to export.
@@ -514,7 +523,7 @@ The first one you need when you create ```BanubaVideoEditor```, two last ones - 
   )
 ```
 
-### 23. How do I specify the video file saving directory?
+### How do I specify the video file saving directory?
 
 In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
 
@@ -529,7 +538,7 @@ In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
 ]
 ```
 
-### 24. How do I change the video duration?
+### How do I change the video duration?
 
 To setup video duration just configure it in ```VideoEditorDurationConfig``` entity:
 
@@ -556,7 +565,7 @@ To setup video duration just configure it in ```VideoEditorDurationConfig``` ent
 }
 ```
 
-### 25. The problem of using optional frameworks and bitcode together.
+### The problem of using optional frameworks and bitcode together.
 
 Now you can enable bitcode in your project only if it includes all VideoEditor frameworks(optional and required). 
 
@@ -564,7 +573,7 @@ These are restrictions on the use of bitcode by Apple and at the moment it canno
 
 If you don't use optional frameworks, you should disable bitcode in order to successfully upload your app to the Apple Connect.
 
-### 26. How do I change the launguage (how do I add new locale support)?
+### How do I change the launguage (how do I add new locale support)?
 
 There is no special language switching mechanism in the Video Editor SDK (VE SDK).
 
@@ -572,7 +581,7 @@ Out of the box, the VE SDK includes support for two locales: English (default) a
 To do that you need to add all needed string keys in the new locale `Localizable.strings` file. You can find the main VE SDK string keys you need in the [Configure screens](https://github.com/Banuba/ve-sdk-ios-integration-sample#Configure-screens) doc page. E.g. string keys of the Overlay screen you can find [here](overlayEditor_styles.md#string-resources).
 The newly added locale will be applied after the device language is changed by system settings.
 
-### 27. How can I change the extension of the exported video?
+### How can I change the extension of the exported video?
 
 To save the video in the format you want, you just need to add the appropriate ```PathComponent``` when creating the video URL.
 ```swift
@@ -583,7 +592,7 @@ See example in [sample](../Example/Example/ViewController.swift#L171).
 
 See all formats supported for video export [here](integration.md#supported-media-formats).
 
-### 28. How to set buttons for video modes?
+### How to set buttons for video modes?
 
 Necessary modes for shooting must be specified in the array ```captureButtonModes```.
 ```swift
