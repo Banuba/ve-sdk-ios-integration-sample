@@ -1,7 +1,7 @@
 import UIKit
 import BanubaVideoEditorSDK
 import BanubaMusicEditorSDK
-import BanubaOverlayEditorSDK
+  
 import VideoEditor
 import AVFoundation
 import AVKit
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
   
   // MARK: - VideoEditorSDK
   private var videoEditorSDK: BanubaVideoEditor?
+  private let videoEditorModule = VideoEditorModule()
 }
 
 // MARK: - IBAction
@@ -30,6 +31,7 @@ extension ViewController {
         .appendingPathComponent("Music/long", isDirectory: true)
         .appendingPathComponent("long_music_2.wav")
       let assset = AVURLAsset(url: musicURL)
+      
       let musicTrackPreset = MediaTrack(
         uuid: UUID(),
         id: nil,
@@ -74,7 +76,7 @@ extension ViewController {
       return
     }
     
-    let config = createVideoEditorConfiguration()
+    let config = videoEditorModule.createConfiguration()
     
     let viewControllerFactory = ViewControllerFactory()
     let musicEditorViewControllerFactory = MusicEditorViewControllerFactory()
@@ -106,118 +108,28 @@ extension ViewController {
     })
   }
 }
-// MARK: - Configuration helpers
-extension ViewController {
-  private func createVideoEditorConfiguration() -> VideoEditorConfig {
-    var config = VideoEditorConfig()
-    
-    BanubaAudioBrowser.setMubertPat("SET MUBERT API KEY")
-    AudioBrowserConfig.shared.musicSource = .allSources
-    
-    var featureConfiguration = config.featureConfiguration
-    featureConfiguration.supportsTrimRecordedVideo = true
-    featureConfiguration.isMuteCameraAudioEnabled = true
-    config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
-    
-    config.isHandfreeEnabled = true
-    config.gifPickerConfiguration = updateGifPickerConfiguration(config.gifPickerConfiguration)
-    config.recorderConfiguration = updateRecorderConfiguration(config.recorderConfiguration)
-    config.editorConfiguration = updateEditorConfiguration(config.editorConfiguration)
-    config.combinedGalleryConfiguration = updateCombinedGalleryConfiguration(config.combinedGalleryConfiguration)
-    config.extendedVideoCoverSelectionConfiguration = updateVideCoverSelectionConfiguration(config.extendedVideoCoverSelectionConfiguration)
-    config.musicEditorConfiguration = updateMusicEditorConfigurtion(config.musicEditorConfiguration)
-    config.overlayEditorConfiguration = updateOverlayEditorConfiguraiton(config.overlayEditorConfiguration)
-    config.textEditorConfiguration = updateTextEditorConfiguration(config.textEditorConfiguration)
-    config.trimVideoConfiguration = updateTrimVideoConfiguration(config.trimVideoConfiguration)
-    config.trimVideosConfiguration = updateTrimVideosConfiguration(config.trimVideosConfiguration)
-    config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
-    config.alertViewConfiguration = updateAlertViewConfiguration(config.alertViewConfiguration)
-    config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
-    config.handsfreeConfiguration = updateHandsfreeConfiguration(config.handsfreeConfiguration)
-    config.aspectsConfiguration = updateAspectsConfiguration(config.aspectsConfiguration)
-    config.progressViewConfiguration = updateProgressViewConfiguration(config.progressViewConfiguration)
-    
-    return config
-  }
-  
-  private func updateFilterConfiguration(_ configuration: FilterConfiguration) -> FilterConfiguration {
-    var configuration = configuration
-    
-    configuration.resetButton.backgroundColor = .irisBlue
-    configuration.resetButton.cornerRadius = 4.0
-    configuration.resetButton.textConfiguration?.color = .white
-    configuration.toolTipLabel.color = .white
-    configuration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
-  
-    configuration.effectItemConfiguration.cornerRadius = 4.0
-    
-    configuration.controlButtons = [
-      FilterControlButtonConfig(type: .cancel, imageName: "ic_close", selectedImageName: nil),
-      FilterControlButtonConfig(type: .play, imageName: "ic_editor_play", selectedImageName: "ic_pause"),
-      FilterControlButtonConfig(type: .done, imageName: "ic_done", selectedImageName: nil),
-    ]
-    
-    return configuration
-  }
-  
-  private func updateFullScreenActivityConfiguration(_ configuration: FullScreenActivityConfiguration) -> FullScreenActivityConfiguration {
-      var configuration = configuration
-
-      configuration.activityIndicator = SmallActivityIndicatorConfiguration(
-        gradientType: .color(
-          SmallActivityIndicatorConfiguration.GradientColorConfiguration(
-            angle: 0.0,
-            colors: [UIColor.irisBlue.cgColor, UIColor.white.cgColor]
-          )
-        ),
-        activityLineWidth: 3.0
-      )
-    return configuration
-  }
-}
 
 // MARK: - Export example
 extension ViewController {
   func exportVideo() {
-    // Present progress view
-    let progressViewController = ProgressViewController.makeViewController()
-    
-    progressViewController.configuration = updateProgressViewConfiguration(progressViewController.configuration!)
-    progressViewController.message = "Exporting"
-    
+    let progressViewController = videoEditorModule.createProgressViewController()
     progressViewController.cancelHandler = { [weak self] in
       self?.videoEditorSDK?.stopExport()
     }
-    
     present(progressViewController, animated: true)
     
+    
     let manager = FileManager.default
-    let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
+    let exportedVideoFileName = "tmp.mov"
+    let videoURL = manager.temporaryDirectory.appendingPathComponent(exportedVideoFileName)
     if manager.fileExists(atPath: videoURL.path) {
       try? manager.removeItem(at: videoURL)
     }
     
-    let watermarkConfiguration = WatermarkConfiguration(
-      watermark: ImageConfiguration(imageName: "Common.Banuba.Watermark"),
-      size: CGSize(width: 204, height: 52),
-      sharedOffset: 20,
-      position: .rightBottom)
-    
-    let exportConfiguration = ExportVideoConfiguration(
-      fileURL: videoURL,
-      quality: .auto,
-      useHEVCCodecIfPossible: true,
-      watermarkConfiguration: watermarkConfiguration
-    )
-    
-    let exportConfig = ExportConfiguration(
-      videoConfigurations: [exportConfiguration],
-      isCoverEnabled: true,
-      gifSettings: GifSettings(duration: 0.3)
-    )
+    let exportConfiguration = videoEditorModule.createExportConfiguration(destFile: videoURL)
     
     videoEditorSDK?.export(
-      using: exportConfig,
+      using: exportConfiguration,
       exportProgress: { progress in
         DispatchQueue.main.async {
           progressViewController.updateProgressView(with: Float(progress))

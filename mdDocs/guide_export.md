@@ -1,5 +1,18 @@
 # Export flow
 
+## Export video quality params
+Video Editor SDK classifies every device by its performance capabilities and uses the most suitable quality params for the exported video.
+
+Nevertheless it is possible to customize it with `ExportVideoConfiguration`. Just put a required video quality into `ExportVideoInfo(resolution)` constructor. To be able to use your own quality parametrs please follow this [guide](video_resolution_configuration.md).
+
+See the **default bitrate (kbps)** for exported video (without audio) in the table below:
+| 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) | HD(720 x 1280) | FHD(1080 x 1920) |
+| --------------- | --------------- | ---------------- | -------------- | ---------------- |
+|              800|             2000|              2000|            4000|              6400|
+
+
+
+
 Please consider the following examples to configure your export flow.
 ``` swift
  /// Export several configurable video
@@ -122,3 +135,73 @@ You can learn more about this controller in [apple documentation](https://develo
 An example of this controller implementation is in the [sample](../Example/Example/ViewController.swift#L200).
 
 You just need to transfer the [URL](../Example/Example/ViewController.swift#L167) of the exported video there.
+
+
+### Add watermark
+
+You can add a branded image that would appear on videos that users export.
+
+To do so, create and configure the WatermarkConfiguration structure, then add it to the ExportVideoConfiguration entity.
+
+See this [example](/Example/Example/ViewController.swift#L184) for details.
+
+## Export metadata Analytics
+
+The SDK generates simple metadata analytics in JSON file that you can use in your application.
+You need to make sure that analytics collection is enabled in your token.
+
+After export, the analytics as a row is available in the entity:
+```swift
+let analytics: String? = videoEditorSDK?.metadata?.analyticsMetadataJSON
+```
+Output example:
+```JSON
+{
+  "export_duration": 18.613733167,
+  "export_success": true,
+  "camera_effects": [
+    "mask:Beauty",
+    "mask:HairGradient_Avocado",
+    "neon.png"
+  ],
+  "video_resolutions": [
+    "default854x480"
+  ],
+  "os_version": "12.4.7",
+  "video_count": 1,
+  "post_processing_effects": [
+    "101",
+    "202",
+    "mask:2_5D_HeadphoneMusic"
+  ],
+  "token": "commercial",
+  "video_duration": 19.433333333333334,
+  "sdk_version": "1.22.0",
+  "video_sources": [
+    {
+      "startTime": "0.0",
+      "title": "3CE046B1-9308-44A5-8AC4-E14B5C273F1D",
+      "endTime": "3.0",
+      "type": "camera"
+    },
+    {
+      "startTime": "3.0",
+      "title": "1120F49A-F04C-49BF-B586-0307897B9E74",
+      "endTime": "12.8",
+      "type": "gallery"
+    },
+    {
+      "startTime": "12.8",
+      "title": "82A8C971-04D0-4677-BA3C-61DD2EFB6BAD",
+      "endTime": "15.8",
+      "type": "camera"
+    },
+    {
+      "startTime": "15.8",
+      "title": "D1B9EC82-02BB-4052-B97E-1CFA3489BC3B",
+      "endTime": "18.458333333333336",
+      "type": "camera"
+    }
+  ]
+}
+```

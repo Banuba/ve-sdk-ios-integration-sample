@@ -2,8 +2,6 @@
 These are the answers to the most common questions asked about our SDK.
 
 - [What is the size of Video Editor SDK size?](#What-is-the-size-of-Video-Editor-SDK-size?)
-- [How do I start/stop recording with a tap?](#how-do-i-startstop-recording-with-a-tap)
-- [How do I add an AR mask to the app (without AR cloud).](#how-do-i-add-an-ar-mask-to-the-app-without-ar-cloud)
 - [How do I start the Video Editor with a preselected audio track?](#how-do-i-start-the-video-editor-with-a-preselected-audio-track)
 - [How do I use the Video Editor several times from different entry points?](#how-do-i-use-the-video-editor-several-times-from-different-entry-points)
 - [How do I add a color filter (LUT)?](#how-do-i-add-a-color-filter-lut)
@@ -11,7 +9,6 @@ These are the answers to the most common questions asked about our SDK.
 - [I want to change cursor color.](#i-want-to-change-cursor-color)
 - [I want to change progress bar position.](#i-want-to-change-progress-bar-position)
 - [How does video editor work when token expires?](#how-does-video-editor-work-when-token-expires)
-- [Which buttons available if Face AR disabled?](#which-buttons-available-if-face-ar-disabled)
 - [I want to change music button position.](#i-want-to-change-music-button-position)
 - [How can I get a track name of the audio used in my video after export?](#12-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
 - [I want to change the font.](#i-want-to-change-the-font)
@@ -39,25 +36,6 @@ These are the answers to the most common questions asked about our SDK.
 
 You can either include the AR filters in the app or have users download them from the [AR cloud](#Configure-AR-cloud) to dramatically decrease the app size.
 
-### How do I start/stop recording with a tap?
-  
-By default, the user must hold the “record” button to film and release it to stop filming. 
-
-To change that, set the **captureButtonMode** property of the RecorderConfiguration entity to .video.
-
-```swift
- var config = VideoEditorConfig()
- 
- config.recorderConfiguration.captureButtonMode = .video
-```
-
-### How do I add an AR mask to the app (without AR cloud)
-
-If you don’t want to pull the masks from the backend, you can include them in the app itself. 
-
-A mask is a bundle of files within a specific folder in the YourProject/bundleEffects/ directory. The preview.png file in the filter folder is used as an icon within the app, and the name of the directory is also the name of the mask.  
-
- **Note** Please, don’t change the name of the bundleEffects folder, otherwise, the app will not work. If it doesn’t exist already, create it manually.
 
 ### How do I start the Video Editor with a preselected audio track?
 
@@ -180,28 +158,7 @@ config.recorderConfiguration.progressBarPosition = .top
  - after the first month the camera screen will be blurred and a full-screen watermark will be displayed
 
  Please keep your licence up to date to avoid unwanted behavior.
- 
- ### Which buttons available if Face AR disabled?
- 
- AdditionalEffectsButtons contains options set which describes buttons identifiers. 
- 
- Without Face AR you could use buttons with following identifiers. 
- 
- **Camera Screen**:
- - sound
- - toggle
- - flashlight
- - timer
- - speed
- - muteSound
- 
- **Postprocessing Screen**:
- - sticker
- - sound
- - text
- - effects
- - time
- - color
+
 
 ### I want to change music button position.
 
