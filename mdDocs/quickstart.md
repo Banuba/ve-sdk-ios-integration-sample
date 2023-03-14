@@ -81,10 +81,21 @@ Complete the following steps to get Video Editor SDK dependencies using CocoaPod
 4. Open ```Example.xcworkspace``` in Xcode and run the project.
 
 ## Add resources
-Do not forget to copy all the resources that the sample contains:
-1. [Luts](../Example/Example/luts) folder to the Main Bundle of your project or set your own path with the property ```colorEffectsURL``` of ```FilterConfiguration```.
-2. [Luts](../Example/Example/Assets.xcassets/ColorEffectsPreview) and [Video Effects](../Example/Example/Assets.xcassets/Effects%20Preview) previews to the Asset Catalog.
-3. [Localized Strings](../Example/Example/en.lproj/Localizable.strings)
+Video Editor SDK uses a lot of resources required for running.  
+Please make sure all these resources are provided in your project.
+1. [luts](../Example/Example/luts) - the folder where all color effects are stored.
+2. [ColorEffectsPreview](../Example/Example/Assets.xcassets/ColorEffectsPreview) - preview images of color effects
+3. [Effects%20Previe](../Example/Example/Assets.xcassets/Effects%20Preview) - preview images of visual effects.
+4. [Localized Strings](../Example/Example/en.lproj/Localizable.strings)
+
+:bulb: Recommendation      
+[Assets.xcassets](../Example/Example/Assets.xcassets) contains other visual resources i.e. icons that are used in 
+video editor. These icons were added to the sample to customize default video editor icons.
+Feel free to copy all resources from [Assets.xcassets](../Example/Example/Assets.xcassets) if they meet your requirements.
+
+:exclamation: Important   
+Default video editor icons will be used in case if you copy only [luts](../Example/Example/luts), [ColorEffectsPreview](../Example/Example/Assets.xcassets/ColorEffectsPreview) ,
+[Effects%20Previe](../Example/Example/Assets.xcassets/Effects%20Preview), [Localized Strings](../Example/Example/en.lproj/Localizable.strings) resources.
 
 ## Add module
 Custom behavior of Video Editor SDK in your app is implemented by using a number of configuration classes in the SDK.

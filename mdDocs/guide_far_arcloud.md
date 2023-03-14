@@ -11,26 +11,25 @@
 [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters) product is used on camera and editor screens for applying various AR effects while making video content.
 
 ## Overview
-Any Face AR effect is a normal folder that includes a number of files required for Face AR SDK to play this effect.
+Any Face AR effect is a folder that includes a number of files required for Face AR SDK to play this effect.
 
 :exclamation: Important    
-Make sure you included ```preview.png``` file in effect folder. This file is used as a preview for AR effect.
+Make sure every effect folder includes ```preview.png``` file. This file is used as a preview for AR effect.
 
 ## Manage effects
 There are 2 options for managing AR effects:
 1. ```bundleEffects``` folder
-   Use [Example/bundleEffects](../Example/Example/bundleEffects) folder
+   Use [bundleEffects](../Example/Example/bundleEffects) folder
 2. ```AR Cloud```  
    Effects are stored on the remote server.
 
 :exclamation: Important,  
 Please, keep the name ```bundleEffects```, otherwise, the app will not start. Create ```bundleEffects``` folder if it does not exist.
 
-:bulb: Recommendation  
-You can use both options i.e. store just a few AR effects in ```assets``` and 100 or more AR effects  on ```AR Cloud```.
+:bulb: Recommendation,   
+You can use both options i.e. store just a few AR effects in ```bundleEffects``` and 100 or more AR effects  on ```AR Cloud```.
 
 ## Integrate AR Cloud
-
 ```AR Cloud``` is a cloud solution for storing Banuba Face AR effects on the server and used by Face AR and Video Editor products.  
 Any AR effect downloaded from ```AR Cloud``` is cached on the user's device.
 
@@ -67,21 +66,24 @@ banuba_sdk_version = '1.26.5'
 +  pod 'BanubaSDKSimple', banuba_sdk_version
 ```
 
+:bulb: Recommendations,  
+Please keep in mind, you can remove all AR effects from [bundleEffects](../Example/Example/bundleEffects) 
+if your license does not include Face AR product.
+
 ## Integrate Beauty effect
 Video Editor SDK has built in integration with beautification effect - [Beauty](../Example/Example/bundleEffects/BeautyEffects).
-The user interacts with ```BeautyEffects``` effect by clicking on specific button on camera screen.  
+The user interacts with ```Beauty``` effect by clicking on specific button on camera screen.  
 
 :exclamation: Important  
-```BeautyEffects``` is not available in the list of all AR effects. It is required to store the effect in ```bundleEffects``` and keep name ```BeautyEffects``` with no changes.    
+```BeautyEffects``` is not shown in the list of all AR effects on camera or editing screens. It is required to store the effect in ```bundleEffects``` and keep name ```BeautyEffects``` with no changes.    
 Please move this effect while integrating Video Editor SDK into your project.
 
 ## Integrate Background effect
-
-[Background](.../Example/Example/bundleEffects/Background) effect allows to apply various images or videos as a background while recording video content on the camera screen.  
+[Background](../Example/Example/bundleEffects/Background) effect allows to apply various images or videos as a background while recording video content on the camera screen.  
 The AR effect requires Face AR and can be added to your license.  
 Please request this feature from Banuba business representatives.
 
-First, add ```Background``` effect either to ```bundleEffects``` or  ```AR Cloud```.
+First, add ```Background``` effect either to [bundleEffects](../Example/Example/bundleEffects) or  ```AR Cloud```.
 
 ![img](../mdDocs/screenshots/AdditionalEffectsMediaPicker.png)
 
@@ -102,9 +104,8 @@ Use `EffectAdditionalMediaPickerConfiguration` to configure media picker:
   }
 ```
 
-Please see the example how to change info label at this picker:
-
-```swift
+In this example, custom label text is used in the picker
+```diff
   func createVideoEditorConfig() -> VideoEditorConfig {
     var config = VideoEditorConfig()
     ...
@@ -112,12 +113,12 @@ Please see the example how to change info label at this picker:
       .recorderConfiguration
       .recorderEffectsConfiguration
       .effectAdditionalMediaPickerConfiguration
-      .infoLabelConfiguration.text = "My custom Info Label text"
++      .infoLabelConfiguration.text = "My custom Info Label text"
     ...
     return config
   }
 ```
-To localize additional media picker titles use the following key values:
+Use the following key-values to localize media picker string resources.
 
 ```swift
 // MARK: - Effect additional media picker text resource
