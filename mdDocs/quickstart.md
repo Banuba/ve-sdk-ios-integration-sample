@@ -82,8 +82,9 @@ Complete the following steps to get Video Editor SDK dependencies using CocoaPod
 
 ## Add resources
 Do not forget to copy all the resources that the sample contains:
-1. [luts](../Example/Example/luts) folder to the Main Bundle of your project or set your own path with the property ```colorEffectsURL``` of ```FilterConfiguration```.
-2. [Luts](../Example/Example/Assets.xcassets/ColorEffectsPreview) and [Video Effects](../Example/Example/Assets.xcassets/Effects%20Preview) to the Asset Catalog.
+1. [Luts](../Example/Example/luts) folder to the Main Bundle of your project or set your own path with the property ```colorEffectsURL``` of ```FilterConfiguration```.
+2. [Luts](../Example/Example/Assets.xcassets/ColorEffectsPreview) and [Video Effects](../Example/Example/Assets.xcassets/Effects%20Preview) previews to the Asset Catalog.
+3. [Localized Strings](../Example/Example/en.lproj/Localizable.strings)
 
 ## Add module
 Custom behavior of Video Editor SDK in your app is implemented by using a number of configuration classes in the SDK.
