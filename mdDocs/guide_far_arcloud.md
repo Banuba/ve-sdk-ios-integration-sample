@@ -68,8 +68,66 @@ banuba_sdk_version = '1.26.5'
 ```
 
 ## Integrate Beauty effect
-IN PROGRESS...
+Video Editor SDK has built in integration with beautification effect - [Beauty](../Example/Example/bundleEffects/BeautyEffects).
+The user interacts with ```BeautyEffects``` effect by clicking on specific button on camera screen.  
+
+:exclamation: Important  
+```BeautyEffects``` is not available in the list of all AR effects. It is required to store the effect in ```bundleEffects``` and keep name ```BeautyEffects``` with no changes.    
+Please move this effect while integrating Video Editor SDK into your project.
 
 ## Integrate Background effect
-IN PROGRESS...
-AND add styles
+
+[Background](.../Example/Example/bundleEffects/Background) effect allows to apply various images or videos as a background while recording video content on the camera screen.  
+The AR effect requires Face AR and can be added to your license.  
+Please request this feature from Banuba business representatives.
+
+First, add ```Background``` effect either to ```bundleEffects``` or  ```AR Cloud```.
+
+![img](../mdDocs/screenshots/AdditionalEffectsMediaPicker.png)
+
+Use `EffectAdditionalMediaPickerConfiguration` to configure media picker:
+
+```swift
+  public struct EffectAdditionalMediaPickerConfiguration {
+    /// Gallery asset item configuration
+    public var galleryAssetItemConfiguration: GalleryAssetItemConfiguration
+    /// Info label configuration
+    public var infoLabelConfiguration: TextConfiguration
+    /// Allow gallery access button configuration
+    public var allowGalleryAccessButtonConfiguration: BanubaButtonConfiguration
+    /// No media label configuration
+    public var noMediaLabelConfiguration: TextConfiguration
+    /// Open gallery button configuration
+    public var openGalleryButtonConfiguration: ImageButtonConfiguration
+  }
+```
+
+Please see the example how to change info label at this picker:
+
+```swift
+  func createVideoEditorConfig() -> VideoEditorConfig {
+    var config = VideoEditorConfig()
+    ...
+    config
+      .recorderConfiguration
+      .recorderEffectsConfiguration
+      .effectAdditionalMediaPickerConfiguration
+      .infoLabelConfiguration.text = "My custom Info Label text"
+    ...
+    return config
+  }
+```
+To localize additional media picker titles use the following key values:
+
+```swift
+// MARK: - Effect additional media picker text resource
+
+/* No media files found in gallery for adding to the effect */
+"com.banuba.videoEditor.recorder.additionalEffects.NoMediaFound" = "No media found";
+/* No media files found in gallery for adding to the effect */
+"com.banuba.videoEditor.recorder.additionalEffects.AllowAccess" = "Allow Access";
+/* Helpers info message for changing video background */
+"com.banuba.videoEditor.recorder.additionalEffects.selectMediaToChangeBackgroundMessage" = "Select media to change the background:";
+/* Helpers info message for providing acces to a user gallery */
+"com.banuba.videoEditor.recorder.additionalEffects.allowAccesToChangeBackgroundMessage" = "Allow access to Gallery to change the background";
+```
