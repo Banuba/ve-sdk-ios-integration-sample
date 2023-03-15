@@ -57,7 +57,13 @@ extension ViewController {
         isEditable: true,
         title: "My awesome track"
       )
-      self.presentVideoEditor(at: .camera)
+      let launchConfig = VideoEditorLaunchConfig(
+        entryPoint: .camera,
+        hostController: self,
+        musicTrack: nil, // Paste a music track as a track preset at the camera screen to record video with music
+        animated: true
+      )
+      self.presentVideoEditor(with: launchConfig)
     }
   }
   
@@ -71,7 +77,12 @@ extension ViewController {
   @IBAction func draftsAction(_ sender: UIButton) {
     initVideoEditor { isTokenValid in
       guard isTokenValid else { return }
-      self.presentVideoEditor(at: .drafts)
+      let launchConfig = VideoEditorLaunchConfig(
+        entryPoint: .drafts,
+        hostController: self,
+        animated: true
+      )
+      self.presentVideoEditor(with: launchConfig)
     }
   }
   
@@ -192,18 +203,8 @@ extension ViewController {
   }
   
   private func presentVideoEditor(
-    with videoUrls: [URL]? = nil,
-    musicTrack: MusicTrack? = nil,
-    at entryPoint: PresentEventOptions.EntryPoint
+    with launchConfig: VideoEditorLaunchConfig
   ) {
-    let launchConfig = VideoEditorLaunchConfig(
-      entryPoint: entryPoint,
-      hostController: self,
-      videoItems: videoUrls,
-      pipVideoItem: videoUrls?[.zero],
-      musicTrack: nil, // Paste a music track as a track preset at the camera screen to record video with music
-      animated: true
-    )
     self.videoEditorSDK?.presentVideoEditor(
       withLaunchConfiguration: launchConfig,
       completion: nil
@@ -230,7 +231,7 @@ extension ViewController: BanubaVideoEditorDelegate {
 extension ViewController {
   private func openGallery(for entryPoint: PresentEventOptions.EntryPoint) {
     VideoPicker().pickVideo(
-      isMultipleSelectionEnabled: false,
+      isMultipleSelectionEnabled: entryPoint != .pip,
       from: self
     ) { assets in
       
@@ -297,10 +298,14 @@ extension ViewController {
         let presentingHandler = {  [weak self] in
           guard let self = self, !resultUrls.isEmpty else { return }
           
-          self.presentVideoEditor(
-            with: resultUrls,
-            at: entryPoint
+          let launchConfig = VideoEditorLaunchConfig(
+            entryPoint: entryPoint,
+            hostController: self,
+            videoItems: resultUrls,
+            pipVideoItem: resultUrls[.zero],
+            animated: true
           )
+          self.presentVideoEditor(with: launchConfig)
         }
         
         guard self.videoEditorSDK == nil else {
