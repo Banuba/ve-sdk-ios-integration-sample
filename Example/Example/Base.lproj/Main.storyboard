@@ -29,6 +29,9 @@
                                         <state key="normal" title="OPEN VIDEO EDITOR - DEFAULT">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="openVideoEditorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdO-qW-CDd"/>
                                         </connections>
@@ -40,6 +43,9 @@
                                         <state key="normal" title="OPEN VIDEO EDITOR - PIP">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="PIPAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hU-tj-GLa"/>
                                         </connections>
@@ -52,6 +58,9 @@
                                         <state key="normal" title="OPEN VIDEO EDITOR - DRAFTS">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="draftsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rh8-Hb-Hdv"/>
                                         </connections>
@@ -64,6 +73,9 @@
                                         <state key="normal" title="OPEN VIDEO EDITOR - TRIMMER">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="trimmerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8O4-XH-fP5"/>
                                         </connections>
