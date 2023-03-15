@@ -11,6 +11,13 @@ import VEExportSDK
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 
+private struct ErrorMessage {
+  static let errEditorNotInitialized =
+  "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
+  static let errEditorLicenseRevoked =
+  "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
+}
+
 class ViewController: UIViewController {
   
   // MARK: - IBOutlet
@@ -104,6 +111,7 @@ extension ViewController {
     videoEditorSDK?.delegate = self
     
     if videoEditorSDK == nil {
+      invalidTokenMessageLabel.text = ErrorMessage.errEditorNotInitialized
       invalidTokenMessageLabel.isHidden = false
       return
     }
@@ -111,6 +119,7 @@ extension ViewController {
       if isValid {
         print("✅ License is active, all good")
       } else {
+        self?.invalidTokenMessageLabel.text = ErrorMessage.errEditorLicenseRevoked
         print("❌ License is either revoked or expired")
       }
       self?.invalidTokenMessageLabel.isHidden = isValid

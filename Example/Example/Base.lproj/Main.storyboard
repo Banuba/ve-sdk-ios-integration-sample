@@ -83,8 +83,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License token is invalid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Rc-B2d">
-                                <rect key="frame" x="104.00000000000001" y="266.66666666666669" width="182.33333333333337" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License token is invalid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Rc-B2d">
+                                <rect key="frame" x="40" y="266.66666666666669" width="310" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -94,6 +94,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UCZ-29-s3y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6II-0Z-Pjg"/>
+                            <constraint firstItem="U2o-Rc-B2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="DC2-rS-5Fi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U2o-Rc-B2d" secondAttribute="trailing" constant="40" id="M1c-aO-0Bg"/>
                             <constraint firstItem="UCZ-29-s3y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N0g-jt-8TT"/>
                             <constraint firstItem="UCZ-29-s3y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="NI7-yk-H9s"/>
                             <constraint firstItem="U2o-Rc-B2d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="U2d-Cf-6T9"/>
