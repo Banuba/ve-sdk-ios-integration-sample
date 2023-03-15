@@ -12,7 +12,8 @@
 
 ## Quality details
 Subsequent table describes video quality details used for video recording in various resolutions.  
-To be able to use your own quality parametrs please follow this [guide](video_resolution_configuration.md).
+
+IN PROGRESS - Check values!!!
 
 | Recording speed | 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) |  HD(720 x 1280) | FHD(1080 x 1920) |
 | --------------- | --------------- | --------------- | --------------- | --------------- | ---------------- |
@@ -24,22 +25,21 @@ To be able to use your own quality parametrs please follow this [guide](video_re
 
 ## Implement configurations
 ```VideoEditorConfig``` is a main class used to customize features, behavior and user experience for video recording on camera screen i.e. set min/max recording duration, flashlight, etc.  
-Video editor includes default implementation but you can provide your own implementation to meet your requirements in [ViewController](../Example/Example/ViewController.swift#L111).  
+The SDK includes default implementation but you can customize it and provide your own implementation to meet your requirements in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L50).  
 
-```VideoEditorDurationConfig``` is a main class for implementing custom recording features. Below all values provided in seconds.
+```VideoEditorDurationConfig``` is a class responsible for customizing recording features. Below all values provided in seconds.
 
-| Property |                Values                | Description |
-| ------------- |:------------------------------------:| :------------- |
-| maximumVideoDuration | TimeInterval > 0; Default ```120.0``` | maximum video recording duration available to record
-| videoDurations | ```[60.0, 30.0, 15.0]``` | defines an array of durations available to record. The user can see the option on the camera screen and pick new option. For example,  ```60.0``` means that the user can record a number of video with total duration no more than ```60.0``` seconds.
-| minimumDurationFromCamera |   ```3.0```   | minimum video recording duration required to proceed and open a next screen
-| minimumDurationFromGallery |  ```0.3```   | minimum gallery video duration displayed at gallery
-| minimumVideoDuration |   ```1.0```    | minimum video chunk recording duration that is allowed to record on camera
-| minimumTrimmedPartDuration |   ```0.3```    | minimum video chunk duration that is allowed to trim on trimmer
-| slideshowDuration |  ```0.3```    | slideshow video duration produced from a user photo
+| Property |                Values                 | Description |
+| ------------- |:-------------------------------------:| :------------- |
+| maximumVideoDuration | TimeInterval > 0; Default ```120.0``` | the maximum video recording duration available to record
+| videoDurations |   Default  ```[60.0, 30.0, 15.0]```   | an array of durations available to record video. The user sees certain button and can change duration by tap. For example,  ```60.0``` means that the user can record multiple video sources with total duration no more than ```60.0``` seconds.
+| minimumDurationFromCamera |           Default ```3.0```           | the minimum video recording duration required to proceed and open a next screen
+| minimumDurationFromGallery |           Default ```0.3```           | the minimum gallery video duration displayed at gallery
+| minimumVideoDuration |           Default ```1.0```           | the minimum video source recording duration that is allowed to record on camera
+| minimumTrimmedPartDuration |           Default ```0.3```           | minimum video source duration that is allowed to trim on trimmer
+| slideshowDuration |           Default ```0.3```           | slideshow video duration produced by image
 
-In this example, maximum video duration(RECORDING??) is set to 30 seconds.
-
+In this example, the maximum video recording duration is set to 30 seconds.
 ```swift
 var config = VideoEditorConfig()
 config.videoDurationConfiguration.maximumVideoDuration = 30.0
@@ -49,8 +49,8 @@ config.videoDurationConfiguration.maximumVideoDuration = 30.0
 
 | Property |            Values            | Description |
 | ------------- |:----------------------------:| :------------- |
-| isDoubleTapForToggleCameraEnabled |         ```false```         | double tapping on camera preview will toggle front/back camera input.
-| isMuteCameraAudioEnabled |          ```false```          | removes from camera mute sound button 
+| isDoubleTapForToggleCameraEnabled |         ```false```         | enable switchicng between front and back camera facing by double tap on camera screen
+| isMuteCameraAudioEnabled |          ```false```          | !!! show mute icon on camera screen   
 | isSpeedBarEnabled |          ```true```           | enables speed selection bar. If bar is disabled speed recording will iterativly switched by tapping
 | openAutomaticallyPIPSettingsDropdown |          ```false```          | if this property enabled the pip settings drop down view will be presented after opening camera screen
 
