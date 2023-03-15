@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,10 +83,10 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License token is invalid" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjT-6f-aCn">
-                                <rect key="frame" x="108.00000000000001" y="769.66666666666663" width="174.33333333333337" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License token is invalid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Rc-B2d">
+                                <rect key="frame" x="104.00000000000001" y="266.66666666666669" width="182.33333333333337" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -93,22 +94,27 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UCZ-29-s3y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6II-0Z-Pjg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DjT-6f-aCn" secondAttribute="bottom" constant="20" id="7Hk-Y9-2Eb"/>
-                            <constraint firstItem="DjT-6f-aCn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GC8-cD-P1W"/>
                             <constraint firstItem="UCZ-29-s3y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N0g-jt-8TT"/>
                             <constraint firstItem="UCZ-29-s3y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="NI7-yk-H9s"/>
+                            <constraint firstItem="U2o-Rc-B2d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="U2d-Cf-6T9"/>
+                            <constraint firstItem="UCZ-29-s3y" firstAttribute="top" secondItem="U2o-Rc-B2d" secondAttribute="bottom" constant="20" id="rkY-FY-UPw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCZ-29-s3y" secondAttribute="trailing" constant="40" id="xbJ-hG-4xm"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="invalidTokenMessageLabel" destination="DjT-6f-aCn" id="L3o-68-VF9"/>
+                        <outlet property="invalidTokenMessageLabel" destination="U2o-Rc-B2d" id="kzU-RS-lp1"/>
                         <outlet property="openPIPButton" destination="Xjq-v9-Kyb" id="qrf-C7-9TT"/>
                         <outlet property="openVEButton" destination="6jh-xc-CaM" id="tKV-tI-AqI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171.01449275362319" y="80.357142857142847"/>
+            <point key="canvasLocation" x="-172.30769230769229" y="80.33175355450237"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -21,6 +21,11 @@ class ViewController: UIViewController {
   // MARK: - VideoEditorSDK
   private var videoEditorSDK: BanubaVideoEditor?
   private let videoEditorModule = VideoEditorModule()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    invalidTokenMessageLabel.isHidden = true
+  }
 }
 
 // MARK: - IBAction
