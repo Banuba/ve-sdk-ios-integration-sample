@@ -9,8 +9,14 @@ import Photos
 import BSImagePicker
 import VEExportSDK
 import BanubaAudioBrowserSDK
+import BanubaLicenseServicingSDK
 
 class ViewController: UIViewController {
+  
+  private static let errEditorNotInitialized =
+  "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
+  private static let errEditorLicenseRevoked =
+  "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
   
   // MARK: - IBOutlet
   @IBOutlet weak var openVEButton: UIButton!
@@ -20,6 +26,11 @@ class ViewController: UIViewController {
   // MARK: - VideoEditorSDK
   private var videoEditorSDK: BanubaVideoEditor?
   private let videoEditorModule = VideoEditorModule()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    invalidTokenMessageLabel.isHidden = true
+  }
 }
 
 // MARK: - IBAction
@@ -46,24 +57,39 @@ extension ViewController {
         isEditable: true,
         title: "My awesome track"
       )
-      
-      let cameraLaunchConfig = VideoEditorLaunchConfig(
+      let launchConfig = VideoEditorLaunchConfig(
         entryPoint: .camera,
         hostController: self,
         musicTrack: nil, // Paste a music track as a track preset at the camera screen to record video with music
         animated: true
       )
-      self.videoEditorSDK?.presentVideoEditor(
-        withLaunchConfiguration: cameraLaunchConfig,
-        completion: nil
-      )
+      self.presentVideoEditor(with: launchConfig)
     }
   }
   
   @IBAction func PIPAction(_ sender: Any) {
     initVideoEditor { isTokenValid in
       guard isTokenValid else { return }
-      self.openGallery()
+      self.openGallery(for: .pip)
+    }
+  }
+  
+  @IBAction func draftsAction(_ sender: UIButton) {
+    initVideoEditor { isTokenValid in
+      guard isTokenValid else { return }
+      let launchConfig = VideoEditorLaunchConfig(
+        entryPoint: .drafts,
+        hostController: self,
+        animated: true
+      )
+      self.presentVideoEditor(with: launchConfig)
+    }
+  }
+  
+  @IBAction func trimmerAction(_ sender: UIButton) {
+    initVideoEditor { isTokenValid in
+      guard isTokenValid else { return }
+      self.openGallery(for: .trimmer)
     }
   }
 }
@@ -94,6 +120,7 @@ extension ViewController {
     videoEditorSDK?.delegate = self
     
     if videoEditorSDK == nil {
+      invalidTokenMessageLabel.text = ViewController.errEditorNotInitialized
       invalidTokenMessageLabel.isHidden = false
       return
     }
@@ -101,6 +128,7 @@ extension ViewController {
       if isValid {
         print("✅ License is active, all good")
       } else {
+        self?.invalidTokenMessageLabel.text = ViewController.errEditorLicenseRevoked
         print("❌ License is either revoked or expired")
       }
       self?.invalidTokenMessageLabel.isHidden = isValid
@@ -173,6 +201,15 @@ extension ViewController {
       player.play()
     }
   }
+  
+  private func presentVideoEditor(
+    with launchConfig: VideoEditorLaunchConfig
+  ) {
+    self.videoEditorSDK?.presentVideoEditor(
+      withLaunchConfiguration: launchConfig,
+      completion: nil
+    )
+  }
 }
 
 // MARK: - BanubaVideoEditorDelegate
@@ -192,9 +229,9 @@ extension ViewController: BanubaVideoEditorDelegate {
 
 // MARK: - PIP Helpers
 extension ViewController {
-  private func openGallery() {
+  private func openGallery(for entryPoint: PresentEventOptions.EntryPoint) {
     VideoPicker().pickVideo(
-      isMultipleSelectionEnabled: false,
+      isMultipleSelectionEnabled: entryPoint != .pip,
       from: self
     ) { assets in
       
@@ -261,17 +298,14 @@ extension ViewController {
         let presentingHandler = {  [weak self] in
           guard let self = self, !resultUrls.isEmpty else { return }
           
-          let pipLaunchConfig = VideoEditorLaunchConfig(
-            entryPoint: .pip,
+          let launchConfig = VideoEditorLaunchConfig(
+            entryPoint: entryPoint,
             hostController: self,
+            videoItems: resultUrls,
             pipVideoItem: resultUrls[.zero],
-            musicTrack: nil,
             animated: true
           )
-          self.videoEditorSDK?.presentVideoEditor(
-            withLaunchConfiguration: pipLaunchConfig,
-            completion: nil
-          )
+          self.presentVideoEditor(with: launchConfig)
         }
         
         guard self.videoEditorSDK == nil else {
