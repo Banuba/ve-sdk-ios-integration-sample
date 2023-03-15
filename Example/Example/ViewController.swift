@@ -9,6 +9,7 @@ import Photos
 import BSImagePicker
 import VEExportSDK
 import BanubaAudioBrowserSDK
+import BanubaLicenseServicingSDK
 
 class ViewController: UIViewController {
   
@@ -46,24 +47,28 @@ extension ViewController {
         isEditable: true,
         title: "My awesome track"
       )
-      
-      let cameraLaunchConfig = VideoEditorLaunchConfig(
-        entryPoint: .camera,
-        hostController: self,
-        musicTrack: nil, // Paste a music track as a track preset at the camera screen to record video with music
-        animated: true
-      )
-      self.videoEditorSDK?.presentVideoEditor(
-        withLaunchConfiguration: cameraLaunchConfig,
-        completion: nil
-      )
+      self.presentVideoEditor(at: .camera)
     }
   }
   
   @IBAction func PIPAction(_ sender: Any) {
     initVideoEditor { isTokenValid in
       guard isTokenValid else { return }
-      self.openGallery()
+      self.openGallery(for: .pip)
+    }
+  }
+  
+  @IBAction func draftsAction(_ sender: UIButton) {
+    initVideoEditor { isTokenValid in
+      guard isTokenValid else { return }
+      self.presentVideoEditor(at: .drafts)
+    }
+  }
+  
+  @IBAction func trimmerAction(_ sender: UIButton) {
+    initVideoEditor { isTokenValid in
+      guard isTokenValid else { return }
+      self.openGallery(for: .trimmer)
     }
   }
 }
@@ -173,6 +178,25 @@ extension ViewController {
       player.play()
     }
   }
+  
+  private func presentVideoEditor(
+    with videoUrls: [URL]? = nil,
+    musicTrack: MusicTrack? = nil,
+    at entryPoint: PresentEventOptions.EntryPoint
+  ) {
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: entryPoint,
+      hostController: self,
+      videoItems: videoUrls,
+      pipVideoItem: videoUrls?[.zero],
+      musicTrack: nil, // Paste a music track as a track preset at the camera screen to record video with music
+      animated: true
+    )
+    self.videoEditorSDK?.presentVideoEditor(
+      withLaunchConfiguration: launchConfig,
+      completion: nil
+    )
+  }
 }
 
 // MARK: - BanubaVideoEditorDelegate
@@ -192,7 +216,7 @@ extension ViewController: BanubaVideoEditorDelegate {
 
 // MARK: - PIP Helpers
 extension ViewController {
-  private func openGallery() {
+  private func openGallery(for entryPoint: PresentEventOptions.EntryPoint) {
     VideoPicker().pickVideo(
       isMultipleSelectionEnabled: false,
       from: self
@@ -261,16 +285,9 @@ extension ViewController {
         let presentingHandler = {  [weak self] in
           guard let self = self, !resultUrls.isEmpty else { return }
           
-          let pipLaunchConfig = VideoEditorLaunchConfig(
-            entryPoint: .pip,
-            hostController: self,
-            pipVideoItem: resultUrls[.zero],
-            musicTrack: nil,
-            animated: true
-          )
-          self.videoEditorSDK?.presentVideoEditor(
-            withLaunchConfiguration: pipLaunchConfig,
-            completion: nil
+          self.presentVideoEditor(
+            with: resultUrls,
+            at: entryPoint
           )
         }
         
