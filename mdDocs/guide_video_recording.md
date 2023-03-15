@@ -26,17 +26,17 @@ To be able to use your own quality parametrs please follow this [guide](video_re
 ```VideoEditorConfig``` is a main class used to customize features, behavior and user experience for video recording on camera screen i.e. set min/max recording duration, flashlight, etc.  
 Video editor includes default implementation but you can provide your own implementation to meet your requirements in [ViewController](../Example/Example/ViewController.swift#L111).  
 
-```VideoEditorDurationConfig``` is a main class for implementing custom recording features.
+```VideoEditorDurationConfig``` is a main class for implementing custom recording features. Below all values provided in seconds.
 
 | Property |                Values                | Description |
 | ------------- |:------------------------------------:| :------------- |
-| maximumVideoDuration | TimeInterval > 0; Default ```60.0``` | ...
-| minimumDurationFromCamera |   IN PROGRESS   | IN PROGRESS
-| minimumDurationFromGallery |  IN PROGRESS   | IN PROGRESS
-| minimumVideoDuration |   IN PROGRESS    | IN PROGRESS
-| minimumTrimmedPartDuration |   IN PROGRESS    | IN PROGRESS
-| slideshowDuration |   IN PROGRESS    | IN PROGRESS
-| tolerance |             IN PROGRESS              | IN PROGRESS
+| maximumVideoDuration | TimeInterval > 0; Default ```120.0``` | maximum video recording duration available to record
+| videoDurations | ```[60.0, 30.0, 15.0]``` | defines an array of durations available to record. The user can see the option on the camera screen and pick new option. For example,  ```60.0``` means that the user can record a number of video with total duration no more than ```60.0``` seconds.
+| minimumDurationFromCamera |   ```3.0```   | minimum video recording duration required to proceed and open a next screen
+| minimumDurationFromGallery |  ```0.3```   | minimum gallery video duration displayed at gallery
+| minimumVideoDuration |   ```1.0```    | minimum video chunk recording duration that is allowed to record on camera
+| minimumTrimmedPartDuration |   ```0.3```    | minimum video chunk duration that is allowed to trim on trimmer
+| slideshowDuration |  ```0.3```    | slideshow video duration produced from a user photo
 
 In this example, maximum video duration(RECORDING??) is set to 30 seconds.
 
@@ -45,43 +45,84 @@ var config = VideoEditorConfig()
 config.videoDurationConfiguration.maximumVideoDuration = 30.0
 ```
 
-IN PROGRESS
 ```FeatureConfig``` helps to customize features on Camera screen.
 
 | Property |            Values            | Description |
 | ------------- |:----------------------------:| :------------- |
-| minimumDurationFromCamera |          Double > 0          | for the minimum recording duration *in seconds* that is allowed to proceed with Editor screen (i.e. 3.0 for 3 seconds)
-| maximumVideoDuration |          Double > 0          | for the maximum video duration *in seconds* available to record on the camera (i.e. 60.0 for 1 minute)
-| minimumDurationFromGallery |          Double > 0          | for the maximum video duration *in seconds*  available to Duration video from Gallery (i.e. 3.0 for 3 seconds)
-| minimumTrimmedPartDuration |          Double > 0          | for the maximum video duration *in seconds*  available to video part minimum duration at trimmer (i.e. 2.0 for 2 seconds)
-| isDefaultFrontCamera |          true/false          | defines which camera will open by default on your device(*true* means the front camera opens by default, *false* means the main camera opens by default
-| captureButtonModes | Set`<CaptureButtonViewMode>` | defines captureButtonMods setups camera capturing functionality. By default [.video, .photo]
-| loopAudioWhileRecording |          true/false          | defines whether to loop the selected track during video recording (*true* means that the track will be repeated while recording is in progress, *false* means that the track will play once)
-| takeAudioDurationAsMaximum |          true/false          | determines what maximum recording duration to take if a track is installed (*true* set the maximum duration equal to the duration of the selected track, *false* take the maximum recording duration from ***maximumVideoDuration***
-| isMuteCameraAudioEnabled |          true/false          | setups the mute icon on the camera overlay and possibility to make video recording without capturing sound
-| useHEVCCodecIfPossible |          true/false          | intermediate video will be encoded using the HEVC (H.265) encoder if available on the current device.
-
+| isDoubleTapForToggleCameraEnabled |         ```false```         | double tapping on camera preview will toggle front/back camera input.
+| isMuteCameraAudioEnabled |          ```false```          | removes from camera mute sound button 
+| isSpeedBarEnabled |          ```true```           | enables speed selection bar. If bar is disabled speed recording will iterativly switched by tapping
+| openAutomaticallyPIPSettingsDropdown |          ```false```          | if this property enabled the pip settings drop down view will be presented after opening camera screen
 
 ## Configure microphone state
-IN PROGRESS...
+Use ```muteMicrophoneForPIP``` property of ```RecorderConfiguration``` to setup mute sound button state for pip mode. Default value is ```true```.
+
+Глеб, в Андройде странные поля в этом разделе, которых у нас нет. Есть совпадение только по пипу.
+
+```swift
+var config = VideoEditorConfig()
+// If mic should be muted when open camera screen in picture in picture mode
+config.recorderConfiguration.muteMicrophoneForPIP = false
+```
 
 ## Configure recording modes
-IN PROGRESS...
+Camera screen supports ```photo``` and ```video``` modes for recording content. By default ```BanubaVideoEditor``` enables both modes and a user can switch between modes at camera screen. You can specify editor with single mode by setting the single value array ```captureButtonModes``` property of ```RecorderConfiguration```.
+```swift
+var config = VideoEditorConfig()
+// Setup camera screen only with video mode
+config.recorderConfiguration.captureButtonModes = [.video]
+```
 
 ## Configure timer
-IN PROGRESS...
+This feature allows to take a picture or record a video after some delay.
+To customize timer options use ```timerConfiguration.options``` property of ```RecorderConfiguration``` where every delay described in ```TimerOptionConfiguration```. The following example shows how to add timer with 2 options - 3 seconds and 5 seconds.
+
+```swift
+var config = VideoEditorConfig()
+config.recorderConfiguration.timerConfiguration.options = [
+  TimerOptionConfiguration(
+    button: ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "camera.time_3")),
+    startingTimerSeconds: 3,
+    stoppingTimerSeconds: .zero,
+    description: "3"
+  ),
+  TimerOptionConfiguration(
+    button: ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "camera.time_5")),
+    startingTimerSeconds: 5,
+    stoppingTimerSeconds: .zero,
+    description: "5"
+  )
+]
+```
+
+Also, you can customize countdown animation if you are not satisfied with default implementation. To do this override default ```countdownTimerViewFactory``` property in ```ViewControllerFactory``` with your own implementation which conforms to ```CountdownTimerViewFactory``` protocol.
+
+```swift
+...
+let viewControllerFactory = ViewControllerFactory()
+viewControllerFactory.countdownTimerViewFactory = CountdownTimerViewControllerFactory()
+    
+videoEditorSDK = BanubaVideoEditor(
+  token: AppDelegate.licenseToken,
+  configuration: config,
+  externalViewControllerFactory: viewControllerFactory
+)
+```
+
+ You can find full implementaion in [Example project](../Example/Example/ViewController.swift#L85)
 
 ## Configure hands free
-IN PROGRESS...
+Hands Free is an advanced timer feature that allows to set up delay before starting of video recording and desired duration for video recording. See [customisation guide](handsFree_styles.md) for mode information.
+ The feature is enabled by default. If you want to disable hands free you have to change ```isHandfreeEnabled``` property of ```VideoEditorConfig```.
+```swift
+var config = VideoEditorConfig()
+config.isHandfreeEnabled = false
+```
 
 ## Configure record button appearance
-IN PROGRESS
 The record button is a main control on the camera screen which you can fully customize along with animations playing on tap.
-
-First of all look at [RecordButtonConfiguration](record_button_configuration.md) entity which you can customize in [Camera screen configuration quide](camera_styles.md). If it still not suits your needs you can create your own view for more information look [here](record_button_provider.md)
-
-
-
+To customize record button use ```recordButton``` property of ```RecorderConfiguration```. All available options of customization record button described [here](record_button_configuration.md).
+If it still not suits your needs you can create your own view for more information look [here](record_button_provider.md).
 
 ## Picture in picture
 Picture in picture mode is optional for the video editor SDK and would be disabled if it is not included in your token.

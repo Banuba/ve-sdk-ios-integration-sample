@@ -1,7 +1,7 @@
 # Banuba VideoEditor SDK
 ##  RecordButtonProvider
 
-To implement your own custom record button you should create a new provider witсh returning your view. And put it to [recordButtonProvider](camera_styles.md#L30) property.
+To implement your own custom record button you should create a new provider witсh returning your view. And put it to ```recordButtonProvider``` property of ```RecorderConfiguration```.
 ``` swift
 /// The record button view provider.
 public protocol RecordButtonProvider {
@@ -27,4 +27,3 @@ public protocol RecordButtonDelegate: AnyObject {
   func recordButtonDidStopVideoRecording(_ recordButton: RecordButton)
 }
 ``` 
-

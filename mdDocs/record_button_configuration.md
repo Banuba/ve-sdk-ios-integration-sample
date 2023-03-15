@@ -1,6 +1,8 @@
 # Banuba VideoEditor SDK
 ##  RecordButtonConfiguration
 
+![img](screenshots/RecordButtonConfiguration.png)
+
 ``` swift
 /// The Record button configuration
 public struct RecordButtonConfiguration {
