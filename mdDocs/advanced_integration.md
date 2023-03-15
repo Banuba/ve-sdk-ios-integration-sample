@@ -4,6 +4,8 @@ This guide is aimed to help you complete advanced integration of Video Editor SD
 
 - [Face AR SDK and AR Cloud](#Face-AR-SDK-and-AR-Cloud)
 - [Video recording](#Video-recording)
+- [Add audio content](#Add-audio-content)
+- [Popups](#Popups)
 - [Passing Apple Store review](#Passing-Apple-Store-review)
 - [Launch methods](#Launch-methods)
 
@@ -23,6 +25,13 @@ integrating AR Cloud, managing AR effects and many more.
 Video editor supports functionality allowing to record video using iOS camera. There are many features, configurations and styles
 that will help you to record video easily in an excellent quality.  
 Please follow [video recording integration guide](guide_video_recording.md) to know more about available features.
+
+## Add audio content
+Video Editor has built in support and API for browsing, playing and applying audio while making video content on various screens.  
+Follow [Video Editor audio content integration guide](guide_audio_content.md) to know more details about using audio and API in Video Editor.
+
+## Popups
+Visit [Popups guide](guide_popus.md) to know more about usage popups in video editor.
 
 ## Passing Apple Store review
 Unfortunately Apple Store may reject your app due to use of TrueDepth API.  
