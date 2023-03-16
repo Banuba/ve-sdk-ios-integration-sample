@@ -11,17 +11,15 @@
 - [Configure camera screen appearance](#Configure-camera-screen-appearance)
 
 ## Quality details
-Subsequent table describes video quality details used for video recording in various resolutions.  
-
-IN PROGRESS - Check values!!!
+Subsequent table describes video quality details used for video recording in various resolutions with h264 codec.
+If h265(HEVC) is used for recording video the values listed below will be reduced 15% for better video performance.
 
 | Recording speed | 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) |  HD(720 x 1280) | FHD(1080 x 1920) |
 | --------------- | --------------- | --------------- | --------------- | --------------- | ---------------- |
-| 1x(Default)     | 800             | 2000            | 2000            | 4000            | 6400             |
-| 0.5x            | 800             | 2000            | 2000            | 4000            | 6400             |
-| 2x              | 800             | 2000            | 2000            | 4000            | 6400             |
-| 3x              | 800             | 2000            | 2000            | 4000            | 6400             |  
-
+| 1x(Default)     | 1000             | 2500            | 3000            | 5000            | 8000             |
+| 0.5x            | 1000             | 2500            | 3000            | 5000            | 8000             |
+| 2x              | 1000             | 2500            | 3000            | 5000            | 8000             |
+| 3x              | 1000             | 2500            | 3000            | 5000            | 8000             |  
 
 ## Implement configurations
 ```VideoEditorConfig``` is a main class used to customize features, behavior and user experience for video recording on camera screen i.e. set min/max recording duration, flashlight, etc. 

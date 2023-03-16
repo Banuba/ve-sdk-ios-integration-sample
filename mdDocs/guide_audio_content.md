@@ -161,345 +161,325 @@ Music Editor includes voice recording feature as well.
 
 Below is a list of styles and attributes you can customize to meet your requirements.
 
-### MusicEditorConfig
-
-- [mainMusicViewControllerConfig: MainMusicViewControllerConfig](/Example/Example/Extension/MusicEditorConfig.swift#L8)
+- [mainMusicViewControllerConfig](/Example/Example/VideoEditorModule.swift#L471)
 
 MainMusicViewControllerConfig setups main screen style
 
-- [videoTrackLineEditControllerConfig: VideoTrackLineEditViewControllerConfig](/Example/Example/Extension/MusicEditorConfig.swift#L9)
+- [videoTrackLineEditControllerConfig](/Example/Example/VideoEditorModule.swift#L474)
 
 VideoTrackLineEditViewControllerConfig setups video track line editing screen style
 
-- [audioTrackLineEditControllerConfig: AudioTrackLineEditViewControllerConfig](/Example/Example/Extension/MusicEditorConfig.swift#L10)
+- [audioTrackLineEditControllerConfig](/Example/Example/VideoEditorModule.swift#L473)
 
 VideoTrackLineEditViewControllerConfig setups audio track line editing screen style
 
-- [audioRecorderViewControllerConfig: AudioRecorderViewControllerConfig](/Example/Example/Extension/MusicEditorConfig.swift#L11)
+- [audioRecorderViewControllerConfig](/Example/Example/VideoEditorModule.swift#L472)
 
 AudioRecorderViewControllerConfig setups audio recorder style
 
-### MainMusicViewControllerConfig
-
-- [editButtons: [EditButtonConfig]](/Example/Example/Extension/MusicEditorConfig.swift#L19)
+- [editButtons](/Example/Example/VideoEditorModule.swift#L482)
 
 Array of adding buttons
 
-- [editButtonsHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L43)
+- [editButtonsHeight](/Example/Example/VideoEditorModule.swift#L513)
 
 Adding buttons container height
 
-- [editCompositionButtons: [EditCompositionButtonConfig]](/Example/Example/Extension/MusicEditorConfig.swift#L45)
+- [editCompositionButtons](/Example/Example/VideoEditorModule.swift#L515)
 
 Array of edit composition buttons
 
-- [controlButtons: [ControlButtonConfig]](/Example/Example/Extension/MusicEditorConfig.swift#L64)
+- [controlButtons](/Example/Example/VideoEditorModule.swift#L164)
 
 Aray of control buttons
 
-- [playerControlsHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L82)
+- [playerControlsHeight](/Example/Example/VideoEditorModule.swift#L202)
 
 Сontrol buttons container height
 
-- [audioWaveConfiguration: AudioWaveConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L83)
+- [audioWaveConfiguration](/Example/Example/VideoEditorModule.swift#L207)
 
 AudioWaveConfiguration setups audio wave style
 
-- [mainLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L84)
+- [mainLabelColors](/Example/Example/VideoEditorModule.swift#L562)
 
 Color for main titles color
 
-- [additionalLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L85)
+- [additionalLabelColors](/Example/Example/VideoEditorModule.swift#L563)
 
 Color for additional titles color
 
-- [speakerImageName: String](/Example/Example/Extension/MusicEditorConfig.swift#L86)
-
- Image name setups speaker image view
-
-- [volumeLabel: TextButtonConfig](/Example/Example/Extension/MusicEditorConfig.swift#L87)
-
-TextButtonConfig setups volume label title style
-
-- [tracksLimit: Int](/Example/Example/Extension/MusicEditorConfig.swift#L88)
+- [tracksLimit](/Example/Example/VideoEditorModule.swift#L566)
 
 Number of maximum tracks
 
-- [cursorColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L89)
+- [cursorColor](/Example/Example/VideoEditorModule.swift#L567)
 
 Cursor color
 
-- [controlsBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L90)
+- [controlsBackgroundConfiguration](/Example/Example/VideoEditorModule.swift#L568)
 
 BackgroundConfiguration setups controls container background style
 
-- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L91)
+- [backgroundConfiguration](/Example/Example/VideoEditorModule.swift#L569)
 
 BackgroundConfiguration setups main view background style
 
-- [timelineCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L92)
+- [timelineCornerRadius](/Example/Example/VideoEditorModule.swift#L570)
 
 Time line corner radius
 
-- [previewViewBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L92)
+- [previewViewBackgroundConfiguration](/Example/Example/VideoEditorModule.swift#L572)
 
 BackgroundConfiguration setups preview view background style
 
-- [videoControlsViewBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L92)
+- [videoControlsViewBackgroundConfiguration](/Example/Example/VideoEditorModule.swift#L572)
 
 BackgroundConfiguration setups video controls view background style
 
-- [alertConfig: AlertViewConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L92)
+- [alertConfig](/Example/Example/VideoEditorModule.swift#L572)
 
 Configuration for alertView
 
 ![img](screenshots/MusicEditorMainScreen.png)
 
-### AudioRecorderViewControllerConfig
-
-- [rewindToStartButton: ControlButtonConfig?](/Example/Example/Extension/MusicEditorConfig.swift#L100)
+- [rewindToStartButton?](/Example/Example/VideoEditorModule.swift#L578)
 
 ControlButtonConfig setups rewind to start button
 
-- [playPauseButton: ControlButtonConfig](/Example/Example/Extension/MusicEditorConfig.swift#L106)
+- [playPauseButton](/Example/Example/VideoEditorModule.swift#L584)
 
 ControlButtonConfig setups play pause button
 
-- [playerControlsHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L112)
+- [playerControlsHeight](/Example/Example/VideoEditorModule.swift#L590)
 
 Player controls height
 
-- [recordButton: ControlButtonConfig](/Example/Example/Extension/MusicEditorConfig.swift#L114)
+- [recordButton](/Example/Example/VideoEditorModule.swift#L592)
 
 ControlButtonConfig setups record button
 
-- [backButtonImage: String](/Example/Example/Extension/MusicEditorConfig.swift#L120)
+- [backButtonImage](/Example/Example/VideoEditorModule.swift#L598)
 
 Image name setups back button UIImage
 
-- [doneButtonImage: String](/Example/Example/Extension/MusicEditorConfig.swift#L121)
+- [doneButtonImage](/Example/Example/VideoEditorModule.swift#L599)
 
  Image name setups done button UIImage
 
-- [dimViewColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L122)
+- [dimViewColor](/Example/Example/VideoEditorModule.swift#L600)
 
 Dim view color
 
-- [additionalLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L123)
+- [additionalLabelColors](/Example/Example/VideoEditorModule.swift#L601)
 
 Additional labels color
 
-- [startingRecordingTimerSeconds: TimeInterval](/Example/Example/Extension/MusicEditorConfig.swift#L124)
+- [startingRecordingTimerSeconds](/Example/Example/VideoEditorModule.swift#L602)
 
 Countdown to start recording
 
-- [timerColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L125)
+- [timerColor](/Example/Example/VideoEditorModule.swift#L603)
 
 Timer color
 
-- [cursorColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L126)
+- [cursorColor](/Example/Example/VideoEditorModule.swift#L604)
 
 Cursor color
 
-- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L127)
+- [backgroundConfiguration](/Example/Example/VideoEditorModule.swift#L605)
 
 BackgroundConfiguration setups background view
 
-- [playerControlsBackgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L128)
+- [playerControlsBackgroundConfiguration](/Example/Example/VideoEditorModule.swift#L606)
 
 BackgroundConfiguration setups player controls background view
 
-- [timelineCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L129)
+- [timelineCornerRadius](/Example/Example/VideoEditorModule.swift#L607)
 
 Time line corner radius
 
-- [resetButton: RoundedButtonConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L129)
+- [resetButton](/Example/Example/VideoEditorModule.swift#L609)
 
 RoundedButtonConfiguration setups reset button style
 
 ![img](screenshots/AudioRecorderScreen.png)
 
-### VideoTrackLineEditViewControllerConfig
-
-- [doneButtonImageName: String](/Example/Example/Extension/MusicEditorConfig.swift#L137)
+- [doneButtonImageName](/Example/Example/VideoEditorModule.swift#L615)
 
 Image name setups done button UIImage
 
-- [doneButtonTintColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L138)
+- [doneButtonTintColor](/Example/Example/VideoEditorModule.swift#L616)
 
 Done button tint color
 
-- [sliderTintColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L139)
+- [sliderTintColor](/Example/Example/VideoEditorModule.swift#L617)
 
 Slider tint color
 
-- [mainLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L140)
+- [mainLabelColors](/Example/Example/VideoEditorModule.swift#L618)
 
 Main labels color
 
-- [additionalLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L141)
+- [additionalLabelColors](/Example/Example/VideoEditorModule.swift#L619)
 
 Additional labels colors
 
-- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L142)
+- [backgroundConfiguration](/Example/Example/VideoEditorModule.swift#L620)
 
 BackgroundConfiguration setups background view
 
-- [height: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L143)
+- [height](/Example/Example/VideoEditorModule.swift#L621)
 
 Pop-up screen's height
 
 ![img](screenshots/VideoEditScreen.png)
 
-### AudioTrackLineEditViewControllerConfig
-
-- [audioWaveConfiguration: AudioWaveConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L151)
+- [audioWaveConfiguration](/Example/Example/VideoEditorModule.swift#L628)
 
 AudioWaveConfiguration setups audio wave style
 
-- [doneButtonImageName: String](/Example/Example/Extension/MusicEditorConfig.swift#L153)
+- [doneButtonImageName](/Example/Example/VideoEditorModule.swift#L630)
 
 Image name setups done buttom UIImage
 
-- [doneButtonTintColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L154)
+- [doneButtonTintColor](/Example/Example/VideoEditorModule.swift#L631)
 
 Done button tint color
 
-- [sliderTintColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L155)
+- [sliderTintColor](/Example/Example/VideoEditorModule.swift#L632)
 
 Slider tint color
 
-- [draggersColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L156)
+- [draggersColor](/Example/Example/VideoEditorModule.swift#L633)
 
 Draggers background color
 
-- [draggerImageName: String?](/Example/Example/Extension/MusicEditorConfig.swift#L157)
+- [draggerImageName](/Example/Example/VideoEditorModule.swift#L634)
 
 Image name setups draggers additional UIImage
 
-- [trimHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L158)
+- [trimHeight](/Example/Example/VideoEditorModule.swift#L635)
 
 Trim container heught
 
-- [trimBorderColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L159)
+- [trimBorderColor](/Example/Example/VideoEditorModule.swift#L636)
 
 Trim container border lines color
 
-- [trimBorderWidth: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L160)
+- [trimBorderWidth](/Example/Example/VideoEditorModule.swift#L637)
 
 Trim container border lines width
 
-- [cursorHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L161)
+- [cursorHeight](/Example/Example/VideoEditorModule.swift#L638)
 
 Cursor height
 
-- [dimViewColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L162)
+- [dimViewColor](/Example/Example/VideoEditorModule.swift#L639)
 
 Dim view background color
 
-- [mainLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L163)
+- [mainLabelColors](/Example/Example/VideoEditorModule.swift#L163)
 
 Main labels' title color
 
-- [additionalLabelColors: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L164)
+- [additionalLabelColors](/Example/Example/VideoEditorModule.swift#L640)
 
 Additional labels' title color
 
-- [cursorColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L165)
+- [cursorColor](/Example/Example/VideoEditorModule.swift#L642)
 
 Cursor background color
 
-- [draggersWidth: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L166)
+- [draggersWidth](/Example/Example/VideoEditorModule.swift#L643)
 
 Draggers' view width
 
-- [draggersLineColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L167)
+- [draggersLineColor](/Example/Example/VideoEditorModule.swift#L167)
 
 Draggers' central line view color
 
-- [draggersCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L168)
+- [draggersCornerRadius](/Example/Example/VideoEditorModule.swift#L644)
 
 Draggers' view corner radius
 
-- [draggersLineWidth: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L169)
+- [draggersLineWidth](/Example/Example/VideoEditorModule.swift#L646)
 
 Draggers' central line view width
 
-- [draggersLineHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L170)
+- [draggersLineHeight](/Example/Example/VideoEditorModule.swift#L647)
 
 Draggers' central line view height
 
-- [numberOfLinesInDraggers: Int](/Example/Example/Extension/MusicEditorConfig.swift#L171)
+- [numberOfLinesInDraggers](/Example/Example/VideoEditorModule.swift#L648)
 
 Number of draggers' central lines
 
-- [draggerLinesSpacing: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L172)
+- [draggerLinesSpacing](/Example/Example/VideoEditorModule.swift#L649)
 
 Draggers' central lines spacing
 
-- [draggersLineCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L173)
+- [draggersLineCornerRadius](/Example/Example/VideoEditorModule.swift#L649)
 
 Draggers' central lines corner radius
 
-- [backgroundConfiguration: BackgroundConfiguration](/Example/Example/Extension/MusicEditorConfig.swift#L174)
+- [backgroundConfiguration](/Example/Example/VideoEditorModule.swift#L651)
 
 BackgroundConfiguration setups common container view background style
 
-- [voiceFilterConfiguration: VoiceFilterConfiguration?](/Example/Example/Extension/MusicEditorConfig.swift#L175)
+- [voiceFilterConfiguration](/Example/Example/VideoEditorModule.swift#L652)
 
 VoiceFilterConfiguration seups voice filter container view item style
 
-- voiceFilterProvider: VoiceFilterProvider?
+- [voiceFilterProvider](/Example/Example/VideoEditorModule.swift#L475)
 
 VoiceFilterProvider setups voice filters provider
 
-- isVoiceFilterHidden: Bool
+- [isVoiceFilterHidden](/Example/Example/VideoEditorModule.swift#L476)
 
 Voice Filter will be hidden if voiceFilterProvider is nil
-
-### AudioWaveConfiguration
  
-- [isRandomWaveColor: Bool](/Example/Example/Extension/MusicEditorConfig.swift#L159)
+- [isRandomWaveColor](/Example/Example/VideoEditorModule.swift#L628)
 
 Is random wave color enabled
   
-- [backgroundColor: UIColor?](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+- [backgroundColor](/Example/Example/VideoEditorModule.swift#L628)
   
 Background color view
   
-- [waveBorderColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+- [waveBorderColor](/Example/Example/VideoEditorModule.swift#L628)
 
 Time line border color
   
-- [waveCornerRadius: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+- [waveCornerRadius](/Example/Example/VideoEditorModule.swift#L628)
 
 Time lime corner radius
   
-- [waveLinesColor: UIColor](/Example/Example/Extension/MusicEditorConfig.swift#L160)
+- [waveLinesColor](/Example/Example/VideoEditorModule.swift#L628)
 
 Audio wave lines color
  
-- [borderWidth: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+- [borderWidth](/Example/Example/VideoEditorModule.swift#L628)
 
 Time line border width
   
-- [height: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+- [height](/Example/Example/VideoEditorModule.swift#L628)
 
 Time line height
   
-- [maxWaveHeight: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+- [maxWaveHeight](/Example/Example/VideoEditorModule.swift#L628)
   
 Max audio wave height
   
-- [audioTitleFont: UIFont?](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+- [audioTitleFont](/Example/Example/VideoEditorModule.swift#L628)
 
 Audio title font
   
-- [audioTitleColor: UIColor?](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+- [audioTitleColor](/Example/Example/VideoEditorModule.swift#L628)
 
 Audio title color
   
-- [bottomOffset: CGFloat](/Example/Example/Extension/MusicEditorConfig.swift#L1)
+- [bottomOffset](/Example/Example/VideoEditorModule.swift#L628)
 
 Time line bottom offset
 
