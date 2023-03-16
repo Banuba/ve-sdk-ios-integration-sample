@@ -994,7 +994,7 @@ class VideoEditorModule {
         )
         updatedConfiguration.galleryButton = galleryButton
         
-        updatedConfiguration.emptyGalleryImageName = "multi_choise"
+        updatedConfiguration.emptyGalleryImageName = "multi_choice"
         
         updatedConfiguration.timerConfiguration.defaultButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_timer_off"))
         updatedConfiguration.timerConfiguration.options = [

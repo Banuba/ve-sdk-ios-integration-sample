@@ -2,10 +2,10 @@
 # Banuba Video Editor SDK - iOS integration sample
 <p align="center">
 <img src="mddocs/gif/camera_preview.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
-<img src="mddocs/gif/camera_pip.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
+<img src="mddocs/gif/pip_preview.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
 <img src="mddocs/gif/audio_browser.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
 <img src="mddocs/gif/editor_timeline.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
-<img src="mddocs/gif/background_separation.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
+<img src="mddocs/gif/gif_background.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
 </p>
 
 ## Overview
