@@ -561,8 +561,6 @@ class VideoEditorModule {
         updatedConfiguration.audioWaveConfiguration.isRandomWaveColor = true
         updatedConfiguration.mainLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         updatedConfiguration.additionalLabelColors = UIColor.black
-        updatedConfiguration.speakerImageName = "imageName"
-        updatedConfiguration.volumeLabel.title = "Title"
         updatedConfiguration.tracksLimit = 5
         updatedConfiguration.cursorColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         updatedConfiguration.controlsBackgroundConfiguration.cornerRadius = 0.0
