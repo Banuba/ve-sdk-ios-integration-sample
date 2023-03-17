@@ -340,7 +340,7 @@ Use these configs to customize UI controls os camera screen.
 
 - [saveButton](../Example/Example/VideoEditorModule.swift#L904) - configuration for save button
 - [backButton](../Example/Example/VideoEditorModule.swift#L915) - configuration for back button
-- [removeButtonImageName](../Example/Example/VideoEditorModule.swift#L916) - [FIX]ImageName sets up the remove button UIImage
+- [removeButtonImageName](../Example/Example/VideoEditorModule.swift#L916) - configuration sets up the remove button UIImage
 - [additionalEffectsButtons](../Example/Example/VideoEditorModule.swift#L924) - array of button configurations used on camera screen
 - [speedBarButtons](../Example/Example/VideoEditorModule.swift#L978) - configuration for speed bar buttons
 - [galleryButton](../Example/Example/VideoEditorModule.swift#L984) - configuration for gallery button
