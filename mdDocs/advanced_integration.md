@@ -40,13 +40,6 @@ Please [follow guidelines](passing_apple_review.md) to successfully pass Apple S
 ## Launch methods
 In progress...
 
-### Configure audio content
-
-Banuba Video Editor SDK can trim audio tracks, merge them, and apply them to a video. It doesn't include music or sounds. However, it can be integrated with [Mubert](https://mubert.com/) and get music from it (requires additional contract with them). Moreover, the users can add audio files from internal memory (downloaded library) from the phone.
-
-Integrating audio content is simple. See this [guide](audio_content.md#step-1).
-
-
 ## Configure screens
 Each screen can be modified to your liking. You can change icons, colors, text and its font, button titles, and much more.
 
@@ -57,11 +50,9 @@ Below see the list of screens with links to their detailed description and notes
 1. [Editor screen](editor_styles.md)
 2. [Trim screens](trim_styles.md)
 3. [Overlay screens](overlayEditor_styles.md)
-4. [Music editor screen](musicEditor_styles.md)
-5. [Gallery screen](gallery_styles.md)
-6. [Alert screens](alert_styles.md)
-7. [Cover screen](cover_style.md)
-8. [Audio Browser screen](audioBrowser.md)
+4. [Gallery screen](gallery_styles.md)
+5. [Alert screens](alert_styles.md)
+6. [Cover screen](cover_style.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 

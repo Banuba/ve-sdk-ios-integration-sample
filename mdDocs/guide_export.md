@@ -94,7 +94,7 @@ Below is a sample that export 2 video files:
 1. video with auto resolution without watermark
 2. video with HD resolution with watermark
 
-```swift
+```Swift
 let watermarkConfiguration = WatermarkConfiguration(
     watermark: ImageConfiguration(imageName: "Common.Banuba.Watermark"),
     size: CGSize(width: 204, height: 52),
@@ -123,45 +123,40 @@ let exportConfig = ExportConfiguration(
 )
 ```
 
+Use created ```ExportConfiguration``` to start export by using  ```BanubaVideoEditor.export()``` method
+```Swift
+public func export(
+    using configuration: ExportConfiguration,
+    exportProgress: ((TimeInterval) -> Void)?,
+    completion: @escaping ((_ success: Bool, _ error: Error?, _ exportCoverImages: ExportCoverImages?)->Void)
+)
+``` 
+
 ## Handle export result
-IN PROGRESS
+Method ```BanubaVideoEditor.export()``` allows either start export and track the result.  
+Provide
+1. ```ExportConfiguration``` where you set up all required media content you want to make
+2. ```exportProgress``` - callback that gets called when export progress changes. Values are 0.0-1.0
+3. ```completion```- callback that gets called when export finishes successfully or with an error.
 ```swift
 videoEditorSDK?.export(
       using: exportConfiguration,
       exportProgress: { progress in
         DispatchQueue.main.async {
-          // Export is in progress. You can show progress view 
+          // Export is in progress. You can show progress view. Progress is 0.0 - 1.0
           ...
         }
       },
       completion: { [weak self] success, error, exportCoverImages in
-      DispatchQueue.main.async {
-        // Hide progress view
-        progressViewController.dismiss(animated: true) {
-          // Clear video editor session data
-          self?.videoEditorSDK?.clearSessionData()
-          if success {
-            /// If you want to play exported video
-//          self.playVideoAtURL(videoURL)
-            
-            /// If you want to share exported video
-            if let self = self, let config = self.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration {
-              BanubaVideoEditor.presentSharingViewController(
-                from: self,
-                configuration: config,
-                mainVideoUrl: videoURL,
-                videoUrls: [videoURL],
-                previewImage: exportCoverImages?.coverImage ?? UIImage(),
-                animated: true,
-                completion: nil
-              )
-            }
-          }
-          self?.videoEditorSDK = nil
+        DispatchQueue.main.async {
+            // Export finishes. Use 'success' or 'error' values to detect the state of export.
+            // Hide progress view
+        
+            // You can clear exported session if you do no need it anymore
+            //self?.videoEditorSDK?.clearSessionData()
         }
-      }
 ```
-
+> :bulb: If export finishes successfully you can use instance of ```ExportConfiguration``` as a result and access media files and its metadata.
 ## Progress screen
 
 ```ProgressViewController``` is shown while exporting media files.
@@ -242,12 +237,18 @@ in export. You can specify this property in [VideoEditorModule](../Example/Examp
 ```
 
 ## Get audio used in export
-IN PROGRESS...
 You can get all audio used in exported video when export finished successfully.  
 
-There are 2 options to export audio file
-1. Using ```BanubaVideoEditor.exportAudio()``` method
-2. Using ```ExportVideoConfiguration``` by passing ```audioSettings```
+Use ```BanubaVideoEditor.exportAudio()``` method to export audio file
+
+```Swift
+public func exportAudio(
+    fileUrl: URL,
+    audioSettings: [String: Any] = VESettings.audio,
+    completion: @escaping (Bool, Error?) -> Void
+)
+```
+>:bulb: Learn available options in [Apple Developer Portal](https://developer.apple.com/documentation/avfoundation/audio_settings) to provide custom audio quality settings.
 
 ## Export metadata analytics
 Video Editor generates simple metadata analytics while exporting media content that you can use to analyze what media content your users make.

@@ -4,6 +4,7 @@
 - [Audio Browser](#Audio-Browser)
 - [Mubert integration](#Mubert-integration)
 - [External API](#External-API)
+- [Export from Apple Music](#Export-from-Apple-Music)
 - [Music Editor screen](#Music-Editor-screen)
 
 ## Overview
@@ -36,7 +37,6 @@ pod 'BanubaAudioBrowserSDK', banuba_sdk_version
 
 Finally, you can customize Audio Browser appearance with ```AudioBrowserConfig.shared``` configuration
 
-
 ## Mubert integration
 Audio Browser has built in integration with [Mubert](https://mubert.com/) API.  
 Please contact Mubert representatives to request API KEY.
@@ -48,15 +48,15 @@ BanubaAudioBrowser.setMubertPat("SET MUBERT API KEY")
 
 You can use ```AudioBrowserConfig.shared.mubertAudioConfig``` to customize network requests to Mubert as well.
 
-| Property | Available values | Description |
-| ------------- | :------------: | :------------- |
-| **trackDuration** | Number > 0 | duration that applied for generated tracks in seconds
-| **trackBitrate** | any of the following values: 32, 96, 128, 192, 256, 320 | sound quality measured in kbps
-| **trackIntencity** |  any of the following values: low, medium, high | instrumental saturation (number of stems) for generated tracks
-| **trackFormat** |  any of the following values: mp3, wav, flac | format of generated tracks
-| **categoryTracksAmount** | Number > 0 | amount of tracks to generate for selected category
+| Property |                                 Values                                  | Description |
+| ----------- |:-----------------------------------------------------------------------:| :------------- |
+| trackDuration |                       String,   Default ```30```                        | Mubert will generate track with exactly this duration in seconds
+| trackBitrate | allowed: ```32```, ```96```, ```128```, ```192```, ```256```, ```320``` | audio quality in kbps
+| trackIntencity |  allowed: ```low```, ```medium```, ```high```; Recommended ```high```   | instrumental saturation (number of stems) for generated tracks
+| trackFormat |      allowed: ```mp3```, ```wav```, ```flac```; Default ```mp3```       | audio format of generated tracks
+| categoryTracksAmount |                               Number > 0                                | amount of tracks to generate for selected category
 
-Below is a list of localized strings that you can use or customize
+These string resources are used however you can override them.
 
 | Key        |      Value      |   Description |
 | ------------- | :----------- | :------------- |
@@ -83,10 +83,11 @@ The user will be taken to your app specific screen when audio is requested on vi
 Next, once the user picks audio content on your app screen you need to follow API and return the user to video editor.  
 Any audio file should be stored on the device before applying.
 
-To pass audio content to Video Editor SDK you need to implement a factory that conforms ```MusicEditorExternalViewControllerFactory``` protocol. And put it to ```musicEditorFactory``` property in [ExternalViewControllerFactory](../Example/Example/Helpers/ViewControllerFactory.swift#L14). Your factory should contain the following methods:
+To pass audio content to Video Editor you need to implement a factory that conforms ```MusicEditorExternalViewControllerFactory``` protocol.
+And put it to ```musicEditorFactory``` property in [ExternalViewControllerFactory](../Example/Example/Helpers/ViewControllerFactory.swift#L14).
+Your factory should implement the following methods:
 
 ```swift
-// MARK: - External Audio Browser Factory
 protocol MusicEditorExternalViewControllerFactory: AnyObject {
   /// contoller which will be used for presenting otherwise makeTrackSelectionViewController will be used
   var audioBrowserController: TrackSelectionViewController? { get set }
@@ -101,7 +102,7 @@ protocol MusicEditorExternalViewControllerFactory: AnyObject {
   func makeRecorderCountdownAnimatableView() -> MusicEditorCountdownAnimatableView?
 }
 ```
-Where ```AudioItem``` is entity contains information about selected audio item in Video Editor SDK:
+Where ```AudioItem``` is entity includes information about selected audio item in Video Editor:
 ```swift
 // MARK: - AudioItem protocol
 protocol AudioItem {
@@ -114,15 +115,14 @@ protocol AudioItem {
 }
 ```
 
-Your custom audio browser should conforms to ```TrackSelectionViewController``` protocol
+Your custom audio browser implementation should conform to ```TrackSelectionViewController``` protocol
 ```swift
 class YourCustomAudioBrowser: UIViewController, TrackSelectionViewController {
   weak var trackSelectionDelegate: TrackSelectionViewControllerDelegate?
 }
 ```
-Using ```trackSelectionDelegate``` you can notify Video Editor SDK about actions at audio browser with following methods:
+Using ```trackSelectionDelegate``` you can notify Video Editor about actions in audio browser with the following methods:
 ```swift
-// MARK: - TrackSelectionViewController
 protocol TrackSelectionViewControllerDelegate: AnyObject {
   func trackSelectionViewController(
     viewController: TrackSelectionViewController,
@@ -144,10 +144,13 @@ protocol TrackSelectionViewControllerDelegate: AnyObject {
 }
 ```
 
-**NOTE: The Video Editor SDK is not responsible for providing audio content. The client has to implement an integration with an audio content provider.
-The Video Editor SDK can't download music from external storage and import music tracks from Apple Music.**
+## Export from Apple Music
 
-If you want to pass music from Apple Music to Video Editor SDK you have to export media to temporary directory then pass music url to Video Editor SDK using ```trackSelectionDelegate```. There is example how to export music from Apple Music:
+You can pass music from Apple Music to Video Editor SDK.  
+You should export media to temporary directory and then
+pass music url to Video Editor SDK using ```trackSelectionDelegate```.  
+
+In this sample, we show how to implement it
 ```swift
 let asset = AVURLAsset(url: url)
 let destination = FileManager.default
@@ -164,8 +167,8 @@ exportSession?.exportAsynchronously() {
   }
 }
 ```
-To make video editor present your custom audio browser you need to pass created [ExternalViewControllerFactory](../Example/Example/ViewController.swift#L117) to the initialization of ```BanubaVideoEditor``` as ```externalViewControllerFactory```
-
+To present your custom audio browser in video editor you need to pass created [ExternalViewControllerFactory](../Example/Example/ViewController.swift#L117)
+to the initialization of ```BanubaVideoEditor``` as ```externalViewControllerFactory```
 
 ## Music Editor screen
 Video Editor includes Music Editor screens. These are screens where the user can adjust usage of audio in video editor i.e. trim, add new, delete.
@@ -173,331 +176,90 @@ Music Editor includes voice recording feature as well.
 
 Below is a list of styles and attributes you can customize to meet your requirements.
 
-- [mainMusicViewControllerConfig](/Example/Example/VideoEditorModule.swift#L471)
-
-MainMusicViewControllerConfig setups main screen style
-
-- [videoTrackLineEditControllerConfig](/Example/Example/VideoEditorModule.swift#L474)
-
-VideoTrackLineEditViewControllerConfig setups video track line editing screen style
-
-- [audioTrackLineEditControllerConfig](/Example/Example/VideoEditorModule.swift#L473)
-
-VideoTrackLineEditViewControllerConfig setups audio track line editing screen style
-
-- [audioRecorderViewControllerConfig](/Example/Example/VideoEditorModule.swift#L472)
-
-AudioRecorderViewControllerConfig setups audio recorder style
-
-- [editButtons](/Example/Example/VideoEditorModule.swift#L482)
-
-Array of adding buttons
-
-- [editButtonsHeight](/Example/Example/VideoEditorModule.swift#L513)
-
-Adding buttons container height
-
-- [editCompositionButtons](/Example/Example/VideoEditorModule.swift#L515)
-
-Array of edit composition buttons
-
-- [controlButtons](/Example/Example/VideoEditorModule.swift#L164)
-
-Aray of control buttons
-
-- [playerControlsHeight](/Example/Example/VideoEditorModule.swift#L202)
-
-Сontrol buttons container height
-
-- [audioWaveConfiguration](/Example/Example/VideoEditorModule.swift#L207)
-
-AudioWaveConfiguration setups audio wave style
-
-- [mainLabelColors](/Example/Example/VideoEditorModule.swift#L562)
-
-Color for main titles color
-
-- [additionalLabelColors](/Example/Example/VideoEditorModule.swift#L563)
-
-Color for additional titles color
-
-- [tracksLimit](/Example/Example/VideoEditorModule.swift#L566)
-
-Number of maximum tracks
-
-- [cursorColor](/Example/Example/VideoEditorModule.swift#L567)
-
-Cursor color
-
-- [controlsBackgroundConfiguration](/Example/Example/VideoEditorModule.swift#L568)
-
-BackgroundConfiguration setups controls container background style
-
-- [backgroundConfiguration](/Example/Example/VideoEditorModule.swift#L569)
-
-BackgroundConfiguration setups main view background style
-
-- [timelineCornerRadius](/Example/Example/VideoEditorModule.swift#L570)
-
-Time line corner radius
-
-- [previewViewBackgroundConfiguration](/Example/Example/VideoEditorModule.swift#L572)
-
-BackgroundConfiguration setups preview view background style
-
-- [videoControlsViewBackgroundConfiguration](/Example/Example/VideoEditorModule.swift#L572)
-
-BackgroundConfiguration setups video controls view background style
-
-- [alertConfig](/Example/Example/VideoEditorModule.swift#L572)
-
-Configuration for alertView
+- [mainMusicViewControllerConfig](../Example/Example/VideoEditorModule.swift#L471) - configuration for ```MainMusicViewControllerConfig```
+- [videoTrackLineEditControllerConfig](/Example/Example/VideoEditorModule.swift#L474) - configuration for ```VideoTrackLineEditViewControllerConfig```
+- [audioTrackLineEditControllerConfig](../Example/Example/VideoEditorModule.swift#L473) - configuration for ```VideoTrackLineEditViewControllerConfig```
+- [audioRecorderViewControllerConfig](../Example/Example/VideoEditorModule.swift#L472) - configuration for ```AudioRecorderViewControllerConfig```
+- [editButtons](../Example/Example/VideoEditorModule.swift#L482) - array of editing buttons
+- [editButtonsHeight](../Example/Example/VideoEditorModule.swift#L513) - height of editing buttons container
+- [editCompositionButtons](../Example/Example/VideoEditorModule.swift#L515) - array of editing composition buttons
+- [controlButtons](../Example/Example/VideoEditorModule.swift#L164) - array of control buttons
+- [playerControlsHeight](../Example/Example/VideoEditorModule.swift#L202) - height of control buttons container
+- [audioWaveConfiguration](../Example/Example/VideoEditorModule.swift#L207) - configuration for ```AudioWaveConfiguration```
+- [mainLabelColors](../Example/Example/VideoEditorModule.swift#L562) - color for main titles
+- [additionalLabelColors](../Example/Example/VideoEditorModule.swift#L563) - color for additional titles
+- [tracksLimit](../Example/Example/VideoEditorModule.swift#L566) - number of maximum tracks
+- [cursorColor](../Example/Example/VideoEditorModule.swift#L567) - cursor color
+- [timelineCornerRadius](../Example/Example/VideoEditorModule.swift#L570) - corner radius of timeline
 
 ![img](screenshots/MusicEditorMainScreen.png)
 
-- [rewindToStartButton?](/Example/Example/VideoEditorModule.swift#L578)
+- [rewindToStartButton?](../Example/Example/VideoEditorModule.swift#L576) - rewind button configuration as ```ControlButtonConfig```
+- [playPauseButton](../Example/Example/VideoEditorModule.swift#L582) - play button configuration as ```ControlButtonConfig```
+- [playerControlsHeight](../Example/Example/VideoEditorModule.swift#L588) - height of player controls
+- [recordButton](../Example/Example/VideoEditorModule.swift#L590) - record button configuration as ```ControlButtonConfig```
+- [backButtonImage](../Example/Example/VideoEditorModule.swift#L596) - image name for back button
+- [doneButtonImage](../Example/Example/VideoEditorModule.swift#L597) - image name for done button
+- [dimViewColor](../Example/Example/VideoEditorModule.swift#L598) - dim view color
+- [additionalLabelColors](../Example/Example/VideoEditorModule.swift#L599) - additional labels color
+- [startingRecordingTimerSeconds](../Example/Example/VideoEditorModule.swift#L600) - countdown to start recording
+- [timerColor](../Example/Example/VideoEditorModule.swift#L601) - timer color
+- [cursorColor](../Example/Example/VideoEditorModule.swift#L602) - cursor color
+- [timelineCornerRadius](../Example/Example/VideoEditorModule.swift#L605) - corner radius for timeline
 
-ControlButtonConfig setups rewind to start button
-
-- [playPauseButton](/Example/Example/VideoEditorModule.swift#L584)
-
-ControlButtonConfig setups play pause button
-
-- [playerControlsHeight](/Example/Example/VideoEditorModule.swift#L590)
-
-Player controls height
-
-- [recordButton](/Example/Example/VideoEditorModule.swift#L592)
-
-ControlButtonConfig setups record button
-
-- [backButtonImage](/Example/Example/VideoEditorModule.swift#L598)
-
-Image name setups back button UIImage
-
-- [doneButtonImage](/Example/Example/VideoEditorModule.swift#L599)
-
- Image name setups done button UIImage
-
-- [dimViewColor](/Example/Example/VideoEditorModule.swift#L600)
-
-Dim view color
-
-- [additionalLabelColors](/Example/Example/VideoEditorModule.swift#L601)
-
-Additional labels color
-
-- [startingRecordingTimerSeconds](/Example/Example/VideoEditorModule.swift#L602)
-
-Countdown to start recording
-
-- [timerColor](/Example/Example/VideoEditorModule.swift#L603)
-
-Timer color
-
-- [cursorColor](/Example/Example/VideoEditorModule.swift#L604)
-
-Cursor color
-
-- [backgroundConfiguration](/Example/Example/VideoEditorModule.swift#L605)
-
-BackgroundConfiguration setups background view
-
-- [playerControlsBackgroundConfiguration](/Example/Example/VideoEditorModule.swift#L606)
-
-BackgroundConfiguration setups player controls background view
-
-- [timelineCornerRadius](/Example/Example/VideoEditorModule.swift#L607)
-
-Time line corner radius
-
-- [resetButton](/Example/Example/VideoEditorModule.swift#L609)
-
-RoundedButtonConfiguration setups reset button style
 
 ![img](screenshots/AudioRecorderScreen.png)
 
-- [doneButtonImageName](/Example/Example/VideoEditorModule.swift#L615)
-
-Image name setups done button UIImage
-
-- [doneButtonTintColor](/Example/Example/VideoEditorModule.swift#L616)
-
-Done button tint color
-
-- [sliderTintColor](/Example/Example/VideoEditorModule.swift#L617)
-
-Slider tint color
-
-- [mainLabelColors](/Example/Example/VideoEditorModule.swift#L618)
-
-Main labels color
-
-- [additionalLabelColors](/Example/Example/VideoEditorModule.swift#L619)
-
-Additional labels colors
-
-- [backgroundConfiguration](/Example/Example/VideoEditorModule.swift#L620)
-
-BackgroundConfiguration setups background view
-
-- [height](/Example/Example/VideoEditorModule.swift#L621)
-
-Pop-up screen's height
+- [doneButtonImageName](../Example/Example/VideoEditorModule.swift#L613) - image name for done button
+- [doneButtonTintColor](../Example/Example/VideoEditorModule.swift#L614) - tint color for done button
+- [sliderTintColor](../Example/Example/VideoEditorModule.swift#L615) - tint color for slider
+- [mainLabelColors](../Example/Example/VideoEditorModule.swift#L616) - main labels color
+- [additionalLabelColors](../Example/Example/VideoEditorModule.swift#L617) - additional labels colors
+- [backgroundConfiguration](../Example/Example/VideoEditorModule.swift#L618) - configuration for background view ```BackgroundConfiguration```
 
 ![img](screenshots/VideoEditScreen.png)
 
-- [audioWaveConfiguration](/Example/Example/VideoEditorModule.swift#L628)
-
-AudioWaveConfiguration setups audio wave style
-
-- [doneButtonImageName](/Example/Example/VideoEditorModule.swift#L630)
-
-Image name setups done buttom UIImage
-
-- [doneButtonTintColor](/Example/Example/VideoEditorModule.swift#L631)
-
-Done button tint color
-
-- [sliderTintColor](/Example/Example/VideoEditorModule.swift#L632)
-
-Slider tint color
-
-- [draggersColor](/Example/Example/VideoEditorModule.swift#L633)
-
-Draggers background color
-
-- [draggerImageName](/Example/Example/VideoEditorModule.swift#L634)
-
-Image name setups draggers additional UIImage
-
-- [trimHeight](/Example/Example/VideoEditorModule.swift#L635)
-
-Trim container heught
-
-- [trimBorderColor](/Example/Example/VideoEditorModule.swift#L636)
-
-Trim container border lines color
-
-- [trimBorderWidth](/Example/Example/VideoEditorModule.swift#L637)
-
-Trim container border lines width
-
-- [cursorHeight](/Example/Example/VideoEditorModule.swift#L638)
-
-Cursor height
-
-- [dimViewColor](/Example/Example/VideoEditorModule.swift#L639)
-
-Dim view background color
-
-- [mainLabelColors](/Example/Example/VideoEditorModule.swift#L163)
-
-Main labels' title color
-
-- [additionalLabelColors](/Example/Example/VideoEditorModule.swift#L640)
-
-Additional labels' title color
-
-- [cursorColor](/Example/Example/VideoEditorModule.swift#L642)
-
-Cursor background color
-
-- [draggersWidth](/Example/Example/VideoEditorModule.swift#L643)
-
-Draggers' view width
-
-- [draggersLineColor](/Example/Example/VideoEditorModule.swift#L167)
-
-Draggers' central line view color
-
-- [draggersCornerRadius](/Example/Example/VideoEditorModule.swift#L644)
-
-Draggers' view corner radius
-
-- [draggersLineWidth](/Example/Example/VideoEditorModule.swift#L646)
-
-Draggers' central line view width
-
-- [draggersLineHeight](/Example/Example/VideoEditorModule.swift#L647)
-
-Draggers' central line view height
-
-- [numberOfLinesInDraggers](/Example/Example/VideoEditorModule.swift#L648)
-
-Number of draggers' central lines
-
-- [draggerLinesSpacing](/Example/Example/VideoEditorModule.swift#L649)
-
-Draggers' central lines spacing
-
-- [draggersLineCornerRadius](/Example/Example/VideoEditorModule.swift#L649)
-
-Draggers' central lines corner radius
-
-- [backgroundConfiguration](/Example/Example/VideoEditorModule.swift#L651)
-
-BackgroundConfiguration setups common container view background style
-
-- [voiceFilterConfiguration](/Example/Example/VideoEditorModule.swift#L652)
-
-VoiceFilterConfiguration seups voice filter container view item style
-
-- [voiceFilterProvider](/Example/Example/VideoEditorModule.swift#L475)
-
-VoiceFilterProvider setups voice filters provider
-
-- [isVoiceFilterHidden](/Example/Example/VideoEditorModule.swift#L476)
-
-Voice Filter will be hidden if voiceFilterProvider is nil
- 
-- [isRandomWaveColor](/Example/Example/VideoEditorModule.swift#L628)
-
-Is random wave color enabled
-  
-- [backgroundColor](/Example/Example/VideoEditorModule.swift#L628)
-  
-Background color view
-  
-- [waveBorderColor](/Example/Example/VideoEditorModule.swift#L628)
-
-Time line border color
-  
-- [waveCornerRadius](/Example/Example/VideoEditorModule.swift#L628)
-
-Time lime corner radius
-  
-- [waveLinesColor](/Example/Example/VideoEditorModule.swift#L628)
-
-Audio wave lines color
- 
-- [borderWidth](/Example/Example/VideoEditorModule.swift#L628)
-
-Time line border width
-  
-- [height](/Example/Example/VideoEditorModule.swift#L628)
-
-Time line height
-  
-- [maxWaveHeight](/Example/Example/VideoEditorModule.swift#L628)
-  
-Max audio wave height
-  
-- [audioTitleFont](/Example/Example/VideoEditorModule.swift#L628)
-
-Audio title font
-  
-- [audioTitleColor](/Example/Example/VideoEditorModule.swift#L628)
-
-Audio title color
-  
-- [bottomOffset](/Example/Example/VideoEditorModule.swift#L628)
-
-Time line bottom offset
+- [audioWaveConfiguration](../Example/Example/VideoEditorModule.swift#L626) - configuration for ```AudioWaveConfiguration``` to customize wave style
+- [doneButtonImageName](../Example/Example/VideoEditorModule.swift#L628) - image name for done button
+- [doneButtonTintColor](../Example/Example/VideoEditorModule.swift#L629) - tint color for done button
+- [sliderTintColor](../Example/Example/VideoEditorModule.swift#L630) - tint color for slider
+- [draggersColor](../Example/Example/VideoEditorModule.swift#L631) - background color for dragger
+- [draggerImageName](../Example/Example/VideoEditorModule.swift#L632) - image name of dragger
+- [trimHeight](../Example/Example/VideoEditorModule.swift#L633) - height of trim container
+- [trimBorderColor](../Example/Example/VideoEditorModule.swift#L634) - border line color of trim container
+- [trimBorderWidth](../Example/Example/VideoEditorModule.swift#L635) - border line width of trim container
+- [cursorHeight](../Example/Example/VideoEditorModule.swift#L636) - cursor height
+- [dimViewColor](../Example/Example/VideoEditorModule.swift#L637) - dim view background color
+- [mainLabelColors](../Example/Example/VideoEditorModule.swift#L638) - color of main label title
+- [additionalLabelColors](../Example/Example/VideoEditorModule.swift#L640) - color of additional label
+- [cursorColor](../Example/Example/VideoEditorModule.swift#L640) - cursor background color
+- [draggersWidth](../Example/Example/VideoEditorModule.swift#L643) - draggers view width
+- [draggersLineColor](../Example/Example/VideoEditorModule.swift#L167) - draggers central line view color
+- [draggersCornerRadius](../Example/Example/VideoEditorModule.swift#L644) - draggers view corner radius
+- [draggersLineWidth](../Example/Example/VideoEditorModule.swift#L646) - draggers central line view width
+- [draggersLineHeight](../Example/Example/VideoEditorModule.swift#L647) - draggers central line view height
+- [numberOfLinesInDraggers](../Example/Example/VideoEditorModule.swift#L648) - number of draggers central lines
+- [draggerLinesSpacing](../Example/Example/VideoEditorModule.swift#L649) - draggers central lines spacing
+- [draggersLineCornerRadius](../Example/Example/VideoEditorModule.swift#L649) - draggers central lines corner radius
+- [backgroundConfiguration](../Example/Example/VideoEditorModule.swift#L651) - ```BackgroundConfiguration``` setups common container view background style
+- [voiceFilterConfiguration](../Example/Example/VideoEditorModule.swift#L652) - ```VoiceFilterConfiguration``` setups voice filter container view item style
+- [voiceFilterProvider](../Example/Example/VideoEditorModule.swift#L475) - ```VoiceFilterProvider``` setups voice filters provider
+- [isVoiceFilterHidden](../Example/Example/VideoEditorModule.swift#L476) - voice Filter will be hidden if voiceFilterProvider is nil
+- [isRandomWaveColor](../Example/Example/VideoEditorModule.swift#L628) - if random wave color enabled
+- [backgroundColor](../Example/Example/VideoEditorModule.swift#L628) - background color view
+- [waveBorderColor](../Example/Example/VideoEditorModule.swift#L628) - time line border color
+- [waveCornerRadius](../Example/Example/VideoEditorModule.swift#L628) - time lime corner radius
+- [waveLinesColor](../Example/Example/VideoEditorModule.swift#L628) - audio wave lines color
+- [borderWidth](../Example/Example/VideoEditorModule.swift#L628) - time line border width
+- [height](../Example/Example/VideoEditorModule.swift#L628) - time line height
+- [maxWaveHeight](../Example/Example/VideoEditorModule.swift#L628) -max audio wave height
+- [audioTitleFont](../Example/Example/VideoEditorModule.swift#L628) - audio title font
+- [audioTitleColor](../Example/Example/VideoEditorModule.swift#L628) - audio title color
+- [bottomOffset](../Example/Example/VideoEditorModule.swift#L628) - time line bottom offset
 
 ![img](screenshots/AudioEditScreen.png)
 
-And you can customize string resources as well.
+The following string resources are used by default, however you can customize them.
 
 ![img](screenshots/MusicLocalization.png)
 

@@ -87,7 +87,7 @@ config.recorderConfiguration.muteMicrophoneForPIP = false
 Recording includes 3 modes for recording content implemented in ```captureButtonModes``` in ```RecorderConfiguration``` class.
 - ```Photo```
 - ```Video```
-- ```Photo``` and ```Video```;**Default**
+- ```Photo``` and ```Video```; **Default**
 
 In this example, recording mode is set to ```Video``` only.
 ```swift
