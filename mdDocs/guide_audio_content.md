@@ -20,7 +20,7 @@ There are 2 approaches of providing audio content:
 2. ```External API``` - the client implements specific API for managing audio content. The user is taken on client's screen when audio is requested.
 
 ## Audio Browser
-Audio Browser is a specific Android module that allows to browse, play and apply audio content within video editor.  
+Audio Browser is a specific iOS module that allows to browse, play and apply audio content within video editor.  
 It supports 2 sources for audio content:
 1. ```My Library``` - includes audio content available on the user's device
 2. ```Mubert``` - includes built in integration with [Mubert](https://mubert.com/) API.
@@ -34,7 +34,29 @@ Add  ```BanubaAudioBrowserSDK``` dependency into your [Podfile](../Example/Podfi
 pod 'BanubaAudioBrowserSDK', banuba_sdk_version
 ```
 
-![img](screenshots/AudioBrowserLocalizations.png)
+Finally, you can customize Audio Browser appearance with ```AudioBrowserConfig.shared``` configuration
+
+
+## Mubert integration
+Audio Browser has built in integration with [Mubert](https://mubert.com/) API.  
+Please contact Mubert representatives to request API KEY.
+
+Set Mubert API key by using ```BanubaAudioBrowser.setMubertPat``` method. For example in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L53).
+```Swift
+BanubaAudioBrowser.setMubertPat("SET MUBERT API KEY")
+```
+
+You can use ```AudioBrowserConfig.shared.mubertAudioConfig``` to customize network requests to Mubert as well.
+
+| Property | Available values | Description |
+| ------------- | :------------: | :------------- |
+| **trackDuration** | Number > 0 | duration that applied for generated tracks in seconds
+| **trackBitrate** | any of the following values: 32, 96, 128, 192, 256, 320 | sound quality measured in kbps
+| **trackIntencity** |  any of the following values: low, medium, high | instrumental saturation (number of stems) for generated tracks
+| **trackFormat** |  any of the following values: mp3, wav, flac | format of generated tracks
+| **categoryTracksAmount** | Number > 0 | amount of tracks to generate for selected category
+
+Below is a list of localized strings that you can use or customize
 
 | Key        |      Value      |   Description |
 | ------------- | :----------- | :------------- |
@@ -54,25 +76,14 @@ pod 'BanubaAudioBrowserSDK', banuba_sdk_version
 | audioBrowser.no.matches | No matches | No matches placeholder text
 | audioBrowser.no.tracks | No tracks | No tracks placeholder text
 
-## Mubert integration
-Audio Browser has built in integration with [Mubert](https://mubert.com/) API.  
-Please contact Mubert representatives to request API KEY.
-
-Set Mubert API key by using ```BanubaAudioBrowser.setMubertPat``` method. For example in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L53).
-```Swift
-BanubaAudioBrowser.setMubertPat("SET MUBERT API KEY")
-```
-
-IN PROGRESS... Describe how to change configs for Mubert and customize UI
 
 ## External API
 Video Editor includes special API for integrating your custom audio content provider and applying this content in video editor.   
 The user will be taken to your app specific screen when audio is requested on video editor screen i.e. camera or editor.
 Next, once the user picks audio content on your app screen you need to follow API and return the user to video editor.  
-Any audio file should stored on the device before applying.
+Any audio file should be stored on the device before applying.
 
-IN PROGRESS...
-To pass audio content to Video Editor SDK you have to implement a factory that conforms ```MusicEditorExternalViewControllerFactory``` protocol. And put it to ```musicEditorFactory``` property in [ExternalViewControllerFactory](../Example/Example/ViewController.swift#L24). Your factory should contain the following methods:
+To pass audio content to Video Editor SDK you need to implement a factory that conforms ```MusicEditorExternalViewControllerFactory``` protocol. And put it to ```musicEditorFactory``` property in [ExternalViewControllerFactory](../Example/Example/Helpers/ViewControllerFactory.swift#L14). Your factory should contain the following methods:
 
 ```swift
 // MARK: - External Audio Browser Factory
@@ -103,10 +114,10 @@ protocol AudioItem {
 }
 ```
 
-Your custom audio browser should conforms the following protocol:
+Your custom audio browser should conforms to ```TrackSelectionViewController``` protocol
 ```swift
-protocol TrackSelectionViewController: UIViewController {
-  var trackSelectionDelegate: TrackSelectionViewControllerDelegate? { get set }
+class YourCustomAudioBrowser: UIViewController, TrackSelectionViewController {
+  weak var trackSelectionDelegate: TrackSelectionViewControllerDelegate?
 }
 ```
 Using ```trackSelectionDelegate``` you can notify Video Editor SDK about actions at audio browser with following methods:
@@ -153,6 +164,7 @@ exportSession?.exportAsynchronously() {
   }
 }
 ```
+To make video editor present your custom audio browser you need to pass created [ExternalViewControllerFactory](../Example/Example/ViewController.swift#L117) to the initialization of ```BanubaVideoEditor``` as ```externalViewControllerFactory```
 
 
 ## Music Editor screen
