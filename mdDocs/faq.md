@@ -8,11 +8,8 @@ These are the answers to the most common questions asked about our SDK.
 - [I want to enabled slideshow animation.](#i-want-to-enable-slideshow-animation)
 - [I want to change cursor color.](#i-want-to-change-cursor-color)
 - [I want to change progress bar position.](#i-want-to-change-progress-bar-position)
-- [How does video editor work when token expires?](#how-does-video-editor-work-when-token-expires)
-- [I want to change music button position.](#i-want-to-change-music-button-position)
 - [How can I get a track name of the audio used in my video after export?](#12-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
 - [I want to change the font.](#i-want-to-change-the-font)
-- [I want to check whether my token is expired.](#i-want-to-check-whether-my-token-is-expired)
 - [The file “luts” couldn’t be opened because there is no such file.](#15-the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
 - [I want to add audio filters.](#i-want-to-add-audio-filters)
 - [I want to change icons and name for effects.](#i-want-to-change-icons-and-name-for-effects)
@@ -22,11 +19,9 @@ These are the answers to the most common questions asked about our SDK.
 - [I want to get exported video metadata.](#i-want-to-get-exported-video-metadata)
 - [I want to change codec type from h264 to h265.](#i-want-to-change-codec-type-from-h264-to-h265)
 - [How do I specify the video file saving directory?](#how-do-i-specify-the-video-file-saving-directory)
-- [How do I change the video duration?](#how-do-i-change-the-video-duration)
 - [The problem of using optional frameworks and bitcode together.](#the-problem-of-using-optional-frameworks-and-bitcode-together)
 - [How do I change the launguage (how do I add new locale support)?](#how-do-i-change-the-launguage-how-do-i-add-new-locale-support)
 - [How can I change the extension of the exported video?](#how-can-i-change-the-extension-of-the-exported-video)
-- [How to set buttons for video modes?](#how-to-set-buttons-for-video-modes)
 
 ### What is the size of Video Editor SDK size?
 | Options | Mb      | Note |
@@ -147,45 +142,6 @@ let config = VideoEditorConfig()
 config.recorderConfiguration.progressBarPosition = .top
 ```
 
-### How does video editor work when token expires?
-
-[Token](https://github.com/Banuba/ve-sdk-android-integration-sample#token) provided by sales managers has an expiration term to protect Video Editor SDK from malicious access. When the token expires the following happens:
- - video resolution will be lowered to 360p on camera, after trimmer and after export
- - Banuba watermark is applied to every exported video
-
- Also [FaceAR SDK](https://docs.banuba.com/face-ar-sdk/overview/token_management) you may expect the following actions if the token expires:
- - on the first expired month a watermark with "Powered by Banuba" label will be added on the top of both recorded and exported videos
- - after the first month the camera screen will be blurred and a full-screen watermark will be displayed
-
- Please keep your licence up to date to avoid unwanted behavior.
-
-
-### I want to change music button position.
-
-The music button consists of three positions:
-
-  - bottom
-  - center
-  - top
-
-<img src="screenshots/bottom.PNG" width="150" /> <img src="screenshots/center.PNG" width="150" /> <img src="screenshots/top.PNG" width="150" />
-
-To be able to change the location of the button, you need to set the desired value in the array with additionalEffectsButtons, for the button with the identifier ```.sound```, set up the ```position``` property.
-
-```swift
-let config = VideoEditorConfig()
-
-config.recorderConfiguration.additionalEffectsButtons = [
-  AdditionalEffectsButtonConfiguration(
-    identifier: .sound,
-    imageConfiguration: ImageConfiguration(imageName: ""),
-    selectedImageConfiguration: ImageConfiguration(imageName: ""),
-    titlePosition: .bottom,
-    position: .top
-  ),
-] 
-```
-
 ### How can I get a track name of the audio used in my video after export?
 ```swift
 /// Video Editor main entity and entry point.
@@ -262,36 +218,6 @@ or change for each screen separately by calling the appropriate methods:
 ```
 
 Changing the font does not affect its size. The font size will be taken by default or specified by you in the entity configuration.
-
-### I want to check whether my token is expired.
-
-Starting from '1.0.18' version it is available to check if token is expired.
-
-```swift
-  /// Check whether token is expired
-  /// - Parameters:
-  ///   - token: your token that you want to verify.
-  public static func isTokenExpired(
-    token: String
-  ) -> Bool 
-```
-You need to import `BanubaLicenseServicingSDK`.
-
-Then call the static method `isTokenExpired(token: String)` on the `License` entity. 
-
-For example:
-```swift
-    let token: String = "Put token"
-    let result: Bool = License.isTokenExpired(token: token)
-```
-
-if you are using `BanubaTokenStorageSDK` here is a usage example:
-
-```swift
-self.loadToken { token in
-     let result = License.isTokenExpired(token: token)
-}
-```
 
 ### The file “luts” couldn’t be opened because there is no such file.
 
@@ -459,14 +385,6 @@ All you need is just to set ```useHEVCCodecIfPossible``` to ```true``` in ```Vid
 The first one you need when you create ```BanubaVideoEditor```, two last ones - when you prepare a video to export.
 
 ```swift
-  var config = VideoEditorConfig()
-  config.recorderConfiguration.useHEVCCodecIfPossible = true
-
-  let videoEditorSDK = BanubaVideoEditor(
-    token: ...,
-    configuration: config
-  )
-
   let exportVideoInfo = ExportVideoInfo(
     resolution: ...,
     useHEVCCodecIfPossible: true
@@ -493,33 +411,6 @@ In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
       watermarkConfiguration: watermarkConfiguration
   )
 ]
-```
-
-### How do I change the video duration?
-
-To setup video duration just configure it in ```VideoEditorDurationConfig``` entity:
-
-```swift
-  public struct VideoEditorDurationConfig {
-  /// The video maximum duration
-  /// Default is 60.0.
-  public var maximumVideoDuration: TimeInterval
-  /// The video minimum duration captured from a camera
-  /// Default is 3.0.
-  public var minimumDurationFromCamera: TimeInterval
-  /// The video minimum duration from a gallery
-  /// Default is 0.3.
-  public var minimumDurationFromGallery: TimeInterval
-  /// The video minimum duration
-  /// Default is 1.0.
-  public var minimumVideoDuration: TimeInterval
-  /// The video part minimum duration at trimmer
-  /// Default is 0.3.
-  public var minimumTrimmedPartDuration: TimeInterval
-  /// The video duration created from photo at camera and gallery
-  /// Default is 3.0
-  public var slideshowDuration: TimeInterval
-}
 ```
 
 ### The problem of using optional frameworks and bitcode together.
@@ -549,33 +440,3 @@ See example in [sample](../Example/Example/ViewController.swift#L171).
 
 See all formats supported for video export [here](integration.md#supported-media-formats).
 
-### How to set buttons for video modes?
-
-Necessary modes for shooting must be specified in the array ```captureButtonModes```.
-```swift
-  config.recorderConfiguration.captureButtonModes = [.photo, .video]
-```
-You can set both modes or any of them to choose from.
-If two video recording modes are set, a switch will appear under the record button.
-
-<img src="screenshots/video_modes.png" width="700"/>
-
-Please note that in photo mode, the speed and sound recording buttons will be absent.
-
-In video mode, press once to start video recording, press again to end video recording. If you long press the button, the video will be recorded until you release the record button.
-
-In photo mode, a photo is taken when you stop touching the record button.
-
-To use your own names for the mode switching buttons, you need to specify them in the localization file.
-```swift
-// MARK: - Capture button modes
-"com.banuba.record.captureButtonVideoMode" = "VIDEO";
-"com.banuba.record.captureButtonPhotoMode" = "PHOTO";
-```
-
-You can also change the size, color, rounding of corners, etc.
-To do this, you need to use the configs below:
-```swift
-  config.recorderConfiguration.photoCaptureButtonConfiguration
-  config.recorderConfiguration.videoCaptureButtonConfiguration
-```

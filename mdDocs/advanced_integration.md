@@ -4,6 +4,8 @@ This guide is aimed to help you complete advanced integration of Video Editor SD
 
 - [Face AR SDK and AR Cloud](#Face-AR-SDK-and-AR-Cloud)
 - [Video recording](#Video-recording)
+- [Add audio content](#Add-audio-content)
+- [Popups](#Popups)
 - [Passing Apple Store review](#Passing-Apple-Store-review)
 - [Launch methods](#Launch-methods)
 
@@ -24,19 +26,19 @@ Video editor supports functionality allowing to record video using iOS camera. T
 that will help you to record video easily in an excellent quality.  
 Please follow [video recording integration guide](guide_video_recording.md) to know more about available features.
 
+## Add audio content
+Video Editor has built in support and API for browsing, playing and applying audio while making video content on various screens.  
+Follow [Video Editor audio content integration guide](guide_audio_content.md) to know more details about using audio and API in Video Editor.
+
+## Popups
+Visit [Popups guide](guide_popus.md) to know more about usage popups in video editor.
+
 ## Passing Apple Store review
 Unfortunately Apple Store may reject your app due to use of TrueDepth API.  
 Please [follow guidelines](passing_apple_review.md) to successfully pass Apple Store review.
 
 ## Launch methods
 In progress...
-
-### Configure audio content
-
-Banuba Video Editor SDK can trim audio tracks, merge them, and apply them to a video. It doesn't include music or sounds. However, it can be integrated with [Mubert](https://mubert.com/) and get music from it (requires additional contract with them). Moreover, the users can add audio files from internal memory (downloaded library) from the phone.
-
-Integrating audio content is simple. See this [guide](audio_content.md#step-1).
-
 
 ## Configure screens
 Each screen can be modified to your liking. You can change icons, colors, text and its font, button titles, and much more.
@@ -48,11 +50,9 @@ Below see the list of screens with links to their detailed description and notes
 1. [Editor screen](editor_styles.md)
 2. [Trim screens](trim_styles.md)
 3. [Overlay screens](overlayEditor_styles.md)
-4. [Music editor screen](musicEditor_styles.md)
-5. [Gallery screen](gallery_styles.md)
-6. [Alert screens](alert_styles.md)
-7. [Cover screen](cover_style.md)
-8. [Audio Browser screen](audioBrowser.md)
+4. [Gallery screen](gallery_styles.md)
+5. [Alert screens](alert_styles.md)
+6. [Cover screen](cover_style.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
 
