@@ -2,26 +2,24 @@
 //  VideoPicker.swift
 //  Example
 //
-//  Created by Ruslan Filistovich on 20.08.21.
+//  Created by Banuba on 22.03.23.
 //
 
 import UIKit
 import Photos
 import BSImagePicker
 
-class VideoPicker {
+extension UIViewController {
   func pickVideo(
-    isMultipleSelectionEnabled: Bool = true,
-    from controller: UIViewController,
-    withCompletion completion: @escaping ([PHAsset]?) -> Void
+    isMultiSelectionEnabled: Bool,
+    completion: @escaping ([PHAsset]?) -> Void
   ) {
     let imagePicker = ImagePickerController()
-    if !isMultipleSelectionEnabled {
-      imagePicker.settings.selection.max = 1
-    }
-    imagePicker.settings.fetch.assets.supportedMediaTypes = [.video]
     
-    controller.presentImagePicker(
+    imagePicker.settings.fetch.assets.supportedMediaTypes = [.video]
+    imagePicker.settings.selection.max = isMultiSelectionEnabled ? Int.max : 1
+    
+    self.presentImagePicker(
       imagePicker,
       select: nil,
       deselect: nil,

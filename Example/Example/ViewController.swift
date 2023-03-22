@@ -103,18 +103,12 @@ extension ViewController {
     }
     
     let config = videoEditorModule.createConfiguration()
-    
-    let viewControllerFactory = ViewControllerFactory()
-    let musicEditorViewControllerFactory = MusicEditorViewControllerFactory()
-    // Uncomment to use custom audio browser
-//    viewControllerFactory.musicEditorFactory = musicEditorViewControllerFactory
-    viewControllerFactory.countdownTimerViewFactory = CountdownTimerViewControllerFactory()
-    viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
+    let externalViewControllerFactory = videoEditorModule.createExampleExternalViewControllerFactory()
     
     videoEditorSDK = BanubaVideoEditor(
       token: AppDelegate.licenseToken,
       configuration: config,
-      externalViewControllerFactory: viewControllerFactory
+      externalViewControllerFactory: externalViewControllerFactory
     )
     
     videoEditorSDK?.delegate = self
@@ -230,11 +224,9 @@ extension ViewController: BanubaVideoEditorDelegate {
 // MARK: - PIP Helpers
 extension ViewController {
   private func openGallery(for entryPoint: PresentEventOptions.EntryPoint) {
-    VideoPicker().pickVideo(
-      isMultipleSelectionEnabled: entryPoint != .pip,
-      from: self
+    pickVideo(
+      isMultiSelectionEnabled: entryPoint != .pip
     ) { assets in
-      
       guard let assets = assets else {
         return
       }
@@ -295,7 +287,7 @@ extension ViewController {
           return
         }
         
-        let presentingHandler = {  [weak self] in
+        let presentingHandler = { [weak self] in
           guard let self = self, !resultUrls.isEmpty else { return }
           
           let launchConfig = VideoEditorLaunchConfig(

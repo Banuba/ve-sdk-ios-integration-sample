@@ -29,8 +29,6 @@ target 'Example' do
   pod 'VEEffectsSDK', banuba_sdk_version
   pod 'VEPlaybackSDK', banuba_sdk_version
   
-  
-  pod 'lottie-ios', '3.4.3'
   pod "BSImagePicker"
   
 end
