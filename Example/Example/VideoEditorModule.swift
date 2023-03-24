@@ -616,8 +616,7 @@ class VideoEditorModule {
         updatedConfiguration.doneButtonImage = "ic_done"
         updatedConfiguration.dimViewColor = #colorLiteral(red: 0.3176470588, green: 0.5960784314, blue: 0.8549019608, alpha: 0.2039811644)
         updatedConfiguration.additionalLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
-        // Be sure that MusicEditorViewControllerFactory.makeRecorderCountdownAnimatableView() is overridden
-        updatedConfiguration.startingRecordingTimerSeconds = 3.0
+        updatedConfiguration.startingRecordingTimerSeconds = 0.0
         updatedConfiguration.timerColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         updatedConfiguration.cursorColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         updatedConfiguration.backgroundConfiguration.cornerRadius = 0.0
@@ -1074,49 +1073,32 @@ class VideoEditorModule {
         
         return updatedConfiguration
     }
-}
 
-// MARK: - Example view controller factory customization
-extension VideoEditorModule {
+    // MARK: - Example view controller factory customization
     func createExampleExternalViewControllerFactory() -> ExternalViewControllerFactory {
-        /// Example video editor view controller factory stores custom view factories used for customization BanubaVideoEditor
-        class ExampleViewControllerFactory: ExternalViewControllerFactory {
-            var musicEditorFactory: MusicEditorExternalViewControllerFactory?
-            var countdownTimerViewFactory: CountdownTimerViewFactory?
-            var exposureViewFactory: AnimatableViewFactory?
-        }
-        
-        let viewControllerFactory = ExampleViewControllerFactory()
-        
-        viewControllerFactory.musicEditorFactory = MusicEditorViewControllerFactory()
-        viewControllerFactory.countdownTimerViewFactory = CountdownTimerViewControllerFactory()
-        viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
-        
-        return viewControllerFactory
+        return ExampleViewControllerFactory()
     }
     
-    /// Example countdown timer view factory for Recorder countdown animation
-    class CountdownTimerViewControllerFactory: CountdownTimerViewFactory {
-        func makeCountdownTimerView() -> CountdownTimerAnimatableView {
-            let countdownView = CountdownView()
-            countdownView.frame = UIScreen.main.bounds
-            countdownView.font = countdownView.font.withSize(102.0)
-            countdownView.digitColor = VideoEditorModule.primaryColor
-            return countdownView
-        }
-    }
-    
-    /// Music editor view controller factory example
-    class MusicEditorViewControllerFactory: MusicEditorExternalViewControllerFactory {
-        func makeTrackSelectionViewController(selectedAudioItem: AudioItem?) -> TrackSelectionViewController? { nil }
-        func makeEffectSelectionViewController(selectedAudioItem: AudioItem?) -> EffectSelectionViewController? { nil }
+    /// Example video editor view controller factory stores custom view factories used for customization BanubaVideoEditor
+    class ExampleViewControllerFactory: ExternalViewControllerFactory {
+        var musicEditorFactory: MusicEditorExternalViewControllerFactory?
+        var countdownTimerViewFactory: CountdownTimerViewFactory?
+        var exposureViewFactory: AnimatableViewFactory?
         
-        /// Creates countdown animatable view for voice recording screen
-        func makeRecorderCountdownAnimatableView() -> MusicEditorCountdownAnimatableView? {
-            let countdownView = CountdownView()
-            countdownView.font = countdownView.font.withSize(22.0)
-            countdownView.digitColor = VideoEditorModule.primaryColor
-            return countdownView
+        init() {
+            countdownTimerViewFactory = CountdownTimerViewControllerFactory()
+            exposureViewFactory = DefaultExposureViewFactory()
+        }
+        
+        /// Example countdown timer view factory for Recorder countdown animation
+        class CountdownTimerViewControllerFactory: CountdownTimerViewFactory {
+            func makeCountdownTimerView() -> CountdownTimerAnimatableView {
+                let countdownView = CountdownView()
+                countdownView.frame = UIScreen.main.bounds
+                countdownView.font = countdownView.font.withSize(102.0)
+                countdownView.digitColor = VideoEditorModule.primaryColor
+                return countdownView
+            }
         }
     }
 }

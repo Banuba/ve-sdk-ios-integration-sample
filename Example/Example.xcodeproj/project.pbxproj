@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		631835E129CB2C46002EB08B /* UIViewController+VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631835E029CB2C46002EB08B /* UIViewController+VideoPicker.swift */; };
 		634FAC04255C351900FB0DBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634FAC06255C351900FB0DBC /* Localizable.strings */; };
 		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
 		639DA00C254700290011C153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00B254700290011C153 /* AppDelegate.swift */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		000454435D9A99C5824D7623 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6D65A113E9C49259A2357C /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		631835E029CB2C46002EB08B /* UIViewController+VideoPicker.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "UIViewController+VideoPicker.swift"; sourceTree = "<group>"; tabWidth = 2; };
 		634FAC05255C351900FB0DBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		634FAC07255C357400FB0DBC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		635DB1AA2548541000B1C799 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 				639DA00B254700290011C153 /* AppDelegate.swift */,
 				70113E7029C1D01800CBA08B /* VideoEditorModule.swift */,
 				639DA00F254700290011C153 /* ViewController.swift */,
-				631835E029CB2C46002EB08B /* UIViewController+VideoPicker.swift */,
 				634FAC06255C351900FB0DBC /* Localizable.strings */,
 				639DA011254700290011C153 /* Main.storyboard */,
 				635DB1AA2548541000B1C799 /* luts */,
@@ -228,7 +225,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				631835E129CB2C46002EB08B /* UIViewController+VideoPicker.swift in Sources */,
 				639DA010254700290011C153 /* ViewController.swift in Sources */,
 				70113E7129C1D01800CBA08B /* VideoEditorModule.swift in Sources */,
 				639DA00C254700290011C153 /* AppDelegate.swift in Sources */,
