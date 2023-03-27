@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UCZ-29-s3y">
                                 <rect key="frame" x="40" y="307" width="310" height="230"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jh-xc-CaM">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jh-xc-CaM" userLabel="Default">
                                         <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
                                         <color key="backgroundColor" red="0.32941176470588235" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -34,10 +34,10 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="openVideoEditorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdO-qW-CDd"/>
+                                            <action selector="openVideoEditorDefault:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzK-I2-gL0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjq-v9-Kyb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjq-v9-Kyb" userLabel="PiP">
                                         <rect key="frame" x="0.0" y="60" width="310" height="50"/>
                                         <color key="backgroundColor" red="0.32941176470588235" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
@@ -48,10 +48,10 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="PIPAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hU-tj-GLa"/>
+                                            <action selector="openVideoEditorPiP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G7b-Zm-GPF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X13-Te-Eiz">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X13-Te-Eiz" userLabel="Drafts">
                                         <rect key="frame" x="0.0" y="120" width="310" height="50"/>
                                         <color key="backgroundColor" red="0.32941176470588235" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
@@ -63,10 +63,10 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="draftsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rh8-Hb-Hdv"/>
+                                            <action selector="openVideoEditorDrafts:" destination="BYZ-38-t0r" eventType="touchDragInside" id="oEJ-7d-WSR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF3-7f-yJr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF3-7f-yJr" userLabel="Trimmer">
                                         <rect key="frame" x="0.0" y="180" width="310" height="50"/>
                                         <color key="backgroundColor" red="0.32941176470588235" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
@@ -78,12 +78,12 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="trimmerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8O4-XH-fP5"/>
+                                            <action selector="openVideoEditorTrimmer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwc-Px-s7Y"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License token is invalid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Rc-B2d">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License token is invalid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Rc-B2d">
                                 <rect key="frame" x="40" y="266.66666666666669" width="310" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
@@ -105,8 +105,6 @@
                     </view>
                     <connections>
                         <outlet property="invalidTokenMessageLabel" destination="U2o-Rc-B2d" id="kzU-RS-lp1"/>
-                        <outlet property="openPIPButton" destination="Xjq-v9-Kyb" id="qrf-C7-9TT"/>
-                        <outlet property="openVEButton" destination="6jh-xc-CaM" id="tKV-tI-AqI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

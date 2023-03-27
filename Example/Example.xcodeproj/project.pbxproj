@@ -13,6 +13,7 @@
 		639DA010254700290011C153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00F254700290011C153 /* ViewController.swift */; };
 		639DA013254700290011C153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA011254700290011C153 /* Main.storyboard */; };
 		639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA0162547002C0011C153 /* LaunchScreen.storyboard */; };
+		63F7116029D1F21A00045A06 /* short_music_20.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63F7115F29D1F21A00045A06 /* short_music_20.wav */; };
 		70113E7129C1D01800CBA08B /* VideoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70113E7029C1D01800CBA08B /* VideoEditorModule.swift */; };
 		8A32EED0258CB5430098F852 /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EECF258CB5430098F852 /* bundleEffects */; };
 		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		639DA012254700290011C153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		639DA0172547002C0011C153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		639DA0192547002C0011C153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63F7115F29D1F21A00045A06 /* short_music_20.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = short_music_20.wav; sourceTree = "<group>"; };
 		70113E7029C1D01800CBA08B /* VideoEditorModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = VideoEditorModule.swift; sourceTree = "<group>"; tabWidth = 4; };
 		8A32EECF258CB5430098F852 /* bundleEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleEffects; sourceTree = "<group>"; };
 		8A32EEDE258CB70C0098F852 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				639DA00B254700290011C153 /* AppDelegate.swift */,
 				70113E7029C1D01800CBA08B /* VideoEditorModule.swift */,
 				639DA00F254700290011C153 /* ViewController.swift */,
+				63F7115F29D1F21A00045A06 /* short_music_20.wav */,
 				634FAC06255C351900FB0DBC /* Localizable.strings */,
 				639DA011254700290011C153 /* Main.storyboard */,
 				635DB1AA2548541000B1C799 /* luts */,
@@ -167,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F7116029D1F21A00045A06 /* short_music_20.wav in Resources */,
 				634FAC04255C351900FB0DBC /* Localizable.strings in Resources */,
 				639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */,
 				635DB1AC2548541000B1C799 /* luts in Resources */,

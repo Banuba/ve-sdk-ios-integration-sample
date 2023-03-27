@@ -19,6 +19,36 @@ class VideoEditorModule {
     
     fileprivate static let primaryColor = UIColor(red: 6 / 255, green: 188 / 255, blue: 193 / 255, alpha: 1)
     
+    var videoEditorSDK: BanubaVideoEditor?
+    
+    var isVideoEditorInitialized: Bool { videoEditorSDK != nil }
+    
+    func initVideoEditor(token: String) -> BanubaVideoEditor? {
+        let config = createConfiguration()
+        let externalViewControllerFactory = createExampleExternalViewControllerFactory()
+        
+        let videoEditorSDK = BanubaVideoEditor(
+          token: token,
+          configuration: config,
+          externalViewControllerFactory: externalViewControllerFactory
+        )
+        
+        self.videoEditorSDK = videoEditorSDK
+        
+        return videoEditorSDK
+    }
+    
+    func presentVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
+        guard isVideoEditorInitialized else {
+            print("BanubaVideoEditor is not initialized!")
+            return
+        }
+        videoEditorSDK?.presentVideoEditor(
+            withLaunchConfiguration: launchConfig,
+            completion: nil
+        )
+    }
+    
     func createExportConfiguration(destFile: URL) -> ExportConfiguration {
         let watermarkConfiguration = WatermarkConfiguration(
           watermark: ImageConfiguration(imageName: "Common.Banuba.Watermark"),
