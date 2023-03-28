@@ -123,7 +123,7 @@ config.recorderConfiguration.timerConfiguration.options = [
 
 Moreover, you can implement custom countdown animation for time feature as well. 
 This sample includes [demo implementation](../Example/Example/Helpers/CountdownTimerViewControllerFactory.swift) 
-of countdown animation that you can use and set it to [ViewControllerFactory.countdownTimerViewFactory](../Example/Example/ViewController.swift#L111).
+of countdown animation that you can use and set it to [ViewControllerFactory.countdownTimerViewFactory](../Example/Example/VideoEditorModule.swift#L1113).
 
 ```diff
 ...

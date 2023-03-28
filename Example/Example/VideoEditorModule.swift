@@ -12,9 +12,40 @@ import BSImagePicker
 import VEExportSDK
 import BanubaAudioBrowserSDK
 
+// Adopting CountdownView to using in BanubaMusicEditorSDK
+extension CountdownView: MusicEditorCountdownAnimatableView {}
+
 class VideoEditorModule {
     
-    private let irisBlue = UIColor(red: 6 / 255, green: 188 / 255, blue: 193 / 255, alpha: 1)
+    fileprivate static let primaryColor = UIColor(red: 6 / 255, green: 188 / 255, blue: 193 / 255, alpha: 1)
+    
+    var videoEditorSDK: BanubaVideoEditor?
+    
+    var isVideoEditorInitialized: Bool { videoEditorSDK != nil }
+    
+    init(token: String) {
+        let config = createConfiguration()
+        let externalViewControllerFactory = createExampleExternalViewControllerFactory()
+        
+        let videoEditorSDK = BanubaVideoEditor(
+            token: token,
+            configuration: config,
+            externalViewControllerFactory: externalViewControllerFactory
+        )
+        
+        self.videoEditorSDK = videoEditorSDK
+    }
+    
+    func presentVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
+        guard isVideoEditorInitialized else {
+            print("BanubaVideoEditor is not initialized!")
+            return
+        }
+        videoEditorSDK?.presentVideoEditor(
+            withLaunchConfiguration: launchConfig,
+            completion: nil
+        )
+    }
     
     func createExportConfiguration(destFile: URL) -> ExportConfiguration {
         let watermarkConfiguration = WatermarkConfiguration(
@@ -305,7 +336,7 @@ class VideoEditorModule {
     private func updateFilterConfiguration(_ configuration: FilterConfiguration) -> FilterConfiguration {
         var updatedConfiguration = configuration
         
-        updatedConfiguration.resetButton.backgroundColor = irisBlue
+        updatedConfiguration.resetButton.backgroundColor = Self.primaryColor
         updatedConfiguration.resetButton.cornerRadius = 4.0
         updatedConfiguration.resetButton.textConfiguration?.color = .white
         updatedConfiguration.toolTipLabel.color = .white
@@ -329,7 +360,7 @@ class VideoEditorModule {
             gradientType: .color(
                 SmallActivityIndicatorConfiguration.GradientColorConfiguration(
                     angle: 0.0,
-                    colors: [irisBlue.cgColor, UIColor.white.cgColor]
+                    colors: [Self.primaryColor.cgColor, UIColor.white.cgColor]
                 )
             ),
             activityLineWidth: 3.0
@@ -454,7 +485,7 @@ class VideoEditorModule {
             defaultThumbnailHeight: 400.0
         )
         
-        updatedConfiguration.saveButton.background.color = irisBlue
+        updatedConfiguration.saveButton.background.color = Self.primaryColor
         updatedConfiguration.saveButton.background.cornerRadius = 4.0
         updatedConfiguration.saveButton.width = 68.0
         updatedConfiguration.saveButton.height = 42.0
@@ -472,7 +503,23 @@ class VideoEditorModule {
         updatedConfiguration.audioRecorderViewControllerConfig = updateAudioRecorderViewConfiguration(configuration.audioRecorderViewControllerConfig)
         updatedConfiguration.audioTrackLineEditControllerConfig = updateAudioTrackLineEditConfiguration(configuration.audioTrackLineEditControllerConfig)
         updatedConfiguration.videoTrackLineEditControllerConfig = updateVideoTrackLineEditConfiguration(configuration.videoTrackLineEditControllerConfig)
-        updatedConfiguration.audioTrackLineEditControllerConfig.voiceFilterProvider = SandboxVoiceFilterProvider()
+        
+        /// Provides voice filters which can be applied for voice recording at music editor screen
+        struct ExampleVoiceFilterProvider: VoiceFilterProvider {
+            func provideFilters() -> [VoiceFilter] {
+                return  [
+                    VoiceFilter(type: .elf, title: NSLocalizedString("com.banuba.musicEditor.elf", comment: "Elf filter title"), image: UIImage(named:"elf")),
+                    VoiceFilter(type: .baritone, title: NSLocalizedString("com.banuba.musicEditor.baritone", comment: "Baritone filter title"), image: UIImage(named:"baritone")),
+                    VoiceFilter(type: .echo, title: NSLocalizedString("com.banuba.musicEditor.echo", comment: "Echo filter title"), image: UIImage(named:"echo")),
+                    VoiceFilter(type: .giant, title: NSLocalizedString("com.banuba.musicEditor.giant", comment: "Giant filter title"), image: UIImage(named:"giant")),
+                    VoiceFilter(type: .robot, title: NSLocalizedString("com.banuba.musicEditor.robot", comment: "Robot filter title"), image: UIImage(named:"robot")),
+                    VoiceFilter(type: .squirrel, title: NSLocalizedString("com.banuba.musicEditor.squirrel", comment: "Squirrel filter title"), image: UIImage(named:"squirrel"))
+                ]
+            }
+        }
+        
+        updatedConfiguration.audioTrackLineEditControllerConfig.voiceFilterProvider = ExampleVoiceFilterProvider()
+        
         return updatedConfiguration
     }
     
@@ -906,8 +953,8 @@ class VideoEditorModule {
             width: 68.0,
             height: 41.0,
             cornerRadius: 4.0,
-            backgroundColor: irisBlue,
-            inactiveBackgroundColor: irisBlue.withAlphaComponent(0.5)
+            backgroundColor: Self.primaryColor,
+            inactiveBackgroundColor: Self.primaryColor.withAlphaComponent(0.5)
         )
         
         updatedConfiguration.backButton = BackButtonConfiguration(imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration(imageName: "ic_nav_close"))
@@ -917,7 +964,7 @@ class VideoEditorModule {
         updatedConfiguration.recordButtonConfiguration.normalImageName = "ic_record_normal"
         updatedConfiguration.recordButtonConfiguration.recordImageName = "ic_record_normal"
         updatedConfiguration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
-        updatedConfiguration.recordButtonConfiguration.strokeColor = irisBlue.cgColor
+        updatedConfiguration.recordButtonConfiguration.strokeColor = Self.primaryColor.cgColor
         
         updatedConfiguration.additionalEffectsButtons = [
             AdditionalEffectsButtonConfiguration(
@@ -977,7 +1024,7 @@ class VideoEditorModule {
         updatedConfiguration.speedBarButtons.imageNameNormal = "ic_speed_1x"
         updatedConfiguration.speedBarButtons.imageNameDouble = "ic_speed_2x"
         updatedConfiguration.speedBarButtons.imageNameTriple = "ic_speed_3x"
-        updatedConfiguration.speedBarButtons.selectedTitleColor = irisBlue
+        updatedConfiguration.speedBarButtons.selectedTitleColor = Self.primaryColor
         
         let galleryButton: RoundedButtonConfiguration = RoundedButtonConfiguration(
             textConfiguration: TextConfiguration(
@@ -1003,7 +1050,7 @@ class VideoEditorModule {
             )
         ]
         
-        updatedConfiguration.timeLineConfiguration.progressBarColor = irisBlue
+        updatedConfiguration.timeLineConfiguration.progressBarColor = Self.primaryColor
         updatedConfiguration.timeLineConfiguration.progressBarSelectColor = .white
         
         updatedConfiguration.regularRecordButtonPosition = 10.0
@@ -1053,5 +1100,33 @@ class VideoEditorModule {
         updatedConfiguration.preferredStatusBarStyle = .default
         
         return updatedConfiguration
+    }
+
+    // MARK: - Example view controller factory customization
+    func createExampleExternalViewControllerFactory() -> ExternalViewControllerFactory {
+        return ExampleViewControllerFactory()
+    }
+    
+    /// Example video editor view controller factory stores custom view factories used for customization BanubaVideoEditor
+    class ExampleViewControllerFactory: ExternalViewControllerFactory {
+        var musicEditorFactory: MusicEditorExternalViewControllerFactory?
+        var countdownTimerViewFactory: CountdownTimerViewFactory?
+        var exposureViewFactory: AnimatableViewFactory?
+        
+        init() {
+            countdownTimerViewFactory = CountdownTimerViewControllerFactory()
+            exposureViewFactory = DefaultExposureViewFactory()
+        }
+        
+        /// Example countdown timer view factory for Recorder countdown animation
+        class CountdownTimerViewControllerFactory: CountdownTimerViewFactory {
+            func makeCountdownTimerView() -> CountdownTimerAnimatableView {
+                let countdownView = CountdownView()
+                countdownView.frame = UIScreen.main.bounds
+                countdownView.font = countdownView.font.withSize(102.0)
+                countdownView.digitColor = VideoEditorModule.primaryColor
+                return countdownView
+            }
+        }
     }
 }

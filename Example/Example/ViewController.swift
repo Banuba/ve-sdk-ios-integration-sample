@@ -11,141 +11,138 @@ import VEExportSDK
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 
-class ViewController: UIViewController {
-  
-  private static let errEditorNotInitialized =
-  "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
-  private static let errEditorLicenseRevoked =
-  "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
+class ViewController: UIViewController, BanubaVideoEditorDelegate {
   
   // MARK: - IBOutlet
-  @IBOutlet weak var openVEButton: UIButton!
-  @IBOutlet weak var openPIPButton: UIButton!
   @IBOutlet weak var invalidTokenMessageLabel: UILabel!
   
   // MARK: - VideoEditorSDK
-  private var videoEditorSDK: BanubaVideoEditor?
-  private let videoEditorModule = VideoEditorModule()
+  private let videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    invalidTokenMessageLabel.isHidden = true
-  }
-}
-
-// MARK: - IBAction
-extension ViewController {
-  @IBAction func openVideoEditorAction(_ sender: Any) {
-    initVideoEditor() { isTokenValid in
-      guard isTokenValid else { return }
-      let musicURL = Bundle.main.bundleURL
-        .appendingPathComponent("Music/long", isDirectory: true)
-        .appendingPathComponent("long_music_2.wav")
-      let assset = AVURLAsset(url: musicURL)
-      
-      let musicTrackPreset = MediaTrack(
-        uuid: UUID(),
-        id: nil,
-        url: musicURL,
-        timeRange: MediaTrackTimeRange(
-          startTime: .zero,
-          playingTimeRange: CMTimeRange(
-            start: .zero,
-            duration: assset.duration
-          )
-        ),
-        isEditable: true,
-        title: "My awesome track"
-      )
-      let launchConfig = VideoEditorLaunchConfig(
-        entryPoint: .camera,
-        hostController: self,
-        musicTrack: nil, // Paste a music track as a track preset at the camera screen to record video with music
-        animated: true
-      )
-      self.presentVideoEditor(with: launchConfig)
-    }
-  }
-  
-  @IBAction func PIPAction(_ sender: Any) {
-    initVideoEditor { isTokenValid in
-      guard isTokenValid else { return }
-      self.openGallery(for: .pip)
-    }
-  }
-  
-  @IBAction func draftsAction(_ sender: UIButton) {
-    initVideoEditor { isTokenValid in
-      guard isTokenValid else { return }
-      let launchConfig = VideoEditorLaunchConfig(
-        entryPoint: .drafts,
-        hostController: self,
-        animated: true
-      )
-      self.presentVideoEditor(with: launchConfig)
-    }
-  }
-  
-  @IBAction func trimmerAction(_ sender: UIButton) {
-    initVideoEditor { isTokenValid in
-      guard isTokenValid else { return }
-      self.openGallery(for: .trimmer)
-    }
-  }
-}
-
-// MARK: - initVideoEditor
-extension ViewController {
-  private func initVideoEditor(completion: @escaping (Bool) -> Void) {
-    guard videoEditorSDK == nil else {
-      videoEditorSDK?.getLicenseState(completion: completion)
-      return
-    }
     
-    let config = videoEditorModule.createConfiguration()
-    
-    let viewControllerFactory = ViewControllerFactory()
-    let musicEditorViewControllerFactory = MusicEditorViewControllerFactory()
-    // Uncomment to use custom audio browser
-//    viewControllerFactory.musicEditorFactory = musicEditorViewControllerFactory
-    viewControllerFactory.countdownTimerViewFactory = CountdownTimerViewControllerFactory()
-    viewControllerFactory.exposureViewFactory = DefaultExposureViewFactory()
-    
-    videoEditorSDK = BanubaVideoEditor(
-      token: AppDelegate.licenseToken,
-      configuration: config,
-      externalViewControllerFactory: viewControllerFactory
-    )
-    
-    videoEditorSDK?.delegate = self
-    
-    if videoEditorSDK == nil {
-      invalidTokenMessageLabel.text = ViewController.errEditorNotInitialized
+    // Check video editor initialization status
+    guard let videoEditorSDK = videoEditorModule.videoEditorSDK else {
+      invalidTokenMessageLabel.text = "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
       invalidTokenMessageLabel.isHidden = false
       return
     }
-    videoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
+    
+    videoEditorSDK.delegate = self
+    
+    videoEditorSDK.getLicenseState(completion: { [weak self] isValid in
       if isValid {
         print("✅ License is active, all good")
       } else {
-        self?.invalidTokenMessageLabel.text = ViewController.errEditorLicenseRevoked
+        self?.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
         print("❌ License is either revoked or expired")
       }
       self?.invalidTokenMessageLabel.isHidden = isValid
-      completion(isValid)
     })
+  }
+  
+  // MARK: - Handle BanubaVideoEditor callbacks
+  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
+    videoEditor.clearSessionData()
+    videoEditor.dismissVideoEditor(animated: true, completion: nil)
+  }
+  
+  func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
+    videoEditor.dismissVideoEditor(animated: true) { [weak self] in
+      self?.exportVideo(videoEditor: videoEditor)
+    }
+  }
+  
+  // MARK: - Actions
+  @IBAction func openVideoEditorDefault(_ sender: Any) {
+    guard videoEditorModule.isVideoEditorInitialized else { return }
+  
+    
+    let musicTrackPreset: MediaTrack? = nil
+    // Uncomment to apply custom audio track in video editor
+    //let musicTrackPreset = prepareMusicTrack(audioFileName: "short_music_20.wav")
+    
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: .camera,
+      hostController: self,
+      musicTrack: musicTrackPreset, // Paste a music track as a track preset at the camera screen to record video with music
+      animated: true
+    )
+    videoEditorModule.presentVideoEditor(with: launchConfig)
+  }
+  
+  @IBAction func openVideoEditorPiP(_ sender: Any) {
+    pickerGalleryVideos(entryPoint: .pip) { [weak self] pickedVideoUrls in
+      guard let self, !pickedVideoUrls.isEmpty else { return }
+      
+      let launchConfig = VideoEditorLaunchConfig(
+        entryPoint: .pip,
+        hostController: self,
+        videoItems: pickedVideoUrls,
+        pipVideoItem: pickedVideoUrls[.zero],
+        animated: true
+      )
+      
+      self.videoEditorModule.presentVideoEditor(with: launchConfig)
+    }
+  }
+  
+  @IBAction func openVideoEditorDrafts(_ sender: UIButton) {
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: .drafts,
+      hostController: self,
+      animated: true
+    )
+    
+    videoEditorModule.presentVideoEditor(with: launchConfig)
+  }
+  
+  @IBAction func openVideoEditorTrimmer(_ sender: UIButton) {
+    pickerGalleryVideos(entryPoint: .trimmer) { [weak self] pickedVideoUrls in
+      guard let self, !pickedVideoUrls.isEmpty else { return }
+      
+      let launchConfig = VideoEditorLaunchConfig(
+        entryPoint: .trimmer,
+        hostController: self,
+        videoItems: pickedVideoUrls,
+        pipVideoItem: nil,
+        animated: true
+      )
+      
+      self.videoEditorModule.presentVideoEditor(with: launchConfig)
+    }
+  }
+  
+  private func prepareMusicTrack(audioFileName: String) -> MediaTrack {
+    let musicURL = Bundle.main.bundleURL.appendingPathComponent(audioFileName)
+    let assset = AVURLAsset(url: musicURL)
+    
+    let musicTrackPreset = MediaTrack(
+      uuid: UUID(),
+      id: nil,
+      url: musicURL,
+      timeRange: MediaTrackTimeRange(
+        startTime: .zero,
+        playingTimeRange: CMTimeRange(
+          start: .zero,
+          duration: assset.duration
+        )
+      ),
+      isEditable: true,
+      title: "My awesome track"
+    )
+    
+    return musicTrackPreset
   }
 }
 
 // MARK: - Export example
 extension ViewController {
-  func exportVideo() {
+  func exportVideo(videoEditor: BanubaVideoEditor) {
     let progressViewController = videoEditorModule.createProgressViewController()
-    progressViewController.cancelHandler = { [weak self] in
-      self?.videoEditorSDK?.stopExport()
-    }
+    progressViewController.cancelHandler = { videoEditor.stopExport() }
     present(progressViewController, animated: true)
-    
     
     let manager = FileManager.default
     let exportedVideoFileName = "tmp.mov"
@@ -156,7 +153,7 @@ extension ViewController {
     
     let exportConfiguration = videoEditorModule.createExportConfiguration(destFile: videoURL)
     
-    videoEditorSDK?.export(
+    videoEditor.export(
       using: exportConfiguration,
       exportProgress: { progress in
         DispatchQueue.main.async {
@@ -164,32 +161,38 @@ extension ViewController {
         }
       },
       completion: { [weak self] success, error, exportCoverImages in
-      DispatchQueue.main.async {
-        // Hide progress view
-        progressViewController.dismiss(animated: true) {
-          // Clear video editor session data
-          self?.videoEditorSDK?.clearSessionData()
-          if success {
-            /// If you want to play exported video
-//          self.playVideoAtURL(videoURL)
-            
-            /// If you want to share exported video
-            if let self = self, let config = self.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration {
-              BanubaVideoEditor.presentSharingViewController(
-                from: self,
-                configuration: config,
-                mainVideoUrl: videoURL,
-                videoUrls: [videoURL],
-                previewImage: exportCoverImages?.coverImage ?? UIImage(),
-                animated: true,
-                completion: nil
+        DispatchQueue.main.async {
+          // Hide progress view
+          progressViewController.dismiss(animated: true) {
+            // Clear video editor session data
+            videoEditor.clearSessionData()
+            if success {
+              /// If you want to play exported video
+              //          self.playVideoAtURL(videoURL)
+              
+              /// If you want to share exported video
+              self?.showSharingScreen(
+                videoUrl: videoURL,
+                exportCoverImages: exportCoverImages
               )
             }
           }
-          self?.videoEditorSDK = nil
         }
-      }
     })
+  }
+  
+  private func showSharingScreen(videoUrl: URL, exportCoverImages: ExportCoverImages?) {
+    let config = videoEditorModule.videoEditorSDK!.currentConfiguration.sharingScreenConfiguration
+    
+    BanubaVideoEditor.presentSharingViewController(
+      from: self,
+      configuration: config,
+      mainVideoUrl: videoUrl,
+      videoUrls: [videoUrl],
+      previewImage: exportCoverImages?.coverImage ?? UIImage(),
+      animated: true,
+      completion: nil
+    )
   }
   
   /// For demonstration purpose let's play exported video
@@ -201,40 +204,17 @@ extension ViewController {
       player.play()
     }
   }
-  
-  private func presentVideoEditor(
-    with launchConfig: VideoEditorLaunchConfig
-  ) {
-    self.videoEditorSDK?.presentVideoEditor(
-      withLaunchConfiguration: launchConfig,
-      completion: nil
-    )
-  }
 }
 
-// MARK: - BanubaVideoEditorDelegate
-extension ViewController: BanubaVideoEditorDelegate {
-  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
-    videoEditor.dismissVideoEditor(animated: true) { [weak self] in
-      self?.videoEditorSDK = nil
-    }
-  }
-  
-  func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
-    videoEditor.dismissVideoEditor(animated: true) { [weak self] in
-      self?.exportVideo()
-    }
-  }
-}
-
-// MARK: - PIP Helpers
+// MARK: - Helpers
 extension ViewController {
-  private func openGallery(for entryPoint: PresentEventOptions.EntryPoint) {
-    VideoPicker().pickVideo(
-      isMultipleSelectionEnabled: entryPoint != .pip,
-      from: self
+  private func pickerGalleryVideos(
+    entryPoint: PresentEventOptions.EntryPoint,
+    completion: @escaping (_ videoUrls: [URL]) -> Void
+  ) {
+    pickGalleryVideo(
+      isMultiSelectionEnabled: entryPoint != .pip
     ) { assets in
-      
       guard let assets = assets else {
         return
       }
@@ -295,29 +275,29 @@ extension ViewController {
           return
         }
         
-        let presentingHandler = {  [weak self] in
-          guard let self = self, !resultUrls.isEmpty else { return }
-          
-          let launchConfig = VideoEditorLaunchConfig(
-            entryPoint: entryPoint,
-            hostController: self,
-            videoItems: resultUrls,
-            pipVideoItem: resultUrls[.zero],
-            animated: true
-          )
-          self.presentVideoEditor(with: launchConfig)
-        }
-        
-        guard self.videoEditorSDK == nil else {
-          presentingHandler()
-          return
-        }
-        
-        self.initVideoEditor() { isTokenValid in
-          guard isTokenValid else { return }
-          presentingHandler()
-        }
+        completion(resultUrls)
       }
     }
+  }
+  
+  private func pickGalleryVideo(
+    isMultiSelectionEnabled: Bool,
+    completion: @escaping ([PHAsset]?) -> Void
+  ) {
+    let imagePicker = ImagePickerController()
+    
+    imagePicker.settings.fetch.assets.supportedMediaTypes = [.video]
+    imagePicker.settings.selection.max = isMultiSelectionEnabled ? Int.max : 1
+    
+    self.presentImagePicker(
+      imagePicker,
+      select: nil,
+      deselect: nil,
+      cancel: { assets in
+        completion(nil)
+      }, finish: { assets in
+        completion(assets)
+      }
+    )
   }
 }

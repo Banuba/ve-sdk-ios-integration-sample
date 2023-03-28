@@ -15,7 +15,7 @@ public protocol MusicEditorExternalViewControllerFactory: AnyObject {
   func makeRecorderCountdownAnimatableView() -> MusicEditorCountdownAnimatableView?
 }
 ```
-Here's the example of the methods implementation for using Banuba Audiobrowser:
+Here's the example of the methods implementation for using Banuba Audio Browser:
 ```swift
   var audioBrowserController: TrackSelectionViewController?
   
@@ -31,13 +31,12 @@ Here's the example of the methods implementation for using Banuba Audiobrowser:
     return nil
   }
 ```
-See an example in sample [here](../Example/Example/Helpers/MusicEditorViewControllerFactory.swift#L14).
 
 ### Step 5
 
 The class in which you have implemented the ``` MusicEditorExternalViewControllerFactory ``` protocol must be passed to ```musicEditorFactory```.
 
-See an example [here](../Example/Example/ViewController.swift#L30).
+See an example [here](../Example/Example/VideoEditorModule.swift#L1112).
 
 ### Step 6
 
