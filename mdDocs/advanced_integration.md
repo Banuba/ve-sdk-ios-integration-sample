@@ -4,6 +4,7 @@ This guide is aimed to help you complete advanced integration of Video Editor SD
 
 - [Face AR SDK and AR Cloud](#Face-AR-SDK-and-AR-Cloud)
 - [Video recording](#Video-recording)
+- [Gallery](#Gallery)
 - [Add audio content](#Add-audio-content)
 - [Popups](#Popups)
 - [Passing Apple Store review](#Passing-Apple-Store-review)
@@ -25,6 +26,11 @@ integrating AR Cloud, managing AR effects and many more.
 Video editor supports functionality allowing to record video using iOS camera. There are many features, configurations and styles
 that will help you to record video easily in an excellent quality.  
 Please follow [video recording integration guide](guide_video_recording.md) to know more about available features.
+
+## Gallery
+Video editor includes gallery screen where the user is able to pick any video and image stored on the device.
+Any video or image content is validated before using it in playback or export functionality. See [supported media formats](../README.md#Supported-media-formats).  
+Visit [Gallery guide](guide_gallery.md) to get more details how to customize or replace with your own version.
 
 ## Add audio content
 Video Editor has built in support and API for browsing, playing and applying audio while making video content on various screens.  
@@ -50,8 +56,6 @@ Below see the list of screens with links to their detailed description and notes
 1. [Editor screen](editor_styles.md)
 2. [Trim screens](trim_styles.md)
 3. [Overlay screens](overlayEditor_styles.md)
-4. [Gallery screen](gallery_styles.md)
-5. [Alert screens](alert_styles.md)
 6. [Cover screen](cover_style.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
