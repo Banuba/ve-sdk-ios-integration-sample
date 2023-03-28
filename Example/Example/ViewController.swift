@@ -58,12 +58,15 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
   @IBAction func openVideoEditorDefault(_ sender: Any) {
     guard videoEditorModule.isVideoEditorInitialized else { return }
   
-    let musicTrackPreset = prepareMusicTrack(audioFileName: "short_music_20.wav")
+    
+    let musicTrackPreset: MediaTrack? = nil
+    // Uncomment to apply custom audio track in video editor
+    //let musicTrackPreset = prepareMusicTrack(audioFileName: "short_music_20.wav")
     
     let launchConfig = VideoEditorLaunchConfig(
       entryPoint: .camera,
       hostController: self,
-      musicTrack: nil, // Paste a music track as a track preset at the camera screen to record video with music
+      musicTrack: musicTrackPreset, // Paste a music track as a track preset at the camera screen to record video with music
       animated: true
     )
     videoEditorModule.presentVideoEditor(with: launchConfig)

@@ -84,7 +84,7 @@ Next, once the user picks audio content on your app screen you need to follow AP
 Any audio file should be stored on the device before applying.
 
 To pass audio content to Video Editor you need to implement a factory that conforms ```MusicEditorExternalViewControllerFactory``` protocol.
-And put it to ```musicEditorFactory``` property in [ExternalViewControllerFactory](../Example/Example/Helpers/ViewControllerFactory.swift#L14).
+And put it to ```musicEditorFactory``` property in [ExternalViewControllerFactory](../Example/Example/VideoEditorModule.swift#L1112).
 Your factory should implement the following methods:
 
 ```swift
