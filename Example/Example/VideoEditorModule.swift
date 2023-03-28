@@ -23,19 +23,17 @@ class VideoEditorModule {
     
     var isVideoEditorInitialized: Bool { videoEditorSDK != nil }
     
-    func initVideoEditor(token: String) -> BanubaVideoEditor? {
+    init(token: String) {
         let config = createConfiguration()
         let externalViewControllerFactory = createExampleExternalViewControllerFactory()
         
         let videoEditorSDK = BanubaVideoEditor(
-          token: token,
-          configuration: config,
-          externalViewControllerFactory: externalViewControllerFactory
+            token: token,
+            configuration: config,
+            externalViewControllerFactory: externalViewControllerFactory
         )
         
         self.videoEditorSDK = videoEditorSDK
-        
-        return videoEditorSDK
     }
     
     func presentVideoEditor(with launchConfig: VideoEditorLaunchConfig) {

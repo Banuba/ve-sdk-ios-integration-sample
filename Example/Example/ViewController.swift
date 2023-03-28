@@ -11,18 +11,19 @@ import VEExportSDK
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, BanubaVideoEditorDelegate {
   
   // MARK: - IBOutlet
   @IBOutlet weak var invalidTokenMessageLabel: UILabel!
   
   // MARK: - VideoEditorSDK
-  private let videoEditorModule = VideoEditorModule()
+  private let videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    guard let videoEditorSDK = videoEditorModule.initVideoEditor(token: AppDelegate.licenseToken) else {
+    // Check video editor initialization status
+    guard let videoEditorSDK = videoEditorModule.videoEditorSDK else {
       invalidTokenMessageLabel.text = "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
       invalidTokenMessageLabel.isHidden = false
       return
@@ -40,7 +41,19 @@ class ViewController: UIViewController {
       self?.invalidTokenMessageLabel.isHidden = isValid
     })
   }
-
+  
+  // MARK: - Handle BanubaVideoEditor callbacks
+  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
+    videoEditor.clearSessionData()
+    videoEditor.dismissVideoEditor(animated: true, completion: nil)
+  }
+  
+  func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
+    videoEditor.dismissVideoEditor(animated: true) { [weak self] in
+      self?.exportVideo(videoEditor: videoEditor)
+    }
+  }
+  
   // MARK: - Actions
   @IBAction func openVideoEditorDefault(_ sender: Any) {
     guard videoEditorModule.isVideoEditorInitialized else { return }
@@ -186,20 +199,6 @@ extension ViewController {
     playerController.player = player
     present(playerController, animated: true) {
       player.play()
-    }
-  }
-}
-
-// MARK: - BanubaVideoEditorDelegate
-extension ViewController: BanubaVideoEditorDelegate {
-  func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
-    videoEditor.clearSessionData()
-    videoEditor.dismissVideoEditor(animated: true, completion: nil)
-  }
-  
-  func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
-    videoEditor.dismissVideoEditor(animated: true) { [weak self] in
-      self?.exportVideo(videoEditor: videoEditor)
     }
   }
 }
