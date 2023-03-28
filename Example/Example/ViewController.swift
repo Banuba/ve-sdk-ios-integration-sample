@@ -44,8 +44,8 @@ class ViewController: UIViewController {
   // MARK: - Actions
   @IBAction func openVideoEditorDefault(_ sender: Any) {
     guard videoEditorModule.isVideoEditorInitialized else { return }
-    
-    let musicTrackPreset = prepareMusicTrack()
+  
+    let musicTrackPreset = prepareMusicTrack(audioFileName: "short_music_20.wav")
     
     let launchConfig = VideoEditorLaunchConfig(
       entryPoint: .camera,
@@ -96,6 +96,28 @@ class ViewController: UIViewController {
       
       self.videoEditorModule.presentVideoEditor(with: launchConfig)
     }
+  }
+  
+  private func prepareMusicTrack(audioFileName: String) -> MediaTrack {
+    let musicURL = Bundle.main.bundleURL.appendingPathComponent(audioFileName)
+    let assset = AVURLAsset(url: musicURL)
+    
+    let musicTrackPreset = MediaTrack(
+      uuid: UUID(),
+      id: nil,
+      url: musicURL,
+      timeRange: MediaTrackTimeRange(
+        startTime: .zero,
+        playingTimeRange: CMTimeRange(
+          start: .zero,
+          duration: assset.duration
+        )
+      ),
+      isEditable: true,
+      title: "My awesome track"
+    )
+    
+    return musicTrackPreset
   }
 }
 
@@ -275,27 +297,5 @@ extension ViewController {
         completion(assets)
       }
     )
-  }
-  
-  private func prepareMusicTrack() -> MediaTrack {
-    let musicURL = Bundle.main.bundleURL.appendingPathComponent("short_music_20.wav")
-    let assset = AVURLAsset(url: musicURL)
-    
-    let musicTrackPreset = MediaTrack(
-      uuid: UUID(),
-      id: nil,
-      url: musicURL,
-      timeRange: MediaTrackTimeRange(
-        startTime: .zero,
-        playingTimeRange: CMTimeRange(
-          start: .zero,
-          duration: assset.duration
-        )
-      ),
-      isEditable: true,
-      title: "My awesome track"
-    )
-    
-    return musicTrackPreset
   }
 }
