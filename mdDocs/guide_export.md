@@ -13,10 +13,10 @@
 - [Export metadata analytics](#Export-metadata-analytics)
 
 ## Overview
-You can export a number of media files i.e. video and audio with various resolutions and other configurations using.
-Video Editor export video as ```.mp4``` file.
+You can export a number of media files i.e. video and audio with various resolutions and other configurations.
+Video Editor exports video as ```.mp4``` file.
 
-:exclamation: Important  
+>:exclamation: **Note:**  
 Export is a very heavy computational task that takes time and the user has to wait.
 Execution time depends on
 1. Video duration - the longer video the longer execution time.
@@ -25,8 +25,7 @@ Execution time depends on
 4. Number of exported video - the more video and audio you want to export the longer execution time.
 5. Device hardware - the most powerful devices can execute export much quicker.
 
-Export supports only ```Foreground``` mode where the user has to wait on progress screen until processing is done.  
-:exclamation: Important
+Export only supports ```Foreground``` mode where the user has to wait on progress screen until processing is done.  
 ```Background``` export is not allowed on iOS due to [iOS Restrictions](https://developer.apple.com/documentation/metal/gpu_devices_and_work_submission/preparing_your_metal_app_to_run_in_the_background)
 
 Here is a screen that is shown in ```Foreground``` mode.
@@ -36,11 +35,11 @@ Here is a screen that is shown in ```Foreground``` mode.
 
 ## Video codecs
 Video Editor supports video codec options:
-1. ```HEVC``` - H265 codec. Enabled by **default**
+1. ```HEVC``` - H265 codec. ```Default``` if the device supports this codec
 2. ```AVC_PROFILES``` - H264 codec with High Profile
 
 You can change video codec for export by using ```ExportVideoConfiguration.useHEVCCodecIfPossible``` property. 
-In this example, the H264 is set in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L26).
+In this example, the H264 is set in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L60).
 
 ```diff
     let exportConfiguration = ExportVideoConfiguration(
@@ -213,7 +212,7 @@ where ```position``` is used where for locating watermark image in a video
     }
 ```
 Next, set ```watermarkConfiguration``` to every instance of ```ExportVideoConfiguration``` where you want to add watermark 
-in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L30).
+in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L61).
 ```diff
     let hdExportConfiguration = ExportVideoConfiguration(
           fileURL: destFile,
@@ -226,7 +225,7 @@ in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L30).
 ## Export GIF preview
 Video Editor allows to export preview of a video as a GIF file.  
 Instance of ```GifSettings``` is required in ```ExportConfiguration``` to export  preview 
-in export. You can specify this property in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L43)
+in export. You can specify this property in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L67)
 
 ```diff
  let exportConfig = ExportConfiguration(

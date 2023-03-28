@@ -56,9 +56,6 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
   
   // MARK: - Actions
   @IBAction func openVideoEditorDefault(_ sender: Any) {
-    guard videoEditorModule.isVideoEditorInitialized else { return }
-  
-    
     let musicTrackPreset: MediaTrack? = nil
     // Uncomment to apply custom audio track in video editor
     //let musicTrackPreset = prepareMusicTrack(audioFileName: "short_music_20.wav")

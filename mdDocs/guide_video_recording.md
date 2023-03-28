@@ -26,7 +26,7 @@ If h265(HEVC) codec is used for recording video the values listed below will be 
 The class includes many internal config classes that are very useful if you want to create your custom experience.  
 
 The SDK includes default implementations for all configuration classes however you can customize them
-and provide your own implementations to meet your requirements in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L50).  
+and provide your own implementations to meet your requirements in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L81).  
 
 ```RecorderConfiguration``` is the main configuration class in ```VideoEditorConfig``` and is used for video recording functionality.
 
@@ -42,7 +42,7 @@ and provide your own implementations to meet your requirements in [VideoEditorMo
 | isGalleryButtonHidden |      Bool; Default ```false```      | defines if gallery button located at bottom-right should be hidden. ```true``` will hide the button. 
 | supportMultiRecords |      Bool; Default ```true```       | defines if the user can record multiple video files
 
-Please [check out](../Example/Example/VideoEditorModule.swift#L870) how to set up custom video resolution for video recording.  
+Please [check out](../Example/Example/VideoEditorModule.swift#L917) how to set up custom video resolution for video recording.  
 
 Next very handy config class os ```VideoEditorDurationConfig``` that is responsible for customizing video recording durations.
 :exclamation: Important    
@@ -102,7 +102,7 @@ This feature allows to take a picture or record a video after some delay.
 Implement ```TimerConfiguration.options``` property to provide custom list of timer options.  
 
 In this example, the timer uses 2 options - 3 seconds and 5 seconds delay before to start recording.
-Please check out [implementation](../Example/Example/VideoEditorModule.swift#L998) in the sample.
+Please check out [implementation](../Example/Example/VideoEditorModule.swift#L1045) in the sample.
 ```swift
 var config = VideoEditorConfig()
 config.recorderConfiguration.timerConfiguration.options = [
@@ -122,7 +122,7 @@ config.recorderConfiguration.timerConfiguration.options = [
 ```
 
 Moreover, you can implement custom countdown animation for time feature as well. 
-This sample includes [demo implementation](../Example/Example/Helpers/CountdownTimerViewControllerFactory.swift) 
+This sample includes [demo implementation](../Example/Example/VideoEditorModule.swift#L1122) 
 of countdown animation that you can use and set it to [ViewControllerFactory.countdownTimerViewFactory](../Example/Example/VideoEditorModule.swift#L1113).
 
 ```diff
@@ -275,7 +275,7 @@ The feature is disabled by default and can be enabled if the license supports it
 
 The subsequent guide explains how to start and customize ```PIP```.
 
-First, create ```VideoEditorLaunchConfig``` in [ViewController](../Example/Example/ViewController.swift#L301) 
+First, create ```VideoEditorLaunchConfig``` in [ViewController](../Example/Example/ViewController.swift#L73) 
 and provide video content for the feature.
 
 ```diff

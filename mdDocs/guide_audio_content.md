@@ -41,7 +41,7 @@ Finally, you can customize Audio Browser appearance with ```AudioBrowserConfig.s
 Audio Browser has built in integration with [Mubert](https://mubert.com/) API.  
 Please contact Mubert representatives to request API KEY.
 
-Set Mubert API key by using ```BanubaAudioBrowser.setMubertPat``` method. For example in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L53).
+Set Mubert API key by using ```BanubaAudioBrowser.setMubertPat``` method. For example in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L84).
 ```Swift
 BanubaAudioBrowser.setMubertPat("SET MUBERT API KEY")
 ```
@@ -167,8 +167,7 @@ exportSession?.exportAsynchronously() {
   }
 }
 ```
-To present your custom audio browser in video editor you need to pass created [ExternalViewControllerFactory](../Example/Example/ViewController.swift#L117)
-to the initialization of ```BanubaVideoEditor``` as ```externalViewControllerFactory```
+To present your custom audio browser in video editor you need to set created ```ExternalViewControllerFactory``` to [externalViewControllerFactory](../Example/Example/VideoEditorModule.swift#L33)
 
 ## Music Editor screen
 Video Editor includes Music Editor screens. These are screens where the user can adjust usage of audio in video editor i.e. trim, add new, delete.

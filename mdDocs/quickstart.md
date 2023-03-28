@@ -88,14 +88,12 @@ Please make sure all these resources are provided in your project.
 3. [Effects%20Previe](../Example/Example/Assets.xcassets/Effects%20Preview) - preview images of visual effects.
 4. [Localized Strings](../Example/Example/en.lproj/Localizable.strings)
 
-:bulb: Recommendation      
 [Assets.xcassets](../Example/Example/Assets.xcassets) contains other visual resources i.e. icons that are used in 
 video editor. These icons were added to the sample to customize default video editor icons.
 Feel free to copy all resources from [Assets.xcassets](../Example/Example/Assets.xcassets) if they meet your requirements.
 
-:exclamation: Important   
-Default video editor icons will be used in case if you copy only [luts](../Example/Example/luts), [ColorEffectsPreview](../Example/Example/Assets.xcassets/ColorEffectsPreview) ,
-[Effects%20Previe](../Example/Example/Assets.xcassets/Effects%20Preview), [Localized Strings](../Example/Example/en.lproj/Localizable.strings) resources.
+>:exclamation: **Note:** Default video editor icons will be used in case if you copy only [luts](../Example/Example/luts), [ColorEffectsPreview](../Example/Example/Assets.xcassets/ColorEffectsPreview) ,
+[Effects%20Preview](../Example/Example/Assets.xcassets/Effects%20Preview), [Localized Strings](../Example/Example/en.lproj/Localizable.strings) resources.
 
 ## Add module
 Custom behavior of Video Editor SDK in your app is implemented by using a number of configuration classes in the SDK.
@@ -120,8 +118,8 @@ class VideoEditorModule {
 ## Implement export
 Video Editor can export multiple media files to meet your requirements.  
 Create instance of ```ExportConfiguration``` and provide ```Array<ExportVideoConfiguration>``` where every ```ExportVideoConfiguration``` is a media file i.e. video or audio. 
-Next, use ```BanubaVideoEditor.export``` method and pass instance of ```ExportConfiguration``` to start export.
-Please check out [export implementation](../Example/Example/ViewController.swift#L142) in the sample.  
+Next, use ```BanubaVideoEditor.export()``` method and pass instance of ```ExportConfiguration``` to start export.
+Please check out [export implementation](../Example/Example/ViewController.swift#L139) in the sample.  
 
 Learn [Export integration guide](guide_export.md) to know more about exporting media content features.
 
@@ -154,7 +152,7 @@ videoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
 <img src="screenshots/screen_expired.png"  width="25%" height="auto">
 </p>
 
-The following [implementation](../Example/Example/ViewController.swift#L60) starts Video Editor from camera screen.
+The following [implementation](../Example/Example/ViewController.swift#L59) starts Video Editor from camera screen.
 ```swift
  let cameraLaunchConfig = VideoEditorLaunchConfig(
         entryPoint: .camera,
@@ -163,10 +161,7 @@ The following [implementation](../Example/Example/ViewController.swift#L60) star
         animated: true
 )
 
-self.videoEditorSDK?.presentVideoEditor(
-    withLaunchConfiguration: cameraLaunchConfig,
-    completion: nil
-)
+videoEditorModule.presentVideoEditor(with: cameraLaunchConfig)
 ```
 
 Video Editor supports multiple launch methods described in [this guide](advanced_integration.md#Launch-methods).
@@ -180,7 +175,7 @@ Video editor has built in UI/UX experience and provides a number of customizatio
 :white_check_mark: Change text styles i.e. font, color. [See details](advanced_integration.md#Configure-screens)  
 :white_check_mark: Localize and change text resources. Default locale is :us:  
 :white_check_mark: Make content you want i.e. a number of video with different resolutions  and durations, an audio file. [See details](#Configure-export-flow)  
-:white_check_mark: Masks and filters order. [See details](advanced_integration.md#Configure-masks-video-effects-and-filters-order)
+:white_check_mark: Masks and filters order. [See details](advanced_integration.md)
 
 NOT AVAILABLE  
 :x: Change layout  
@@ -221,4 +216,6 @@ Visit [FAQ](faq.md) if you are experiencing any issues with an integration.
 [1.26.2](https://www.notion.so/vebanuba/1-26-2-2aa271695c974ac7b90799a0b2a108d9)   
 [1.26.3](https://www.notion.so/vebanuba/1-26-3-8c4fb0d732eb4f2582b3aaeab28ef399)  
 [1.26.4](https://www.notion.so/vebanuba/1-26-4-294c72f4be5944938a4e506c65435333)  
-[1.26.5](https://www.notion.so/vebanuba/1-26-5-91785d18a6c64c6e86dc48ca06e3d458)
+[1.26.5](https://www.notion.so/vebanuba/1-26-5-91785d18a6c64c6e86dc48ca06e3d458)  
+[1.26.6](https://www.notion.so/vebanuba/1-26-6-2093b77cabc54ec0b28100c723ca90fe)  
+

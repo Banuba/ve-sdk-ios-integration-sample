@@ -13,8 +13,7 @@
 ## Overview
 Any Face AR effect is a folder that includes a number of files required for Face AR SDK to play this effect.
 
-:exclamation: Important    
-Make sure every effect folder includes ```preview.png``` file. This file is used as a preview for AR effect.
+>:exclamation: **Important:** Make sure every effect folder includes ```preview.png``` file. This file is used as a preview for AR effect.
 
 ## Manage effects
 There are 2 options for managing AR effects:
@@ -35,7 +34,7 @@ Any AR effect downloaded from ```AR Cloud``` is cached on the user's device.
 
 Add dependency to [Podfile](../Example/Podfile#L11) to integrate ```AR Cloud``` into your project.
 ```diff
-+  pod 'BanubaARCloudSDK', '1.26.5'
++  pod 'BanubaARCloudSDK', '1.26.6'
 ```
 
 Since the link to your AR Cloud bucket is included into the license token. AR effects will appear once you set the license token with AR Cloud link.
@@ -59,7 +58,7 @@ These are names of specific directories located in ```bundleEffects``` or on ```
 Video Editor SDK can work without Face AR SDK.
 Change [Podfile](../Example/Podfile) to disable Face AR SDK.
 ```diff
-banuba_sdk_version = '1.26.5'
+banuba_sdk_version = '1.26.6'
 
 -  pod 'BanubaEffectPlayer', banuba_sdk_version
 -  pod 'BanubaSDK', banuba_sdk_version
