@@ -4,7 +4,7 @@
 - [Customize default gallery](#Customize-default-gallery)
 - [Implement custom gallery](#Implement-custom-gallery)
 - [Progress screen](#Progress-screen)
-- 
+
 ## Add module
 Video Editor SDK includes built in solution for the gallery where the user can pick any video or image and use it while making video.  
 To connect Banuba Gallery screen and its functionality you need to add the dependency in [Podfile](../Example/Podfile#L22) file.
@@ -13,39 +13,33 @@ banuba_sdk_version = '1.26.6'
 
 pod 'BanubaVideoEditorGallerySDK', banuba_sdk_version #optional
 ```
-IN PROGRESS(How to connect?)
-
 
 ## Customize default gallery
+The gallery is used in app when you want to select a photo or video stored on your phone.
+Implement ```GalleryConfiguration```  and set it to ```VideoEditorConfig.combinedGalleryConfiguration``` 
+to customize gallery.  
+You can use allowed properties
 
-IN PROGRESS(CombinedGallery???)
-
-The CombinedGallery is used in app when you want to select a photo or video stored on your phone.
-
-Use the properties below to customize the CombinedGallery.
-
-- [videoResolution: VideoResolution](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7) - VideoResolution setups editor options for rendering video
-- [galleryItemConfiguration: GalleryItemConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L8) - GalleryItemConfiguration setups gallery item style for collection view cell
-- [visibleTabsInGallery: GalleryMediaType](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L25) - GalleryMediaType setups visible tabs for gallery
-- [closeButtonConfiguration: ImageButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L16) - ImageButtonConfiguration setups close button style
-- [albumButtonConfiguration: TextButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L16) - TextButtonConfiguration setups album button style
-- [collectionInfoHeaderConfiguration: CollectionInfoHeaderConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L16) - CollectionInfoHeaderConfiguration setups gallery header view
-- [nextButtonConfiguration: SaveButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L18) - SaveButtonConfiguration setups next button style
-- [draftsButtonConfiguration: SaveButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7) - SaveButtonConfiguration setups drafts button style
-- [noItemsLabelConfiguration: TextConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L19) - TextConfiguration setups 'no photos' and 'no videos' label title style
-- [layoutConfiguration: GalleryLayoutConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L20) - GalleryLayoutConfiguration setups collection view layout for gallery items
-- [topBarBlurColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L21) - Top bar blur color
-- [clearSelectionButtonConfiguration: ImageButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L22) - ImageButtonConfiguration setups clear selection button style
-- [galleryTypeButton: TextButtonConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L23) - TextButtonConfiguration setups gallery type buttons' style
-- [galleryTypeUnderlineColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L24) - Color for underline view
-- [isPhotoSequenceAnimationEnabled: Bool](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7) - Should use animation for photo sequences
-- [importItemsLabelConfiguration: TextConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7) - TextConfiguration setups import items label style
-- [bottomViewConfiguration: BackgroundConfiguration](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7) - BackgroundConfiguration setups configuration of bottom view
-- [isDraftsHidden: Bool](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7) - Setups drafts button visibility. VE SDK setups this field to true for picker mode displaying and etc
-- [visibleTabsInGallery: GalleryMediaType](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7) - Setup visible tabs for gallery
-- [isCloseButtonHidden: Bool](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7) - Describes if close button hidden
-- [backgroundColor: UIColor](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7) - Setups view background color
-- [maximumSelectedCountFromGallery: Int](/Example/Example/Extension/CombinedGalleryConfiguration.swift#L7) - The maximum number of items can be selected from gallery. Default is 50.
+- [videoResolution](../Example/Example/VideoEditorModule.swift#L396) - editor options for rendering video
+- [galleryItemConfiguration](../Example/Example/VideoEditorModule.swift#L398) - gallery item style for collection view cell
+- [visibleTabsInGallery](../Example/Example/VideoEditorModule.swift#L415) - visible tabs for gallery
+- [closeButtonConfiguration](../Example/Example/VideoEditorModule.swift#L406) - close button style
+- [albumButtonConfiguration](../Example/Example/VideoEditorModule.swift#L407) - album button style
+- [collectionInfoHeaderConfiguration](../Example/Example/VideoEditorModule.swift#L396) - gallery header view
+- [nextButtonConfiguration](../Example/Example/VideoEditorModule.swift#L408) - next button style
+- [noItemsLabelConfiguration](../Example/Example/VideoEditorModule.swift#L409) - 'no photos' and 'no videos' label title style
+- [layoutConfiguration](../Example/Example/VideoEditorModule.swift#L410) - collection view layout for gallery items
+- [topBarBlurColor](../Example/Example/VideoEditorModule.swift#L411) - top bar blur color
+- [clearSelectionButtonConfiguration](../Example/Example/VideoEditorModule.swift#L412) - clear selection button style
+- [galleryTypeButton](../Example/Example/VideoEditorModule.swift#L413) - gallery type buttons' style
+- [galleryTypeUnderlineColor](../Example/Example/VideoEditorModule.swift#L414) - color for underline view
+- [isPhotoSequenceAnimationEnabled](../Example/Example/VideoEditorModule.swift#L396) - should use animation for photo sequences
+- [importItemsLabelConfiguration](../Example/Example/VideoEditorModule.swift#L396) - import items label style
+- [bottomViewConfiguration](../Example/Example/VideoEditorModule.swift#L396) - bottom view
+- [visibleTabsInGallery](../Example/Example/VideoEditorModule.swift#L415) - visible tabs for gallery
+- [isCloseButtonHidden](../Example/Example/VideoEditorModule.swift#L396) - describes if close button hidden
+- [backgroundColor](../Example/Example/VideoEditorModule.swift#L396) - view background color
+- [maximumSelectedCountFromGallery](../Example/Example/VideoEditorModule.swift#L396) - the maximum number of items can be selected from gallery
 
 ![img](screenshots/Gallery.png)
 
@@ -72,7 +66,6 @@ Use the properties below to customize the CombinedGallery.
 
 
 ## Implement custom gallery
-IN PROGRESS(ACTUAL ???)
 Please follow these steps to integrate you gallery into the SDK.
 
 ## Step 1
@@ -85,6 +78,10 @@ Implement custom `UIViewController` inherited from `GalleryViewController`
         open var selectionBehaviour: GallerySelectionBehaviour?
         /// Setups new album at gallery
         open func useAlbum(_ albumModel: AlbumModel) {}
+        /// Cancel current export
+        open func cancelExport() {}
+        /// Retry export failed items
+        open func retryExport() {}
     }
 ```
 
@@ -96,9 +93,9 @@ Implement custom `UIViewController` inherited from `GalleryViewController`
         @objc public protocol GalleryViewControllerDelegate: AnyObject {
             /// Tells delegate object about starting asynchronous operations at the gallery.
             /// BanubaVideoEditorSDK showing full-screen spinner by this event. It can help to prevent unnecessary actions from a user.
-            func galleryViewControllerDidStartExport(_ controller: GalleryViewController)
+            func galleryViewController(_ controller: GalleryViewController, didStartExportWith progressHandler: ProgressHandler)
             /// Tells delegate object about finishing asynchronous operations at the gallery
-            func galleryViewControllerDidEndExport(_ controller: GalleryViewController)
+            func galleryViewController(_ controller: GalleryViewController, didEndExportWith error: Error?, hideProgressViewCompletion: @escaping () -> Void)
             /// Tells delegate object about the closing gallery.
             func galleryViewControllerDidClose(_ controller: GalleryViewController)
             /// Tells delegate object about completion picking gallery items.
@@ -164,12 +161,12 @@ Implement custom `UIViewController` inherited from `GalleryViewController`
         func requestPhoto(
             size: CGSize,
             progressHandler: ((Double) -> (Bool))?,
-            handler: @escaping (UIImage?, [AnyHashable : Any]?) -> Void
+            handler: @escaping (UIImage?, Error?) -> Void
         )
         /// Requests video url asset
         func requestAVURLAsset(
             progressHandler:((Double) -> (Bool))?,
-            handler: @escaping (AVURLAsset?, [AnyHashable : Any]?) -> ()
+            handler: @escaping (AVURLAsset?, Error?) -> Void
         )
         /// Requests video player item
         func requestAVPlayerItem(
@@ -227,6 +224,20 @@ Provide your custom gallery to `BanubaVideoEditorSDK`. Please follow these steps
             selectionBehaviour: GallerySelectionBehaviour
         ) -> GalleryViewController
     }
+    
+    class MyGalleryViewControllerFactory: NSObject, GalleryViewControllerFactory {
+        func makeGalleryViewController(
+            withConfiguration configuration: BanubaUtilities.GalleryConfiguration,
+            albumsConfiguration: BanubaUtilities.AlbumsConfiguration,
+            selectionBehaviour: BanubaUtilities.GallerySelectionBehaviour
+        ) -> BanubaUtilities.GalleryViewController {
+          let controller = UIStoryboard(
+          name: String(describing: UIViewController.self),
+          bundle: Bundle(for: UIViewController.self)
+          ).instantiateInitialViewController() as! UIViewController
+          return controller
+        }
+    }
 ```
 
 - Paste your factory to `BanubaVideoEditor` init
@@ -260,42 +271,20 @@ Provide your custom gallery to `BanubaVideoEditorSDK`. Please follow these steps
 
 ![img](screenshots/ProgressViewConfiguration.png)
 
-```ProgressViewConfiguration``` has the following parameters
-```swift
-/// Describes configuration for progress view used at gallery and export
-public class ProgressViewConfiguration {
+Implement ```ProgressViewConfiguration```  and set it to ```VideoEditorConfig.progressViewConfiguration``` 
+to customize progress.  
+You can use allowed properties
 
-    /// Setups configuration for message
-    public var messageConfiguration: TextConfiguration
-
-    /// Setups configuration for tooltip message
-    public var tooltipMessageConfiguration: TextConfiguration
-
-    /// Setups cancel button text configuration
-    public var cancelButtonTextConfiguration: TextButtonConfiguration
-
-    /// Setups cancel button border configuration
-    public var cancelButtonBorderConfiguration: BorderButtonConfiguration
-
-    /// Setups cancel button background configuration
-    public var cancelButtonBackgroundConfiguration: BackgroundConfiguration
-
-    /// Background configuration
-    public var backgroundConfiguration: BackgroundConfiguration
-
-    /// Background view blur style. Default is .dark
-    public var backgroundViewBlurStyle: UIBlurEffect.Style
-
-    /// Setups progress bar color
-    public var progressBarColor: UIColor
-
-    /// Setups progress bar height. Default is 4.0
-    public var progressBarHeight: CGFloat
-
-    /// Setups progress bar corner radius. Default is 1.0
-    public var progressBarCornerRadius: CGFloat
-}
-```
+- [messageConfiguration](../Example/Example/VideoEditorModule.swift#L471) - message title
+- [tooltipMessageConfiguration](../Example/Example/VideoEditorModule.swift#L142) - tooltip message
+- [cancelButtonTextConfiguration](../Example/Example/VideoEditorModule.swift#L139) - cancel button text
+- [cancelButtonBorderConfiguration](../Example/Example/VideoEditorModule.swift#L138) - cancel button border 
+- [cancelButtonBackgroundConfiguration](../Example/Example/VideoEditorModule.swift#L134) - cancel button background
+- [backgroundConfiguration](../Example/Example/VideoEditorModule.swift#134) - progress background
+- [backgroundViewBlurStyle](../Example/Example/VideoEditorModule.swift#L134) - background view blur style
+- [progressBarColor](../Example/Example/VideoEditorModule.swift#L134) - progress bar color
+- [progressBarHeight](../Example/Example/VideoEditorModule.swift#L135) - progress bar height
+- [progressBarCornerRadius](../Example/Example/VideoEditorModule.swift#L136) - progress bar corner radius
 
 | Key        |      Value      |   Description |
 | ------------- | :----------- | :------------- |
