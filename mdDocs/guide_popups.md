@@ -16,9 +16,8 @@ Video editor includes a few types of popups:
 You can customize all types
 
 ## Toast
-Implement ```ToastConfiguration```  and set it to ```VideoEditorConfig.toastConfiguration``` 
-to customize toast.  
-You can use allowed properties
+Implement ```ToastConfiguration```  and set it to ```VideoEditorConfig.toastConfiguration``` to customize toast.    
+Available properties
 
 - [kern](../Example/Example/VideoEditorModule.swift#L81) - The kerning of the presented text
 - [font](../Example/Example/VideoEditorModule.swift#L81) - The font of the presented text
@@ -27,10 +26,8 @@ You can use allowed properties
 - [backgroundColor](../Example/Example/VideoEditorModule.swift#L81) - The toast background color
 
 ## Wait dialog
-Implement ```FullScreenActivityConfiguration```  and set it to ```VideoEditorConfig.fullScreenActivityConfiguration``` 
-to customize wait dialog.  
-You can use allowed properties
-
+Implement ```FullScreenActivityConfiguration``` and set it to [VideoEditorConfig.fullScreenActivityConfiguration](../Example/Example/VideoEditorModule.swift#L128) to customize wait dialog.   
+Available properties:
 - [labelFont](../Example/Example/VideoEditorModule.swift#L359) - Label title font
 - [cornerRadius](../Example/Example/VideoEditorModule.swift#L359) - Container corner radius
 - [activityEffectsViewAlpha](../Example/Example/VideoEditorModule.swift#L359) - Background view alpha
@@ -38,9 +35,8 @@ You can use allowed properties
 
 ## Popover alert
 
-Implement ```PopoverAlertViewConfiguration```  and set it to ```VideoEditorConfig.popoverAlertViewConfiguration``` 
-to customize popover alert.  
-You can use allowed properties
+Implement ```PopoverAlertViewConfiguration```  and set it to ```VideoEditorConfig.popoverAlertViewConfiguration``` to customize popover alert.    
+Available properties:
 
 - [mainBackgroundColor](../Example/Example/VideoEditorModule.swift#L81) - Color used to fill the remaining space under actions list
 - [actionsViewBackgroundColor](../Example/Example/VideoEditorModule.swift#L81) - Background color of actions list

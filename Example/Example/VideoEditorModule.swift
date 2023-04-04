@@ -121,10 +121,10 @@ class VideoEditorModule {
         // Alert popups
         config.alertViewConfiguration = updateAlertViewConfiguration(config.alertViewConfiguration)
         
-        // ???
+        // FilterConfiguration
         config.filterConfiguration = updateFilterConfiguration(config.filterConfiguration)
        
-        // ???
+        // FullScreenActivityConfiguration
         config.fullScreenActivityConfiguration = updateFullScreenActivityConfiguration(config.fullScreenActivityConfiguration)
         
         return config
