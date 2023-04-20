@@ -157,13 +157,13 @@ extension ViewController {
           progressViewController.updateProgressView(with: Float(progress))
         }
       },
-      completion: { [weak self] success, error, exportCoverImages in
+      completion: { [weak self] error, exportCoverImages in
         DispatchQueue.main.async {
           // Hide progress view
           progressViewController.dismiss(animated: true) {
             // Clear video editor session data
             videoEditor.clearSessionData()
-            if success {
+            if error == nil {
               /// If you want to play exported video
               //          self.playVideoAtURL(videoURL)
               
