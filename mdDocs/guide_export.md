@@ -127,7 +127,7 @@ Use created ```ExportConfiguration``` to start export by using  ```BanubaVideoEd
 public func export(
     using configuration: ExportConfiguration,
     exportProgress: ((TimeInterval) -> Void)?,
-    completion: @escaping ((_ success: Bool, _ error: Error?, _ exportCoverImages: ExportCoverImages?)->Void)
+    completion: @escaping ((_ error: Error?, _ exportCoverImages: ExportCoverImages?) -> Void)
 )
 ``` 
 
@@ -136,7 +136,7 @@ Method ```BanubaVideoEditor.export()``` allows either start export and track the
 Provide
 1. ```ExportConfiguration``` where you set up all required media content you want to make
 2. ```exportProgress``` - callback that gets called when export progress changes. Values are 0.0-1.0
-3. ```completion```- callback that gets called when export finishes successfully or with an error.
+3. ```completion```- callback that gets called when export finishes with an error or not.
 ```swift
 videoEditorSDK?.export(
       using: exportConfiguration,
@@ -146,9 +146,9 @@ videoEditorSDK?.export(
           ...
         }
       },
-      completion: { [weak self] success, error, exportCoverImages in
+      completion: { [weak self] error, exportCoverImages in
         DispatchQueue.main.async {
-            // Export finishes. Use 'success' or 'error' values to detect the state of export.
+            // Export finishes. Use 'error' value to detect the state of export.
             // Hide progress view
         
             // You can clear exported session if you do no need it anymore

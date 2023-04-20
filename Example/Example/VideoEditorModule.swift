@@ -80,8 +80,11 @@ class VideoEditorModule {
     func createConfiguration() -> VideoEditorConfig {
         var config = VideoEditorConfig()
         
-        // Set Mubert API KEY here
-        BanubaAudioBrowser.setMubertPat("SET MUBERT API KEY")
+        // Set Mubert API KEYS here
+        BanubaAudioBrowser.setMubertKeys(
+            license: "SET MUBERT API LICENSE",
+            token: "SET MUBERT API TOKEN"
+        )
         AudioBrowserConfig.shared.musicSource = .allSources
         
         var featureConfiguration = config.featureConfiguration
@@ -663,7 +666,7 @@ class VideoEditorModule {
         updatedConfiguration.mainLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         updatedConfiguration.additionalLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         updatedConfiguration.backgroundConfiguration.cornerRadius = 0.0
-        updatedConfiguration.height = 150.0
+        
         return updatedConfiguration
     }
     
