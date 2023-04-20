@@ -39,11 +39,14 @@ Finally, you can customize Audio Browser appearance with ```AudioBrowserConfig.s
 
 ## Mubert integration
 Audio Browser has built in integration with [Mubert](https://mubert.com/) API.  
-Please contact Mubert representatives to request API KEY.
+Please contact Mubert representatives to request API LICENSE with API TOKEN.
 
 Set Mubert API key by using ```BanubaAudioBrowser.setMubertPat``` method. For example in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L84).
 ```Swift
-BanubaAudioBrowser.setMubertPat("SET MUBERT API KEY")
+BanubaAudioBrowser.setMubertKeys(
+  license: "SET MUBERT API LICENSE",
+  token: "SET MUBERT API TOKEN"
+)
 ```
 
 You can use ```AudioBrowserConfig.shared.mubertAudioConfig``` to customize network requests to Mubert as well.
