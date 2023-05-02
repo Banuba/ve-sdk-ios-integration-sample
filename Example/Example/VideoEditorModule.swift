@@ -961,7 +961,7 @@ class VideoEditorModule {
         )
         
         updatedConfiguration.backButton = BackButtonConfiguration(imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration(imageName: "ic_nav_close"))
-        updatedConfiguration.removeButtonImageName = "delete_videopart"
+        updatedConfiguration.removeButtonImageName = "camera.delete_videoPart"
         updatedConfiguration.captureButtonModes = [.video]
         //    updatedConfiguration.captureButtonMode = .video
         updatedConfiguration.recordButtonConfiguration.normalImageName = "ic_record_normal"
