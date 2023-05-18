@@ -6,13 +6,12 @@ inhibit_all_warnings!
 
 target 'Example' do
   
-  banuba_sdk_version = '1.26.7.1'
+  banuba_sdk_version = '1.26.8'
   
   pod 'BanubaARCloudSDK', banuba_sdk_version #optional
   pod 'BanubaVideoEditorSDK', banuba_sdk_version
   pod 'BanubaAudioBrowserSDK', banuba_sdk_version #optional
   pod 'BanubaMusicEditorSDK', banuba_sdk_version
-  pod 'BanubaOverlayEditorSDK', banuba_sdk_version
   pod 'BanubaSDKSimple', banuba_sdk_version
   pod 'BanubaEffectPlayer', banuba_sdk_version
   pod 'BanubaSDK', banuba_sdk_version

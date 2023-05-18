@@ -326,12 +326,6 @@
 /* Transition effect name */
 "com.banuba.editor.effect.name.transition" = "Transition";
 
-/* Transition 2 effect name */
-"com.banuba.editor.effect.name.transition2" = "Transition 2";
-
-/* Transition 3 effect name */
-"com.banuba.editor.effect.name.transition3" = "Transition 3";
-
 /* Transition 4 */
 "com.banuba.editor.effect.name.transition4" = "Transition 4";
 
@@ -342,7 +336,16 @@
 "com.banuba.editor.effect.name.twitch" = "Twitch";
 
 /* Open trimmer button name (for dradt) */
-"com.banuba.editor.openTrimButtonTitle" ="Adjust Clips";
+"com.banuba.editor.openTrimButtonTitle" = "Adjust Clips";
+
+/* Captions button title */
+"com.banuba.editor.captions" = "Captions";
+
+/* Captions not available for multiple videos */
+"com.banuba.editor.captionsNotAvailableForMutipleVideos" = "Not available for multiple videos and photo";
+
+/* Auto Cut button title */
+"com.banuba.editor.autoCut" = "AutoCut";
 
 // MARK: - Filter names
 
@@ -459,6 +462,12 @@
 /* Video volume title */
 "MusicEditor.VideoVolume" = "Volume";
 
+/* Original sound title */
+"MusicEditor.OriginalSound" = "Original sound";
+
+/* Added sound title */
+"MusicEditor.AddedSound" = "Added sound";
+
 /* Audio duration title */
 "MusicEditor.Duration" = "Duration";
 
@@ -493,6 +502,9 @@
 /* Add text button title */
 "OverlayEditor.Text" = "Text";
 
+/* Add captions button title */
+"OverlayEditor.Captions" = "Captions";
+
 /* Add sticker button title */
 "OverlayEditor.Sticker" = "Sticker";
 
@@ -519,6 +531,22 @@
 "com.banuba.overlayEditor.mainScreen.resetAll.message" = "";
 "com.banuba.overlayEditor.mainScreen.resetAll.agree" = "Discard";
 "com.banuba.overlayEditor.mainScreen.resetAll.disagree" = "Cancel";
+
+"com.banuba.overlayEditor.captions.creationCaptions" = "Creating auto captions";
+"com.banuba.overlayEditor.captions.noSpeechRecognized" = "No speech recognized";
+
+"com.banuba.overlayEditor.captions.createNewCaptionsQuestion" = "Create new captions?";
+"com.banuba.overlayEditor.captions.createNewCaptionsQuestionDetails" = "Previously created captions will be deleted.";
+"com.banuba.overlayEditor.captions.create" = "Create";
+"com.banuba.overlayEditor.captions.captionsEditing" = "Captions editing";
+"com.banuba.overlayEditor.captions.discardCaptionsTitle" = "Discard captions?";
+"com.banuba.overlayEditor.captions.discard" = "Discard";
+"com.banuba.overlayEditor.captions.delete" = "Delete";
+"com.banuba.overlayEditor.captions.keep" = "Keep";
+"com.banuba.overlayEditor.captions.deleteCaptionsTitle" = "Delete captions?";
+"com.banuba.overlayEditor.captions.deleteSelectedCaption" = "Delete selected";
+"com.banuba.overlayEditor.captions.deleteAllCaptions" = "Delete all";
+"com.banuba.overlayEditor.captions.selectLanguage" = "Select language";
 
 // MARK: - AudioBrowser
 
@@ -553,7 +581,7 @@
 "audioBrowser.mubertTrackFormat" = "Track %d";
 
 /* Wrong Mubert key error text */
-"audioBrowser.wrongPatError" = "Mubert key is missing. In order to get it contact Banuba rep.";
+"audioBrowser.wrongPatError" = "Mubert license is missing. Please contact Mubert";
 
 "feature.disabled.audiobrowser" = "Default music browser is not included in your package. You can plugin your own music.";
 
@@ -565,10 +593,10 @@
 // MARK: - Video Editor
 
 /* Gallery image tab title */
-"BanubaVideoEditor.Gallery.ImageTabTitle" = "Image";
+"BanubaVideoEditor.Gallery.ImageTabTitle" = "Photos";
 
 /* Gallery video tab title */
-"BanubaVideoEditor.Gallery.VideoTabTitle" = "Video";
+"BanubaVideoEditor.Gallery.VideoTabTitle" = "Videos";
 
 /* Gallery custom All Photos title */
 "BanubaVideoEditor.Gallery.AllPhotosTitle" = "All Photos";
@@ -605,10 +633,10 @@
 "BanubaVideoEditor.Gallery.ImportMultipleVideosAndPhotos" = "Import %d videos and photos";
 
 /* Import single image template */
-"BanubaVideoEditor.Gallery.ImportSingleImage" = "Import 1 image";
+"BanubaVideoEditor.Gallery.ImportSingleImage" = "Import 1 photo";
 
 /* Import multiple images template */
-"BanubaVideoEditor.Gallery.ImportMultipleImages" = "Import %d images";
+"BanubaVideoEditor.Gallery.ImportMultipleImages" = "Import %d photos";
 
 /* Gallery empty selection message */
 "BanubaVideoEditor.Gallery.EmptySelectionMessage" = "Select at least 1 file";
