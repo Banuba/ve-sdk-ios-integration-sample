@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "spark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "spark-1.png",
+      "filename" : "spark@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "spark-2.png",
+      "filename" : "spark@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

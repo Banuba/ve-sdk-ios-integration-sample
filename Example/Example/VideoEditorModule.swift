@@ -349,12 +349,12 @@ class VideoEditorModule {
         var updatedConfiguration = configuration
         
         updatedConfiguration.resetButton.backgroundColor = Self.primaryColor
-        updatedConfiguration.resetButton.cornerRadius = 4.0
+        updatedConfiguration.resetButton.cornerRadius = 6.0
         updatedConfiguration.resetButton.textConfiguration?.color = .white
         updatedConfiguration.toolTipLabel.color = .white
         updatedConfiguration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
         
-        updatedConfiguration.effectItemConfiguration.cornerRadius = 4.0
+        updatedConfiguration.effectItemConfiguration.cornerRadius = 6.0
         
         updatedConfiguration.controlButtons = [
             FilterControlButtonConfig(type: .cancel, imageName: "ic_close", selectedImageName: nil),
@@ -1065,6 +1065,7 @@ class VideoEditorModule {
         
         updatedConfiguration.regularRecordButtonPosition = 10.0
         updatedConfiguration.recorderEffectsConfiguration.cornerRadius = 0.0
+        updatedConfiguration.recorderEffectsConfiguration.effectItemConfiguration.imageCornerRadius = 6.0
         updatedConfiguration.leftControlsBottomOffsetFromCaptureButton = 0.0
         updatedConfiguration.leftControlsLeftOffset = 25.0
         updatedConfiguration.sequenceHeight = 6.0

@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "retro.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "retro-1.png",
+      "filename" : "retro@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "retro-2.png",
+      "filename" : "retro@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

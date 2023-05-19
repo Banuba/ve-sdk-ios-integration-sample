@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "pinkvine.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "pinkvine-1.png",
+      "filename" : "pinkvine@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "pinkvine-2.png",
+      "filename" : "pinkvine@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

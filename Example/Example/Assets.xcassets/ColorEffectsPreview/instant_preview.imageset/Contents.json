@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "instant.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "instant-1.png",
+      "filename" : "instant@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "instant-2.png",
+      "filename" : "instant@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
