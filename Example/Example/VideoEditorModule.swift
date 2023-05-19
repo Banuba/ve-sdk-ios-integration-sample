@@ -2,7 +2,6 @@
 import UIKit
 import BanubaVideoEditorSDK
 import BanubaMusicEditorSDK
-import BanubaOverlayEditorSDK
 
 import VideoEditor
 import AVFoundation
@@ -80,12 +79,22 @@ class VideoEditorModule {
     func createConfiguration() -> VideoEditorConfig {
         var config = VideoEditorConfig()
         
+        config.setupColorsPalette(
+            VideoEditorColorsPalette(
+                primaryColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+                iconPrimaryCololor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+                secondaryColor: .black,
+                accentColor: UIColor(red: 250, green: 62, blue: 118, alpha: 1)
+            )
+        )
+        
         // Set Mubert API KEYS here
         BanubaAudioBrowser.setMubertKeys(
             license: "SET MUBERT API LICENSE",
             token: "SET MUBERT API TOKEN"
         )
         AudioBrowserConfig.shared.musicSource = .allSources
+        AudioBrowserConfig.shared.setPrimaryColor(#colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1))
         
         var featureConfiguration = config.featureConfiguration
         featureConfiguration.supportsTrimRecordedVideo = true
@@ -340,12 +349,12 @@ class VideoEditorModule {
         var updatedConfiguration = configuration
         
         updatedConfiguration.resetButton.backgroundColor = Self.primaryColor
-        updatedConfiguration.resetButton.cornerRadius = 4.0
+        updatedConfiguration.resetButton.cornerRadius = 6.0
         updatedConfiguration.resetButton.textConfiguration?.color = .white
         updatedConfiguration.toolTipLabel.color = .white
         updatedConfiguration.cursorButton = ImageButtonConfiguration(imageConfiguration: ImageConfiguration(imageName: "ic_cursor"))
         
-        updatedConfiguration.effectItemConfiguration.cornerRadius = 4.0
+        updatedConfiguration.effectItemConfiguration.cornerRadius = 6.0
         
         updatedConfiguration.controlButtons = [
             FilterControlButtonConfig(type: .cancel, imageName: "ic_close", selectedImageName: nil),
@@ -384,7 +393,6 @@ class VideoEditorModule {
         )
         updatedConfiguration.titleLabel?.text = "Title cover"
         updatedConfiguration.toolTipLabel.text = "Tool tip tabel"
-        updatedConfiguration.selectorColor = .clear
         updatedConfiguration.selectGalleryImageButton.titlePosition = .left
         updatedConfiguration.deleteImageButtonImageConfiguration.titlePosition = .top
         updatedConfiguration.backgroundConfiguration.color = UIColor.black
@@ -891,7 +899,6 @@ class VideoEditorModule {
         config.timerOptionBarConfiguration.minVideoDuration = 1.0
         config.timerOptionBarConfiguration.buttonCornerRadius = 20.0
         config.timerOptionBarConfiguration.buttonBackgroundColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
-        config.timerOptionBarConfiguration.switchOnTintColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 0.3939961473)
         //    config.timerOptionBarConfiguration.timerTitleColor       = UIColor.white
         config.timerOptionBarConfiguration.modeTitleColor        = UIColor.white
         config.timerOptionBarConfiguration.dragTitleColor        = UIColor.lightGray
@@ -1058,6 +1065,7 @@ class VideoEditorModule {
         
         updatedConfiguration.regularRecordButtonPosition = 10.0
         updatedConfiguration.recorderEffectsConfiguration.cornerRadius = 0.0
+        updatedConfiguration.recorderEffectsConfiguration.effectItemConfiguration.imageCornerRadius = 6.0
         updatedConfiguration.leftControlsBottomOffsetFromCaptureButton = 0.0
         updatedConfiguration.leftControlsLeftOffset = 25.0
         updatedConfiguration.sequenceHeight = 6.0
