@@ -852,3 +852,6 @@
 // MARK: - Expired license screen
 "com.banuba.expiredLicense.infoLabel" = "Video content creation is temporarily unavailable";
 "com.banuba.expiredLicense.cancelButtonTitle" = "Close";
+"BanubaVideoEditor.Gallery.Next" = "Next";
+"BanubaVideoEditor.Gallery.NextWithCount" = "Next (%d)";
+"BanubaVideoEditor.Gallery.TotalLengthUpTo" = "Total length should be up to %d sec";

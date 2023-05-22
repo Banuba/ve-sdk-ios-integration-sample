@@ -322,12 +322,6 @@
 /* Transition effect name */
 "com.banuba.editor.effect.name.transition" = "Transition";
 
-/* Transition 2 effect name */
-"com.banuba.editor.effect.name.transition2" = "Transition 2";
-
-/* Transition 3 effect name */
-"com.banuba.editor.effect.name.transition3" = "Transition 3";
-
 /* Transition 4 */
 "com.banuba.editor.effect.name.transition4" = "Transition 4";
 
@@ -339,6 +333,15 @@
 
 /* Open trimmer button name (for dradt) */
 "com.banuba.editor.openTrimButtonTitle" ="Коррекция";
+
+/* Captions button title */
+"com.banuba.editor.captions" = "Субтитры";
+
+/* Captions not available for multiple videos */
+"com.banuba.editor.captionsNotAvailableForMutipleVideos" = "Недоступно для нескольких видео и фотографий";
+
+/* Auto Cut button title */
+"com.banuba.editor.autoCut" = "AutoCut";
 
 // MARK: - Filter names
 
@@ -454,6 +457,12 @@
 /* Video volume title */
 "MusicEditor.VideoVolume" = "Громкость";
 
+/* Original sound title */
+"MusicEditor.OriginalSound" = "Оригинальный звук";
+
+/* Added sound title */
+"MusicEditor.AddedSound" = "Добавленный звук";
+
 /* Audio duration title */
 "MusicEditor.Duration" = "Длительность";
 
@@ -488,6 +497,9 @@
 /* Add text button title */
 "OverlayEditor.Text" = "Текст";
 
+/* Add captions button title */
+"OverlayEditor.Captions" = "Субтитры";
+
 /* Add sticker button title */
 "OverlayEditor.Sticker" = "Стикер";
 
@@ -514,6 +526,22 @@
 "com.banuba.overlayEditor.mainScreen.resetAll.message" = "";
 "com.banuba.overlayEditor.mainScreen.resetAll.agree" = "Сбросить";
 "com.banuba.overlayEditor.mainScreen.resetAll.disagree" = "Отмена";
+
+"com.banuba.overlayEditor.captions.creationCaptions" = "Создание субтитров";
+"com.banuba.overlayEditor.captions.noSpeechRecognized" = "Не удалось распознать речь";
+
+"com.banuba.overlayEditor.captions.createNewCaptionsQuestion" = "Создать новые субтитры?";
+"com.banuba.overlayEditor.captions.createNewCaptionsQuestionDetails" = "Ранее созданные подписи будут удалены.";
+"com.banuba.overlayEditor.captions.create" = "Создать";
+"com.banuba.overlayEditor.captions.captionsEditing" = "Редактирование субтитров";
+"com.banuba.overlayEditor.captions.discardCaptionsTitle" = "Отменить субтитры?";
+"com.banuba.overlayEditor.captions.discard" = "Отменить";
+"com.banuba.overlayEditor.captions.delete" = "Удалить";
+"com.banuba.overlayEditor.captions.keep" = "Оставить";
+"com.banuba.overlayEditor.captions.deleteCaptionsTitle" = "Удалить субтитры?";
+"com.banuba.overlayEditor.captions.deleteSelectedCaption" = "Удалить выбранный";
+"com.banuba.overlayEditor.captions.deleteAllCaptions" = "Удалить Все";
+"com.banuba.overlayEditor.captions.selectLanguage" = "Выберете язык";
 
 // MARK: - AudioBrowser
 
@@ -548,7 +576,7 @@
 "audioBrowser.mubertTrackFormat" = "Трек %d";
 
 /* Wrong Mubert key error text */
-"audioBrowser.wrongPatError" = "Ключ сервиса ‘Муберт’ отсутствует. Чтобы получить его, свяжитесь с представителем Banuba.";
+"audioBrowser.wrongPatError" = "Лицензия недоступна. Пожалуйста свяжитесь с Mubert";
 
 "feature.disabled.audiobrowser" = "Музыкальный браузер по умолчанию не входит в ваш пакет. Вы можете добавить свою музыку.";
 
@@ -560,7 +588,7 @@
 // MARK: - Video Editor
 
 /* Gallery image tab title */
-"BanubaVideoEditor.Gallery.ImageTabTitle" = "Изображение";
+"BanubaVideoEditor.Gallery.ImageTabTitle" = "Фото";
 
 /* Gallery video tab title */
 "BanubaVideoEditor.Gallery.VideoTabTitle" = "Видео";
@@ -815,3 +843,6 @@
 // MARK: - Expired license screen
 "com.banuba.expiredLicense.infoLabel" = "Создание видео временно недоступно";
 "com.banuba.expiredLicense.cancelButtonTitle" = "Закрыть";
+"BanubaVideoEditor.Gallery.Next" = "Дальше";
+"BanubaVideoEditor.Gallery.NextWithCount" = "Дальше (%d)";
+"BanubaVideoEditor.Gallery.TotalLengthUpTo" = "Общая длина не может быть больше за %d сек";
