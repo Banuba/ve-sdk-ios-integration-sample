@@ -38,7 +38,97 @@ Unfortunately Apple Store may reject your app due to use of TrueDepth API.
 Please [follow guidelines](passing_apple_review.md) to successfully pass Apple Store review.
 
 ## Launch methods
-In progress...
+Video Editor supports multiple launch entry points that are declared in ```PresentEventOptions.EntryPoint``` to meet all your requirements.
+``` swift
+  public enum EntryPoint: String, Codable {
+    case camera
+    case pip
+    case trimmer
+    case editor
+    case drafts
+  }
+```
+
+To open Video Editor at desired screen use ```VideoEditorLaunchConfig``` that should be passed to ```presentVideoEditor``` method of ```BanubaVideoEditor``` class.
+``` swift
+  public func presentVideoEditor(
+    withLaunchConfiguration configuration: VideoEditorLaunchConfig,
+    completion: (() -> Void)?
+  ) {}
+```
+
+1. Launch from Camera screen where the user can record video or take a picture.
+``` swift
+  let launchConfig = VideoEditorLaunchConfig(
+    entryPoint: .camera,
+    hostController: UIViewController,
+    musicTrack: MediaTrack,
+    animated: Bool
+  )
+  videoEditorSDK.presentVideoEditor(
+    withLaunchConfiguration: launchConfig,
+    completion: nil
+  )
+```
+
+2. Launch from Camera screen in Picture-in-Picture(PIP) mode. 
+:exclamation: Important  
+Video editor will not open in PIP mode if your license token does not support PIP feature.
+``` swift
+  let launchConfig = VideoEditorLaunchConfig(
+    entryPoint: .pip,
+    hostController: UIViewController,
+    pipVideoItem: URL,
+    animated: Bool
+  )
+  videoEditorSDK.presentVideoEditor(
+    withLaunchConfiguration: launchConfig,
+    completion: nil
+  )
+```
+
+3. Launch from Trimmer screen where the user can trim video, add transitions and move to editing screens for adding effects.
+``` swift
+  let launchConfig = VideoEditorLaunchConfig(
+    entryPoint: .trimmer,
+    hostController: UIViewController,
+    videoItems: [URL],
+    musicTrack: MediaTrack,
+    animated: Bool
+  )
+  videoEditorSDK.presentVideoEditor(
+    withLaunchConfiguration: launchConfig,
+    completion: nil
+  )
+```
+
+4. Launch from Editor screen where the user can add effects to video.
+``` swift
+  let launchConfig = VideoEditorLaunchConfig(
+    entryPoint: .editor,
+    hostController: UIViewController,
+    videoItems: [URL],
+    musicTrack: MediaTrack,
+    animated: Bool
+  )
+  videoEditorSDK.presentVideoEditor(
+    withLaunchConfiguration: launchConfig,
+    completion: nil
+  )
+```
+
+5. Launch from Drafts screen where the user can pick any non completed draft and proceed making video.
+``` swift
+  let launchConfig = VideoEditorLaunchConfig(
+    entryPoint: .drafts,
+    hostController: UIViewController,
+    animated: Bool
+  )
+  videoEditorSDK.presentVideoEditor(
+    withLaunchConfiguration: launchConfig,
+    completion: nil
+  )
+```
 
 ## Configure screens
 Each screen can be modified to your liking. You can change icons, colors, text and its font, button titles, and much more.
@@ -97,7 +187,6 @@ The SDK allows to reorder masks and filters in the way you need. To achieve this
   ...
 ]
 ``` 
-
 
 ### Configure stickers content
 
