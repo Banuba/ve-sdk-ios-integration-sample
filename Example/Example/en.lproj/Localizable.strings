@@ -221,6 +221,11 @@
 "banuba.alert.camera.access.restricted.title" = "Camera permissions are not granted";
 "banuba.alert.camera.access.restricted.message" = "";
 
+/* Used in a message to the user when microphone is not muted and headphones are not plugged */
+"banuba.alert.camera.no.headphones.title" = "Use headphones";
+"banuba.alert.camera.no.headphones.message" = "For better sound of your reaction, please, use headphones.";
+"banuba.alert.camera.no.headphones.button.title" = "Okay";
+
 /* Used in alert with options Cancel and In settings */
 "alert.microphone.unavailable.title" = "Microphone unavailable. Please allow access in device settings";
 "alert.microphone.unavailable.message" = "";
@@ -584,6 +589,29 @@
 "audioBrowser.wrongPatError" = "Mubert license is missing. Please contact Mubert";
 
 "feature.disabled.audiobrowser" = "Default music browser is not included in your package. You can plugin your own music.";
+
+// MARK: - MusicLibrary
+
+"MusicLibrary.homeScreenTitle" = "Music";
+"MusicLibrary.featured" = "Featured";
+"MusicLibrary.favorites" = "Favorites";
+"MusicLibrary.recents" = "Recents";
+"MusicLibrary.collections" = "Collections";
+"MusicLibrary.genres" = "Genres";
+"MusicLibrary.viewAll" = "View All";
+"MusicLibrary.showMore" = "Show More";
+"MusicLibrary.tryAgain" = "Try again";
+"MusicLibrary.popular" = "Popular";
+"MusicLibrary.newReleases" = "New Releases";
+"MusicLibrary.mixedForYou" = "Mixed for you";
+"MusicLibrary.noInternetTitle" = "No internet connection";
+"MusicLibrary.noInternetMessage" = "Check your connection or try again.";
+"MusicLibrary.noContentMessage" = "Audio content is temporarily unavailable";
+"MusicLibrary.noFavoritesTitle" = "No favorites yet";
+"MusicLibrary.noFavoritesMessage" = "Mark your favorite songs and always have them here.";
+"MusicLibrary.noRecentsTitle" = "No recent sounds";
+"MusicLibrary.noRecentsMessage" = "The sounds you have used in your videos will be displayed here.";
+"MusicLibrary.noMatchesMessage" = "No matches";
 
 // MARK: - Hands-free
 "hands.free.video.drag.title" = "Drag to set video duration:";
