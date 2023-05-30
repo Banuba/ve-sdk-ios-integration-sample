@@ -217,6 +217,11 @@
 "banuba.alert.camera.access.restricted.title" = "Доступ к камере ограничен";
 "banuba.alert.camera.access.restricted.message" = "";
 
+/* Used in a message to the user when microphone is not muted and headphones are not plugged */
+"banuba.alert.camera.no.headphones.title" = "Используйте наушники";
+"banuba.alert.camera.no.headphones.message" = "Для лучшего звучания вашей реакции используйте наушники.";
+"banuba.alert.camera.no.headphones.button.title" = "Окей";
+
 /* Used in alert with options Cancel and In settings */
 "alert.microphone.unavailable.title" = "Пожалуйста, разреши доступ к микрофону в настройках";
 "alert.microphone.unavailable.message" = "";
@@ -579,6 +584,29 @@
 "audioBrowser.wrongPatError" = "Лицензия недоступна. Пожалуйста свяжитесь с Mubert";
 
 "feature.disabled.audiobrowser" = "Музыкальный браузер по умолчанию не входит в ваш пакет. Вы можете добавить свою музыку.";
+
+// MARK: - MusicLibrary
+
+"MusicLibrary.homeScreenTitle" = "Музыка";
+"MusicLibrary.featured" = "Рекомендации";
+"MusicLibrary.favorites" = "Избранное";
+"MusicLibrary.recents" = "Недавние";
+"MusicLibrary.collections" = "Коллекции";
+"MusicLibrary.genres" = "Жанры";
+"MusicLibrary.viewAll" = "Показать всё";
+"MusicLibrary.showMore" = "Показать ещё";
+"MusicLibrary.tryAgain" = "Попробуйте ещё раз";
+"MusicLibrary.popular" = "Популярное";
+"MusicLibrary.newReleases" = "Новые релизы";
+"MusicLibrary.mixedForYou" = "Смешанное для вас";
+"MusicLibrary.noInternetTitle" = "Отсутствует подключение к интернету";
+"MusicLibrary.noInternetMessage" = "Проверьте своё подключение или попробуйте снова.";
+"MusicLibrary.noContentMessage" = "Аудио контент временно недоступен";
+"MusicLibrary.noFavoritesTitle" = "Пока нет избранного";
+"MusicLibrary.noFavoritesMessage" = "Отмечайте свои любимые песни и они всегда будут здесь.";
+"MusicLibrary.noRecentsTitle" = "Нет недавних аудио";
+"MusicLibrary.noRecentsMessage" = "Аудио, использованные в ваших видео, будут отображаться здесь.";
+"MusicLibrary.noMatchesMessage" = "Нет совпадений";
 
 // MARK: - Hands-free
 "hands.free.video.drag.title" = "Установите продолжительность видео:";
