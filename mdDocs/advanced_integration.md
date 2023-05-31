@@ -71,7 +71,7 @@ To open Video Editor at desired screen use ```VideoEditorLaunchConfig``` that sh
   )
 ```
 
-2. Launch from Camera screen in Picture-in-Picture(PIP) mode. 
+2. Launch from Camera screen in Picture-in-Picture(PIP) mode.  
 :exclamation: Important  
 Video editor will not open in PIP mode if your license token does not support PIP feature.
 ``` swift
