@@ -33,11 +33,6 @@ Implement custom `UIViewController` inherited from `GalleryViewController`
                 _ controller: GalleryViewController,
                 withGalleryItems items: [GalleryItem]
             )
-            /// Tells delegate object that a user request changing current album.
-            func galleryViewControllerDidChangeAlbum(
-                _ controller: GalleryViewController,
-                currentAlbum: AlbumModel?
-            )
             /// Tells delegate object that he should present message.
             /// In BanubaVideoEditorSDK it presents popup message.
             func galleryViewController(
@@ -47,7 +42,7 @@ Implement custom `UIViewController` inherited from `GalleryViewController`
         }
     ```
 
-- `configuration` contains UI configuration. All details you can find [here](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/mdDocs/gallery_styles.md)
+- `configuration` contains UI configuration. All details you can find [here](gallery_styles.md)
 - `selectionBehaviour` contains gallery settings
 
     ```swift
@@ -103,6 +98,11 @@ Implement custom `UIViewController` inherited from `GalleryViewController`
             progressHandler:((Double) -> (Bool))?,
             handler: @escaping (AVURLAsset?, [AnyHashable : Any]?) -> ()
         )
+        /// Requests video player item
+        func requestAVPlayerItem(
+          progressHandler: ((Double) -> (Bool))?,
+          handler: @escaping (AVPlayerItem?, Error?) -> Void
+        )
     }
 ```
 
@@ -153,10 +153,6 @@ Provide your custom gallery to `BanubaVideoEditorSDK`. Please follow these steps
             withConfiguration configuration: GalleryConfiguration,
             selectionBehaviour: GallerySelectionBehaviour
         ) -> GalleryViewController
-        /// Creates AlbumsViewController
-        func makeAlbumsViewController(
-            withConfiguration configuration: AlbumsConfiguration
-        ) -> AlbumsViewController
     }
 ```
 
@@ -168,6 +164,8 @@ Provide your custom gallery to `BanubaVideoEditorSDK`. Please follow these steps
         var musicEditorFactory: MusicEditorExternalViewControllerFactory?
         var countdownTimerViewFactory: CountdownTimerViewFactory?
         var exposureViewFactory: AnimatableViewFactory?
+        
+        //MARK: - ExternalViewControllerFactory protocols variale
         var galleryViewControllerFactory: GalleryViewControllerFactory?
     }
     ...

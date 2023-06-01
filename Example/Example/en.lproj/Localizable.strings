@@ -27,14 +27,17 @@
 /* Move to next screen */
 "Next" = "Next";
 
-/* Publish video */
-"Publish" = "Publish";
-
 /* Return to the previous screen */
 "Back" = "Back";
 
 /* Ability to cancel */
 "Cancel" = "Cancel";
+
+/* Ability to close */
+"Close" = "Close";
+
+/* Ability to close */
+"CLOSE" = "CLOSE";
 
 "alert.reset.all.title" = "Reset all?";
 "alert.reset.all.message" = "";
@@ -97,9 +100,6 @@
 /* 'Seconds' for short */
 "%d sec" = "%d sec";
 
-/* Screen title when multi-select mode is enabled on the video gallery screen */
-"Choose video" = "Choose video";
-
 /* Name of the button in multi-select mode, which confirms the selection of user files and continues the process further */
 "Choose" = "Choose";
 
@@ -114,36 +114,21 @@
 
 /* Step one of two to edit your avatar: take a photo */
 "Make cover photo" = "Make cover photo";
-
-/* The first step of two when taking a profile photo using the camera */
-"Step 1 / 2" = "Step 1 / 2";
     
 /* Step two of two when taking a profile photo using the camera */
 "Step 2 / 2" = "Step 2 / 2";
     
 /* Description of the zone selection screen for the user avatar when taking pictures on the profile screen */
 "Crop your profile photo for feed and comments" = "Crop your profile photo for feed and comments";
-
-/* Suggestion to choose a cover for a video before publishing it online */
-"Choose cover" = "CHOOSE COVER";
     
 /* Hint on how to apply visual filters or time filter to video */
 "Press and hold" = "Press and hold";
  
 /* Screen title with video from phone gallery */
 "Gallery" = "Gallery";
-    
-/* Shows instead of a blank screen on the Gallery screen */
-"No files found" = "No files found";
-
-/* Shows instead of a blank screen on the Gallery screen */
-"Videos should be longer than 5 seconds" = "Videos should be longer than 5 seconds";
 
 /* Activity signature */
 "LOADING" = "LOADING";
-
-/* Text under the trobber when downloading a video */
-"VIDEO IS\nLOADING" = "VIDEO IS\nLOADING";
 
 /* Text under the trobber when exporting a video */
 "EXPORTING" = "EXPORTING";
@@ -166,9 +151,6 @@
 /* Screen name which will be visible if enable in configuration */
 "Multi Trim Video Screen Name" = "Multitrimmer";
 
-/* Screen name which will be visible if enable in configuration */
-"Multi Trim Video Item Screen Name" = "Trim Video";
-
 /* Recorder mask effect screen name */
 "Mask Effect Screen Name" = "Mask";
 
@@ -182,7 +164,7 @@
 "Text editor color" = "Color";
 
 /* Screen name which will be visible if enable in configuration */
-"Choose Cover Screen Name" = "Choose cover";
+"Choose Cover Screen Name" = "Choose Cover";
 
 /* Screen name which will be visible if enable in configuration at color filters screen */
 "Screen colors" = "Screen colors";
@@ -202,6 +184,9 @@
 
 /* Pictures not found by custom keyword */
 "No stickers found" = "No stickers found";
+
+/* Stickers search can not be performed due to missing API key */
+"Giphy API key missing" = "Stickers will appear here when you set up Giphy key";
 
 /* A heading showing that there are problems with the Internet connection */
 "Problems with internet" = "Problems with internet";
@@ -236,12 +221,14 @@
 "banuba.alert.camera.access.restricted.title" = "Camera permissions are not granted";
 "banuba.alert.camera.access.restricted.message" = "";
 
+/* Used in a message to the user when microphone is not muted and headphones are not plugged */
+"banuba.alert.camera.no.headphones.title" = "Use headphones";
+"banuba.alert.camera.no.headphones.message" = "For better sound of your reaction, please, use headphones.";
+"banuba.alert.camera.no.headphones.button.title" = "Okay";
+
 /* Used in alert with options Cancel and In settings */
 "alert.microphone.unavailable.title" = "Microphone unavailable. Please allow access in device settings";
 "alert.microphone.unavailable.message" = "";
-
-/* Message when opening the trimmer screen */
-"Choose %i seconds" = "Choose %i seconds";
 
 // MARK: - Settings
 
@@ -335,8 +322,8 @@
 /* Pixel static effect name */
 "com.banuba.editor.effect.name.pixelationstatic" = "Pixel Static";
 
-/* Pixelate effect name */
-"com.banuba.editor.effect.name.pixelate" = "Pixelate";
+/* Blur effect name */
+"com.banuba.editor.effect.name.blur" = "Blur";
 
 /* Stars effect name */
 "com.banuba.editor.effect.name.stars" = "Stars";
@@ -344,20 +331,26 @@
 /* Transition effect name */
 "com.banuba.editor.effect.name.transition" = "Transition";
 
-/* Transition 2 effect name */
-"com.banuba.editor.effect.name.transition2" = "Transition 2";
-
-/* Transition 3 effect name */
-"com.banuba.editor.effect.name.transition3" = "Transition 3";
-
 /* Transition 4 */
 "com.banuba.editor.effect.name.transition4" = "Transition 4";
 
 /* VHS 2 effect name */
 "com.banuba.editor.effect.name.vhs2" = "VHS 2";
 
+/* Twitch effect name */
+"com.banuba.editor.effect.name.twitch" = "Twitch";
+
 /* Open trimmer button name (for dradt) */
-"com.banuba.editor.openTrimButtonTitle" ="Adjust Clips";
+"com.banuba.editor.openTrimButtonTitle" = "Adjust Clips";
+
+/* Captions button title */
+"com.banuba.editor.captions" = "Captions";
+
+/* Captions not available for multiple videos */
+"com.banuba.editor.captionsNotAvailableForMutipleVideos" = "Not available for multiple videos and photo";
+
+/* Auto Cut button title */
+"com.banuba.editor.autoCut" = "AutoCut";
 
 // MARK: - Filter names
 
@@ -439,9 +432,6 @@
 
 // MARK: - GALLERY SCREEN / SLIDE SHOW
 
-/* No photo in the combined gallery */
-"No matching files found in gallery" = "No matching files found in gallery";
-
 /* No photo in gallery */
 "No matching photos found in gallery" = "No photos found";
 
@@ -451,9 +441,6 @@
 /* User selected too many files in the gallery */
 "You can select only %d files" = "You can select only %d files";
 
-/* Failed to download photos for slideshow */
-"Error loading images" = "Error loading images";
-
 /* Failed to export a video */
 "Failed to create video" = "Failed to create video";
 
@@ -461,9 +448,6 @@
 
 /* Delete track button title */
 "MusicEditor.Delete" = "Delete";
-
-/* Edit track volume button title */
-"MusicEditor.Volume" = "Volume";
 
 /* Voice effect button title */
 "MusicEditor.VoiceEffect" = "Effect";
@@ -483,17 +467,14 @@
 /* Video volume title */
 "MusicEditor.VideoVolume" = "Volume";
 
+/* Original sound title */
+"MusicEditor.OriginalSound" = "Original sound";
+
+/* Added sound title */
+"MusicEditor.AddedSound" = "Added sound";
+
 /* Audio duration title */
 "MusicEditor.Duration" = "Duration";
-
-/* Cancel button title */
-"MusicEditor.Cancel" = "Cancel";
-
-/* Confirmation button title */
-"MusicEditor.Yes" = "Yes";
-
-/* Discarding button title */
-"MusicEditor.No" = "No";
 
 /* Confirmation message for discarding changes */
 "com.banuba.musicEditor.mainScreen.resetAll.title" = "Discard changes?";
@@ -526,14 +507,17 @@
 /* Add text button title */
 "OverlayEditor.Text" = "Text";
 
+/* Add captions button title */
+"OverlayEditor.Captions" = "Captions";
+
 /* Add sticker button title */
 "OverlayEditor.Sticker" = "Sticker";
 
 /* Add square blur button title */
-"OverlayEditor.Square.Pixelate" = "Square";
+"OverlayEditor.Square.Blur" = "Square";
 
-/* Add circle Pixelate button title */
-"OverlayEditor.Circle.Pixelate" = "Circle";
+/* Add circle Blur button title */
+"OverlayEditor.Circle.Blur" = "Circle";
 
 /* Cancel button title */
 "OverlayEditor.Cancel" = "Cancel";
@@ -553,37 +537,21 @@
 "com.banuba.overlayEditor.mainScreen.resetAll.agree" = "Discard";
 "com.banuba.overlayEditor.mainScreen.resetAll.disagree" = "Cancel";
 
-// MARK: - Interactives
- 
-/* Placeholder for interactive interests */
-"OverlayEditor.Intereset" = "Interest";
+"com.banuba.overlayEditor.captions.creationCaptions" = "Creating auto captions";
+"com.banuba.overlayEditor.captions.noSpeechRecognized" = "No speech recognized";
 
-/* Interactive test header */
-"OverlayEditor.Create test" = "Create test...";
-
-/* Interactive question header */
-"OverlayEditor.Create question" = "Create question...";
-
-/* Title for initial interactive test fields */
-"OverlayEditor.Variant %i" = "Variant %i";
-
-/* Title for additional interactive test fields */
-"OverlayEditor.Another option" = "Another option";
-
-/* Interactive poll title */
-"OverlayEditor.Create a poll" = "Create a poll";
-
-/* Toast when an interactive title is missing */
-"OverlayEditor.Add a question" = "Add a question";
-
-/* Add at least %i answer option */
-"OverlayEditor.Add at least %i answer option" = "Add at least %i answer option";
-
-/* Message when the correct answer appears in the interactive test */
-"OverlayEditor.Click here to correct the answer" = "Click here to correct the answer";
-
-/* Message when no interest is entered in the interest interactive */
-"OverlayEditor.Enter interest" = "Enter interest";
+"com.banuba.overlayEditor.captions.createNewCaptionsQuestion" = "Create new captions?";
+"com.banuba.overlayEditor.captions.createNewCaptionsQuestionDetails" = "Previously created captions will be deleted.";
+"com.banuba.overlayEditor.captions.create" = "Create";
+"com.banuba.overlayEditor.captions.captionsEditing" = "Captions editing";
+"com.banuba.overlayEditor.captions.discardCaptionsTitle" = "Discard captions?";
+"com.banuba.overlayEditor.captions.discard" = "Discard";
+"com.banuba.overlayEditor.captions.delete" = "Delete";
+"com.banuba.overlayEditor.captions.keep" = "Keep";
+"com.banuba.overlayEditor.captions.deleteCaptionsTitle" = "Delete captions?";
+"com.banuba.overlayEditor.captions.deleteSelectedCaption" = "Delete selected";
+"com.banuba.overlayEditor.captions.deleteAllCaptions" = "Delete all";
+"com.banuba.overlayEditor.captions.selectLanguage" = "Select language";
 
 // MARK: - AudioBrowser
 
@@ -618,12 +586,34 @@
 "audioBrowser.mubertTrackFormat" = "Track %d";
 
 /* Wrong Mubert key error text */
-"audioBrowser.wrongPatError" = "Mubert key is missing. In order to get it contact Banuba rep.";
+"audioBrowser.wrongPatError" = "Mubert license is missing. Please contact Mubert";
 
 "feature.disabled.audiobrowser" = "Default music browser is not included in your package. You can plugin your own music.";
 
+// MARK: - MusicLibrary
+
+"MusicLibrary.homeScreenTitle" = "Music";
+"MusicLibrary.featured" = "Featured";
+"MusicLibrary.favorites" = "Favorites";
+"MusicLibrary.recents" = "Recents";
+"MusicLibrary.collections" = "Collections";
+"MusicLibrary.genres" = "Genres";
+"MusicLibrary.viewAll" = "View All";
+"MusicLibrary.showMore" = "Show More";
+"MusicLibrary.tryAgain" = "Try again";
+"MusicLibrary.popular" = "Popular";
+"MusicLibrary.newReleases" = "New Releases";
+"MusicLibrary.mixedForYou" = "Mixed for you";
+"MusicLibrary.noInternetTitle" = "No internet connection";
+"MusicLibrary.noInternetMessage" = "Check your connection or try again.";
+"MusicLibrary.noContentMessage" = "Audio content is temporarily unavailable";
+"MusicLibrary.noFavoritesTitle" = "No favorites yet";
+"MusicLibrary.noFavoritesMessage" = "Mark your favorite songs and always have them here.";
+"MusicLibrary.noRecentsTitle" = "No recent sounds";
+"MusicLibrary.noRecentsMessage" = "The sounds you have used in your videos will be displayed here.";
+"MusicLibrary.noMatchesMessage" = "No matches";
+
 // MARK: - Hands-free
-"hands.free.video.mode.title" = "Hands-free video mode";
 "hands.free.video.drag.title" = "Drag to set video duration:";
 "hands.free.btn.title" = "Start countdown";
 "hands.free.seconds" = "%@ s";
@@ -631,13 +621,19 @@
 // MARK: - Video Editor
 
 /* Gallery image tab title */
-"BanubaVideoEditor.Gallery.ImageTabTitle" = "Image";
+"BanubaVideoEditor.Gallery.ImageTabTitle" = "Photos";
 
 /* Gallery video tab title */
-"BanubaVideoEditor.Gallery.VideoTabTitle" = "Video";
+"BanubaVideoEditor.Gallery.VideoTabTitle" = "Videos";
 
 /* Gallery custom All Photos title */
 "BanubaVideoEditor.Gallery.AllPhotosTitle" = "All Photos";
+
+/* Gallery previe select button name*/
+"BanubaVideoEditor.Gallery.SelectItemName" = "Select";
+
+/* Gallery previe deselect button name*/
+"BanubaVideoEditor.Gallery.DeselectItemName" = "Deselect";
 
 /* Gallery header info title */
 "BanubaVideoEditor.Gallery.HeaderInfoTitle" = "Update files %@ to choose more photos";
@@ -646,14 +642,11 @@
 /* Gallery Recent Photos title */
 "BanubaVideoEditor.Gallery.RecentPhotosTitle" = "Recent";
 
-/* Gallery previe select button name*/
-"BanubaVideoEditor.Gallery.SelectItemName" = "Select";
-
-/* Gallery previe deselect button name*/
-"BanubaVideoEditor.Gallery.DeselectItemName" = "Deselect";
-
 /* Damaged file from gallery */
 "BanubaVideoEditor.Gallery.DamagedFile" = "Damaged file";
+
+/* Export video from gallery failed */
+"BanubaVideoEditor.Gallery.ExportVideoFailed" = "Content uploading failed";
 
 /* Gallery selection hint */
 "BanubaVideoEditor.Gallery.SelectItems" = "Select items";
@@ -668,10 +661,10 @@
 "BanubaVideoEditor.Gallery.ImportMultipleVideosAndPhotos" = "Import %d videos and photos";
 
 /* Import single image template */
-"BanubaVideoEditor.Gallery.ImportSingleImage" = "Import 1 image";
+"BanubaVideoEditor.Gallery.ImportSingleImage" = "Import 1 photo";
 
 /* Import multiple images template */
-"BanubaVideoEditor.Gallery.ImportMultipleImages" = "Import %d images";
+"BanubaVideoEditor.Gallery.ImportMultipleImages" = "Import %d photos";
 
 /* Gallery empty selection message */
 "BanubaVideoEditor.Gallery.EmptySelectionMessage" = "Select at least 1 file";
@@ -748,12 +741,11 @@
 "com.banuba.BanubaVideoEditor.draft.discardChangesAction" = "Discard changes";
 "com.banuba.BanubaVideoEditor.draft.updateAction" = "Update draft";
 
-
 //MARK: - Additional buttons
 "com.banuba.recorder.link.title" = "Link";
 "com.banuba.recorder.color.title" = "Filter";
 "com.banuba.recorder.sticker.title" = "Gif";
-"com.banuba.recorder.pixalate.title" = "Pixelate";
+"com.banuba.recorder.blur.title" = "Blur";
 "com.banuba.recorder.text.title" = "Text";
 "com.banuba.recorder.time.title" = "Time";
 "com.banuba.recorder.sound.title" = "Music";
@@ -765,7 +757,6 @@
 "com.banuba.recorder.beauty.title" = "Beauty";
 "com.banuba.recorder.masks.title" = "Masks";
 "com.banuba.recorder.muteSound.title" = "Sound";
-"com.banuba.recorder.interactive.title" = "Interactive";
 "com.banuba.recorder.pip.title" = "Pip";
 
 /* Gallery button title */
@@ -837,6 +828,13 @@
 /* discard music alert type */
 "com.banuba.alert.discardMusic.agreeButtonTitle" = "Discard";
 "com.banuba.alert.discardMusic.disagreeButtonTitle" = "Cancel";
+/* progress view alert type */
+"com.banuba.alert.progressView.agreeButtonTitle" = "Retry";
+"com.banuba.alert.progressView.disagreeButtonTitle" = "Cancel";
+"com.banuba.alert.progressView.importingMedia" = "Importing media";
+"com.banuba.alert.progressView.exportingVideo" = "Exporting video";
+"com.banuba.alert.progressView.tooltipMessage" = "Please, don't lock your screen or switch to other apps";
+"com.banuba.alert.progressView.exportVideoInterrupted" = "Export interrupted";
 
 /* need to update iOS alert */
 "com.banuba.alert.needToUpdateIos.title" = "Sorry, minimum supported version is iOS 12.";
@@ -878,3 +876,10 @@
 
 /* Error if sharing application is not installed */
 "sharing.app.not.installed" = "Sorry the application is not installed";
+
+// MARK: - Expired license screen
+"com.banuba.expiredLicense.infoLabel" = "Video content creation is temporarily unavailable";
+"com.banuba.expiredLicense.cancelButtonTitle" = "Close";
+"BanubaVideoEditor.Gallery.Next" = "Next";
+"BanubaVideoEditor.Gallery.NextWithCount" = "Next (%d)";
+"BanubaVideoEditor.Gallery.TotalLengthUpTo" = "Total length should be up to %d sec";

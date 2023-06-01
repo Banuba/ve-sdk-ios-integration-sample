@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "remy.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "remy-1.png",
+      "filename" : "remy@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "remy-2.png",
+      "filename" : "remy@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

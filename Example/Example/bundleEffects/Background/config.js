@@ -1,88 +1,77 @@
-function Effect()
-{
-    this.init = function() {
-        // spawning model (plane) for bg separation
-        Api.meshfxMsg("spawn", 0, 0, "tri.bsm2"); 
-        setBgTexture("default_tex.png");
-    };
-    this.faceActions = [];
-    this.noFaceActions = [];
+require("bnb_js/timers.js")
 
-    this.videoRecordStartActions = [];
-    this.videoRecordFinishActions = [];
-    this.videoRecordDiscardActions = [];
+Background = require('bnb_js/background');
+Background.contentMode("fill")
+let endTime = 0;
+let interval;
+let isEnded = false;
+let isPaused = false;
+
+function setBgTexture(path){
+    Background.texture(path);
 }
 
-function setBgTexture(fileName) {
-    rotateBg(0);
-    Api.meshfxMsg("shaderVec4", 0, 0, "1 0 0 0");
-    Api.meshfxMsg("tex", 0, 0, fileName);
-
-    Api.print("setBgTexture - texture " + fileName + " has been set");
+function setBgVideo(path){
+    Background.texture(path, false, true);
 
 }
 
-function setBgVideo(fileName) {
-    rotateBg(0);
-    Api.meshfxMsg("shaderVec4", 0, 0, "0 0 0 0");
-    Api.setVideoFile("frx", fileName);
-    Api.playVideoRange("frx", 0.01, 0.02, false, 1);
-
-    Api.print("setBgVideo - video file " + fileName + " has been set");
+function rotateBg(angle){
+    Background.rotation(angle);
 }
 
-function playVideo() {
-    Api.print("playVideo - video is playing.");
-    Api.playVideo("frx", true, 1);
+function playVideo(){
+    Background.getBackgroundVideo().asMedia().play();
 }
 
-function stopVideo() {
-    Api.print("stopVideo - video has been stopped.");
-    Api.stopVideo("frx");
+function resumeVideo(){
+    Background.getBackgroundVideo().asMedia().resume();
+    isPaused = false;
 }
 
-function pauseVideo() {
-    Api.print("pauseVideo - video is on a pause.");
-    Api.pauseVideo("frx");
+function playVideoRange(start, end){
+    const BG = Background.getBackgroundVideo().asMedia();
+    isEnded = false;
+    BG.setLooped(false);
+    BG.setStartPosition(start);
+    BG.setEndPosition(end);
+    BG.play();
+        interval = setInterval(()=>{
+            bnb.log(BG.isPlaying())
+            if(BG.isPlaying() == false && isPaused == false){
+                BG.setStartPosition(0);
+                BG.setLooped(true);
+                BG.play();
+                clearInterval(interval);
+                isEnded = true;
+                bnb.log("clear")
+            }
+        },100)
 }
 
-function rotateBg(angle) {
-    var anglesAvailable = [0,90,180,270,-270,-90];
-    if(!contains(anglesAvailable,parseInt(angle))) {
-        Api.print("rotateBgTex(angle) - unable to set any angle except the following [0,90,-90,270,-270,180]");
-        return;
-    }
-    Api.print("rotateBgTex - angle " + angle + "degrees is set");
-    Api.meshfxMsg("shaderVec4", 0, 1, angle + " 0.0 0.0 0.");
+function updatePreview(time, delay){
+    endTime = time;
+    Background.getBackgroundVideo().asMedia().setStartPosition(endTime);
+    Background.getBackgroundVideo().asMedia().setEndPosition(endTime);
+    Background.getBackgroundVideo().asMedia().play();
+    setTimeout(()=>{
+        Background.getBackgroundVideo().asMedia().pause();
+    },delay)
 }
 
-function contains(a, obj) {
-    var i = a.length;
-    while (i--) {
-       if (a[i] == obj) {
-           return true;
-       }
-    }
-    return false;
+function stopVideo(){
+    clearInterval(interval);
+    setTimeout(()=>{
+        Background.getBackgroundVideo().asMedia().stop();
+    }, 100)
 }
 
-configure(new Effect());
-
-function timeOut(delay, callback) {
-    var timer = new Date().getTime();
-
-    effect.faceActions.push(removeAfterTimeOut);
-    effect.noFaceActions.push(removeAfterTimeOut);
-
-    function removeAfterTimeOut() {
-        var now = new Date().getTime();
-
-        if (now >= timer + delay) {
-            var idx = effect.faceActions.indexOf(removeAfterTimeOut);
-            effect.faceActions.splice(idx, 1);
-            idx = effect.noFaceActions.indexOf(removeAfterTimeOut);
-            effect.noFaceActions.splice(idx, 1);
-            callback();
-        }
-    }
+function pauseVideo(){
+    bnb.log(isEnded)
+    isPaused = true;
+    isEnded ?? clearInterval(interval);
+    setTimeout(()=>{
+        Background.getBackgroundVideo().asMedia().pause();
+    }, 100)
 }
+setBgTexture("images/default_tex.png")

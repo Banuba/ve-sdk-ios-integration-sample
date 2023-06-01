@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -13,120 +13,109 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2s2-7l-yhx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="rMu-UV-sNA">
-                                <rect key="frame" x="40" y="711" width="334" height="111"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UCZ-29-s3y">
+                                <rect key="frame" x="40" y="307" width="310" height="230"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h43-SA-IBI">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
-                                        <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jh-xc-CaM" userLabel="Default">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
+                                        <color key="backgroundColor" red="0.32941176470588235" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="E8n-HA-84k"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="gOO-2H-cbW"/>
+                                            <constraint firstAttribute="height" constant="50" id="12b-pN-eFA"/>
                                         </constraints>
-                                        <state key="normal" title="Open Video Editor">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <state key="normal" title="OPEN VIDEO EDITOR - DEFAULT">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                <color key="value" systemColor="systemIndigoColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="openVideoEditorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8qN-E9-rmq"/>
+                                            <action selector="openVideoEditorDefault:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzK-I2-gL0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-aH-mDK">
-                                        <rect key="frame" x="0.0" y="61" width="334" height="50"/>
-                                        <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="5Y4-C9-Rtw"/>
-                                            <constraint firstAttribute="height" constant="50" id="j0D-0k-Km3"/>
-                                        </constraints>
-                                        <state key="normal" title="PIP">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjq-v9-Kyb" userLabel="PiP">
+                                        <rect key="frame" x="0.0" y="60" width="310" height="50"/>
+                                        <color key="backgroundColor" red="0.32941176470588235" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <state key="normal" title="OPEN VIDEO EDITOR - PIP">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                <color key="value" systemColor="systemIndigoColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="PIPAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MhB-ul-BV2"/>
+                                            <action selector="openVideoEditorPiP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G7b-Zm-GPF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X13-Te-Eiz" userLabel="Drafts">
+                                        <rect key="frame" x="0.0" y="120" width="310" height="50"/>
+                                        <color key="backgroundColor" red="0.32941176470588235" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="OPEN VIDEO EDITOR - DRAFTS">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="openVideoEditorDrafts:" destination="BYZ-38-t0r" eventType="touchDragInside" id="oEJ-7d-WSR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF3-7f-yJr" userLabel="Trimmer">
+                                        <rect key="frame" x="0.0" y="180" width="310" height="50"/>
+                                        <color key="backgroundColor" red="0.32941176470588235" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="OPEN VIDEO EDITOR - TRIMMER">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="openVideoEditorTrimmer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwc-Px-s7Y"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SEf-wl-7Bn">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                            </activityIndicatorView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exporting..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGN-hx-1rT">
-                                <rect key="frame" x="0.0" y="400.5" width="414" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="EyD-I4-4hu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License token is invalid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8c-mM-Wvp">
-                                <rect key="frame" x="120" y="445" width="174.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License token is invalid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Rc-B2d">
+                                <rect key="frame" x="40" y="266.66666666666669" width="310" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="7r0-fU-7Mg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SEf-wl-7Bn" firstAttribute="centerY" secondItem="2s2-7l-yhx" secondAttribute="centerY" id="0hg-Ew-vu2"/>
-                            <constraint firstItem="7r0-fU-7Mg" firstAttribute="trailing" secondItem="iGN-hx-1rT" secondAttribute="trailing" id="7s5-NI-EQc"/>
-                            <constraint firstItem="SEf-wl-7Bn" firstAttribute="centerX" secondItem="2s2-7l-yhx" secondAttribute="centerX" id="9vx-Mz-MZy"/>
-                            <constraint firstItem="7r0-fU-7Mg" firstAttribute="bottom" secondItem="rMu-UV-sNA" secondAttribute="bottom" constant="40" id="B2b-hE-lSu"/>
-                            <constraint firstItem="U8c-mM-Wvp" firstAttribute="centerX" secondItem="7r0-fU-7Mg" secondAttribute="centerX" id="CBK-EA-CKO"/>
-                            <constraint firstItem="7r0-fU-7Mg" firstAttribute="trailing" secondItem="rMu-UV-sNA" secondAttribute="trailing" constant="40" id="GLq-LA-cnX"/>
-                            <constraint firstItem="SEf-wl-7Bn" firstAttribute="top" secondItem="iGN-hx-1rT" secondAttribute="bottom" constant="8" id="IoF-L2-NFY"/>
-                            <constraint firstItem="U8c-mM-Wvp" firstAttribute="centerY" secondItem="7r0-fU-7Mg" secondAttribute="centerY" id="SL0-JB-Ztf"/>
-                            <constraint firstItem="rMu-UV-sNA" firstAttribute="leading" secondItem="7r0-fU-7Mg" secondAttribute="leading" constant="40" id="eI0-Bt-Mbz"/>
-                            <constraint firstItem="iGN-hx-1rT" firstAttribute="leading" secondItem="7r0-fU-7Mg" secondAttribute="leading" id="zfp-7V-aDB"/>
+                            <constraint firstItem="UCZ-29-s3y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6II-0Z-Pjg"/>
+                            <constraint firstItem="U2o-Rc-B2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="DC2-rS-5Fi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U2o-Rc-B2d" secondAttribute="trailing" constant="40" id="M1c-aO-0Bg"/>
+                            <constraint firstItem="UCZ-29-s3y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N0g-jt-8TT"/>
+                            <constraint firstItem="UCZ-29-s3y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="NI7-yk-H9s"/>
+                            <constraint firstItem="U2o-Rc-B2d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="U2d-Cf-6T9"/>
+                            <constraint firstItem="UCZ-29-s3y" firstAttribute="top" secondItem="U2o-Rc-B2d" secondAttribute="bottom" constant="20" id="rkY-FY-UPw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCZ-29-s3y" secondAttribute="trailing" constant="40" id="xbJ-hG-4xm"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="SEf-wl-7Bn" id="i92-C6-QNw"/>
-                        <outlet property="invalidTokenMessageLabel" destination="U8c-mM-Wvp" id="oOh-u1-pkz"/>
-                        <outlet property="label" destination="iGN-hx-1rT" id="YNv-EB-Cb8"/>
-                        <outlet property="openPIPButton" destination="dOu-aH-mDK" id="n97-mH-quK"/>
-                        <outlet property="openVEButton" destination="h43-SA-IBI" id="Pzp-hc-YcQ"/>
+                        <outlet property="invalidTokenMessageLabel" destination="U2o-Rc-B2d" id="kzU-RS-lp1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171.01449275362319" y="80.357142857142847"/>
+            <point key="canvasLocation" x="-172.30769230769229" y="80.33175355450237"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
+

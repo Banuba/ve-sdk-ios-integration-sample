@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "glitch.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "glitch-1.png",
+      "filename" : "glitch@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "glitch-2.png",
+      "filename" : "glitch@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

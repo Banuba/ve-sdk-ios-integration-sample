@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "egypt.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "egypt-1.png",
+      "filename" : "egypt@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "egypt-2.png",
+      "filename" : "egypt@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

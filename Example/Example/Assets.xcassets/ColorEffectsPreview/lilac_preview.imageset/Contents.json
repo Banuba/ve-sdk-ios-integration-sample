@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "lilac.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "lilac-1.png",
+      "filename" : "lilac@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "lilac-2.png",
+      "filename" : "lilac@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

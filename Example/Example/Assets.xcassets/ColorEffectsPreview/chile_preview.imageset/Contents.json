@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "chile.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "chile-1.png",
+      "filename" : "chile@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "chile-2.png",
+      "filename" : "chile@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

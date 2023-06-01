@@ -1,5 +1,7 @@
 # Banuba VideoEditor SDK
-## Single trim screen styles  
+## Single trim screen styles 
+
+### struct TrimVideoConfiguration
 
 - [saveButton: ImageButtonConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L8)
 
@@ -43,7 +45,9 @@ TextConfiguration setups time labels text style
   
   ![img](screenshots/SingleTrimConfiguration.png)
 
-## Multi trim screen styles  
+## Multi trim screen styles 
+
+### struct TrimVideosConfiguration
 
 - [videoResolutionConfiguration: VideoResolutionConfiguration](/Example/Example/Extension/TrimConfiguration.swift#L50)
 
@@ -117,11 +121,17 @@ TrimTimeLineConfiguration setups single time line bar style and options
 
 Hide gallery button. Default is false.
 
+- [preferredStatusBarStyle: UIStatusBarStyle](/Example/Example/Extension/TrimConfiguration.swift#L1)
+
+The style of the status bar.
+
 ![img](screenshots/MultiTrimConfiguration.png)
 ![img](screenshots/MultiTrimConfiguration2.png)
 ![img](screenshots/MultiTrimConfiguration3.png)
 
 ## Trim time line screen styles  
+
+### struct TrimTimeLineConfiguration
 
 - controlsColor: UIColor
 
