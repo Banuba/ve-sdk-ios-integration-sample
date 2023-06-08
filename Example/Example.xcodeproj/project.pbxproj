@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,14 +23,12 @@
 		8AF977AE28AF95E700F7D386 /* BanubaAudioBrowserSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977AD28AF95E700F7D386 /* BanubaAudioBrowserSDKPackage */; };
 		8AF977B028AF95E700F7D386 /* BanubaEffectPlayerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977AF28AF95E700F7D386 /* BanubaEffectPlayerPackage */; };
 		8AF977B228AF95E700F7D386 /* BanubaLicenseServicingSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977B128AF95E700F7D386 /* BanubaLicenseServicingSDKPackage */; };
-		8AF977B428AF95E700F7D386 /* BanubaMusicEditorSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977B328AF95E700F7D386 /* BanubaMusicEditorSDKPackage */; };
 		8AF977B828AF95E700F7D386 /* BanubaSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977B728AF95E700F7D386 /* BanubaSDKPackage */; };
 		8AF977BA28AF95E700F7D386 /* BanubaSDKServicingPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977B928AF95E700F7D386 /* BanubaSDKServicingPackage */; };
 		8AF977BC28AF95E700F7D386 /* BanubaSDKSimplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977BB28AF95E700F7D386 /* BanubaSDKSimplePackage */; };
 		8AF977C028AF95E700F7D386 /* BanubaUtilitiesPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977BF28AF95E700F7D386 /* BanubaUtilitiesPackage */; };
 		8AF977C228AF95E700F7D386 /* BanubaVideoEditorGallerySDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977C128AF95E700F7D386 /* BanubaVideoEditorGallerySDKPackage */; };
 		8AF977C428AF95E700F7D386 /* BanubaVideoEditorSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977C328AF95E700F7D386 /* BanubaVideoEditorSDKPackage */; };
-		8AF977C628AF95E700F7D386 /* BanubaVideoEditorTrimSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977C528AF95E700F7D386 /* BanubaVideoEditorTrimSDKPackage */; };
 		8AF977C828AF95E700F7D386 /* VEEffectsSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977C728AF95E700F7D386 /* VEEffectsSDKPackage */; };
 		8AF977CA28AF95E700F7D386 /* VEExportSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977C928AF95E700F7D386 /* VEExportSDKPackage */; };
 		8AF977CC28AF95E700F7D386 /* VEPlaybackSDKPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF977CB28AF95E700F7D386 /* VEPlaybackSDKPackage */; };
@@ -64,8 +62,6 @@
 				8AF977B828AF95E700F7D386 /* BanubaSDKPackage in Frameworks */,
 				8AF977CC28AF95E700F7D386 /* VEPlaybackSDKPackage in Frameworks */,
 				8AF977B228AF95E700F7D386 /* BanubaLicenseServicingSDKPackage in Frameworks */,
-				8AF977C628AF95E700F7D386 /* BanubaVideoEditorTrimSDKPackage in Frameworks */,
-				8AF977B428AF95E700F7D386 /* BanubaMusicEditorSDKPackage in Frameworks */,
 				8AF977BA28AF95E700F7D386 /* BanubaSDKServicingPackage in Frameworks */,
 				8AF977AC28AF95E700F7D386 /* BanubaARCloudSDKPackage in Frameworks */,
 				8AF977C228AF95E700F7D386 /* BanubaVideoEditorGallerySDKPackage in Frameworks */,
@@ -147,14 +143,12 @@
 				8AF977AD28AF95E700F7D386 /* BanubaAudioBrowserSDKPackage */,
 				8AF977AF28AF95E700F7D386 /* BanubaEffectPlayerPackage */,
 				8AF977B128AF95E700F7D386 /* BanubaLicenseServicingSDKPackage */,
-				8AF977B328AF95E700F7D386 /* BanubaMusicEditorSDKPackage */,
 				8AF977B728AF95E700F7D386 /* BanubaSDKPackage */,
 				8AF977B928AF95E700F7D386 /* BanubaSDKServicingPackage */,
 				8AF977BB28AF95E700F7D386 /* BanubaSDKSimplePackage */,
 				8AF977BF28AF95E700F7D386 /* BanubaUtilitiesPackage */,
 				8AF977C128AF95E700F7D386 /* BanubaVideoEditorGallerySDKPackage */,
 				8AF977C328AF95E700F7D386 /* BanubaVideoEditorSDKPackage */,
-				8AF977C528AF95E700F7D386 /* BanubaVideoEditorTrimSDKPackage */,
 				8AF977C728AF95E700F7D386 /* VEEffectsSDKPackage */,
 				8AF977C928AF95E700F7D386 /* VEExportSDKPackage */,
 				8AF977CB28AF95E700F7D386 /* VEPlaybackSDKPackage */,
@@ -170,8 +164,9 @@
 		639DA000254700290011C153 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					639DA007254700290011C153 = {
 						CreatedOnToolsVersion = 12.1;
@@ -479,7 +474,7 @@
 			repositoryURL = "https://github.com/Banuba/spm";
 			requirement = {
 				kind = exactVersion;
-				version = 1.26.9;
+				version = 1.27.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -520,11 +515,6 @@
 			package = 8AF977A828AF95E700F7D386 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaLicenseServicingSDKPackage;
 		};
-		8AF977B328AF95E700F7D386 /* BanubaMusicEditorSDKPackage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8AF977A828AF95E700F7D386 /* XCRemoteSwiftPackageReference "spm" */;
-			productName = BanubaMusicEditorSDKPackage;
-		};
 		8AF977B728AF95E700F7D386 /* BanubaSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8AF977A828AF95E700F7D386 /* XCRemoteSwiftPackageReference "spm" */;
@@ -554,11 +544,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8AF977A828AF95E700F7D386 /* XCRemoteSwiftPackageReference "spm" */;
 			productName = BanubaVideoEditorSDKPackage;
-		};
-		8AF977C528AF95E700F7D386 /* BanubaVideoEditorTrimSDKPackage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8AF977A828AF95E700F7D386 /* XCRemoteSwiftPackageReference "spm" */;
-			productName = BanubaVideoEditorTrimSDKPackage;
 		};
 		8AF977C728AF95E700F7D386 /* VEEffectsSDKPackage */ = {
 			isa = XCSwiftPackageProductDependency;
