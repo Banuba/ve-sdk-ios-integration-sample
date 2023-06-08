@@ -1,6 +1,5 @@
 import UIKit
 import BanubaVideoEditorSDK
-import BanubaMusicEditorSDK
   
 import VideoEditor
 import AVFoundation

@@ -1,7 +1,6 @@
 
 import UIKit
 import BanubaVideoEditorSDK
-import BanubaMusicEditorSDK
 
 import VideoEditor
 import AVFoundation
@@ -11,7 +10,7 @@ import BSImagePicker
 import VEExportSDK
 import BanubaAudioBrowserSDK
 
-// Adopting CountdownView to using in BanubaMusicEditorSDK
+// Adopting CountdownView to using in BanubaVideoEditorSDK
 extension CountdownView: MusicEditorCountdownAnimatableView {}
 
 class VideoEditorModule {
@@ -668,8 +667,12 @@ class VideoEditorModule {
     private func updateVideoTrackLineEditConfiguration(_ configuration: VideoTrackLineEditViewControllerConfig) -> VideoTrackLineEditViewControllerConfig {
         var updatedConfiguration = configuration
         
-        updatedConfiguration.doneButtonImageName = "ic_done"
-        updatedConfiguration.doneButtonTintColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+        updatedConfiguration.doneButton = ImageButtonConfiguration(
+            imageConfiguration: .init(
+                imageName: "ic_done",
+                tintColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+            )
+        )
         updatedConfiguration.sliderTintColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         updatedConfiguration.mainLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         updatedConfiguration.additionalLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
