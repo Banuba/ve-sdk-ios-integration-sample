@@ -191,7 +191,7 @@ func createVideoEditorConfig() -> VideoEditorConfig {
   var config = VideoEditorConfig()
   ...
   // Default is false
-  config.featureConfiguration.supportsTrimRecorderVideo = true
+  config.featureConfiguration.supportsTrimRecordedVideo = true
   ...
   return config
 }
