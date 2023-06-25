@@ -207,15 +207,17 @@ Visit [FAQ](faq.md) if you are experiencing any issues with an integration.
 
 [See all dependencies and licenses](3rd_party_licences.md)
 
-## Releases 
-[1.25.0](https://www.notion.so/vebanuba/1-25-0-c164f6893eda4ad99d8c02a7566f7f45)    
-[1.25.1](https://www.notion.so/vebanuba/1-25-1-393368bbe1ab4c0dbf480a8c30ac5904)  
-[1.25.2](https://www.notion.so/vebanuba/1-25-2-937992cc6249447b81a4ca218a4ef097)  
-[1.26.0](https://www.notion.so/vebanuba/1-26-0-5e65daee7e8c41e2bebbf4d8a50e1cc4)    
-[1.26.1](https://www.notion.so/vebanuba/1-26-1-0edacf053a88499cbb51e6f065274dd3)   
-[1.26.2](https://www.notion.so/vebanuba/1-26-2-2aa271695c974ac7b90799a0b2a108d9)   
-[1.26.3](https://www.notion.so/vebanuba/1-26-3-8c4fb0d732eb4f2582b3aaeab28ef399)  
-[1.26.4](https://www.notion.so/vebanuba/1-26-4-294c72f4be5944938a4e506c65435333)  
-[1.26.5](https://www.notion.so/vebanuba/1-26-5-91785d18a6c64c6e86dc48ca06e3d458)  
-[1.26.6](https://www.notion.so/vebanuba/1-26-6-2093b77cabc54ec0b28100c723ca90fe)  
+## Releases  
+[1.26.0](https://vebanuba.notion.site/1-26-0-5e65daee7e8c41e2bebbf4d8a50e1cc4)    
+[1.26.1](https://vebanuba.notion.site/1-26-1-0edacf053a88499cbb51e6f065274dd3)   
+[1.26.2](https://vebanuba.notion.site/1-26-2-2aa271695c974ac7b90799a0b2a108d9)   
+[1.26.3](https://vebanuba.notion.site/1-26-3-8c4fb0d732eb4f2582b3aaeab28ef399)  
+[1.26.4](https://vebanuba.notion.site/1-26-4-294c72f4be5944938a4e506c65435333)  
+[1.26.5](https://vebanuba.notion.site/1-26-5-91785d18a6c64c6e86dc48ca06e3d458)  
+[1.26.6](https://vebanuba.notion.site/1-26-6-4c17e9a765934c2ba7da3440b1cfbe8b)  
+[1.26.7](https://vebanuba.notion.site/1-26-7-8653533d4ce64203ad04159d942212f6)  
+[1.26.8](https://vebanuba.notion.site/1-26-8-9ca76f004afc4d38a481ba8e44826713)  
+[1.26.9](https://vebanuba.notion.site/1-26-9-73460541f0c1414ab67073e07b866e4f)  
+[1.27.0](https://vebanuba.notion.site/1-27-0-591e38e8166c4833b96f96db05ead258)  
+[1.28.0](https://vebanuba.notion.site/1-28-0-ac7b1a919eb7443ea7caef9eae22d2a3)
 
