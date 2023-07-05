@@ -81,9 +81,14 @@ class VideoEditorModule {
         config.setupColorsPalette(
             VideoEditorColorsPalette(
                 primaryColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
-                iconPrimaryCololor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
                 secondaryColor: .black,
-                accentColor: UIColor(red: 250, green: 62, blue: 118, alpha: 1)
+                accentColor: UIColor(red: 250, green: 62, blue: 118, alpha: 1),
+                effectButtonColorsPalette: EffectButtonColorsPalette(
+                    defaultIconColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+                    defaultBackgroundColor: UIColor(red: 250, green: 62, blue: 118, alpha: 1),
+                    selectedIconColor: UIColor(red: 250, green: 62, blue: 118, alpha: 1),
+                    selectedBackgroundColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+                )
             )
         )
         
@@ -1033,10 +1038,10 @@ class VideoEditorModule {
             )
         ]
         
-        updatedConfiguration.speedBarButtons.imageNameHalf = "ic_speed_0.5x"
-        updatedConfiguration.speedBarButtons.imageNameNormal = "ic_speed_1x"
-        updatedConfiguration.speedBarButtons.imageNameDouble = "ic_speed_2x"
-        updatedConfiguration.speedBarButtons.imageNameTriple = "ic_speed_3x"
+        updatedConfiguration.speedBarButtons.imageHalf = ImageConfiguration(image: UIImage(named: "ic_speed_0.5x")!)
+        updatedConfiguration.speedBarButtons.imageNormal = ImageConfiguration(image: UIImage(named: "ic_speed_1x")!)
+        updatedConfiguration.speedBarButtons.imageDouble = ImageConfiguration(image: UIImage(named: "ic_speed_2x")!)
+        updatedConfiguration.speedBarButtons.imageTriple = ImageConfiguration(image: UIImage(named: "ic_speed_3x")!)
         updatedConfiguration.speedBarButtons.selectedTitleColor = Self.primaryColor
         
         let galleryButton: RoundedButtonConfiguration = RoundedButtonConfiguration(
