@@ -51,7 +51,7 @@ Below see the list of screens with links to their detailed description and notes
 2. [Trim screens](trim_styles.md)
 3. [Overlay screens](overlayEditor_styles.md)
 4. [Gallery screen](gallery_styles.md)
-5. [Alert screens](alert_styles.md)
+5. [Alert screens](guide_popups.md)
 6. [Cover screen](cover_style.md)
 
 The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
