@@ -31,7 +31,7 @@ Video Editor has built in support and API for browsing, playing and applying aud
 Follow [Video Editor audio content integration guide](guide_audio_content.md) to know more details about using audio and API in Video Editor.
 
 ## Popups
-Visit [Popups guide](guide_popus.md) to know more about usage popups in video editor.
+Visit [Popups guide](guide_popups.md) to know more about usage popups in video editor.
 
 ## Passing Apple Store review
 Unfortunately Apple Store may reject your app due to use of TrueDepth API.  
