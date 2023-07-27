@@ -78,17 +78,21 @@ class VideoEditorModule {
     func createConfiguration() -> VideoEditorConfig {
         var config = VideoEditorConfig()
         
+        let pink = UIColor(red: 250 / 255, green: 62 / 255, blue: 118 / 255, alpha: 1)
+        let skyBlue = UIColor(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         config.setupColorsPalette(
             VideoEditorColorsPalette(
-                primaryColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
+                primaryColor: skyBlue,
                 secondaryColor: .black,
-                accentColor: UIColor(red: 250, green: 62, blue: 118, alpha: 1),
+                accentColor: pink,
                 effectButtonColorsPalette: EffectButtonColorsPalette(
-                    defaultIconColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
-                    defaultBackgroundColor: UIColor(red: 250, green: 62, blue: 118, alpha: 1),
-                    selectedIconColor: UIColor(red: 250, green: 62, blue: 118, alpha: 1),
-                    selectedBackgroundColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
-                )
+                    defaultIconColor: skyBlue,
+                    defaultBackgroundColor: pink,
+                    selectedIconColor: pink,
+                    selectedBackgroundColor: skyBlue
+                ),
+                addGalleryItemBackgroundColor: pink,
+                addGalleryItemIconColor: .white
             )
         )
         
