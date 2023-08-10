@@ -421,7 +421,7 @@ These are restrictions on the use of bitcode by Apple and at the moment it canno
 
 If you don't use optional frameworks, you should disable bitcode in order to successfully upload your app to the Apple Connect.
 
-### How do I change the launguage (how do I add new locale support)?
+### How do I change the language (how do I add new locale support)?
 
 There is no special language switching mechanism in the Video Editor SDK (VE SDK).
 
