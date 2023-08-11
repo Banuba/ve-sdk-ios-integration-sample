@@ -1,38 +1,38 @@
 PODS:
-  - BanubaARCloudSDK (1.29.0)
-  - BanubaAudioBrowserSDK (1.29.0)
-  - BanubaEffectPlayer (1.29.0)
-  - BanubaLicenseServicingSDK (1.29.0)
-  - BanubaSDK (1.29.0)
-  - BanubaSDKServicing (1.29.0)
-  - BanubaSDKSimple (1.29.0)
-  - BanubaUtilities (1.29.0)
-  - BanubaVideoEditorGallerySDK (1.29.0)
-  - BanubaVideoEditorSDK (1.29.0)
-  - BNBLicenseUtils (1.29.0)
+  - BanubaARCloudSDK (1.29.1)
+  - BanubaAudioBrowserSDK (1.29.1)
+  - BanubaEffectPlayer (1.29.1)
+  - BanubaLicenseServicingSDK (1.29.1)
+  - BanubaSDK (1.29.1)
+  - BanubaSDKServicing (1.29.1)
+  - BanubaSDKSimple (1.29.1)
+  - BanubaUtilities (1.29.1)
+  - BanubaVideoEditorGallerySDK (1.29.1)
+  - BanubaVideoEditorSDK (1.29.1)
+  - BNBLicenseUtils (1.29.1)
   - BSImagePicker (3.3.1)
-  - VEEffectsSDK (1.29.0)
-  - VEExportSDK (1.29.0)
-  - VEPlaybackSDK (1.29.0)
-  - VideoEditor (1.29.0)
+  - VEEffectsSDK (1.29.1)
+  - VEExportSDK (1.29.1)
+  - VEPlaybackSDK (1.29.1)
+  - VideoEditor (1.29.1)
 
 DEPENDENCIES:
-  - BanubaARCloudSDK (= 1.29.0)
-  - BanubaAudioBrowserSDK (= 1.29.0)
-  - BanubaEffectPlayer (= 1.29.0)
-  - BanubaLicenseServicingSDK (= 1.29.0)
-  - BanubaSDK (= 1.29.0)
-  - BanubaSDKServicing (= 1.29.0)
-  - BanubaSDKSimple (= 1.29.0)
-  - BanubaUtilities (= 1.29.0)
-  - BanubaVideoEditorGallerySDK (= 1.29.0)
-  - BanubaVideoEditorSDK (= 1.29.0)
-  - BNBLicenseUtils (= 1.29.0)
+  - BanubaARCloudSDK (= 1.29.1)
+  - BanubaAudioBrowserSDK (= 1.29.1)
+  - BanubaEffectPlayer (= 1.29.1)
+  - BanubaLicenseServicingSDK (= 1.29.1)
+  - BanubaSDK (= 1.29.1)
+  - BanubaSDKServicing (= 1.29.1)
+  - BanubaSDKSimple (= 1.29.1)
+  - BanubaUtilities (= 1.29.1)
+  - BanubaVideoEditorGallerySDK (= 1.29.1)
+  - BanubaVideoEditorSDK (= 1.29.1)
+  - BNBLicenseUtils (= 1.29.1)
   - BSImagePicker
-  - VEEffectsSDK (= 1.29.0)
-  - VEExportSDK (= 1.29.0)
-  - VEPlaybackSDK (= 1.29.0)
-  - VideoEditor (= 1.29.0)
+  - VEEffectsSDK (= 1.29.1)
+  - VEExportSDK (= 1.29.1)
+  - VEPlaybackSDK (= 1.29.1)
+  - VideoEditor (= 1.29.1)
 
 SPEC REPOS:
   https://github.com/Banuba/specs.git:
@@ -55,23 +55,23 @@ SPEC REPOS:
     - BSImagePicker
 
 SPEC CHECKSUMS:
-  BanubaARCloudSDK: 83b637028127f9a0f3a9ddc752fce941e2b3fa3c
-  BanubaAudioBrowserSDK: f8e26a8641c9e4dc5d24e363562075c76f9f9c40
-  BanubaEffectPlayer: 1c1fa8ef8d974e43bcdd01cb1905c88c0f091998
-  BanubaLicenseServicingSDK: 277a6702c345d7bfd50994c59cacbd71f3e7a19f
-  BanubaSDK: c8d35c41d81d02148183d79a4d03e94683f137eb
-  BanubaSDKServicing: 40d808883242b863a7f6cc4ef339e3f988d2efc4
-  BanubaSDKSimple: 95b070256e34313f2b51c097154a24b8be91449d
-  BanubaUtilities: 9ae808649515fa7d2edf1c7d9e1f66f66e13303b
-  BanubaVideoEditorGallerySDK: d9212dee2e2d5c8dede461a8f690636530ad6be0
-  BanubaVideoEditorSDK: 48720d47dcf527b21b3e4fc8a1625209fc8fdefa
-  BNBLicenseUtils: 4885c2d150c561d10abd2fc589a0a51da1fa32ed
+  BanubaARCloudSDK: 48a6181f2aee406146a3e013b91a0b04284e8733
+  BanubaAudioBrowserSDK: b1dc7e126cba5c55bbb2f0e78056ae62a22a5031
+  BanubaEffectPlayer: 1a94531aa197ffc2770a0180f0484642d8d98cdd
+  BanubaLicenseServicingSDK: 7e3a2c1bf9193db286596e8cc81fbf608e0d0de2
+  BanubaSDK: 1f58dbb7dc03324b7c56b33c2d755464ef6a8ad8
+  BanubaSDKServicing: 99b56a1451c7b66e0ce0cd1ed9920b7f33911abb
+  BanubaSDKSimple: a0c1c8740d9c035b151a6def350ad40351de8b2f
+  BanubaUtilities: 4d9144f4f5df7d201438fad1670842e9a18a87be
+  BanubaVideoEditorGallerySDK: 825a34012d4b0ee21e38e513ba016f04fdac2074
+  BanubaVideoEditorSDK: 3c2eecfb7c02f0825757a9b05ed7594b38d7bc27
+  BNBLicenseUtils: b53a9abe6b65d861b89858e6fe5944a8a686226c
   BSImagePicker: 0fe04b574d4d6b81093785d2af6c26227efc8428
-  VEEffectsSDK: 2ad4909323fd6660b6b1001b316eec76abe013df
-  VEExportSDK: ebd9eb07b29621944c7f324fcc4fe59f6521d2c7
-  VEPlaybackSDK: 1653a4b1e00c2d1fe5a181bbf28d4ff6651f19eb
-  VideoEditor: 2d33ce12908e084839c4cb46342877607fae9593
+  VEEffectsSDK: c75e692c3415464618514954f4e22de7f845aab7
+  VEExportSDK: 7bc14c847db338773ff849b0bab7453a753a2e24
+  VEPlaybackSDK: 8f5053dc9f891e1e9a9c55f76865e14a0d809bb3
+  VideoEditor: 1093b0cf56d67e46a1bfb765041877abf32a8beb
 
-PODFILE CHECKSUM: 6168911be25dfcfef500af5a526b84f99566aca8
+PODFILE CHECKSUM: a2b31e3994c94952210895174cc2fbffd7139ef2
 
 COCOAPODS: 1.12.1
