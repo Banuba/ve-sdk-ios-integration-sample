@@ -92,7 +92,8 @@ class VideoEditorModule {
                     selectedBackgroundColor: skyBlue
                 ),
                 addGalleryItemBackgroundColor: pink,
-                addGalleryItemIconColor: .white
+                addGalleryItemIconColor: .white,
+                timelineEffectColorsPalette: TimelineEffectColorsPalette.default
             )
         )
         
@@ -209,7 +210,7 @@ class VideoEditorModule {
             )
         ]
         
-        updatedConfiguration.editButtonsHeight = 50.0
+        updatedConfiguration.editButtonsHeight = 60.0
         updatedConfiguration.editButtonsInteritemSpacing = 0.0
         
         updatedConfiguration.controlButtons = [
@@ -255,7 +256,7 @@ class VideoEditorModule {
         updatedConfiguration.additionalLabelColors = UIColor.white
         updatedConfiguration.additionalLabelFonts = UIFont.systemFont(ofSize: 12.0)
         updatedConfiguration.cursorColor = UIColor.white
-        updatedConfiguration.audioWaveConfiguration.borderColor = UIColor.white
+        updatedConfiguration.overlayItemConfiguration.borderColor = UIColor.white
         updatedConfiguration.resizeImageName = "ic_cut_arrow"
         updatedConfiguration.draggersHorizontalInset = .zero
         updatedConfiguration.draggersHeight = 25.0
@@ -281,8 +282,7 @@ class VideoEditorModule {
             titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
             fontSize: 14.0,
             cornerRadius: 4.0,
-            backgroundColor: .clear,
-            isBackgroundViewHidden: true
+            backgroundColor: .clear
         )
         
         updatedConfiguration.textBackgroundButton = ImageButtonConfiguration(
@@ -318,7 +318,6 @@ class VideoEditorModule {
         ]
         
         updatedConfiguration.additionalPaletteBackgroundConfiguration.cornerRadius = .zero
-        updatedConfiguration.screenNameConfiguration.style = nil
         updatedConfiguration.palleteInsets = .zero
         
         updatedConfiguration.selectionColorBehavior = TextEditSelectionBorderAnimationBehavior(
@@ -335,8 +334,7 @@ class VideoEditorModule {
             titleColor: #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1),
             fontSize: 16.0,
             cornerRadius: 4.0,
-            backgroundColor: .clear,
-            isBackgroundViewHidden: false
+            backgroundColor: .clear
         )
         
         return updatedConfiguration
@@ -391,18 +389,13 @@ class VideoEditorModule {
     private func updateVideCoverSelectionConfiguration(_ configuration: VideoCoverSelectionConfiguration) -> VideoCoverSelectionConfiguration {
         var updatedConfiguration = configuration
         
-        updatedConfiguration.cancelButton.backgroundColor = .clear
-        updatedConfiguration.cancelButton.textConfiguration?.color = UIColor(
-            red: 6, green: 188, blue: 193, alpha: 1
-        )
+        updatedConfiguration.cancelButton.imageConfiguration = ImageConfiguration(imageName: "back_arrow")
         updatedConfiguration.doneButton.backgroundColor = .clear
         updatedConfiguration.doneButton.textConfiguration?.color = UIColor(
             red: 6, green: 188, blue: 193, alpha: 1
         )
         updatedConfiguration.titleLabel?.text = "Title cover"
         updatedConfiguration.toolTipLabel.text = "Tool tip tabel"
-        updatedConfiguration.selectGalleryImageButton.titlePosition = .left
-        updatedConfiguration.deleteImageButtonImageConfiguration.titlePosition = .top
         updatedConfiguration.backgroundConfiguration.color = UIColor.black
         updatedConfiguration.previewBackgroundConfiguration.color = .clear
         updatedConfiguration.thumbnailsCursorConfiguration.imageConfiguration = VideoEditor.ImageConfiguration(imageName: "thumb")
@@ -416,10 +409,9 @@ class VideoEditorModule {
         configuration.nextButtonConfiguration.backgroundColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         configuration.galleryItemConfiguration.orderNumberBackgroudColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         configuration.galleryItemConfiguration.orderNumberTitleColor = UIColor.black
-        configuration.galleryItemConfiguration.backgroundSelectionIndicatorImageName = "elipce"
-        configuration.galleryItemConfiguration.hideSelectionIndicatorBySelection = true
+        configuration.galleryItemConfiguration.orderNumberSelectedBorderWidth = .zero
         configuration.galleryItemConfiguration.durationLabelConfiguration.color = UIColor.white
-        configuration.galleryItemConfiguration.durationLabelBackgroundColor = UIColor.clear
+        configuration.galleryItemConfiguration.durationLabelBackgroundConfiguration.color = .clear
         configuration.galleryItemConfiguration.activityIndicatorConfiguration.activityLineWidth = 2.0
         configuration.galleryItemConfiguration.cornerRadius = 0.0
         configuration.closeButtonConfiguration.imageConfiguration = BanubaVideoEditorSDK.ImageConfiguration(imageName: "camera_control.back")
@@ -576,7 +568,7 @@ class VideoEditorModule {
             )
         ]
         
-        updatedConfiguration.editButtonsHeight = 50.0
+        updatedConfiguration.editButtonsHeight = 64.0
         
         updatedConfiguration.editCompositionButtons = [
             EditCompositionButtonConfig(
@@ -624,7 +616,6 @@ class VideoEditorModule {
         ]
         
         updatedConfiguration.playerControlsHeight = 50.0
-        updatedConfiguration.audioWaveConfiguration.isRandomWaveColor = true
         updatedConfiguration.mainLabelColors = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         updatedConfiguration.additionalLabelColors = UIColor.black
         updatedConfiguration.tracksLimit = 5
@@ -693,7 +684,6 @@ class VideoEditorModule {
     private func updateAudioTrackLineEditConfiguration(_ configuration: AudioTrackLineEditViewControllerConfig) -> AudioTrackLineEditViewControllerConfig {
         var updatedConfiguration = configuration
         
-        updatedConfiguration.audioWaveConfiguration.isRandomWaveColor = true
         updatedConfiguration.audioWaveConfiguration.waveLinesColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         updatedConfiguration.doneButtonImageName = "ic_done"
         updatedConfiguration.doneButtonTintColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
@@ -724,9 +714,6 @@ class VideoEditorModule {
     
     private func updateAlertViewConfiguration(_ configuration: AlertViewConfiguration) -> AlertViewConfiguration {
         var updatedConfiguration = configuration
-        updatedConfiguration.cornerRadius = 7.0
-        updatedConfiguration.agreeButtonRadius = 4.0
-        updatedConfiguration.refuseButtonRadius = 4.0
         updatedConfiguration.refuseButtonTextConfig = TextButtonConfiguration(
             style: TextConfiguration(
                 font: UIFont.systemFont(ofSize: 16.0),
@@ -741,8 +728,8 @@ class VideoEditorModule {
             ),
             text: nil
         )
-        updatedConfiguration.refuseButtonBackgroundColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
-        updatedConfiguration.agreeButtonBackgroundColor = #colorLiteral(red: 0.07058823529, green: 0.1490196078, blue: 0.2274509804, alpha: 1)
+        updatedConfiguration.resetButtonTextConfig.style.color = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
+        updatedConfiguration.agreeButtonTextConfig.style.color = .white
         
         updatedConfiguration.titleTextConfig = TextConfiguration(
             kern: .zero,
@@ -752,20 +739,7 @@ class VideoEditorModule {
             text: nil,
             shadow: nil
         )
-        updatedConfiguration.additionalButtonRadius = 4.0
-        updatedConfiguration.additionalButtonBackgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        updatedConfiguration.refuseButtonBorderConfiguration = BorderButtonConfiguration(
-            borderWidth: .zero,
-            borderColor: UIColor.clear.cgColor
-        )
-        updatedConfiguration.agreeButtonBorderConfiguration = BorderButtonConfiguration(
-            borderWidth: .zero,
-            borderColor: UIColor.clear.cgColor
-        )
-        updatedConfiguration.additionalButtonBorderConfiguration = BorderButtonConfiguration(
-            borderWidth: .zero,
-            borderColor: UIColor.clear.cgColor
-        )
+        updatedConfiguration.additionalButtonTextConfig.style.color = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         updatedConfiguration.additionalButtonTextConfig = TextButtonConfiguration(
             style: TextConfiguration(
                 font: UIFont.boldSystemFont(ofSize: 15.0),
@@ -837,7 +811,6 @@ class VideoEditorModule {
             pauseButtonImageName: "ic_trim_pause"
         )
         updatedConfiguration.backgroundConfiguration.cornerRadius = .zero
-        updatedConfiguration.screenNameConfiguration.style = nil
         
         updatedConfiguration.videoResolutionConfiguration = VideoResolutionConfiguration(
             default: .hd1920x1080,
@@ -879,7 +852,6 @@ class VideoEditorModule {
             pauseButtonImageName: "ic_trim_pause"
         )
         updatedConfiguration.backgroundConfiguration.cornerRadius = .zero
-        updatedConfiguration.screenNameConfiguration.style = nil
         
         return updatedConfiguration
     }
@@ -982,10 +954,6 @@ class VideoEditorModule {
         updatedConfiguration.backButton = BackButtonConfiguration(imageConfiguration: BanubaVideoEditorSDK.ImageConfiguration(imageName: "ic_nav_close"))
         updatedConfiguration.removeButtonImageName = "camera.delete_videoPart"
         updatedConfiguration.captureButtonModes = [.video]
-        //    updatedConfiguration.captureButtonMode = .video
-        updatedConfiguration.recordButtonConfiguration.normalImageName = "ic_record_normal"
-        updatedConfiguration.recordButtonConfiguration.recordImageName = "ic_record_normal"
-        updatedConfiguration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
         updatedConfiguration.recordButtonConfiguration.strokeColor = Self.primaryColor.cgColor
         
         updatedConfiguration.additionalEffectsButtons = [
@@ -1112,11 +1080,11 @@ class VideoEditorModule {
         )
         updatedConfiguration.photoCaptureButtonConfiguration = photoButton
         
-        let backroundMusicContainer = BackgroundConfiguration(
+        let backgroundMusicContainer = BackgroundConfiguration(
             cornerRadius: 20.0,
             color: .black.withAlphaComponent(0.3)
         )
-        updatedConfiguration.backroundMusicContainerConfiguration = backroundMusicContainer
+        updatedConfiguration.backgroundMusicContainerConfiguration = backgroundMusicContainer
         
         updatedConfiguration.floatingViewSeparatedLines = true
         updatedConfiguration.effectSelectorContainerCornerRadius = 8.0

@@ -27,9 +27,6 @@
 /* Move to next screen */
 "Next" = "Next";
 
-/* Return to the previous screen */
-"Back" = "Back";
-
 /* Ability to cancel */
 "Cancel" = "Cancel";
 
@@ -41,16 +38,6 @@
 
 "alert.reset.all.title" = "Reset all?";
 "alert.reset.all.message" = "";
-
-/* Alert action button title */
-"BanubaVideoEditor.Settings.Later" = "Later";
-
-/* Alert action button title */
-"BanubaVideoEditor.Settings.Discard" = "Discard";
-
-/* Used in alert with Yes and No options when resetting filters. */
-"alert.stop.capturing.video.title" = "Do you want to stop capturing and editing the video?";
-"alert.stop.capturing.video.message" = "";
 
 /* Used in alert with Yes and No options when resetting filters. */
 "record.screen.reset.all.title" = "Want to reset changes?";
@@ -66,42 +53,21 @@
 "alert.camera.continue.editing.video.question.title" = "You have a not finished video. Do you want to continue?";
 "alert.camera.continue.editing.video.question.message" = "";
 
-/* Error message that appears when clicking the Next button in the camera when the first part of split mode is not recorded */
-"First part not recorded" = "First part not recorded";
-
 /* Error message received when trying to load a mask */
 "Mask not loaded" = "Mask not loaded";
 
-/* An error message that appears when you click the Next button in the camera, when the second part of the video in split mode is not equal in length to the first part */
-"Second part is too short" = "Second part is too short";
-
-/* In-camera beautification (facial correction) enabled */
-"Beautifier on" = "Beautification on";
-"Beautifier off" = "Beautification off";
-
-/* The light (flashlight) in the camera is on */
-"Flash" = "Light";
-
 /* An error message that appears in the camera when the length of the recorded video is less than the minimum allowed duration */
-"Too short. Please capture at least %d seconds" = "Too short. Please capture at least %d seconds";
+"com.banuba.toShortVideoMessageFormatPluralSeconds" = "Record at least %d seconds";
+"com.banuba.toShortVideoMessageSingleSecond" = "Record at least 1 second";
 
 /* An error message that appears in the trimmer when user tryed to use too long video */
-"com.banuba.TooLongVideoMessageFormat" = "Video duration should be  between %d and %d seconds";
+"com.banuba.TooLongVideoMessageFormat" = "Video duration should be between %d and %d seconds";
 
 /* An error message that appears in the camera if the recorded video is longer than the maximum allowed length */
-"Maximum %d seconds." = "Maximum %d seconds.";
+"Max video length %d sec" = "Max video length %d sec";
 
 /* Turning off the camera's auto timer */
 "Timer is off" = "Timer is off";
-
-/*'Seconds' for maximum */
-"Max length %d sec" = "Max length %d sec";
-
-/* 'Seconds' for short */
-"%d sec" = "%d sec";
-
-/* Name of the button in multi-select mode, which confirms the selection of user files and continues the process further */
-"Choose" = "Choose";
 
 /* Built-in track volume description */
 "Sound" = "Sound";
@@ -111,68 +77,26 @@
 
 /* Enabling the countdown timer to automatically start shooting in the camera */
 "%i seconds timer is on" = "%i seconds timer is on";
-
-/* Step one of two to edit your avatar: take a photo */
-"Make cover photo" = "Make cover photo";
     
-/* Step two of two when taking a profile photo using the camera */
-"Step 2 / 2" = "Step 2 / 2";
-    
-/* Description of the zone selection screen for the user avatar when taking pictures on the profile screen */
-"Crop your profile photo for feed and comments" = "Crop your profile photo for feed and comments";
-    
-/* Hint on how to apply visual filters or time filter to video */
-"Press and hold" = "Press and hold";
- 
-/* Screen title with video from phone gallery */
-"Gallery" = "Gallery";
+/* Hint on how to apply masks to video */
+"Press and hold mask" = "Tap and hold to apply mask";
 
-/* Activity signature */
-"LOADING" = "LOADING";
+/* Hint on how to apply time filter to video */
+"Press and hold time" = "Tap and hold to add time warp effects";
 
-/* Text under the trobber when exporting a video */
-"EXPORTING" = "EXPORTING";
+/* Hint on how to apply visual filters to video */
+"Press and hold visual" = "Tap and hold to add effects";
 
 /* Message about downloading videos from iCloud in the window for selecting videos saved on the mobile device */
 "Video is uploading from iCloud" = "Video is uploading from iCloud";
-
-/* Speed screen name */
-"Speed" = "Speed";
-
-/* Speed screen info */
-"Recording speed %@" = "Recording speed %@";
 
 /* Network Unavailable info */
 "Network Unavailable" = "Network Unavailable";
 
 /* Screen name which will be visible if enable in configuration */
-"Single Trim Video Screen Name" = "Trim Video";
-
-/* Screen name which will be visible if enable in configuration */
-"Multi Trim Video Screen Name" = "Multitrimmer";
-
-/* Recorder mask effect screen name */
-"Mask Effect Screen Name" = "Mask";
-
-/* Recorder color effect screen name */
-"Color Effect Screen Name" = "Effect";
-
-/* Recorder color effect screen name */
-"Color Effect Screen Name" = "Effect";
-
-/* Screen name which will be visible if enable in configuration */
-"Text editor color" = "Color";
-
-/* Screen name which will be visible if enable in configuration */
-"Choose Cover Screen Name" = "Choose Cover";
-
-/* Screen name which will be visible if enable in configuration at color filters screen */
-"Screen colors" = "Screen colors";
+"Choose Cover Screen Name" = "Thumbnail";
 
 "Reach maximum video duration" = "Reach maximum video duration";
-
-/* Disable timer option titiel */
-"Off" = "Off";
 
 // MARK: - Gifphy Screen
 
@@ -189,13 +113,13 @@
 "Giphy API key missing" = "Stickers will appear here when you set up Giphy key";
 
 /* A heading showing that there are problems with the Internet connection */
-"Problems with internet" = "Problems with internet";
+"Problems with internet" = "No internet connection";
 
 /* Advice to the user on further actions to solve this problem */
 "Check your connection and try again" = "Check your connection and try again";
 
 /* Ability to load GIF objects again */
-"Again" = "Again";
+"Again" = "Try again";
 
 // MARK: - ERROR MESSAGES
 /* Message when request failed with `statusCode` code */
@@ -222,7 +146,7 @@
 "banuba.alert.camera.access.restricted.message" = "";
 
 /* Used in a message to the user when microphone is not muted and headphones are not plugged */
-"banuba.alert.camera.no.headphones.title" = "Use headphones";
+"banuba.alert.camera.no.headphones.title" = "Use Headphones";
 "banuba.alert.camera.no.headphones.message" = "For better sound of your reaction, please, use headphones.";
 "banuba.alert.camera.no.headphones.button.title" = "Okay";
 
@@ -341,16 +265,13 @@
 "com.banuba.editor.effect.name.twitch" = "Twitch";
 
 /* Open trimmer button name (for dradt) */
-"com.banuba.editor.openTrimButtonTitle" = "Adjust Clips";
+"com.banuba.editor.openTrimButtonTitle" = "Adjust Clip";
 
 /* Captions button title */
 "com.banuba.editor.captions" = "Captions";
 
 /* Captions not available for multiple videos */
 "com.banuba.editor.captionsNotAvailableForMutipleVideos" = "Not available for multiple videos and photo";
-
-/* Auto Cut button title */
-"com.banuba.editor.autoCut" = "AutoCut";
 
 // MARK: - Filter names
 
@@ -439,7 +360,7 @@
 "No matching video found in gallery" = "No videos found";
 
 /* User selected too many files in the gallery */
-"You can select only %d files" = "You can select only %d files";
+"You can select only %d files" = "You can select up to %d files";
 
 /* Failed to export a video */
 "Failed to create video" = "Failed to create video";
@@ -612,9 +533,11 @@
 "MusicLibrary.noRecentsTitle" = "No recent sounds";
 "MusicLibrary.noRecentsMessage" = "The sounds you have used in your videos will be displayed here.";
 "MusicLibrary.noMatchesMessage" = "No matches";
+"MusicLibrary.searchBarPlaceholder" = "Search";
+"MusicLibrary.searchBarCancelButtonTitle" = "Cancel";
 
 // MARK: - Hands-free
-"hands.free.video.drag.title" = "Drag to set video duration:";
+"hands.free.video.drag.title" = "Drag to set video duration";
 "hands.free.btn.title" = "Start countdown";
 "hands.free.seconds" = "%@ s";
 
@@ -625,9 +548,6 @@
 
 /* Gallery video tab title */
 "BanubaVideoEditor.Gallery.VideoTabTitle" = "Videos";
-
-/* Gallery custom All Photos title */
-"BanubaVideoEditor.Gallery.AllPhotosTitle" = "All Photos";
 
 /* Gallery previe select button name*/
 "BanubaVideoEditor.Gallery.SelectItemName" = "Select";
@@ -640,7 +560,7 @@
 "BanubaVideoEditor.Gallery.HeaderInfoColoredTitle" = "settings";
 
 /* Gallery Recent Photos title */
-"BanubaVideoEditor.Gallery.RecentPhotosTitle" = "Recent";
+"BanubaVideoEditor.Gallery.RecentPhotosTitle" = "Recents";
 
 /* Damaged file from gallery */
 "BanubaVideoEditor.Gallery.DamagedFile" = "Damaged file";
@@ -678,15 +598,14 @@
 "com.banuba.videoEditor.recorder.additionalEffects.AllowAccess" = "Allow Access";
 
 /* Helpers info message for changing video background */
-"com.banuba.videoEditor.recorder.additionalEffects.selectMediaToChangeBackgroundMessage" = "Select media to change the background:";
+"com.banuba.videoEditor.recorder.additionalEffects.selectMediaToChangeBackgroundMessage" = "Select media to change the background";
 
 /* Helpers info message for providing acces to a user gallery */
 "com.banuba.videoEditor.recorder.additionalEffects.allowAccesToChangeBackgroundMessage" = "Allow access to Gallery to change the background";
 
 // MARK: - Cover
-"cover.thumbnail.title" = "Choose a frame from your video or an image from Gallery";
+"cover.thumbnail.title" = "Choose a thumbnail";
 "cover.gallery.button.title" = "Choose from Gallery";
-"cover.delete.button.title" = "Delete";
 
 // MARK: - PIP
 
@@ -699,7 +618,7 @@
 "pip.centered.camera.title" = "Centered";
 "pip.left.right.camera.title" = "Portrait";
 "pip.top.bottom.camera.title" = "Landscape";
-"pip.layout.settings.title" = "Layout Settings";
+"pip.layout.settings.title" = "Select layout settings";
 
 "feature.disabled.pip" = "Picture in picture is not included in your package. Contact account manager to have it.";
 
@@ -711,7 +630,7 @@
 /* Draft edit action name */
 "BanubaVideoEditor.Gallery.DraftEditActionName" = "Edit";
 /* Draft remove action name */
-"BanubaVideoEditor.Gallery.DraftRemoveActionName" = "Remove";
+"BanubaVideoEditor.Gallery.DraftRemoveActionName" = "Delete";
 
 /* Used in alert with Yes and No options when resetting current sequence */
 "com.banuba.BanubaVideoEditor.draft.question.title" = "Do you want to save the draft?";
@@ -722,11 +641,11 @@
 /* Displayed when current sequence saved to drafts */
 "BanubaVideoEditor.Draft.DraftSavedMessage" = "Draft saved";
 /* Displays message about no saved drafts */
-"BanubaVideoEditor.Draft.EmptyDraftsMessage" = "No Drafts";
+"BanubaVideoEditor.Draft.EmptyDraftsMessage" = "No drafts";
 /* Ask a user about completion removing a draft */
-"com.banuba.BanubaVideoEditor.draft.remove.title" = "Do you want to remove the draft?";
+"com.banuba.BanubaVideoEditor.draft.remove.title" = "Do you want to delete the draft?";
 "com.banuba.BanubaVideoEditor.draft.remove.message" = "";
-"com.banuba.BanubaVideoEditor.draft.remove.agree" = "Remove";
+"com.banuba.BanubaVideoEditor.draft.remove.agree" = "Delete";
 "com.banuba.BanubaVideoEditor.draft.remove.disagree" = "Cancel";
 
 /* Ask a user about completion updating a draft */
@@ -735,29 +654,31 @@
 "com.banuba.BanubaVideoEditor.draft.update.agree" = "Update";
 "com.banuba.BanubaVideoEditor.draft.update.disagree" = "Cancel";
 "com.banuba.BanubaVideoEditor.draft.lose.message" = "Note! You will lose the current editing settings. Continue?";
-"com.banuba.BanubaVideoEditor.draft.lose.agree" ="Adjust Clips";
+"com.banuba.BanubaVideoEditor.draft.lose.agree" ="Adjust Clip";
 
 /* Editor, back button menu. Edit draft mode */
 "com.banuba.BanubaVideoEditor.draft.discardChangesAction" = "Discard changes";
 "com.banuba.BanubaVideoEditor.draft.updateAction" = "Update draft";
 
 //MARK: - Additional buttons
-"com.banuba.recorder.link.title" = "Link";
-"com.banuba.recorder.color.title" = "Filter";
-"com.banuba.recorder.sticker.title" = "Gif";
+"com.banuba.recorder.color.title" = "Filters";
+"com.banuba.recorder.sticker.title" = "Stickers";
 "com.banuba.recorder.blur.title" = "Blur";
 "com.banuba.recorder.text.title" = "Text";
 "com.banuba.recorder.time.title" = "Time";
-"com.banuba.recorder.sound.title" = "Music";
+"com.banuba.recorder.sound.title" = "Add sound";
 "com.banuba.recorder.effects.title" = "Effects";
-"com.banuba.recorder.toggle.title" = "Toggle";
-"com.banuba.recorder.flashlight.title" = "Flashlight";
+"com.banuba.recorder.toggle.title" = "Flip";
+"com.banuba.recorder.flashlight.title" = "Flash";
 "com.banuba.recorder.timer.title" = "Timer";
 "com.banuba.recorder.speed.title" = "Speed";
 "com.banuba.recorder.beauty.title" = "Beauty";
 "com.banuba.recorder.masks.title" = "Masks";
-"com.banuba.recorder.muteSound.title" = "Sound";
-"com.banuba.recorder.pip.title" = "Pip";
+"com.banuba.recorder.muteSound.title" = "Mic";
+"com.banuba.recorder.pip.title" = "PiP";
+"com.banuba.editor.music" = "Music";
+"com.banuba.editor.time.title" = "Time";
+"com.banuba.editor.autoCut" = "AutoCut";
 
 /* Gallery button title */
 "com.banuba.recorder.gallery.title" = "Gallery";
@@ -865,8 +786,8 @@
 "com.banuba.trim.splitErrorMessage" = "The selected position is invalid";
 
 // MARK: - Capture button modes
-"com.banuba.record.captureButtonVideoMode" = "VIDEO";
-"com.banuba.record.captureButtonPhotoMode" = "PHOTO";
+"com.banuba.record.captureButtonVideoMode" = "Video";
+"com.banuba.record.captureButtonPhotoMode" = "Photo";
 
 /* Sharing other button */
 "sharing.other.title" = "Other";
@@ -880,6 +801,53 @@
 // MARK: - Expired license screen
 "com.banuba.expiredLicense.infoLabel" = "Video content creation is temporarily unavailable";
 "com.banuba.expiredLicense.cancelButtonTitle" = "Close";
+
+// MARK: - New Video Editor
+"com.banuba.newEditor.canvas" = "Canvas";
+"com.banuba.newEditor.sticker" = "Sticker";
+"com.banuba.newEditor.text" = "Text";
+"com.banuba.newEditor.effects" = "Effects";
+"com.banuba.newEditor.masks" = "Masks";
+"com.banuba.newEditor.audio" = "Audio";
+"com.banuba.newEditor.filters" = "Filters";
+"com.banuba.newEditor.blur" = "Blur";
+"com.banuba.newEditor.speed" = "Speed";
+"com.banuba.newEditor.add" = "Add";
+"com.banuba.newEditor.edit" = "Edit";
+"com.banuba.newEditor.replace" = "Replace";
+"com.banuba.newEditor.delete" = "Delete";
+"com.banuba.newEditor.circle" = "Circle";
+"com.banuba.newEditor.square" = "Square";
+"com.banuba.newEditor.voiceRecord" = "Record";
+"com.banuba.newEditor.voiceEffect" = "Effect";
+"com.banuba.newEditor.muteAudio" = "Mute";
+
+"com.banuba.newEditor.musicVolume" = "Volume";
+
+// MARK: - Auto Cut
+"com.banuba.autocut.choosePart" = "Choose the part you want for your video";
+"com.banuba.autocut.changesWillNotBeSaved" = "Previously made changes will not be saved";
+"com.banuba.autocut.processingMedia" = "Processing media %d%%";
+"com.banuba.autocut.tryAgain" = "Try Again";
+"com.banuba.autocut.couldNotProcess" = "Couldn't process video";
+"com.banuba.autocut.somethingWentWrong" = "Something went wrong. Please try again.";
+"com.banuba.autocut.chooseTheme" = "Choose a theme";
+"com.banuba.autocut.alert.tryAgain.agree" = "Try again";
+"com.banuba.autocut.alert.tryAgain.disagree" = "Cancel";
+"com.banuba.autocut.alert.tryAgain.title" = "Something went wrong.\nTry again?";
+"com.banuba.autocut.alert.discard.agree" = "Discard";
+"com.banuba.autocut.alert.discard.disagree" = "Cancel";
+"com.banuba.autocut.alert.discard.title" = "Discard AutoCut video?";
+"com.banuba.autocut.recommended.sounds" = "Recommended sounds";
+"com.banuba.autocut.original.sound" = "Original sound";
+"com.banuba.autocut.added.sound" = "Added sound";
+"com.banuba.autocut.error.title" = "Something went wrong";
+"com.banuba.autocut.error.message" = "Check your connection or try again later";
+"com.banuba.autocut.try.again.title" = "Try again";
+"BanubaVideoEditor.Gallery.Autocut" = "AutoCut";
 "BanubaVideoEditor.Gallery.Next" = "Next";
 "BanubaVideoEditor.Gallery.NextWithCount" = "Next (%d)";
 "BanubaVideoEditor.Gallery.TotalLengthUpTo" = "Total length should be up to %d sec";
+
+// MARK: - Music panel
+"com.banuba.music.panel.title" = "Add sound";
