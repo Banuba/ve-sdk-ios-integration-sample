@@ -398,7 +398,7 @@ class VideoEditorModule {
         updatedConfiguration.toolTipLabel.text = "Tool tip tabel"
         updatedConfiguration.backgroundConfiguration.color = UIColor.black
         updatedConfiguration.previewBackgroundConfiguration.color = .clear
-        updatedConfiguration.thumbnailsCursorConfiguration.imageConfiguration = VideoEditor.ImageConfiguration(imageName: "thumb")
+        updatedConfiguration.thumbnailsCursorConfiguration.imageConfiguration = VideoEditor.ImageConfiguration(imageName: "ic_cursor")
         updatedConfiguration.numberOfThumbnails = 12
         updatedConfiguration.preferredStatusBarStyle = .default
         return updatedConfiguration
@@ -733,8 +733,8 @@ class VideoEditorModule {
         
         updatedConfiguration.titleTextConfig = TextConfiguration(
             kern: .zero,
-            font: UIFont.boldSystemFont(ofSize: 22.0),
-            color: .black,
+            font: UIFont.boldSystemFont(ofSize: 18.0),
+            color: .white,
             alignment: .center,
             text: nil,
             shadow: nil
@@ -742,8 +742,8 @@ class VideoEditorModule {
         updatedConfiguration.additionalButtonTextConfig.style.color = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         updatedConfiguration.additionalButtonTextConfig = TextButtonConfiguration(
             style: TextConfiguration(
-                font: UIFont.boldSystemFont(ofSize: 15.0),
-                color: .black
+                font: UIFont.boldSystemFont(ofSize: 16.0),
+                color: .white
             ),
             text: nil
         )
