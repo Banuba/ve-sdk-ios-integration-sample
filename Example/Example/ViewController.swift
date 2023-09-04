@@ -118,6 +118,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
       uuid: UUID(),
       id: nil,
       url: musicURL,
+      coverURL: nil,
       timeRange: MediaTrackTimeRange(
         startTime: .zero,
         playingTimeRange: CMTimeRange(

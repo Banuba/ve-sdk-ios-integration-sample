@@ -21,9 +21,6 @@
 /* Move to next screen */
 "Next" = "Дальше";
 
-/* Return to the previous screen */
-"Back" = "Назад";
-
 /* Ability to cancel */
 "Cancel" = "Отмена";
 
@@ -36,20 +33,7 @@
 "alert.reset.all.title" = "Сбросить все?";
 "alert.reset.all.message" = "";
 
-/* Alert action button title */
-"BanubaVideoEditor.Settings.Later" = "Позже";
-
-/* Alert action button title */
-"BanubaVideoEditor.Settings.Discard" = "Отменить";
-
 "Reach maximum video duration" = "Достигнута максимальная длина видео";
-
-/* Disable timer option titiel */
-"Off" = "Выкл.";
-
-/* Used in alert with Yes and No options when resetting filters. */
-"alert.stop.capturing.video.title" = "Прервать съемку и монтаж нового видео?";
-"alert.stop.capturing.video.message" = "";
 
 /* Used in alert with Yes and No options when resetting filters. */
 "record.screen.reset.all.title" = "Удалить изменения?";
@@ -65,30 +49,18 @@
 "alert.camera.continue.editing.video.question.title" = "У вас есть не законченное видео. Желаете продолжить?";
 "alert.camera.continue.editing.video.question.message" = "";
 
-/* Error message that appears when clicking the Next button in the camera when the first part of split mode is not recorded */
-"First part not recorded" = "Первая часть сплита не записана";
-
 /* Error message received when trying to load a mask */
 "Mask not loaded" = "Маска не загружена";
 
-/* An error message that appears when you click the Next button in the camera, when the second part of the video in split mode is not equal in length to the first part */
-"Second part is too short" = "Вторая часть слишком короткая";
-
-/* In-camera beautification (facial correction) enabled */
-"Beautifier on" = "Бьютификатор вкл";
-"Beautifier off" = "Бьютификатор выкл";
-
-/* The light (flashlight) in the camera is on */
-"Flash" = "Подсветка";
-
 /* An error message that appears in the camera when the length of the recorded video is less than the minimum allowed duration */
-"Too short. Please capture at least %d seconds" = "Слишком короткий отрезок, нужно снять хотя бы %d секунд";
+"com.banuba.toShortVideoMessageFormatPluralSeconds" = "Запишите хотя бы %d секунды";
+"com.banuba.toShortVideoMessageSingleSecond" = "Запишите хотя бы 1 секунду";
 
 /* An error message that appears in the trimmer when user tryed to use too long video */
 "com.banuba.TooLongVideoMessageFormat" = "Продолжительность видео должна составлять от %d до %d секунд";
 
 /* An error message that appears in the camera if the recorded video is longer than the maximum allowed length */
- "Maximum %d seconds." = "Максимум %d секунд";
+ "Max video length %d sec" = "Максимальная длина видео %d сек";
 
 /* Turning off the camera's auto timer */
 "Timer is off" = "Таймер выключен";
@@ -99,15 +71,6 @@
 /* Stickers search can not be performed due to missing API key */
 "Giphy API key missing" = "Здесь появятся стикеры, когда вы укажите ключ Giphy";
 
-/*'Seconds' for maximum */
-"Max length %d sec" = "Максимум %d сек";
-
-/* 'Seconds' for short */
-"%d sec" = "%d сек";
-
-/* Name of the button in multi-select mode, which confirms the selection of user files and continues the process further */
-"Choose" = "Выбрать";
-
 /* Built-in track volume description */
 "Sound" = "Звук";
 
@@ -116,60 +79,27 @@
 
 /* Enabling the countdown timer to automatically start shooting in the camera */
 "%i seconds timer is on" = "Таймер включен на %i секунд(ы)";
+    
+/* Hint on how to apply masks to video */
+"Press and hold mask" = "Нажмите и удерживайте, чтобы применить маску";
 
-/* Step one of two to edit your avatar: take a photo */
-"Make cover photo" = "Пожалуйста, сделай фото на обложку";
-    
-/* Step two of two when taking a profile photo using the camera */
-"Step 2 / 2" = "Шаг 2 / 2";
-    
-/* Description of the zone selection screen for the user avatar when taking pictures on the profile screen */
-"Crop your profile photo for feed and comments" = "Круглая аватарка нужна для потока и комментариев";
-    
-/* Hint on how to apply visual filters or time filter to video */
-"Press and hold" = "Нажми и держи";
+/* Hint on how to apply time filter to video */
+"Press and hold time" = "Нажмите и удерживайте, чтобы добавить эффекты времени";
+
+/* Hint on how to apply visual filters to video */
+"Press and hold visual" = "Tap and hold to add effects";
 
 /* Hint on how to remove a piece of video */
 "Drag to remove" = "Перетащи для того, чтобы удалить";
- 
-/* Screen title with video from phone gallery */
-"Gallery" = "Галерея";
-
-/* Activity signature */
-"LOADING" = "ЗАГРУЗКА";
 
 /* Message about downloading videos from iCloud in the window for selecting videos saved on the mobile device */
 "Video is uploading from iCloud" = "Видео загружаются из iCloud";
-
-/* Speed screen name */
-"Speed" = "Скорость";
-
-/* Speed screen info */
-"Recording speed %@" = "Скорость записи %@";
 
 /* Network Unavailable info */
 "Network Unavailable" = "Сеть недоступна";
 
 /* Screen name which will be visible if enable in configuration */
-"Single Trim Video Screen Name" = "Обрезать видео";
-
-/* Screen name which will be visible if enable in configuration */
-"Multi Trim Video Screen Name" = "Обрезать несколько видео";
-
-/* Recorder mask effect screen name */
-"Mask Effect Screen Name" = "Маска";
-
-/* Recorder color effect screen name */
-"Color Effect Screen Name" = "Цвет";
-
-/* Screen name which will be visible if enable in configuration */
-"Text editor color" = "Цвет";
-
-/* Screen name which will be visible if enable in configuration */
-"Choose Cover Screen Name" = "Выберите обложку";
-
-/* Screen name which will be visible if enable in configuration at color filters screen */
-"Screen colors" = "Цвет видео";
+"Choose Cover Screen Name" = "Обложка";
 
 // MARK: - Gifphy Screen
 
@@ -184,13 +114,13 @@
 "No stickers found" = "Стикеры не найдены";
 
 /* A heading showing that there are problems with the Internet connection */
-"Problems with internet" = "Проблемы с интернетом";
+"Problems with internet" = "Нет интернет соединения";
 
 /* Advice to the user on further actions to solve this problem */
 "Check your connection and try again" = "Проверьте подключение и попробуйте ещё раз";
 
 /* Ability to load GIF objects again */
-"Again" = "Ещё раз";
+"Again" = "Повторить";
 
 // MARK: - ERROR MESSAGES
 /* Message when request failed with `statusCode` code */
@@ -218,7 +148,7 @@
 "banuba.alert.camera.access.restricted.message" = "";
 
 /* Used in a message to the user when microphone is not muted and headphones are not plugged */
-"banuba.alert.camera.no.headphones.title" = "Используйте наушники";
+"banuba.alert.camera.no.headphones.title" = "Используйте Наушники";
 "banuba.alert.camera.no.headphones.message" = "Для лучшего звучания вашей реакции используйте наушники.";
 "banuba.alert.camera.no.headphones.button.title" = "Окей";
 
@@ -607,9 +537,11 @@
 "MusicLibrary.noRecentsTitle" = "Нет недавних аудио";
 "MusicLibrary.noRecentsMessage" = "Аудио, использованные в ваших видео, будут отображаться здесь.";
 "MusicLibrary.noMatchesMessage" = "Нет совпадений";
+"MusicLibrary.searchBarPlaceholder" = "Поиск";
+"MusicLibrary.searchBarCancelButtonTitle" = "Отмена";
 
 // MARK: - Hands-free
-"hands.free.video.drag.title" = "Установите продолжительность видео:";
+"hands.free.video.drag.title" = "Установите продолжительность видео";
 "hands.free.btn.title" = "Начать отсчёт";
 "hands.free.seconds" = "%@ с";
 
@@ -620,9 +552,6 @@
 
 /* Gallery video tab title */
 "BanubaVideoEditor.Gallery.VideoTabTitle" = "Видео";
-
-/* Gallery custom All Photos title */
-"BanubaVideoEditor.Gallery.AllPhotosTitle" = "Вce фото";
 
 /* Gallery previe select button name*/
 "BanubaVideoEditor.Gallery.SelectItemName" = "Выбрать";
@@ -673,15 +602,14 @@
 "com.banuba.videoEditor.recorder.additionalEffects.AllowAccess" = "Разрешите доступ";
 
 /* Helpers info message for changing video background */
-"com.banuba.videoEditor.recorder.additionalEffects.selectMediaToChangeBackgroundMessage" = "Выберите медиа чтобы изменить фон:";
+"com.banuba.videoEditor.recorder.additionalEffects.selectMediaToChangeBackgroundMessage" = "Выберите медиа чтобы изменить фон";
 
 /* Helpers info message for providing acces to a user gallery */
 "com.banuba.videoEditor.recorder.additionalEffects.allowAccesToChangeBackgroundMessage" = "Разрешите доступ к галерее чтобы изменять фон";
 
 // MARK: - Cover
-"cover.thumbnail.title" = "Выберите кадр из вашего видео или изображение из галереи";
+"cover.thumbnail.title" = "Выберите обложку";
 "cover.gallery.button.title" = "Выбрать из галереи";
-"cover.delete.button.title" = "Удалить";
 
 // MARK: - PIP
 
@@ -694,7 +622,7 @@
 "pip.centered.camera.title" = "Центрированное";
 "pip.left.right.camera.title" = "Портретный";
 "pip.top.bottom.camera.title" = "Пейзажный";
-"pip.layout.settings.title" = "Настройки макета";
+"pip.layout.settings.title" = "Выбери настройку макета";
 
 "feature.disabled.pip" = "Картинка в картинке не входит в ваш пакет. Свяжитесь с менеджером аккаунта, чтобы получить его.";
 
@@ -733,13 +661,12 @@
 "com.banuba.BanubaVideoEditor.draft.updateAction" = "Обновить драфт";
 
 //MARK: - Additional buttons
-"com.banuba.recorder.link.title" = "Ссылка";
 "com.banuba.recorder.color.title" = "Фильтры";
 "com.banuba.recorder.sticker.title" = "Стикеры";
 "com.banuba.recorder.blur.title" = "Блюр";
 "com.banuba.recorder.text.title" = "Текст";
 "com.banuba.recorder.time.title" = " Скорость";
-"com.banuba.recorder.sound.title" = "Музыка";
+"com.banuba.recorder.sound.title" = "Добавить Музыку";
 "com.banuba.recorder.effects.title" = "Эффекты";
 "com.banuba.recorder.toggle.title" = "Камера";
 "com.banuba.recorder.flashlight.title" = "Вспышка";
@@ -747,8 +674,10 @@
 "com.banuba.recorder.speed.title" = "Скорость";
 "com.banuba.recorder.beauty.title" = "Ретушь";
 "com.banuba.recorder.masks.title" = "Маски";
-"com.banuba.recorder.muteSound.title" = "Звук";
-"com.banuba.recorder.pip.title" = "Пип";
+"com.banuba.recorder.muteSound.title" = "Микро";
+"com.banuba.recorder.pip.title" = "ПиП";
+"com.banuba.editor.music" = "Музыка";
+"com.banuba.editor.time.title" = "Скорость";
 
 /* Gallery button title */
 "com.banuba.recorder.gallery.title" = "Галерея";
@@ -856,8 +785,8 @@
 "com.banuba.trim.splitErrorMessage" = "Выбрана недопустимая позиция";
 
 // MARK: - Capture button modes
-"com.banuba.record.captureButtonVideoMode" = "ВИДЕО";
-"com.banuba.record.captureButtonPhotoMode" = "ФОТО";
+"com.banuba.record.captureButtonVideoMode" = "Видео";
+"com.banuba.record.captureButtonPhotoMode" = "Фото";
 
 /* Sharing other button */
 "sharing.other.title" = "Другое";
@@ -871,6 +800,53 @@
 // MARK: - Expired license screen
 "com.banuba.expiredLicense.infoLabel" = "Создание видео временно недоступно";
 "com.banuba.expiredLicense.cancelButtonTitle" = "Закрыть";
+
+// MARK: - New Video Editor
+"com.banuba.newEditor.canvas" = "Холст";
+"com.banuba.newEditor.sticker" = "Стикер";
+"com.banuba.newEditor.text" = "Текст";
+"com.banuba.newEditor.effects" = "Эффекты";
+"com.banuba.newEditor.masks" = "Маски";
+"com.banuba.newEditor.audio" = "Аудио";
+"com.banuba.newEditor.filters" = "Фильтры";
+"com.banuba.newEditor.blur" = "Блюр";
+"com.banuba.newEditor.speed" = "Скорость";
+"com.banuba.newEditor.add" = "Добавить";
+"com.banuba.newEditor.edit" = "Изменить";
+"com.banuba.newEditor.replace" = "Заменить";
+"com.banuba.newEditor.delete" = "Удалить";
+"com.banuba.newEditor.circle" = "Круг";
+"com.banuba.newEditor.square" = "Квадрат";
+"com.banuba.newEditor.voiceRecord" = "Голос";
+"com.banuba.newEditor.voiceEffect" = "Эффект";
+"com.banuba.newEditor.muteAudio" = "Звук";
+
+"com.banuba.newEditor.musicVolume" = "Громкость";
+
+// MARK: - Auto Cut
+"com.banuba.autocut.choosePart" = "Выберите желаемую часть для вашего видео";
+"com.banuba.autocut.changesWillNotBeSaved" = "Ранее внесенные изменения не будут сохранены";
+"com.banuba.autocut.processingMedia" = "Обработка медиа %d%%";
+"com.banuba.autocut.tryAgain" = "Попробовать еще раз";
+"com.banuba.autocut.couldNotProcess" = "Не удалось обработать видео";
+"com.banuba.autocut.somethingWentWrong" = "Что-то пошло не так. Повторите попытку.";
+"com.banuba.autocut.chooseTheme" = "Выберите тему";
+"com.banuba.autocut.alert.tryAgain.agree" = "Попробовать еще раз";
+"com.banuba.autocut.alert.tryAgain.disagree" = "Отмена";
+"com.banuba.autocut.alert.tryAgain.title" = "Что-то пошло не так.\nПопробовать еще раз?";
+"com.banuba.autocut.alert.discard.agree" = "Сбросить";
+"com.banuba.autocut.alert.discard.disagree" = "Отмена";
+"com.banuba.autocut.alert.discard.title" = "Сбросить AutoCut видео?";
+"com.banuba.autocut.recommended.sounds" = "Рекомендованная музыка";
+"com.banuba.autocut.original.sound" = "Оригинальный звук";
+"com.banuba.autocut.added.sound" = "Добавленный звук";
+"com.banuba.autocut.error.title" = "Что-то пошло не так";
+"com.banuba.autocut.error.message" = "Проверьте подключение или повторите попытку позже";
+"com.banuba.autocut.try.again.title" = "Попробовать еще раз";
+"BanubaVideoEditor.Gallery.Autocut" = "AutoСut";
 "BanubaVideoEditor.Gallery.Next" = "Дальше";
 "BanubaVideoEditor.Gallery.NextWithCount" = "Дальше (%d)";
 "BanubaVideoEditor.Gallery.TotalLengthUpTo" = "Общая длина не может быть больше за %d сек";
+
+// MARK: - Music panel
+"com.banuba.music.panel.title" = "Добавить трек";
