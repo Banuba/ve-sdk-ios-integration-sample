@@ -75,8 +75,6 @@ class VideoEditorModule {
     func createConfiguration() -> VideoEditorConfig {
         var config = VideoEditorConfig()
         
-        let pink = UIColor(red: 250 / 255, green: 62 / 255, blue: 118 / 255, alpha: 1)
-        let skyBlue = UIColor(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1)
         config.setupColorsPalette(
             VideoEditorColorsPalette(
                 primaryColor: .white,
@@ -106,8 +104,6 @@ class VideoEditorModule {
         featureConfiguration.supportsTrimRecordedVideo = true
         featureConfiguration.isMuteCameraAudioEnabled = true
         config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
-        
-        config.musicEditorConfiguration.audioTrackLineEditControllerConfig.voiceFilterProvider = ExampleVoiceFilterProvider()
         
         return config
     }
@@ -139,50 +135,4 @@ class VideoEditorModule {
             }
         }
     }
-}
-
-/// Example voice filter provider
-struct ExampleVoiceFilterProvider: VoiceFilterProvider {
-  private let filters: [VoiceFilter]
-  
-  // MARK: - VoiceFilterProvider
-  
-  func provideFilters() -> [VoiceFilter] {
-    return filters
-  }
-  
-  init() {
-    filters = [
-      VoiceFilter(
-        type: .elf,
-        title: NSLocalizedString("com.banuba.musicEditor.elf", comment: "Elf filter title"),
-        image: UIImage(named:"elf")
-      ),
-      VoiceFilter(
-        type: .baritone,
-        title: NSLocalizedString("com.banuba.musicEditor.baritone", comment: "Baritone filter title"),
-        image: UIImage(named:"baritone")
-      ),
-      VoiceFilter(
-        type: .echo,
-        title: NSLocalizedString("com.banuba.musicEditor.echo", comment: "Echo filter title"),
-        image: UIImage(named:"echo")
-      ),
-      VoiceFilter(
-        type: .giant,
-        title: NSLocalizedString("com.banuba.musicEditor.giant", comment: "Giant filter title"),
-        image: UIImage(named:"giant")
-      ),
-      VoiceFilter(
-        type: .robot,
-        title: NSLocalizedString("com.banuba.musicEditor.robot", comment: "Robot filter title"),
-        image: UIImage(named:"robot")
-      ),
-      VoiceFilter(
-        type: .squirrel,
-        title: NSLocalizedString("com.banuba.musicEditor.squirrel", comment: "Squirrel filter title"),
-        image: UIImage(named:"squirrel")
-      )
-    ]
-  }
 }
