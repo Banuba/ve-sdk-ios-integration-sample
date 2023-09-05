@@ -18,6 +18,8 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
   // MARK: - VideoEditorSDK
   private let videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
   
+  private var navController: UINavigationController?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -32,6 +34,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
     
     videoEditorSDK.getLicenseState(completion: { [weak self] isValid in
       if isValid {
+        self?.openVideoEditorDefault(self)
         print("✅ License is active, all good")
       } else {
         self?.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
@@ -48,24 +51,28 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
   }
   
   func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
-    videoEditor.dismissVideoEditor(animated: true) { [weak self] in
-      self?.exportVideo(videoEditor: videoEditor)
+    let postingViewController = PostingViewController()
+    postingViewController.doneCallback = { [weak self] in
+      self?.navController?.dismiss(animated: true) { [weak self] in
+        self?.navController = nil
+      }
     }
+    navController?.pushViewController(postingViewController, animated: true)
   }
   
   // MARK: - Actions
   @IBAction func openVideoEditorDefault(_ sender: Any) {
-    let musicTrackPreset: MediaTrack? = nil
-    // Uncomment to apply custom audio track in video editor
-    //let musicTrackPreset = prepareMusicTrack(audioFileName: "short_music_20.wav")
-    
     let launchConfig = VideoEditorLaunchConfig(
       entryPoint: .camera,
       hostController: self,
-      musicTrack: musicTrackPreset, // Paste a music track as a track preset at the camera screen to record video with music
       animated: true
     )
-    videoEditorModule.presentVideoEditor(with: launchConfig)
+    guard let navController = videoEditorModule.videoEditorSDK?.getVideoEditorNavigationController(withLaunchConfiguration: launchConfig) else {
+      return
+    }
+    navController.modalPresentationStyle = .fullScreen
+    present(navController, animated: true)
+    self.navController = navController
   }
   
   @IBAction func openVideoEditorPiP(_ sender: Any) {
@@ -136,7 +143,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
 
 // MARK: - Export example
 extension ViewController {
-  func exportVideo(videoEditor: BanubaVideoEditor) {
+  func exportVideo(videoEditor: BanubaVideoEditor, completion: @escaping () -> Void) {
     let progressViewController = videoEditorModule.createProgressViewController()
     progressViewController.cancelHandler = { videoEditor.stopExport() }
     present(progressViewController, animated: true)
@@ -164,14 +171,7 @@ extension ViewController {
             // Clear video editor session data
             videoEditor.clearSessionData()
             if error == nil {
-              /// If you want to play exported video
-              //          self.playVideoAtURL(videoURL)
-              
-              /// If you want to share exported video
-              self?.showSharingScreen(
-                videoUrl: videoURL,
-                exportCoverImages: exportCoverImages
-              )
+              completion()
             }
           }
         }
