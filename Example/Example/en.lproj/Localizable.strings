@@ -451,8 +451,8 @@
 "com.banuba.overlayEditor.captions.creationCaptions" = "Creating auto captions";
 "com.banuba.overlayEditor.captions.noSpeechRecognized" = "No speech recognized";
 "com.banuba.overlayEditor.captions.noInternetConnectionTitle" = "No internet connection";
-"com.banuba.overlayEditor.captions.noInternetConnectionMessage" = "Check your connection or try again.";
-"com.banuba.overlayEditor.captions.tryAgain" = "TRY AGAIN";
+"com.banuba.overlayEditor.captions.noInternetConnectionMessage" = "Check your connection and try again.";
+"com.banuba.overlayEditor.captions.tryAgain" = "Try Again";
 "com.banuba.overlayEditor.captions.noInternetConnectionToast" = "The internet connection appears to be offline.";
 
 "com.banuba.overlayEditor.captions.createNewCaptionsQuestion" = "Create new captions?";
