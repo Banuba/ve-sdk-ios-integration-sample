@@ -92,6 +92,8 @@ class VideoEditorModule {
             )
         )
         
+        config.combinedGalleryConfiguration.visibleTabsInGallery = [.photo]
+        
         // Set Mubert API KEYS here
         BanubaAudioBrowser.setMubertKeys(
             license: "SET MUBERT API LICENSE",
