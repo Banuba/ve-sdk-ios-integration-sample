@@ -40,8 +40,8 @@ Follow [Video Editor audio content integration guide](guide_audio_content.md) to
 Visit [Popups guide](guide_popups.md) to know more about usage popups in video editor.
 
 ## Passing Apple Store review
-Unfortunately Apple Store may reject your app due to use of TrueDepth API.  
-Please [follow guidelines](passing_apple_review.md) to successfully pass Apple Store review.
+If you are using an old version of VE SDK, Apple Store may reject your app due to use of TrueDepth API.  
+Please [follow guidelines](passing_apple_review.md) to successfully pass the Apple Store review or update your app to use the SDK v1.26.0 or newer that do not link with ARKit framework. 
 
 ## Launch methods
 Video Editor supports multiple launch entry points that are declared in ```PresentEventOptions.EntryPoint``` to meet all your requirements.
@@ -52,6 +52,7 @@ Video Editor supports multiple launch entry points that are declared in ```Prese
     case trimmer
     case editor
     case drafts
+    case gallery
   }
 ```
 
@@ -136,6 +137,19 @@ Video editor will not open in PIP mode if your license token does not support PI
   )
 ```
 
+6. Launch from Gallery screen where the user can select videos or photos and proceed to the Editor screen.
+``` swift
+  let launchConfig = VideoEditorLaunchConfig(
+    entryPoint: .gallery,
+    hostController: UIViewController,
+    animated: Bool
+  )
+  videoEditorSDK.presentVideoEditor(
+    withLaunchConfiguration: launchConfig,
+    completion: nil
+  )
+```
+
 ## Configure screens
 Each screen can be modified to your liking. You can change icons, colors, text and its font, button titles, and much more.
 
@@ -146,7 +160,7 @@ Below see the list of screens with links to their detailed description and notes
 1. [Editor screen](editor_styles.md)
 2. [Trim screens](trim_styles.md)
 3. [Overlay screens](overlayEditor_styles.md)
-4. [Gallery screen](gallery_styles.md)
+4. [Gallery screen](guide_gallery.md)
 5. [Alert screens](guide_popups.md)
 6. [Cover screen](cover_style.md)
 
@@ -212,9 +226,9 @@ target 'Example' do
 +  pod 'BanubaVideoEditorGallerySDK', '1.23.0'
 }
 ```
-The gallery provided by the SDK is fully customizable according to [this guide](gallery_styles.md).
+The gallery provided by the SDK is fully customizable according to [this guide](guide_gallery.md).
 
-Also there is an option to use **your own implementation of the gallery**. This is available according to this [step-by-step guide](configure_external_gallery.md).
+Also there is an option to use **your own implementation of the gallery**. This is available according to this [step-by-step guide](guide_gallery.md).
 
 ### Configure additional Video Editor SDK features
 
@@ -225,10 +239,8 @@ Also there is an option to use **your own implementation of the gallery**. This 
 Any icon in the mobile video editor SDK can be replaced. This is how:
 
 1. Load custom images to the Assets catalog
-2. Locate the screen with an icon you want to change in the [VideoEditorConfig](/Example/Example/ViewController.swift#L97) entity
+2. Locate the screen with an icon you want to change in the [VideoEditorConfig](/Example/Example/VideoEditorModule.swift#L75) entity
 3. Find the specific element and override it with the resource name or use UIImage, if available.
-
-For [example](/Example/Example/Extension/RecorderConfiguration.swift#L80), this is how you change a mask icon on the camera screen.
 
 ### Localization
 
