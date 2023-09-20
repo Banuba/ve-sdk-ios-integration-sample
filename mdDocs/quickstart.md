@@ -37,17 +37,17 @@ Complete the following steps to get Video Editor SDK dependencies using SPM.
 1. Add a [spm link](https://github.com/Banuba/spm) to the collection of packages
 2. Open ```App project```  and navigate to ```Swift Packages``` tab.
 <p align="center">
-<img src="SPMTab.png" alt="Screenshot" width="60%" height="auto">&nbsp;
+<img src="screenshots/SPMTab.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
 
 3. Tap ```plus``` button and type package collections repo url.
 <p align="center">
-<img src="SDKUrl.png" alt="Screenshot" width="60%" height="auto">&nbsp;
+<img src="screenshots/SDKUrl.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
 
 4. Choose ```Exact Version``` release version and type newest SDK version.
 <p align="center">
-<img src="ExactVersion.png" alt="Screenshot" width="60%" height="auto">&nbsp;
+<img src="screenshots/ExactVersion.png" alt="Screenshot" width="60%" height="auto">&nbsp;
 </p>
 
 5. Tap ```Add Package``` button.
