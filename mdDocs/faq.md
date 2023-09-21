@@ -10,6 +10,7 @@ These are the answers to the most common questions asked about our SDK.
 - [I want to change progress bar position.](#i-want-to-change-progress-bar-position)
 - [How can I get a track name of the audio used in my video after export?](#how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
 - [I want to change the font.](#i-want-to-change-the-font)
+- [I want to use custom icons.](faq.md#i-want-to-use-custom-icons)
 - [The file “luts” couldn’t be opened because there is no such file.](#the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
 - [I want to add audio filters.](#i-want-to-add-audio-filters)
 - [I want to change icons and name for effects.](#i-want-to-change-icons-and-name-for-effects)
