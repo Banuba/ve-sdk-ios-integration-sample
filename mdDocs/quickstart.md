@@ -167,27 +167,24 @@ The following [implementation](../Example/Example/ViewController.swift#L59) star
 videoEditorModule.presentVideoEditor(with: cameraLaunchConfig)
 ```
 
-Video Editor supports multiple launch methods described in [this guide](advanced_integration.md#Launch-methods).
+Video Editor supports multiple launch methods described in [this guide](faq.md#Launch-methods).
 
 ## Advanced integration
 Video editor has built in UI/UX experience and provides a number of customizations you can use to meet your requirements.
 
 **AVAILABLE**  
-:white_check_mark: Use your branded icons. [See details](advanced_integration.md#Configure-screens)  
-:white_check_mark: Use you branded colors. [See details](advanced_integration.md#Configure-screens)  
-:white_check_mark: Change text styles i.e. font, color. [See details](advanced_integration.md#Configure-screens)  
+:white_check_mark: Use your branded icons, colors, and text styles. [See details](faq.md)  
 :white_check_mark: Localize and change text resources. Default locale is :us:  
 :white_check_mark: Make content you want i.e. a number of video with different resolutions  and durations, an audio file. [See details](#Configure-export-flow)  
-:white_check_mark: Masks and filters order. [See details](advanced_integration.md)
+:white_check_mark: Masks and filters order. [See details](faq.md)
 
 NOT AVAILABLE  
 :x: Change layout  
 :x: Change order of screens after entry point
 
-Learn [Advanced integration guide](advanced_integration.md) to know more about features and customizations.
+You can, however, [ask](https://www.banuba.com/faq/kb-tickets/new) us to customize the mobile video editor UI as a separate contract.
 
-## FAQ
-Visit [FAQ](faq.md) if you are experiencing any issues with an integration.
+Check out the list of [Frequently Asked Questions](faq.md) to know more about features customizations and if you are experiencing any issues with an integration.
 
 ## Dependencies and licenses
 1. [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters) ```Optional```.
@@ -208,22 +205,22 @@ Visit [FAQ](faq.md) if you are experiencing any issues with an integration.
 [See all dependencies and licenses](3rd_party_licences.md)
 
 ## Latest Releases  
-[1.26.0](https://vebanuba.notion.site/1-26-0-5e65daee7e8c41e2bebbf4d8a50e1cc4)    
-[1.26.1](https://vebanuba.notion.site/1-26-1-0edacf053a88499cbb51e6f065274dd3)   
-[1.26.2](https://vebanuba.notion.site/1-26-2-2aa271695c974ac7b90799a0b2a108d9)   
-[1.26.3](https://vebanuba.notion.site/1-26-3-8c4fb0d732eb4f2582b3aaeab28ef399)  
-[1.26.4](https://vebanuba.notion.site/1-26-4-294c72f4be5944938a4e506c65435333)  
-[1.26.5](https://vebanuba.notion.site/1-26-5-91785d18a6c64c6e86dc48ca06e3d458)  
-[1.26.6](https://vebanuba.notion.site/1-26-6-4c17e9a765934c2ba7da3440b1cfbe8b)  
-[1.26.7](https://vebanuba.notion.site/1-26-7-8653533d4ce64203ad04159d942212f6)  
-[1.26.8](https://vebanuba.notion.site/1-26-8-9ca76f004afc4d38a481ba8e44826713)  
-[1.26.9](https://vebanuba.notion.site/1-26-9-73460541f0c1414ab67073e07b866e4f)  
-[1.27.0](https://vebanuba.notion.site/1-27-0-591e38e8166c4833b96f96db05ead258)  
-[1.28.0](https://vebanuba.notion.site/1-28-0-ac7b1a919eb7443ea7caef9eae22d2a3)  
-[1.28.5](https://vebanuba.notion.site/1-28-5-d64de053cf1b44ea81adb88c29b9996a)  
-[1.29.0](https://vebanuba.notion.site/1-29-0-95c88eeb25074e19ba9b11796e845432)  
-[1.29.1](https://vebanuba.notion.site/1-29-1-e06a110ac0314b2e937adbb5621efee0)  
-[1.29.2](https://vebanuba.notion.site/1-29-2-d44fcd46e81c4916a13bc5fc3eb5fb4b)  
-[1.30.0](https://vebanuba.notion.site/1-30-0-35e745d478b648199e38e86c432486e4)  
-[1.30.1](https://vebanuba.notion.site/1-30-1-6b90d19271b741b0b8353f7a1b92d061)  
 [1.30.2](https://vebanuba.notion.site/1-30-2-a0ec2ae1eeea42a59c629834f6ec6f7a)
+[1.30.1](https://vebanuba.notion.site/1-30-1-6b90d19271b741b0b8353f7a1b92d061)  
+[1.30.0](https://vebanuba.notion.site/1-30-0-35e745d478b648199e38e86c432486e4)  
+[1.29.2](https://vebanuba.notion.site/1-29-2-d44fcd46e81c4916a13bc5fc3eb5fb4b)  
+[1.29.1](https://vebanuba.notion.site/1-29-1-e06a110ac0314b2e937adbb5621efee0)  
+[1.29.0](https://vebanuba.notion.site/1-29-0-95c88eeb25074e19ba9b11796e845432)  
+[1.28.5](https://vebanuba.notion.site/1-28-5-d64de053cf1b44ea81adb88c29b9996a)  
+[1.28.0](https://vebanuba.notion.site/1-28-0-ac7b1a919eb7443ea7caef9eae22d2a3)  
+[1.27.0](https://vebanuba.notion.site/1-27-0-591e38e8166c4833b96f96db05ead258)  
+[1.26.9](https://vebanuba.notion.site/1-26-9-73460541f0c1414ab67073e07b866e4f)  
+[1.26.8](https://vebanuba.notion.site/1-26-8-9ca76f004afc4d38a481ba8e44826713)  
+[1.26.7](https://vebanuba.notion.site/1-26-7-8653533d4ce64203ad04159d942212f6)  
+[1.26.6](https://vebanuba.notion.site/1-26-6-4c17e9a765934c2ba7da3440b1cfbe8b)  
+[1.26.5](https://vebanuba.notion.site/1-26-5-91785d18a6c64c6e86dc48ca06e3d458)  
+[1.26.4](https://vebanuba.notion.site/1-26-4-294c72f4be5944938a4e506c65435333)  
+[1.26.3](https://vebanuba.notion.site/1-26-3-8c4fb0d732eb4f2582b3aaeab28ef399)  
+[1.26.2](https://vebanuba.notion.site/1-26-2-2aa271695c974ac7b90799a0b2a108d9)   
+[1.26.1](https://vebanuba.notion.site/1-26-1-0edacf053a88499cbb51e6f065274dd3)   
+[1.26.0](https://vebanuba.notion.site/1-26-0-5e65daee7e8c41e2bebbf4d8a50e1cc4)    
