@@ -1,16 +1,16 @@
 # FAQ  
 These are the answers to the most common questions asked about our SDK.
 
-- [What is the size of Video Editor SDK size?](#What-is-the-size-of-Video-Editor-SDK-size?)
+- [What is the size of Video Editor SDK size?](#what-is-the-size-of-video-editor-sdk-size)
 - [How do I start the Video Editor with a preselected audio track?](#how-do-i-start-the-video-editor-with-a-preselected-audio-track)
 - [How do I use the Video Editor several times from different entry points?](#how-do-i-use-the-video-editor-several-times-from-different-entry-points)
 - [How do I add a color filter (LUT)?](#how-do-i-add-a-color-filter-lut)
 - [I want to enabled slideshow animation.](#i-want-to-enable-slideshow-animation)
 - [I want to change cursor color.](#i-want-to-change-cursor-color)
 - [I want to change progress bar position.](#i-want-to-change-progress-bar-position)
-- [How can I get a track name of the audio used in my video after export?](#12-how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
+- [How can I get a track name of the audio used in my video after export?](#how-can-i-get-a-track-name-of-the-audio-used-in-my-video-after-export)
 - [I want to change the font.](#i-want-to-change-the-font)
-- [The file “luts” couldn’t be opened because there is no such file.](#15-the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
+- [The file “luts” couldn’t be opened because there is no such file.](#the-file-luts-couldnt-be-opened-because-there-is-no-such-file)
 - [I want to add audio filters.](#i-want-to-add-audio-filters)
 - [I want to change icons and name for effects.](#i-want-to-change-icons-and-name-for-effects)
 - [I want to turn off Drafts feature.](#i-want-to-turn-off-drafts-feature)
@@ -19,18 +19,17 @@ These are the answers to the most common questions asked about our SDK.
 - [I want to get exported video metadata.](#i-want-to-get-exported-video-metadata)
 - [I want to change codec type from h264 to h265.](#i-want-to-change-codec-type-from-h264-to-h265)
 - [How do I specify the video file saving directory?](#how-do-i-specify-the-video-file-saving-directory)
-- [The problem of using optional frameworks and bitcode together.](#the-problem-of-using-optional-frameworks-and-bitcode-together)
 - [How do I change the language (how do I add new locale support)?](#how-do-i-change-the-language-how-do-i-add-new-locale-support)
 - [How can I change the extension of the exported video?](#how-can-i-change-the-extension-of-the-exported-video)
-- [What's Face AR and AR Cloud and how can I use them?](#what's-face-ar-and-ar-cloud-and-how-can-i-use-them?)
-- [How can I customize the video recording](#how-can-i-customize-the-video-recording)
-- [How can I customize the built-in gallery and is there a way to use a completely custom implementation instead?](#how-can-i-customize-the-built-in-gallery-and-is-there-a-way-to-use-a-completely-custom-implementation-instead?)
-- [What are the ways of adding the audio content to edited video?](#what-are-the-ways-of-adding-the-audio-content-to-edited-video?)
-- [I want to change the order of masks, video effects or filters](#i-want-to-change-the-order-of-masks,-video-effects-or-filters)
-- [How can I setup the stickers picker?](#how-can-i-setup-the-stickers-picker?)
-- [Is it possible to disable the Trim screen?](#is-it-possible-to-disable-the-trim-screen?)
-- [What are the options of configuring the Sharing screen?](#what-are-the-options-of-configuring-the-sharing-screen?
-- [Is it possible to disable the transition effects?](#is-it-possible-to-disable-the-transition-effects?)
+- [What's Face AR and AR Cloud and how can I use them?](#whats-face-ar-and-ar-cloud-and-how-can-i-use-them)
+- [How can I customize the video recording?](#how-can-i-customize-the-video-recording)
+- [How can I customize the built-in gallery and is there a way to use a completely custom implementation instead?](#how-can-i-customize-the-built-in-gallery-and-is-there-a-way-to-use-a-completely-custom-implementation-instead)
+- [What are the ways of adding the audio content to edited video?](#what-are-the-ways-of-adding-the-audio-content-to-edited-video)
+- [I want to change the order of masks, video effects or filters](#i-want-to-change-the-order-of-masks-video-effects-or-filters)
+- [How can I setup the stickers picker?](#how-can-i-setup-the-stickers-picker)
+- [Is it possible to disable the Trim screen?](#is-it-possible-to-disable-the-trim-screen)
+- [What are the options of configuring the Sharing screen?](#what-are-the-options-of-configuring-the-sharing-screen)
+- [Is it possible to disable the transition effects?](#is-it-possible-to-disable-the-transition-effects)
 
 ### What is the size of Video Editor SDK size?
 | Options | MB      | Note |
@@ -567,7 +566,7 @@ Video Editor SDK has built in integration with Banuba AR Cloud - remote storage 
 
 Please follow [Face AR and AR Cloud integration guide](guide_far_arcloud.md) if you are interested in disabling Face AR, integrating AR Cloud, managing AR effects and many more.
 
-### How can I customize the video recording
+### How can I customize the video recording?
 
 Video editor supports functionality allowing to record video using iOS camera. There are many features, configurations and styles that will help you to record video easily in an excellent quality.  
 Please follow [video recording integration guide](guide_video_recording.md) to know more about available features.
