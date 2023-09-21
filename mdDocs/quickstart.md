@@ -8,7 +8,6 @@
 - [Implement export](#Implement-export)
 - [Launch](#Launch)
 - [Advanced integration](#Advanced-integration)
-- [FAQ](#FAQ)
 - [Dependencies and licenses](#Dependencies-and-licenses)
 - [Releases](#Releases)
 
@@ -173,10 +172,10 @@ Video Editor supports multiple launch methods described in [this guide](faq.md#L
 Video editor has built in UI/UX experience and provides a number of customizations you can use to meet your requirements.
 
 **AVAILABLE**  
-:white_check_mark: Use your branded icons, colors, and text styles. [See details](faq.md)  
+:white_check_mark: Use your branded icons, colors, and text styles. [See details](faq.md#i-want-to-use-custom-icons)  
 :white_check_mark: Localize and change text resources. Default locale is :us:  
-:white_check_mark: Make content you want i.e. a number of video with different resolutions  and durations, an audio file. [See details](#Configure-export-flow)  
-:white_check_mark: Masks and filters order. [See details](faq.md)
+:white_check_mark: Make content you want i.e. a number of video with different resolutions  and durations, an audio file. [See details](guide_export.md)  
+:white_check_mark: Masks and filters order. [See details](faq.md#i-want-to-change-the-order-of-masks-video-effects-or-filters)
 
 NOT AVAILABLE  
 :x: Change layout  
@@ -205,7 +204,7 @@ Check out the list of [Frequently Asked Questions](faq.md) to know more about fe
 [See all dependencies and licenses](3rd_party_licences.md)
 
 ## Latest Releases  
-[1.30.2](https://vebanuba.notion.site/1-30-2-a0ec2ae1eeea42a59c629834f6ec6f7a)
+[1.30.2](https://vebanuba.notion.site/1-30-2-a0ec2ae1eeea42a59c629834f6ec6f7a)  
 [1.30.1](https://vebanuba.notion.site/1-30-1-6b90d19271b741b0b8353f7a1b92d061)  
 [1.30.0](https://vebanuba.notion.site/1-30-0-35e745d478b648199e38e86c432486e4)  
 [1.29.2](https://vebanuba.notion.site/1-29-2-d44fcd46e81c4916a13bc5fc3eb5fb4b)  
