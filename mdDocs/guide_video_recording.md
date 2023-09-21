@@ -35,6 +35,7 @@ The class includes many internal config classes that are very useful if you want
 | isAudioRateEqualsVideoSpeed |      Bool; Default ```false```      | Applies selected by the user video speed to audio
 | isGalleryButtonHidden |      Bool; Default ```false```      | defines if gallery button located at bottom-right should be hidden. ```true``` will hide the button. 
 | supportMultiRecords |      Bool; Default ```true```       | defines if the user can record multiple video files
+| takeAudioDurationAsMaximum | Bool; Default ```false``` | Limits the maximum length of a video recording by the duration of audio 
 
 Next very handy config class is ```VideoEditorDurationConfig``` that is responsible for customizing video recording durations.
 
