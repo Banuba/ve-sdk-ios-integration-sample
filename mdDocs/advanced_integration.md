@@ -36,13 +36,6 @@ Visit [Gallery guide](guide_gallery.md) to get more details how to customize or 
 Video Editor has built in support and API for browsing, playing and applying audio while making video content on various screens.  
 Follow [Video Editor audio content integration guide](guide_audio_content.md) to know more details about using audio and API in Video Editor.
 
-## Popups
-Visit [Popups guide](guide_popups.md) to know more about usage popups in video editor.
-
-## Passing Apple Store review
-If you are using an old version of VE SDK, Apple Store may reject your app due to use of TrueDepth API.  
-Please [follow guidelines](passing_apple_review.md) to successfully pass the Apple Store review or update your app to use the SDK v1.26.0 or newer that do not link with ARKit framework. 
-
 ## Launch methods
 Video Editor supports multiple launch entry points that are declared in ```PresentEventOptions.EntryPoint``` to meet all your requirements.
 ``` swift
@@ -155,17 +148,6 @@ Each screen can be modified to your liking. You can change icons, colors, text a
 
 Note that layouts and screen order can't be changed. You can, however, [ask](https://www.banuba.com/faq/kb-tickets/new) us to customize the mobile video editor UI as a separate contract.
 
-Below see the list of screens with links to their detailed description and notes on modifying them
-
-1. [Editor screen](editor_styles.md)
-2. [Trim screens](trim_styles.md)
-3. [Overlay screens](overlayEditor_styles.md)
-4. [Gallery screen](guide_gallery.md)
-5. [Alert screens](guide_popups.md)
-6. [Cover screen](cover_style.md)
-
-The SDK allows overriding icons, colors, typefaces and many more configuration entities. Every SDK screen has its own set of styles.
-
 ### Configure masks, video effects and filters order
 
 The SDK allows to reorder masks and filters in the way you need. To achieve this use the property ```preferredLutsOrder``` and ```preferredMasksOrder```
@@ -214,7 +196,7 @@ Stickers are interactive objects (gif images) that can be added to the video rec
 
 By default [**Giphy API**](https://developers.giphy.com/docs/api/) is used to load stickers. All you need is just to pass your personal Giphy Api Key into **giphyAPIKey** parameter in GifPickerConfiguration entity.
 
-GIPHY doesn't charge for their content. The one thing they do require is attribution. Also, there is no commercial aspect to the current version of the product (no advertisements, etc.) To use it, please, [add "Search GIPHY" text attribution](overlayEditor_styles.md#string-resources) to the search bar.
+GIPHY doesn't charge for their content. The one thing they do require is attribution. Also, there is no commercial aspect to the current version of the product (no advertisements, etc.) To use it, please, add "Search GIPHY" text attribution to the search bar. The placeholder of the search bar is specified by com.banuba.searchGif.placeholder key in Localizable.strings file.
 
 ### Configure media content
 
@@ -233,6 +215,79 @@ Also there is an option to use **your own implementation of the gallery**. This 
 ### Configure additional Video Editor SDK features
 
 1. [Transition effects](transitions_styles.md)
+
+### Disable trim screen
+
+For now, it's possible to turn off the trimmer screen after the camera screen.
+
+The trimmer screen will still be accessible after importing media files from the gallery.
+
+To disable it just change the property ```supportsTrimRecordedVideo``` to ```false``` in ```FeatureConfiguration``` entity.
+
+``` swift
+func createVideoEditorConfig() -> VideoEditorConfig {
+  var config = VideoEditorConfig()
+  ...
+  // Default is false
+  config.featureConfiguration.supportsTrimRecordedVideo = true
+  ...
+  return config
+}
+
+```
+
+### Configure sharing screen
+
+Sharing screen is an **optional** screen which can be added to the application in order to add Facebook sharing flow just after video export. 
+
+It can be configured by `SharingScreenConfiguration` which is provided to the `presentSharingViewController` function that shows the screen.
+
+```swift
+  /// Modally presents Video editor's sharing video view controller
+  /// - Parameters:
+  ///   - hostController: The view controller to display over.
+  ///   - configuration: Sharing view controller configuration.
+  ///   - mainVideoUrl: Main video to share with facebook and instagram.
+  ///   - videoUrls: Set of video urls to share with sharing iOS controller if needed.
+  ///   - animated: Pass true to animate the presentation.
+  ///   - completion: The block to execute after the feedback buttons tapped finishes.
+  static public func presentSharingViewController(
+    from hostController: UIViewController,
+    configuration: SharingScreenConfiguration,
+    mainVideoUrl: URL,
+    videoUrls: [URL],
+    previewImage: UIImage,
+    animated: Bool,
+    completion: (() -> Void)?
+  )
+```
+
+`SharingScreenConfiguration.sharingModels` describes what kind of sharing services are available at sharing screen.
+
+`SharingScreenConfiguration.facebookId` is a required option for Facebook reels and stories.
+
+### Enabling/Disabling transition effects
+
+Transitions are visual effects applying to the segue between two videos. They are provided with Banuba Video Editor SDK **by default**.
+
+To disable or enable transitions set the flag ```useTransitions``` inside ```FeatureConfiguration``` class to false or true respectively. 
+ 
+ ``` swift
+  /// Allows you to use transition effects between videos
+  /// Defaults is true
+  public var useTransitions: Bool
+ ```
+ 
+Example:
+ 
+ ``` swift
+ let config = VideoEditorConfig()
+ config.featureConfiguration.useTransitions = true
+ ```
+
+**Important Note!** 
+
+Transition effects are not being played if the closest video (either to the left or to the right of transition icon) is very short.
 
 ### Icons
 

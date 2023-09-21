@@ -16,59 +16,12 @@ pod 'BanubaVideoEditorGallerySDK', banuba_sdk_version #optional
 
 ## Customize default gallery
 The gallery is used in app when you want to select a photo or video stored on your phone.
-Implement ```GalleryConfiguration```  and set it to ```VideoEditorConfig.combinedGalleryConfiguration``` 
-to customize gallery.  
-You can use allowed properties
-
-- [videoResolution](../Example/Example/VideoEditorModule.swift#L396) - editor options for rendering video
-- [galleryItemConfiguration](../Example/Example/VideoEditorModule.swift#L398) - gallery item style for collection view cell
-- [visibleTabsInGallery](../Example/Example/VideoEditorModule.swift#L415) - visible tabs for gallery
-- [closeButtonConfiguration](../Example/Example/VideoEditorModule.swift#L406) - close button style
-- [albumButtonConfiguration](../Example/Example/VideoEditorModule.swift#L407) - album button style
-- [collectionInfoHeaderConfiguration](../Example/Example/VideoEditorModule.swift#L396) - gallery header view
-- [nextButtonConfiguration](../Example/Example/VideoEditorModule.swift#L408) - next button style
-- [noItemsLabelConfiguration](../Example/Example/VideoEditorModule.swift#L409) - 'no photos' and 'no videos' label title style
-- [layoutConfiguration](../Example/Example/VideoEditorModule.swift#L410) - collection view layout for gallery items
-- [topBarBlurColor](../Example/Example/VideoEditorModule.swift#L411) - top bar blur color
-- [clearSelectionButtonConfiguration](../Example/Example/VideoEditorModule.swift#L412) - clear selection button style
-- [galleryTypeButton](../Example/Example/VideoEditorModule.swift#L413) - gallery type buttons' style
-- [galleryTypeUnderlineColor](../Example/Example/VideoEditorModule.swift#L414) - color for underline view
-- [isPhotoSequenceAnimationEnabled](../Example/Example/VideoEditorModule.swift#L396) - should use animation for photo sequences
-- [importItemsLabelConfiguration](../Example/Example/VideoEditorModule.swift#L396) - import items label style
-- [bottomViewConfiguration](../Example/Example/VideoEditorModule.swift#L396) - bottom view
-- [visibleTabsInGallery](../Example/Example/VideoEditorModule.swift#L415) - visible tabs for gallery
-- [isCloseButtonHidden](../Example/Example/VideoEditorModule.swift#L396) - describes if close button hidden
-- [backgroundColor](../Example/Example/VideoEditorModule.swift#L396) - view background color
-- [maximumSelectedCountFromGallery](../Example/Example/VideoEditorModule.swift#L396) - the maximum number of items can be selected from gallery
-
-![img](screenshots/Gallery.png)
-
-![img](screenshots/GalleryLocalization.png)
-
-| Key        |      Value      |   Description |
-| ------------- | :----------- | :------------- |
-| No matching files found in gallery | No matching files found in gallery | No photo in the combined gallery
-| No matching photos found in gallery | No photos found | No photo in gallery
-| No matching video found in gallery | No videos found | No video in gallery
-| Too much, %d - max number of photos | Too much, %d - max number of photos | User selected too many photos in the gallery
-| You can choose %i videos | You can choose %i videos | Shown when the user tries to add a file to import beyond what is possible
-| Error loading images | Error loading images | Failed to download photos for slideshow
-| Failed to create video | Failed to create video | Failed to export a video
-| BanubaVideoEditor.Gallery.ImageTabTitle | Image | Gallery image tab title
-| BanubaVideoEditor.Gallery.VideoTabTitle | Video | Gallery video tab title
-| BanubaVideoEditor.Gallery.AllPhotosTitle | All Photos | Gallery custom All Photos title
-| BanubaVideoEditor.Gallery.RecentPhotosTitle | Recent | Gallery Recent Photos title
-| BanubaVideoEditor.Gallery.SelectItems | Select items | Gallery selection hint
-| BanubaVideoEditor.Gallery.ImportSingleVideo | Import 1 video | Import single video template
-| BanubaVideoEditor.Gallery.ImportMultipleVideos | Import %d videos | Import multiple videos template
-| BanubaVideoEditor.Gallery.ImportSingleImage | Import 1 image | Import single image template
-| BanubaVideoEditor.Gallery.ImportMultipleImages | Import %d images | Import multiple images template
-
+Implement ```GalleryConfiguration```  and set it to ```VideoEditorConfig.combinedGalleryConfiguration``` to customize gallery.  
 
 ## Implement custom gallery
 Please follow these steps to integrate you gallery into the SDK.
 
-## Step 1
+### Step 1
 Implement custom `UIViewController` inherited from `GalleryViewController`
 
 ```swift
@@ -176,7 +129,7 @@ Implement custom `UIViewController` inherited from `GalleryViewController`
     }
 ```
 
-## Step 2
+### Step 2
 Implement custom `UIViewController` inherited from `AlbumsViewController`
 
 ```swift
@@ -212,7 +165,7 @@ Implement custom `UIViewController` inherited from `AlbumsViewController`
     }
 ```
 
-## Step 3
+### Step 3
 Provide your custom gallery to `BanubaVideoEditorSDK`. Please follow these steps:
 - Create your own viewControllerFactory conforms `GalleryViewControllerFactory`
 
@@ -263,37 +216,3 @@ Provide your custom gallery to `BanubaVideoEditorSDK`. Please follow these steps
         externalViewControllerFactory: viewControllerFactory
     )
 ```
-
-
-## Progress screen
-
-```ProgressViewController``` shows progress while long asynchronous task is in progress i.e. import media from gallery or export media content. Follow this guide to customize. ProgressView. To apply customization for Gallery you have to update appropriate configuration in VideoEditorConfiguration. To apply customization for Export process refer to these lines
-
-![img](screenshots/ProgressViewConfiguration.png)
-
-Implement ```ProgressViewConfiguration```  and set it to ```VideoEditorConfig.progressViewConfiguration``` 
-to customize progress.  
-You can use allowed properties
-
-- [messageConfiguration](../Example/Example/VideoEditorModule.swift#L471) - message title
-- [tooltipMessageConfiguration](../Example/Example/VideoEditorModule.swift#L142) - tooltip message
-- [cancelButtonTextConfiguration](../Example/Example/VideoEditorModule.swift#L139) - cancel button text
-- [cancelButtonBorderConfiguration](../Example/Example/VideoEditorModule.swift#L138) - cancel button border 
-- [cancelButtonBackgroundConfiguration](../Example/Example/VideoEditorModule.swift#L134) - cancel button background
-- [backgroundConfiguration](../Example/Example/VideoEditorModule.swift#134) - progress background
-- [backgroundViewBlurStyle](../Example/Example/VideoEditorModule.swift#L134) - background view blur style
-- [progressBarColor](../Example/Example/VideoEditorModule.swift#L134) - progress bar color
-- [progressBarHeight](../Example/Example/VideoEditorModule.swift#L135) - progress bar height
-- [progressBarCornerRadius](../Example/Example/VideoEditorModule.swift#L136) - progress bar corner radius
-
-| Key        |      Value      |   Description |
-| ------------- | :----------- | :------------- |
-| com.banuba.alert.progressView.agreeButtonTitle | Retry | Retry button title in alert
-| com.banuba.alert.progressView.disagreeButtonTitle | Cancel | Ability to cancel
-| com.banuba.alert.progressView.importingMedia | Importing media | Message about importing media in gallery
-| com.banuba.alert.progressView.exportingVideo | Exporting video | Exporting video message
-| com.banuba.alert.progressView.tooltipMessage | Please, don't lock your screen or switch to other apps | Tooltip message for a user
-| com.banuba.alert.progressView.exportVideoInterrupted | Export interrupted | Message about error interrupting export process
-
-Failed async operation alert
-![img](screenshots/ContentUploadingFailedAlert.png)

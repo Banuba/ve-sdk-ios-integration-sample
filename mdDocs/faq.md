@@ -24,10 +24,10 @@ These are the answers to the most common questions asked about our SDK.
 - [How can I change the extension of the exported video?](#how-can-i-change-the-extension-of-the-exported-video)
 
 ### What is the size of Video Editor SDK size?
-| Options | Mb      | Note |
+| Options | MB      | Note |
 | -------- | --------- | ----- |
-| :white_check_mark: Face AR SDK + bitcode enabled  | 60 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
-| :x: Face AR SDK + bitcode enabled | 47 | no AR effects  |
+| :white_check_mark: Face AR SDK  | 65 | AR effect sizes are not included. AR effect takes 1-3 MB in average.
+| :x: Face AR SDK | 23 | no AR effects  |
 
 You can either include the AR filters in the app or have users download them from the [AR cloud](#Configure-AR-cloud) to dramatically decrease the app size.
 
@@ -98,11 +98,11 @@ For example on your tap button action:
 
 Color Filters (LUTs) are special graphics files that are placed in the / [luts directory](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) inside the main project folder.
 
-To add your own icon to be used to represent that specific effect in the list, you must place it in the / [assets folder](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/Filters%20Preview).
+To add your own icon to be used to represent that specific effect in the list, you must place it in the / [assets folder](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/ColorEffectsPreview).
 
 The icon resource name must match the image file name in the / luts directory and end with ```_preview```.
 
-The display name for the resource is set in the [localization files](../Example/Example/en.lproj/Localizable.strings#L353).
+The display name for the resource is set in the [localization files](../Example/Example/en.lproj/Localizable.strings#L275).
 
 The key for the translation string must start with ```com.banuba.filter.name.{lut file name}``` and end with the name of the lut file.
 
@@ -413,20 +413,12 @@ In ```ExportVideoConfiguration``` set the desired path in fileURL parameter.
 ]
 ```
 
-### The problem of using optional frameworks and bitcode together.
-
-Now you can enable bitcode in your project only if it includes all VideoEditor frameworks(optional and required). 
-
-These are restrictions on the use of bitcode by Apple and at the moment it cannot be bypassed from our side.
-
-If you don't use optional frameworks, you should disable bitcode in order to successfully upload your app to the Apple Connect.
-
 ### How do I change the language (how do I add new locale support)?
 
 There is no special language switching mechanism in the Video Editor SDK (VE SDK).
 
 Out of the box, the VE SDK includes support for two locales: English (default) and Russian. If you need to support any other locales, you can do it according to the standard iOS way. See how [Create locale directories and resource files](https://developer.apple.com/documentation/xcode/localization) for more details. After adding a new locale resource file into your application with integrated VE SDK, you need to re-define the VE SDK strings keys with new locale string values.
-To do that you need to add all needed string keys in the new locale `Localizable.strings` file. You can find the main VE SDK string keys you need in the [Configure screens](https://github.com/Banuba/ve-sdk-ios-integration-sample#Configure-screens) doc page. E.g. string keys of the Overlay screen you can find [here](overlayEditor_styles.md#string-resources).
+To do that you need to add all needed string keys in the new locale `Localizable.strings` file. You can find the main VE SDK string keys you need in the [Localizable.strings](/Example/Example/en.lproj/Localizable.strings) file.
 The newly added locale will be applied after the device language is changed by system settings.
 
 ### How can I change the extension of the exported video?
@@ -436,7 +428,7 @@ To save the video in the format you want, you just need to add the appropriate `
 let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
 ```
 
-See example in [sample](../Example/Example/ViewController.swift#L171).
+See example in [sample](../Example/Example/ViewController.swift#L145).
 
-See all formats supported for video export [here](integration.md#supported-media-formats).
+See all formats supported for video export [here](guide_export.md).
 
