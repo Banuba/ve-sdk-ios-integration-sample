@@ -9,7 +9,7 @@
 Video Editor SDK includes built in solution for the gallery where the user can pick any video or image and use it while making video.  
 To connect Banuba Gallery screen and its functionality you need to add the dependency in [Podfile](../Example/Podfile#L22) file.
 ```Podfile
-banuba_sdk_version = '1.26.6'
+banuba_sdk_version = '1.30.2'
 
 pod 'BanubaVideoEditorGallerySDK', banuba_sdk_version #optional
 ```
