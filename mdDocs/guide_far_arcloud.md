@@ -34,7 +34,7 @@ Any AR effect downloaded from ```AR Cloud``` is cached on the user's device.
 
 Add dependency to [Podfile](../Example/Podfile#L11) to integrate ```AR Cloud``` into your project.
 ```diff
-+  pod 'BanubaARCloudSDK', '1.26.6'
++  pod 'BanubaARCloudSDK', '1.30.2'
 ```
 
 Since the link to your AR Cloud bucket is included into the license token. AR effects will appear once you set the license token with AR Cloud link.
@@ -58,7 +58,7 @@ These are names of specific directories located in ```bundleEffects``` or on ```
 Video Editor SDK can work without Face AR SDK.
 Change [Podfile](../Example/Podfile) to disable Face AR SDK.
 ```diff
-banuba_sdk_version = '1.26.6'
+banuba_sdk_version = '1.30.2'
 
 -  pod 'BanubaEffectPlayer', banuba_sdk_version
 -  pod 'BanubaSDK', banuba_sdk_version
@@ -81,53 +81,4 @@ Please move this effect while integrating Video Editor SDK into your project.
 [Background](../Example/Example/bundleEffects/Background) effect allows to apply various images or videos as a background while recording video content on the camera screen.  
 The AR effect requires Face AR and can be added to your license.  
 Please request this feature from Banuba business representatives.
-
-First, add ```Background``` effect either to [bundleEffects](../Example/Example/bundleEffects) or  ```AR Cloud```.
-
-![img](../mdDocs/screenshots/AdditionalEffectsMediaPicker.png)
-
-Use `EffectAdditionalMediaPickerConfiguration` to configure media picker:
-
-```swift
-  public struct EffectAdditionalMediaPickerConfiguration {
-    /// Gallery asset item configuration
-    public var galleryAssetItemConfiguration: GalleryAssetItemConfiguration
-    /// Info label configuration
-    public var infoLabelConfiguration: TextConfiguration
-    /// Allow gallery access button configuration
-    public var allowGalleryAccessButtonConfiguration: BanubaButtonConfiguration
-    /// No media label configuration
-    public var noMediaLabelConfiguration: TextConfiguration
-    /// Open gallery button configuration
-    public var openGalleryButtonConfiguration: ImageButtonConfiguration
-  }
-```
-
-In this example, custom label text is used in the picker
-```diff
-  func createVideoEditorConfig() -> VideoEditorConfig {
-    var config = VideoEditorConfig()
-    ...
-    config
-      .recorderConfiguration
-      .recorderEffectsConfiguration
-      .effectAdditionalMediaPickerConfiguration
-+      .infoLabelConfiguration.text = "My custom Info Label text"
-    ...
-    return config
-  }
-```
-Use the following key-values to localize media picker string resources.
-
-```swift
-// MARK: - Effect additional media picker text resource
-
-/* No media files found in gallery for adding to the effect */
-"com.banuba.videoEditor.recorder.additionalEffects.NoMediaFound" = "No media found";
-/* No media files found in gallery for adding to the effect */
-"com.banuba.videoEditor.recorder.additionalEffects.AllowAccess" = "Allow Access";
-/* Helpers info message for changing video background */
-"com.banuba.videoEditor.recorder.additionalEffects.selectMediaToChangeBackgroundMessage" = "Select media to change the background:";
-/* Helpers info message for providing acces to a user gallery */
-"com.banuba.videoEditor.recorder.additionalEffects.allowAccesToChangeBackgroundMessage" = "Allow access to Gallery to change the background";
-```
+Add ```Background``` effect either to [bundleEffects](../Example/Example/bundleEffects) or  ```AR Cloud```.

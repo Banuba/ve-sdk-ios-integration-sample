@@ -12,21 +12,15 @@
 
 ## Quality details
 Subsequent table describes video quality details used for video recording in various resolutions with h264 codec.
-If h265(HEVC) codec is used for recording video the values listed below will be reduced by approximately 15%.
+If h265(HEVC) codec is used for recording video the values listed below will be reduced by approximately 34%.
 
-| Recording speed | 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) |  HD(720 x 1280) | FHD(1080 x 1920) |
-| --------------- | --------------- | --------------- | --------------- | --------------- | ---------------- |
-| 1x(Default)     | 1000             | 2500            | 3000            | 5000            | 8000             |
-| 0.5x            | 1000             | 2500            | 3000            | 5000            | 8000             |
-| 2x              | 1000             | 2500            | 3000            | 5000            | 8000             |
-| 3x              | 1000             | 2500            | 3000            | 5000            | 8000             |  
+| Recording speed            | 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) |  HD(720 x 1280) | FHD(1080 x 1920) | QHD(2560 x 1440) | 4K(3860 x 2160) |
+| -------------------------- | --------------- | --------------- | --------------- | --------------- | ---------------- | ---------------- | --------------- |
+| 0.5x, 1x (Default), 2x, 3x | 1.2 Mbits       | 2 Mbits         | 2.4 Mbits       | 3.6 Mbits       | 5.8 Mbits        | 16 Mbits         | 36 Mbits        |
 
 ## Implement configurations
 ```VideoEditorConfig``` is the core class used for customizing all features in Video Editor SDK.
 The class includes many internal config classes that are very useful if you want to create your custom experience.  
-
-The SDK includes default implementations for all configuration classes however you can customize them
-and provide your own implementations to meet your requirements in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L81).  
 
 ```RecorderConfiguration``` is the main configuration class in ```VideoEditorConfig``` and is used for video recording functionality.
 
@@ -41,12 +35,11 @@ and provide your own implementations to meet your requirements in [VideoEditorMo
 | isAudioRateEqualsVideoSpeed |      Bool; Default ```false```      | Applies selected by the user video speed to audio
 | isGalleryButtonHidden |      Bool; Default ```false```      | defines if gallery button located at bottom-right should be hidden. ```true``` will hide the button. 
 | supportMultiRecords |      Bool; Default ```true```       | defines if the user can record multiple video files
+| takeAudioDurationAsMaximum | Bool; Default ```false``` | Limits the maximum length of a video recording by the duration of audio 
 
-Please [check out](../Example/Example/VideoEditorModule.swift#L917) how to set up custom video resolution for video recording.  
+Next very handy config class is ```VideoEditorDurationConfig``` that is responsible for customizing video recording durations.
 
-Next very handy config class os ```VideoEditorDurationConfig``` that is responsible for customizing video recording durations.
-:exclamation: Important    
-All values are in seconds.
+:exclamation: Important. All values are in seconds.
 
 | Property |                           Values                            | Description |
 | ------------- |:-----------------------------------------------------------:| :------------- |
@@ -122,8 +115,6 @@ config.recorderConfiguration.timerConfiguration.options = [
 ```
 
 Moreover, you can implement custom countdown animation for time feature as well. 
-This sample includes [demo implementation](../Example/Example/VideoEditorModule.swift#L1122) 
-of countdown animation that you can use and set it to [ViewControllerFactory.countdownTimerViewFactory](../Example/Example/VideoEditorModule.swift#L1113).
 
 ```diff
 ...
@@ -148,89 +139,9 @@ var config = VideoEditorConfig()
 config.isHandfreeEnabled = false
 ```
 
-The following properties are useful to customize feature appearance.
-
-- [selectorColor](../Example/Example/VideoEditorModule.swift#L831) - selector view color
-- [selectorTextColor](../Example/Example/VideoEditorModule.swift#L832) - selector view text color
-- [selectorTextFont](../Example/Example/VideoEditorModule.swift#L855) - selector view text font
-- [selectorBorderWidth](../Example/Example/VideoEditorModule.swift#L856) - selector view border width
-- [selectorBorderColor](../Example/Example/VideoEditorModule.swift#L857) - selector view border color
-- [optionBackgroundColor](../Example/Example/VideoEditorModule.swift#L833) - timer option selection view background color
-- [optionCornerRadius](../Example/Example/VideoEditorModule.swift#L834) - timer option selection view corner radius
-- [optionTextColor](../Example/Example/VideoEditorModule.swift#L835) - view text color
-- [optionTextFont](../Example/Example/VideoEditorModule.swift#L858) - view text font
-- [backgroundColor](../Example/Example/VideoEditorModule.swift#L864) - timer option view background color
-- [cornerRadius](../Example/Example/VideoEditorModule.swift#L837) - HandsFreeViewController corner radius
-- [sliderCornerRadius](../Example/Example/VideoEditorModule.swift#L838) - slider corner radius
-- [barCornerRadius](../Example/Example/VideoEditorModule.swift#L839) - bar corner radius
-- [selectorEdgeInsets](../Example/Example/VideoEditorModule.swift#L840) - selector views edge insets
-- [activeThumbAndLineColor](../Example/Example/VideoEditorModule.swift#L841) - color of the activated switch of active lines in slider
-- [inactiveThumbAndLineColor](../Example/Example/VideoEditorModule.swift#L842) - color of the inactivated switch of inactive lines in slider
-
-![img](screenshots/HandsfreeConfiguration.png)
-
-- [buttonCornerRadius](../Example/Example/VideoEditorModule.swift#L844) - button corner radius
-- [buttonBackgroundColor](../Example/Example/VideoEditorModule.swift#L845) - button background color
-- [switchOnTintColor](../Example/Example/VideoEditorModule.swift#L846) - switch background color
-- [modeTitleColor](../Example/Example/VideoEditorModule.swift#L848) - mode title color
-- [dragTitleColor](../Example/Example/VideoEditorModule.swift#L849) - drag title color
-- [buttonTitleColor](../Example/Example/VideoEditorModule.swift#L850) - button title color
-- [buttonTitleFont](../Example/Example/VideoEditorModule.swift#L860) - button title font
-- [dragTitleFont](../Example/Example/VideoEditorModule.swift#L859) - drag title font
-- [currentValueTextColor](../Example/Example/VideoEditorModule.swift#L851) - current value text color
-- [minimumValueTextColor](../Example/Example/VideoEditorModule.swift#L852) - the minimum value text color
-- [maximumValueTextColor](../Example/Example/VideoEditorModule.swift#L852) - the maximum value text color
-- [currentValueTextFont](../Example/Example/VideoEditorModule.swift#L861) - current value text font
-- [minimumValueTextFont](../Example/Example/VideoEditorModule.swift#L862) - the minimum value text font
-- [maximumValueTextFont](../Example/Example/VideoEditorModule.swift#L863) - the maximum value text font
-- [thumbLineViewBackgroundColor](../Example/Example/VideoEditorModule.swift#L864) - the thumb line view background color
-- [cursorViewColor](../Example/Example/VideoEditorModule.swift#L865) - cursor view color
-
-![img](screenshots/timerOptionBarColorConfiguration.png)
-
-Below are string resources are used by default for this feature, and you can customize them.
-![img](screenshots/HandsFreeLocalization.png)
-
-| Key        |      Value      |   Description |
-| ------------- | :----------- | :------------- |
-| hands.free.timer.title | Сountdown | Timer title text
-| hands.free.video.mode.title | Hands-free video mode | Mode title text
-| hands.free.video.drag.title | Drag to set video duration: | Drag title text
-| hands.free.btn.title | START RECORDING | Start recording button title
-| hands.free.seconds | %@ s | Seconds
-
-
 ## Configure record button appearance
 
 The record button is a main UI control on the camera screen which you can fully customize along with animation that is playing on tap.
-
-You can customize default implementation of ```RecordButtonConfiguration```.
-```swift
-var config = VideoEditorConfig()
-config.recorderConfiguration.recordButtonConfiguration.idleStrokeColor = UIColor.white.cgColor
-```
-
-All available properties of ```RecordButtonConfiguration```
-
-| Property |          Values           | Description |
-| ------------- |:-------------------------:| :------------- |
-| idleStrokeColor | CGColor | Color setups record button round color for idle state
-| strokeColor | CGColor | Color setups record button round color for capture state
-| gradientColors | [CGColor] | Colors setup record button gradient filling colors
-| circularTimeLineIdleWidth | CGFloat | Round line width for idle state
-| circularTimeLineCaptureWidth | CGFloat | Round line width for record state
-| normalImageName | String | Image name setups core image for idle state
-| recordImageName | String | Image name setups core image for record state
-| photoImageName | String | Image name setups core image for photo state
-| width | CGFloat | Record button width
-| height | CGFloat | Record button height
-| defaultColorButton | UIColor | Setup default colorn
-| videoRecordColorButton | UIColor | Setup color for video record state
-| takePhotoColorButton | UIColor | Setup color for take a photo state
-| externalCircleFullColor | CGColor | Setup full color for external circle
-| externalCircleStrokeColor | CGColor | Setup stroke color for external circle
-
-![img](screenshots/RecordButtonConfiguration.png)
 
 Implement ```RecordButtonProvider```, ```RecordButton```, ```RecordButtonDelegate``` protocols to create your custom recording button experience.
 
@@ -247,7 +158,7 @@ public protocol RecordButton: UIView {
 }
 
 public protocol RecordButtonDelegate: AnyObject {
-    var captureButtonMode: CaptureButtonViewMode { get }
+  var captureButtonMode: CaptureButtonViewMode { get }
   func recordButtonDidTakePhoto(_ recordButton: RecordButton)
   func recordButtonDidCancelTakePhoto(_ recordButton: RecordButton)
   func recordButtonDidStartVideoRecording(_ recordButton: RecordButton)
@@ -275,7 +186,7 @@ The feature is disabled by default and can be enabled if the license supports it
 
 The subsequent guide explains how to start and customize ```PIP```.
 
-First, create ```VideoEditorLaunchConfig``` in [ViewController](../Example/Example/ViewController.swift#L73) 
+First, create ```VideoEditorLaunchConfig``` in [ViewController](../Example/Example/ViewController.swift#L79) 
 and provide video content for the feature.
 
 ```diff
@@ -316,49 +227,7 @@ config.pipSettingsConfiguration?.layoutSettingsButtonsConfiguration = [
 ]
 ``` 
 
-Use the following properties of ```PIPSelectableCellConfiguration``` to change PIP cell appearance.
-
-| Property |           Values           | Description |
-| ------------- |:--------------------------:| :------------- |
-| identifier |   PIPPlayerLayoutSetting   | The button Identifier
-| switchCellConfiguration | PIPSwitchCellConfiguration | The PIP selectable cell switch config
-| cameraCellConfiguration | PIPCameraCellConfiguration | The PIP selectable cell camera config
-| croppingCellConfiguration | PIPCameraCellConfiguration | The PIP selectable cell cropping config. Only for React mode.
-| textConfiguration |     TextConfiguration      | The button text configuration.
-| imageConfiguration |     ImageConfiguration     | The default image configuration
-| borderWidth |          CGFloat           | The border width configuration
-| borderColor |          CGColor           | The border color configuration
-| isRoundedImageView |            Bool            | Is image view circable
-| cornerRadius |          CGFloat           | The corner radius configuration
-| backgroundColor |          UIColor           | The background color configuration.
-| additionalButtonWidth |  CGFloat; Default is ```130```   | Additional button width.
-| additionalButtonHeight |         CGFloat ; Default is ```32```         | Additional button height.
-
-
-## Configure camera screen appearance
-Use these configs to customize UI controls os camera screen.
-
-- [saveButton](../Example/Example/VideoEditorModule.swift#L904) - configuration for save button
-- [backButton](../Example/Example/VideoEditorModule.swift#L915) - configuration for back button
-- [removeButtonImageName](../Example/Example/VideoEditorModule.swift#L916) - configuration sets up the remove button UIImage
-- [additionalEffectsButtons](../Example/Example/VideoEditorModule.swift#L924) - array of button configurations used on camera screen
-- [speedBarButtons](../Example/Example/VideoEditorModule.swift#L978) - configuration for speed bar buttons
-- [galleryButton](../Example/Example/VideoEditorModule.swift#L984) - configuration for gallery button
-- [emptyGalleryImageName](../Example/Example/VideoEditorModule.swift#L997) - configuration for a certain button shown when gallery is empty
-- [regularRecordButtonPosition](../Example/Example/VideoEditorModule.swift#L1011) - value sets up the recording button position according to the screen bottom
-- [leftControlsBottomOffsetFromCaptureButton](../Example/Example/VideoEditorModule.swift#L1013) - value sets up the left controls position according to the recording button bottom position
-- [leftControlsLeftOffset](../Example/Example/VideoEditorModule.swift#L1014) - value sets up the left controls position according to the recording button leading edge
-- [sequenceHeight](../Example/Example/VideoEditorModule.swift#L1015) - configuration for sequence bar height
-- [videoCaptureButtonConfiguration](../Example/Example/VideoEditorModule.swift#L1033) - configuration for video recording button mode
-- [photoCaptureButtonConfiguration](../Example/Example/VideoEditorModule.swift#L1045) - configuration for photo taking button mode
-- [backroundMusicContainerConfiguration](../Example/Example/VideoEditorModule.swift#L1051) - configuration used for top centered music button
-- [floatingViewSeparatedLines](../Example/Example/VideoEditorModule.swift#L1053) - defines if floating view supports two lines
-- [effectSelectorContainerCornerRadius](../Example/Example/VideoEditorModule.swift#L1054) - defines effect selector container corner radius. Default is 8.0
-- [preferredStatusBarStyle](../Example/Example/VideoEditorModule.swift#L1055) - configuration for status bar style.
-
-![img](screenshots/RecorderConfiguration.png)
-
-Moreover, you can change the position for the music button.
+You can also change the position of the music button.
 Use ```additionalEffectsButtons``` and provide custom ```AdditionalEffectsButtonConfiguration``` with identifier  ```.sound```.
 ```swift
 let config = VideoEditorConfig()
@@ -375,57 +244,4 @@ config.recorderConfiguration.additionalEffectsButtons = [
 ] 
 ```
 
-Video Editor supports 3 options for positioning music button
-- ```bottom``` - <img src="screenshots/bottom.PNG" width="30%" height="auto" />
-- ```center``` - <img src="screenshots/center.PNG" width="30%" height="auto" />
-- ```top``` -  <img src="screenshots/top.PNG" width="30%" height="auto" />
-
-
-These string resources are used as default however you can customize them.
-
-| Key        |      Value      |   Description |
-| ------------- | :----------- | :------------- |
-| Music | Music | Music selection screen title
-| Delete | Delete | Audio track delete action
-| Voice | Voice | Title on the screen of the voice recorder
-| Yes | Yes | Used when the question is answered yes
-| No | No | Used when answering a negative question
-| Error | Error | Title of the message if an error occurs
-| Next | Next | Move to next screen
-| Publish | Publish | Publish video
-| Back | Back | Return to the previous screen
-| Cancel | Cancel | Ability to cancel
-| BanubaVideoEditor.Settings.Later| Later | Alert action button title
-| BanubaVideoEditor.Settings.Discard | Discard | Alert action button title
-| Do you want to stop capturing and editing the video? | Do you want to stop capturing and editing the video? | Used in alert with Yes and No options when resetting filters.
-| Do you want to reset all? | Do you want to reset all? | Used in alert with Yes and No options when resetting filters.
-| Do you want to reset slideshow? | Do you want to reset slideshow? | Used in alert with Yes and No options when resetting slideshow.
-| Do you want to delete the last clip? | Do you want to delete the last clip? | Used in alert with Yes and No options
-| BanubaVideoEditor.NotFinishedVideoSequenceAlertQuestion | You have a new draft. Continue editing it? | Asking about continuing editing session
-| First part not recorded | First part not recorded | Error message that appears when clicking the Next button in the camera when the first part of split mode is not recorded
-| Mask not loaded | Mask not loaded | Error message received when trying to load a mask
-| Second part is too short | Second part is too short | An error message that appears when you click the Next button in the camera, when the second part of the video in split mode is not equal in length to the first part
-| Beautifier on/Beautifier off | Beautifier on/Beautifier off | Second part is too short
-| Flash | Light | The light (flashlight) in the camera is on
-| Too short. Please capture at least %d seconds | Too short. Please capture at least %d seconds | An error message that appears in the camera when the length of the recorded video is less than the minimum allowed duration
-| Maximum %d seconds. | Maximum %d seconds. | An error message that appears in the camera if the recorded video is longer than the maximum allowed length
-| Timer is off | Timer is off | Turning off the camera's auto timer
-| Max length %d sec | Max length %d sec | 'Seconds' for maximum
-| %d sec | %d sec | 'Seconds' for short
-| Choose video | Choose video | Screen title when multi-select mode is enabled on the video gallery screen
-| Choose | Choose | Name of the button in multi-select mode, which confirms the selection of user files and continues the process further
-| Sound | Sound | Built-in track volume description
-| Add | Add | Add extra audio track action
-| %i seconds timer is on | %i seconds timer is on | Enabling the countdown timer to automatically start shooting in the camera
-| Recording speed %@ | Recording speed %@ | Speed screen info
-| com.banuba.recorder.sound.title | Music | Music button title
-| com.banuba.recorder.beauty.title | Beauty | Beauty button title
-| com.banuba.recorder.color.title | Filter | Filter button title
-| com.banuba.recorder.masks.title | Masks | Masks button title
-| com.banuba.recorder.toggle.title | Toggle | Toggle button title
-| com.banuba.recorder.flashlight.title | Flashlight button title
-| com.banuba.recorder.timer.title | Timer | Timer button title
-| com.banuba.recorder.speed.title | Speed | Speed button title
-| com.banuba.recorder.muteSound.title | Sound | Sound button title
-
-![img](screenshots/CameraScreenLocalizations.png)
+Video Editor supports 3 options for positioning music button: ```bottom```, ```center```, ```top```.

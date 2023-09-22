@@ -6,7 +6,6 @@
 - [Export storage](#Export-storage)
 - [Implement export flow](#Implement-export-flow)
 - [Handle export result](#Handle-export-result)
-- [Progress screen](#Progress-screen)
 - [Add watermark](#Add-watermark)
 - [Export GIF preview](#Export-GIF-preview)
 - [Get audio used in export](#Get-audio-used-in-export)
@@ -156,39 +155,6 @@ videoEditorSDK?.export(
         }
 ```
 > :bulb: If export finishes successfully you can use instance of ```ExportConfiguration``` as a result and access media files and its metadata.
-## Progress screen
-
-```ProgressViewController``` is shown while exporting media files.
-
-![img](screenshots/ProgressViewConfiguration.png)
-
-You can change appearance of this screen by overriding these styles and resources.
-
-```ProgressViewConfiguration``` has the following parameters
-
-| Property |           Values           | Description |
-| ------------- |:--------------------------:| :------------- |
-| messageConfiguration |     TextConfiguration      | Setups configuration for message
-| tooltipMessageConfiguration |     TextConfiguration      | Setups configuration for tooltip message
-| cancelButtonTextConfiguration |  TextButtonConfiguration   | Setups cancel button text configuration
-| cancelButtonBorderConfiguration | BorderButtonConfiguration  | Setups cancel button border configuration
-| cancelButtonBackgroundConfiguration |  BackgroundConfiguration   | Setups cancel button background configuration
-| backgroundConfiguration |  BackgroundConfiguration   | Background configuration
-| backgroundViewBlurStyle |     UIBlurEffect.Style     | Background view blur style. Default is .dark
-| progressBarColor |          UIColor           | Setups progress bar color
-| progressBarHeight | CGFloat; Default ```4.0``` | Setups progress bar height
-| progressBarCornerRadius | CGFloat; Default ```1.0``` | Setups progress bar corner radius
- 
-
-The following string resources are used however you can customize them.
-
-| Key        |      Value      |   Description |
-| ------------- | :----------- | :------------- |
-| com.banuba.alert.progressView.disagreeButtonTitle | Cancel | Ability to cancel
-| com.banuba.alert.progressView.exportingVideo | Exporting video | Exporting video message
-| com.banuba.alert.progressView.tooltipMessage | Please, don't lock your screen or switch to other apps | Tooltip message for a user
-| com.banuba.alert.progressView.exportVideoInterrupted | Export interrupted | Message about error interrupting export process
-
 
 ## Add watermark
 :exclamation: Important  
