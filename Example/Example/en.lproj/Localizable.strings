@@ -60,6 +60,8 @@
 "com.banuba.toShortVideoMessageFormatPluralSeconds" = "Record at least %d seconds";
 "com.banuba.toShortVideoMessageSingleSecond" = "Record at least 1 second";
 
+"com.banuba.recorder.notApplyMaskToast" = "Use mask to record video";
+
 /* An error message that appears in the trimmer when user tryed to use too long video */
 "com.banuba.TooLongVideoMessageFormat" = "Video duration should be between %d and %d seconds";
 
@@ -246,9 +248,6 @@
 /* Pixel static effect name */
 "com.banuba.editor.effect.name.pixelationstatic" = "Pixel Static";
 
-/* Blur effect name */
-"com.banuba.editor.effect.name.blur" = "Blur";
-
 /* Stars effect name */
 "com.banuba.editor.effect.name.stars" = "Stars";
 
@@ -263,6 +262,18 @@
 
 /* Twitch effect name */
 "com.banuba.editor.effect.name.twitch" = "Twitch";
+
+/* Blur out effect name */
+"com.banuba.editor.effect.name.blur-out" = "Blur out";
+
+/* Corner flip effect name */
+"com.banuba.editor.effect.name.corner-flip" = "Corner flip";
+
+/* Zoom out effect name */
+"com.banuba.editor.effect.name.zoom-out" = "Zoom out";
+
+/* Warp back effect name */
+"com.banuba.editor.effect.name.warp-back" = "Warp back";
 
 /* Open trimmer button name (for dradt) */
 "com.banuba.editor.openTrimButtonTitle" = "Adjust Clip";
@@ -443,15 +454,6 @@
 /* Cancel button title */
 "OverlayEditor.Cancel" = "Cancel";
 
-/* Done button title */
-"OverlayEditor.Done" = "Done";
-
-/* Confirmation button title */
-"OverlayEditor.Yes" = "Yes";
-
-/* Discarding button title */
-"OverlayEditor.No" = "No";
-
 /* Confirmation message for discarding changes */
 "com.banuba.overlayEditor.mainScreen.resetAll.title" = "Discard changes?";
 "com.banuba.overlayEditor.mainScreen.resetAll.message" = "";
@@ -460,6 +462,10 @@
 
 "com.banuba.overlayEditor.captions.creationCaptions" = "Creating auto captions";
 "com.banuba.overlayEditor.captions.noSpeechRecognized" = "No speech recognized";
+"com.banuba.overlayEditor.captions.noInternetConnectionTitle" = "No internet connection";
+"com.banuba.overlayEditor.captions.noInternetConnectionMessage" = "Check your connection and try again.";
+"com.banuba.overlayEditor.captions.tryAgain" = "Try Again";
+"com.banuba.overlayEditor.captions.noInternetConnectionToast" = "The internet connection appears to be offline.";
 
 "com.banuba.overlayEditor.captions.createNewCaptionsQuestion" = "Create new captions?";
 "com.banuba.overlayEditor.captions.createNewCaptionsQuestionDetails" = "Previously created captions will be deleted.";
@@ -533,7 +539,7 @@
 "MusicLibrary.noRecentsTitle" = "No recent sounds";
 "MusicLibrary.noRecentsMessage" = "The sounds you have used in your videos will be displayed here.";
 "MusicLibrary.noMatchesMessage" = "No matches";
-"MusicLibrary.searchBarPlaceholder" = "Search";
+"MusicLibrary.searchBarPlaceholder" = "Search by song names";
 "MusicLibrary.searchBarCancelButtonTitle" = "Cancel";
 
 // MARK: - Hands-free
@@ -711,9 +717,6 @@
 "com.banuba.videoEditor.transition.disabledToastMessage" = "The clip must be longer than 0.5 sec to apply transition.";
 
 /* Text editor font names */
-"com.banuba.textEditor.fontName.regular" = "Regular";
-"com.banuba.textEditor.fontName.italic" = "Italic";
-"com.banuba.textEditor.fontName.bold" = "Bold";
 "com.banuba.textEditor.fontName.baskerville" = "Baskerville";
 "com.banuba.textEditor.fontName.courier" = "Courier";
 "com.banuba.textEditor.fontName.palatino" = "Palatino";
@@ -756,10 +759,6 @@
 "com.banuba.alert.progressView.exportingVideo" = "Exporting video";
 "com.banuba.alert.progressView.tooltipMessage" = "Please, don't lock your screen or switch to other apps";
 "com.banuba.alert.progressView.exportVideoInterrupted" = "Export interrupted";
-
-/* need to update iOS alert */
-"com.banuba.alert.needToUpdateIos.title" = "Sorry, minimum supported version is iOS 12.";
-"com.banuba.alert.needToUpdateIos.message" = "You must update to ios 12.0 in order to use this application.";
 
 /* remove and start over record video */
 "com.banuba.trim.startOverRecordVideoTitle" = "Want to record a new video?";
@@ -843,6 +842,7 @@
 "com.banuba.autocut.added.sound" = "Added sound";
 "com.banuba.autocut.error.title" = "Something went wrong";
 "com.banuba.autocut.error.message" = "Check your connection or try again later";
+"com.banuba.autocut.error.loadingTrackFailedMessage" = "Unable to load the song. Check your internet connection.";
 "com.banuba.autocut.try.again.title" = "Try again";
 "BanubaVideoEditor.Gallery.Autocut" = "AutoCut";
 "BanubaVideoEditor.Gallery.Next" = "Next";
