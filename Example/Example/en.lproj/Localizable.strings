@@ -263,6 +263,18 @@
 /* Twitch effect name */
 "com.banuba.editor.effect.name.twitch" = "Twitch";
 
+/* Blur out effect name */
+"com.banuba.editor.effect.name.blur-out" = "Blur out";
+
+/* Corner flip effect name */
+"com.banuba.editor.effect.name.corner-flip" = "Corner flip";
+
+/* Zoom out effect name */
+"com.banuba.editor.effect.name.zoom-out" = "Zoom out";
+
+/* Warp back effect name */
+"com.banuba.editor.effect.name.warp-back" = "Warp back";
+
 /* Open trimmer button name (for dradt) */
 "com.banuba.editor.openTrimButtonTitle" = "Adjust Clip";
 
@@ -748,10 +760,6 @@
 "com.banuba.alert.progressView.tooltipMessage" = "Please, don't lock your screen or switch to other apps";
 "com.banuba.alert.progressView.exportVideoInterrupted" = "Export interrupted";
 
-/* need to update iOS alert */
-"com.banuba.alert.needToUpdateIos.title" = "Sorry, minimum supported version is iOS 12.";
-"com.banuba.alert.needToUpdateIos.message" = "You must update to ios 12.0 in order to use this application.";
-
 /* remove and start over record video */
 "com.banuba.trim.startOverRecordVideoTitle" = "Want to record a new video?";
 "com.banuba.trim.startOverRecordVideoMessage" = "";
@@ -834,6 +842,7 @@
 "com.banuba.autocut.added.sound" = "Added sound";
 "com.banuba.autocut.error.title" = "Something went wrong";
 "com.banuba.autocut.error.message" = "Check your connection or try again later";
+"com.banuba.autocut.error.loadingTrackFailedMessage" = "Unable to load the song. Check your internet connection.";
 "com.banuba.autocut.try.again.title" = "Try again";
 "BanubaVideoEditor.Gallery.Autocut" = "AutoCut";
 "BanubaVideoEditor.Gallery.Next" = "Next";

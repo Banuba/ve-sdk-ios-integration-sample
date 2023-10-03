@@ -1,12 +1,12 @@
 source 'https://github.com/Banuba/specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '13.0'
-use_frameworks! 
+platform :ios, '14.0'
+use_frameworks!
 inhibit_all_warnings!
 
 target 'Example' do
   
-  banuba_sdk_version = '1.30.2'
+  banuba_sdk_version = '1.31.0'
   
   pod 'BanubaARCloudSDK', banuba_sdk_version #optional
   pod 'BanubaVideoEditorSDK', banuba_sdk_version
@@ -28,4 +28,15 @@ target 'Example' do
   
   pod "BSImagePicker"
   
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|      
+      xcconfig_path = config.base_configuration_reference.real_path
+      xcconfig = File.read(xcconfig_path)
+      xcconfig_mod = xcconfig.gsub(/DT_TOOLCHAIN_DIR/, "TOOLCHAIN_DIR")
+      File.open(xcconfig_path, "w") { |file| file << xcconfig_mod }
+    end
+  end
 end
