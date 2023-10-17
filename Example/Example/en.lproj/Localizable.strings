@@ -60,7 +60,9 @@
 "com.banuba.toShortVideoMessageFormatPluralSeconds" = "Record at least %d seconds";
 "com.banuba.toShortVideoMessageSingleSecond" = "Record at least 1 second";
 
-"com.banuba.recorder.notApplyMaskToast" = "Use mask to record video";
+"com.banuba.recorder.requireMaskAlertTitle" = "Let's Keep it Fun and Safe!";
+"com.banuba.recorder.requreMaskAlertMessage" = "Before you start recording, please select a mask filter! It's a fun and cool way to express yourself while keeping our community joyful and secure!";
+"com.banuba.recorder.requireMaskButtonTitle" = "Ok, got it!";
 
 /* An error message that appears in the trimmer when user tryed to use too long video */
 "com.banuba.TooLongVideoMessageFormat" = "Video duration should be between %d and %d seconds";
@@ -478,7 +480,12 @@
 "com.banuba.overlayEditor.captions.deleteCaptionsTitle" = "Delete captions?";
 "com.banuba.overlayEditor.captions.deleteSelectedCaption" = "Delete selected";
 "com.banuba.overlayEditor.captions.deleteAllCaptions" = "Delete all";
+
 "com.banuba.overlayEditor.captions.selectLanguage" = "Select language";
+"com.banuba.overlayEditor.captions.language.english" = "English";
+"com.banuba.overlayEditor.captions.language.mandarin" = "Mandarin";
+"com.banuba.overlayEditor.captions.language.portuguese" = "Portuguese";
+"com.banuba.overlayEditor.captions.language.spanish" = "Spanish";
 
 // MARK: - AudioBrowser
 
@@ -528,6 +535,7 @@
 "MusicLibrary.viewAll" = "View All";
 "MusicLibrary.showMore" = "Show More";
 "MusicLibrary.tryAgain" = "Try again";
+"MusicLibrary.tryAgainLaterTitle" = "Please try again later";
 "MusicLibrary.popular" = "Popular";
 "MusicLibrary.newReleases" = "New Releases";
 "MusicLibrary.mixedForYou" = "Mixed for you";
