@@ -18,6 +18,9 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
   // MARK: - VideoEditorSDK
   private let videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
   
+  // Use “true” if you want users could restore the last video editing session.
+  private let restoreLastVideoEditingSession: Bool = false
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -43,7 +46,9 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
   
   // MARK: - Handle BanubaVideoEditor callbacks
   func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
-    videoEditor.clearSessionData()
+    if restoreLastVideoEditingSession == false {
+      videoEditor.clearSessionData()
+    }
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
   
@@ -162,7 +167,9 @@ extension ViewController {
           // Hide progress view
           progressViewController.dismiss(animated: true) {
             // Clear video editor session data
-            videoEditor.clearSessionData()
+            if self?.restoreLastVideoEditingSession == false {
+              videoEditor.clearSessionData()
+            }
             if error == nil {
               /// If you want to play exported video
               //          self.playVideoAtURL(videoURL)
