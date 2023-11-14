@@ -536,6 +536,7 @@
 "MusicLibrary.showMore" = "Show More";
 "MusicLibrary.tryAgain" = "Try again";
 "MusicLibrary.tryAgainLaterTitle" = "Please try again later";
+"MusicLibrary.allTracks" = "All tracks";
 "MusicLibrary.popular" = "Popular";
 "MusicLibrary.newReleases" = "New Releases";
 "MusicLibrary.mixedForYou" = "Mixed for you";
@@ -788,13 +789,14 @@
 /* Reordering video tool tip label message */
 "com.banuba.trim.reorderingToolTip" = "Drag to swap";
 /* Delete single video error message */
-"com.banuba.trim.deleteLastClipErrorMessage" = "The last clip can't  be deleted";
+"com.banuba.trim.deleteLastClipErrorMessage" = "The last clip can't be deleted";
 /* Split video part error message */
 "com.banuba.trim.splitErrorMessage" = "The selected position is invalid";
 
 // MARK: - Capture button modes
 "com.banuba.record.captureButtonVideoMode" = "Video";
 "com.banuba.record.captureButtonPhotoMode" = "Photo";
+"com.banuba.record.beautyIntensityTitle" = "Intensity";
 
 /* Sharing other button */
 "sharing.other.title" = "Other";

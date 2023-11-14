@@ -1,18 +1,19 @@
 source 'https://github.com/Banuba/specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/sdk-banuba/banuba-sdk-podspecs.git'
+
 platform :ios, '14.0'
 use_frameworks!
 inhibit_all_warnings!
 
 target 'Example' do
   
-  banuba_sdk_version = '1.31.2'
+  banuba_sdk_version = '1.32.0'
   
   pod 'BanubaARCloudSDK', banuba_sdk_version #optional
   pod 'BanubaVideoEditorSDK', banuba_sdk_version
   pod 'BanubaAudioBrowserSDK', banuba_sdk_version #optional
   pod 'BanubaSDKSimple', banuba_sdk_version
-  pod 'BanubaEffectPlayer', banuba_sdk_version
   pod 'BanubaSDK', banuba_sdk_version
   pod 'BanubaSDKServicing', banuba_sdk_version
   pod 'VideoEditor', banuba_sdk_version
