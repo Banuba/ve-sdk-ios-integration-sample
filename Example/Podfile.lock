@@ -2,6 +2,18 @@ PODS:
   - BanubaARCloudSDK (1.32.1)
   - BanubaAudioBrowserSDK (1.32.1)
   - BanubaLicenseServicingSDK (1.32.1)
+  - BanubaPhotoEditorSDK (1.0.0):
+    - BanubaLicenseServicingSDK (= 1.32.1)
+    - BanubaUtilities (= 1.32.1)
+    - BNBBackground (= 1.9.1)
+    - BNBEffectPlayer (= 1.9.1)
+    - BNBEyes (= 1.9.1)
+    - BNBHair (= 1.9.1)
+    - BNBLips (= 1.9.1)
+    - BNBScripting (= 1.9.1)
+    - BNBSdkApi (= 1.9.1)
+    - BNBSdkCore (= 1.9.1)
+    - BNBSkin (= 1.9.1)
   - BanubaSDK (1.32.1):
     - BNBBackground (= 1.9.1)
     - BNBEffectPlayer (= 1.9.1)
@@ -62,6 +74,7 @@ DEPENDENCIES:
   - BanubaARCloudSDK (= 1.32.1)
   - BanubaAudioBrowserSDK (= 1.32.1)
   - BanubaLicenseServicingSDK (= 1.32.1)
+  - BanubaPhotoEditorSDK (= 1.0.0)
   - BanubaSDK (= 1.32.1)
   - BanubaSDKServicing (= 1.32.1)
   - BanubaSDKSimple (= 1.32.1)
@@ -80,6 +93,7 @@ SPEC REPOS:
     - BanubaARCloudSDK
     - BanubaAudioBrowserSDK
     - BanubaLicenseServicingSDK
+    - BanubaPhotoEditorSDK
     - BanubaSDK
     - BanubaSDKServicing
     - BanubaSDKSimple
@@ -93,7 +107,7 @@ SPEC REPOS:
     - VideoEditor
   https://github.com/CocoaPods/Specs.git:
     - BSImagePicker
-  https://github.com/sdk-banuba/banuba-sdk-podspecs:
+  https://github.com/sdk-banuba/banuba-sdk-podspecs.git:
     - BNBBackground
     - BNBEffectPlayer
     - BNBEyes
@@ -110,6 +124,7 @@ SPEC CHECKSUMS:
   BanubaARCloudSDK: 5ba971329cd3d12bec250b986ad4e126aa1677b9
   BanubaAudioBrowserSDK: e99919cd54f8594a7617b306098fcdf67b73faa6
   BanubaLicenseServicingSDK: 0ba30e06b7c7790ed76a063a6bf15669c69c9314
+  BanubaPhotoEditorSDK: e01c2e0f22525c1f35c62b3f01393c984d6d8e75
   BanubaSDK: 60684451acc4d5fa37e5b5b56e0bb07f9a8e0603
   BanubaSDKServicing: 3b1af0ec8b43d54a1823b93ef31eea529318bc92
   BanubaSDKSimple: 2bfc14b2e76712cddb79b6b11c2ca61c7408ff6e
@@ -134,6 +149,6 @@ SPEC CHECKSUMS:
   VEPlaybackSDK: 13c8c330750d5364409dcf461ee7d7a0bcfed49a
   VideoEditor: 32afbacdac61aab83d9a30aa7b6501880354c204
 
-PODFILE CHECKSUM: ca027c68d8128ee403aedc1b09eb6efb43053b79
+PODFILE CHECKSUM: e68ced449ae240a3490cdcabf96d4c0d96b8392b
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.14.2

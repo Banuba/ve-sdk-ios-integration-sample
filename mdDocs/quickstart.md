@@ -59,7 +59,7 @@ Complete the following steps to get Video Editor SDK dependencies using CocoaPod
    ```
 3. Install Video Editor SDK pods
    ```sh
-   pod install
+   pod install --repo-update
    ```
 4. Open ```Example.xcworkspace``` in Xcode and run the project.
 

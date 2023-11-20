@@ -1,6 +1,7 @@
 import UIKit
 import BanubaVideoEditorSDK
-  
+import BanubaPhotoEditorSDK
+
 import VideoEditor
 import AVFoundation
 import AVKit
@@ -10,7 +11,7 @@ import VEExportSDK
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 
-class ViewController: UIViewController, BanubaVideoEditorDelegate {
+class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEditorDelegate {
   
   // MARK: - IBOutlet
   @IBOutlet weak var invalidTokenMessageLabel: UILabel!
@@ -115,6 +116,16 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
     }
   }
   
+  @IBAction func openPhotoEditor(_ sender: UIButton) {
+    let launchConfig = PhotoEditorLaunchConfig(
+      hostController: self
+    )
+    videoEditorModule.presentPhotoEditor(
+      with: launchConfig,
+      delegate: self
+    )
+  }
+  
   private func prepareMusicTrack(audioFileName: String) -> MediaTrack {
     let musicURL = Bundle.main.bundleURL.appendingPathComponent(audioFileName)
     let assset = AVURLAsset(url: musicURL)
@@ -136,6 +147,19 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
     )
     
     return musicTrackPreset
+  }
+}
+
+// MARK: - BanubaPhotoEditorDelegate
+extension ViewController {
+  func photoEditorDidCancel(_ photoEditor: BanubaPhotoEditorSDK.BanubaPhotoEditor) {
+    print("User has closed the photo editor")
+    photoEditor.dismissPhotoEditor(animated: true, completion: nil)
+  }
+  
+  func photoEditorDidFinishWithImage(_ photoEditor: BanubaPhotoEditorSDK.BanubaPhotoEditor, image: UIImage) {
+    print("User has saved the edited image")
+    photoEditor.dismissPhotoEditor(animated: true, completion: nil)
   }
 }
 
