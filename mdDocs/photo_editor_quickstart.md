@@ -46,15 +46,16 @@ Next, we strongly recommend checking your license state before starting the phot
 ```swift
 photoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
   if isValid {
-	print("✅ License is active, all good")
+    print("✅ License is active, all good")
   } else {
-	print("❌ License is either revoked or expired")
+    print("❌ License is either revoked or expired")
   }
   ...
   completion(isValid)
 })
 ```
 ⚠️ "Photo editing is unavailable" screen will appear if you start Photo Editor SDK with revoked or expired license.
+
 ⚠️ If you have also integrated the Video Editor SDK in your app, make sure to deallocate any instances of `BanubaVideoEditor` that remain in memory before presenting the photo editor, to prevent crashes:
 ```swift
 videoEditorSDK = nil

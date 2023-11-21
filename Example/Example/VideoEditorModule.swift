@@ -19,50 +19,49 @@ class VideoEditorModule {
     var videoEditorSDK: BanubaVideoEditor?
     var photoEditorSDK: BanubaPhotoEditor?
     
-    var isVideoEditorInitialized: Bool { videoEditorSDK != nil }
     private let token: String
     
     init(token: String) {
         self.token = token
-        let config = createConfiguration()
-        let externalViewControllerFactory = createExampleExternalViewControllerFactory()
+    }
+    
+    func createVideoEditor() {
+        // Deallocate any active instances of both editors to free used resources
+        // and to prevent "You are trying to create the second instance of the singleton." crash
+        photoEditorSDK = nil
+        videoEditorSDK = nil
         
-        let videoEditorSDK = BanubaVideoEditor(
+        videoEditorSDK = BanubaVideoEditor(
             token: token,
-            configuration: config,
-            externalViewControllerFactory: externalViewControllerFactory
+            configuration: createConfiguration(),
+            externalViewControllerFactory: createExampleExternalViewControllerFactory()
         )
-        
-        self.videoEditorSDK = videoEditorSDK
     }
     
     func presentVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
-        guard isVideoEditorInitialized else {
-            print("BanubaVideoEditor is not initialized!")
-            return
-        }
         videoEditorSDK?.presentVideoEditor(
             withLaunchConfiguration: launchConfig,
             completion: nil
         )
     }
     
-    func presentPhotoEditor(
-        with launchConfig: PhotoEditorLaunchConfig,
-        delegate: BanubaPhotoEditorDelegate
-    ) {
-        // Deallocate the video editor instance before launching the photo editor
+    func createPhotoEditor() {
+        // Deallocate any active instances of both editors to free used resources
+        // and to prevent "You are trying to create the second instance of the singleton." crash
+        photoEditorSDK = nil
         videoEditorSDK = nil
         
         let configuration = PhotoEditorConfig()
         photoEditorSDK = BanubaPhotoEditor(
-          token: token,
-          configuration: configuration
+            token: token,
+            configuration: configuration
         )
-        photoEditorSDK?.delegate = delegate
+    }
+    
+    func presentPhotoEditor(with launchConfig: PhotoEditorLaunchConfig) {
         photoEditorSDK?.presentPhotoEditor(
-          withLaunchConfiguration: launchConfig,
-          completion: nil
+            withLaunchConfiguration: launchConfig,
+            completion: nil
         )
     }
     
