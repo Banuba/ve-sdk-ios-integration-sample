@@ -1,7 +1,6 @@
 
 import UIKit
 import BanubaVideoEditorSDK
-import BanubaPhotoEditorSDK
 
 import VideoEditor
 import AVFoundation
@@ -17,49 +16,28 @@ extension CountdownView: MusicEditorCountdownAnimatableView {}
 class VideoEditorModule {
     
     var videoEditorSDK: BanubaVideoEditor?
-    var photoEditorSDK: BanubaPhotoEditor?
     
-    private let token: String
+    var isVideoEditorInitialized: Bool { videoEditorSDK != nil }
     
     init(token: String) {
-        self.token = token
-    }
-    
-    func createVideoEditor() {
-        // Deallocate any active instances of both editors to free used resources
-        // and to prevent "You are trying to create the second instance of the singleton." crash
-        photoEditorSDK = nil
-        videoEditorSDK = nil
+        let config = createConfiguration()
+        let externalViewControllerFactory = createExampleExternalViewControllerFactory()
         
-        videoEditorSDK = BanubaVideoEditor(
+        let videoEditorSDK = BanubaVideoEditor(
             token: token,
-            configuration: createConfiguration(),
-            externalViewControllerFactory: createExampleExternalViewControllerFactory()
+            configuration: config,
+            externalViewControllerFactory: externalViewControllerFactory
         )
+        
+        self.videoEditorSDK = videoEditorSDK
     }
     
     func presentVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
+        guard isVideoEditorInitialized else {
+            print("BanubaVideoEditor is not initialized!")
+            return
+        }
         videoEditorSDK?.presentVideoEditor(
-            withLaunchConfiguration: launchConfig,
-            completion: nil
-        )
-    }
-    
-    func createPhotoEditor() {
-        // Deallocate any active instances of both editors to free used resources
-        // and to prevent "You are trying to create the second instance of the singleton." crash
-        photoEditorSDK = nil
-        videoEditorSDK = nil
-        
-        let configuration = PhotoEditorConfig()
-        photoEditorSDK = BanubaPhotoEditor(
-            token: token,
-            configuration: configuration
-        )
-    }
-    
-    func presentPhotoEditor(with launchConfig: PhotoEditorLaunchConfig) {
-        photoEditorSDK?.presentPhotoEditor(
             withLaunchConfiguration: launchConfig,
             completion: nil
         )

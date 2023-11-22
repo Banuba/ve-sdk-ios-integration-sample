@@ -16,8 +16,11 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
   // MARK: - IBOutlet
   @IBOutlet weak var invalidTokenMessageLabel: UILabel!
   
+  // MARK: - PhotoEditorSDK
+  private var photoEditorModule: PhotoEditorModule?
+  
   // MARK: - VideoEditorSDK
-  private let videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
+  private var videoEditorModule: VideoEditorModule?
   
   // Use “true” if you want users could restore the last video editing session.
   private let restoreLastVideoEditingSession: Bool = false
@@ -94,9 +97,14 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
   }
   
   @IBAction func openPhotoEditor(_ sender: UIButton) {
-    videoEditorModule.createPhotoEditor()
+    // Deallocate any active instances of both editors to free used resources
+    // and to prevent "You are trying to create the second instance of the singleton." crash
+    photoEditorModule = nil
+    videoEditorModule = nil
+
+    photoEditorModule = PhotoEditorModule(token: AppDelegate.licenseToken)
     
-    guard let photoEditorSDK = videoEditorModule.photoEditorSDK else {
+    guard let photoEditorSDK = photoEditorModule?.photoEditorSDK else {
       invalidTokenMessageLabel.text = "Banuba Photo Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
       invalidTokenMessageLabel.isHidden = false
       return
@@ -109,7 +117,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
       if isValid {
         print("✅ License is active, all good")
         let launchConfig = PhotoEditorLaunchConfig(hostController: self)
-        self.videoEditorModule.presentPhotoEditor(with: launchConfig)
+        self.photoEditorModule?.presentPhotoEditor(with: launchConfig)
       } else {
         self.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
         print("❌ License is either revoked or expired")
@@ -142,9 +150,14 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
   }
   
   private func checkLicenseAndOpenVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
-    videoEditorModule.createVideoEditor()
+    // Deallocate any active instances of both editors to free used resources
+    // and to prevent "You are trying to create the second instance of the singleton." crash
+    photoEditorModule = nil
+    videoEditorModule = nil
     
-    guard let videoEditorSDK = videoEditorModule.videoEditorSDK else {
+    videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
+    
+    guard let videoEditorSDK = videoEditorModule?.videoEditorSDK else {
       invalidTokenMessageLabel.text = "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
       invalidTokenMessageLabel.isHidden = false
       return
@@ -155,7 +168,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     videoEditorSDK.getLicenseState(completion: { [weak self] isValid in
       if isValid {
         print("✅ License is active, all good")
-        self?.videoEditorModule.presentVideoEditor(with: launchConfig)
+        self?.videoEditorModule?.presentVideoEditor(with: launchConfig)
       } else {
         self?.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
         print("❌ License is either revoked or expired")
@@ -181,6 +194,7 @@ extension ViewController {
 // MARK: - Export example
 extension ViewController {
   func exportVideo(videoEditor: BanubaVideoEditor) {
+    guard let videoEditorModule else { return }
     let progressViewController = videoEditorModule.createProgressViewController()
     progressViewController.cancelHandler = { videoEditor.stopExport() }
     present(progressViewController, animated: true)
@@ -225,7 +239,7 @@ extension ViewController {
   }
   
   private func showSharingScreen(videoUrl: URL, exportCoverImages: ExportCoverImages?) {
-    let config = videoEditorModule.videoEditorSDK!.currentConfiguration.sharingScreenConfiguration
+    guard let config = videoEditorModule?.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration else { return }
     
     BanubaVideoEditor.presentSharingViewController(
       from: self,

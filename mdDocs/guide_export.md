@@ -38,7 +38,7 @@ Video Editor supports video codec options:
 2. ```AVC_PROFILES``` - H264 codec with High Profile
 
 You can change video codec for export by using ```ExportVideoConfiguration.useHEVCCodecIfPossible``` property. 
-In this example, the H264 is set in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L60).
+In this example, the H264 is set in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L56).
 
 ```diff
     let exportConfiguration = ExportVideoConfiguration(
@@ -178,7 +178,7 @@ where ```position``` is used where for locating watermark image in a video
     }
 ```
 Next, set ```watermarkConfiguration``` to every instance of ```ExportVideoConfiguration``` where you want to add watermark 
-in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L61).
+in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L57).
 ```diff
     let hdExportConfiguration = ExportVideoConfiguration(
           fileURL: destFile,
@@ -191,7 +191,7 @@ in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L61).
 ## Export GIF preview
 Video Editor allows to export preview of a video as a GIF file.  
 Instance of ```GifSettings``` is required in ```ExportConfiguration``` to export  preview 
-in export. You can specify this property in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L67)
+in export. You can specify this property in [VideoEditorModule](../Example/Example/VideoEditorModule.swift#L63)
 
 ```diff
  let exportConfig = ExportConfiguration(

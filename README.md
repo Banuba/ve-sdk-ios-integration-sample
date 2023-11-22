@@ -14,9 +14,11 @@
 [Banuba AR Photo Editor SDK](https://www.banuba.com/photo-editor-sdk) allows you to quickly add the photo editing capabilities to your app. 
 ## Usage
 ### License
-Before you commit to a license, you are free to test all the features of the SDK for free. The trial period lasts 14 days. To start it, [send us a message](https://www.banuba.com/video-editor-sdk#form).
-We will get back to you with the trial token.  
-Feel free to [contact us](https://www.banuba.com/faq/kb-tickets/new) if you have any questions.
+Before you commit to a license, you are free to test all the features of the SDK for free. The trial period lasts 14 days. 
+
+Send us a message to start the [Video Editor SDK trial](https://www.banuba.com/video-editor-sdk#form) | [Photo Editor SDK trial](https://www.banuba.com/photo-editor-sdk#form). We will get back to you with the trial token.
+
+Feel free to contact us if you have any questions regarding [Video Editor SDK](https://www.banuba.com/faq/kb-tickets/new) and [Photo Editor SDK](https://www.banuba.com/support) .
 ### Installation
 1. Clone the repository
 2. Install CocoaPods dependencies. Open **Example** directory ```cd Example``` and run ```pod install``` in terminal.
