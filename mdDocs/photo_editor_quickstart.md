@@ -24,6 +24,7 @@ Complete the following steps to get Photo Editor SDK dependencies using CocoaPod
 ## Add localization strings
 Photo Editor SDK displays a number of strings that can be freely changed in the Localizable.strings file of your app.  
 Please make sure that you've included all the strings with `photoEditor` key prefix in your app's Localizable.strings file from [Localized Strings](../Example/Example/en.lproj/Localizable.strings) file provided with the sample project to prevent the placeholders from showing up in the photo editor's UI.
+If you are still seeing placeholders, make sure that App Language in Xcode Scheme Options is set to English as this is the only language supported by this demo app.
 ## Launch
 Create instance of ```BanubaPhotoEditor```  using the license token.
 ```swift
@@ -46,15 +47,16 @@ Next, we strongly recommend checking your license state before starting the phot
 ```swift
 photoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
   if isValid {
-	print("✅ License is active, all good")
+    print("✅ License is active, all good")
   } else {
-	print("❌ License is either revoked or expired")
+    print("❌ License is either revoked or expired")
   }
   ...
   completion(isValid)
 })
 ```
 ⚠️ "Photo editing is unavailable" screen will appear if you start Photo Editor SDK with revoked or expired license.
+
 ⚠️ If you have also integrated the Video Editor SDK in your app, make sure to deallocate any instances of `BanubaVideoEditor` that remain in memory before presenting the photo editor, to prevent crashes:
 ```swift
 videoEditorSDK = nil

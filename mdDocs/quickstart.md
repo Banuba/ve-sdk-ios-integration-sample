@@ -102,7 +102,7 @@ class VideoEditorModule {
 Video Editor can export multiple media files to meet your requirements.  
 Create instance of ```ExportConfiguration``` and provide ```Array<ExportVideoConfiguration>``` where every ```ExportVideoConfiguration``` is a media file i.e. video or audio. 
 Next, use ```BanubaVideoEditor.export()``` method and pass instance of ```ExportConfiguration``` to start export.
-Please check out [export implementation](../Example/Example/ViewController.swift#L139) in the sample.  
+Please check out [export implementation](../Example/Example/ViewController.swift#L209) in the sample.  
 
 Learn [Export integration guide](guide_export.md) to know more about exporting media content features.
 
@@ -135,7 +135,7 @@ videoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
 <img src="screenshots/screen_expired.png"  width="25%" height="auto">
 </p>
 
-The following [implementation](../Example/Example/ViewController.swift#L59) starts Video Editor from camera screen.
+The following [implementation](../Example/Example/ViewController.swift#L48) starts Video Editor from camera screen.
 ```swift
  let cameraLaunchConfig = VideoEditorLaunchConfig(
         entryPoint: .camera,

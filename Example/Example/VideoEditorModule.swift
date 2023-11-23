@@ -1,7 +1,6 @@
 
 import UIKit
 import BanubaVideoEditorSDK
-import BanubaPhotoEditorSDK
 
 import VideoEditor
 import AVFoundation
@@ -17,13 +16,10 @@ extension CountdownView: MusicEditorCountdownAnimatableView {}
 class VideoEditorModule {
     
     var videoEditorSDK: BanubaVideoEditor?
-    var photoEditorSDK: BanubaPhotoEditor?
     
     var isVideoEditorInitialized: Bool { videoEditorSDK != nil }
-    private let token: String
     
     init(token: String) {
-        self.token = token
         let config = createConfiguration()
         let externalViewControllerFactory = createExampleExternalViewControllerFactory()
         
@@ -44,25 +40,6 @@ class VideoEditorModule {
         videoEditorSDK?.presentVideoEditor(
             withLaunchConfiguration: launchConfig,
             completion: nil
-        )
-    }
-    
-    func presentPhotoEditor(
-        with launchConfig: PhotoEditorLaunchConfig,
-        delegate: BanubaPhotoEditorDelegate
-    ) {
-        // Deallocate the video editor instance before launching the photo editor
-        videoEditorSDK = nil
-        
-        let configuration = PhotoEditorConfig()
-        photoEditorSDK = BanubaPhotoEditor(
-          token: token,
-          configuration: configuration
-        )
-        photoEditorSDK?.delegate = delegate
-        photoEditorSDK?.presentPhotoEditor(
-          withLaunchConfiguration: launchConfig,
-          completion: nil
         )
     }
     

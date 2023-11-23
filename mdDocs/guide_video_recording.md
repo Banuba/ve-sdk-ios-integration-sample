@@ -95,7 +95,6 @@ This feature allows to take a picture or record a video after some delay.
 Implement ```TimerConfiguration.options``` property to provide custom list of timer options.  
 
 In this example, the timer uses 2 options - 3 seconds and 5 seconds delay before to start recording.
-Please check out [implementation](../Example/Example/VideoEditorModule.swift#L1045) in the sample.
 ```swift
 var config = VideoEditorConfig()
 config.recorderConfiguration.timerConfiguration.options = [
@@ -114,7 +113,7 @@ config.recorderConfiguration.timerConfiguration.options = [
 ]
 ```
 
-Moreover, you can implement custom countdown animation for time feature as well. 
+Moreover, you can implement custom countdown animation for time feature as well. Please check out [implementation](../Example/Example/VideoEditorModule.swift#L129) in the sample.
 
 ```diff
 ...
@@ -186,7 +185,7 @@ The feature is disabled by default and can be enabled if the license supports it
 
 The subsequent guide explains how to start and customize ```PIP```.
 
-First, create ```VideoEditorLaunchConfig``` in [ViewController](../Example/Example/ViewController.swift#L79) 
+First, create ```VideoEditorLaunchConfig``` in [ViewController](../Example/Example/ViewController.swift#L65) 
 and provide video content for the feature.
 
 ```diff

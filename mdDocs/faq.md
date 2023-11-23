@@ -551,7 +551,7 @@ To save the video in the format you want, you just need to add the appropriate `
 let videoURL = manager.temporaryDirectory.appendingPathComponent("tmp.mov")
 ```
 
-See example in [sample](../Example/Example/ViewController.swift#L145).
+See example in [sample](../Example/Example/ViewController.swift#L203).
 
 See all formats supported for video export [here](guide_export.md).
 
