@@ -224,11 +224,7 @@ extension ViewController {
               videoEditor.clearSessionData()
             }
             if error == nil {
-              /// If you want to play exported video
-              //          self.playVideoAtURL(videoURL)
-              
-              /// If you want to share exported video
-              self?.showSharingScreen(
+              self?.showExportResult(
                 videoUrl: videoURL,
                 exportCoverImages: exportCoverImages
               )
@@ -238,7 +234,43 @@ extension ViewController {
     })
   }
   
+  func showExportResult(
+    videoUrl: URL,
+    exportCoverImages: ExportCoverImages?
+  ) {
+    // The popup is used to demo export result in a various ways.
+    // It is not required to copy and paste this approach to your project.
+    
+    let alertController = UIAlertController(
+      title: nil,
+      message: nil,
+      preferredStyle: .alert
+    )
+    
+    let previewButton = UIAlertAction(title: "Play Video", style: .default) { _ in
+      /// If you want to play exported video
+      self.playVideoAtURL(videoUrl)
+    }
+    let shareButton = UIAlertAction(title: "Open Sharing", style: .default) { [weak self] _ in
+      /// If you want to share exported video
+      self?.showSharingScreen(
+        videoUrl: videoUrl,
+        exportCoverImages: exportCoverImages
+      )
+    }
+    let cancelButton = UIAlertAction(title: "Close", style: .destructive)
+    
+    alertController.addAction(previewButton)
+    alertController.addAction(shareButton)
+    alertController.addAction(cancelButton)
+    
+    present(alertController, animated: true)
+  }
+  
   private func showSharingScreen(videoUrl: URL, exportCoverImages: ExportCoverImages?) {
+    // Set up sharing configurations
+    //SharingScreenConfiguration.sharingModels - describes what kind of sharing services are available at sharing screen.
+    //SharingScreenConfiguration.facebookId - is a required option for Facebook reels and stories.
     guard let config = videoEditorModule?.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration else { return }
     
     BanubaVideoEditor.presentSharingViewController(
