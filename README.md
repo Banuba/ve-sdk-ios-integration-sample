@@ -7,6 +7,13 @@
 <img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
 <img src="mdDocs/gif/gif_background.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
 </p>
+<p align="center">
+<img src="mdDocs/gif/PE_UI_retouch.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
+<img src="mdDocs/gif/PE_UI_make.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
+<img src="mdDocs/gif/PE_UI_overlays.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
+<img src="mdDocs/gif/PE_UI_backdrops.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
+<img src="mdDocs/gif/PE_UI_text.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
+</p>
 
 ## Overview
 [Banuba Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to quickly add short video functionality and possibly AR filters and effects into your mobile app.
