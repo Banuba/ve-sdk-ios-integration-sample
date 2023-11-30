@@ -224,11 +224,7 @@ extension ViewController {
               videoEditor.clearSessionData()
             }
             if error == nil {
-              /// If you want to play exported video
-              //          self.playVideoAtURL(videoURL)
-              
-              /// If you want to share exported video
-              self?.showSharingScreen(
+              self?.showAfterExportOptionsAlert(
                 videoUrl: videoURL,
                 exportCoverImages: exportCoverImages
               )
@@ -236,6 +232,36 @@ extension ViewController {
           }
         }
     })
+  }
+  
+  func showAfterExportOptionsAlert(
+    videoUrl: URL,
+    exportCoverImages: ExportCoverImages?
+  ) {
+    let alertController = UIAlertController(
+      title: nil,
+      message: nil,
+      preferredStyle: .alert
+    )
+    
+    let previewButton = UIAlertAction(title: "Preview", style: .default) { _ in
+      /// If you want to play exported video
+      self.playVideoAtURL(videoUrl)
+    }
+    let shareButton = UIAlertAction(title: "Share", style: .default) { [weak self] _ in
+      /// If you want to share exported video
+      self?.showSharingScreen(
+        videoUrl: videoUrl,
+        exportCoverImages: exportCoverImages
+      )
+    }
+    let cancelButton = UIAlertAction(title: "Cancel", style: .destructive)
+    
+    alertController.addAction(previewButton)
+    alertController.addAction(shareButton)
+    alertController.addAction(cancelButton)
+    
+    present(alertController, animated: true)
   }
   
   private func showSharingScreen(videoUrl: URL, exportCoverImages: ExportCoverImages?) {
