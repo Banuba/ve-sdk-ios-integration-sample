@@ -31,6 +31,8 @@ These are the answers to the most common questions asked about our SDK.
 - [Is it possible to disable the Trim screen?](#is-it-possible-to-disable-the-trim-screen)
 - [What are the options of configuring the Sharing screen?](#what-are-the-options-of-configuring-the-sharing-screen)
 - [Is it possible to disable the transition effects?](#is-it-possible-to-disable-the-transition-effects)
+- [How can I convert one or several still images to video programmatically?](#how-can-i-convert-one-or-several-still-images-to-video-programmatically)
+- [Is it possible to store localization strings in file other that Localizable.strings?](#is-it-possible-to-store-localization-strings-in-file-other-that-localizable.strings)
 
 ### What is the size of Video Editor SDK size?
 | Options | MB      | Note |
@@ -713,3 +715,7 @@ Example:
 **Important Note!** 
 
 Transition effects are not being played if the closest video (either to the left or to the right of transition icon) is very short.
+### How can I convert one or several still images to video programmatically?
+If you would like to create a video from UIImage instances without opening the Video Editor, you can use our API SDK tailored for solutions with custom built UI, namely the `exportSlideshowImages` method of `VEExport` class.
+### Is it possible to store localization strings in file other that Localizable.strings?
+Sometimes other 3rd party dependencies overwrite the `Localizable.strings` file stored in app bundle during compilation. In such cases it is also possible to store the localization strings in `Banuba.strings` file. 

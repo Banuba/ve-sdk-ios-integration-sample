@@ -185,6 +185,8 @@ Check out the list of [Frequently Asked Questions](faq.md) to know more about fe
 [See all dependencies and licenses](3rd_party_licences.md)
 
 ## Latest Releases  
+[1.33.0](https://vebanuba.notion.site/1-33-0-d95f1f10ccf44350b6faa58876aa5e8f)
+[1.32.0](https://vebanuba.notion.site/1-32-0-ec5def11ba7545919419bdf861d07531)
 [1.30.2](https://vebanuba.notion.site/1-30-2-a0ec2ae1eeea42a59c629834f6ec6f7a)  
 [1.30.1](https://vebanuba.notion.site/1-30-1-6b90d19271b741b0b8353f7a1b92d061)  
 [1.30.0](https://vebanuba.notion.site/1-30-0-35e745d478b648199e38e86c432486e4)  
