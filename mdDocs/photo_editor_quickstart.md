@@ -90,6 +90,22 @@ func photoEditorDidFinishWithImage(
 }
 ```
 ## Configuration
+### Initial screen (entry point) selection
+By default the built-in gallery will be shown first after the presentation of Photo Editor. In some cases the hosting app may already provide a photo selection functionality using its own custom gallery and it is necessary to directly open the photo editing screen with a preselected photo. To support such use cases there is an `entryPoint` property in `PhotoEditorLaunchConfig`. By using the `editorWithImage` or `editorWithURL` options you can specify the edited image by either directly providing the `UIImage` instance or *local* `URL` to on-disk binary image representation.
+
+In the following example the image stored in app's bundle will be opened in the Photo Editor SDK:
+```swift
+let url = Bundle.main.url(forResource: "image", withExtension: "jpg")!
+let launchConfig = PhotoEditorLaunchConfig(
+  hostController: ...,
+  entryPoint: .editorWithURL(url)
+)
+photoEditorSDK.presentPhotoEditor(
+  withLaunchConfiguration: launchConfig,
+  completion: nil
+)
+```
+Should there be any problem with decoding the image at provided url, an error message will be logged in the console by the SDK.
 ### Sharing screen configuration
 After finishing editing image user is navigated to Sharing screen. If Facebook or Instagram are installed on user's phone it will be possible to present an option to share the image as Facebook or Instagram Story. To enable such functionality you need to specify a Facebook app id:
 ```swift

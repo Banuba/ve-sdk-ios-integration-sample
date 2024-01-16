@@ -96,7 +96,42 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     }
   }
   
-  @IBAction func openPhotoEditor(_ sender: UIButton) {
+  @IBAction func openPhotoEditorFromGallery(_ sender: UIButton) {
+    let launchConfig = PhotoEditorLaunchConfig(
+      hostController: self,
+      entryPoint: .gallery
+    )
+    checkLicenseAndOpenPhotoEditor(with: launchConfig)
+  }
+  
+  @IBAction func openPhotoEditorFromEditor(_ sender: UIButton) {
+    pickGalleryPhoto() { assets in
+      guard let asset = assets?.first else {
+        return
+      }
+      let options = PHImageRequestOptions()
+      options.version = .current
+      options.resizeMode = .exact
+      options.deliveryMode = .highQualityFormat
+      options.isNetworkAccessAllowed = true
+      options.isSynchronous = true
+      
+      PHImageManager.default().requestImage(
+        for: asset,
+        targetSize: PHImageManagerMaximumSize,
+        contentMode: .aspectFit,
+        options: options) { image, _ in
+          guard let image else { return }
+          let launchConfig = PhotoEditorLaunchConfig(
+            hostController: self,
+            entryPoint: .editorWithImage(image)
+          )
+          self.checkLicenseAndOpenPhotoEditor(with: launchConfig)
+      }
+    }
+  }
+
+  private func checkLicenseAndOpenPhotoEditor(with launchConfig: PhotoEditorLaunchConfig) {
     // Deallocate any active instances of both editors to free used resources
     // and to prevent "You are trying to create the second instance of the singleton." crash
     photoEditorModule = nil
@@ -116,7 +151,6 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
       guard let self else { return }
       if isValid {
         print("✅ License is active, all good")
-        let launchConfig = PhotoEditorLaunchConfig(hostController: self)
         self.photoEditorModule?.presentPhotoEditor(with: launchConfig)
       } else {
         self.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
@@ -377,6 +411,24 @@ extension ViewController {
     
     imagePicker.settings.fetch.assets.supportedMediaTypes = [.video]
     imagePicker.settings.selection.max = isMultiSelectionEnabled ? Int.max : 1
+    
+    self.presentImagePicker(
+      imagePicker,
+      select: nil,
+      deselect: nil,
+      cancel: { assets in
+        completion(nil)
+      }, finish: { assets in
+        completion(assets)
+      }
+    )
+  }
+  
+  private func pickGalleryPhoto(completion: @escaping ([PHAsset]?) -> Void) {
+    let imagePicker = ImagePickerController()
+    
+    imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
+    imagePicker.settings.selection.max = 1
     
     self.presentImagePicker(
       imagePicker,
