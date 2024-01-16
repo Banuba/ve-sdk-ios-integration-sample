@@ -984,11 +984,12 @@
 "photoEditor.editor.feature.eyebags_str" = "Eyebags";
 "photoEditor.editor.feature.necklift_str" = "Neck Lift";
 "photoEditor.editor.feature.lipsize_str" = "Lip Size";
-"photoEditor.editor.feature.saturate_saturation" = "Saturation";
-"photoEditor.editor.feature.brightness_contrast_brightness" = "Brightness";
-"photoEditor.editor.feature.sharpen_amount" = "Sharpness";
-"photoEditor.editor.feature.noise_strength" = "Noise";
-"photoEditor.editor.feature.brightness_contrast_contrast" = "Contrast";
+"photoEditor.editor.feature.eyes_whitening" = "Whitening";
+"photoEditor.editor.feature.saturation" = "Saturation";
+"photoEditor.editor.feature.brightness" = "Brightness";
+"photoEditor.editor.feature.sharpen" = "Sharpness";
+"photoEditor.editor.feature.noise" = "Noise";
+"photoEditor.editor.feature.contrast" = "Contrast";
 
 "photoEditor.editor.content.hairColor.Brown" = "Brown";
 "photoEditor.editor.content.hairColor.Pink" = "Pink";
