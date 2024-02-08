@@ -32,5 +32,5 @@ target 'Example' do
   
   # Photo Editor
   
-  pod 'BanubaPhotoEditorSDK', '1.1.0'
+  pod 'BanubaPhotoEditorSDK', '1.1.1'
 end
