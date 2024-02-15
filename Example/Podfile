@@ -7,7 +7,7 @@ inhibit_all_warnings!
 
 target 'Example' do
   
-  banuba_sdk_version = '1.33.3'
+  banuba_sdk_version = '1.34.0'
   
   # Video Editor
   
