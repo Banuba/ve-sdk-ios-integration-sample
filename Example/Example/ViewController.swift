@@ -242,6 +242,28 @@ extension ViewController {
     
     let exportConfiguration = videoEditorModule.createExportConfiguration(destFile: videoURL)
     
+    if let musicUrl = videoEditorModule.videoEditorSDK?.musicMetadata?.tracks.first?.url {
+      if manager.fileExists(atPath: musicUrl.path) {
+        print("music exists at \(musicUrl.path)")
+      } else {
+        print("music not found")
+      }
+      
+      let tmpUrl = manager.temporaryDirectory
+        .appendingPathComponent("tmp_music_file")
+        .appendingPathExtension(musicUrl.pathExtension)
+      do {
+        if manager.fileExists(atPath: tmpUrl.path) {
+          try manager.removeItem(at: tmpUrl)
+        }
+        try manager.copyItem(at: musicUrl, to: tmpUrl)
+        
+        print("music successfully copied to temporary folder")
+      } catch {
+        print(error)
+      }
+    }
+    
     videoEditor.export(
       using: exportConfiguration,
       exportProgress: { [weak progressViewController] progress in
