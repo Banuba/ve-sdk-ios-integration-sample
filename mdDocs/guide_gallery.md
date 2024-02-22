@@ -1,5 +1,9 @@
 # Gallery integration guide
 
+> [!CAUTION]
+> This documentation is deprecated and no longer updated.
+> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_gallery) with latest documentation.
+
 - [Add module](#Add-module)
 - [Customize default gallery](#Customize-default-gallery)
 - [Implement custom gallery](#Implement-custom-gallery)

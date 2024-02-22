@@ -1,5 +1,9 @@
 # Export guide
 
+> [!CAUTION]
+> This documentation is deprecated and no longer updated.
+> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_export) with latest documentation.
+
 - [Overview](#Overview)
 - [Video codecs](#Video-codecs)
 - [Video quality](#Video-quality)

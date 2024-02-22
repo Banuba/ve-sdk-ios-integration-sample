@@ -1,4 +1,9 @@
 # Banuba VideoEditor SDK
+
+> [!CAUTION]
+> This documentation is deprecated and no longer updated.
+> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/ve-3rd-party) with latest documentation.
+
 ## Third party libraries
 
 ### **MIT License**

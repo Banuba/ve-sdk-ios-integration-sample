@@ -1,5 +1,9 @@
 # Quickstart Guide
 
+> [!CAUTION]
+> This documentation is deprecated and no longer updated.
+> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/requirements) with latest documentation.
+
 - [Prerequisites](#Prerequisites)
 - [Concepts](#Concepts)
 - [Add dependencies](#Add-dependencies)

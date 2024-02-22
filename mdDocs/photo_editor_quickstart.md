@@ -1,4 +1,9 @@
 # Banuba AR Photo Editor Quickstart Guide
+
+> [!CAUTION]
+> This documentation is deprecated and no longer updated.
+> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/pe-requirements) with latest documentation.
+
 ## SDK Installation
 ### CocoaPods
 Learn [CocoaPods Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) if you are new to CocoaPods.

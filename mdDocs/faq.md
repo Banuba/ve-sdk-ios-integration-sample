@@ -1,4 +1,9 @@
 # FAQ  
+
+> [!CAUTION]
+> This documentation is deprecated and no longer updated.
+> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/ve-faq) with latest documentation.
+
 These are the answers to the most common questions asked about our SDK.
 
 - [What is the size of Video Editor SDK size?](#what-is-the-size-of-video-editor-sdk-size)

@@ -1,5 +1,9 @@
 # Face AR and AR Cloud integration guide
 
+> [!CAUTION]
+> This documentation is deprecated and no longer updated.
+> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_far_arcloud) with latest documentation.
+
 - [Overview](#Overview)
 - [Manage effects](#Manage-effects)
 - [Integrate AR Cloud](#Integrate-AR-Cloud)

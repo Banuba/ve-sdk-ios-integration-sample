@@ -1,5 +1,9 @@
 # Video recording integration guide
 
+> [!CAUTION]
+> This documentation is deprecated and no longer updated.
+> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_video_recording) with latest documentation.
+
 - [Quality details](#Quality-details)
 - [Implement configurations](#Implement-configurations)
 - [Configure microphone state](#Configure-microphone-state)

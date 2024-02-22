@@ -1,5 +1,9 @@
 # Drafts guide
 
+> [!CAUTION]
+> This documentation is deprecated and no longer updated.
+> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_drafts) with latest documentation.
+
 ```DraftsService``` class is used for managing drafts.
 
 ```swift

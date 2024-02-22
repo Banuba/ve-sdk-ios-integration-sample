@@ -23,9 +23,9 @@
 ### License
 Before you commit to a license, you are free to test all the features of the SDK for free. The trial period lasts 14 days. 
 
-Send us a message to start the [Video Editor SDK trial](https://www.banuba.com/video-editor-sdk#form) | [Photo Editor SDK trial](https://www.banuba.com/photo-editor-sdk#form). We will get back to you with the trial token.
+Send us a message to start the [Video Editor SDK trial](https://www.banuba.com/video-editor-sdk#form) | [Photo Editor SDK trial](https://www.banuba.com/photo-editor-sdk#form). We will get back to you with the trial token.
 
-Feel free to contact us if you have any questions regarding [Video Editor SDK](https://www.banuba.com/faq/kb-tickets/new) and [Photo Editor SDK](https://www.banuba.com/support) .
+Feel free to contact us if you have any questions regarding [Video Editor SDK](https://www.banuba.com/faq/kb-tickets/new) and [Photo Editor SDK](https://www.banuba.com/support).
 ### Installation
 1. Clone the repository
 2. Install CocoaPods dependencies. Open **Example** directory ```cd Example``` and run ```pod install``` in terminal.
@@ -34,9 +34,9 @@ Feel free to contact us if you have any questions regarding [Video Editor SDK](h
 5. Add the license token [within the app](/Example/Example/AppDelegate.swift#L9)
 6. Run sample application in XCode
 ### Quickstart Guide
-Our [Quickstart Guide](mdDocs/quickstart.md) will help you to quickly integrate and customize **Video Editor SDK** into your iOS project.
+Our [Quickstart Guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/requirements) will help you to quickly integrate and customize **Video Editor SDK** into your iOS project.
 
-For **Photo Editor SDK** please check out the [following document](mdDocs/photo_editor_quickstart.md).
+For **Photo Editor SDK** please check out the [following document](https://docs.banuba.com/ve-pe-sdk/docs/ios/pe-requirements).
 ## Requirements
 This is what you need to run the AI Video Editor SDK or AR Photo Editor SDK.
 - iPhone devices 6s+

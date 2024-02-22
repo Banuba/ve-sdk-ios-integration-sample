@@ -1,5 +1,9 @@
 # Audio integration guide
 
+> [!CAUTION]
+> This documentation is deprecated and no longer updated.
+> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_audio_content) with latest documentation.
+
 - [Overview](#Overview)
 - [Audio Browser](#Audio-Browser)
 - [Mubert integration](#Mubert-integration)
