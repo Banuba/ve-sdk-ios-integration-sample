@@ -10,6 +10,11 @@ import BSImagePicker
 import VEExportSDK
 import BanubaAudioBrowserSDK
 
+enum BanubaVideoEditorMode: String, CaseIterable {
+    case video
+    case photo
+}
+
 // Adopting CountdownView to using in BanubaVideoEditorSDK
 extension CountdownView: MusicEditorCountdownAnimatableView {}
 
@@ -19,8 +24,8 @@ class VideoEditorModule {
     
     var isVideoEditorInitialized: Bool { videoEditorSDK != nil }
     
-    init(token: String) {
-        let config = createConfiguration()
+    init(token: String, videoEditorMode: BanubaVideoEditorMode) {
+        let config = createConfiguration(videoEditorMode: videoEditorMode)
         let externalViewControllerFactory = createExampleExternalViewControllerFactory()
         
         let videoEditorSDK = BanubaVideoEditor(
@@ -72,7 +77,7 @@ class VideoEditorModule {
       return progressViewController
     }
     
-    func createConfiguration() -> VideoEditorConfig {
+    func createConfiguration(videoEditorMode: BanubaVideoEditorMode) -> VideoEditorConfig {
         var config = VideoEditorConfig()
         
         config.setupColorsPalette(
@@ -104,6 +109,14 @@ class VideoEditorModule {
         featureConfiguration.supportsTrimRecordedVideo = true
         featureConfiguration.isMuteCameraAudioEnabled = true
         config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
+        
+        switch videoEditorMode {
+        case .video:
+            config.recorderConfiguration.captureButtonModes = [.video]
+        case .photo:
+            config.recorderConfiguration.captureButtonModes = [.photo]
+            config.recorderConfiguration.additionalEffectsButtons = config.recorderConfiguration.additionalEffectsButtons.filter { $0.identifier != .sound }
+        }
         
         return config
     }
