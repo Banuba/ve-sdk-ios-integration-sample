@@ -11,6 +11,11 @@ import VEExportSDK
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 
+enum BanubaVideoEditorMode: String, CaseIterable {
+    case video
+    case photo
+}
+
 class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEditorDelegate {
   
   // MARK: - IBOutlet
@@ -51,7 +56,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
       musicTrack: musicTrackPreset, // Paste a music track as a track preset at the camera screen to record video with music
       animated: true
     )
-    checkLicenseAndOpenVideoEditor(with: launchConfig)
+    selectVideoEditorModeAndLaunchVE(with: launchConfig)
   }
   
   @IBAction func openVideoEditorPiP(_ sender: Any) {
@@ -66,7 +71,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
         animated: true
       )
       
-      self.checkLicenseAndOpenVideoEditor(with: launchConfig)
+      self.checkLicenseAndOpenVideoEditor(with: launchConfig, videoEditorMode: .video)
     }
   }
   
@@ -77,7 +82,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
       animated: true
     )
     
-    checkLicenseAndOpenVideoEditor(with: launchConfig)
+    checkLicenseAndOpenVideoEditor(with: launchConfig, videoEditorMode: .video)
   }
   
   @IBAction func openVideoEditorTrimmer(_ sender: UIButton) {
@@ -92,7 +97,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
         animated: true
       )
       
-      self.checkLicenseAndOpenVideoEditor(with: launchConfig)
+      self.checkLicenseAndOpenVideoEditor(with: launchConfig, videoEditorMode: .video)
     }
   }
   
@@ -102,6 +107,23 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
       entryPoint: .gallery
     )
     checkLicenseAndOpenPhotoEditor(with: launchConfig)
+  }
+  
+  private func selectVideoEditorModeAndLaunchVE(with launchConfig: VideoEditorLaunchConfig) {
+    let alertController = UIAlertController(title: "Select Video Editor Mode", message: nil, preferredStyle: .alert)
+    BanubaVideoEditorMode.allCases.forEach { mode in
+      alertController.addAction(
+        UIAlertAction(
+          title: mode.rawValue,
+          style: .default,
+          handler: { [weak self] _ in
+            self?.checkLicenseAndOpenVideoEditor(with: launchConfig, videoEditorMode: mode)
+          }
+        )
+      )
+    }
+    
+    present(alertController, animated: true)
   }
   
   @IBAction func openPhotoEditorFromEditor(_ sender: UIButton) {
@@ -183,13 +205,13 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     return musicTrackPreset
   }
   
-  private func checkLicenseAndOpenVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
+  private func checkLicenseAndOpenVideoEditor(with launchConfig: VideoEditorLaunchConfig, videoEditorMode: BanubaVideoEditorMode) {
     // Deallocate any active instances of both editors to free used resources
     // and to prevent "You are trying to create the second instance of the singleton." crash
     photoEditorModule = nil
     videoEditorModule = nil
     
-    videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
+    videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken, videoEditorMode: videoEditorMode)
     
     guard let videoEditorSDK = videoEditorModule?.videoEditorSDK else {
       invalidTokenMessageLabel.text = "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
