@@ -10,6 +10,11 @@ import BSImagePicker
 import VEExportSDK
 import BanubaAudioBrowserSDK
 
+enum BanubaVideoEditorMode: String, CaseIterable {
+    case video
+    case photo
+}
+
 // Adopting CountdownView to using in BanubaVideoEditorSDK
 extension CountdownView: MusicEditorCountdownAnimatableView {}
 

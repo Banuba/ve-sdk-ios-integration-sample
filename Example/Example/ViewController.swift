@@ -11,11 +11,6 @@ import VEExportSDK
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 
-enum BanubaVideoEditorMode: String, CaseIterable {
-    case video
-    case photo
-}
-
 class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEditorDelegate {
   
   // MARK: - IBOutlet
