@@ -91,12 +91,11 @@ class VideoEditorModule {
                 timelineEffectColorsPalette: TimelineEffectColorsPalette.default
             )
         )
-         let mubertToken = "b308b0ad7d98e8869e043a1b5b5132b6fb909c7c"
-         let mubertLicense = "banuba_sdkmubertlicense#eDfDLWJoMHIvsAS9EvcelXr1zkDyEQGLLvGsNukOQLcxSDw4mR8kdVYjXD6q0H0DZQj5hPtPlsK"
+        
         // Set Mubert API KEYS here
         BanubaAudioBrowser.setMubertKeys(
-            license: mubertLicense,
-            token: mubertToken
+            license: "SET MUBERT API LICENSE",
+            token: "SET MUBERT API TOKEN"
         )
         AudioBrowserConfig.shared.musicSource = .allSources
         AudioBrowserConfig.shared.setPrimaryColor(#colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1))

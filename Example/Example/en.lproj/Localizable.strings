@@ -438,6 +438,9 @@
 /* Edit overlay item button title */
 "OverlayEditor.Edit" = "Edit";
 
+/* Style overlay item button title */
+"OverlayEditor.Style" = "Style";
+
 /* Add text button title */
 "OverlayEditor.Text" = "Text";
 
@@ -468,6 +471,10 @@
 "com.banuba.overlayEditor.captions.noInternetConnectionMessage" = "Check your connection and try again.";
 "com.banuba.overlayEditor.captions.tryAgain" = "Try Again";
 "com.banuba.overlayEditor.captions.noInternetConnectionToast" = "The internet connection appears to be offline.";
+
+"com.banuba.overlayEditor.captions.textStyle.basic" = "Basic";
+"com.banuba.overlayEditor.captions.textStyle.multicolor" = "Multicolor";
+"com.banuba.overlayEditor.captions.textStyle.gradient" = "Gradient";
 
 "com.banuba.overlayEditor.captions.createNewCaptionsQuestion" = "Create new captions?";
 "com.banuba.overlayEditor.captions.createNewCaptionsQuestionDetails" = "Previously created captions will be deleted.";
@@ -536,12 +543,11 @@
 "MusicLibrary.showMore" = "Show More";
 "MusicLibrary.tryAgain" = "Try again";
 "MusicLibrary.tryAgainLaterTitle" = "Please try again later";
+"MusicLibrary.allTracks" = "All tracks";
 "MusicLibrary.popular" = "Popular";
-"MusicLibrary.newReleases" = "New Releases";
-"MusicLibrary.mixedForYou" = "Mixed for you";
 "MusicLibrary.noInternetTitle" = "No internet connection";
 "MusicLibrary.noInternetMessage" = "Check your connection or try again.";
-"MusicLibrary.noContentMessage" = "Audio content is temporarily unavailable";
+"MusicLibrary.noContentMessage" = "Sorry, audio content is temporarily unavailable";
 "MusicLibrary.noFavoritesTitle" = "No favorites yet";
 "MusicLibrary.noFavoritesMessage" = "Mark your favorite songs and always have them here.";
 "MusicLibrary.noRecentsTitle" = "No recent sounds";
@@ -549,6 +555,22 @@
 "MusicLibrary.noMatchesMessage" = "No matches";
 "MusicLibrary.searchBarPlaceholder" = "Search by song names";
 "MusicLibrary.searchBarCancelButtonTitle" = "Cancel";
+
+// MARK: - Soundstripe
+
+"Soundstripe.playlists" = "Playlists";
+"Soundstripe.categories" = "Categories";
+"Soundstripe.trendingSongs" = "Trending Songs";
+"Soundstripe.moods" = "Moods";
+"Soundstripe.styles" = "Styles";
+"Soundstripe.instruments" = "Instruments";
+"Soundstripe.searchBarPlaceholder" = "Search";
+"Soundstripe.homeScreenTitle" = "Music";
+"Soundstripe.genres" = "Genres";
+"Soundstripe.viewAll" = "View All";
+"Soundstripe.noContentMessage" = "Sorry, audio content is temporarily unavailable";
+"Soundstripe.showMore" = "Show More";
+"Soundstripe.searchBarCancelButtonTitle" = "Cancel";
 
 // MARK: - Hands-free
 "hands.free.video.drag.title" = "Drag to set video duration";
@@ -788,13 +810,14 @@
 /* Reordering video tool tip label message */
 "com.banuba.trim.reorderingToolTip" = "Drag to swap";
 /* Delete single video error message */
-"com.banuba.trim.deleteLastClipErrorMessage" = "The last clip can't  be deleted";
+"com.banuba.trim.deleteLastClipErrorMessage" = "The last clip can't be deleted";
 /* Split video part error message */
 "com.banuba.trim.splitErrorMessage" = "The selected position is invalid";
 
 // MARK: - Capture button modes
 "com.banuba.record.captureButtonVideoMode" = "Video";
 "com.banuba.record.captureButtonPhotoMode" = "Photo";
+"com.banuba.record.beautyIntensityTitle" = "Intensity";
 
 /* Sharing other button */
 "sharing.other.title" = "Other";
@@ -859,3 +882,263 @@
 
 // MARK: - Music panel
 "com.banuba.music.panel.title" = "Add sound";
+
+// MARK: - Photo Editor
+"photoEditor.gallery.addPhotos" = "Add photos";
+"photoEditor.gallery.noPhotos" = "No photos found";
+"photoEditor.gallery.openSettings" = "Open Settings";
+"photoEditor.gallery.allowAccessToContinue" = "Allow access to “All Photos” in Settings to continue";
+"photoEditor.gallery.noAccessToPhotos" = "No access to photos";
+
+"photoEditor.editor.adjust" = "Adjust";
+"photoEditor.editor.retouch" = "Retouch";
+"photoEditor.editor.makeup" = "Makeup";
+"photoEditor.editor.effects" = "Effects";
+"photoEditor.editor.text" = "Text";
+"photoEditor.editor.faceNotRecognizedHint" = "The face is not recognized, so this tool is not available";
+"photoEditor.editor.reset" = "Reset";
+"photoEditor.editor.default" = "Default";
+"photoEditor.editor.slider.noFilter" = "No filter";
+"photoEditor.editor.slider.natural" = "Soft";
+"photoEditor.editor.slider.delicate" = "Moderate";
+"photoEditor.editor.slider.supreme" = "Supreme";
+"photoEditor.editor.done" = "Done";
+"photoEditor.editor.save" = "Save";
+"photoEditor.editor.acneHint" = "Tap on spots";
+"photoEditor.editor.eyebagsHint" = "Drag to remove eyebags";
+"photoEditor.editor.makeupTab.looks" = "Looks";
+"photoEditor.editor.makeupTab.haircolors" = "Hair";
+"photoEditor.editor.makeupTab.lips" = "Lips";
+"photoEditor.editor.makeupTab.eyes" = "Eyes";
+"photoEditor.editor.makeupTab.foundation" = "Foundation";
+"photoEditor.editor.makeupTab.lashes" = "Lashes";
+"photoEditor.editor.makeupTab.blush" = "Blush";
+"photoEditor.editor.effectsTab.backdrop" = "Backdrop";
+"photoEditor.editor.effectsTab.filters" = "Filters";
+"photoEditor.editor.effectsTab.overlays" = "Overlays";
+"photoEditor.editor.alert.resetAll" = "Reset all?";
+"photoEditor.editor.alert.reset" = "Reset";
+"photoEditor.editor.alert.cancel" = "Cancel";
+"photoEditor.preview.saved" = "Saved!";
+"photoEditor.preview.more" = "More";
+"photoEditor.preview.stories" = "Stories";
+
+"photoEditor.editor.content.makeup.Aster" = "Aster";
+"photoEditor.editor.content.makeup.Begonia" = "Begonia";
+"photoEditor.editor.content.makeup.Jasmine" = "Jasmine";
+"photoEditor.editor.content.makeup.Carnation" = "Carnation";
+"photoEditor.editor.content.makeup.Daisy" = "Daisy";
+"photoEditor.editor.content.makeup.Freesia" = "Freesia";
+"photoEditor.editor.content.makeup.Iris" = "Iris";
+"photoEditor.editor.content.makeup.Tulip" = "Tulip";
+"photoEditor.editor.content.makeup.Sunset" = "Sunset";
+"photoEditor.editor.content.makeup.Smoky" = "Smoky";
+"photoEditor.editor.content.makeup.Femme" = "Femme";
+"photoEditor.editor.content.makeup.Romp" = "Romp";
+"photoEditor.editor.content.makeup.Hush" = "Hush";
+"photoEditor.editor.content.makeup.Brun" = "Brun";
+"photoEditor.editor.content.makeup.Icon" = "Icon";
+"photoEditor.editor.content.makeup.Crocus" = "Crocus";
+"photoEditor.editor.content.makeup.Malt" = "Malt";
+"photoEditor.editor.content.makeup.Kid" = "Kid";
+"photoEditor.editor.content.makeup.Bluebell" = "Bluebell";
+"photoEditor.editor.content.makeup.Foxy" = "Foxy";
+"photoEditor.editor.content.makeup.Swan" = "Swan";
+"photoEditor.editor.content.makeup.Dreamy" = "Dreamy";
+"photoEditor.editor.content.makeup.Galaxy" = "Galaxy";
+"photoEditor.editor.content.makeup.Elf" = "Elf";
+"photoEditor.editor.content.makeup.Gloom" = "Gloom";
+"photoEditor.editor.content.makeup.Elegant" = "Elegant";
+"photoEditor.editor.content.makeup.Feast" = "Feast";
+"photoEditor.editor.content.makeup.40s" = "40s";
+"photoEditor.editor.content.makeup.Coral" = "Coral";
+"photoEditor.editor.content.makeup.Mermaid" = "Mermaid";
+"photoEditor.editor.content.makeup.Fresh" = "Fresh";
+"photoEditor.editor.content.makeup.Cleo" = "Cleo";
+"photoEditor.editor.content.makeup.Dusk" = "Dusk";
+"photoEditor.editor.content.makeup.Stylish" = "Stylish";
+"photoEditor.editor.content.makeup.Lotus" = "Lotus";
+"photoEditor.editor.content.makeup.Hippie" = "Hippie";
+"photoEditor.editor.content.makeup.Glitz" = "Glitz";
+"photoEditor.editor.content.makeup.Flash" = "Flash";
+"photoEditor.editor.content.makeup.Karma" = "Karma";
+"photoEditor.editor.content.makeup.Fairy" = "Fairy";
+"photoEditor.editor.content.makeup.Holy" = "Holy";
+"photoEditor.editor.content.makeup.Flirty" = "Flirty";
+"photoEditor.editor.content.makeup.Twilight" = "Twilight";
+"photoEditor.editor.content.makeup.Sugar" = "Sugar";
+"photoEditor.editor.content.makeup.Misty" = "Misty";
+"photoEditor.editor.content.makeup.Bounty" = "Bounty";
+"photoEditor.editor.content.makeup.Peachy" = "Peachy";
+"photoEditor.editor.content.makeup.Crystal" = "Crystal";
+"photoEditor.editor.content.makeup.Queen" = "Queen";
+"photoEditor.editor.content.makeup.Cutie" = "Cutie";
+"photoEditor.editor.content.makeup.Hearts" = "Hearts";
+"photoEditor.editor.content.makeup.Lovebug" = "Love Bug";
+"photoEditor.editor.content.makeup.Glossy" = "Glossy";
+"photoEditor.editor.content.makeup.Romance" = "Romance";
+"photoEditor.editor.content.makeup.Bemine" = "Be Mine";
+"photoEditor.editor.content.makeup.Candy" = "Candy";
+"photoEditor.editor.content.makeup.Xmas" = "Xmas";
+"photoEditor.editor.content.makeup.Snowy" = "Snowy";
+"photoEditor.editor.content.makeup.Club" = "Club";
+"photoEditor.editor.content.makeup.Dewy" = "Dewy";
+"photoEditor.editor.content.makeup.Drama" = "Drama";
+"photoEditor.editor.content.makeup.Swish" = "Swish";
+
+"photoEditor.editor.feature.main" = "Auto";
+"photoEditor.editor.feature.morph_cheeks_str" = "Shape";
+"photoEditor.editor.feature.morph_eyes_str" = "Eyes";
+"photoEditor.editor.feature.morph_nose_str" = "Nose";
+"photoEditor.editor.feature.skin_soft_str" = "Smooth";
+"photoEditor.editor.feature.softlight_alpha" = "Bright";
+"photoEditor.editor.feature.teeth_whitening_str" = "Whiten";
+"photoEditor.editor.feature.reset_button" = "Reset";
+"photoEditor.editor.feature.acne_str" = "Heal";
+"photoEditor.editor.feature.eyebags_str" = "Eyebags";
+"photoEditor.editor.feature.necklift_str" = "Neck Lift";
+"photoEditor.editor.feature.lipsize_str" = "Lip Size";
+"photoEditor.editor.feature.eyes_whitening" = "Whitening";
+"photoEditor.editor.feature.saturation" = "Saturation";
+"photoEditor.editor.feature.brightness" = "Brightness";
+"photoEditor.editor.feature.sharpen" = "Sharpness";
+"photoEditor.editor.feature.noise" = "Noise";
+"photoEditor.editor.feature.contrast" = "Contrast";
+
+"photoEditor.editor.content.hairColor.Brown" = "Brown";
+"photoEditor.editor.content.hairColor.Pink" = "Pink";
+"photoEditor.editor.content.hairColor.Violet" = "Violet";
+"photoEditor.editor.content.hairColor.Silver" = "Silver";
+"photoEditor.editor.content.hairColor.Blonde" = "Blonde";
+"photoEditor.editor.content.hairColor.Brunette" = "Brunette";
+"photoEditor.editor.content.hairColor.Bisque" = "Bisque";
+"photoEditor.editor.content.hairColor.Bambu" = "Bamboo";
+"photoEditor.editor.content.hairColor.Daino" = "Daino";
+"photoEditor.editor.content.hairColor.Goldenrod" = "Golden";
+"photoEditor.editor.content.hairColor.Chocolate" = "Chocolate";
+"photoEditor.editor.content.hairColor.Moro" = "Moro";
+"photoEditor.editor.content.hairColor.Sienna" = "Sienna";
+"photoEditor.editor.content.hairColor.Copper" = "Copper";
+"photoEditor.editor.content.hairColor.Peru" = "Peru";
+"photoEditor.editor.content.hairColor.Red" = "Red";
+"photoEditor.editor.content.hairColor.Blue" = "Blue";
+"photoEditor.editor.content.hairColor.Green" = "Green";
+"photoEditor.editor.content.hairColor.Cobalt" = "Cobalt";
+"photoEditor.editor.content.hairColor.Mint" = "Mint";
+"photoEditor.editor.content.hairColor.Lavender" = "Lavender";
+"photoEditor.editor.content.hairColor.Ginger" = "Ginger";
+"photoEditor.editor.content.hairColor.Rose" = "Rose";
+"photoEditor.editor.content.hairColor.Purple" = "Purple";
+"photoEditor.editor.content.hairColor.Yellow" = "Yellow";
+"photoEditor.editor.content.hairColor.Rufous" = "Rufous";
+"photoEditor.editor.content.hairColor.Avocado" = "Avocado";
+"photoEditor.editor.content.hairColor.Guava" = "Guava";
+"photoEditor.editor.content.hairColor.Fig" = "Fig";
+"photoEditor.editor.content.hairColor.Plum" = "Plum";
+"photoEditor.editor.content.hairColor.Grape" = "Grape";
+"photoEditor.editor.content.hairColor.Eggplant" = "Eggplant";
+"photoEditor.editor.content.hairColor.Cherry" = "Cherry";
+"photoEditor.editor.content.hairColor.Kiwi" = "Kiwi";
+"photoEditor.editor.content.hairColor.Apple" = "Apple";
+"photoEditor.editor.content.hairColor.Pitaya" = "Pitaya";
+
+"photoEditor.editor.content.lipsColor.Pink" = "Pink";
+"photoEditor.editor.content.lipsColor.Red" = "Red";
+"photoEditor.editor.content.lipsColor.Brown" = "Brown";
+"photoEditor.editor.content.lipsColor.Violet" = "Violet";
+"photoEditor.editor.content.lipsColor.Bronze" = "Bronze";
+"photoEditor.editor.content.lipsColor.Coral" = "Coral";
+"photoEditor.editor.content.lipsColor.CalmPink" = "Calm Pink";
+"photoEditor.editor.content.lipsColor.Burgundy" = "Burgundy";
+"photoEditor.editor.content.lipsColor.Glintwein" = "Glintwein";
+"photoEditor.editor.content.lipsColor.CafeChic" = "Cafe Chic";
+"photoEditor.editor.content.lipsColor.Candy" = "Candy";
+"photoEditor.editor.content.lipsColor.Lilac" = "Lilac";
+"photoEditor.editor.content.lipsColor.Raspberry" = "Raspberry";
+"photoEditor.editor.content.lipsColor.syrup" = "Syrup";
+"photoEditor.editor.content.lipsColor.diva" = "Diva";
+"photoEditor.editor.content.lipsColor.nude" = "Nude";
+"photoEditor.editor.content.lipsColor.melon" = "Melon";
+"photoEditor.editor.content.lipsColor.kiss" = "Kiss";
+"photoEditor.editor.content.lipsColor.retro" = "Retro";
+"photoEditor.editor.content.lipsColor.taffy" = "Taffy";
+"photoEditor.editor.content.lipsColor.brave" = "Brave";
+"photoEditor.editor.content.lipsColor.heroine" = "Heroine";
+"photoEditor.editor.content.lipsColor.beige" = "Beige";
+"photoEditor.editor.content.lipsColor.night" = "Night";
+"photoEditor.editor.content.lipsColor.berry" = "Berry";
+"photoEditor.editor.content.lipsColor.unicorn" = "Unicorn";
+"photoEditor.editor.content.lipsColor.sahara" = "Sahara";
+"photoEditor.editor.content.lipsColor.cherry" = "Cherry";
+"photoEditor.editor.content.lipsColor.muse" = "Muse";
+"photoEditor.editor.content.lipsColor.flirt" = "Flirt";
+"photoEditor.editor.content.lipsColor.punch" = "Punch";
+"photoEditor.editor.content.lipsColor.rebel" = "Rebel";
+"photoEditor.editor.content.lipsColor.peach" = "Peach";
+"photoEditor.editor.content.lipsColor.medusa" = "Medusa";
+"photoEditor.editor.content.lipsColor.pearl" = "Pearl";
+"photoEditor.editor.content.lipsColor.disco" = "Disco";
+"photoEditor.editor.content.lipsColor.lollipop" = "Lollipop";
+"photoEditor.editor.content.lipsColor.mocha" = "Mocha";
+"photoEditor.editor.content.lipsColor.mauve" = "Mauve";
+"photoEditor.editor.content.lipsColor.apricot" = "Apricot";
+"photoEditor.editor.content.lipsColor.belle" = "Belle";
+"photoEditor.editor.content.lipsColor.icon" = "Icon";
+"photoEditor.editor.content.lipsColor.honey" = "Honey";
+"photoEditor.editor.content.lipsColor.angel" = "Angel";
+"photoEditor.editor.content.lipsColor.peony" = "Peony";
+"photoEditor.editor.content.lipsColor.cream" = "Cream";
+
+"photoEditor.editor.content.eyesColor.Brown" = "Brown";
+"photoEditor.editor.content.eyesColor.Green" = "Green";
+"photoEditor.editor.content.eyesColor.Blue" = "Blue";
+"photoEditor.editor.content.eyesColor.Grey" = "Grey";
+"photoEditor.editor.content.eyesColor.Purple" = "Purple";
+"photoEditor.editor.content.eyesColor.Red" = "Red";
+"photoEditor.editor.content.eyesColor.Yellow" = "Yellow";
+"photoEditor.editor.content.eyesColor.Honey" = "Honey";
+"photoEditor.editor.content.eyesColor.Hazel" = "Hazel";
+"photoEditor.editor.content.eyesColor.India" = "India";
+"photoEditor.editor.content.eyesColor.Sapphire" = "Sapphire";
+"photoEditor.editor.content.eyesColor.Pacific" = "Pacific";
+"photoEditor.editor.content.eyesColor.Jade" = "Jade";
+"photoEditor.editor.content.eyesColor.Emerald" = "Emerald";
+
+"photoEditor.editor.content.backdrop.Rainbow" = "Rainbow";
+"photoEditor.editor.content.backdrop.Glamour" = "Glamour";
+"photoEditor.editor.content.backdrop.Galaxy" = "Galaxy";
+"photoEditor.editor.content.backdrop.Ocean" = "Ocean";
+"photoEditor.editor.content.backdrop.Mist" = "Mist";
+"photoEditor.editor.content.backdrop.Sky" = "Sky";
+"photoEditor.editor.content.backdrop.Allure" = "Allure";
+"photoEditor.editor.content.backdrop.Frost" = "Frost";
+"photoEditor.editor.content.backdrop.Lights" = "Lights";
+"photoEditor.editor.content.backdrop.Hawaii" = "Hawaii";
+"photoEditor.editor.content.backdrop.Fruits" = "Fruits";
+"photoEditor.editor.content.backdrop.blur" = "Blur";
+"photoEditor.editor.content.backdrop.Bar" = "Bar";
+"photoEditor.editor.content.backdrop.Home" = "Home";
+"photoEditor.editor.content.backdrop.Dawn" = "Dawn";
+"photoEditor.editor.content.backdrop.Beach" = "Beach";
+"photoEditor.editor.content.backdrop.Shore" = "Shore";
+"photoEditor.editor.content.backdrop.Office" = "Office";
+"photoEditor.editor.content.backdrop.Bouquet" = "Bouquet";
+"photoEditor.editor.content.backdrop.Butterfly" = "Butterfly";
+"photoEditor.editor.content.backdrop.Tropical" = "Tropical";
+"photoEditor.editor.content.backdrop.Floral" = "Floral";
+"photoEditor.editor.content.backdrop.Letters" = "Letters";
+"photoEditor.editor.content.backdrop.Bokeh" = "Bokeh";
+"photoEditor.editor.content.backdrop.Lotus" = "Lotus";
+"photoEditor.editor.content.backdrop.Glare" = "Glare";
+"photoEditor.editor.content.backdrop.Oranges" = "Oranges";
+"photoEditor.editor.content.backdrop.Jungle" = "Jungle";
+"photoEditor.editor.content.backdrop.Space" = "Space";
+"photoEditor.editor.content.backdrop.Summer" = "Summer";
+"photoEditor.editor.content.backdrop.Daisy" = "Daisy";
+"photoEditor.editor.content.backdrop.Gradient" = "Gradient";
+"photoEditor.editor.content.backdrop.Candies" = "Candies";
+"photoEditor.editor.content.backdrop.Baubles" = "Baubles";
+"photoEditor.editor.content.backdrop.Gifts" = "Gifts";
+
+"photoEditor.expired.editingUnavailable" = "Photo editing is temporarily unavailable.";
+"photoEditor.expired.close" = "Close";

@@ -27,6 +27,8 @@
 		63CF1CE72B6CEBFF0038D920 /* VEEffectsSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 63CF1CE62B6CEBFF0038D920 /* VEEffectsSDK */; };
 		63CF1CEA2B6CEC210038D920 /* VEExportSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 63CF1CE92B6CEC210038D920 /* VEExportSDK */; };
 		63CF1CED2B6CEC430038D920 /* VEPlaybackSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 63CF1CEC2B6CEC430038D920 /* VEPlaybackSDK */; };
+		7D7D0A572B976D4000DF878E /* PhotoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D0A562B976D4000DF878E /* PhotoEditorModule.swift */; };
+		7DC6C3052B975900006323C8 /* BanubaPhotoEditorSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 7DC6C3042B975900006323C8 /* BanubaPhotoEditorSDK */; };
 		8A32EED0258CB5430098F852 /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EECF258CB5430098F852 /* bundleEffects */; };
 		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
 		8AD7FE3026F358370072AF33 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD7FE2F26F358370072AF33 /* Lottie */; };
@@ -43,6 +45,7 @@
 		639DA012254700290011C153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		639DA0172547002C0011C153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		639DA0192547002C0011C153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D7D0A562B976D4000DF878E /* PhotoEditorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorModule.swift; sourceTree = "<group>"; };
 		8A32EECF258CB5430098F852 /* bundleEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleEffects; sourceTree = "<group>"; };
 		8A32EEDE258CB70C0098F852 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DC6C3052B975900006323C8 /* BanubaPhotoEditorSDK in Frameworks */,
 				63CF1CEA2B6CEC210038D920 /* VEExportSDK in Frameworks */,
 				63CF1CDE2B6CEB520038D920 /* BanubaVideoEditorGallerySDK in Frameworks */,
 				63CF1CC92B6CEB110038D920 /* BanubaARCloudSDK in Frameworks */,
@@ -104,6 +108,7 @@
 				8A32EECF258CB5430098F852 /* bundleEffects */,
 				639DA00B254700290011C153 /* AppDelegate.swift */,
 				637B56D12A28B7DA0099DDA2 /* VideoEditorModule.swift */,
+				7D7D0A562B976D4000DF878E /* PhotoEditorModule.swift */,
 				639DA00F254700290011C153 /* ViewController.swift */,
 				634FAC06255C351900FB0DBC /* Localizable.strings */,
 				639DA011254700290011C153 /* Main.storyboard */,
@@ -146,6 +151,7 @@
 				63CF1CE62B6CEBFF0038D920 /* VEEffectsSDK */,
 				63CF1CE92B6CEC210038D920 /* VEExportSDK */,
 				63CF1CEC2B6CEC430038D920 /* VEPlaybackSDK */,
+				7DC6C3042B975900006323C8 /* BanubaPhotoEditorSDK */,
 			);
 			productName = Example;
 			productReference = 639DA008254700290011C153 /* Example.app */;
@@ -191,6 +197,7 @@
 				63CF1CE52B6CEBFF0038D920 /* XCRemoteSwiftPackageReference "VEEffectsSDK-iOS" */,
 				63CF1CE82B6CEC210038D920 /* XCRemoteSwiftPackageReference "VEExportSDK-iOS" */,
 				63CF1CEB2B6CEC430038D920 /* XCRemoteSwiftPackageReference "VEPlaybackSDK-iOS" */,
+				7DC6C3012B9758C5006323C8 /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */,
 			);
 			productRefGroup = 639DA009254700290011C153 /* Products */;
 			projectDirPath = "";
@@ -223,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				637B56D22A28B7DA0099DDA2 /* VideoEditorModule.swift in Sources */,
+				7D7D0A572B976D4000DF878E /* PhotoEditorModule.swift in Sources */,
 				639DA010254700290011C153 /* ViewController.swift in Sources */,
 				639DA00C254700290011C153 /* AppDelegate.swift in Sources */,
 			);
@@ -560,6 +568,14 @@
 				minimumVersion = 1.33.3;
 			};
 		};
+		7DC6C3012B9758C5006323C8 /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Banuba/BanubaPhotoEditorSDK-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
 		8AD7FE2E26F358370072AF33 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -643,6 +659,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 63CF1CEB2B6CEC430038D920 /* XCRemoteSwiftPackageReference "VEPlaybackSDK-iOS" */;
 			productName = VEPlaybackSDK;
+		};
+		7DC6C3042B975900006323C8 /* BanubaPhotoEditorSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DC6C3012B9758C5006323C8 /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */;
+			productName = BanubaPhotoEditorSDK;
 		};
 		8AD7FE2F26F358370072AF33 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

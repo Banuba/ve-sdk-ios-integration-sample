@@ -1,6 +1,7 @@
 import UIKit
 import BanubaVideoEditorSDK
-  
+import BanubaPhotoEditorSDK
+
 import VideoEditor
 import AVFoundation
 import AVKit
@@ -10,40 +11,25 @@ import VEExportSDK
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 
-class ViewController: UIViewController, BanubaVideoEditorDelegate {
+class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEditorDelegate {
   
   // MARK: - IBOutlet
   @IBOutlet weak var invalidTokenMessageLabel: UILabel!
   
-  // MARK: - VideoEditorSDK
-  private let videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
+  // MARK: - PhotoEditorSDK
+  private var photoEditorModule: PhotoEditorModule?
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    // Check video editor initialization status
-    guard let videoEditorSDK = videoEditorModule.videoEditorSDK else {
-      invalidTokenMessageLabel.text = "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
-      invalidTokenMessageLabel.isHidden = false
-      return
-    }
-    
-    videoEditorSDK.delegate = self
-    
-    videoEditorSDK.getLicenseState(completion: { [weak self] isValid in
-      if isValid {
-        print("✅ License is active, all good")
-      } else {
-        self?.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
-        print("❌ License is either revoked or expired")
-      }
-      self?.invalidTokenMessageLabel.isHidden = isValid
-    })
-  }
+  // MARK: - VideoEditorSDK
+  private var videoEditorModule: VideoEditorModule?
+  
+  // Use “true” if you want users could restore the last video editing session.
+  private let restoreLastVideoEditingSession: Bool = false
   
   // MARK: - Handle BanubaVideoEditor callbacks
   func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
-    videoEditor.clearSessionData()
+    if restoreLastVideoEditingSession == false {
+      videoEditor.clearSessionData()
+    }
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
   
@@ -65,7 +51,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
       musicTrack: musicTrackPreset, // Paste a music track as a track preset at the camera screen to record video with music
       animated: true
     )
-    videoEditorModule.presentVideoEditor(with: launchConfig)
+    checkLicenseAndOpenVideoEditor(with: launchConfig)
   }
   
   @IBAction func openVideoEditorPiP(_ sender: Any) {
@@ -80,7 +66,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
         animated: true
       )
       
-      self.videoEditorModule.presentVideoEditor(with: launchConfig)
+      self.checkLicenseAndOpenVideoEditor(with: launchConfig)
     }
   }
   
@@ -91,7 +77,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
       animated: true
     )
     
-    videoEditorModule.presentVideoEditor(with: launchConfig)
+    checkLicenseAndOpenVideoEditor(with: launchConfig)
   }
   
   @IBAction func openVideoEditorTrimmer(_ sender: UIButton) {
@@ -106,8 +92,72 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
         animated: true
       )
       
-      self.videoEditorModule.presentVideoEditor(with: launchConfig)
+      self.checkLicenseAndOpenVideoEditor(with: launchConfig)
     }
+  }
+  
+  @IBAction func openPhotoEditorFromGallery(_ sender: UIButton) {
+    let launchConfig = PhotoEditorLaunchConfig(
+      hostController: self,
+      entryPoint: .gallery
+    )
+    checkLicenseAndOpenPhotoEditor(with: launchConfig)
+  }
+  
+  @IBAction func openPhotoEditorFromEditor(_ sender: UIButton) {
+    pickGalleryPhoto() { assets in
+      guard let asset = assets?.first else {
+        return
+      }
+      let options = PHImageRequestOptions()
+      options.version = .current
+      options.resizeMode = .exact
+      options.deliveryMode = .highQualityFormat
+      options.isNetworkAccessAllowed = true
+      options.isSynchronous = true
+      
+      PHImageManager.default().requestImage(
+        for: asset,
+        targetSize: PHImageManagerMaximumSize,
+        contentMode: .aspectFit,
+        options: options) { image, _ in
+          guard let image else { return }
+          let launchConfig = PhotoEditorLaunchConfig(
+            hostController: self,
+            entryPoint: .editorWithImage(image)
+          )
+          self.checkLicenseAndOpenPhotoEditor(with: launchConfig)
+      }
+    }
+  }
+
+  private func checkLicenseAndOpenPhotoEditor(with launchConfig: PhotoEditorLaunchConfig) {
+    // Deallocate any active instances of both editors to free used resources
+    // and to prevent "You are trying to create the second instance of the singleton." crash
+    photoEditorModule = nil
+    videoEditorModule = nil
+
+    photoEditorModule = PhotoEditorModule(token: AppDelegate.licenseToken)
+    
+    guard let photoEditorSDK = photoEditorModule?.photoEditorSDK else {
+      invalidTokenMessageLabel.text = "Banuba Photo Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
+      invalidTokenMessageLabel.isHidden = false
+      return
+    }
+    
+    photoEditorSDK.delegate = self
+    
+    photoEditorSDK.getLicenseState(completion: { [weak self] isValid in
+      guard let self else { return }
+      if isValid {
+        print("✅ License is active, all good")
+        self.photoEditorModule?.presentPhotoEditor(with: launchConfig)
+      } else {
+        self.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
+        print("❌ License is either revoked or expired")
+      }
+      self.invalidTokenMessageLabel.isHidden = isValid
+    })
   }
   
   private func prepareMusicTrack(audioFileName: String) -> MediaTrack {
@@ -132,11 +182,53 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
     
     return musicTrackPreset
   }
+  
+  private func checkLicenseAndOpenVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
+    // Deallocate any active instances of both editors to free used resources
+    // and to prevent "You are trying to create the second instance of the singleton." crash
+    photoEditorModule = nil
+    videoEditorModule = nil
+    
+    videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
+    
+    guard let videoEditorSDK = videoEditorModule?.videoEditorSDK else {
+      invalidTokenMessageLabel.text = "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
+      invalidTokenMessageLabel.isHidden = false
+      return
+    }
+    
+    videoEditorSDK.delegate = self
+    
+    videoEditorSDK.getLicenseState(completion: { [weak self] isValid in
+      if isValid {
+        print("✅ License is active, all good")
+        self?.videoEditorModule?.presentVideoEditor(with: launchConfig)
+      } else {
+        self?.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
+        print("❌ License is either revoked or expired")
+      }
+      self?.invalidTokenMessageLabel.isHidden = isValid
+    })
+  }
+}
+
+// MARK: - BanubaPhotoEditorDelegate
+extension ViewController {
+  func photoEditorDidCancel(_ photoEditor: BanubaPhotoEditorSDK.BanubaPhotoEditor) {
+    print("User has closed the photo editor")
+    photoEditor.dismissPhotoEditor(animated: true, completion: nil)
+  }
+  
+  func photoEditorDidFinishWithImage(_ photoEditor: BanubaPhotoEditorSDK.BanubaPhotoEditor, image: UIImage) {
+    print("User has saved the edited image")
+    photoEditor.dismissPhotoEditor(animated: true, completion: nil)
+  }
 }
 
 // MARK: - Export example
 extension ViewController {
   func exportVideo(videoEditor: BanubaVideoEditor) {
+    guard let videoEditorModule else { return }
     let progressViewController = videoEditorModule.createProgressViewController()
     progressViewController.cancelHandler = { videoEditor.stopExport() }
     present(progressViewController, animated: true)
@@ -152,23 +244,21 @@ extension ViewController {
     
     videoEditor.export(
       using: exportConfiguration,
-      exportProgress: { progress in
+      exportProgress: { [weak progressViewController] progress in
         DispatchQueue.main.async {
-          progressViewController.updateProgressView(with: Float(progress))
+          progressViewController?.updateProgressView(with: Float(progress))
         }
       },
-      completion: { [weak self] error, exportCoverImages in
+      completion: { [weak self, weak progressViewController] error, exportCoverImages in
         DispatchQueue.main.async {
           // Hide progress view
-          progressViewController.dismiss(animated: true) {
+          progressViewController?.dismiss(animated: true) {
             // Clear video editor session data
-            videoEditor.clearSessionData()
+            if self?.restoreLastVideoEditingSession == false {
+              videoEditor.clearSessionData()
+            }
             if error == nil {
-              /// If you want to play exported video
-              //          self.playVideoAtURL(videoURL)
-              
-              /// If you want to share exported video
-              self?.showSharingScreen(
+              self?.showExportResult(
                 videoUrl: videoURL,
                 exportCoverImages: exportCoverImages
               )
@@ -178,8 +268,44 @@ extension ViewController {
     })
   }
   
+  func showExportResult(
+    videoUrl: URL,
+    exportCoverImages: ExportCoverImages?
+  ) {
+    // The popup is used to demo export result in a various ways.
+    // It is not required to copy and paste this approach to your project.
+    
+    let alertController = UIAlertController(
+      title: nil,
+      message: nil,
+      preferredStyle: .alert
+    )
+    
+    let previewButton = UIAlertAction(title: "Play Video", style: .default) { _ in
+      /// If you want to play exported video
+      self.playVideoAtURL(videoUrl)
+    }
+    let shareButton = UIAlertAction(title: "Open Sharing", style: .default) { [weak self] _ in
+      /// If you want to share exported video
+      self?.showSharingScreen(
+        videoUrl: videoUrl,
+        exportCoverImages: exportCoverImages
+      )
+    }
+    let cancelButton = UIAlertAction(title: "Close", style: .destructive)
+    
+    alertController.addAction(previewButton)
+    alertController.addAction(shareButton)
+    alertController.addAction(cancelButton)
+    
+    present(alertController, animated: true)
+  }
+  
   private func showSharingScreen(videoUrl: URL, exportCoverImages: ExportCoverImages?) {
-    let config = videoEditorModule.videoEditorSDK!.currentConfiguration.sharingScreenConfiguration
+    // Set up sharing configurations
+    //SharingScreenConfiguration.sharingModels - describes what kind of sharing services are available at sharing screen.
+    //SharingScreenConfiguration.facebookId - is a required option for Facebook reels and stories.
+    guard let config = videoEditorModule?.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration else { return }
     
     BanubaVideoEditor.presentSharingViewController(
       from: self,
@@ -285,6 +411,24 @@ extension ViewController {
     
     imagePicker.settings.fetch.assets.supportedMediaTypes = [.video]
     imagePicker.settings.selection.max = isMultiSelectionEnabled ? Int.max : 1
+    
+    self.presentImagePicker(
+      imagePicker,
+      select: nil,
+      deselect: nil,
+      cancel: { assets in
+        completion(nil)
+      }, finish: { assets in
+        completion(assets)
+      }
+    )
+  }
+  
+  private func pickGalleryPhoto(completion: @escaping ([PHAsset]?) -> Void) {
+    let imagePicker = ImagePickerController()
+    
+    imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
+    imagePicker.settings.selection.max = 1
     
     self.presentImagePicker(
       imagePicker,
