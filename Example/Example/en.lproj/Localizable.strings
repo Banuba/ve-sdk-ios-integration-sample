@@ -533,23 +533,30 @@
 
 // MARK: - MusicLibrary
 
+"MusicLibrary.homeScreenTitle" = "Music";
 "MusicLibrary.featured" = "Featured";
 "MusicLibrary.favorites" = "Favorites";
 "MusicLibrary.recents" = "Recents";
 "MusicLibrary.collections" = "Collections";
+"MusicLibrary.genres" = "Genres";
+"MusicLibrary.viewAll" = "View All";
+"MusicLibrary.showMore" = "Show More";
 "MusicLibrary.tryAgain" = "Try again";
 "MusicLibrary.tryAgainLaterTitle" = "Please try again later";
 "MusicLibrary.allTracks" = "All tracks";
 "MusicLibrary.popular" = "Popular";
-"MusicLibrary.newReleases" = "New Releases";
-"MusicLibrary.mixedForYou" = "Mixed for you";
 "MusicLibrary.noInternetTitle" = "No internet connection";
 "MusicLibrary.noInternetMessage" = "Check your connection or try again.";
+"MusicLibrary.noContentMessage" = "Sorry, audio content is temporarily unavailable";
 "MusicLibrary.noFavoritesTitle" = "No favorites yet";
 "MusicLibrary.noFavoritesMessage" = "Mark your favorite songs and always have them here.";
 "MusicLibrary.noRecentsTitle" = "No recent sounds";
 "MusicLibrary.noRecentsMessage" = "The sounds you have used in your videos will be displayed here.";
 "MusicLibrary.noMatchesMessage" = "No matches";
+"MusicLibrary.searchBarPlaceholder" = "Search by song names";
+"MusicLibrary.searchBarCancelButtonTitle" = "Cancel";
+
+// MARK: - Soundstripe
 
 "Soundstripe.playlists" = "Playlists";
 "Soundstripe.categories" = "Categories";
