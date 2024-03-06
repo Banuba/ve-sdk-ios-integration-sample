@@ -21,12 +21,10 @@ class VideoEditorModule {
     
     init(token: String) {
         let config = createConfiguration()
-        let externalViewControllerFactory = createExampleExternalViewControllerFactory()
         
         let videoEditorSDK = BanubaVideoEditor(
             token: token,
-            configuration: config,
-            externalViewControllerFactory: externalViewControllerFactory
+            configuration: config
         )
         
         self.videoEditorSDK = videoEditorSDK
@@ -75,23 +73,6 @@ class VideoEditorModule {
     func createConfiguration() -> VideoEditorConfig {
         var config = VideoEditorConfig()
         
-        config.setupColorsPalette(
-            VideoEditorColorsPalette(
-                primaryColor: .white,
-                secondaryColor: .black,
-                accentColor: .white,
-                effectButtonColorsPalette: EffectButtonColorsPalette(
-                    defaultIconColor: .white,
-                    defaultBackgroundColor: .clear,
-                    selectedIconColor: .black,
-                    selectedBackgroundColor: .white
-                ),
-                addGalleryItemBackgroundColor: .white,
-                addGalleryItemIconColor: .black,
-                timelineEffectColorsPalette: TimelineEffectColorsPalette.default
-            )
-        )
-        
         // Set Mubert API KEYS here
         BanubaAudioBrowser.setMubertKeys(
             license: "SET MUBERT API LICENSE",
@@ -106,33 +87,5 @@ class VideoEditorModule {
         config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
         
         return config
-    }
-    
-    // MARK: - Example view controller factory customization
-    func createExampleExternalViewControllerFactory() -> ExternalViewControllerFactory {
-        return ExampleViewControllerFactory()
-    }
-    
-    /// Example video editor view controller factory stores custom view factories used for customization BanubaVideoEditor
-    class ExampleViewControllerFactory: ExternalViewControllerFactory {
-        var musicEditorFactory: MusicEditorExternalViewControllerFactory?
-        var countdownTimerViewFactory: CountdownTimerViewFactory?
-        var exposureViewFactory: AnimatableViewFactory?
-        
-        init() {
-            countdownTimerViewFactory = CountdownTimerViewControllerFactory()
-            exposureViewFactory = DefaultExposureViewFactory()
-        }
-        
-        /// Example countdown timer view factory for Recorder countdown animation
-        class CountdownTimerViewControllerFactory: CountdownTimerViewFactory {
-            func makeCountdownTimerView() -> CountdownTimerAnimatableView {
-                let countdownView = CountdownView()
-                countdownView.frame = UIScreen.main.bounds
-                countdownView.font = countdownView.font.withSize(102.0)
-                countdownView.digitColor = .white
-                return countdownView
-            }
-        }
     }
 }

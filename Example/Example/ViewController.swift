@@ -285,37 +285,12 @@ extension ViewController {
       /// If you want to play exported video
       self.playVideoAtURL(videoUrl)
     }
-    let shareButton = UIAlertAction(title: "Open Sharing", style: .default) { [weak self] _ in
-      /// If you want to share exported video
-      self?.showSharingScreen(
-        videoUrl: videoUrl,
-        exportCoverImages: exportCoverImages
-      )
-    }
     let cancelButton = UIAlertAction(title: "Close", style: .destructive)
     
     alertController.addAction(previewButton)
-    alertController.addAction(shareButton)
     alertController.addAction(cancelButton)
     
     present(alertController, animated: true)
-  }
-  
-  private func showSharingScreen(videoUrl: URL, exportCoverImages: ExportCoverImages?) {
-    // Set up sharing configurations
-    //SharingScreenConfiguration.sharingModels - describes what kind of sharing services are available at sharing screen.
-    //SharingScreenConfiguration.facebookId - is a required option for Facebook reels and stories.
-    guard let config = videoEditorModule?.videoEditorSDK?.currentConfiguration.sharingScreenConfiguration else { return }
-    
-    BanubaVideoEditor.presentSharingViewController(
-      from: self,
-      configuration: config,
-      mainVideoUrl: videoUrl,
-      videoUrls: [videoUrl],
-      previewImage: exportCoverImages?.coverImage ?? UIImage(),
-      animated: true,
-      completion: nil
-    )
   }
   
   /// For demonstration purpose let's play exported video
