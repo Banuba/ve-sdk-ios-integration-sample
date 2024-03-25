@@ -1,12 +1,13 @@
 {
+  "originHash" : "8e001877c67cbff983e0539bb9005ff53528836ae4d1e3d771cc5fae619c172a",
   "pins" : [
     {
       "identity" : "banubaarcloudsdk-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaARCloudSDK-IOS.git",
       "state" : {
-        "revision" : "64962b4b2f300a65dd01fb67fb72b4b497a70444",
-        "version" : "1.34.1"
+        "revision" : "fcecb40057d73efce1f299d20afca2505fec20ef",
+        "version" : "1.35.0"
       }
     },
     {
@@ -14,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS.git",
       "state" : {
-        "revision" : "4650b4abda04d476e7c22bad5fcf3645d05d3547",
-        "version" : "1.34.1"
+        "revision" : "a71fdb89adfec003bbac80206acd06f943bca668",
+        "version" : "1.35.0"
       }
     },
     {
@@ -23,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaLicenseServicingSDK.git",
       "state" : {
-        "revision" : "02399df789506866970651ebef72a516b66a3cf5",
-        "version" : "1.34.1"
+        "revision" : "05cfc6a5bcf24310c356efae05667bf8cffd1f56",
+        "version" : "1.35.0"
       }
     },
     {
@@ -32,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaPhotoEditorSDK-iOS.git",
       "state" : {
-        "revision" : "043d8cfbc54f68d0247035f50064c5210ab2a4e9",
-        "version" : "1.1.1"
+        "revision" : "7e49de33ef62ab3ccb6a9efaecf0042aecdccd2e",
+        "version" : "1.2.0"
       }
     },
     {
@@ -41,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaSDKServicing-iOS.git",
       "state" : {
-        "revision" : "398faa4c10d3282f1d219802d0e0a04bb4a11917",
-        "version" : "1.34.1"
+        "revision" : "86f9464f199a8ed15b178247b285078b2e422581",
+        "version" : "1.35.0"
       }
     },
     {
@@ -50,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaSDKSimple-IOS.git",
       "state" : {
-        "revision" : "ad7faf1db24f2a91a803174bcb14857db5382561",
-        "version" : "1.34.1"
+        "revision" : "00389ff66280c97f718e30044c78be3f4884f9e9",
+        "version" : "1.35.0"
       }
     },
     {
@@ -59,8 +60,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaUtilities-iOS.git",
       "state" : {
-        "revision" : "db18f05900b250fd8a02a9e8e4fce10571e1895a",
-        "version" : "1.34.1"
+        "revision" : "289d3e7c83ab712df0a2043079e5443c41080c8c",
+        "version" : "1.35.0"
       }
     },
     {
@@ -68,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaVideoEditorGallerySDK.git",
       "state" : {
-        "revision" : "06af723de75b91a28d5fab1ed7ed53c1d04d6ef9",
-        "version" : "1.34.1"
+        "revision" : "23c6f077527b1279c7e475465cb8e61c7d6f1207",
+        "version" : "1.35.0"
       }
     },
     {
@@ -77,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaVideoEditorSDK-iOS.git",
       "state" : {
-        "revision" : "36b9e4137cbeec1f5ba5d048d831826b14bcc72e",
-        "version" : "1.34.1"
+        "revision" : "cefab3568419917f0e721f72a3bc11959ce553d9",
+        "version" : "1.35.0"
       }
     },
     {
@@ -86,8 +87,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBAcneEyebagsRemoval.git",
       "state" : {
-        "revision" : "b3f9617f0371a06ceece912056a65054b850822b",
-        "version" : "1.10.1"
+        "revision" : "3bcd2f15848c11b913ac97f186c6fbf7b2bbbf02",
+        "version" : "1.11.1"
       }
     },
     {
@@ -95,8 +96,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBBackground.git",
       "state" : {
-        "revision" : "62ecca6d17a96504fc6d7f4e56ce65d1d9eeb876",
-        "version" : "1.10.1"
+        "revision" : "770016f1ef1050324ee3dff275662c9b613a11b3",
+        "version" : "1.11.1"
       }
     },
     {
@@ -104,8 +105,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBEffectPlayer.git",
       "state" : {
-        "revision" : "7565d77805a1d5972dd0f469e67e7d7feadde548",
-        "version" : "1.10.1"
+        "revision" : "4a5a24018ef916ea8e6add76dac5db4701b1dd4e",
+        "version" : "1.11.1"
       }
     },
     {
@@ -113,8 +114,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBEyes.git",
       "state" : {
-        "revision" : "ceaba0e9ca40b0978916a44267fb26bcf0492e23",
-        "version" : "1.10.1"
+        "revision" : "73b9961e9ccab12e44df9167522496040f008434",
+        "version" : "1.11.1"
       }
     },
     {
@@ -122,8 +123,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBFaceTracker.git",
       "state" : {
-        "revision" : "ad25e34e4996cdcafa54b8c2afe156ba5bdf2027",
-        "version" : "1.10.1"
+        "revision" : "a910e1d849b5580f02319ca8f4d553bf7410dc5f",
+        "version" : "1.11.1"
       }
     },
     {
@@ -131,8 +132,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBHair.git",
       "state" : {
-        "revision" : "902998d980548f9cd42b2cd6e5fe10b5dd45ba0d",
-        "version" : "1.10.1"
+        "revision" : "0d3e509bfad941e8de85cb562569a487cfa22e6c",
+        "version" : "1.11.1"
       }
     },
     {
@@ -140,8 +141,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BNBLicenseUtils-iOS.git",
       "state" : {
-        "revision" : "ed1e8b512b738e8a8e4e6d75cf0269f95af58cda",
-        "version" : "1.34.1"
+        "revision" : "d51e87eaafd57d93f1975a6af01c7958799220e6",
+        "version" : "1.35.0"
       }
     },
     {
@@ -149,8 +150,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBLips.git",
       "state" : {
-        "revision" : "1d727827966e06e3893905f4e22870549eb4e3ee",
-        "version" : "1.10.1"
+        "revision" : "4c067c41adc64254231cdb297852aad49eee91f2",
+        "version" : "1.11.1"
       }
     },
     {
@@ -158,8 +159,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBScripting.git",
       "state" : {
-        "revision" : "b7105ece8ac067880abe31d0965dabfb5acce953",
-        "version" : "1.10.1"
+        "revision" : "9413d71449769e3041da0be0e923330bd6084ace",
+        "version" : "1.11.1"
       }
     },
     {
@@ -167,8 +168,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBSdkApi.git",
       "state" : {
-        "revision" : "0d2ccfc589632ec53473a517b35dcb153cb4eed7",
-        "version" : "1.10.1"
+        "revision" : "eac951a441313758571dfd0595f31cd7f2f6c837",
+        "version" : "1.11.1"
       }
     },
     {
@@ -176,8 +177,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBSdkCore.git",
       "state" : {
-        "revision" : "c9ff9d76ed9c4883107d62f0a2a1edd18d261df1",
-        "version" : "1.10.1"
+        "revision" : "4b80764d027b28b4b2b4066be3364925458a2b3c",
+        "version" : "1.11.1"
       }
     },
     {
@@ -185,8 +186,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBSkin.git",
       "state" : {
-        "revision" : "2bf70dae5fb7d638100b20a575eaa12f8cd880e8",
-        "version" : "1.10.1"
+        "revision" : "91a7ccdef04ff4987fce362126da3fdae79c9743",
+        "version" : "1.11.1"
       }
     },
     {
@@ -212,8 +213,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/VEEffectsSDK-iOS.git",
       "state" : {
-        "revision" : "f7d4e3ac58b076c7a1b6b15a00859f7c099f39da",
-        "version" : "1.34.1"
+        "revision" : "d43f71f9faec11b558039b6c32ebc8f614381d2c",
+        "version" : "1.35.0"
       }
     },
     {
@@ -221,8 +222,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/VEExportSDK-iOS.git",
       "state" : {
-        "revision" : "a38f5b041b86f63526f57a9406f0f3d000f697d6",
-        "version" : "1.34.1"
+        "revision" : "b8a47680b3ab5d2e12d5f9e75709133bb8f8a973",
+        "version" : "1.35.0"
       }
     },
     {
@@ -230,8 +231,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/VEPlaybackSDK-iOS.git",
       "state" : {
-        "revision" : "847988f9ea9d1be43f2e70f53d2b6c4568bf6341",
-        "version" : "1.34.1"
+        "revision" : "f592e13b749d03e2e87a130ef8031cc3047ec23f",
+        "version" : "1.35.0"
       }
     },
     {
@@ -239,10 +240,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/VideoEditor-iOS.git",
       "state" : {
-        "revision" : "2a3d760546f76eed47f6a7cf0315560074e21a3f",
-        "version" : "1.34.1"
+        "revision" : "8a88b6f9a362699be975fbe509595aa5ffca47a6",
+        "version" : "1.35.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
