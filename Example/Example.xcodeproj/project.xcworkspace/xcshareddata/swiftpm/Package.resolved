@@ -1,5 +1,4 @@
 {
-  "originHash" : "8e001877c67cbff983e0539bb9005ff53528836ae4d1e3d771cc5fae619c172a",
   "pins" : [
     {
       "identity" : "banubaarcloudsdk-ios",
@@ -35,6 +34,15 @@
       "state" : {
         "revision" : "7e49de33ef62ab3ccb6a9efaecf0042aecdccd2e",
         "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "banubasdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Banuba/BanubaSDK-iOS",
+      "state" : {
+        "revision" : "56380a5efb45f16ceeb5c6d4781b8902cce90993",
+        "version" : "1.35.0"
       }
     },
     {
@@ -195,8 +203,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mikaoj/BSImagePicker",
       "state" : {
-        "revision" : "750f26abd0fafbcc4124adef436251888a7c962a",
-        "version" : "3.3.1"
+        "revision" : "b5a77ac0921ef603caa62a1f674c9999d68b80a5",
+        "version" : "3.3.2"
       }
     },
     {
@@ -245,5 +253,5 @@
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }

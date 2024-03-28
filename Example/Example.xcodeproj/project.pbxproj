@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		634FAC04255C351900FB0DBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634FAC06255C351900FB0DBC /* Localizable.strings */; };
 		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
+		637989D72BB5953C00479105 /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 637989D62BB5953C00479105 /* BanubaSdk */; };
 		637B56D22A28B7DA0099DDA2 /* VideoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B56D12A28B7DA0099DDA2 /* VideoEditorModule.swift */; };
 		639DA00C254700290011C153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00B254700290011C153 /* AppDelegate.swift */; };
 		639DA010254700290011C153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00F254700290011C153 /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 				8AD7FE3026F358370072AF33 /* Lottie in Frameworks */,
 				63CF1CD22B6CEB2F0038D920 /* BanubaSDKServicing in Frameworks */,
 				63CF1CE72B6CEBFF0038D920 /* VEEffectsSDK in Frameworks */,
+				637989D72BB5953C00479105 /* BanubaSdk in Frameworks */,
 				63CF1CE42B6CEB920038D920 /* BNBLicenseUtils in Frameworks */,
 				63CF1CDB2B6CEB490038D920 /* VideoEditor in Frameworks */,
 				63CF1CED2B6CEC430038D920 /* VEPlaybackSDK in Frameworks */,
@@ -152,6 +154,7 @@
 				63CF1CE92B6CEC210038D920 /* VEExportSDK */,
 				63CF1CEC2B6CEC430038D920 /* VEPlaybackSDK */,
 				7DC6C3042B975900006323C8 /* BanubaPhotoEditorSDK */,
+				637989D62BB5953C00479105 /* BanubaSdk */,
 			);
 			productName = Example;
 			productReference = 639DA008254700290011C153 /* Example.app */;
@@ -198,6 +201,7 @@
 				63CF1CE82B6CEC210038D920 /* XCRemoteSwiftPackageReference "VEExportSDK-iOS" */,
 				63CF1CEB2B6CEC430038D920 /* XCRemoteSwiftPackageReference "VEPlaybackSDK-iOS" */,
 				7DC6C3012B9758C5006323C8 /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */,
+				637989D52BB5953C00479105 /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */,
 			);
 			productRefGroup = 639DA009254700290011C153 /* Products */;
 			projectDirPath = "";
@@ -464,6 +468,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		637989D52BB5953C00479105 /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Banuba/BanubaSDK-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.35.0;
+			};
+		};
 		63CF1CC72B6CEB110038D920 /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaARCloudSDK-IOS.git";
@@ -595,6 +607,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		637989D62BB5953C00479105 /* BanubaSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 637989D52BB5953C00479105 /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */;
+			productName = BanubaSdk;
+		};
 		63CF1CC82B6CEB110038D920 /* BanubaARCloudSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 63CF1CC72B6CEB110038D920 /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */;
