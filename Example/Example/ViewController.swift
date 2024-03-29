@@ -1,6 +1,5 @@
 import UIKit
 import BanubaVideoEditorSDK
-import BanubaPhotoEditorSDK
 
 import VideoEditor
 import AVFoundation
@@ -11,13 +10,10 @@ import VEExportSDK
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 
-class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEditorDelegate {
+class ViewController: UIViewController, BanubaVideoEditorDelegate {
   
   // MARK: - IBOutlet
   @IBOutlet weak var invalidTokenMessageLabel: UILabel!
-  
-  // MARK: - PhotoEditorSDK
-  private var photoEditorModule: PhotoEditorModule?
   
   // MARK: - VideoEditorSDK
   private var videoEditorModule: VideoEditorModule?
@@ -96,70 +92,6 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     }
   }
   
-  @IBAction func openPhotoEditorFromGallery(_ sender: UIButton) {
-    let launchConfig = PhotoEditorLaunchConfig(
-      hostController: self,
-      entryPoint: .gallery
-    )
-    checkLicenseAndOpenPhotoEditor(with: launchConfig)
-  }
-  
-  @IBAction func openPhotoEditorFromEditor(_ sender: UIButton) {
-    pickGalleryPhoto() { assets in
-      guard let asset = assets?.first else {
-        return
-      }
-      let options = PHImageRequestOptions()
-      options.version = .current
-      options.resizeMode = .exact
-      options.deliveryMode = .highQualityFormat
-      options.isNetworkAccessAllowed = true
-      options.isSynchronous = true
-      
-      PHImageManager.default().requestImage(
-        for: asset,
-        targetSize: PHImageManagerMaximumSize,
-        contentMode: .aspectFit,
-        options: options) { image, _ in
-          guard let image else { return }
-          let launchConfig = PhotoEditorLaunchConfig(
-            hostController: self,
-            entryPoint: .editorWithImage(image)
-          )
-          self.checkLicenseAndOpenPhotoEditor(with: launchConfig)
-      }
-    }
-  }
-
-  private func checkLicenseAndOpenPhotoEditor(with launchConfig: PhotoEditorLaunchConfig) {
-    // Deallocate any active instances of both editors to free used resources
-    // and to prevent "You are trying to create the second instance of the singleton." crash
-    photoEditorModule = nil
-    videoEditorModule = nil
-
-    photoEditorModule = PhotoEditorModule(token: AppDelegate.licenseToken)
-    
-    guard let photoEditorSDK = photoEditorModule?.photoEditorSDK else {
-      invalidTokenMessageLabel.text = "Banuba Photo Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
-      invalidTokenMessageLabel.isHidden = false
-      return
-    }
-    
-    photoEditorSDK.delegate = self
-    
-    photoEditorSDK.getLicenseState(completion: { [weak self] isValid in
-      guard let self else { return }
-      if isValid {
-        print("✅ License is active, all good")
-        self.photoEditorModule?.presentPhotoEditor(with: launchConfig)
-      } else {
-        self.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
-        print("❌ License is either revoked or expired")
-      }
-      self.invalidTokenMessageLabel.isHidden = isValid
-    })
-  }
-  
   private func prepareMusicTrack(audioFileName: String) -> MediaTrack {
     let musicURL = Bundle.main.bundleURL.appendingPathComponent(audioFileName)
     let assset = AVURLAsset(url: musicURL)
@@ -186,7 +118,6 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
   private func checkLicenseAndOpenVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
     // Deallocate any active instances of both editors to free used resources
     // and to prevent "You are trying to create the second instance of the singleton." crash
-    photoEditorModule = nil
     videoEditorModule = nil
     
     videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
@@ -209,19 +140,6 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
       }
       self?.invalidTokenMessageLabel.isHidden = isValid
     })
-  }
-}
-
-// MARK: - BanubaPhotoEditorDelegate
-extension ViewController {
-  func photoEditorDidCancel(_ photoEditor: BanubaPhotoEditorSDK.BanubaPhotoEditor) {
-    print("User has closed the photo editor")
-    photoEditor.dismissPhotoEditor(animated: true, completion: nil)
-  }
-  
-  func photoEditorDidFinishWithImage(_ photoEditor: BanubaPhotoEditorSDK.BanubaPhotoEditor, image: UIImage) {
-    print("User has saved the edited image")
-    photoEditor.dismissPhotoEditor(animated: true, completion: nil)
   }
 }
 
