@@ -96,7 +96,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     }
   }
   
-  @IBAction func openPhotoEditorFromGallery(_ sender: UIButton) {
+  @IBAction func openPhotoEditorDefault(_ sender: UIButton) {
     let launchConfig = PhotoEditorLaunchConfig(
       hostController: self,
       entryPoint: .gallery
@@ -104,7 +104,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     checkLicenseAndOpenPhotoEditor(with: launchConfig)
   }
   
-  @IBAction func openPhotoEditorFromEditor(_ sender: UIButton) {
+  @IBAction func openPhotoEditorImage(_ sender: UIButton) {
     pickGalleryPhoto() { assets in
       guard let asset = assets?.first else {
         return
