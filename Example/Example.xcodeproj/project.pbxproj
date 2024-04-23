@@ -473,7 +473,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CC72B6CEB110038D920 /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */ = {
@@ -481,7 +481,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaARCloudSDK-IOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CCA2B6CEB1B0038D920 /* XCRemoteSwiftPackageReference "BanubaAudioBrowserSDK-iOS" */ = {
@@ -489,7 +489,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CCD2B6CEB250038D920 /* XCRemoteSwiftPackageReference "BanubaLicenseServicingSDK" */ = {
@@ -497,7 +497,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaLicenseServicingSDK.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CD02B6CEB2F0038D920 /* XCRemoteSwiftPackageReference "BanubaSDKServicing-iOS" */ = {
@@ -505,7 +505,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDKServicing-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CD32B6CEB360038D920 /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */ = {
@@ -513,7 +513,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDKSimple-IOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CD62B6CEB400038D920 /* XCRemoteSwiftPackageReference "BanubaUtilities-iOS" */ = {
@@ -521,7 +521,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaUtilities-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CD92B6CEB490038D920 /* XCRemoteSwiftPackageReference "VideoEditor-iOS" */ = {
@@ -529,7 +529,7 @@
 			repositoryURL = "https://github.com/Banuba/VideoEditor-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CDC2B6CEB520038D920 /* XCRemoteSwiftPackageReference "BanubaVideoEditorGallerySDK" */ = {
@@ -537,7 +537,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorGallerySDK.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CDF2B6CEB5D0038D920 /* XCRemoteSwiftPackageReference "BanubaVideoEditorSDK-iOS" */ = {
@@ -545,7 +545,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CE22B6CEB920038D920 /* XCRemoteSwiftPackageReference "BNBLicenseUtils-iOS" */ = {
@@ -553,7 +553,7 @@
 			repositoryURL = "https://github.com/Banuba/BNBLicenseUtils-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CE52B6CEBFF0038D920 /* XCRemoteSwiftPackageReference "VEEffectsSDK-iOS" */ = {
@@ -561,7 +561,7 @@
 			repositoryURL = "https://github.com/Banuba/VEEffectsSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CE82B6CEC210038D920 /* XCRemoteSwiftPackageReference "VEExportSDK-iOS" */ = {
@@ -569,7 +569,7 @@
 			repositoryURL = "https://github.com/Banuba/VEExportSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CEB2B6CEC430038D920 /* XCRemoteSwiftPackageReference "VEPlaybackSDK-iOS" */ = {
@@ -577,7 +577,7 @@
 			repositoryURL = "https://github.com/Banuba/VEPlaybackSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.1;
+				minimumVersion = 1.35.3;
 			};
 		};
 		7DC6C3012B9758C5006323C8 /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */ = {
@@ -585,7 +585,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaPhotoEditorSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.1;
+				minimumVersion = 1.2.2;
 			};
 		};
 		8AD7FE2E26F358370072AF33 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
