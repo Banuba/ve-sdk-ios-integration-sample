@@ -18,18 +18,20 @@ class VideoEditorModule {
     var videoEditorSDK: BanubaVideoEditor?
     
     var isVideoEditorInitialized: Bool { videoEditorSDK != nil }
+    private let resourcesDownloader: FaceARResourcesDownloader
     
     init(token: String) {
+        resourcesDownloader = FaceARResourcesDownloader(
+            resourceBundleUrl: URL(string: <#T##CDN URL#>)!
+        )
         let config = createConfiguration()
         let externalViewControllerFactory = createExampleExternalViewControllerFactory()
         
-        let videoEditorSDK = BanubaVideoEditor(
+        videoEditorSDK = BanubaVideoEditor(
             token: token,
             configuration: config,
             externalViewControllerFactory: externalViewControllerFactory
         )
-        
-        self.videoEditorSDK = videoEditorSDK
     }
     
     func presentVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
@@ -37,10 +39,18 @@ class VideoEditorModule {
             print("BanubaVideoEditor is not initialized!")
             return
         }
-        videoEditorSDK?.presentVideoEditor(
-            withLaunchConfiguration: launchConfig,
-            completion: nil
-        )
+        Task { @MainActor in
+            do {
+                try await resourcesDownloader.downloadResources()
+                
+                videoEditorSDK?.presentVideoEditor(
+                    withLaunchConfiguration: launchConfig,
+                    completion: nil
+                )
+            } catch {
+                print("Error happened during resource bundle download \(error)")
+            }
+        }
     }
     
     func createExportConfiguration(destFile: URL) -> ExportConfiguration {

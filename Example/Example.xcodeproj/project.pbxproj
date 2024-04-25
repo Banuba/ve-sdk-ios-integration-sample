@@ -10,17 +10,10 @@
 		634FAC04255C351900FB0DBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634FAC06255C351900FB0DBC /* Localizable.strings */; };
 		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
 		637989D72BB5953C00479105 /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 637989D62BB5953C00479105 /* BanubaSdk */; };
+		6379E0E72BDA6FA000D82E22 /* FaceARResourcesDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379E0E62BDA6FA000D82E22 /* FaceARResourcesDownloader.swift */; };
 		637B56D22A28B7DA0099DDA2 /* VideoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B56D12A28B7DA0099DDA2 /* VideoEditorModule.swift */; };
 		637E50F52BB6DDEC005B2937 /* BNBSdkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 637E50F42BB6DDEC005B2937 /* BNBSdkCore */; };
 		637E50F82BB6DE1E005B2937 /* BNBSdkApi in Frameworks */ = {isa = PBXBuildFile; productRef = 637E50F72BB6DE1E005B2937 /* BNBSdkApi */; };
-		637E50FB2BB6DE36005B2937 /* BNBEffectPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 637E50FA2BB6DE36005B2937 /* BNBEffectPlayer */; };
-		637E50FE2BB6DE4B005B2937 /* BNBScripting in Frameworks */ = {isa = PBXBuildFile; productRef = 637E50FD2BB6DE4B005B2937 /* BNBScripting */; };
-		637E51012BB6DE60005B2937 /* BNBLips in Frameworks */ = {isa = PBXBuildFile; productRef = 637E51002BB6DE60005B2937 /* BNBLips */; };
-		637E51042BB6DE70005B2937 /* BNBHair in Frameworks */ = {isa = PBXBuildFile; productRef = 637E51032BB6DE70005B2937 /* BNBHair */; };
-		637E51072BB6DE87005B2937 /* BNBEyes in Frameworks */ = {isa = PBXBuildFile; productRef = 637E51062BB6DE87005B2937 /* BNBEyes */; };
-		637E510A2BB6DE98005B2937 /* BNBBackground in Frameworks */ = {isa = PBXBuildFile; productRef = 637E51092BB6DE98005B2937 /* BNBBackground */; };
-		637E510D2BB6DEB4005B2937 /* BNBSkin in Frameworks */ = {isa = PBXBuildFile; productRef = 637E510C2BB6DEB4005B2937 /* BNBSkin */; };
-		637E51102BB6DECA005B2937 /* BNBVisualClip in Frameworks */ = {isa = PBXBuildFile; productRef = 637E510F2BB6DECA005B2937 /* BNBVisualClip */; };
 		639DA00C254700290011C153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00B254700290011C153 /* AppDelegate.swift */; };
 		639DA010254700290011C153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00F254700290011C153 /* ViewController.swift */; };
 		639DA013254700290011C153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA011254700290011C153 /* Main.storyboard */; };
@@ -47,6 +40,7 @@
 /* Begin PBXFileReference section */
 		634FAC05255C351900FB0DBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		635DB1AA2548541000B1C799 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
+		6379E0E62BDA6FA000D82E22 /* FaceARResourcesDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceARResourcesDownloader.swift; sourceTree = "<group>"; };
 		637B56D12A28B7DA0099DDA2 /* VideoEditorModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEditorModule.swift; sourceTree = "<group>"; };
 		639DA008254700290011C153 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639DA00B254700290011C153 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -64,15 +58,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				63CF1CEA2B6CEC210038D920 /* VEExportSDK in Frameworks */,
-				637E50FE2BB6DE4B005B2937 /* BNBScripting in Frameworks */,
 				63CF1CDE2B6CEB520038D920 /* BanubaVideoEditorGallerySDK in Frameworks */,
-				637E51042BB6DE70005B2937 /* BNBHair in Frameworks */,
 				63CF1CC92B6CEB110038D920 /* BanubaARCloudSDK in Frameworks */,
 				63CF1CCF2B6CEB250038D920 /* BanubaLicenseServicingSDK in Frameworks */,
 				8AD7FE3026F358370072AF33 /* Lottie in Frameworks */,
-				637E510D2BB6DEB4005B2937 /* BNBSkin in Frameworks */,
-				637E510A2BB6DE98005B2937 /* BNBBackground in Frameworks */,
-				637E51012BB6DE60005B2937 /* BNBLips in Frameworks */,
 				63CF1CD22B6CEB2F0038D920 /* BanubaSDKServicing in Frameworks */,
 				63CF1CE72B6CEBFF0038D920 /* VEEffectsSDK in Frameworks */,
 				637E50F82BB6DE1E005B2937 /* BNBSdkApi in Frameworks */,
@@ -81,13 +70,10 @@
 				63CF1CDB2B6CEB490038D920 /* VideoEditor in Frameworks */,
 				63CF1CED2B6CEC430038D920 /* VEPlaybackSDK in Frameworks */,
 				637E50F52BB6DDEC005B2937 /* BNBSdkCore in Frameworks */,
-				637E51072BB6DE87005B2937 /* BNBEyes in Frameworks */,
-				637E51102BB6DECA005B2937 /* BNBVisualClip in Frameworks */,
 				63CF1CD82B6CEB400038D920 /* BanubaUtilities in Frameworks */,
 				63CF1CE12B6CEB5D0038D920 /* BanubaVideoEditorSDK in Frameworks */,
 				63CF1CCC2B6CEB1B0038D920 /* BanubaAudioBrowserSDK in Frameworks */,
 				63CF1CD52B6CEB360038D920 /* BanubaSdkSimple in Frameworks */,
-				637E50FB2BB6DE36005B2937 /* BNBEffectPlayer in Frameworks */,
 				8AD7FE3326F358720072AF33 /* BSImagePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +112,7 @@
 				8A32EECF258CB5430098F852 /* bundleEffects */,
 				639DA00B254700290011C153 /* AppDelegate.swift */,
 				637B56D12A28B7DA0099DDA2 /* VideoEditorModule.swift */,
+				6379E0E62BDA6FA000D82E22 /* FaceARResourcesDownloader.swift */,
 				639DA00F254700290011C153 /* ViewController.swift */,
 				634FAC06255C351900FB0DBC /* Localizable.strings */,
 				639DA011254700290011C153 /* Main.storyboard */,
@@ -171,14 +158,6 @@
 				637989D62BB5953C00479105 /* BanubaSdk */,
 				637E50F42BB6DDEC005B2937 /* BNBSdkCore */,
 				637E50F72BB6DE1E005B2937 /* BNBSdkApi */,
-				637E50FA2BB6DE36005B2937 /* BNBEffectPlayer */,
-				637E50FD2BB6DE4B005B2937 /* BNBScripting */,
-				637E51002BB6DE60005B2937 /* BNBLips */,
-				637E51032BB6DE70005B2937 /* BNBHair */,
-				637E51062BB6DE87005B2937 /* BNBEyes */,
-				637E51092BB6DE98005B2937 /* BNBBackground */,
-				637E510C2BB6DEB4005B2937 /* BNBSkin */,
-				637E510F2BB6DECA005B2937 /* BNBVisualClip */,
 			);
 			productName = Example;
 			productReference = 639DA008254700290011C153 /* Example.app */;
@@ -227,14 +206,6 @@
 				637989D52BB5953C00479105 /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */,
 				637E50F32BB6DDEC005B2937 /* XCRemoteSwiftPackageReference "BNBSdkCore" */,
 				637E50F62BB6DE1E005B2937 /* XCRemoteSwiftPackageReference "BNBSdkApi" */,
-				637E50F92BB6DE36005B2937 /* XCRemoteSwiftPackageReference "BNBEffectPlayer" */,
-				637E50FC2BB6DE4B005B2937 /* XCRemoteSwiftPackageReference "BNBScripting" */,
-				637E50FF2BB6DE60005B2937 /* XCRemoteSwiftPackageReference "BNBLips" */,
-				637E51022BB6DE70005B2937 /* XCRemoteSwiftPackageReference "BNBHair" */,
-				637E51052BB6DE87005B2937 /* XCRemoteSwiftPackageReference "BNBEyes" */,
-				637E51082BB6DE98005B2937 /* XCRemoteSwiftPackageReference "BNBBackground" */,
-				637E510B2BB6DEB4005B2937 /* XCRemoteSwiftPackageReference "BNBSkin" */,
-				637E510E2BB6DECA005B2937 /* XCRemoteSwiftPackageReference "BNBVisualClip" */,
 			);
 			productRefGroup = 639DA009254700290011C153 /* Products */;
 			projectDirPath = "";
@@ -268,6 +239,7 @@
 			files = (
 				637B56D22A28B7DA0099DDA2 /* VideoEditorModule.swift in Sources */,
 				639DA010254700290011C153 /* ViewController.swift in Sources */,
+				6379E0E72BDA6FA000D82E22 /* FaceARResourcesDownloader.swift in Sources */,
 				639DA00C254700290011C153 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -410,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -434,7 +406,7 @@
 					"$(PROJECT_DIR)/Example",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +434,7 @@
 					"$(PROJECT_DIR)/Example",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,7 +477,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		637E50F32BB6DDEC005B2937 /* XCRemoteSwiftPackageReference "BNBSdkCore" */ = {
@@ -513,7 +485,7 @@
 			repositoryURL = "https://github.com/sdk-banuba/BNBSdkCore.git";
 			requirement = {
 				kind = exactVersion;
-				version = "1.11.1-1-ge047381c9";
+				version = 1.12.0;
 			};
 		};
 		637E50F62BB6DE1E005B2937 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
@@ -521,71 +493,7 @@
 			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
 			requirement = {
 				kind = exactVersion;
-				version = "1.11.1-1-ge047381c9";
-			};
-		};
-		637E50F92BB6DE36005B2937 /* XCRemoteSwiftPackageReference "BNBEffectPlayer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BNBEffectPlayer";
-			requirement = {
-				kind = exactVersion;
-				version = "1.11.1-1-ge047381c9";
-			};
-		};
-		637E50FC2BB6DE4B005B2937 /* XCRemoteSwiftPackageReference "BNBScripting" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BNBScripting";
-			requirement = {
-				kind = exactVersion;
-				version = "1.11.1-1-ge047381c9";
-			};
-		};
-		637E50FF2BB6DE60005B2937 /* XCRemoteSwiftPackageReference "BNBLips" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BNBLips";
-			requirement = {
-				kind = exactVersion;
-				version = "1.11.1-1-ge047381c9";
-			};
-		};
-		637E51022BB6DE70005B2937 /* XCRemoteSwiftPackageReference "BNBHair" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BNBHair";
-			requirement = {
-				kind = exactVersion;
-				version = "1.11.1-1-ge047381c9";
-			};
-		};
-		637E51052BB6DE87005B2937 /* XCRemoteSwiftPackageReference "BNBEyes" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BNBEyes";
-			requirement = {
-				kind = exactVersion;
-				version = "1.11.1-1-ge047381c9";
-			};
-		};
-		637E51082BB6DE98005B2937 /* XCRemoteSwiftPackageReference "BNBBackground" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BNBBackground";
-			requirement = {
-				kind = exactVersion;
-				version = "1.11.1-1-ge047381c9";
-			};
-		};
-		637E510B2BB6DEB4005B2937 /* XCRemoteSwiftPackageReference "BNBSkin" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BNBSkin";
-			requirement = {
-				kind = exactVersion;
-				version = "1.11.1-1-ge047381c9";
-			};
-		};
-		637E510E2BB6DECA005B2937 /* XCRemoteSwiftPackageReference "BNBVisualClip" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BNBVisualClip";
-			requirement = {
-				kind = exactVersion;
-				version = "1.11.1-1-ge047381c9";
+				version = 1.12.0;
 			};
 		};
 		63CF1CC72B6CEB110038D920 /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */ = {
@@ -593,7 +501,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaARCloudSDK-IOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CCA2B6CEB1B0038D920 /* XCRemoteSwiftPackageReference "BanubaAudioBrowserSDK-iOS" */ = {
@@ -601,7 +509,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CCD2B6CEB250038D920 /* XCRemoteSwiftPackageReference "BanubaLicenseServicingSDK" */ = {
@@ -609,7 +517,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaLicenseServicingSDK.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CD02B6CEB2F0038D920 /* XCRemoteSwiftPackageReference "BanubaSDKServicing-iOS" */ = {
@@ -617,7 +525,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDKServicing-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CD32B6CEB360038D920 /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */ = {
@@ -625,7 +533,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDKSimple-IOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CD62B6CEB400038D920 /* XCRemoteSwiftPackageReference "BanubaUtilities-iOS" */ = {
@@ -633,7 +541,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaUtilities-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CD92B6CEB490038D920 /* XCRemoteSwiftPackageReference "VideoEditor-iOS" */ = {
@@ -641,7 +549,7 @@
 			repositoryURL = "https://github.com/Banuba/VideoEditor-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CDC2B6CEB520038D920 /* XCRemoteSwiftPackageReference "BanubaVideoEditorGallerySDK" */ = {
@@ -649,7 +557,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorGallerySDK.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CDF2B6CEB5D0038D920 /* XCRemoteSwiftPackageReference "BanubaVideoEditorSDK-iOS" */ = {
@@ -657,7 +565,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CE22B6CEB920038D920 /* XCRemoteSwiftPackageReference "BNBLicenseUtils-iOS" */ = {
@@ -665,7 +573,7 @@
 			repositoryURL = "https://github.com/Banuba/BNBLicenseUtils-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CE52B6CEBFF0038D920 /* XCRemoteSwiftPackageReference "VEEffectsSDK-iOS" */ = {
@@ -673,7 +581,7 @@
 			repositoryURL = "https://github.com/Banuba/VEEffectsSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CE82B6CEC210038D920 /* XCRemoteSwiftPackageReference "VEExportSDK-iOS" */ = {
@@ -681,7 +589,7 @@
 			repositoryURL = "https://github.com/Banuba/VEExportSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		63CF1CEB2B6CEC430038D920 /* XCRemoteSwiftPackageReference "VEPlaybackSDK-iOS" */ = {
@@ -689,23 +597,23 @@
 			repositoryURL = "https://github.com/Banuba/VEPlaybackSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.35.0;
+				minimumVersion = 1.35.3;
 			};
 		};
 		8AD7FE2E26F358370072AF33 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.3;
+				kind = exactVersion;
+				version = 4.4.3;
 			};
 		};
 		8AD7FE3126F358720072AF33 /* XCRemoteSwiftPackageReference "BSImagePicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mikaoj/BSImagePicker";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.3.1;
+				kind = exactVersion;
+				version = 3.3.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -725,46 +633,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 637E50F62BB6DE1E005B2937 /* XCRemoteSwiftPackageReference "BNBSdkApi" */;
 			productName = BNBSdkApi;
-		};
-		637E50FA2BB6DE36005B2937 /* BNBEffectPlayer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 637E50F92BB6DE36005B2937 /* XCRemoteSwiftPackageReference "BNBEffectPlayer" */;
-			productName = BNBEffectPlayer;
-		};
-		637E50FD2BB6DE4B005B2937 /* BNBScripting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 637E50FC2BB6DE4B005B2937 /* XCRemoteSwiftPackageReference "BNBScripting" */;
-			productName = BNBScripting;
-		};
-		637E51002BB6DE60005B2937 /* BNBLips */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 637E50FF2BB6DE60005B2937 /* XCRemoteSwiftPackageReference "BNBLips" */;
-			productName = BNBLips;
-		};
-		637E51032BB6DE70005B2937 /* BNBHair */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 637E51022BB6DE70005B2937 /* XCRemoteSwiftPackageReference "BNBHair" */;
-			productName = BNBHair;
-		};
-		637E51062BB6DE87005B2937 /* BNBEyes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 637E51052BB6DE87005B2937 /* XCRemoteSwiftPackageReference "BNBEyes" */;
-			productName = BNBEyes;
-		};
-		637E51092BB6DE98005B2937 /* BNBBackground */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 637E51082BB6DE98005B2937 /* XCRemoteSwiftPackageReference "BNBBackground" */;
-			productName = BNBBackground;
-		};
-		637E510C2BB6DEB4005B2937 /* BNBSkin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 637E510B2BB6DEB4005B2937 /* XCRemoteSwiftPackageReference "BNBSkin" */;
-			productName = BNBSkin;
-		};
-		637E510F2BB6DECA005B2937 /* BNBVisualClip */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 637E510E2BB6DECA005B2937 /* XCRemoteSwiftPackageReference "BNBVisualClip" */;
-			productName = BNBVisualClip;
 		};
 		63CF1CC82B6CEB110038D920 /* BanubaARCloudSDK */ = {
 			isa = XCSwiftPackageProductDependency;
