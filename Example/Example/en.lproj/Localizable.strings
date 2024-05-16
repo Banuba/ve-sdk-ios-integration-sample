@@ -158,6 +158,9 @@
 "alert.microphone.unavailable.title" = "Microphone unavailable. Please allow access in device settings";
 "alert.microphone.unavailable.message" = "";
 
+"errors.lowDiskSpace" = "Low on space. Please make sure the device storage space is not critically full";
+"errors.photosLibraryNetworkError" = "Unfortunately, there was an error downloading the video. Please try again.\nIf the issue persists check internet connection and try opening the video in your gallery first.";
+
 // MARK: - Settings
 
 /* The name of the button, by clicking on which you can go to the Settings application. */
@@ -231,9 +234,6 @@
 
 /* Glitch 2 effect name */
 "com.banuba.editor.effect.name.glitch2" = "Glitch 2";
-
-/*Glitch 3 effect name*/
-"com.banuba.editor.effect.name.glitch3" = "Glitch 3";
 
 /* Heat map effect name */
 "com.banuba.editor.effect.name.heatmap" = "Heat Map";
@@ -471,6 +471,7 @@
 "com.banuba.overlayEditor.captions.noInternetConnectionMessage" = "Check your connection and try again.";
 "com.banuba.overlayEditor.captions.tryAgain" = "Try Again";
 "com.banuba.overlayEditor.captions.noInternetConnectionToast" = "The internet connection appears to be offline.";
+"com.banuba.captions.noAvailableForMiltipleVideosAndPhotoError" = "Not available for multiple videos and photo.";
 
 "com.banuba.overlayEditor.captions.textStyle.basic" = "Basic";
 "com.banuba.overlayEditor.captions.textStyle.multicolor" = "Multicolor";
@@ -579,6 +580,9 @@
 
 // MARK: - Video Editor
 
+/* Gallery all tab title */
+"BanubaVideoEditor.Gallery.AllTabTitle" = "All";
+
 /* Gallery image tab title */
 "BanubaVideoEditor.Gallery.ImageTabTitle" = "Photos";
 
@@ -592,7 +596,7 @@
 "BanubaVideoEditor.Gallery.DeselectItemName" = "Deselect";
 
 /* Gallery header info title */
-"BanubaVideoEditor.Gallery.HeaderInfoTitle" = "Update files %@ to choose more photos";
+"BanubaVideoEditor.Gallery.HeaderInfoTitle" = "Update files %@ to choose more files";
 "BanubaVideoEditor.Gallery.HeaderInfoColoredTitle" = "settings";
 
 /* Gallery Recent Photos title */
@@ -842,17 +846,42 @@
 "com.banuba.newEditor.filters" = "Filters";
 "com.banuba.newEditor.blur" = "Blur";
 "com.banuba.newEditor.speed" = "Speed";
+"com.banuba.newEditor.split" = "Split";
 "com.banuba.newEditor.add" = "Add";
 "com.banuba.newEditor.edit" = "Edit";
 "com.banuba.newEditor.replace" = "Replace";
 "com.banuba.newEditor.delete" = "Delete";
+"com.banuba.newEditor.adjust" = "Adjust";
 "com.banuba.newEditor.circle" = "Circle";
 "com.banuba.newEditor.square" = "Square";
-"com.banuba.newEditor.voiceRecord" = "Record";
 "com.banuba.newEditor.voiceEffect" = "Effect";
-"com.banuba.newEditor.muteAudio" = "Mute";
-
+"com.banuba.newEditor.captions" = "Captions";
+"com.banuba.newEditor.record" = "Record";
+"com.banuba.newEditor.secondsFormat" = "%@s";
 "com.banuba.newEditor.musicVolume" = "Volume";
+"com.banuba.newEditor.recordingEffectTitle" = "Recording...";
+"com.banuba.newEditor.voiceoverEffectTitle" = "Voiceover";
+"com.banuba.newEditor.unavailableAtCurrentPosition" = "Unavailable at current position.";
+"com.banuba.newEditor.addAudioButtonTitle" = "Add Audio";
+"com.banuba.newEditor.theSelectedPositionIsInvalid" = "The selected position is invalid.";
+"com.banuba.newEditor.addVoiceover" = "Voiceover";
+"com.banuba.newEditor.addText" = "Add Text";
+"com.banuba.newEditor.addCaptions" = "Add Captions";
+"com.banuba.newEditor.applyToAll" = "Apply to all";
+"com.banuba.newEditor.videoIsTooLongFormat" = "The video is too long. Maximum length is %d minutes.";
+"com.banuba.newEditor.videoIsTooShortFormat" = "The video is too short. Minimum length is %d second.";
+"com.banuba.newEditor.next" = "Next";
+"com.banuba.newEditor.videoSaved" = "Video saved.";
+"com.banuba.newEditor.none" = "None";
+"com.banuba.newEditor.normal" = "Normal";
+
+"com.banuba.newEditor.videoVolumeTitle" = "Video";
+"com.banuba.newEditor.audioVolumeTitle" = "Audio";
+
+"com.banuba.newEditor.editCover" = "Edit Cover";
+
+"com.banuba.recorder.disardVideoAlertMessage" = "Discard video?";
+"com.banuba.recorder.disardVideoAlertDiscardButton" = "Discard";
 
 // MARK: - Auto Cut
 "com.banuba.autocut.choosePart" = "Choose the part you want for your video";
