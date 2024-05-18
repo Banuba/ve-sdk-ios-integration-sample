@@ -1,14 +1,9 @@
 import UIKit
-import BanubaVideoEditorSDK
-
-import VideoEditor
 import AVFoundation
 import AVKit
 import Photos
 import BSImagePicker
-import VEExportSDK
-import BanubaAudioBrowserSDK
-import BanubaLicenseServicingSDK
+import UnifiedVideoEditorSDK
 
 class ViewController: UIViewController, BanubaVideoEditorDelegate {
   

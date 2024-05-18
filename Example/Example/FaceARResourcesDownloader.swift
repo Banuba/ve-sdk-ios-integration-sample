@@ -1,5 +1,5 @@
 import BNBSdkCore
-import BanubaUtilities
+import UnifiedVideoEditorSDK
 
 class FaceARResourcesDownloader {
     let resourceBundleUrl: URL

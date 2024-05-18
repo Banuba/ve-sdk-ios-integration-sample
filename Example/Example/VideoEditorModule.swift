@@ -1,14 +1,10 @@
 
 import UIKit
-import BanubaVideoEditorSDK
-
-import VideoEditor
 import AVFoundation
 import AVKit
 import Photos
 import BSImagePicker
-import VEExportSDK
-import BanubaAudioBrowserSDK
+import UnifiedVideoEditorSDK
 
 // Adopting CountdownView to using in BanubaVideoEditorSDK
 extension CountdownView: MusicEditorCountdownAnimatableView {}
