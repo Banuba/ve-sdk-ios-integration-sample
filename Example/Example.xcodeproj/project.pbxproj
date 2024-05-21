@@ -18,7 +18,6 @@
 		639DA010254700290011C153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00F254700290011C153 /* ViewController.swift */; };
 		639DA013254700290011C153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA011254700290011C153 /* Main.storyboard */; };
 		639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA0162547002C0011C153 /* LaunchScreen.storyboard */; };
-		63CF1CE42B6CEB920038D920 /* BNBLicenseUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 63CF1CE32B6CEB920038D920 /* BNBLicenseUtils */; };
 		8A32EED0258CB5430098F852 /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EECF258CB5430098F852 /* bundleEffects */; };
 		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
 		8AD7FE3326F358720072AF33 /* BSImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD7FE3226F358720072AF33 /* BSImagePicker */; };
@@ -45,7 +44,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				637E50F82BB6DE1E005B2937 /* BNBSdkApi in Frameworks */,
-				63CF1CE42B6CEB920038D920 /* BNBLicenseUtils in Frameworks */,
 				637E50F52BB6DDEC005B2937 /* BNBSdkCore in Frameworks */,
 				8AD7FE3326F358720072AF33 /* BSImagePicker in Frameworks */,
 				631324F72BF8D0CA00EE5801 /* UnifiedVideoEditorSDK in Frameworks */,
@@ -115,7 +113,6 @@
 			name = Example;
 			packageProductDependencies = (
 				8AD7FE3226F358720072AF33 /* BSImagePicker */,
-				63CF1CE32B6CEB920038D920 /* BNBLicenseUtils */,
 				637E50F42BB6DDEC005B2937 /* BNBSdkCore */,
 				637E50F72BB6DE1E005B2937 /* BNBSdkApi */,
 				631324F62BF8D0CA00EE5801 /* UnifiedVideoEditorSDK */,
@@ -150,7 +147,6 @@
 			mainGroup = 639D9FFF254700290011C153;
 			packageReferences = (
 				8AD7FE3126F358720072AF33 /* XCRemoteSwiftPackageReference "BSImagePicker" */,
-				63CF1CE22B6CEB920038D920 /* XCRemoteSwiftPackageReference "BNBLicenseUtils-iOS" */,
 				637E50F32BB6DDEC005B2937 /* XCRemoteSwiftPackageReference "BNBSdkCore" */,
 				637E50F62BB6DE1E005B2937 /* XCRemoteSwiftPackageReference "BNBSdkApi" */,
 				631324F52BF8D0CA00EE5801 /* XCRemoteSwiftPackageReference "UnifiedVideoEditorSDK-iOS" */,
@@ -425,7 +421,7 @@
 			repositoryURL = "https://github.com/Banuba/UnifiedVideoEditorSDK-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = "0.1.0-beta.2";
+				version = 0.2.0;
 			};
 		};
 		637E50F32BB6DDEC005B2937 /* XCRemoteSwiftPackageReference "BNBSdkCore" */ = {
@@ -442,14 +438,6 @@
 			requirement = {
 				kind = exactVersion;
 				version = 1.12.0;
-			};
-		};
-		63CF1CE22B6CEB920038D920 /* XCRemoteSwiftPackageReference "BNBLicenseUtils-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Banuba/BNBLicenseUtils-iOS.git";
-			requirement = {
-				kind = exactVersion;
-				version = 1.35.4;
 			};
 		};
 		8AD7FE3126F358720072AF33 /* XCRemoteSwiftPackageReference "BSImagePicker" */ = {
@@ -477,11 +465,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 637E50F62BB6DE1E005B2937 /* XCRemoteSwiftPackageReference "BNBSdkApi" */;
 			productName = BNBSdkApi;
-		};
-		63CF1CE32B6CEB920038D920 /* BNBLicenseUtils */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 63CF1CE22B6CEB920038D920 /* XCRemoteSwiftPackageReference "BNBLicenseUtils-iOS" */;
-			productName = BNBLicenseUtils;
 		};
 		8AD7FE3226F358720072AF33 /* BSImagePicker */ = {
 			isa = XCSwiftPackageProductDependency;
