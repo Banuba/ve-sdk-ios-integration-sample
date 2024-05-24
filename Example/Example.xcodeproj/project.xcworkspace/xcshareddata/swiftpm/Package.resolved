@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/UnifiedVideoEditorSDK-iOS",
       "state" : {
-        "revision" : "ab9fd84cac8b07932d0f0deb202a93a5b5c7d6ac",
-        "version" : "0.3.0"
+        "revision" : "e2ff3039ad2b0cbf10e189773adcef7b51fa4818",
+        "version" : "0.4.0"
       }
     }
   ],

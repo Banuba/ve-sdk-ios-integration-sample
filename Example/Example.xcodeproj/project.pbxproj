@@ -421,7 +421,7 @@
 			repositoryURL = "https://github.com/Banuba/UnifiedVideoEditorSDK-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 0.3.0;
+				version = 0.4.0;
 			};
 		};
 		637E50F32BB6DDEC005B2937 /* XCRemoteSwiftPackageReference "BNBSdkCore" */ = {
