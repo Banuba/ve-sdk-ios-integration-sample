@@ -153,7 +153,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
         print("✅ License is active, all good")
         self.photoEditorModule?.presentPhotoEditor(with: launchConfig)
       } else {
-        self.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
+        self.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/support"
         print("❌ License is either revoked or expired")
       }
       self.invalidTokenMessageLabel.isHidden = isValid
@@ -204,7 +204,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
         print("✅ License is active, all good")
         self?.videoEditorModule?.presentVideoEditor(with: launchConfig)
       } else {
-        self?.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
+        self?.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/support"
         print("❌ License is either revoked or expired")
       }
       self?.invalidTokenMessageLabel.isHidden = isValid
