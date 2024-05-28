@@ -166,7 +166,7 @@ NOT AVAILABLE
 :x: Change layout  
 :x: Change order of screens after entry point
 
-You can, however, [ask](https://www.banuba.com/faq/kb-tickets/new) us to customize the mobile video editor UI as a separate contract.
+You can, however, [ask](https://www.banuba.com/support) us to customize the mobile video editor UI as a separate contract.
 
 Check out the list of [Frequently Asked Questions](faq.md) to know more about features customizations and if you are experiencing any issues with an integration.
 
