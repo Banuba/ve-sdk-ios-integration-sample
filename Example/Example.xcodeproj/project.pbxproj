@@ -421,7 +421,7 @@
 			repositoryURL = "https://github.com/Banuba/UnifiedVideoEditorSDK-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 0.4.0;
+				version = 0.5.0;
 			};
 		};
 		637E50F32BB6DDEC005B2937 /* XCRemoteSwiftPackageReference "BNBSdkCore" */ = {
@@ -429,7 +429,7 @@
 			repositoryURL = "https://github.com/sdk-banuba/BNBSdkCore.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.12.0;
+				version = 1.13.2;
 			};
 		};
 		637E50F62BB6DE1E005B2937 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
@@ -437,7 +437,7 @@
 			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
 			requirement = {
 				kind = exactVersion;
-				version = 1.12.0;
+				version = 1.13.2;
 			};
 		};
 		8AD7FE3126F358720072AF33 /* XCRemoteSwiftPackageReference "BSImagePicker" */ = {
