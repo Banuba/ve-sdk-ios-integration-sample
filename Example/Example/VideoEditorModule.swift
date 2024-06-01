@@ -6,27 +6,18 @@ import Photos
 import BSImagePicker
 import UnifiedVideoEditorSDK
 
-// Adopting CountdownView to using in BanubaVideoEditorSDK
-extension CountdownView: MusicEditorCountdownAnimatableView {}
-
 class VideoEditorModule {
     
     var videoEditorSDK: BanubaVideoEditor?
     
     var isVideoEditorInitialized: Bool { videoEditorSDK != nil }
-    private let resourcesDownloader: FaceARResourcesDownloader
     
     init(token: String) {
-        resourcesDownloader = FaceARResourcesDownloader(
-            resourceBundleUrl: URL(string: <#T##CDN URL#>)!
-        )
         let config = createConfiguration()
-        let externalViewControllerFactory = createExampleExternalViewControllerFactory()
         
         videoEditorSDK = BanubaVideoEditor(
             token: token,
-            configuration: config,
-            externalViewControllerFactory: externalViewControllerFactory
+            configuration: config
         )
     }
     
@@ -35,18 +26,10 @@ class VideoEditorModule {
             print("BanubaVideoEditor is not initialized!")
             return
         }
-        Task { @MainActor in
-            do {
-                try await resourcesDownloader.downloadResources()
-                
-                videoEditorSDK?.presentVideoEditor(
-                    withLaunchConfiguration: launchConfig,
-                    completion: nil
-                )
-            } catch {
-                print("Error happened during resource bundle download \(error)")
-            }
-        }
+        videoEditorSDK?.presentVideoEditor(
+            withLaunchConfiguration: launchConfig,
+            completion: nil
+        )
     }
     
     func createExportConfiguration(destFile: URL) -> ExportConfiguration {
@@ -104,33 +87,5 @@ class VideoEditorModule {
         config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
         
         return config
-    }
-    
-    // MARK: - Example view controller factory customization
-    func createExampleExternalViewControllerFactory() -> ExternalViewControllerFactory {
-        return ExampleViewControllerFactory()
-    }
-    
-    /// Example video editor view controller factory stores custom view factories used for customization BanubaVideoEditor
-    class ExampleViewControllerFactory: ExternalViewControllerFactory {
-        var musicEditorFactory: MusicEditorExternalViewControllerFactory?
-        var countdownTimerViewFactory: CountdownTimerViewFactory?
-        var exposureViewFactory: AnimatableViewFactory?
-        
-        init() {
-            countdownTimerViewFactory = CountdownTimerViewControllerFactory()
-            exposureViewFactory = DefaultExposureViewFactory()
-        }
-        
-        /// Example countdown timer view factory for Recorder countdown animation
-        class CountdownTimerViewControllerFactory: CountdownTimerViewFactory {
-            func makeCountdownTimerView() -> CountdownTimerAnimatableView {
-                let countdownView = CountdownView()
-                countdownView.frame = UIScreen.main.bounds
-                countdownView.font = countdownView.font.withSize(102.0)
-                countdownView.digitColor = .white
-                return countdownView
-            }
-        }
     }
 }

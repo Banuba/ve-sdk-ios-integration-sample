@@ -7,18 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630FE22C2C0B65A300AF359B /* BNBLicenseUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 630FE22B2C0B65A300AF359B /* BNBLicenseUtils */; };
 		631324F72BF8D0CA00EE5801 /* UnifiedVideoEditorSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 631324F62BF8D0CA00EE5801 /* UnifiedVideoEditorSDK */; };
 		634FAC04255C351900FB0DBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634FAC06255C351900FB0DBC /* Localizable.strings */; };
 		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
-		6379E0E72BDA6FA000D82E22 /* FaceARResourcesDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379E0E62BDA6FA000D82E22 /* FaceARResourcesDownloader.swift */; };
 		637B56D22A28B7DA0099DDA2 /* VideoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B56D12A28B7DA0099DDA2 /* VideoEditorModule.swift */; };
-		637E50F52BB6DDEC005B2937 /* BNBSdkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 637E50F42BB6DDEC005B2937 /* BNBSdkCore */; };
-		637E50F82BB6DE1E005B2937 /* BNBSdkApi in Frameworks */ = {isa = PBXBuildFile; productRef = 637E50F72BB6DE1E005B2937 /* BNBSdkApi */; };
 		639DA00C254700290011C153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00B254700290011C153 /* AppDelegate.swift */; };
 		639DA010254700290011C153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00F254700290011C153 /* ViewController.swift */; };
 		639DA013254700290011C153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA011254700290011C153 /* Main.storyboard */; };
 		639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA0162547002C0011C153 /* LaunchScreen.storyboard */; };
-		8A32EED0258CB5430098F852 /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EECF258CB5430098F852 /* bundleEffects */; };
 		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
 		8AD7FE3326F358720072AF33 /* BSImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD7FE3226F358720072AF33 /* BSImagePicker */; };
 /* End PBXBuildFile section */
@@ -26,7 +23,6 @@
 /* Begin PBXFileReference section */
 		634FAC05255C351900FB0DBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		635DB1AA2548541000B1C799 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
-		6379E0E62BDA6FA000D82E22 /* FaceARResourcesDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceARResourcesDownloader.swift; sourceTree = "<group>"; };
 		637B56D12A28B7DA0099DDA2 /* VideoEditorModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEditorModule.swift; sourceTree = "<group>"; };
 		639DA008254700290011C153 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639DA00B254700290011C153 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -34,7 +30,6 @@
 		639DA012254700290011C153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		639DA0172547002C0011C153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		639DA0192547002C0011C153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A32EECF258CB5430098F852 /* bundleEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleEffects; sourceTree = "<group>"; };
 		8A32EEDE258CB70C0098F852 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,10 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				637E50F82BB6DE1E005B2937 /* BNBSdkApi in Frameworks */,
-				637E50F52BB6DDEC005B2937 /* BNBSdkCore in Frameworks */,
 				8AD7FE3326F358720072AF33 /* BSImagePicker in Frameworks */,
 				631324F72BF8D0CA00EE5801 /* UnifiedVideoEditorSDK in Frameworks */,
+				630FE22C2C0B65A300AF359B /* BNBLicenseUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				8A32EEDE258CB70C0098F852 /* Assets.xcassets */,
-				8A32EECF258CB5430098F852 /* bundleEffects */,
 				639DA00B254700290011C153 /* AppDelegate.swift */,
 				637B56D12A28B7DA0099DDA2 /* VideoEditorModule.swift */,
-				6379E0E62BDA6FA000D82E22 /* FaceARResourcesDownloader.swift */,
 				639DA00F254700290011C153 /* ViewController.swift */,
 				634FAC06255C351900FB0DBC /* Localizable.strings */,
 				639DA011254700290011C153 /* Main.storyboard */,
@@ -113,9 +105,8 @@
 			name = Example;
 			packageProductDependencies = (
 				8AD7FE3226F358720072AF33 /* BSImagePicker */,
-				637E50F42BB6DDEC005B2937 /* BNBSdkCore */,
-				637E50F72BB6DE1E005B2937 /* BNBSdkApi */,
 				631324F62BF8D0CA00EE5801 /* UnifiedVideoEditorSDK */,
+				630FE22B2C0B65A300AF359B /* BNBLicenseUtils */,
 			);
 			productName = Example;
 			productReference = 639DA008254700290011C153 /* Example.app */;
@@ -147,9 +138,8 @@
 			mainGroup = 639D9FFF254700290011C153;
 			packageReferences = (
 				8AD7FE3126F358720072AF33 /* XCRemoteSwiftPackageReference "BSImagePicker" */,
-				637E50F32BB6DDEC005B2937 /* XCRemoteSwiftPackageReference "BNBSdkCore" */,
-				637E50F62BB6DE1E005B2937 /* XCRemoteSwiftPackageReference "BNBSdkApi" */,
 				631324F52BF8D0CA00EE5801 /* XCRemoteSwiftPackageReference "UnifiedVideoEditorSDK-iOS" */,
+				630FE22A2C0B65A300AF359B /* XCRemoteSwiftPackageReference "BNBLicenseUtils-iOS" */,
 			);
 			productRefGroup = 639DA009254700290011C153 /* Products */;
 			projectDirPath = "";
@@ -170,7 +160,6 @@
 				635DB1AC2548541000B1C799 /* luts in Resources */,
 				639DA013254700290011C153 /* Main.storyboard in Resources */,
 				8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */,
-				8A32EED0258CB5430098F852 /* bundleEffects in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +172,6 @@
 			files = (
 				637B56D22A28B7DA0099DDA2 /* VideoEditorModule.swift in Sources */,
 				639DA010254700290011C153 /* ViewController.swift in Sources */,
-				6379E0E72BDA6FA000D82E22 /* FaceARResourcesDownloader.swift in Sources */,
 				639DA00C254700290011C153 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,28 +404,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		630FE22A2C0B65A300AF359B /* XCRemoteSwiftPackageReference "BNBLicenseUtils-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Banuba/BNBLicenseUtils-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.35.6;
+			};
+		};
 		631324F52BF8D0CA00EE5801 /* XCRemoteSwiftPackageReference "UnifiedVideoEditorSDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/UnifiedVideoEditorSDK-iOS";
 			requirement = {
 				kind = exactVersion;
-				version = 0.5.0;
-			};
-		};
-		637E50F32BB6DDEC005B2937 /* XCRemoteSwiftPackageReference "BNBSdkCore" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BNBSdkCore.git";
-			requirement = {
-				kind = exactVersion;
-				version = 1.13.2;
-			};
-		};
-		637E50F62BB6DE1E005B2937 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
-			requirement = {
-				kind = exactVersion;
-				version = 1.13.2;
+				version = 0.6.0;
 			};
 		};
 		8AD7FE3126F358720072AF33 /* XCRemoteSwiftPackageReference "BSImagePicker" */ = {
@@ -451,20 +431,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		630FE22B2C0B65A300AF359B /* BNBLicenseUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 630FE22A2C0B65A300AF359B /* XCRemoteSwiftPackageReference "BNBLicenseUtils-iOS" */;
+			productName = BNBLicenseUtils;
+		};
 		631324F62BF8D0CA00EE5801 /* UnifiedVideoEditorSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 631324F52BF8D0CA00EE5801 /* XCRemoteSwiftPackageReference "UnifiedVideoEditorSDK-iOS" */;
 			productName = UnifiedVideoEditorSDK;
-		};
-		637E50F42BB6DDEC005B2937 /* BNBSdkCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 637E50F32BB6DDEC005B2937 /* XCRemoteSwiftPackageReference "BNBSdkCore" */;
-			productName = BNBSdkCore;
-		};
-		637E50F72BB6DE1E005B2937 /* BNBSdkApi */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 637E50F62BB6DE1E005B2937 /* XCRemoteSwiftPackageReference "BNBSdkApi" */;
-			productName = BNBSdkApi;
 		};
 		8AD7FE3226F358720072AF33 /* BSImagePicker */ = {
 			isa = XCSwiftPackageProductDependency;

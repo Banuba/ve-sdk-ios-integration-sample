@@ -1,22 +1,13 @@
 {
-  "originHash" : "223a7c04df1629b4b852f32f3377dff5ffc11aa4a3e47493e8848302163df1f7",
+  "originHash" : "dc0b4a32cd96e06a86af16dcd1f5dc6d3f570cb7400dc563649786b85858741a",
   "pins" : [
     {
-      "identity" : "bnbsdkapi",
+      "identity" : "bnblicenseutils-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sdk-banuba/BNBSdkApi.git",
+      "location" : "https://github.com/Banuba/BNBLicenseUtils-iOS.git",
       "state" : {
-        "revision" : "e21bb77e3ee2dffe99d2fd1f074a4175b68d8951",
-        "version" : "1.13.2"
-      }
-    },
-    {
-      "identity" : "bnbsdkcore",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sdk-banuba/BNBSdkCore.git",
-      "state" : {
-        "revision" : "719c3b2af08f4aa0f22e053799ff2e2a915cc3f6",
-        "version" : "1.13.2"
+        "revision" : "1463297698b5af6c9eae2e6c417c770d315c1a86",
+        "version" : "1.35.6"
       }
     },
     {
@@ -33,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/UnifiedVideoEditorSDK-iOS",
       "state" : {
-        "revision" : "df385f0042238ecb7040f5d4aab8a60d516d6b44",
-        "version" : "0.5.0"
+        "revision" : "b3b8757bf4ebfc81656c581898dc51eb7ca7f2b0",
+        "version" : "0.6.0"
       }
     }
   ],

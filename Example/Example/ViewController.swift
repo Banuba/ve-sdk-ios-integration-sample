@@ -31,36 +31,6 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate {
   }
   
   // MARK: - Actions
-  @IBAction func openVideoEditorDefault(_ sender: Any) {
-    let musicTrackPreset: MediaTrack? = nil
-    // Uncomment to apply custom audio track in video editor
-    //let musicTrackPreset = prepareMusicTrack(audioFileName: "short_music_20.wav")
-    
-    let launchConfig = VideoEditorLaunchConfig(
-      entryPoint: .camera,
-      hostController: self,
-      musicTrack: musicTrackPreset, // Paste a music track as a track preset at the camera screen to record video with music
-      animated: true
-    )
-    checkLicenseAndOpenVideoEditor(with: launchConfig)
-  }
-  
-  @IBAction func openVideoEditorPiP(_ sender: Any) {
-    pickerGalleryVideos(entryPoint: .pip) { [weak self] pickedVideoUrls in
-      guard let self, !pickedVideoUrls.isEmpty else { return }
-      
-      let launchConfig = VideoEditorLaunchConfig(
-        entryPoint: .pip,
-        hostController: self,
-        videoItems: pickedVideoUrls,
-        pipVideoItem: pickedVideoUrls[.zero],
-        animated: true
-      )
-      
-      self.checkLicenseAndOpenVideoEditor(with: launchConfig)
-    }
-  }
-  
   @IBAction func openVideoEditorDrafts(_ sender: UIButton) {
     let launchConfig = VideoEditorLaunchConfig(
       entryPoint: .drafts,
@@ -249,7 +219,7 @@ extension ViewController {
     completion: @escaping (_ videoUrls: [URL]) -> Void
   ) {
     pickGalleryVideo(
-      isMultiSelectionEnabled: entryPoint != .pip
+      isMultiSelectionEnabled: true
     ) { assets in
       guard let assets = assets else {
         return
