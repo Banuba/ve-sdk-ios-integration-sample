@@ -16,6 +16,7 @@
 | SSZipArchive | [https://github.com/ZipArchive/ZipArchive](https://github.com/ZipArchive/ZipArchive) | Copyright (c) 2010-2015, Sam Soffes |
 | Kingfisher | [https://github.com/onevcat/Kingfisher](https://github.com/onevcat/Kingfisher) | Copyright (c) 2019 Wei Wang |
 | SwiftUI-sliders | [https://github.com/spacenation/swiftui-sliders](https://github.com/spacenation/swiftui-sliders) | Copyright (c) 2020 SpaceNation Inc. |
+| TTSegmentedControl | [https://github.com/tapptitude/TTSegmentedControl](https://github.com/tapptitude/TTSegmentedControl) | Copyright (c) 2016 Tapptitude |
 
 ### Face AR SDK
 [View](https://docs.banuba.com/face-ar-sdk/overview/3rd_licenses) third party libraries for Banuba Face AR SDK
