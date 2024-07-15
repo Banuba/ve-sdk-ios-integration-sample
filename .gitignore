@@ -2,3 +2,4 @@ Pods/
 Example/fastlane
 *.mobileprovision
 xcuserdata
+.DS_Store
