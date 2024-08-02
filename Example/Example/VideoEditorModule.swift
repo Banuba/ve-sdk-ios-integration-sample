@@ -27,6 +27,10 @@ class VideoEditorModule {
             configuration: config
         )
         
+        var videoEditorArguments: [String: Any] = [:]
+        videoEditorArguments["ENABLE_NEW_UI"] = true
+        videoEditorSDK?.updateVideoEditorArgs(videoEditorArguments)
+        
         self.videoEditorSDK = videoEditorSDK
     }
     
