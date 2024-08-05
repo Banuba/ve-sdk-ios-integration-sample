@@ -20,6 +20,12 @@ class SummaryViewController: UIViewController {
         return imageView
     }()
     
+    private let backButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(resource: .navBackArrow), for: .normal)
+        return button
+    }()
+    
     private let editCoverButton: UIButton = {
         let button = UIButton()
         button.layer.borderColor = UIColor.white.cgColor
@@ -41,6 +47,16 @@ class SummaryViewController: UIViewController {
             coverImageView.heightAnchor.constraint(equalToConstant: 320),
             coverImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             coverImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        
+        view.addSubview(backButton)
+        backButton.addTarget(self, action: #selector(editCoverAction), for: .touchUpInside)
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backButton.widthAnchor.constraint(equalToConstant: 45),
+            backButton.heightAnchor.constraint(equalToConstant: 45),
+            backButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10.0),
+            backButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 60.0)
         ])
         
         view.addSubview(editCoverButton)
