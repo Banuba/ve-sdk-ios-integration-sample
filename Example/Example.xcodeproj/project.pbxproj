@@ -19,6 +19,7 @@
 		70113E7129C1D01800CBA08B /* VideoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70113E7029C1D01800CBA08B /* VideoEditorModule.swift */; };
 		8A32EED0258CB5430098F852 /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EECF258CB5430098F852 /* bundleEffects */; };
 		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
+		DBD546942C5CC7D7003157BA /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD546932C5CC7D7003157BA /* SummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		8AFC95CF269DC12D00B4114B /* BNBLicenseUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BNBLicenseUtils.xcframework; sourceTree = "<group>"; };
 		8D879ADE024EEEC9574AAB2D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		A24378930003F0F910117502 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBD546932C5CC7D7003157BA /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				70113E7029C1D01800CBA08B /* VideoEditorModule.swift */,
 				636C55232B0DF24100678849 /* PhotoEditorModule.swift */,
 				639DA00F254700290011C153 /* ViewController.swift */,
+				DBD546932C5CC7D7003157BA /* SummaryViewController.swift */,
 				63F7115F29D1F21A00045A06 /* short_music_20.wav */,
 				634FAC06255C351900FB0DBC /* Localizable.strings */,
 				639DA011254700290011C153 /* Main.storyboard */,
@@ -252,6 +255,7 @@
 				636C55242B0DF24100678849 /* PhotoEditorModule.swift in Sources */,
 				70113E7129C1D01800CBA08B /* VideoEditorModule.swift in Sources */,
 				639DA00C254700290011C153 /* AppDelegate.swift in Sources */,
+				DBD546942C5CC7D7003157BA /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
