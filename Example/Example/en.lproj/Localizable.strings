@@ -709,6 +709,7 @@
 "com.banuba.recorder.sound.title" = "Add sound";
 "com.banuba.recorder.effects.title" = "Effects";
 "com.banuba.recorder.toggle.title" = "Flip";
+"com.banuba.recorder.greenScreen.title" = "Green Screen";
 "com.banuba.recorder.flashlight.title" = "Flash";
 "com.banuba.recorder.timer.title" = "Timer";
 "com.banuba.recorder.speed.title" = "Speed";
@@ -884,6 +885,9 @@
 
 "com.banuba.recorder.disardVideoAlertMessage" = "Discard video?";
 "com.banuba.recorder.disardVideoAlertDiscardButton" = "Discard";
+"com.banuba.recorder.greenScreen.selectImageAsABackground" = "Select image as a background";
+"com.banuba.recorder.greenScreen.selectFromGallery" = "Select from gallery";
+"com.banuba.recorder.greenScreen.allowAccess" = "Allow Access";
 
 // MARK: - Auto Cut
 "com.banuba.autocut.choosePart" = "Choose the part you want for your video";
