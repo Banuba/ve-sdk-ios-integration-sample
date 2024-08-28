@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "OPEN VIDEO EDITOR - PIP"; ObjectID = "1R2-5H-8qh"; */
+"1R2-5H-8qh.normalTitle" = "OPEN VIDEO EDITOR - PIP";
+
+/* Class = "UILabel"; text = "License token is invalid"; ObjectID = "5fm-l1-4ld"; */
+"5fm-l1-4ld.text" = "License token is invalid";
+
+/* Class = "UIButton"; normalTitle = "OPEN VIDEO EDITOR - DEFAULT"; ObjectID = "Dam-gs-yMF"; */
+"Dam-gs-yMF.normalTitle" = "OPEN VIDEO EDITOR - DEFAULT";
+
+/* Class = "UIButton"; normalTitle = "OPEN PHOTO EDITOR - IMAGE"; ObjectID = "Pkt-BD-AVd"; */
+"Pkt-BD-AVd.normalTitle" = "OPEN PHOTO EDITOR - IMAGE";
+
+/* Class = "UIButton"; normalTitle = "OPEN VIDEO EDITOR - TRIMMER"; ObjectID = "Zbq-HN-Wrq"; */
+"Zbq-HN-Wrq.normalTitle" = "OPEN VIDEO EDITOR - TRIMMER";
+
+/* Class = "UIButton"; normalTitle = "OPEN VIDEO EDITOR - DRAFTS"; ObjectID = "cyS-iW-k8k"; */
+"cyS-iW-k8k.normalTitle" = "OPEN VIDEO EDITOR - DRAFTS";
+
+/* Class = "UIButton"; normalTitle = "OPEN PHOTO EDITOR - DEFAULT"; ObjectID = "vfb-J9-8Kq"; */
+"vfb-J9-8Kq.normalTitle" = "OPEN PHOTO EDITOR - DEFAULT";
