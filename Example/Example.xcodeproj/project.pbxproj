@@ -41,6 +41,9 @@
 		8AFC95CF269DC12D00B4114B /* BNBLicenseUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BNBLicenseUtils.xcframework; sourceTree = "<group>"; };
 		8D879ADE024EEEC9574AAB2D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		A24378930003F0F910117502 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA6E4882C7F36D3003A059A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		DBA6E4892C7F36D3003A059A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DBA6E48A2C7F36D3003A059A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 639D9FFF254700290011C153;
 			productRefGroup = 639DA009254700290011C153 /* Products */;
@@ -262,6 +266,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				634FAC05255C351900FB0DBC /* en */,
+				DBA6E48A2C7F36D3003A059A /* ar */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				639DA012254700290011C153 /* Base */,
+				DBA6E4882C7F36D3003A059A /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				639DA0172547002C0011C153 /* Base */,
+				DBA6E4892C7F36D3003A059A /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

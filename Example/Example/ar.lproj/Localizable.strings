@@ -1,0 +1,1105 @@
+
+/*
+1) Copy and paste this file in the host application
+2) Remove unused
+3) Override values
+*/
+
+"Music" = "موسيقى";
+"Delete" = "حذف";
+"Voice" = "صوت";
+"Yes" = "نعم";
+"No" = "لا";
+"Error" = "خطأ";
+"Next" = "التالي";
+"Cancel" = "إلغاء";
+"Close" = "إغلاق";
+"CLOSE" = "إغلاق";
+
+"alert.reset.all.title" = "إعادة ضبط الكل؟";
+"alert.reset.all.message" = "";
+
+"record.screen.reset.all.title" = "هل تريد إعادة تعيين التغييرات؟";
+"editor.screen.reset.all.title" = "إعادة ضبط الكل؟";
+"record.screen.reset.all.message" = "";
+"editor.screen.reset.all.message" = "";
+
+"alert.delete.last.clip.title" = "حذف الفيديو الأخير؟";
+"alert.delete.last.clip.message" = "";
+
+"alert.camera.continue.editing.video.question.title" = "لديك فيديو غير مكتمل. هل تريد المتابعة؟";
+"alert.camera.continue.editing.video.question.message" = "";
+
+"Mask not loaded" = "لم يتم تحميل القناع";
+"com.banuba.toShortVideoMessageFormatPluralSeconds" = "سجل على الأقل %d ثواني";
+"com.banuba.toShortVideoMessageSingleSecond" = "سجل على الأقل ثانية واحدة";
+
+"com.banuba.recorder.requireMaskAlertTitle" = "لنحافظ على المرح والأمان!";
+"com.banuba.recorder.requreMaskAlertMessage" = "قبل أن تبدأ التسجيل، يرجى اختيار فلتر القناع! إنها طريقة ممتعة ورائعة للتعبير عن نفسك مع الحفاظ على مجتمعنا مرحًا وآمنًا!";
+"com.banuba.recorder.requireMaskButtonTitle" = "حسنًا، فهمت!";
+
+"com.banuba.TooLongVideoMessageFormat" = "يجب أن تكون مدة الفيديو بين %d و %d ثانية";
+"Max video length %d sec" = "الحد الأقصى لطول الفيديو %d ثانية";
+"Timer is off" = "المؤقت متوقف";
+"Sound" = "صوت";
+"Add" = "إضافة";
+"%i seconds timer is on" = "المؤقت لمدة %i ثواني قيد التشغيل";
+
+"Press and hold mask" = "اضغط واستمر لتطبيق القناع";
+"Press and hold time" = "اضغط واستمر لإضافة تأثيرات الوقت";
+"Press and hold visual" = "اضغط واستمر لإضافة تأثيرات بصرية";
+
+"Video is uploading from iCloud" = "يتم تحميل الفيديو من iCloud";
+"Network Unavailable" = "الشبكة غير متاحة";
+"Choose Cover Screen Name" = "صورة مصغرة";
+"Reach maximum video duration" = "تم الوصول إلى الحد الأقصى لمدة الفيديو";
+
+// MARK: - Gifphy Screen
+
+"com.banuba.searchGif.placeholder" = "البحث في GIPHY";
+"Cancel" = "إلغاء";
+"No stickers found" = "لم يتم العثور على ملصقات";
+"Giphy API key missing" = "ستظهر الملصقات هنا عند إعداد مفتاح Giphy";
+"Problems with internet" = "لا يوجد اتصال بالإنترنت";
+"Check your connection and try again" = "تحقق من اتصالك وحاول مرة أخرى";
+"Again" = "حاول مرة أخرى";
+
+// MARK: - ERROR MESSAGES
+
+"HTTP Error %d" = "خطأ HTTP %d";
+"You don't seem to be connected to the internet. \nPlease try again" = "يبدو أنك غير متصل بالإنترنت. \nيرجى المحاولة مرة أخرى";
+"Cannot download media file from your iCloud" = "لا يمكن تنزيل ملف الوسائط من iCloud الخاص بك";
+"Unknown data format" = "تنسيق بيانات غير معروف";
+
+"banuba.camera.alert.missed.gallery.persmission.title" = "يرجى السماح للصور ومقاطع الفيديو في الإعدادات لإنشاء مقطع.";
+"banuba.camera.alert.missed.gallery.persmission.message" = "";
+
+"Banuba.Camera.MissedCameraAndMicrophonePersmissions" = "يرجى السماح للكاميرا والميكروفون لتسجيل مقطع.";
+"banuba.alert.camera.access.restricted.title" = "لم يتم منح أذونات الكاميرا";
+"banuba.alert.camera.access.restricted.message" = "";
+
+"banuba.alert.camera.no.headphones.title" = "استخدم سماعات الرأس";
+"banuba.alert.camera.no.headphones.message" = "للحصول على صوت أفضل لرد فعلك، يرجى استخدام سماعات الرأس.";
+"banuba.alert.camera.no.headphones.button.title" = "حسنًا";
+
+"alert.microphone.unavailable.title" = "الميكروفون غير متاح. يرجى السماح بالوصول في إعدادات الجهاز";
+"alert.microphone.unavailable.message" = "";
+
+"errors.lowDiskSpace" = "المساحة غير كافية. يرجى التأكد من أن مساحة تخزين الجهاز ليست ممتلئة بشكل حرج";
+"errors.photosLibraryNetworkError" = "للأسف، حدث خطأ أثناء تنزيل الفيديو. يرجى المحاولة مرة أخرى.\nإذا استمرت المشكلة، تحقق من الاتصال بالإنترنت وحاول فتح الفيديو في معرض الصور أولاً.";
+
+// MARK: - الإعدادات
+
+/* اسم الزر، عند النقر عليه يمكنك الانتقال إلى تطبيق الإعدادات. */
+"Settings" = "الإعدادات";
+
+/* اسم الزر، عند النقر عليه يمكنك رفض رسالة تنبيه الإذن المفقود */
+"Settings.Close" = "إغلاق";
+
+/* يُستخدم في تنبيه مع خيارات نعم ولا عند إعادة تعيين التأثيرات. */
+"alert.reset.effects.title" = "إلغاء التغييرات؟";
+"alert.reset.effects.message" = "";
+
+/* إلغاء الفلاتر المطبقة على الفيديو في شاشة إضافة الفلاتر */
+"Undo" = "تراجع";
+
+/* عنوان زر الانتهاء */
+"Done" = "تم";
+
+/* عنوان زر OK في التنبيه */
+"OK" = "حسنًا";
+
+/* إظهار رسالة للمستخدم عند نفاد مساحة التخزين أثناء تسجيل الفيديو وعند النقر على زر تسجيل الفيديو */
+"Not enough storage" = "المساحة غير كافية";
+
+// MARK: - أسماء التأثيرات
+
+/* اسم تأثير الروح */
+"com.banuba.editor.effect.name.soul" = "روح";
+
+/* TV Foam effect name */
+"com.banuba.editor.effect.name.tv-foam" = "رغوة التلفاز";
+
+/* VHS video effect name */
+"com.banuba.editor.effect.name.vhs" = "VHS";
+
+/* Flash video effect name */
+"com.banuba.editor.effect.name.flash" = "فلاش";
+
+/* Rave effect name */
+"com.banuba.editor.effect.name.rave" = "ريف";
+
+/* Glitch effect name */
+"com.banuba.editor.effect.name.glitch" = "خلل";
+
+/* Acid whip effect name */
+"com.banuba.editor.effect.name.acid-whip" = "سوطي الحمضي";
+
+/* Zoom effect name */
+"com.banuba.editor.effect.name.zoom" = "تكبير";
+
+/* Zoom 2 effect name */
+"com.banuba.editor.effect.name.zoom2" = "تكبير 2";
+
+/* Cathode effect name */
+"com.banuba.editor.effect.name.cathode" = "كاثود";
+
+/* Polaroid effect name */
+"com.banuba.editor.effect.name.polaroid" = "بولارويد";
+
+/* Slow motion effect name */
+"com.banuba.editor.effect.name.slow-motion" = "بطيء الحركة";
+
+/* Rapid effect name */
+"com.banuba.editor.effect.name.rapid" = "سريع";
+
+/* Mirror 2 effect name*/
+"com.banuba.editor.effect.name.mirror2" = "مرآة 2";
+
+/* DV Cam effect name */
+"com.banuba.editor.effect.name.dvcam" = "DV كام";
+
+/* Glitch 2 effect name */
+"com.banuba.editor.effect.name.glitch2" = "خلل 2";
+
+/* Heat map effect name */
+"com.banuba.editor.effect.name.heatmap" = "خريطة حرارية";
+
+/* Mirror effect name */
+"com.banuba.editor.effect.name.mirror" = "مرآة";
+
+"com.banuba.recorder.greenScreen.title" = "شاشة خضراء";
+"com.banuba.recorder.greenScreen.selectImageAsABackground" = "حدد صورة كخلفية";
+"com.banuba.recorder.greenScreen.selectFromGallery" = "اختر من المعرض";
+"com.banuba.recorder.greenScreen.allowAccess" = "السماح بالوصول";
+
+/* Lumiere */
+"com.banuba.editor.effect.name.lumiere" = "لوميير";
+
+/* Pixel dynamic effect name */
+"com.banuba.editor.effect.name.pixelationdynamic" = "ديناميكي بكسل";
+
+/* Pixel static effect name */
+"com.banuba.editor.effect.name.pixelationstatic" = "ثابت بكسل";
+
+/* Stars effect name */
+"com.banuba.editor.effect.name.stars" = "نجوم";
+
+/* Transition effect name */
+"com.banuba.editor.effect.name.transition" = "انتقال";
+
+/* Transition 4 */
+"com.banuba.editor.effect.name.transition4" = "انتقال 4";
+
+/* VHS 2 effect name */
+"com.banuba.editor.effect.name.vhs2" = "VHS 2";
+
+/* Twitch effect name */
+"com.banuba.editor.effect.name.twitch" = "ارتعاش";
+
+/* Blur out effect name */
+"com.banuba.editor.effect.name.blur-out" = "طمس";
+
+/* Corner flip effect name */
+"com.banuba.editor.effect.name.corner-flip" = "قلب الزاوية";
+
+/* Zoom out effect name */
+"com.banuba.editor.effect.name.zoom-out" = "تصغير";
+
+/* Warp back effect name */
+"com.banuba.editor.effect.name.warp-back" = "تشويه خلفي";
+
+/* Open trimmer button name (for dradt) */
+"com.banuba.editor.openTrimButtonTitle" = "تعديل المقطع";
+
+/* Captions button title */
+"com.banuba.editor.captions" = "التعليقات";
+
+/* Captions not available for multiple videos */
+"com.banuba.editor.captionsNotAvailableForMutipleVideos" = "غير متوفر للعديد من الفيديوهات والصور";
+
+// MARK: - Filter names
+
+/* glitch filter name */
+"com.banuba.filter.name.lux" = "لوكس";
+
+/* remy filter name */
+"com.banuba.filter.name.remy" = "ريمي";
+
+/* hyla filter name */
+"com.banuba.filter.name.hyla" = "هيلا";
+
+/* neon filter name */
+"com.banuba.filter.name.neon" = "نيون";
+
+/* retro filter name */
+"com.banuba.filter.name.retro" = "ريترو";
+
+/* sunny filter name */
+"com.banuba.filter.name.sunny" = "مشمس";
+
+/* egypt filter name */
+"com.banuba.filter.name.egypt" = "مصر";
+
+/* spark filter name */
+"com.banuba.filter.name.spark" = "سبارك";
+
+/* byers filter name */
+"com.banuba.filter.name.byers" = "بايرز";
+
+/* lilac filter name */
+"com.banuba.filter.name.lilac" = "أرجواني";
+
+/* vinyl filter name */
+"com.banuba.filter.name.vinyl" = "فينيل";
+
+/* japan filter name */
+"com.banuba.filter.name.japan" = "اليابان";
+
+/* chile filter name */
+"com.banuba.filter.name.chile" = "تشيلي";
+
+/* glitch filter name */
+"com.banuba.filter.name.glitch" = "خلل";
+
+/* grunge filter name */
+"com.banuba.filter.name.grunge" = "جرانج";
+
+/* canada filter name */
+"com.banuba.filter.name.canada" = "كندا";
+
+/* chroma filter name */
+"com.banuba.filter.name.chroma" = "كروم";
+
+/* norway filter name */
+"com.banuba.filter.name.norway" = "النرويج";
+
+/* korben filter name */
+"com.banuba.filter.name.korben" = "كوربن";
+
+/* sunset filter name */
+"com.banuba.filter.name.sunset" = "غروب";
+
+/* instant filter name */
+"com.banuba.filter.name.instant" = "فوري";
+
+/* england filter name */
+"com.banuba.filter.name.england" = "إنجلترا";
+
+/* pinkvine filter name */
+"com.banuba.filter.name.pinkvine" = "كرمة وردية";
+
+/* vivid filter name */
+"com.banuba.filter.name.vivid" = "حيوي";
+
+/* bright filter name */
+"com.banuba.filter.name.bright" = "مشرق";
+
+// MARK: - GALLERY SCREEN / SLIDE SHOW
+
+/* No photo in gallery */
+"No matching photos found in gallery" = "لم يتم العثور على صور";
+
+/* No video in gallery */
+"No matching video found in gallery" = "لم يتم العثور على فيديوهات";
+
+/* User selected too many files in the gallery */
+"You can select only %d files" = "يمكنك اختيار %d ملفات فقط";
+
+/* Failed to export a video */
+"Failed to create video" = "فشل في إنشاء الفيديو";
+
+// MARK: - Music Editor
+
+/* Delete track button title */
+"MusicEditor.Delete" = "حذف";
+
+/* Voice effect button title */
+"MusicEditor.VoiceEffect" = "تأثير";
+
+/* Edit track button title */
+"MusicEditor.Edit" = "تعديل";
+
+/* Add track button title */
+"MusicEditor.Tracks" = "المسارات";
+
+/* Add effects button title */
+"MusicEditor.Effects" = "التأثيرات";
+
+/* Add voice record button title */
+"MusicEditor.Record" = "تسجيل";
+
+/* Video volume title */
+"MusicEditor.VideoVolume" = "مستوى الصوت";
+
+/* Original sound title */
+"MusicEditor.OriginalSound" = "الصوت الأصلي";
+
+/* Added sound title */
+"MusicEditor.AddedSound" = "الصوت المضاف";
+
+/* Audio duration title */
+"MusicEditor.Duration" = "المدة الزمنية";
+
+/* Confirmation message for discarding changes */
+"com.banuba.musicEditor.mainScreen.resetAll.title" = "إلغاء التغييرات؟";
+"com.banuba.musicEditor.mainScreen.resetAll.message" = "";
+
+/* Error message when a user tries to add tracks with reached limit */
+"MusicEditor.Max available tracks - %i" = "الحد الأقصى للمسارات المتاحة - %i";
+
+/* Elf filter title */
+"com.banuba.musicEditor.elf" = "إلف";
+/* Baritone filter title */
+"com.banuba.musicEditor.baritone" = "باريتون";
+/* Echo filter title */
+"com.banuba.musicEditor.echo" = "صدى";
+/* Giant filter title */
+"com.banuba.musicEditor.giant" = "عملاق";
+/* Robot filter title */
+"com.banuba.musicEditor.robot" = "روبوت";
+/* Squirrel filter title */
+"com.banuba.musicEditor.squirrel" = "سنجاب";
+
+// MARK: - Overlay Editor
+
+/* Delete overlay item button title */
+"OverlayEditor.Delete" = "حذف";
+
+/* Edit overlay item button title */
+"OverlayEditor.Edit" = "تعديل";
+
+/* Style overlay item button title */
+"OverlayEditor.Style" = "النمط";
+
+/* Add text button title */
+"OverlayEditor.Text" = "نص";
+
+/* Add captions button title */
+"OverlayEditor.Captions" = "التعليقات";
+
+/* Add sticker button title */
+"OverlayEditor.Sticker" = "ملصق";
+
+/* Add square blur button title */
+"OverlayEditor.Square.Blur" = "مربع";
+
+/* Add circle Blur button title */
+"OverlayEditor.Circle.Blur" = "دائرة";
+
+/* Cancel button title */
+"OverlayEditor.Cancel" = "إلغاء";
+
+/* Confirmation message for discarding changes */
+"com.banuba.overlayEditor.mainScreen.resetAll.title" = "إلغاء التغييرات؟";
+"com.banuba.overlayEditor.mainScreen.resetAll.message" = "";
+"com.banuba.overlayEditor.mainScreen.resetAll.agree" = "إلغاء";
+"com.banuba.overlayEditor.mainScreen.resetAll.disagree" = "إلغاء الأمر";
+
+"com.banuba.overlayEditor.captions.creationCaptions" = "إنشاء تعليقات تلقائية";
+"com.banuba.overlayEditor.captions.noSpeechRecognized" = "لم يتم التعرف على الكلام";
+"com.banuba.overlayEditor.captions.noInternetConnectionTitle" = "لا يوجد اتصال بالإنترنت";
+"com.banuba.overlayEditor.captions.noInternetConnectionMessage" = "تحقق من الاتصال وحاول مرة أخرى.";
+"com.banuba.overlayEditor.captions.tryAgain" = "حاول مرة أخرى";
+"com.banuba.overlayEditor.captions.noInternetConnectionToast" = "يبدو أن الاتصال بالإنترنت غير متصل.";
+"com.banuba.captions.noAvailableForMiltipleVideosAndPhotoError" = "غير متوفر للفيديوهات والصور المتعددة.";
+
+"com.banuba.overlayEditor.captions.textStyle.basic" = "أساسي";
+"com.banuba.overlayEditor.captions.textStyle.multicolor" = "متعدد الألوان";
+"com.banuba.overlayEditor.captions.textStyle.gradient" = "متدرج";
+
+"com.banuba.overlayEditor.captions.createNewCaptionsQuestion" = "هل ترغب في إنشاء تعليقات جديدة؟";
+"com.banuba.overlayEditor.captions.createNewCaptionsQuestionDetails" = "سيتم حذف التعليقات السابقة.";
+"com.banuba.overlayEditor.captions.create" = "إنشاء";
+"com.banuba.overlayEditor.captions.captionsEditing" = "تحرير التعليقات";
+
+"com.banuba.overlayEditor.captions.discardCaptionsTitle" = "هل تريد حذف الترجمة؟";
+"com.banuba.overlayEditor.captions.discard" = "حذف";
+"com.banuba.overlayEditor.captions.delete" = "حذف";
+"com.banuba.overlayEditor.captions.keep" = "احتفظ";
+"com.banuba.overlayEditor.captions.deleteCaptionsTitle" = "حذف الترجمة؟";
+"com.banuba.overlayEditor.captions.deleteSelectedCaption" = "حذف المحدد";
+"com.banuba.overlayEditor.captions.deleteAllCaptions" = "حذف الكل";
+
+"com.banuba.overlayEditor.captions.selectLanguage" = "اختر اللغة";
+"com.banuba.overlayEditor.captions.language.english" = "الإنجليزية";
+"com.banuba.overlayEditor.captions.language.mandarin" = "الصينية";
+"com.banuba.overlayEditor.captions.language.portuguese" = "البرتغالية";
+"com.banuba.overlayEditor.captions.language.spanish" = "الإسبانية";
+
+// MARK: - AudioBrowser
+
+/* No internet connection title in alert */
+"AudioBrowser.noInternetConnection" = "لا يوجد اتصال بالإنترنت";
+
+/* Message for user if No internet connection */
+"AudioBrowser.checkConnectionMessage" = "يرجى التحقق من اتصالك وحاول مرة أخرى";
+
+/* Retry button title */
+"AudioBrowser.retry" = "حاول مرة أخرى";
+
+/* Allow access message */
+"AudioBrowser.allowAccessMessage" = "لاستخدام موسيقك الخاصة، يرجى السماح بالوصول إلى مكتبة Apple Music.";
+
+/* Allow button title */
+"AudioBrowser.allowAccess" = "السماح بالوصول";
+
+/* My files button title */
+"AudioBrowser.myFiles" = "ملفاتي";
+
+"audioBrowser.search.by.categories" = "البحث حسب الفئات";
+"audioBrowser.search.by.groups" = "البحث حسب المجموعات";
+"audioBrowser.search.by.tracks" = "البحث حسب المسارات";
+"audioBrowser.use" = "استخدام";
+"audioBrowser.show.more" = "عرض المزيد";
+"audioBrowser.stop.using" = "إيقاف الاستخدام";
+"audioBrowser.my.library" = "مكتبتي";
+"audioBrowser.no.matches" = "لا توجد تطابقات";
+"audioBrowser.no.tracks" = "لا توجد مسارات";
+/* Track format for displaying mubert track title*/
+"audioBrowser.mubertTrackFormat" = "المسار %d";
+
+/* Wrong Mubert key error text */
+"audioBrowser.wrongPatError" = "رخصة Mubert مفقودة. يرجى الاتصال بـ Mubert";
+
+"feature.disabled.audiobrowser" = "متصفح الموسيقى الافتراضي غير مدرج في حزمة اشتراكك. يمكنك توصيل موسيقاك الخاصة.";
+
+// MARK: - MusicLibrary
+
+"MusicLibrary.homeScreenTitle" = "الموسيقى";
+"MusicLibrary.featured" = "مميز";
+"MusicLibrary.favorites" = "المفضلات";
+"MusicLibrary.recents" = "الأحدث";
+"MusicLibrary.collections" = "المجموعات";
+"MusicLibrary.genres" = "الأنواع";
+"MusicLibrary.viewAll" = "عرض الكل";
+"MusicLibrary.showMore" = "عرض المزيد";
+"MusicLibrary.tryAgain" = "حاول مرة أخرى";
+"MusicLibrary.tryAgainLaterTitle" = "يرجى المحاولة لاحقاً";
+"MusicLibrary.allTracks" = "جميع المسارات";
+"MusicLibrary.popular" = "شائع";
+"MusicLibrary.noInternetTitle" = "لا يوجد اتصال بالإنترنت";
+"MusicLibrary.noInternetMessage" = "تحقق من اتصالك أو حاول مرة أخرى.";
+"MusicLibrary.noContentMessage" = "آسف، المحتوى الصوتي غير متاح مؤقتاً";
+"MusicLibrary.noFavoritesTitle" = "لا توجد مفضلات بعد";
+"MusicLibrary.noFavoritesMessage" = "قم بوضع علامات على أغانيك المفضلة واحتفظ بها هنا دائماً.";
+"MusicLibrary.noRecentsTitle" = "لا توجد أصوات حديثة";
+"MusicLibrary.noRecentsMessage" = "الأصوات التي استخدمتها في مقاطع الفيديو الخاصة بك ستظهر هنا.";
+"MusicLibrary.noMatchesMessage" = "لا توجد تطابقات";
+"MusicLibrary.searchBarPlaceholder" = "البحث باسم الأغاني";
+"MusicLibrary.searchBarCancelButtonTitle" = "إلغاء";
+
+// MARK: - Soundstripe
+
+"Soundstripe.playlists" = "قوائم التشغيل";
+"Soundstripe.categories" = "الفئات";
+"Soundstripe.trendingSongs" = "الأغاني الرائجة";
+"Soundstripe.moods" = "الأجواء";
+"Soundstripe.styles" = "الأنماط";
+"Soundstripe.instruments" = "الآلات";
+"Soundstripe.searchBarPlaceholder" = "بحث";
+"Soundstripe.homeScreenTitle" = "الموسيقى";
+"Soundstripe.genres" = "الأنواع";
+"Soundstripe.viewAll" = "عرض الكل";
+"Soundstripe.noContentMessage" = "آسف، المحتوى الصوتي غير متاح مؤقتاً";
+"Soundstripe.showMore" = "عرض المزيد";
+"Soundstripe.searchBarCancelButtonTitle" = "إلغاء";
+
+// MARK: - Hands-free
+"hands.free.video.drag.title" = "اسحب لتعيين مدة الفيديو";
+"hands.free.btn.title" = "بدء العد التنازلي";
+"hands.free.seconds" = "%@ ثوانٍ";
+
+// MARK: - Video Editor
+
+/* Gallery all tab title */
+"BanubaVideoEditor.Gallery.AllTabTitle" = "الكل";
+
+/* Gallery image tab title */
+"BanubaVideoEditor.Gallery.ImageTabTitle" = "الصور";
+
+/* Gallery video tab title */
+"BanubaVideoEditor.Gallery.VideoTabTitle" = "الفيديوهات";
+
+/* Gallery preview select button name*/
+"BanubaVideoEditor.Gallery.SelectItemName" = "تحديد";
+
+/* Gallery preview deselect button name*/
+"BanubaVideoEditor.Gallery.DeselectItemName" = "إلغاء التحديد";
+
+/* Gallery header info title */
+"BanubaVideoEditor.Gallery.HeaderInfoTitle" = "تحديث الملفات %@ لاختيار المزيد من الملفات";
+"BanubaVideoEditor.Gallery.HeaderInfoColoredTitle" = "الإعدادات";
+
+/* Gallery Recent Photos title */
+"BanubaVideoEditor.Gallery.RecentPhotosTitle" = "الأحدث";
+
+/* Damaged file from gallery */
+"BanubaVideoEditor.Gallery.DamagedFile" = "ملف تالف";
+
+/* Export video from gallery failed */
+"BanubaVideoEditor.Gallery.ExportVideoFailed" = "فشل تحميل المحتوى";
+
+/* Gallery selection hint */
+"BanubaVideoEditor.Gallery.SelectItems" = "تحديد العناصر";
+
+/* Import single video template */
+"BanubaVideoEditor.Gallery.ImportSingleVideo" = "استيراد فيديو واحد";
+
+/* Import multiple videos template */
+"BanubaVideoEditor.Gallery.ImportMultipleVideos" = "استيراد %d فيديوهات";
+
+/* Import multiple videos template */
+"BanubaVideoEditor.Gallery.ImportMultipleVideosAndPhotos" = "استيراد %d فيديوهات وصور";
+
+/* Import single image template */
+"BanubaVideoEditor.Gallery.ImportSingleImage" = "استيراد صورة واحدة";
+
+/* Import multiple images template */
+"BanubaVideoEditor.Gallery.ImportMultipleImages" = "استيراد %d صور";
+
+/* Gallery empty selection message */
+"BanubaVideoEditor.Gallery.EmptySelectionMessage" = "حدد على الأقل ملفاً واحداً";
+
+// MARK: - Effect additional media picker text resource
+
+/* No media files found in gallery for adding to the effect */
+"com.banuba.videoEditor.recorder.additionalEffects.NoMediaFound" = "لا توجد وسائط";
+
+/* No media files found in gallery for adding to the effect */
+"com.banuba.videoEditor.recorder.additionalEffects.AllowAccess" = "السماح بالوصول";
+
+/* Helpers info message for changing video background */
+"com.banuba.videoEditor.recorder.additionalEffects.selectMediaToChangeBackgroundMessage" = "حدد وسائط لتغيير الخلفية";
+
+/* Helpers info message for providing access to a user gallery */
+"com.banuba.videoEditor.recorder.additionalEffects.allowAccesToChangeBackgroundMessage" = "السماح بالوصول إلى المعرض لتغيير الخلفية";
+
+// MARK: - Cover
+"cover.thumbnail.title" = "اختر صورة مصغرة";
+"cover.gallery.button.title" = "اختر من المعرض";
+
+// MARK: - PIP
+
+"pip.switch.camera.title" = "تبديل";
+"pip.square.camera.title" = "مربع";
+"pip.round.camera.title" = "مدور";
+"pip.floating.camera.title" = "معلق";
+"pip.react.camera.title" = "تفاعل";
+"pip.original.camera.title" = "أصلي";
+"pip.centered.camera.title" = "مركزي";
+"pip.left.right.camera.title" = "عمودي";
+"pip.top.bottom.camera.title" = "أفقي";
+"pip.layout.settings.title" = "اختيار إعدادات التخطيط";
+
+"feature.disabled.pip" = "خاصية الصورة في الصورة غير مدرجة في حزمة اشتراكك. اتصل بمدير الحساب للحصول عليها.";
+
+// MARK: - Drafts
+/* Drafts button title */
+"BanubaVideoEditor.Gallery.DraftsTitle" = "مسودات";
+/* Draft actions subtitle */
+"BanubaVideoEditor.Gallery.DraftTitle" = "مسودة";
+/* Draft edit action name */
+"BanubaVideoEditor.Gallery.DraftEditActionName" = "تعديل";
+/* Draft remove action name */
+"BanubaVideoEditor.Gallery.DraftRemoveActionName" = "حذف";
+
+/* Used in alert with Yes and No options when resetting current sequence */
+"com.banuba.BanubaVideoEditor.draft.question.title" = "هل تريد حفظ المسودة؟";
+"com.banuba.BanubaVideoEditor.draft.question.message" = "";
+"com.banuba.BanubaVideoEditor.draft.question.agree" = "حفظ";
+"com.banuba.BanubaVideoEditor.draft.question.disagree" = "إلغاء";
+
+/* Displayed when current sequence saved to drafts */
+"BanubaVideoEditor.Draft.DraftSavedMessage" = "تم حفظ المسودة";
+/* Displays message about no saved drafts */
+"BanubaVideoEditor.Draft.EmptyDraftsMessage" = "لا توجد مسودات";
+/* Ask a user about completion removing a draft */
+"com.banuba.BanubaVideoEditor.draft.remove.title" = "هل تريد حذف المسودة؟";
+"com.banuba.BanubaVideoEditor.draft.remove.message" = "";
+"com.banuba.BanubaVideoEditor.draft.remove.agree" = "حذف";
+"com.banuba.BanubaVideoEditor.draft.remove.disagree" = "إلغاء";
+
+/* Ask a user about completion updating a draft */
+"com.banuba.BanubaVideoEditor.draft.update.title" = "هل تريد تحديث المسودة؟";
+"com.banuba.BanubaVideoEditor.draft.update.message" = "";
+"com.banuba.BanubaVideoEditor.draft.update.agree" = "تحديث";
+"com.banuba.BanubaVideoEditor.draft.update.disagree" = "إلغاء";
+"com.banuba.BanubaVideoEditor.draft.lose.message" = "ملاحظة! ستفقد إعدادات التحرير الحالية. متابعة؟";
+"com.banuba.BanubaVideoEditor.draft.lose.agree" ="تعديل المقطع";
+
+/* Editor, back button menu. Edit draft mode */
+"com.banuba.BanubaVideoEditor.draft.discardChangesAction" = "إلغاء التعديلات";
+"com.banuba.BanubaVideoEditor.draft.updateAction" = "تحديث المسودة";
+
+// MARK: - Additional buttons
+"com.banuba.recorder.color.title" = "فلاتر";
+"com.banuba.recorder.sticker.title" = "ملصقات";
+"com.banuba.recorder.blur.title" = "تعتيم";
+"com.banuba.recorder.text.title" = "نص";
+"com.banuba.recorder.time.title" = "الوقت";
+"com.banuba.recorder.sound.title" = "إضافة صوت";
+"com.banuba.recorder.effects.title" = "تأثيرات";
+"com.banuba.recorder.toggle.title" = "قلب";
+"com.banuba.recorder.flashlight.title" = "فلاش";
+"com.banuba.recorder.timer.title" = "مؤقت";
+"com.banuba.recorder.speed.title" = "سرعة";
+"com.banuba.recorder.beauty.title" = "جمال";
+"com.banuba.recorder.masks.title" = "أقنعة";
+"com.banuba.recorder.muteSound.title" = "ميكروفون";
+"com.banuba.recorder.pip.title" = "PiP";
+"com.banuba.editor.music" = "موسيقى";
+"com.banuba.editor.time.title" = "الوقت";
+"com.banuba.editor.autoCut" = "قص تلقائي";
+
+/* Gallery button title */
+"com.banuba.recorder.gallery.title" = "المعرض";
+
+/* Recorder video duration */
+"com.banuba.recorder.secondsFormat" = "%d ثوانٍ";
+"com.banuba.recorder.minutesFormat" = "%d دقائق";
+
+/* Aspect title for cells*/
+"com.banuba.videoEditor.aspect.original" = "أصلي";
+"com.banuba.videoEditor.aspect.16:9" = "16:9";
+"com.banuba.videoEditor.aspect.9:16" = "9:16";
+"com.banuba.videoEditor.aspect.4:3" = "4:3";
+"com.banuba.videoEditor.aspect.4:5" = "4:5";
+
+/* Transitions title for cells*/
+"com.banuba.videoEditor.transition.none" = "بدون";
+"com.banuba.videoEditor.transition.whipDown" = "تدوير لأسفل";
+"com.banuba.videoEditor.transition.whipUp" = "تدوير لأعلى";
+"com.banuba.videoEditor.transition.whipRight" = "تدوير لليمين";
+"com.banuba.videoEditor.transition.whipLeft" = "تدوير لليسار";
+"com.banuba.videoEditor.transition.scrollDown" = "تمرير لأسفل";
+"com.banuba.videoEditor.transition.scrollUp" = "تمرير لأعلى";
+"com.banuba.videoEditor.transition.scrollRight" = "تمرير لليمين";
+"com.banuba.videoEditor.transition.scrollLeft" = "تمرير لليسار";
+"com.banuba.videoEditor.transition.spinRight" = "دوران";
+"com.banuba.videoEditor.transition.fade" = "تلاشي";
+
+/* Transition disabled alert message */
+"com.banuba.videoEditor.transition.disabledToastMessage" = "يجب أن يكون المقطع أطول من 0.5 ثانية لتطبيق الانتقال.";
+
+/* Text editor font names */
+"com.banuba.textEditor.fontName.baskerville" = "باسكرفيل";
+"com.banuba.textEditor.fontName.courier" = "كوريير";
+"com.banuba.textEditor.fontName.palatino" = "بالاتينو";
+"com.banuba.textEditor.fontName.noteworthy" = "نوت وورثي";
+"com.banuba.textEditor.fontName.papyrus" = "بابيروس";
+"com.banuba.textEditor.fontName.sinhala" = "سينهالا";
+"com.banuba.textEditor.fontName.menlo" = "مينلو";
+"com.banuba.textEditor.fontName.emoji" = "رموز تعبيرية";
+
+// MARK: - Alert
+
+/* Titles for alert buttons */
+
+/* discard all alert type for record screen */
+"com.banuba.alert.discardAllRecord.additionalButtonTitle" = "ابدأ من جديد";
+"com.banuba.alert.discardAllRecord.agreeButtonTitle" = "إعادة تعيين";
+"com.banuba.alert.discardAllRecord.disagreeButtonTitle" = "إلغاء";
+/* discard all alert type for editor screen */
+"com.banuba.alert.discardAllEditor.agreeButtonTitle" = "إعادة تعيين";
+"com.banuba.alert.discardAllEditor.disagreeButtonTitle" = "إلغاء";
+/* not finished video alert type */
+"com.banuba.alert.notFinishedVideo.agreeButtonTitle" = "متابعة";
+"com.banuba.alert.notFinishedVideo.disagreeButtonTitle" = "إلغاء";
+/* discard changes alert type */
+"com.banuba.alert.discardChanges.agreeButtonTitle" = "إعادة تعيين";
+"com.banuba.alert.discardChanges.disagreeButtonTitle" = "إلغاء";
+/* delete segment alert type */
+"com.banuba.alert.deleteSegment.agreeButtonTitle" = "حذف";
+"com.banuba.alert.deleteSegment.disagreeButtonTitle" = "إلغاء";
+/* discard effects alert type */
+"com.banuba.alert.discardEffects.agreeButtonTitle" = "تجاهل";
+"com.banuba.alert.discardEffects.disagreeButtonTitle" = "إلغاء";
+/* discard music alert type */
+"com.banuba.alert.discardMusic.agreeButtonTitle" = "تجاهل";
+"com.banuba.alert.discardMusic.disagreeButtonTitle" = "إلغاء";
+/* progress view alert type */
+"com.banuba.alert.progressView.agreeButtonTitle" = "إعادة المحاولة";
+"com.banuba.alert.progressView.disagreeButtonTitle" = "إلغاء";
+"com.banuba.alert.progressView.importingMedia" = "استيراد الوسائط";
+"com.banuba.alert.progressView.exportingVideo" = "تصدير الفيديو";
+"com.banuba.alert.progressView.tooltipMessage" = "يرجى عدم قفل الشاشة أو التبديل إلى تطبيقات أخرى";
+"com.banuba.alert.progressView.exportVideoInterrupted" = "تصدير مقطوع";
+
+/* remove and start over record video */
+"com.banuba.trim.startOverRecordVideoTitle" = "هل تريد تسجيل فيديو جديد؟";
+"com.banuba.trim.startOverRecordVideoMessage" = "";
+"com.banuba.trim.startOverRecordVideoAgreeButtonTitle" = "ابدأ من جديد";
+"com.banuba.trim.startOverRecordVideoDisagreeButtonTitle" = "تجاهل";
+
+// MARK: - Trim
+/* Edit video rotate button title */
+"com.banuba.trim.rotateEditButtonTitle" = "تدوير";
+/* Edit video split button title */
+"com.banuba.trim.splitEditButtonTitle" = "تقسيم";
+/* Edit video crop button title */
+"com.banuba.trim.cropEditButtonTitle" = "قص";
+/* Edit video delete button title */
+"com.banuba.trim.deleteEditButtonTitle" = "حذف";
+/* Edit video trim button title */
+"com.banuba.trim.trimEditButtonTitle" = "تقليم";
+/* Reordering video tool tip label message */
+"com.banuba.trim.reorderingToolTip" = "اسحب لتبديل";
+/* Delete single video error message */
+"com.banuba.trim.deleteLastClipErrorMessage" = "لا يمكن حذف آخر مقطع";
+/* Split video part error message */
+"com.banuba.trim.splitErrorMessage" = "الموضع المحدد غير صالح";
+
+// MARK: - Capture button modes
+"com.banuba.record.captureButtonVideoMode" = "فيديو";
+"com.banuba.record.captureButtonPhotoMode" = "صورة";
+"com.banuba.record.beautyIntensityTitle" = "شدة";
+
+/* Sharing other button */
+"sharing.other.title" = "أخرى";
+
+/* Sharing video main title */
+"sharing.video.title" = "مشاركة الفيديو";
+
+/* Error if sharing application is not installed */
+"sharing.app.not.installed" = "عذراً، التطبيق غير مثبت";
+
+// MARK: - Expired license screen
+"com.banuba.expiredLicense.infoLabel" = "إنشاء محتوى الفيديو غير متاح مؤقتاً";
+"com.banuba.expiredLicense.cancelButtonTitle" = "إغلاق";
+
+// MARK: - New Video Editor
+"com.banuba.newEditor.canvas" = "لوحة";
+"com.banuba.newEditor.sticker" = "ملصق";
+"com.banuba.newEditor.text" = "نص";
+"com.banuba.newEditor.effects" = "تأثيرات";
+"com.banuba.newEditor.masks" = "أقنعة";
+"com.banuba.newEditor.audio" = "صوت";
+"com.banuba.newEditor.filters" = "فلاتر";
+"com.banuba.newEditor.blur" = "تعتيم";
+"com.banuba.newEditor.speed" = "سرعة";
+"com.banuba.newEditor.split" = "تقسيم";
+"com.banuba.newEditor.add" = "إضافة";
+"com.banuba.newEditor.edit" = "تعديل";
+"com.banuba.newEditor.replace" = "استبدال";
+"com.banuba.newEditor.delete" = "حذف";
+"com.banuba.newEditor.adjust" = "تعديل";
+"com.banuba.newEditor.circle" = "دائرة";
+"com.banuba.newEditor.square" = "مربع";
+"com.banuba.newEditor.voiceEffect" = "تأثير";
+"com.banuba.newEditor.captions" = "تسميات";
+"com.banuba.newEditor.record" = "تسجيل";
+"com.banuba.newEditor.secondsFormat" = "%@ثوانٍ";
+"com.banuba.newEditor.musicVolume" = "حجم الصوت";
+"com.banuba.newEditor.recordingEffectTitle" = "جاري التسجيل...";
+"com.banuba.newEditor.voiceoverEffectTitle" = "التعليق الصوتي";
+"com.banuba.newEditor.unavailableAtCurrentPosition" = "غير متاح في الموضع الحالي.";
+"com.banuba.newEditor.addAudioButtonTitle" = "إضافة صوت";
+"com.banuba.newEditor.theSelectedPositionIsInvalid" = "الموضع المحدد غير صالح.";
+"com.banuba.newEditor.addVoiceover" = "تعليق صوتي";
+"com.banuba.newEditor.addText" = "إضافة نص";
+"com.banuba.newEditor.addCaptions" = "إضافة تسميات";
+"com.banuba.newEditor.applyToAll" = "تطبيق على الكل";
+"com.banuba.newEditor.videoIsTooLongFormat" = "الفيديو طويل جداً. الحد الأقصى للطول هو %d دقيقة.";
+"com.banuba.newEditor.videoIsTooShortFormat" = "الفيديو قصير جداً. الحد الأدنى للطول هو %d ثانية.";
+"com.banuba.newEditor.next" = "التالي";
+"com.banuba.newEditor.videoSaved" = "تم حفظ الفيديو.";
+"com.banuba.newEditor.none" = "لا شيء";
+"com.banuba.newEditor.normal" = "عادي";
+
+"com.banuba.newEditor.videoVolumeTitle" = "فيديو";
+"com.banuba.newEditor.audioVolumeTitle" = "صوت";
+
+"com.banuba.newEditor.editCover" = "تعديل الغلاف";
+
+"com.banuba.recorder.disardVideoAlertMessage" = "حذف الفيديو؟";
+"com.banuba.recorder.disardVideoAlertDiscardButton" = "حذف";
+
+// MARK: - Auto Cut
+"com.banuba.autocut.choosePart" = "اختر الجزء الذي تريده في الفيديو";
+"com.banuba.autocut.changesWillNotBeSaved" = "لن يتم حفظ التغييرات السابقة";
+"com.banuba.autocut.processingMedia" = "معالجة الوسائط %d%%";
+"com.banuba.autocut.tryAgain" = "حاول مرة أخرى";
+"com.banuba.autocut.couldNotProcess" = "لم يتمكن من معالجة الفيديو";
+"com.banuba.autocut.somethingWentWrong" = "حدث خطأ. يرجى المحاولة مرة أخرى.";
+"com.banuba.autocut.chooseTheme" = "اختر موضوعاً";
+"com.banuba.autocut.alert.tryAgain.agree" = "حاول مرة أخرى";
+"com.banuba.autocut.alert.tryAgain.disagree" = "إلغاء";
+"com.banuba.autocut.alert.tryAgain.title" = "حدث خطأ.\nهل تريد المحاولة مرة أخرى؟";
+"com.banuba.autocut.alert.discard.agree" = "تجاهل";
+"com.banuba.autocut.alert.discard.disagree" = "إلغاء";
+"com.banuba.autocut.alert.discard.title" = "تجاهل فيديو AutoCut؟";
+"com.banuba.autocut.recommended.sounds" = "الأصوات الموصى بها";
+"com.banuba.autocut.original.sound" = "الصوت الأصلي";
+"com.banuba.autocut.added.sound" = "الصوت المضاف";
+"com.banuba.autocut.error.title" = "حدث خطأ";
+"com.banuba.autocut.error.message" = "تحقق من اتصالك بالإنترنت أو حاول مرة أخرى لاحقاً";
+"com.banuba.autocut.error.loadingTrackFailedMessage" = "غير قادر على تحميل الأغنية. تحقق من اتصالك بالإنترنت.";
+"com.banuba.autocut.try.again.title" = "حاول مرة أخرى";
+"BanubaVideoEditor.Gallery.Autocut" = "قص تلقائي";
+"BanubaVideoEditor.Gallery.Next" = "التالي";
+"BanubaVideoEditor.Gallery.NextWithCount" = "التالي (%d)";
+"BanubaVideoEditor.Gallery.TotalLengthUpTo" = "يجب أن يكون الطول الإجمالي حتى %d ثوانٍ";
+
+// MARK: - Music panel
+"com.banuba.music.panel.title" = "إضافة صوت";
+
+// MARK: - Photo Editor
+"photoEditor.gallery.addPhotos" = "إضافة صور";
+"photoEditor.gallery.noPhotos" = "لم يتم العثور على صور";
+"photoEditor.gallery.openSettings" = "فتح الإعدادات";
+"photoEditor.gallery.allowAccessToContinue" = "السماح بالوصول إلى “جميع الصور” في الإعدادات للمتابعة";
+"photoEditor.gallery.noAccessToPhotos" = "لا يوجد وصول إلى الصور";
+
+"photoEditor.editor.adjust" = "تعديل";
+"photoEditor.editor.retouch" = "إعادة لمسة";
+"photoEditor.editor.makeup" = "ماكياج";
+"photoEditor.editor.effects" = "تأثيرات";
+"photoEditor.editor.text" = "نص";
+"photoEditor.editor.faceNotRecognizedHint" = "لم يتم التعرف على الوجه، لذا فإن هذه الأداة غير متاحة";
+"photoEditor.editor.reset" = "إعادة تعيين";
+"photoEditor.editor.default" = "افتراضي";
+"photoEditor.editor.slider.noFilter" = "بدون فلتر";
+"photoEditor.editor.slider.natural" = "طبيعي";
+"photoEditor.editor.slider.delicate" = "ناعم";
+"photoEditor.editor.slider.supreme" = "رائع";
+"photoEditor.editor.done" = "تم";
+"photoEditor.editor.save" = "حفظ";
+"photoEditor.editor.acneHint" = "اضغط على البقع";
+"photoEditor.editor.eyebagsHint" = "اسحب لإزالة أكياس العين";
+"photoEditor.editor.makeupTab.looks" = "إطلالات";
+"photoEditor.editor.makeupTab.haircolors" = "شعر";
+"photoEditor.editor.makeupTab.lips" = "شفاه";
+"photoEditor.editor.makeupTab.eyes" = "عيون";
+"photoEditor.editor.makeupTab.foundation" = "أساس";
+"photoEditor.editor.makeupTab.lashes" = "رموش";
+"photoEditor.editor.makeupTab.blush" = "أحمر خدود";
+"photoEditor.editor.effectsTab.backdrop" = "خلفية";
+"photoEditor.editor.effectsTab.filters" = "فلاتر";
+"photoEditor.editor.effectsTab.overlays" = "تراكب";
+"photoEditor.editor.alert.resetAll" = "إعادة تعيين الكل؟";
+"photoEditor.editor.alert.reset" = "إعادة تعيين";
+"photoEditor.editor.alert.cancel" = "إلغاء";
+"photoEditor.preview.saved" = "تم الحفظ!";
+"photoEditor.preview.more" = "المزيد";
+"photoEditor.preview.stories" = "قصص";
+
+"photoEditor.editor.content.makeup.Aster" = "أستر";
+"photoEditor.editor.content.makeup.Begonia" = "بغونية";
+"photoEditor.editor.content.makeup.Jasmine" = "ياسمين";
+"photoEditor.editor.content.makeup.Carnation" = "قرنفل";
+"photoEditor.editor.content.makeup.Daisy" = "أقحوان";
+"photoEditor.editor.content.makeup.Freesia" = "فريزيا";
+"photoEditor.editor.content.makeup.Iris" = "أيريس";
+"photoEditor.editor.content.makeup.Tulip" = "زنبق";
+"photoEditor.editor.content.makeup.Sunset" = "غروب الشمس";
+"photoEditor.editor.content.makeup.Smoky" = "دخاني";
+"photoEditor.editor.content.makeup.Femme" = "أنثوي";
+"photoEditor.editor.content.makeup.Romp" = "رومب";
+"photoEditor.editor.content.makeup.Hush" = "همس";
+"photoEditor.editor.content.makeup.Brun" = "برون";
+"photoEditor.editor.content.makeup.Icon" = "رمز";
+"photoEditor.editor.content.makeup.Crocus" = "زعفران";
+"photoEditor.editor.content.makeup.Malt" = "مالت";
+"photoEditor.editor.content.makeup.Kid" = "طفولي";
+"photoEditor.editor.content.makeup.Bluebell" = "زهر الازرق";
+"photoEditor.editor.content.makeup.Foxy" = "ماكر";
+"photoEditor.editor.content.makeup.Swan" = "بجعة";
+"photoEditor.editor.content.makeup.Dreamy" = "حالم";
+"photoEditor.editor.content.makeup.Galaxy" = "مجرة";
+"photoEditor.editor.content.makeup.Elf" = "جني";
+"photoEditor.editor.content.makeup.Gloom" = "كآبة";
+"photoEditor.editor.content.makeup.Elegant" = "أنيق";
+"photoEditor.editor.content.makeup.Feast" = "وليمة";
+"photoEditor.editor.content.makeup.40s" = "أربعينات";
+"photoEditor.editor.content.makeup.Coral" = "مرجاني";
+"photoEditor.editor.content.makeup.Mermaid" = "حورية البحر";
+"photoEditor.editor.content.makeup.Fresh" = "طازج";
+"photoEditor.editor.content.makeup.Cleo" = "كليو";
+"photoEditor.editor.content.makeup.Dusk" = "غسق";
+"photoEditor.editor.content.makeup.Stylish" = "أنيق";
+"photoEditor.editor.content.makeup.Lotus" = "لوتس";
+"photoEditor.editor.content.makeup.Hippie" = "هيبي";
+"photoEditor.editor.content.makeup.Glitz" = "بريق";
+"photoEditor.editor.content.makeup.Flash" = "وميض";
+"photoEditor.editor.content.makeup.Karma" = "كارما";
+"photoEditor.editor.content.makeup.Fairy" = "جنية";
+"photoEditor.editor.content.makeup.Holy" = "مقدس";
+"photoEditor.editor.content.makeup.Flirty" = "غزلي";
+"photoEditor.editor.content.makeup.Twilight" = "غسق";
+"photoEditor.editor.content.makeup.Sugar" = "سكر";
+"photoEditor.editor.content.makeup.Misty" = "ضبابي";
+"photoEditor.editor.content.makeup.Bounty" = "غنيمة";
+"photoEditor.editor.content.makeup.Peachy" = "خوخي";
+"photoEditor.editor.content.makeup.Crystal" = "كريستال";
+"photoEditor.editor.content.makeup.Queen" = "ملكة";
+"photoEditor.editor.content.makeup.Cutie" = "عسلي";
+"photoEditor.editor.content.makeup.Hearts" = "قلوب";
+"photoEditor.editor.content.makeup.Lovebug" = "حشرة الحب";
+"photoEditor.editor.content.makeup.Glossy" = "لامع";
+"photoEditor.editor.content.makeup.Romance" = "رومانسية";
+"photoEditor.editor.content.makeup.Bemine" = "كن لي";
+"photoEditor.editor.content.makeup.Candy" = "حلوى";
+"photoEditor.editor.content.makeup.Xmas" = "عيد الميلاد";
+"photoEditor.editor.content.makeup.Snowy" = "ثلجي";
+"photoEditor.editor.content.makeup.Club" = "نادي";
+"photoEditor.editor.content.makeup.Dewy" = "ندي";
+"photoEditor.editor.content.makeup.Drama" = "درامي";
+"photoEditor.editor.content.makeup.Swish" = "سووش";
+
+"photoEditor.editor.feature.main" = "تلقائي";
+"photoEditor.editor.feature.morph_cheeks_str" = "شكل";
+"photoEditor.editor.feature.morph_eyes_str" = "عيون";
+"photoEditor.editor.feature.morph_nose_str" = "أنف";
+"photoEditor.editor.feature.skin_soft_str" = "ناعم";
+"photoEditor.editor.feature.softlight_alpha" = "مشرق";
+"photoEditor.editor.feature.teeth_whitening_str" = "تبييض الأسنان";
+"photoEditor.editor.feature.reset_button" = "إعادة تعيين";
+"photoEditor.editor.feature.acne_str" = "علاج";
+"photoEditor.editor.feature.eyebags_str" = "أكياس العين";
+"photoEditor.editor.feature.necklift_str" = "شد الرقبة";
+"photoEditor.editor.feature.lipsize_str" = "حجم الشفاه";
+"photoEditor.editor.feature.eyes_whitening" = "تبييض";
+"photoEditor.editor.feature.saturation" = "تشبع";
+"photoEditor.editor.feature.brightness" = "سطوع";
+"photoEditor.editor.feature.sharpen" = "حدة";
+"photoEditor.editor.feature.noise" = "ضوضاء";
+"photoEditor.editor.feature.contrast" = "تباين";
+
+"photoEditor.editor.content.hairColor.Brown" = "بني";
+"photoEditor.editor.content.hairColor.Pink" = "وردي";
+"photoEditor.editor.content.hairColor.Violet" = "بنفسجي";
+"photoEditor.editor.content.hairColor.Silver" = "فضي";
+"photoEditor.editor.content.hairColor.Blonde" = "أشقر";
+"photoEditor.editor.content.hairColor.Brunette" = "بني داكن";
+"photoEditor.editor.content.hairColor.Bisque" = "بيج";
+"photoEditor.editor.content.hairColor.Bambu" = "بامبو";
+"photoEditor.editor.content.hairColor.Daino" = "دينيو";
+"photoEditor.editor.content.hairColor.Goldenrod" = "ذهبي";
+"photoEditor.editor.content.hairColor.Chocolate" = "شوكولاتة";
+"photoEditor.editor.content.hairColor.Moro" = "مورو";
+"photoEditor.editor.content.hairColor.Sienna" = "سينا";
+"photoEditor.editor.content.hairColor.Copper" = "نحاسي";
+"photoEditor.editor.content.hairColor.Peru" = "بيرو";
+"photoEditor.editor.content.hairColor.Red" = "أحمر";
+"photoEditor.editor.content.hairColor.Blue" = "أزرق";
+"photoEditor.editor.content.hairColor.Green" = "أخضر";
+"photoEditor.editor.content.hairColor.Cobalt" = "كوبالت";
+"photoEditor.editor.content.hairColor.Mint" = "نعناع";
+"photoEditor.editor.content.hairColor.Lavender" = "لافندر";
+"photoEditor.editor.content.hairColor.Ginger" = "زنجبيل";
+"photoEditor.editor.content.hairColor.Rose" = "وردي";
+"photoEditor.editor.content.hairColor.Purple" = "بنفسجي";
+"photoEditor.editor.content.hairColor.Yellow" = "أصفر";
+"photoEditor.editor.content.hairColor.Rufous" = "أحمر مائل للبني";
+"photoEditor.editor.content.hairColor.Avocado" = "أفوكادو";
+"photoEditor.editor.content.hairColor.Guava" = "جوافة";
+"photoEditor.editor.content.hairColor.Fig" = "تين";
+"photoEditor.editor.content.hairColor.Plum" = "برقوق";
+"photoEditor.editor.content.hairColor.Grape" = "عنب";
+"photoEditor.editor.content.hairColor.Eggplant" = "باذنجان";
+"photoEditor.editor.content.hairColor.Cherry" = "كرز";
+"photoEditor.editor.content.hairColor.Kiwi" = "كيوي";
+"photoEditor.editor.content.hairColor.Apple" = "تفاح";
+"photoEditor.editor.content.hairColor.Pitaya" = "فاكهة التنين";
+
+"photoEditor.editor.content.lipsColor.Pink" = "وردي";
+"photoEditor.editor.content.lipsColor.Red" = "أحمر";
+"photoEditor.editor.content.lipsColor.Brown" = "بني";
+"photoEditor.editor.content.lipsColor.Violet" = "بنفسجي";
+"photoEditor.editor.content.lipsColor.Bronze" = "برونز";
+"photoEditor.editor.content.lipsColor.Coral" = "مرجاني";
+"photoEditor.editor.content.lipsColor.CalmPink" = "وردي هادئ";
+"photoEditor.editor.content.lipsColor.Burgundy" = "بورجوندي";
+"photoEditor.editor.content.lipsColor.Glintwein" = "جلينت واين";
+"photoEditor.editor.content.lipsColor.CafeChic" = "كافيه شيك";
+"photoEditor.editor.content.lipsColor.Candy" = "حلوى";
+"photoEditor.editor.content.lipsColor.Lilac" = "ليلك";
+"photoEditor.editor.content.lipsColor.Raspberry" = "توتي";
+"photoEditor.editor.content.lipsColor.syrup" = "شراب";
+"photoEditor.editor.content.lipsColor.diva" = "ديفا";
+"photoEditor.editor.content.lipsColor.nude" = "طبيعي";
+"photoEditor.editor.content.lipsColor.melon" = "بطيخ";
+"photoEditor.editor.content.lipsColor.kiss" = "قبلة";
+"photoEditor.editor.content.lipsColor.retro" = "ريتر";
+"photoEditor.editor.content.lipsColor.taffy" = "تافي";
+"photoEditor.editor.content.lipsColor.brave" = "شجاع";
+"photoEditor.editor.content.lipsColor.heroine" = "بطلة";
+"photoEditor.editor.content.lipsColor.beige" = "بيج";
+"photoEditor.editor.content.lipsColor.night" = "ليلي";
+"photoEditor.editor.content.lipsColor.berry" = "توت";
+"photoEditor.editor.content.lipsColor.unicorn" = "يونيكورن";
+"photoEditor.editor.content.lipsColor.sahara" = "صحراء";
+"photoEditor.editor.content.lipsColor.cherry" = "كرز";
+"photoEditor.editor.content.lipsColor.muse" = "موسى";
+"photoEditor.editor.content.lipsColor.flirt" = "غزلي";
+"photoEditor.editor.content.lipsColor.punch" = "بنش";
+"photoEditor.editor.content.lipsColor.rebel" = "متمرد";
+"photoEditor.editor.content.lipsColor.peach" = "خوخي";
+"photoEditor.editor.content.lipsColor.medusa" = "مدوسا";
+"photoEditor.editor.content.lipsColor.pearl" = "لؤلؤ";
+"photoEditor.editor.content.lipsColor.disco" = "ديسكو";
+"photoEditor.editor.content.lipsColor.lollipop" = "مصاصة";
+"photoEditor.editor.content.lipsColor.mocha" = "موكا";
+"photoEditor.editor.content.lipsColor.mauve" = "موف";
+"photoEditor.editor.content.lipsColor.apricot" = "مشمش";
+"photoEditor.editor.content.lipsColor.belle" = "بيل";
+"photoEditor.editor.content.lipsColor.icon" = "رمز";
+"photoEditor.editor.content.lipsColor.honey" = "عسل";
+"photoEditor.editor.content.lipsColor.angel" = "ملاك";
+"photoEditor.editor.content.lipsColor.peony" = "بيوني";
+"photoEditor.editor.content.lipsColor.cream" = "كريم";
+
+"photoEditor.editor.content.eyesColor.Brown" = "بني";
+"photoEditor.editor.content.eyesColor.Green" = "أخضر";
+"photoEditor.editor.content.eyesColor.Blue" = "أزرق";
+"photoEditor.editor.content.eyesColor.Grey" = "رمادي";
+"photoEditor.editor.content.eyesColor.Purple" = "بنفسجي";
+"photoEditor.editor.content.eyesColor.Red" = "أحمر";
+"photoEditor.editor.content.eyesColor.Yellow" = "أصفر";
+"photoEditor.editor.content.eyesColor.Honey" = "عسلي";
+"photoEditor.editor.content.eyesColor.Hazel" = "عسلي";
+"photoEditor.editor.content.eyesColor.India" = "هندي";
+"photoEditor.editor.content.eyesColor.Sapphire" = "ياقوت";
+"photoEditor.editor.content.eyesColor.Pacific" = "هادي";
+"photoEditor.editor.content.eyesColor.Jade" = "جادي";
+"photoEditor.editor.content.eyesColor.Emerald" = "زمرد";
+
+"photoEditor.editor.content.backdrop.Rainbow" = "قوس قزح";
+"photoEditor.editor.content.backdrop.Glamour" = "جمال";
+"photoEditor.editor.content.backdrop.Galaxy" = "مجرة";
+"photoEditor.editor.content.backdrop.Ocean" = "محيط";
+"photoEditor.editor.content.backdrop.Mist" = "ضباب";
+"photoEditor.editor.content.backdrop.Sky" = "سماء";
+"photoEditor.editor.content.backdrop.Allure" = "جاذبية";
+"photoEditor.editor.content.backdrop.Frost" = "صقيع";
+"photoEditor.editor.content.backdrop.Lights" = "أضواء";
+"photoEditor.editor.content.backdrop.Hawaii" = "هاواي";
+"photoEditor.editor.content.backdrop.Fruits" = "فواكه";
+"photoEditor.editor.content.backdrop.blur" = "تعتيم";
+"photoEditor.editor.content.backdrop.Bar" = "بار";
+"photoEditor.editor.content.backdrop.Home" = "منزل";
+"photoEditor.editor.content.backdrop.Dawn" = "فجر";
+"photoEditor.editor.content.backdrop.Beach" = "شاطئ";
+"photoEditor.editor.content.backdrop.Shore" = "شاطئ";
+"photoEditor.editor.content.backdrop.Office" = "مكتب";
+"photoEditor.editor.content.backdrop.Bouquet" = "باقة";
+"photoEditor.editor.content.backdrop.Butterfly" = "فراشة";
+"photoEditor.editor.content.backdrop.Tropical" = "استوائي";
+"photoEditor.editor.content.backdrop.Floral" = "زهري";
+"photoEditor.editor.content.backdrop.Letters" = "رسائل";
+"photoEditor.editor.content.backdrop.Bokeh" = "بوكيه";
+"photoEditor.editor.content.backdrop.Lotus" = "لوتس";
+"photoEditor.editor.content.backdrop.Glare" = "توهج";
+"photoEditor.editor.content.backdrop.Oranges" = "برتقال";
+"photoEditor.editor.content.backdrop.Jungle" = "غابة";
+"photoEditor.editor.content.backdrop.Space" = "فضاء";
+"photoEditor.editor.content.backdrop.Summer" = "صيف";
+"photoEditor.editor.content.backdrop.Daisy" = "أقحوان";
+"photoEditor.editor.content.backdrop.Gradient" = "تدرج";
+"photoEditor.editor.content.backdrop.Candies" = "حلوى";
+"photoEditor.editor.content.backdrop.Baubles" = "زينة";
+"photoEditor.editor.content.backdrop.Gifts" = "هدايا";
+
+"photoEditor.expired.editingUnavailable" = "تحرير الصور غير متاح مؤقتًا.";
+"photoEditor.expired.close" = "إغلاق";
