@@ -1,7 +1,7 @@
 PODS:
-  - BanubaARCloudSDK (1.37.0)
-  - BanubaAudioBrowserSDK (1.37.0)
-  - BanubaLicenseServicingSDK (1.37.0)
+  - BanubaARCloudSDK (1.37.1)
+  - BanubaAudioBrowserSDK (1.37.1)
+  - BanubaLicenseServicingSDK (1.37.1)
   - BanubaPhotoEditorSDK (1.2.3):
     - BanubaLicenseServicingSDK (>= 1.35.5)
     - BanubaUtilities (>= 1.35.5)
@@ -16,7 +16,7 @@ PODS:
     - BNBSdkApi (~> 1.14.1)
     - BNBSdkCore (~> 1.14.1)
     - BNBSkin (~> 1.14.1)
-  - BanubaSDK (1.37.0):
+  - BanubaSDK (1.37.1):
     - BNBBackground (~> 1.14.1)
     - BNBEffectPlayer (~> 1.14.1)
     - BNBEyes (~> 1.14.1)
@@ -26,11 +26,11 @@ PODS:
     - BNBSdkApi (~> 1.14.1)
     - BNBSdkCore (~> 1.14.1)
     - BNBSkin (~> 1.14.1)
-  - BanubaSDKServicing (1.37.0)
-  - BanubaSDKSimple (1.37.0)
-  - BanubaUtilities (1.37.0)
-  - BanubaVideoEditorGallerySDK (1.37.0)
-  - BanubaVideoEditorSDK (1.37.0)
+  - BanubaSDKServicing (1.37.1)
+  - BanubaSDKSimple (1.37.1)
+  - BanubaUtilities (1.37.1)
+  - BanubaVideoEditorGallerySDK (1.37.1)
+  - BanubaVideoEditorSDK (1.37.1)
   - BNBAcneEyebagsRemoval (1.14.2):
     - BNBEffectPlayer (= 1.14.2)
     - BNBFaceTracker (= 1.14.2)
@@ -54,7 +54,7 @@ PODS:
     - BNBEffectPlayer (= 1.14.2)
     - BNBScripting (= 1.14.2)
     - BNBSdkCore (= 1.14.2)
-  - BNBLicenseUtils (1.37.0)
+  - BNBLicenseUtils (1.37.1)
   - BNBLips (1.14.2):
     - BNBEffectPlayer (= 1.14.2)
     - BNBFaceTracker (= 1.14.2)
@@ -69,28 +69,28 @@ PODS:
     - BNBScripting (= 1.14.2)
     - BNBSdkCore (= 1.14.2)
   - BSImagePicker (3.3.3)
-  - VEEffectsSDK (1.37.0)
-  - VEExportSDK (1.37.0)
-  - VEPlaybackSDK (1.37.0)
-  - VideoEditor (1.37.0)
+  - VEEffectsSDK (1.37.1)
+  - VEExportSDK (1.37.1)
+  - VEPlaybackSDK (1.37.1)
+  - VideoEditor (1.37.1)
 
 DEPENDENCIES:
-  - BanubaARCloudSDK (= 1.37.0)
-  - BanubaAudioBrowserSDK (= 1.37.0)
-  - BanubaLicenseServicingSDK (= 1.37.0)
+  - BanubaARCloudSDK (= 1.37.1)
+  - BanubaAudioBrowserSDK (= 1.37.1)
+  - BanubaLicenseServicingSDK (= 1.37.1)
   - BanubaPhotoEditorSDK (= 1.2.3)
-  - BanubaSDK (= 1.37.0)
-  - BanubaSDKServicing (= 1.37.0)
-  - BanubaSDKSimple (= 1.37.0)
-  - BanubaUtilities (= 1.37.0)
-  - BanubaVideoEditorGallerySDK (= 1.37.0)
-  - BanubaVideoEditorSDK (= 1.37.0)
-  - BNBLicenseUtils (= 1.37.0)
+  - BanubaSDK (= 1.37.1)
+  - BanubaSDKServicing (= 1.37.1)
+  - BanubaSDKSimple (= 1.37.1)
+  - BanubaUtilities (= 1.37.1)
+  - BanubaVideoEditorGallerySDK (= 1.37.1)
+  - BanubaVideoEditorSDK (= 1.37.1)
+  - BNBLicenseUtils (= 1.37.1)
   - BSImagePicker
-  - VEEffectsSDK (= 1.37.0)
-  - VEExportSDK (= 1.37.0)
-  - VEPlaybackSDK (= 1.37.0)
-  - VideoEditor (= 1.37.0)
+  - VEEffectsSDK (= 1.37.1)
+  - VEExportSDK (= 1.37.1)
+  - VEPlaybackSDK (= 1.37.1)
+  - VideoEditor (= 1.37.1)
 
 SPEC REPOS:
   https://github.com/Banuba/specs.git:
@@ -125,34 +125,34 @@ SPEC REPOS:
     - BSImagePicker
 
 SPEC CHECKSUMS:
-  BanubaARCloudSDK: dfea7cffd6c4112657ee06d9dd5bc77689e29ca4
-  BanubaAudioBrowserSDK: 2affce411f2bf19aef67f4802745bc9ae12f2f86
-  BanubaLicenseServicingSDK: a17b26868dcb5e7e5f69c35f77649c7de479d059
+  BanubaARCloudSDK: 28fffa85e02e8de929de61ace4c952eb27acaf25
+  BanubaAudioBrowserSDK: 4dbb333bfa737de2a97ee21602db27b6daa1133d
+  BanubaLicenseServicingSDK: 81882cd6fbe927b945d918f147c4d371e9002d90
   BanubaPhotoEditorSDK: cc6d999829bcfc58d263a0992ed61518d3962267
-  BanubaSDK: 30b1a50d2fe00f068d6f343875087089d2544127
-  BanubaSDKServicing: 9f456ce6d20011c457a8cd708b81df1aeacaefbd
-  BanubaSDKSimple: d33f3fe5329e821bb052e1332f784f871771be04
-  BanubaUtilities: 9407525818ad73102c49e5c46b6d4cdb6a2e9f9e
-  BanubaVideoEditorGallerySDK: 42c7197909ae79538ef31dbd38fd2a1f8e7c22c1
-  BanubaVideoEditorSDK: b51162e829be28e7ec513616296b92927ef86997
+  BanubaSDK: a23b46ede1912f42b53eaadff879dd90682b7c12
+  BanubaSDKServicing: 77fd85e08755a9a86a5e97089f1ed483d9fd4e97
+  BanubaSDKSimple: 4c108aa916996d4d038106711266a80527400d50
+  BanubaUtilities: b3fb4b333415892638b035cfb72c125715882436
+  BanubaVideoEditorGallerySDK: 2bd502c5427ede1b44f0abfb30763e8c6bf81c31
+  BanubaVideoEditorSDK: 32a12671ed6a620e009f9400e9ab17224bfa50c1
   BNBAcneEyebagsRemoval: ed7554ecc8dc7c8b4716e5aa48b8275423d64b29
   BNBBackground: ca29dc26acd50be890a7a65c78540be65e2c7448
   BNBEffectPlayer: 4a1bc6579d19c41ba9b4c49c9aba979d1c873464
   BNBEyes: ade036243d9f2cca81946c19c3ea2be145d8fea2
   BNBFaceTracker: 555de45ab376c4e07fb7f1bd7b093891e4d6c680
   BNBHair: a79ab74a0c0c7386d2623e03147450833af64507
-  BNBLicenseUtils: bae8b79f580de4edb8e93fb466bedee90654ca4d
+  BNBLicenseUtils: 4c3c2e6ec90b743e4f633641a9cdc063d07180d9
   BNBLips: 4548a9ab1be43a67beaed67a4c51dde59ad9730d
   BNBScripting: 8ca85618df16c24b47a04cf9cba82d175d4bd4cb
   BNBSdkApi: c86bbb2a1286e27f08d86dbceabadcfccf5237ce
   BNBSdkCore: 5d4ac8e8ba51a032720057da736cb060b3ff6986
   BNBSkin: f7c0e200fad3f3195ae102d4b437fbe1e5f2f82c
   BSImagePicker: 57900b323f951711608acaf97d52e9183530cb6d
-  VEEffectsSDK: 2d99b0b431b8957dce28a0d24f21d7794f891f0f
-  VEExportSDK: efe776744c03a2e2d982cd17500bcb5ed001d8c8
-  VEPlaybackSDK: 2b5b1529b14a779d4ea9ed0457c2b50235fe2de2
-  VideoEditor: 88105c9f722d8d56ff08b08fc0a35221f25387e9
+  VEEffectsSDK: 71d9f4e28afc4a651816a9ea7f5debba6bf6b876
+  VEExportSDK: 295b85ea0f0b224616e2998c54bd3b8385f00cc9
+  VEPlaybackSDK: 98fdab6ebd1e86dea3360c462308366a0e80a7db
+  VideoEditor: fbaeba96f6d478d7cf77669c0ca21ecf47693c97
 
-PODFILE CHECKSUM: 2abc9f9350af2121f2d25f9b3d1ab9100f6ce0b4
+PODFILE CHECKSUM: 2ffd73fe8f3baad7f20aa527ff95bd63ba6a2ad8
 
 COCOAPODS: 1.15.2
