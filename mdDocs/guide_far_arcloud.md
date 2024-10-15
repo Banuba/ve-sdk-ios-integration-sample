@@ -21,13 +21,9 @@ Any Face AR effect is a folder that includes a number of files required for Face
 
 ## Manage effects
 There are 2 options for managing AR effects:
-1. ```bundleEffects``` folder
-   Use [bundleEffects](../Example/Example/bundleEffects) folder
+1. Create ```bundleEffects``` folder in the [project](../Example/Example) and place effects there.
 2. ```AR Cloud```  
    Effects are stored on the remote server.
-
-:exclamation: Important,  
-Please, keep the name ```bundleEffects```, otherwise, the app will not start. Create ```bundleEffects``` folder if it does not exist.
 
 :bulb: Recommendation,   
 You can use both options i.e. store just a few AR effects in ```bundleEffects``` and 100 or more AR effects  on ```AR Cloud```.
@@ -38,7 +34,7 @@ Any AR effect downloaded from ```AR Cloud``` is cached on the user's device.
 
 Add dependency to [Podfile](../Example/Podfile#L11) to integrate ```AR Cloud``` into your project.
 ```diff
-+  pod 'BanubaARCloudSDK', '1.30.2'
++  pod 'BanubaARCloudSDK', '1.37.0'
 ```
 
 Since the link to your AR Cloud bucket is included into the license token. AR effects will appear once you set the license token with AR Cloud link.
@@ -62,7 +58,7 @@ These are names of specific directories located in ```bundleEffects``` or on ```
 Video Editor SDK can work without Face AR SDK.
 Change [Podfile](../Example/Podfile) to disable Face AR SDK.
 ```diff
-banuba_sdk_version = '1.30.2'
+banuba_sdk_version = '1.37.0'
 
 -  pod 'BanubaEffectPlayer', banuba_sdk_version
 -  pod 'BanubaSDK', banuba_sdk_version
