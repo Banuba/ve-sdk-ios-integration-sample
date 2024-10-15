@@ -21,8 +21,7 @@ Any Face AR effect is a folder that includes a number of files required for Face
 
 ## Manage effects
 There are 2 options for managing AR effects:
-1. ```bundleEffects``` folder
-   Use [bundleEffects](../Example/Example/bundleEffects) folder
+1. Add ```bundleEffects``` folder in the [project](../Example/Example) and place effects there.
 2. ```AR Cloud```  
    Effects are stored on the remote server.
 
