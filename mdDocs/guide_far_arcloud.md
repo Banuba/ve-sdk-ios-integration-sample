@@ -38,7 +38,7 @@ Any AR effect downloaded from ```AR Cloud``` is cached on the user's device.
 
 Add dependency to [Podfile](../Example/Podfile#L11) to integrate ```AR Cloud``` into your project.
 ```diff
-+  pod 'BanubaARCloudSDK', '1.30.2'
++  pod 'BanubaARCloudSDK', '1.37.0'
 ```
 
 Since the link to your AR Cloud bucket is included into the license token. AR effects will appear once you set the license token with AR Cloud link.
@@ -62,7 +62,7 @@ These are names of specific directories located in ```bundleEffects``` or on ```
 Video Editor SDK can work without Face AR SDK.
 Change [Podfile](../Example/Podfile) to disable Face AR SDK.
 ```diff
-banuba_sdk_version = '1.30.2'
+banuba_sdk_version = '1.37.0'
 
 -  pod 'BanubaEffectPlayer', banuba_sdk_version
 -  pod 'BanubaSDK', banuba_sdk_version
