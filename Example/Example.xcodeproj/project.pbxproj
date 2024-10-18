@@ -17,7 +17,6 @@
 		639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA0162547002C0011C153 /* LaunchScreen.storyboard */; };
 		63F7116029D1F21A00045A06 /* short_music_20.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63F7115F29D1F21A00045A06 /* short_music_20.wav */; };
 		70113E7129C1D01800CBA08B /* VideoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70113E7029C1D01800CBA08B /* VideoEditorModule.swift */; };
-		8A32EED0258CB5430098F852 /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EECF258CB5430098F852 /* bundleEffects */; };
 		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		639DA0192547002C0011C153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63F7115F29D1F21A00045A06 /* short_music_20.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = short_music_20.wav; sourceTree = "<group>"; };
 		70113E7029C1D01800CBA08B /* VideoEditorModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = VideoEditorModule.swift; sourceTree = "<group>"; tabWidth = 4; };
-		8A32EECF258CB5430098F852 /* bundleEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleEffects; sourceTree = "<group>"; };
 		8A32EEDE258CB70C0098F852 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA67CA8258CD5CA00D8FF7F /* BanubaAudioBrowserSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaAudioBrowserSDK.xcframework; path = ../BanubaAudioBrowserSDK.xcframework; sourceTree = "<group>"; };
 		8AFC95CF269DC12D00B4114B /* BNBLicenseUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BNBLicenseUtils.xcframework; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				8A32EEDE258CB70C0098F852 /* Assets.xcassets */,
-				8A32EECF258CB5430098F852 /* bundleEffects */,
 				639DA00B254700290011C153 /* AppDelegate.swift */,
 				70113E7029C1D01800CBA08B /* VideoEditorModule.swift */,
 				636C55232B0DF24100678849 /* PhotoEditorModule.swift */,
@@ -178,7 +175,6 @@
 				635DB1AC2548541000B1C799 /* luts in Resources */,
 				639DA013254700290011C153 /* Main.storyboard in Resources */,
 				8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */,
-				8A32EED0258CB5430098F852 /* bundleEffects in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
