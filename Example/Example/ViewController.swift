@@ -1,6 +1,6 @@
 import UIKit
 import BanubaVideoEditorSDK
-import BanubaPhotoEditorSDK
+import BanubaPhotoEditorSDKLight
 
 import VideoEditor
 import AVFoundation
@@ -24,6 +24,26 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
   
   // Use “true” if you want users could restore the last video editing session.
   private let restoreLastVideoEditingSession: Bool = false
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    
+    let activityIndicator = UIActivityIndicatorView(style: .large)
+    view.addSubview(activityIndicator)
+    activityIndicator.center = view.frame.getCenter()
+    activityIndicator.center.y = view.frame.maxY - activityIndicator.frame.height - 20
+    activityIndicator.startAnimating()
+    view.isUserInteractionEnabled = false
+    
+    Task(priority: .medium) {
+      ExternalResourcesManager.shared.prepareResources()
+      Task { @MainActor in
+        activityIndicator.removeFromSuperview()
+        view.isUserInteractionEnabled = true
+      }
+    }
+  }
   
   // MARK: - Handle BanubaVideoEditor callbacks
   func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
@@ -214,12 +234,12 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
 
 // MARK: - BanubaPhotoEditorDelegate
 extension ViewController {
-  func photoEditorDidCancel(_ photoEditor: BanubaPhotoEditorSDK.BanubaPhotoEditor) {
+  func photoEditorDidCancel(_ photoEditor: BanubaPhotoEditor) {
     print("User has closed the photo editor")
     photoEditor.dismissPhotoEditor(animated: true, completion: nil)
   }
   
-  func photoEditorDidFinishWithImage(_ photoEditor: BanubaPhotoEditorSDK.BanubaPhotoEditor, image: UIImage) {
+  func photoEditorDidFinishWithImage(_ photoEditor: BanubaPhotoEditor, image: UIImage) {
     print("User has saved the edited image")
     photoEditor.dismissPhotoEditor(animated: true, completion: nil)
   }

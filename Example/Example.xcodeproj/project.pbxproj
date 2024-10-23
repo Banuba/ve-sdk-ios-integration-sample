@@ -19,6 +19,8 @@
 		70113E7129C1D01800CBA08B /* VideoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70113E7029C1D01800CBA08B /* VideoEditorModule.swift */; };
 		8A32EED0258CB5430098F852 /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EECF258CB5430098F852 /* bundleEffects */; };
 		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
+		DBF5B72E2CC271D900F2FDF2 /* ExternalResourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5B72D2CC271CC00F2FDF2 /* ExternalResourcesManager.swift */; };
+		DBF5B7572CC28E8000F2FDF2 /* bnb-resources.zip in Resources */ = {isa = PBXBuildFile; fileRef = DBF5B7562CC28E8000F2FDF2 /* bnb-resources.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		8AFC95CF269DC12D00B4114B /* BNBLicenseUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BNBLicenseUtils.xcframework; sourceTree = "<group>"; };
 		8D879ADE024EEEC9574AAB2D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		A24378930003F0F910117502 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBF5B72D2CC271CC00F2FDF2 /* ExternalResourcesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalResourcesManager.swift; sourceTree = "<group>"; };
+		DBF5B7562CC28E8000F2FDF2 /* bnb-resources.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "bnb-resources.zip"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				70113E7029C1D01800CBA08B /* VideoEditorModule.swift */,
 				636C55232B0DF24100678849 /* PhotoEditorModule.swift */,
 				639DA00F254700290011C153 /* ViewController.swift */,
+				DBF5B7562CC28E8000F2FDF2 /* bnb-resources.zip */,
+				DBF5B72D2CC271CC00F2FDF2 /* ExternalResourcesManager.swift */,
 				63F7115F29D1F21A00045A06 /* short_music_20.wav */,
 				634FAC06255C351900FB0DBC /* Localizable.strings */,
 				639DA011254700290011C153 /* Main.storyboard */,
@@ -176,6 +182,7 @@
 				634FAC04255C351900FB0DBC /* Localizable.strings in Resources */,
 				639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */,
 				635DB1AC2548541000B1C799 /* luts in Resources */,
+				DBF5B7572CC28E8000F2FDF2 /* bnb-resources.zip in Resources */,
 				639DA013254700290011C153 /* Main.storyboard in Resources */,
 				8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */,
 				8A32EED0258CB5430098F852 /* bundleEffects in Resources */,
@@ -249,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				639DA010254700290011C153 /* ViewController.swift in Sources */,
+				DBF5B72E2CC271D900F2FDF2 /* ExternalResourcesManager.swift in Sources */,
 				636C55242B0DF24100678849 /* PhotoEditorModule.swift in Sources */,
 				70113E7129C1D01800CBA08B /* VideoEditorModule.swift in Sources */,
 				639DA00C254700290011C153 /* AppDelegate.swift in Sources */,

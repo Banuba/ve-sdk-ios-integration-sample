@@ -9,6 +9,7 @@ import Photos
 import BSImagePicker
 import VEExportSDK
 import BanubaAudioBrowserSDK
+import BNBSdkCore
 
 // Adopting CountdownView to using in BanubaVideoEditorSDK
 extension CountdownView: MusicEditorCountdownAnimatableView {}
@@ -26,6 +27,8 @@ class VideoEditorModule {
             token: token,
             configuration: config
         )
+        
+        BNBUtilityManager.addResourcePath(ExternalResourcesManager.shared.resourcesBundleLocalURL.path)
         
         self.videoEditorSDK = videoEditorSDK
     }
