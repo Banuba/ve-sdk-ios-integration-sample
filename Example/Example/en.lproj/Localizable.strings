@@ -137,6 +137,7 @@
 /* Used in a message to the user when microphone is not muted and headphones are not plugged */
 "banuba.alert.camera.no.headphones.title" = "Use Headphones";
 "banuba.alert.camera.no.headphones.message" = "For better sound of your reaction, please, use headphones.";
+"banuba.alert.camera.no.headphones.music.messageFormat" = "To achieve premium audio please record with headphones. Recording must be greater than %d seconds.";
 "banuba.alert.camera.no.headphones.button.title" = "Okay";
 
 /* Used in alert with options Cancel and In settings */
@@ -815,7 +816,6 @@
 "com.banuba.newEditor.square" = "Square";
 "com.banuba.newEditor.voiceEffect" = "Effect";
 "com.banuba.newEditor.captions" = "Captions";
-"com.banuba.newEditor.record" = "Record";
 "com.banuba.newEditor.secondsFormat" = "%@s";
 "com.banuba.newEditor.musicVolume" = "Volume";
 "com.banuba.newEditor.recordingEffectTitle" = "Recording...";
@@ -849,7 +849,7 @@
 // MARK: - Auto Cut
 "com.banuba.autocut.choosePart" = "Choose the part you want for your video";
 "com.banuba.autocut.changesWillNotBeSaved" = "Previously made changes will not be saved";
-"com.banuba.autocut.processingMedia" = "Processing media %d%%";
+"com.banuba.autocut.processingMedia" = "Processing media %@";
 "com.banuba.autocut.tryAgain" = "Try Again";
 "com.banuba.autocut.couldNotProcess" = "Couldn't process video";
 "com.banuba.autocut.somethingWentWrong" = "Something went wrong. Please try again.";
