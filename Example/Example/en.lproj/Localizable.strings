@@ -66,6 +66,9 @@
 
 /* Enabling the countdown timer to automatically start shooting in the camera */
 "%i seconds timer is on" = "%i seconds timer is on";
+
+/* Record speed format */
+"com.banuba.recorder.speedFormat" = "%@x";
     
 /* Hint on how to apply masks to video */
 "Press and hold mask" = "Tap and hold to apply mask";
@@ -1046,39 +1049,39 @@
 "photoEditor.editor.content.lipsColor.Candy" = "Candy";
 "photoEditor.editor.content.lipsColor.Lilac" = "Lilac";
 "photoEditor.editor.content.lipsColor.Raspberry" = "Raspberry";
-"photoEditor.editor.content.lipsColor.syrup" = "Syrup";
-"photoEditor.editor.content.lipsColor.diva" = "Diva";
-"photoEditor.editor.content.lipsColor.nude" = "Nude";
-"photoEditor.editor.content.lipsColor.melon" = "Melon";
-"photoEditor.editor.content.lipsColor.kiss" = "Kiss";
-"photoEditor.editor.content.lipsColor.retro" = "Retro";
-"photoEditor.editor.content.lipsColor.taffy" = "Taffy";
-"photoEditor.editor.content.lipsColor.brave" = "Brave";
-"photoEditor.editor.content.lipsColor.heroine" = "Heroine";
-"photoEditor.editor.content.lipsColor.beige" = "Beige";
-"photoEditor.editor.content.lipsColor.night" = "Night";
-"photoEditor.editor.content.lipsColor.berry" = "Berry";
-"photoEditor.editor.content.lipsColor.unicorn" = "Unicorn";
-"photoEditor.editor.content.lipsColor.sahara" = "Sahara";
-"photoEditor.editor.content.lipsColor.cherry" = "Cherry";
-"photoEditor.editor.content.lipsColor.muse" = "Muse";
-"photoEditor.editor.content.lipsColor.flirt" = "Flirt";
-"photoEditor.editor.content.lipsColor.punch" = "Punch";
-"photoEditor.editor.content.lipsColor.rebel" = "Rebel";
-"photoEditor.editor.content.lipsColor.peach" = "Peach";
-"photoEditor.editor.content.lipsColor.medusa" = "Medusa";
-"photoEditor.editor.content.lipsColor.pearl" = "Pearl";
-"photoEditor.editor.content.lipsColor.disco" = "Disco";
-"photoEditor.editor.content.lipsColor.lollipop" = "Lollipop";
-"photoEditor.editor.content.lipsColor.mocha" = "Mocha";
-"photoEditor.editor.content.lipsColor.mauve" = "Mauve";
-"photoEditor.editor.content.lipsColor.apricot" = "Apricot";
-"photoEditor.editor.content.lipsColor.belle" = "Belle";
-"photoEditor.editor.content.lipsColor.icon" = "Icon";
-"photoEditor.editor.content.lipsColor.honey" = "Honey";
-"photoEditor.editor.content.lipsColor.angel" = "Angel";
-"photoEditor.editor.content.lipsColor.peony" = "Peony";
-"photoEditor.editor.content.lipsColor.cream" = "Cream";
+"photoEditor.editor.content.lipsColor.Syrup" = "Syrup";
+"photoEditor.editor.content.lipsColor.Diva" = "Diva";
+"photoEditor.editor.content.lipsColor.Nude" = "Nude";
+"photoEditor.editor.content.lipsColor.Melon" = "Melon";
+"photoEditor.editor.content.lipsColor.Kiss" = "Kiss";
+"photoEditor.editor.content.lipsColor.Retro" = "Retro";
+"photoEditor.editor.content.lipsColor.Taffy" = "Taffy";
+"photoEditor.editor.content.lipsColor.Brave" = "Brave";
+"photoEditor.editor.content.lipsColor.Heroine" = "Heroine";
+"photoEditor.editor.content.lipsColor.Beige" = "Beige";
+"photoEditor.editor.content.lipsColor.Night" = "Night";
+"photoEditor.editor.content.lipsColor.Berry" = "Berry";
+"photoEditor.editor.content.lipsColor.Unicorn" = "Unicorn";
+"photoEditor.editor.content.lipsColor.Sahara" = "Sahara";
+"photoEditor.editor.content.lipsColor.Cherry" = "Cherry";
+"photoEditor.editor.content.lipsColor.Muse" = "Muse";
+"photoEditor.editor.content.lipsColor.Flirt" = "Flirt";
+"photoEditor.editor.content.lipsColor.Punch" = "Punch";
+"photoEditor.editor.content.lipsColor.Rebel" = "Rebel";
+"photoEditor.editor.content.lipsColor.Peach" = "Peach";
+"photoEditor.editor.content.lipsColor.Medusa" = "Medusa";
+"photoEditor.editor.content.lipsColor.Pearl" = "Pearl";
+"photoEditor.editor.content.lipsColor.Disco" = "Disco";
+"photoEditor.editor.content.lipsColor.Lollipop" = "Lollipop";
+"photoEditor.editor.content.lipsColor.Mocha" = "Mocha";
+"photoEditor.editor.content.lipsColor.Mauve" = "Mauve";
+"photoEditor.editor.content.lipsColor.Apricot" = "Apricot";
+"photoEditor.editor.content.lipsColor.Belle" = "Belle";
+"photoEditor.editor.content.lipsColor.Icon" = "Icon";
+"photoEditor.editor.content.lipsColor.Honey" = "Honey";
+"photoEditor.editor.content.lipsColor.Angel" = "Angel";
+"photoEditor.editor.content.lipsColor.Peony" = "Peony";
+"photoEditor.editor.content.lipsColor.Cream" = "Cream";
 
 "photoEditor.editor.content.eyesColor.Brown" = "Brown";
 "photoEditor.editor.content.eyesColor.Green" = "Green";
