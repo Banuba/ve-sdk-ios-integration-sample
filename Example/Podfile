@@ -8,7 +8,7 @@ inhibit_all_warnings!
 
 target 'Example' do
   
-  banuba_sdk_version = '1.38.0'
+  banuba_sdk_version = '1.39.0'
   
   # Video Editor
   
@@ -33,5 +33,5 @@ target 'Example' do
   
   # Photo Editor
   
-  pod 'BanubaPhotoEditorSDKLight', '1.2.4'
+  pod 'BanubaPhotoEditorSDKLight', '1.2.5'
 end

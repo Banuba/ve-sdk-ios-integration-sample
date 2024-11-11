@@ -7,7 +7,9 @@ class PhotoEditorModule {
     init(token: String) {
         let configuration = PhotoEditorConfig(
             previewScreenMode: .disabled,
-            resourcesURL: ExternalResourcesManager.shared.resourcesBundleLocalURL
+            beautyMaskURL: ExternalResourcesManager.shared.resourcesBundleLocalURL.appendingPathComponent("photo_editor"),
+            effectPlayerResourcesURL: ExternalResourcesManager.shared.resourcesBundleLocalURL
+        
         )
         photoEditorSDK = BanubaPhotoEditor(
             token: token,
