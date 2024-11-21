@@ -73,6 +73,9 @@ class VideoEditorModule {
     func createConfiguration() -> VideoEditorConfig {
         var config = VideoEditorConfig()
         
+        config.autoCutConfiguration.embeddingsDownloadUrl = "https://ve-autocut-v2-ap-south-1.s3.ap-south-1.amazonaws.com/index.zip"
+        config.autoCutConfiguration.musicApiSelectedTracksUrl = "https://soundstripe-proxy.banuba.net/v1/songs"
+        
         // Set Mubert API KEYS here
         BanubaAudioBrowser.setMubertKeys(
             license: "SET MUBERT API LICENSE",
