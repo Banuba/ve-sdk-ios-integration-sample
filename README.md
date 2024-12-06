@@ -4,7 +4,6 @@
 <img src="mdDocs/gif/camera_preview.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
 <img src="mdDocs/gif/pip_preview.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
 <img src="mdDocs/gif/audio_browser.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
-<img src="mdDocs/gif/editor_timeline.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
 <img src="mdDocs/gif/gif_background.gif" alt="Screenshot" width="19%" height="auto" class="docs-screenshot"/>&nbsp;
 </p>
 <p align="center">
