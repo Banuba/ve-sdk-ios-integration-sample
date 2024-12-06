@@ -31,7 +31,7 @@ It supports 2 sources for audio content:
 2. ```Mubert``` - includes built in integration with [Mubert](https://mubert.com/) API.
 
 <p align="center">
-<img src="gif/audio_browser.gif" alt="Screenshot" width="30%" height="auto" class="docs-screenshot"/>&nbsp;
+<img src="gif/mubert_audio_browser.gif" alt="Screenshot" width="30%" height="auto" class="docs-screenshot"/>&nbsp;
 </p>
 
 Add  ```BanubaAudioBrowserSDK``` dependency into your [Podfile](../Example/Podfile#L13)
