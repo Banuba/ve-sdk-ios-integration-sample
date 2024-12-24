@@ -78,7 +78,7 @@ class VideoEditorModule {
             license: "SET MUBERT API LICENSE",
             token: "SET MUBERT API TOKEN"
         )
-        AudioBrowserConfig.shared.musicSource = .allSources
+        AudioBrowserConfig.shared.musicSource = .localStorageWithMyFiles
         AudioBrowserConfig.shared.setPrimaryColor(#colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1))
         
         var featureConfiguration = config.featureConfiguration
