@@ -497,6 +497,15 @@
 /* My files button title */
 "AudioBrowser.myFiles" = "My Files";
 
+/* My files local audio button title */
+"AudioBrowser.localAudio.musicHeader" = "Music";
+/* My files local audio my files button title */
+"AudioBrowser.localAudio.myFiles" = "My files";
+/* My files local audio empty state title */
+"AudioBrowser.localAudio.emptyStateTitle" = "No music files found";
+/* My files local audio empty state message */
+"AudioBrowser.localAudio.emptyStateMessage" = "Add songs to your device to display them\n here";
+
 "audioBrowser.search.by.categories" = "Search by categories";
 "audioBrowser.search.by.groups" = "Search by groups";
 "audioBrowser.search.by.tracks" = "Search by tracks";
