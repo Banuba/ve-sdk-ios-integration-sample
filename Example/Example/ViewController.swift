@@ -39,6 +39,31 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     }
   }
   
+  func videoEditor(_ videoEditor: BanubaVideoEditor, shouldProcessMediaUrls urls: [URL]) -> Bool {
+    guard let jpegURL = urls.first(where: { $0.pathExtension.lowercased() == "jpeg" }),
+          let imageData = try? Data(contentsOf: jpegURL),
+          !imageData.isEmpty,
+          let resultImage = UIImage(data: imageData) else {
+      return true
+    }
+    
+    videoEditor.dismissVideoEditor(animated: true) {
+      DispatchQueue.main.async { [weak self] in
+        guard let self else { return }
+        // Calling clearSessionData() also removes any files stored in urls array
+        videoEditorModule?.videoEditorSDK?.clearSessionData()
+            
+        let launchConfig = PhotoEditorLaunchConfig(
+          hostController: self,
+          entryPoint: .editorWithImage(resultImage)
+        )
+        checkLicenseAndOpenPhotoEditor(with: launchConfig)
+      }
+    }
+
+    return false
+  }
+  
   // MARK: - Actions
   @IBAction func openVideoEditorDefault(_ sender: Any) {
     let musicTrackPreset: MediaTrack? = nil
