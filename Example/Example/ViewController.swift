@@ -2,12 +2,10 @@ import UIKit
 import BanubaVideoEditorSDK
 import BanubaPhotoEditorSDK
 
-import VideoEditor
 import AVFoundation
 import AVKit
 import Photos
 import BSImagePicker
-import VEExportSDK
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 
@@ -40,6 +38,20 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
   }
   
   // MARK: - Actions
+  @IBAction func openVideoEditorNewUI(_ sender: Any) {
+    let musicTrackPreset: MediaTrack? = nil
+    // Uncomment to apply custom audio track in video editor
+    //let musicTrackPreset = prepareMusicTrack(audioFileName: "short_music_20.wav")
+    
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: .camera,
+      hostController: self,
+      musicTrack: musicTrackPreset, // Paste a music track as a track preset at the camera screen to record video with music
+      animated: true
+    )
+    checkLicenseAndOpenVideoEditor(with: launchConfig, isEditorV2Enabled: true)
+  }
+  
   @IBAction func openVideoEditorDefault(_ sender: Any) {
     let musicTrackPreset: MediaTrack? = nil
     // Uncomment to apply custom audio track in video editor
@@ -183,13 +195,13 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     return musicTrackPreset
   }
   
-  private func checkLicenseAndOpenVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
+  private func checkLicenseAndOpenVideoEditor(with launchConfig: VideoEditorLaunchConfig, isEditorV2Enabled: Bool = false) {
     // Deallocate any active instances of both editors to free used resources
     // and to prevent "You are trying to create the second instance of the singleton." crash
     photoEditorModule = nil
     videoEditorModule = nil
     
-    videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
+    videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken, isEditorV2Enabled: isEditorV2Enabled)
     
     guard let videoEditorSDK = videoEditorModule?.videoEditorSDK else {
       invalidTokenMessageLabel.text = "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
