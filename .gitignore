@@ -3,3 +3,4 @@ Example/fastlane
 *.mobileprovision
 xcuserdata
 .DS_Store
+Example/build/*

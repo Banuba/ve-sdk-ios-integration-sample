@@ -8,30 +8,23 @@ inhibit_all_warnings!
 
 target 'Example' do
   
-  banuba_sdk_version = '1.39.7'
-  
   # Video Editor
   
-  pod 'BanubaARCloudSDK', banuba_sdk_version #optional
+  banuba_sdk_version = '1.40.0'
+  
   pod 'BanubaVideoEditorSDK', banuba_sdk_version
-  pod 'BanubaAudioBrowserSDK', banuba_sdk_version #optional
+  
   pod 'BanubaSDKSimple', banuba_sdk_version
   pod 'BanubaSDK', banuba_sdk_version
-  pod 'BanubaSDKServicing', banuba_sdk_version
-  pod 'VideoEditor', banuba_sdk_version
-  pod 'BanubaUtilities', banuba_sdk_version
-  pod 'BanubaVideoEditorGallerySDK', banuba_sdk_version #optional
-  pod 'BanubaLicenseServicingSDK', banuba_sdk_version
-
-  pod 'BNBLicenseUtils', banuba_sdk_version
   
-  pod 'VEExportSDK', banuba_sdk_version
-  pod 'VEEffectsSDK', banuba_sdk_version
-  pod 'VEPlaybackSDK', banuba_sdk_version
-  
-  pod "BSImagePicker"
+  pod 'BanubaARCloudSDK', banuba_sdk_version      # optional
+  pod 'BanubaAudioBrowserSDK', banuba_sdk_version # optional
   
   # Photo Editor
   
   pod 'BanubaPhotoEditorSDK', '1.2.5'
+  
+  # Third party
+  
+  pod "BSImagePicker"
 end

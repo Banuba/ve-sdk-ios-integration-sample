@@ -815,7 +815,7 @@
 "com.banuba.newEditor.masks" = "Masks";
 "com.banuba.newEditor.audio" = "Audio";
 "com.banuba.newEditor.filters" = "Filters";
-"com.banuba.newEditor.blur" = "Blur";
+"com.banuba.newEditor.pixelate" = "Pixelate";
 "com.banuba.newEditor.speed" = "Speed";
 "com.banuba.newEditor.crop" = "Crop";
 "com.banuba.newEditor.split" = "Split";
@@ -824,8 +824,9 @@
 "com.banuba.newEditor.replace" = "Replace";
 "com.banuba.newEditor.delete" = "Delete";
 "com.banuba.newEditor.adjust" = "Adjust";
-"com.banuba.newEditor.circle" = "Circle";
-"com.banuba.newEditor.square" = "Square";
+"com.banuba.newEditor.addCircle" = "Add Circle";
+"com.banuba.newEditor.addSquare" = "Add Square";
+"com.banuba.newEditor.pixelation" = "Pixelation";
 "com.banuba.newEditor.voiceEffect" = "Effect";
 "com.banuba.newEditor.captions" = "Captions";
 "com.banuba.newEditor.secondsFormat" = "%@s";
@@ -843,7 +844,8 @@
 "com.banuba.newEditor.videoIsTooShortFormat" = "The video is too short. Minimum length is %d second.";
 "com.banuba.newEditor.next" = "Next";
 "com.banuba.newEditor.reset" = "Reset";
-"com.banuba.newEditor.videoSaved" = "Video saved.";
+"com.banuba.newEditor.noFreeClipForFilter" = "No free clip for new filter";
+"com.banuba.newEditor.noFreeClipForMask" = "No free clip for new masks";
 "com.banuba.newEditor.none" = "None";
 "com.banuba.newEditor.normal" = "Normal";
 
