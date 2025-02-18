@@ -25,7 +25,6 @@
 		634FAC05255C351900FB0DBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		635DB1AA2548541000B1C799 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
 		636C55232B0DF24100678849 /* PhotoEditorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorModule.swift; sourceTree = "<group>"; };
-		6388C61F254838BB005C017A /* BanubaEffectPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BanubaEffectPlayer.framework; path = Example/BanubaEffectPlayer.framework; sourceTree = "<group>"; };
 		639DA008254700290011C153 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639DA00B254700290011C153 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
 		639DA00F254700290011C153 /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -67,7 +66,6 @@
 			children = (
 				8AFC95CF269DC12D00B4114B /* BNBLicenseUtils.xcframework */,
 				8AA67CA8258CD5CA00D8FF7F /* BanubaAudioBrowserSDK.xcframework */,
-				6388C61F254838BB005C017A /* BanubaEffectPlayer.framework */,
 				A24378930003F0F910117502 /* Pods_Example.framework */,
 			);
 			name = Frameworks;
@@ -407,7 +405,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				DEVELOPMENT_TEAM = NEWUB88C7M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,7 +434,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				DEVELOPMENT_TEAM = NEWUB88C7M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

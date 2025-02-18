@@ -69,7 +69,7 @@
 
 /* Record speed format */
 "com.banuba.recorder.speedFormat" = "%@x";
-
+    
 /* Hint on how to apply masks to video */
 "Press and hold mask" = "Tap and hold to apply mask";
 
@@ -504,7 +504,7 @@
 /* My files local audio empty state title */
 "AudioBrowser.localAudio.emptyStateTitle" = "No music files found";
 /* My files local audio empty state message */
-"AudioBrowser.localAudio.emptyStateMessage" = "Add songs to your device to display them here";
+"AudioBrowser.localAudio.emptyStateMessage" = "Add songs to your device to display them\n here";
 
 "audioBrowser.search.by.categories" = "Search by categories";
 "audioBrowser.search.by.groups" = "Search by groups";
@@ -854,7 +854,8 @@
 
 "com.banuba.newEditor.customCrop" = "Custom";
 
-"com.banuba.newEditor.videoVolumeTitle" = "Video";
+"com.banuba.newEditor.videoVolumeTitle" = "Original Video";
+"com.banuba.newEditor.pipVolumeTitle" = "Added Video";
 "com.banuba.newEditor.audioVolumeTitle" = "Audio";
 "com.banuba.newEditor.chooseMusicSection" = "Choose the section you want for your video";
 
