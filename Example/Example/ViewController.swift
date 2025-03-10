@@ -33,9 +33,58 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
   }
   
   func videoEditorDone(_ videoEditor: BanubaVideoEditor) {
-    videoEditor.dismissVideoEditor(animated: true) { [weak self] in
-      self?.exportVideo(videoEditor: videoEditor)
+    // 1. Export video
+    
+    guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+          let window = windowScene.windows.first,
+          let presentedViewController = window.rootViewController?.presentedViewController else {
+      return
     }
+    
+    let progressViewController = videoEditorModule!.createProgressViewController()
+    progressViewController.cancelHandler = { videoEditor.stopExport() }
+    
+    presentedViewController.present(progressViewController, animated: true)
+    
+    let manager = FileManager.default
+    let exportedVideoFileName = "tmp.mov"
+    let videoURL = manager.temporaryDirectory.appendingPathComponent(exportedVideoFileName)
+    if manager.fileExists(atPath: videoURL.path) {
+      try? manager.removeItem(at: videoURL)
+    }
+    
+    let exportConfiguration = videoEditorModule!.createExportConfiguration(destFile: videoURL)
+    
+    videoEditor.export(
+      using: exportConfiguration,
+      exportProgress: { [weak progressViewController] progress in
+        DispatchQueue.main.async {
+          progressViewController?.updateProgressView(with: Float(progress))
+        }
+      },
+      completion: { [weak presentedViewController, weak progressViewController] error, exportCoverImages in
+        DispatchQueue.main.async {
+          progressViewController?.dismiss(animated: true) {
+            guard error == nil else {
+              Logger.logError("error with exporting video \(error!)")
+              return
+            }
+            // 2. Open summary view controller
+            let summaryViewController = SummaryViewController()
+            // 3. Prepopulate summaryVC with cover image
+            summaryViewController.coverImage = exportCoverImages?.coverImage
+            
+            let navigationController = presentedViewController as? UINavigationController
+            summaryViewController.editCoverHandler = { [weak navigationController] in
+              // 5. Return to cover screen if needed
+              navigationController?.popViewController(animated: true)
+            }
+            
+            // 4. Show summary screen
+            navigationController?.pushViewController(summaryViewController, animated: true)
+          }
+        }
+    })
   }
   
   // MARK: - Actions
