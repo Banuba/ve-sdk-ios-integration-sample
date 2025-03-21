@@ -689,7 +689,6 @@
 "com.banuba.recorder.pip.title" = "PiP";
 "com.banuba.editor.music" = "Music";
 "com.banuba.editor.time.title" = "Time";
-"com.banuba.editor.autoCut" = "AI Clipping";
 
 /* Gallery button title */
 "com.banuba.recorder.gallery.title" = "Gallery";
@@ -876,6 +875,7 @@
 "com.banuba.autocut.couldNotProcess" = "Couldn't process video";
 "com.banuba.autocut.somethingWentWrong" = "Something went wrong. Please try again.";
 "com.banuba.autocut.chooseTheme" = "Choose a theme";
+"com.banuba.autocut.export" = "Export";
 "com.banuba.autocut.alert.tryAgain.agree" = "Try again";
 "com.banuba.autocut.alert.tryAgain.disagree" = "Cancel";
 "com.banuba.autocut.alert.tryAgain.title" = "Something went wrong.\nTry again?";
@@ -887,6 +887,7 @@
 "com.banuba.autocut.added.sound" = "Added sound";
 "com.banuba.autocut.error.loadingTrackFailedMessage" = "Unable to load the song. Check your internet connection.";
 "BanubaVideoEditor.Gallery.Autocut" = "AI Clipping";
+"BanubaVideoEditor.Gallery.Autocut.ToolTip" = "Select your videos to turn them into social media-ready clips.";
 "BanubaVideoEditor.Gallery.Next" = "Next";
 "BanubaVideoEditor.Gallery.NextWithCount" = "Next (%d)";
 "BanubaVideoEditor.Gallery.TotalLengthUpTo" = "Total length should be up to %d sec";
