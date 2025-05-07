@@ -17,12 +17,12 @@
 		7D7D0A572B976D4000DF878E /* PhotoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D0A562B976D4000DF878E /* PhotoEditorModule.swift */; };
 		8A32EED0258CB5430098F852 /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EECF258CB5430098F852 /* bundleEffects */; };
 		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
+		DBB4EC732DCBA5DE00897EBE /* BanubaPhotoEditorSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DBB4EC722DCBA5DE00897EBE /* BanubaPhotoEditorSDK */; };
+		DBB4EC762DCBA62D00897EBE /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = DBB4EC752DCBA62D00897EBE /* BanubaSdk */; };
 		DBB4F8C62D437FE900B1AADD /* BanubaAudioBrowserSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DBB4F8C52D437FE900B1AADD /* BanubaAudioBrowserSDK */; };
 		DBB4F8C92D4380AA00B1AADD /* BSImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = DBB4F8C82D4380AA00B1AADD /* BSImagePicker */; };
 		DBB4F8CC2D4382D600B1AADD /* BanubaVideoEditorSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DBB4F8CB2D4382D600B1AADD /* BanubaVideoEditorSDK */; };
 		DBB4F8F32D43866C00B1AADD /* BanubaSdkSimple in Frameworks */ = {isa = PBXBuildFile; productRef = DBB4F8F22D43866C00B1AADD /* BanubaSdkSimple */; };
-		DBB4F8FA2D43893E00B1AADD /* BanubaPhotoEditorSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DBB4F8F92D43893E00B1AADD /* BanubaPhotoEditorSDK */; };
-		DBB4F8FD2D438A2700B1AADD /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = DBB4F8FC2D438A2700B1AADD /* BanubaSdk */; };
 		DBB4F9002D438A9E00B1AADD /* BanubaARCloudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DBB4F8FF2D438A9E00B1AADD /* BanubaARCloudSDK */; };
 /* End PBXBuildFile section */
 
@@ -46,12 +46,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB4EC732DCBA5DE00897EBE /* BanubaPhotoEditorSDK in Frameworks */,
 				DBB4F8F32D43866C00B1AADD /* BanubaSdkSimple in Frameworks */,
 				DBB4F8C62D437FE900B1AADD /* BanubaAudioBrowserSDK in Frameworks */,
-				DBB4F8FA2D43893E00B1AADD /* BanubaPhotoEditorSDK in Frameworks */,
+				DBB4EC762DCBA62D00897EBE /* BanubaSdk in Frameworks */,
 				DBB4F8CC2D4382D600B1AADD /* BanubaVideoEditorSDK in Frameworks */,
 				DBB4F9002D438A9E00B1AADD /* BanubaARCloudSDK in Frameworks */,
-				DBB4F8FD2D438A2700B1AADD /* BanubaSdk in Frameworks */,
 				DBB4F8C92D4380AA00B1AADD /* BSImagePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,9 +122,9 @@
 				DBB4F8C82D4380AA00B1AADD /* BSImagePicker */,
 				DBB4F8CB2D4382D600B1AADD /* BanubaVideoEditorSDK */,
 				DBB4F8F22D43866C00B1AADD /* BanubaSdkSimple */,
-				DBB4F8F92D43893E00B1AADD /* BanubaPhotoEditorSDK */,
-				DBB4F8FC2D438A2700B1AADD /* BanubaSdk */,
 				DBB4F8FF2D438A9E00B1AADD /* BanubaARCloudSDK */,
+				DBB4EC722DCBA5DE00897EBE /* BanubaPhotoEditorSDK */,
+				DBB4EC752DCBA62D00897EBE /* BanubaSdk */,
 			);
 			productName = Example;
 			productReference = 639DA008254700290011C153 /* Example.app */;
@@ -159,9 +159,9 @@
 				DBB4F8C72D4380AA00B1AADD /* XCRemoteSwiftPackageReference "BSImagePicker" */,
 				DBB4F8CA2D4382D600B1AADD /* XCRemoteSwiftPackageReference "BanubaVideoEditorSDK-iOS" */,
 				DBB4F8F12D43866C00B1AADD /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */,
-				DBB4F8F82D43893E00B1AADD /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */,
-				DBB4F8FB2D438A2700B1AADD /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */,
 				DBB4F8FE2D438A9E00B1AADD /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */,
+				DBB4EC712DCBA15800897EBE /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */,
+				DBB4EC742DCBA62D00897EBE /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */,
 			);
 			productRefGroup = 639DA009254700290011C153 /* Products */;
 			projectDirPath = "";
@@ -355,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				DEVELOPMENT_TEAM = NEWUB88C7M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -383,7 +383,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				DEVELOPMENT_TEAM = NEWUB88C7M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,12 +428,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DBB4EC712DCBA15800897EBE /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Banuba/BanubaPhotoEditorSDK-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.8;
+			};
+		};
+		DBB4EC742DCBA62D00897EBE /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Banuba/BanubaSDK-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.43.0;
+			};
+		};
 		DBB4F8C42D437FE900B1AADD /* XCRemoteSwiftPackageReference "BanubaAudioBrowserSDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.40.0;
+				minimumVersion = 1.43.0;
 			};
 		};
 		DBB4F8C72D4380AA00B1AADD /* XCRemoteSwiftPackageReference "BSImagePicker" */ = {
@@ -449,7 +465,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorSDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.40.0;
+				minimumVersion = 1.43.0;
 			};
 		};
 		DBB4F8F12D43866C00B1AADD /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */ = {
@@ -457,23 +473,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDKSimple-IOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.40.0;
-			};
-		};
-		DBB4F8F82D43893E00B1AADD /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Banuba/BanubaPhotoEditorSDK-iOS.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.7;
-			};
-		};
-		DBB4F8FB2D438A2700B1AADD /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Banuba/BanubaSDK-iOS";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.40.0;
+				minimumVersion = 1.43.0;
 			};
 		};
 		DBB4F8FE2D438A9E00B1AADD /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */ = {
@@ -481,12 +481,22 @@
 			repositoryURL = "https://github.com/Banuba/BanubaARCloudSDK-IOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.40.0;
+				minimumVersion = 1.43.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DBB4EC722DCBA5DE00897EBE /* BanubaPhotoEditorSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBB4EC712DCBA15800897EBE /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */;
+			productName = BanubaPhotoEditorSDK;
+		};
+		DBB4EC752DCBA62D00897EBE /* BanubaSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBB4EC742DCBA62D00897EBE /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */;
+			productName = BanubaSdk;
+		};
 		DBB4F8C52D437FE900B1AADD /* BanubaAudioBrowserSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DBB4F8C42D437FE900B1AADD /* XCRemoteSwiftPackageReference "BanubaAudioBrowserSDK-iOS" */;
@@ -506,16 +516,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DBB4F8F12D43866C00B1AADD /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */;
 			productName = BanubaSdkSimple;
-		};
-		DBB4F8F92D43893E00B1AADD /* BanubaPhotoEditorSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DBB4F8F82D43893E00B1AADD /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */;
-			productName = BanubaPhotoEditorSDK;
-		};
-		DBB4F8FC2D438A2700B1AADD /* BanubaSdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DBB4F8FB2D438A2700B1AADD /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */;
-			productName = BanubaSdk;
 		};
 		DBB4F8FF2D438A9E00B1AADD /* BanubaARCloudSDK */ = {
 			isa = XCSwiftPackageProductDependency;
