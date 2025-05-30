@@ -69,7 +69,7 @@
 
 /* Record speed format */
 "com.banuba.recorder.speedFormat" = "%@x";
-    
+
 /* Hint on how to apply masks to video */
 "Press and hold mask" = "Tap and hold to apply mask";
 
@@ -606,6 +606,9 @@
 /* Gallery empty selection message */
 "BanubaVideoEditor.Gallery.EmptySelectionMessage" = "Select at least 1 file";
 
+"BanubaVideoEditor.Gallery.selectAtLeastNumberOfMedia" = "Fill at least %d clips in a row. Reuse clips if needed.";
+"BanubaVideoEditor.Gallery.TemplateSegmentDurationFormat" = "%@s";
+
 // MARK: - Effect additional media picker text resource
 
 /* No media files found in gallery for adding to the effect */
@@ -670,6 +673,21 @@
 /* Editor, back button menu. Edit draft mode */
 "com.banuba.BanubaVideoEditor.draft.discardChangesAction" = "Discard changes";
 "com.banuba.BanubaVideoEditor.draft.updateAction" = "Update draft";
+
+// MARK: - Templates
+"BanubaVideoEditor.VideoTemplates.templatesTitle" = "Templates";
+"BanubaVideoEditor.VideoTemplates.noInternetTitle" = "No internet connection";
+"BanubaVideoEditor.VideoTemplates.noInternetMessage" = "Please check your internet connection \nand try again";
+"BanubaVideoEditor.VideoTemplates.tryAgain" = "Try again";
+
+"BanubaVideoEditor.VideoTemplates.nextButtonText" = "Try this template";
+
+"BanubaVideoEditor.VideoTemplates.failedToLoadMessage" = "Failed to load. Try again.";
+"BanubaVideoEditor.VideoTemplates.unstableConnectionMessage" = "Internet is unstable. Some features may load slowly.";
+
+"BanubaVideoEditor.VideoTemplates.editor.lose.message" = "Video not exported. Continue editing or discard changes?";
+"BanubaVideoEditor.VideoTemplates.editor.update.disagree" = "Discard";
+"BanubaVideoEditor.VideoTemplates.editor.lose.agree" = "Continue";
 
 //MARK: - Additional buttons
 "com.banuba.recorder.color.title" = "Filters";
@@ -875,7 +893,7 @@
 "com.banuba.autocut.couldNotProcess" = "Couldn't process video";
 "com.banuba.autocut.somethingWentWrong" = "Something went wrong. Please try again.";
 "com.banuba.autocut.chooseTheme" = "Choose a theme";
-"com.banuba.autocut.export" = "Export";
+"com.banuba.autocut.next" = "Next";
 "com.banuba.autocut.alert.tryAgain.agree" = "Try again";
 "com.banuba.autocut.alert.tryAgain.disagree" = "Cancel";
 "com.banuba.autocut.alert.tryAgain.title" = "Something went wrong.\nTry again?";
