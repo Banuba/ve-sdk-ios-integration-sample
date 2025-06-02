@@ -64,7 +64,16 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     )
     checkLicenseAndOpenVideoEditor(with: launchConfig)
   }
-  
+
+  @IBAction func openVideoEditorTemplates(_ sender: Any) {
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: .videoTemplates,
+      hostController: self,
+      animated: true
+    )
+    checkLicenseAndOpenVideoEditor(with: launchConfig)
+  }
+
   @IBAction func openVideoEditorPiP(_ sender: Any) {
     pickerGalleryVideos(entryPoint: .pip) { [weak self] pickedVideoUrls in
       guard let self, !pickedVideoUrls.isEmpty else { return }
