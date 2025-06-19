@@ -272,8 +272,11 @@
 /* Captions button title */
 "com.banuba.editor.captions" = "Captions";
 
-/* Captions not available for multiple videos */
+/* Captions not available for multiple videos in the Video Editor V1*/
 "com.banuba.editor.captionsNotAvailableForMutipleVideos" = "Not available for multiple videos and photo";
+
+/* Captions not available for slideshow in the Video Editor V2*/
+"com.banuba.editor.captionsNotAvailableForPhotos" = "Not available for slideshow";
 
 // MARK: - Filter names
 
@@ -451,7 +454,7 @@
 "com.banuba.overlayEditor.captions.noInternetConnectionMessage" = "Check your connection and try again.";
 "com.banuba.overlayEditor.captions.tryAgain" = "Try Again";
 "com.banuba.overlayEditor.captions.noInternetConnectionToast" = "The internet connection appears to be offline.";
-"com.banuba.captions.noAvailableForMiltipleVideosAndPhotoError" = "Not available for multiple videos and photo.";
+"com.banuba.captions.noAvailableForPhotoOnlyError" = "Sorry, automatic captions are currently not supported for slideshow or picture-in-picture videos.";
 
 "com.banuba.overlayEditor.captions.textStyle.basic" = "Basic";
 "com.banuba.overlayEditor.captions.textStyle.multicolor" = "Multicolor";
