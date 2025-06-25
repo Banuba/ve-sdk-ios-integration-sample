@@ -215,8 +215,8 @@
 /* Rapid effect name */
 "com.banuba.editor.effect.name.rapid" = "Rapid";
 
-/* Mirror 2 effect name*/
-"com.banuba.editor.effect.name.mirror2" = "Mirror 2";
+/* Mosaic effect name*/
+"com.banuba.editor.effect.name.mosaic" = "Mosaic";
 
 /* DV Cam effect name */
 "com.banuba.editor.effect.name.dvcam" = "DV Cam";
@@ -227,8 +227,8 @@
 /* Heat map effect name */
 "com.banuba.editor.effect.name.heatmap" = "Heat Map";
 
-/* Mirror effect name */
-"com.banuba.editor.effect.name.mirror" = "Mirror";
+/* Reflect 4 effect name */
+"com.banuba.editor.effect.name.reflect4" = "Reflect 4";
 
 /* Lumiere */
 "com.banuba.editor.effect.name.lumiere" = "Lumiere";
@@ -265,6 +265,60 @@
 
 /* Warp back effect name */
 "com.banuba.editor.effect.name.warp-back" = "Warp back";
+
+/* Electrical Diagram effect name */
+"com.banuba.editor.effect.name.electrical-diagram" = "Electrical Diagram";
+
+/* Frames 2 effect name */
+"com.banuba.editor.effect.name.frames2" = "Frames 2";
+
+/* Frames 3 effect name */
+"com.banuba.editor.effect.name.frames3" = "Frames 3";
+
+/* Frames 4 effect name */
+"com.banuba.editor.effect.name.frames4" = "Frames 4";
+
+/* Frames 6 effect name */
+"com.banuba.editor.effect.name.frames6" = "Frames 6";
+
+/* Frames 9 effect name */
+"com.banuba.editor.effect.name.frames9" = "Frames 9";
+
+/* Three Frame WB effect name */
+"com.banuba.editor.effect.name.three-Frame-WB" = "Three Frame WB";
+
+/* Three Layer Mirror effect name */
+"com.banuba.editor.effect.name.three-layer-mirror" = "Three Layer Mirror";
+
+/* Pendulum effect name */
+"com.banuba.editor.effect.name.pendulum" = "Pendulum";
+
+/* Reverse 2 effect name */
+"com.banuba.editor.effect.name.revers2" = "Reverse 2";
+
+/* Coloring effect name */
+"com.banuba.editor.effect.name.coloring" = "Coloring";
+
+/* Random Monochrome effect name */
+"com.banuba.editor.effect.name.random-monochrome" = "Random Monochrome";
+
+/* Fireflies effect name */
+"com.banuba.editor.effect.name.fireflies" = "Fireflies";
+
+/* From Dark 4 effect name */
+"com.banuba.editor.effect.name.from-dark4" = "From Dark 4";
+
+/* Grey Spin 4 effect name */
+"com.banuba.editor.effect.name.grey-spin4" = "Grey Spin 4";
+
+/* Black White Flash effect name */
+"com.banuba.editor.effect.name.black-white-flash" = "Black White Flash";
+
+/* Mirror effect name */
+"com.banuba.editor.effect.name.mirror" = "Mirror";
+
+/* Film effect name */
+"com.banuba.editor.effect.name.film" = "Film";
 
 /* Open trimmer button name (for dradt) */
 "com.banuba.editor.openTrimButtonTitle" = "Adjust Clip";
@@ -739,6 +793,23 @@
 "com.banuba.videoEditor.transition.scrollLeft" = "Scroll left";
 "com.banuba.videoEditor.transition.spinRight" = "Spin";
 "com.banuba.videoEditor.transition.fade" = "Fade";
+"com.banuba.videoEditor.transition.blink" = "Blink";
+"com.banuba.videoEditor.transition.stretching2" = "Stretching 2";
+"com.banuba.videoEditor.transition.infinityPlus" = "Infinity Plus";
+"com.banuba.videoEditor.transition.infinityMinus" = "Infinity Minus";
+"com.banuba.videoEditor.transition.retractionPlus" = "Retraction Plus";
+"com.banuba.videoEditor.transition.retractionMinus" = "Retraction Minus";
+"com.banuba.videoEditor.transition.stretchLeft" = "Stretch Left";
+"com.banuba.videoEditor.transition.stretchRight" = "Stretch Right";
+"com.banuba.videoEditor.transition.rotationPlus" = "Rotation Plus";
+"com.banuba.videoEditor.transition.rotationMinus" = "Rotation Minus";
+"com.banuba.videoEditor.transition.scrollMirroredUp" = "Scroll Mirrored Up";
+"com.banuba.videoEditor.transition.scrollMirroredRight" = "Scroll Mirrored Right";
+"com.banuba.videoEditor.transition.scrollMirroredLeft" = "Scroll Mirrored Left";
+"com.banuba.videoEditor.transition.scrollMirroredDown" = "Scroll Mirrored Down";
+"com.banuba.videoEditor.transition.fadingFromWhite" = "Fading From White";
+"com.banuba.videoEditor.transition.fromDark" = "From Dark";
+"com.banuba.videoEditor.transition.intoDark" = "Into Dark";
 
 /* Transition disabled alert message */
 "com.banuba.videoEditor.transition.disabledToastMessage" = "The clip must be longer than 0.5 sec to apply transition.";
