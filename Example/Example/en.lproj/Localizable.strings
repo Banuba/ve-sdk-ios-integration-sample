@@ -755,6 +755,7 @@
 "com.banuba.recorder.effects.title" = "Effects";
 "com.banuba.recorder.toggle.title" = "Flip";
 "com.banuba.recorder.greenScreen.title" = "Green Screen";
+"com.banuba.recorder.weatheman.title" = "Weatherman";
 "com.banuba.recorder.flashlight.title" = "Flash";
 "com.banuba.recorder.timer.title" = "Timer";
 "com.banuba.recorder.speed.title" = "Speed";
@@ -771,6 +772,7 @@
 /* Recorder video duration */
 "com.banuba.recorder.secondsFormat" = "%d sec";
 "com.banuba.recorder.minutesFormat" = "%d min";
+"com.banuba.recorder.minutesWithSecondsFormat" = "%d min %d sec";
 "com.banuba.recorder.shortedSecondsFormat" = "%ds";
 "com.banuba.recorder.shortedMinutesFormat" = "%dm";
 
@@ -955,9 +957,14 @@
 
 "com.banuba.recorder.disardVideoAlertMessage" = "Discard video?";
 "com.banuba.recorder.disardVideoAlertDiscardButton" = "Discard";
-"com.banuba.recorder.greenScreen.selectImageAsABackground" = "Select image as a background";
+"com.banuba.recorder.greenScreen.selectImageAsABackground" = "Select media as a background";
+"com.banuba.recorder.greenScreen.selectMediaToTalkAbout" = "Select media to talk about";
 "com.banuba.recorder.greenScreen.selectFromGallery" = "Select from gallery";
 "com.banuba.recorder.greenScreen.allowAccess" = "Allow Access";
+
+"com.banuba.recorder.weatherman.title" = "Move and resize your video!";
+"com.banuba.recorder.weatherman.dragTip" = "Drag to reposition";
+"com.banuba.recorder.weatherman.pinchTip" = "Pinch to resize";
 
 // MARK: - Auto Cut
 "com.banuba.autocut.choosePart" = "Choose the part you want for your video";
