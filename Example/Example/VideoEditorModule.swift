@@ -85,7 +85,19 @@ class VideoEditorModule {
         featureConfiguration.supportsTrimRecordedVideo = true
         featureConfiguration.isMuteCameraAudioEnabled = true
         config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
-        
+
+        customizeRecorder(&config)
+
         return config
+    }
+
+    private func customizeRecorder(_ config: inout VideoEditorConfig) {
+        // Hide top progress bar
+        config.recorderConfiguration.sequenceHeight = .zero
+
+        // Setup circular progress record button provider. This provider contains in BanubaVideoEditorSDK
+        config.recorderConfiguration.recordButtonProvider = CircularProgressRecordButtonProvider()
+        // Customize stroke color
+        config.recorderConfiguration.recordButtonConfiguration.strokeColor = #colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1).cgColor
     }
 }
