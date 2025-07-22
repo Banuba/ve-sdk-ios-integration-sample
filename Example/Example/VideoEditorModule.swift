@@ -85,7 +85,20 @@ class VideoEditorModule {
         featureConfiguration.supportsTrimRecordedVideo = true
         featureConfiguration.isMuteCameraAudioEnabled = true
         config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
-        
+
+        customizeRecorder(&config)
+
         return config
+    }
+
+    private func customizeRecorder(_ config: inout VideoEditorConfig) {
+        // Setup progress label appearance and counting mode.
+        config.recorderConfiguration.progressLabelCountingMode = .countDown(
+            textConfiguration:  TextConfiguration(
+                font: .boldSystemFont(ofSize: 17),
+                color: .white,
+                shadow: .init()
+            )
+        )
     }
 }

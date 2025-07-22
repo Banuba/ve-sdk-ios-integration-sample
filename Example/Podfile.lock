@@ -1,11 +1,11 @@
 PODS:
-  - BanubaARCloudSDK (1.46.0):
-    - BanubaUtilities (= 1.46.0)
-  - BanubaAudioBrowserSDK (1.46.0):
-    - BanubaLicenseServicingSDK (= 1.46.0)
-    - BanubaUtilities (= 1.46.0)
-  - BanubaLicenseServicingSDK (1.46.0):
-    - BNBLicenseUtils (= 1.46.0)
+  - BanubaARCloudSDK (1.46.1):
+    - BanubaUtilities (= 1.46.1)
+  - BanubaAudioBrowserSDK (1.46.1):
+    - BanubaLicenseServicingSDK (= 1.46.1)
+    - BanubaUtilities (= 1.46.1)
+  - BanubaLicenseServicingSDK (1.46.1):
+    - BNBLicenseUtils (= 1.46.1)
   - BanubaPhotoEditorSDK (1.2.9):
     - BanubaLicenseServicingSDK (>= 1.45.0)
     - BanubaUtilities (>= 1.45.0)
@@ -20,7 +20,7 @@ PODS:
     - BNBSdkApi (~> 1.17.2)
     - BNBSdkCore (~> 1.17.2)
     - BNBSkin (~> 1.17.2)
-  - BanubaSDK (1.46.0):
+  - BanubaSDK (1.46.1):
     - BNBBackground (~> 1.17.2)
     - BNBEffectPlayer (~> 1.17.2)
     - BNBEyes (~> 1.17.2)
@@ -30,15 +30,15 @@ PODS:
     - BNBSdkApi (~> 1.17.2)
     - BNBSdkCore (~> 1.17.2)
     - BNBSkin (~> 1.17.2)
-  - BanubaSDKSimple (1.46.0)
-  - BanubaUtilities (1.46.0)
-  - BanubaVideoEditorCore (1.46.0):
-    - BanubaLicenseServicingSDK (= 1.46.0)
-    - BanubaUtilities (= 1.46.0)
-  - BanubaVideoEditorSDK (1.46.0):
-    - BanubaLicenseServicingSDK (= 1.46.0)
-    - BanubaUtilities (= 1.46.0)
-    - BanubaVideoEditorCore (= 1.46.0)
+  - BanubaSDKSimple (1.46.1)
+  - BanubaUtilities (1.46.1)
+  - BanubaVideoEditorCore (1.46.1):
+    - BanubaLicenseServicingSDK (= 1.46.1)
+    - BanubaUtilities (= 1.46.1)
+  - BanubaVideoEditorSDK (1.46.1):
+    - BanubaLicenseServicingSDK (= 1.46.1)
+    - BanubaUtilities (= 1.46.1)
+    - BanubaVideoEditorCore (= 1.46.1)
   - BNBAcneEyebagsRemoval (1.17.4):
     - BNBEffectPlayer (= 1.17.4)
     - BNBFaceTracker (= 1.17.4)
@@ -62,7 +62,7 @@ PODS:
     - BNBEffectPlayer (= 1.17.4)
     - BNBScripting (= 1.17.4)
     - BNBSdkCore (= 1.17.4)
-  - BNBLicenseUtils (1.46.0)
+  - BNBLicenseUtils (1.46.1)
   - BNBLips (1.17.4):
     - BNBEffectPlayer (= 1.17.4)
     - BNBFaceTracker (= 1.17.4)
@@ -79,12 +79,12 @@ PODS:
   - BSImagePicker (3.3.3)
 
 DEPENDENCIES:
-  - BanubaARCloudSDK (= 1.46.0)
-  - BanubaAudioBrowserSDK (= 1.46.0)
+  - BanubaARCloudSDK (= 1.46.1)
+  - BanubaAudioBrowserSDK (= 1.46.1)
   - BanubaPhotoEditorSDK (= 1.2.9)
-  - BanubaSDK (= 1.46.0)
-  - BanubaSDKSimple (= 1.46.0)
-  - BanubaVideoEditorSDK (= 1.46.0)
+  - BanubaSDK (= 1.46.1)
+  - BanubaSDKSimple (= 1.46.1)
+  - BanubaVideoEditorSDK (= 1.46.1)
   - BSImagePicker
 
 SPEC REPOS:
@@ -115,22 +115,22 @@ SPEC REPOS:
     - BSImagePicker
 
 SPEC CHECKSUMS:
-  BanubaARCloudSDK: b578578a0618e5b5d7d2b7a9e91b31fa84cb6487
-  BanubaAudioBrowserSDK: e8b1a7ff92d49130e91b39c2d5ca876e15dc7b19
-  BanubaLicenseServicingSDK: e98d0f56fd627fffbca9ef3c16b106a556f52ae1
+  BanubaARCloudSDK: bb31b046b31551c6903ae05193b2ef8614e22da0
+  BanubaAudioBrowserSDK: fb87d01d018babdcd506d7f8d296ef4d8677a4c9
+  BanubaLicenseServicingSDK: 90482c5ee06474d7b9c3b4e713a228f864e2e2c6
   BanubaPhotoEditorSDK: d3db27d853e39510f62a7202cfc9b1605eb7ae05
-  BanubaSDK: 40886ac4799c5addbb1e291da9ebfe47762ffd11
-  BanubaSDKSimple: 592a82ea8316c7516d98aa6839963e9f5c9e5df2
-  BanubaUtilities: 5b03ce18e12c72b8bfc8cbe11bff2714392107e3
-  BanubaVideoEditorCore: 0d3cf7f855de9273fa9ed261046eb3c3313860a6
-  BanubaVideoEditorSDK: c7b46cac7f863da9611276db824bd992caf42143
+  BanubaSDK: 9d49c6fc9d207350769ea651d986ce46b098e81b
+  BanubaSDKSimple: 130436b53cf69b937e53c396f132fda3db474d3f
+  BanubaUtilities: 54076882f31ce5e55660e027b54f60715b15f0df
+  BanubaVideoEditorCore: c690fb447047c2578122b77605949115bd81bbef
+  BanubaVideoEditorSDK: d5c993350343e1b261fc520b1d9d4181da01c913
   BNBAcneEyebagsRemoval: e1b94265e7a17569e9bb519552c911c292ed8e9c
   BNBBackground: d13b70dc24046dd0e01a63c1f025309e3600c944
   BNBEffectPlayer: 572831e1acc8741198ed9cad7af97c331dd2e2b9
   BNBEyes: a00a016a41fba11f02abff9d316a18ffc107627d
   BNBFaceTracker: 3e62af255e467a0741b70f3d6026d1d8f719292d
   BNBHair: 2fc589a99b51787ba8f9b9c54567d310af0ed70b
-  BNBLicenseUtils: 321ac5d81f71728097e8e516cd6a7b465e16609e
+  BNBLicenseUtils: 623c8a458f784c89333ad2b71073c47f1eac4ef1
   BNBLips: f510db07f9e436df367433ebc6aa57a7272f7e4d
   BNBScripting: 60ab9e8d2f88f0ce424f42b5c678a0dc48478a77
   BNBSdkApi: c35a6a662c0e87b461f1e1b9b681289845f43e1c
@@ -138,6 +138,6 @@ SPEC CHECKSUMS:
   BNBSkin: 100efe82a99ce1deb5c033ed27a5b90e9c1fbca6
   BSImagePicker: 57900b323f951711608acaf97d52e9183530cb6d
 
-PODFILE CHECKSUM: 55d3ff48847b9447d1dbaad0b1e5f262670c3e39
+PODFILE CHECKSUM: 2f05671af5eee76ddc156fcb6d43fd2d05e5e3db
 
 COCOAPODS: 1.16.2
