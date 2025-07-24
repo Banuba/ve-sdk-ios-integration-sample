@@ -326,10 +326,9 @@
 /* Captions button title */
 "com.banuba.editor.captions" = "Captions";
 
-/* Captions not available for multiple videos in the Video Editor V1*/
+/* Captions not available for multiple videos in the Video Editor V1 */
 "com.banuba.editor.captionsNotAvailableForMutipleVideos" = "Not available for multiple videos and photo";
-
-/* Captions not available for slideshow in the Video Editor V2*/
+/* Captions not available for slideshow in the Video Editor V2 */
 "com.banuba.editor.captionsNotAvailableForPhotos" = "Not available for slideshow";
 
 // MARK: - Filter names
@@ -910,6 +909,8 @@
 "com.banuba.newEditor.filters" = "Filters";
 "com.banuba.newEditor.pixelate" = "Pixelate";
 "com.banuba.newEditor.speed" = "Speed";
+"com.banuba.newEditor.draw" = "Draw";
+"com.banuba.newEditor.colorPicker" = "Color picker";
 "com.banuba.newEditor.crop" = "Crop";
 "com.banuba.newEditor.split" = "Split";
 "com.banuba.newEditor.add" = "Add";
@@ -917,6 +918,7 @@
 "com.banuba.newEditor.replace" = "Replace";
 "com.banuba.newEditor.delete" = "Delete";
 "com.banuba.newEditor.adjust" = "Adjust";
+"com.banuba.newEditor.textStyle" = "Style";
 "com.banuba.newEditor.addCircle" = "Add Circle";
 "com.banuba.newEditor.addSquare" = "Add Square";
 "com.banuba.newEditor.pixelation" = "Pixelation";
@@ -995,6 +997,13 @@
 "com.banuba.music.panel.title" = "Add sound";
 
 "com.banuba.search.placeholder" = "Search";
+
+// MARK: - Finger Drawing
+"com.banuba.overlayEditor.fingerDrawing.clearAll" = "Clear All";
+
+"com.banuba.overlayEditor.fingerDrawing.size" = "Size";
+
+"com.banuba.overlayEditor.fingerDrawing.opacity" = "Opacity";
 
 // MARK: - Photo Editor
 "photoEditor.gallery.addPhotos" = "Add photos";
