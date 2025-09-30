@@ -22,7 +22,7 @@ target 'Example' do
   
   # Photo Editor
   
-  pod 'BanubaPhotoEditorSDK', '1.2.9'
+  pod 'BanubaPhotoEditorSDK', '1.2.10'
   
   # Third party
   
