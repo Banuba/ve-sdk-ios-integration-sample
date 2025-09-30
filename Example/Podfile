@@ -10,7 +10,7 @@ target 'Example' do
   
   # Video Editor
   
-  banuba_sdk_version = '1.47.0'
+  banuba_sdk_version = '1.48.0'
   
   pod 'BanubaVideoEditorSDK', banuba_sdk_version
   
@@ -22,7 +22,7 @@ target 'Example' do
   
   # Photo Editor
   
-  pod 'BanubaPhotoEditorSDK', '1.2.9'
+  pod 'BanubaPhotoEditorSDK', '1.2.10'
   
   # Third party
   
