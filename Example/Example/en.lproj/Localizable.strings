@@ -147,6 +147,8 @@
 "alert.microphone.unavailable.title" = "Microphone unavailable. Please allow access in device settings";
 "alert.microphone.unavailable.message" = "";
 
+"alert.videoTemplates.removeVideos.message" = "To use the feature, delete the recorded photos and videos";
+
 "errors.lowDiskSpace" = "Low on space. Please make sure the device storage space is not critically full";
 "errors.photosLibraryNetworkError" = "Unfortunately, there was an error downloading the video. Please try again.\nIf the issue persists check internet connection and try opening the video in your gallery first.";
 
@@ -762,6 +764,7 @@
 "com.banuba.recorder.masks.title" = "Masks";
 "com.banuba.recorder.muteSound.title" = "Mic";
 "com.banuba.recorder.pip.title" = "PiP";
+"com.banuba.recorder.videoTemplates.title" = "Templates";
 "com.banuba.editor.music" = "Music";
 "com.banuba.editor.time.title" = "Time";
 
@@ -1005,6 +1008,11 @@
 "com.banuba.overlayEditor.fingerDrawing.size" = "Size";
 
 "com.banuba.overlayEditor.fingerDrawing.opacity" = "Opacity";
+
+// MARK: - Editing images
+"com.banuba.editImagesTitle" = "Edit images";
+"com.banuba.editPhoto" = "Edit photo";
+"com.banuba.next" = "Next";
 
 // MARK: - Photo Editor
 "photoEditor.gallery.addPhotos" = "Add photos";
