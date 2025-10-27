@@ -680,16 +680,14 @@
 "cover.gallery.button.title" = "Choose from Gallery";
 
 // MARK: - PIP
-
-"pip.switch.camera.title" = "Switch";
-"pip.square.camera.title" = "Square";
-"pip.round.camera.title" = "Round";
-"pip.floating.camera.title" = "Floating";
-"pip.react.camera.title" = "React";
-"pip.original.camera.title" = "Original";
-"pip.centered.camera.title" = "Centered";
-"pip.left.right.camera.title" = "Portrait";
-"pip.top.bottom.camera.title" = "Landscape";
+"pip.mode.react1" = "React 1";
+"pip.mode.react2" = "React 2";
+"pip.mode.react3" = "React 3";
+"pip.mode.react4" = "React 4";
+"pip.mode.landscape1" = "Landscape 1";
+"pip.mode.landscape2" = "Landscape 2";
+"pip.mode.portrait1" = "Portrait 1";
+"pip.mode.portrait2" = "Portrait 2";
 "pip.layout.settings.title" = "Select layout settings";
 
 "feature.disabled.pip" = "Picture in picture is not included in your package. Contact account manager to have it.";
