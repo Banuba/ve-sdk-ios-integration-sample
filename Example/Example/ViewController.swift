@@ -2,14 +2,13 @@ import UIKit
 import BanubaVideoEditorSDK
 import BanubaPhotoEditorSDKLight
 
-import VideoEditor
 import AVFoundation
 import AVKit
 import Photos
 import BSImagePicker
-import VEExportSDK
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
+import BanubaUtilities
 
 class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEditorDelegate {
   
@@ -31,8 +30,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     
     let activityIndicator = UIActivityIndicatorView(style: .large)
     view.addSubview(activityIndicator)
-    activityIndicator.center = view.frame.getCenter()
-    activityIndicator.center.y = view.frame.maxY - activityIndicator.frame.height - 20
+    activityIndicator.center = CGPoint(x: view.bounds.midX, y: view.bounds.maxY - activityIndicator.frame.height - 20)
     activityIndicator.startAnimating()
     view.isUserInteractionEnabled = false
     
@@ -188,6 +186,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
       uuid: UUID(),
       id: nil,
       url: musicURL,
+      remoteURL: nil,
       coverURL: nil,
       timeRange: MediaTrackTimeRange(
         startTime: .zero,
