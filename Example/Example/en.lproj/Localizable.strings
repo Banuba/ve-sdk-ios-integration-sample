@@ -939,6 +939,8 @@
 "com.banuba.newEditor.addVoiceover" = "Voiceover";
 "com.banuba.newEditor.addText" = "Add Text";
 "com.banuba.newEditor.addCaptions" = "Add Captions";
+"com.banuba.newEditor.addLowerThird" = "Add Lower Third";
+"com.banuba.newEditor.characterLimitReached" = "Character limit reached";
 "com.banuba.newEditor.applyToAll" = "Apply to all";
 "com.banuba.newEditor.videoIsTooLongFormat" = "The video is too long. Maximum length is %@.";
 "com.banuba.newEditor.videoIsTooShortFormat" = "The video is too short. Minimum length is %d second.";
