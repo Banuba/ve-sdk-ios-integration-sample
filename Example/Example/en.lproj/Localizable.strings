@@ -66,7 +66,10 @@
 
 /* Enabling the countdown timer to automatically start shooting in the camera */
 "%i seconds timer is on" = "%i seconds timer is on";
-    
+
+/* Record speed format */
+"com.banuba.recorder.speedFormat" = "%@x";
+
 /* Hint on how to apply masks to video */
 "Press and hold mask" = "Tap and hold to apply mask";
 
@@ -144,6 +147,8 @@
 "alert.microphone.unavailable.title" = "Microphone unavailable. Please allow access in device settings";
 "alert.microphone.unavailable.message" = "";
 
+"alert.videoTemplates.removeVideos.message" = "To use the feature, delete the recorded photos and videos";
+
 "errors.lowDiskSpace" = "Low on space. Please make sure the device storage space is not critically full";
 "errors.photosLibraryNetworkError" = "Unfortunately, there was an error downloading the video. Please try again.\nIf the issue persists check internet connection and try opening the video in your gallery first.";
 
@@ -212,8 +217,8 @@
 /* Rapid effect name */
 "com.banuba.editor.effect.name.rapid" = "Rapid";
 
-/* Mirror 2 effect name*/
-"com.banuba.editor.effect.name.mirror2" = "Mirror 2";
+/* Mosaic effect name*/
+"com.banuba.editor.effect.name.mosaic" = "Mosaic";
 
 /* DV Cam effect name */
 "com.banuba.editor.effect.name.dvcam" = "DV Cam";
@@ -224,8 +229,8 @@
 /* Heat map effect name */
 "com.banuba.editor.effect.name.heatmap" = "Heat Map";
 
-/* Mirror effect name */
-"com.banuba.editor.effect.name.mirror" = "Mirror";
+/* Reflect 4 effect name */
+"com.banuba.editor.effect.name.reflect4" = "Reflect 4";
 
 /* Lumiere */
 "com.banuba.editor.effect.name.lumiere" = "Lumiere";
@@ -263,14 +268,70 @@
 /* Warp back effect name */
 "com.banuba.editor.effect.name.warp-back" = "Warp back";
 
+/* Electrical Diagram effect name */
+"com.banuba.editor.effect.name.electrical-diagram" = "Electrical Diagram";
+
+/* Frames 2 effect name */
+"com.banuba.editor.effect.name.frames2" = "Frames 2";
+
+/* Frames 3 effect name */
+"com.banuba.editor.effect.name.frames3" = "Frames 3";
+
+/* Frames 4 effect name */
+"com.banuba.editor.effect.name.frames4" = "Frames 4";
+
+/* Frames 6 effect name */
+"com.banuba.editor.effect.name.frames6" = "Frames 6";
+
+/* Frames 9 effect name */
+"com.banuba.editor.effect.name.frames9" = "Frames 9";
+
+/* Three Frame WB effect name */
+"com.banuba.editor.effect.name.three-Frame-WB" = "Three Frame WB";
+
+/* Three Layer Mirror effect name */
+"com.banuba.editor.effect.name.three-layer-mirror" = "Three Layer Mirror";
+
+/* Pendulum effect name */
+"com.banuba.editor.effect.name.pendulum" = "Pendulum";
+
+/* Reverse 2 effect name */
+"com.banuba.editor.effect.name.revers2" = "Reverse 2";
+
+/* Coloring effect name */
+"com.banuba.editor.effect.name.coloring" = "Coloring";
+
+/* Random Monochrome effect name */
+"com.banuba.editor.effect.name.random-monochrome" = "Random Monochrome";
+
+/* Fireflies effect name */
+"com.banuba.editor.effect.name.fireflies" = "Fireflies";
+
+/* From Dark 4 effect name */
+"com.banuba.editor.effect.name.from-dark4" = "From Dark 4";
+
+/* Grey Spin 4 effect name */
+"com.banuba.editor.effect.name.grey-spin4" = "Grey Spin 4";
+
+/* Black White Flash effect name */
+"com.banuba.editor.effect.name.black-white-flash" = "Black White Flash";
+
+/* Mirror effect name */
+"com.banuba.editor.effect.name.mirror" = "Mirror";
+
+/* Film effect name */
+"com.banuba.editor.effect.name.film" = "Film";
+
 /* Open trimmer button name (for dradt) */
 "com.banuba.editor.openTrimButtonTitle" = "Adjust Clip";
 
 /* Captions button title */
 "com.banuba.editor.captions" = "Captions";
 
-/* Captions not available for multiple videos */
+/* Captions not available for multiple videos in the Video Editor V1 */
 "com.banuba.editor.captionsNotAvailableForMutipleVideos" = "Not available for multiple videos and photo";
+/* Captions not available for slideshow in the Video Editor V2 */
+"com.banuba.editor.captionsNotAvailableForPhotos" = "Not available for slideshow";
 
 // MARK: - Filter names
 
@@ -448,7 +509,7 @@
 "com.banuba.overlayEditor.captions.noInternetConnectionMessage" = "Check your connection and try again.";
 "com.banuba.overlayEditor.captions.tryAgain" = "Try Again";
 "com.banuba.overlayEditor.captions.noInternetConnectionToast" = "The internet connection appears to be offline.";
-"com.banuba.captions.noAvailableForMiltipleVideosAndPhotoError" = "Not available for multiple videos and photo.";
+"com.banuba.captions.noAvailableForPhotoOnlyError" = "Sorry, automatic captions are currently not supported for slideshow or picture-in-picture videos.";
 
 "com.banuba.overlayEditor.captions.textStyle.basic" = "Basic";
 "com.banuba.overlayEditor.captions.textStyle.multicolor" = "Multicolor";
@@ -493,6 +554,15 @@
 
 /* My files button title */
 "AudioBrowser.myFiles" = "My Files";
+
+/* My files local audio button title */
+"AudioBrowser.localAudio.musicHeader" = "Music";
+/* My files local audio my files button title */
+"AudioBrowser.localAudio.myFiles" = "My files";
+/* My files local audio empty state title */
+"AudioBrowser.localAudio.emptyStateTitle" = "No music files found";
+/* My files local audio empty state message */
+"AudioBrowser.localAudio.emptyStateMessage" = "Add songs to your device to display them\n here";
 
 "audioBrowser.search.by.categories" = "Search by categories";
 "audioBrowser.search.by.groups" = "Search by groups";
@@ -594,6 +664,9 @@
 /* Gallery empty selection message */
 "BanubaVideoEditor.Gallery.EmptySelectionMessage" = "Select at least 1 file";
 
+"BanubaVideoEditor.Gallery.selectAtLeastNumberOfMedia" = "Fill at least %d clips in a row. Reuse clips if needed.";
+"BanubaVideoEditor.Gallery.TemplateSegmentDurationFormat" = "%@s";
+
 // MARK: - Effect additional media picker text resource
 
 /* No media files found in gallery for adding to the effect */
@@ -607,16 +680,14 @@
 "cover.gallery.button.title" = "Choose from Gallery";
 
 // MARK: - PIP
-
-"pip.switch.camera.title" = "Switch";
-"pip.square.camera.title" = "Square";
-"pip.round.camera.title" = "Round";
-"pip.floating.camera.title" = "Floating";
-"pip.react.camera.title" = "React";
-"pip.original.camera.title" = "Original";
-"pip.centered.camera.title" = "Centered";
-"pip.left.right.camera.title" = "Portrait";
-"pip.top.bottom.camera.title" = "Landscape";
+"pip.mode.react1" = "React 1";
+"pip.mode.react2" = "React 2";
+"pip.mode.react3" = "React 3";
+"pip.mode.react4" = "React 4";
+"pip.mode.landscape1" = "Landscape 1";
+"pip.mode.landscape2" = "Landscape 2";
+"pip.mode.portrait1" = "Portrait 1";
+"pip.mode.portrait2" = "Portrait 2";
 "pip.layout.settings.title" = "Select layout settings";
 
 "feature.disabled.pip" = "Picture in picture is not included in your package. Contact account manager to have it.";
@@ -659,6 +730,21 @@
 "com.banuba.BanubaVideoEditor.draft.discardChangesAction" = "Discard changes";
 "com.banuba.BanubaVideoEditor.draft.updateAction" = "Update draft";
 
+// MARK: - Templates
+"BanubaVideoEditor.VideoTemplates.templatesTitle" = "Templates";
+"BanubaVideoEditor.VideoTemplates.noInternetTitle" = "No internet connection";
+"BanubaVideoEditor.VideoTemplates.noInternetMessage" = "Please check your internet connection \nand try again";
+"BanubaVideoEditor.VideoTemplates.tryAgain" = "Try again";
+
+"BanubaVideoEditor.VideoTemplates.nextButtonText" = "Try this template";
+
+"BanubaVideoEditor.VideoTemplates.failedToLoadMessage" = "Failed to load. Try again.";
+"BanubaVideoEditor.VideoTemplates.unstableConnectionMessage" = "Internet is unstable. Some features may load slowly.";
+
+"BanubaVideoEditor.VideoTemplates.editor.lose.message" = "Video not exported. Continue editing or discard changes?";
+"BanubaVideoEditor.VideoTemplates.editor.update.disagree" = "Discard";
+"BanubaVideoEditor.VideoTemplates.editor.lose.agree" = "Continue";
+
 //MARK: - Additional buttons
 "com.banuba.recorder.color.title" = "Filters";
 "com.banuba.recorder.sticker.title" = "Stickers";
@@ -668,6 +754,7 @@
 "com.banuba.recorder.effects.title" = "Effects";
 "com.banuba.recorder.toggle.title" = "Flip";
 "com.banuba.recorder.greenScreen.title" = "Green Screen";
+"com.banuba.recorder.weatheman.title" = "Weatherman";
 "com.banuba.recorder.flashlight.title" = "Flash";
 "com.banuba.recorder.timer.title" = "Timer";
 "com.banuba.recorder.speed.title" = "Speed";
@@ -675,9 +762,9 @@
 "com.banuba.recorder.masks.title" = "Masks";
 "com.banuba.recorder.muteSound.title" = "Mic";
 "com.banuba.recorder.pip.title" = "PiP";
+"com.banuba.recorder.videoTemplates.title" = "Templates";
 "com.banuba.editor.music" = "Music";
 "com.banuba.editor.time.title" = "Time";
-"com.banuba.editor.autoCut" = "AI Clipping";
 
 /* Gallery button title */
 "com.banuba.recorder.gallery.title" = "Gallery";
@@ -685,6 +772,7 @@
 /* Recorder video duration */
 "com.banuba.recorder.secondsFormat" = "%d sec";
 "com.banuba.recorder.minutesFormat" = "%d min";
+"com.banuba.recorder.minutesWithSecondsFormat" = "%d min %d sec";
 "com.banuba.recorder.shortedSecondsFormat" = "%ds";
 "com.banuba.recorder.shortedMinutesFormat" = "%dm";
 
@@ -707,6 +795,23 @@
 "com.banuba.videoEditor.transition.scrollLeft" = "Scroll left";
 "com.banuba.videoEditor.transition.spinRight" = "Spin";
 "com.banuba.videoEditor.transition.fade" = "Fade";
+"com.banuba.videoEditor.transition.blink" = "Blink";
+"com.banuba.videoEditor.transition.stretching2" = "Stretching 2";
+"com.banuba.videoEditor.transition.infinityPlus" = "Infinity Plus";
+"com.banuba.videoEditor.transition.infinityMinus" = "Infinity Minus";
+"com.banuba.videoEditor.transition.retractionPlus" = "Retraction Plus";
+"com.banuba.videoEditor.transition.retractionMinus" = "Retraction Minus";
+"com.banuba.videoEditor.transition.stretchLeft" = "Stretch Left";
+"com.banuba.videoEditor.transition.stretchRight" = "Stretch Right";
+"com.banuba.videoEditor.transition.rotationPlus" = "Rotation Plus";
+"com.banuba.videoEditor.transition.rotationMinus" = "Rotation Minus";
+"com.banuba.videoEditor.transition.scrollMirroredUp" = "Scroll Mirrored Up";
+"com.banuba.videoEditor.transition.scrollMirroredRight" = "Scroll Mirrored Right";
+"com.banuba.videoEditor.transition.scrollMirroredLeft" = "Scroll Mirrored Left";
+"com.banuba.videoEditor.transition.scrollMirroredDown" = "Scroll Mirrored Down";
+"com.banuba.videoEditor.transition.fadingFromWhite" = "Fading From White";
+"com.banuba.videoEditor.transition.fromDark" = "From Dark";
+"com.banuba.videoEditor.transition.intoDark" = "Into Dark";
 
 /* Transition disabled alert message */
 "com.banuba.videoEditor.transition.disabledToastMessage" = "The clip must be longer than 0.5 sec to apply transition.";
@@ -803,20 +908,28 @@
 "com.banuba.newEditor.masks" = "Masks";
 "com.banuba.newEditor.audio" = "Audio";
 "com.banuba.newEditor.filters" = "Filters";
-"com.banuba.newEditor.blur" = "Blur";
+"com.banuba.newEditor.pixelate" = "Pixelate";
 "com.banuba.newEditor.speed" = "Speed";
+"com.banuba.newEditor.draw" = "Draw";
+"com.banuba.newEditor.colorPicker" = "Color picker";
 "com.banuba.newEditor.crop" = "Crop";
+"com.banuba.newEditor.rotate" = "Rotate";
 "com.banuba.newEditor.split" = "Split";
 "com.banuba.newEditor.add" = "Add";
 "com.banuba.newEditor.edit" = "Edit";
 "com.banuba.newEditor.replace" = "Replace";
 "com.banuba.newEditor.delete" = "Delete";
 "com.banuba.newEditor.adjust" = "Adjust";
-"com.banuba.newEditor.circle" = "Circle";
-"com.banuba.newEditor.square" = "Square";
+"com.banuba.newEditor.textStyle" = "Style";
+"com.banuba.newEditor.addCircle" = "Add Circle";
+"com.banuba.newEditor.addSquare" = "Add Square";
+"com.banuba.newEditor.pixelation" = "Pixelation";
 "com.banuba.newEditor.voiceEffect" = "Effect";
 "com.banuba.newEditor.captions" = "Captions";
+"com.banuba.newEditor.transition" = "Transitions";
 "com.banuba.newEditor.secondsFormat" = "%@s";
+"com.banuba.newEditor.voiceRecording" = "Voice Recording";
+"com.banuba.newEditor.videoOrder" = "Video order";
 "com.banuba.newEditor.musicVolume" = "Volume";
 "com.banuba.newEditor.recordingEffectTitle" = "Recording...";
 "com.banuba.newEditor.voiceoverEffectTitle" = "Voiceover";
@@ -826,25 +939,38 @@
 "com.banuba.newEditor.addVoiceover" = "Voiceover";
 "com.banuba.newEditor.addText" = "Add Text";
 "com.banuba.newEditor.addCaptions" = "Add Captions";
+"com.banuba.newEditor.addLowerThird" = "Add Lower Third";
+"com.banuba.newEditor.characterLimitReached" = "Character limit reached";
 "com.banuba.newEditor.applyToAll" = "Apply to all";
-"com.banuba.newEditor.videoIsTooLongFormat" = "The video is too long. Maximum length is %d minutes.";
+"com.banuba.newEditor.videoIsTooLongFormat" = "The video is too long. Maximum length is %@.";
 "com.banuba.newEditor.videoIsTooShortFormat" = "The video is too short. Minimum length is %d second.";
 "com.banuba.newEditor.next" = "Next";
 "com.banuba.newEditor.reset" = "Reset";
-"com.banuba.newEditor.videoSaved" = "Video saved.";
+"com.banuba.newEditor.noFreeClipForFilter" = "No free clip for new filter";
+"com.banuba.newEditor.noFreeClipForMask" = "No free clip for new masks";
 "com.banuba.newEditor.none" = "None";
 "com.banuba.newEditor.normal" = "Normal";
 
-"com.banuba.newEditor.videoVolumeTitle" = "Video";
+"com.banuba.newEditor.customCrop" = "Custom";
+
+"com.banuba.newEditor.videoVolumeTitle" = "Original Video";
+"com.banuba.newEditor.pipVolumeTitle" = "Added Video";
 "com.banuba.newEditor.audioVolumeTitle" = "Audio";
+"com.banuba.newEditor.chooseMusicSection" = "Choose the section you want for your video";
 
 "com.banuba.newEditor.editCover" = "Edit Cover";
+"com.banuba.newEditor.selectFromGallery" = "Select from gallery";
 
 "com.banuba.recorder.disardVideoAlertMessage" = "Discard video?";
 "com.banuba.recorder.disardVideoAlertDiscardButton" = "Discard";
-"com.banuba.recorder.greenScreen.selectImageAsABackground" = "Select image as a background";
+"com.banuba.recorder.greenScreen.selectImageAsABackground" = "Select media as a background";
+"com.banuba.recorder.greenScreen.selectMediaToTalkAbout" = "Select media to talk about";
 "com.banuba.recorder.greenScreen.selectFromGallery" = "Select from gallery";
 "com.banuba.recorder.greenScreen.allowAccess" = "Allow Access";
+
+"com.banuba.recorder.weatherman.title" = "Move and resize your video!";
+"com.banuba.recorder.weatherman.dragTip" = "Drag to reposition";
+"com.banuba.recorder.weatherman.pinchTip" = "Pinch to resize";
 
 // MARK: - Auto Cut
 "com.banuba.autocut.choosePart" = "Choose the part you want for your video";
@@ -854,6 +980,7 @@
 "com.banuba.autocut.couldNotProcess" = "Couldn't process video";
 "com.banuba.autocut.somethingWentWrong" = "Something went wrong. Please try again.";
 "com.banuba.autocut.chooseTheme" = "Choose a theme";
+"com.banuba.autocut.next" = "Next";
 "com.banuba.autocut.alert.tryAgain.agree" = "Try again";
 "com.banuba.autocut.alert.tryAgain.disagree" = "Cancel";
 "com.banuba.autocut.alert.tryAgain.title" = "Something went wrong.\nTry again?";
@@ -865,6 +992,7 @@
 "com.banuba.autocut.added.sound" = "Added sound";
 "com.banuba.autocut.error.loadingTrackFailedMessage" = "Unable to load the song. Check your internet connection.";
 "BanubaVideoEditor.Gallery.Autocut" = "AI Clipping";
+"BanubaVideoEditor.Gallery.Autocut.ToolTip" = "Select your videos to turn them into social media-ready clips.";
 "BanubaVideoEditor.Gallery.Next" = "Next";
 "BanubaVideoEditor.Gallery.NextWithCount" = "Next (%d)";
 "BanubaVideoEditor.Gallery.TotalLengthUpTo" = "Total length should be up to %d sec";
@@ -874,6 +1002,18 @@
 
 "com.banuba.search.placeholder" = "Search";
 
+// MARK: - Finger Drawing
+"com.banuba.overlayEditor.fingerDrawing.clearAll" = "Clear All";
+
+"com.banuba.overlayEditor.fingerDrawing.size" = "Size";
+
+"com.banuba.overlayEditor.fingerDrawing.opacity" = "Opacity";
+
+// MARK: - Editing images
+"com.banuba.editImagesTitle" = "Edit images";
+"com.banuba.editPhoto" = "Edit photo";
+"com.banuba.next" = "Next";
+
 // MARK: - Photo Editor
 "photoEditor.gallery.addPhotos" = "Add photos";
 "photoEditor.gallery.noPhotos" = "No photos found";
@@ -882,6 +1022,7 @@
 "photoEditor.gallery.noAccessToPhotos" = "No access to photos";
 
 "photoEditor.editor.adjust" = "Adjust";
+"photoEditor.editor.transform" = "Transform";
 "photoEditor.editor.retouch" = "Retouch";
 "photoEditor.editor.makeup" = "Makeup";
 "photoEditor.editor.effects" = "Effects";
@@ -895,6 +1036,7 @@
 "photoEditor.editor.slider.supreme" = "Supreme";
 "photoEditor.editor.done" = "Done";
 "photoEditor.editor.save" = "Save";
+"photoEditor.editor.cancel" = "Cancel";
 "photoEditor.editor.acneHint" = "Tap on spots";
 "photoEditor.editor.eyebagsHint" = "Drag to remove eyebags";
 "photoEditor.editor.makeupTab.looks" = "Looks";
@@ -1046,39 +1188,39 @@
 "photoEditor.editor.content.lipsColor.Candy" = "Candy";
 "photoEditor.editor.content.lipsColor.Lilac" = "Lilac";
 "photoEditor.editor.content.lipsColor.Raspberry" = "Raspberry";
-"photoEditor.editor.content.lipsColor.syrup" = "Syrup";
-"photoEditor.editor.content.lipsColor.diva" = "Diva";
-"photoEditor.editor.content.lipsColor.nude" = "Nude";
-"photoEditor.editor.content.lipsColor.melon" = "Melon";
-"photoEditor.editor.content.lipsColor.kiss" = "Kiss";
-"photoEditor.editor.content.lipsColor.retro" = "Retro";
-"photoEditor.editor.content.lipsColor.taffy" = "Taffy";
-"photoEditor.editor.content.lipsColor.brave" = "Brave";
-"photoEditor.editor.content.lipsColor.heroine" = "Heroine";
-"photoEditor.editor.content.lipsColor.beige" = "Beige";
-"photoEditor.editor.content.lipsColor.night" = "Night";
-"photoEditor.editor.content.lipsColor.berry" = "Berry";
-"photoEditor.editor.content.lipsColor.unicorn" = "Unicorn";
-"photoEditor.editor.content.lipsColor.sahara" = "Sahara";
-"photoEditor.editor.content.lipsColor.cherry" = "Cherry";
-"photoEditor.editor.content.lipsColor.muse" = "Muse";
-"photoEditor.editor.content.lipsColor.flirt" = "Flirt";
-"photoEditor.editor.content.lipsColor.punch" = "Punch";
-"photoEditor.editor.content.lipsColor.rebel" = "Rebel";
-"photoEditor.editor.content.lipsColor.peach" = "Peach";
-"photoEditor.editor.content.lipsColor.medusa" = "Medusa";
-"photoEditor.editor.content.lipsColor.pearl" = "Pearl";
-"photoEditor.editor.content.lipsColor.disco" = "Disco";
-"photoEditor.editor.content.lipsColor.lollipop" = "Lollipop";
-"photoEditor.editor.content.lipsColor.mocha" = "Mocha";
-"photoEditor.editor.content.lipsColor.mauve" = "Mauve";
-"photoEditor.editor.content.lipsColor.apricot" = "Apricot";
-"photoEditor.editor.content.lipsColor.belle" = "Belle";
-"photoEditor.editor.content.lipsColor.icon" = "Icon";
-"photoEditor.editor.content.lipsColor.honey" = "Honey";
-"photoEditor.editor.content.lipsColor.angel" = "Angel";
-"photoEditor.editor.content.lipsColor.peony" = "Peony";
-"photoEditor.editor.content.lipsColor.cream" = "Cream";
+"photoEditor.editor.content.lipsColor.Syrup" = "Syrup";
+"photoEditor.editor.content.lipsColor.Diva" = "Diva";
+"photoEditor.editor.content.lipsColor.Nude" = "Nude";
+"photoEditor.editor.content.lipsColor.Melon" = "Melon";
+"photoEditor.editor.content.lipsColor.Kiss" = "Kiss";
+"photoEditor.editor.content.lipsColor.Retro" = "Retro";
+"photoEditor.editor.content.lipsColor.Taffy" = "Taffy";
+"photoEditor.editor.content.lipsColor.Brave" = "Brave";
+"photoEditor.editor.content.lipsColor.Heroine" = "Heroine";
+"photoEditor.editor.content.lipsColor.Beige" = "Beige";
+"photoEditor.editor.content.lipsColor.Night" = "Night";
+"photoEditor.editor.content.lipsColor.Berry" = "Berry";
+"photoEditor.editor.content.lipsColor.Unicorn" = "Unicorn";
+"photoEditor.editor.content.lipsColor.Sahara" = "Sahara";
+"photoEditor.editor.content.lipsColor.Cherry" = "Cherry";
+"photoEditor.editor.content.lipsColor.Muse" = "Muse";
+"photoEditor.editor.content.lipsColor.Flirt" = "Flirt";
+"photoEditor.editor.content.lipsColor.Punch" = "Punch";
+"photoEditor.editor.content.lipsColor.Rebel" = "Rebel";
+"photoEditor.editor.content.lipsColor.Peach" = "Peach";
+"photoEditor.editor.content.lipsColor.Medusa" = "Medusa";
+"photoEditor.editor.content.lipsColor.Pearl" = "Pearl";
+"photoEditor.editor.content.lipsColor.Disco" = "Disco";
+"photoEditor.editor.content.lipsColor.Lollipop" = "Lollipop";
+"photoEditor.editor.content.lipsColor.Mocha" = "Mocha";
+"photoEditor.editor.content.lipsColor.Mauve" = "Mauve";
+"photoEditor.editor.content.lipsColor.Apricot" = "Apricot";
+"photoEditor.editor.content.lipsColor.Belle" = "Belle";
+"photoEditor.editor.content.lipsColor.Icon" = "Icon";
+"photoEditor.editor.content.lipsColor.Honey" = "Honey";
+"photoEditor.editor.content.lipsColor.Angel" = "Angel";
+"photoEditor.editor.content.lipsColor.Peony" = "Peony";
+"photoEditor.editor.content.lipsColor.Cream" = "Cream";
 
 "photoEditor.editor.content.eyesColor.Brown" = "Brown";
 "photoEditor.editor.content.eyesColor.Green" = "Green";
@@ -1130,6 +1272,23 @@
 "photoEditor.editor.content.backdrop.Candies" = "Candies";
 "photoEditor.editor.content.backdrop.Baubles" = "Baubles";
 "photoEditor.editor.content.backdrop.Gifts" = "Gifts";
+
+"photoEditor.editor.transform.crop" = "Crop";
+"photoEditor.editor.transform.rotate" = "Rotate";
+"photoEditor.editor.transform.cropAspect.custom" = "Custom";
+"photoEditor.editor.transform.cropAspect.square" = "Square";
+"photoEditor.editor.transform.cropAspect.9x16" = "9x16";
+"photoEditor.editor.transform.cropAspect.4x5" = "4x5";
+"photoEditor.editor.transform.cropAspect.5x7" = "5x7";
+"photoEditor.editor.transform.cropAspect.3x4" = "3x4";
+"photoEditor.editor.transform.cropAspect.3x5" = "3x5";
+"photoEditor.editor.transform.cropAspect.2x3" = "2x3";
+"photoEditor.editor.transform.cropAspect.16x9" = "16x9";
+"photoEditor.editor.transform.cropAspect.5x4" = "5x4";
+"photoEditor.editor.transform.cropAspect.7x5" = "7x5";
+"photoEditor.editor.transform.cropAspect.4x3" = "4x3";
+"photoEditor.editor.transform.cropAspect.5x3" = "5x3";
+"photoEditor.editor.transform.cropAspect.3x2" = "3x2";
 
 "photoEditor.expired.editingUnavailable" = "Photo editing is temporarily unavailable.";
 "photoEditor.expired.close" = "Close";
