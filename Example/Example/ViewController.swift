@@ -21,6 +21,8 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
   // MARK: - VideoEditorSDK
   private var videoEditorModule: VideoEditorModule?
   
+  private var defaultSemanticContentAttribute: UISemanticContentAttribute = .unspecified
+  
   // Use “true” if you want users could restore the last video editing session.
   private let restoreLastVideoEditingSession: Bool = false
   
@@ -29,6 +31,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     if restoreLastVideoEditingSession == false {
       videoEditor.clearSessionData()
     }
+    revertSemanticContentAttributeToDefaultValue()
     videoEditor.dismissVideoEditor(animated: true, completion: nil)
   }
   
@@ -36,6 +39,15 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     videoEditor.dismissVideoEditor(animated: true) { [weak self] in
       self?.exportVideo(videoEditor: videoEditor)
     }
+  }
+  
+  private func adjustSemanticContentAttributeForVideoEditor() {
+    defaultSemanticContentAttribute = UIView.appearance().semanticContentAttribute
+    UIView.appearance().semanticContentAttribute = .forceLeftToRight
+  }
+  
+  private func revertSemanticContentAttributeToDefaultValue() {
+    UIView.appearance().semanticContentAttribute = defaultSemanticContentAttribute
   }
   
   // MARK: - Actions
@@ -223,6 +235,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     videoEditorSDK.getLicenseState(completion: { [weak self] isValid in
       if isValid {
         print("✅ License is active, all good")
+        self?.adjustSemanticContentAttributeForVideoEditor()
         self?.videoEditorModule?.presentVideoEditor(with: launchConfig)
       } else {
         self?.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/support"
@@ -271,6 +284,7 @@ extension ViewController {
         }
       },
       completion: { [weak self, weak progressViewController] error, exportCoverImages in
+        self?.revertSemanticContentAttributeToDefaultValue()
         DispatchQueue.main.async {
           // Hide progress view
           progressViewController?.dismiss(animated: true) {
