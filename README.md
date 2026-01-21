@@ -42,7 +42,7 @@ This is what you need to run the AI Video Editor SDK or AR Photo Editor SDK.
 - Swift 5.9+
 - Xcode 16.0+
 - iOS 15.0+
-  Unfortunately, It isn't optimized for iPads.
+  Unfortunately, the GUI isn't adapted for iPads.
 ## Supported media formats
 | Audio      | Video      | Images      |
 | ---------- | ---------  | ----------- |
