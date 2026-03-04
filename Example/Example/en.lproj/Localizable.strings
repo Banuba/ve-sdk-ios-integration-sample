@@ -690,8 +690,6 @@
 "pip.mode.portrait2" = "Portrait 2";
 "pip.layout.settings.title" = "Select layout settings";
 
-"feature.disabled.pip" = "Picture in picture is not included in your package. Contact account manager to have it.";
-
 // MARK: - Drafts
 /* Drafts button title */
 "BanubaVideoEditor.Gallery.DraftsTitle" = "Drafts";
@@ -762,7 +760,9 @@
 "com.banuba.recorder.masks.title" = "Masks";
 "com.banuba.recorder.muteSound.title" = "Mic";
 "com.banuba.recorder.pip.title" = "PiP";
-"com.banuba.recorder.videoTemplates.title" = "Templates";
+"com.banuba.recorder.open" = "Open";
+"com.banuba.recorder.close" = "Close";
+
 "com.banuba.editor.music" = "Music";
 "com.banuba.editor.time.title" = "Time";
 
