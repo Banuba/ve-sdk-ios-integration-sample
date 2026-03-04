@@ -911,6 +911,7 @@
 "com.banuba.newEditor.pixelate" = "Pixelate";
 "com.banuba.newEditor.speed" = "Speed";
 "com.banuba.newEditor.draw" = "Draw";
+"com.banuba.newEditor.aiVideo" = "AI Video";
 "com.banuba.newEditor.colorPicker" = "Color picker";
 "com.banuba.newEditor.crop" = "Crop";
 "com.banuba.newEditor.rotate" = "Rotate";
