@@ -84,6 +84,9 @@ class VideoEditorModule {
         var featureConfiguration = config.featureConfiguration
         featureConfiguration.supportsTrimRecordedVideo = true
         featureConfiguration.isMuteCameraAudioEnabled = true
+
+        featureConfiguration.isPhotosEditingEnabled = true
+        
         config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
         
         return config
