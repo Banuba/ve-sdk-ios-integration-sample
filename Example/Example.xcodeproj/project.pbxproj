@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		634FAC04255C351900FB0DBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634FAC06255C351900FB0DBC /* Localizable.strings */; };
-		635DB1AC2548541000B1C799 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 635DB1AA2548541000B1C799 /* luts */; };
 		637B56D22A28B7DA0099DDA2 /* VideoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B56D12A28B7DA0099DDA2 /* VideoEditorModule.swift */; };
 		639DA00C254700290011C153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00B254700290011C153 /* AppDelegate.swift */; };
 		639DA010254700290011C153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DA00F254700290011C153 /* ViewController.swift */; };
@@ -28,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		634FAC05255C351900FB0DBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		635DB1AA2548541000B1C799 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
 		637B56D12A28B7DA0099DDA2 /* VideoEditorModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEditorModule.swift; sourceTree = "<group>"; };
 		639DA008254700290011C153 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639DA00B254700290011C153 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -94,7 +92,6 @@
 				639DA00F254700290011C153 /* ViewController.swift */,
 				634FAC06255C351900FB0DBC /* Localizable.strings */,
 				639DA011254700290011C153 /* Main.storyboard */,
-				635DB1AA2548541000B1C799 /* luts */,
 				639DA0162547002C0011C153 /* LaunchScreen.storyboard */,
 				639DA0192547002C0011C153 /* Info.plist */,
 			);
@@ -179,7 +176,6 @@
 			files = (
 				634FAC04255C351900FB0DBC /* Localizable.strings in Resources */,
 				639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */,
-				635DB1AC2548541000B1C799 /* luts in Resources */,
 				639DA013254700290011C153 /* Main.storyboard in Resources */,
 				8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */,
 				8A32EED0258CB5430098F852 /* bundleEffects in Resources */,
@@ -441,7 +437,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.49.0;
+				minimumVersion = 1.50.1;
 			};
 		};
 		DBB4F8C42D437FE900B1AADD /* XCRemoteSwiftPackageReference "BanubaAudioBrowserSDK-iOS" */ = {
@@ -449,7 +445,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.49.0;
+				minimumVersion = 1.50.1;
 			};
 		};
 		DBB4F8C72D4380AA00B1AADD /* XCRemoteSwiftPackageReference "BSImagePicker" */ = {
@@ -465,7 +461,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorSDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.49.0;
+				minimumVersion = 1.50.1;
 			};
 		};
 		DBB4F8F12D43866C00B1AADD /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */ = {
@@ -473,7 +469,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDKSimple-IOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.49.0;
+				minimumVersion = 1.50.1;
 			};
 		};
 		DBB4F8FE2D438A9E00B1AADD /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */ = {
@@ -481,7 +477,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaARCloudSDK-IOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.49.0;
+				minimumVersion = 1.50.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -67,19 +67,13 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
   }
   
   @IBAction func openVideoEditorPiP(_ sender: Any) {
-    pickerGalleryVideos(entryPoint: .pip) { [weak self] pickedVideoUrls in
-      guard let self, !pickedVideoUrls.isEmpty else { return }
-      
-      let launchConfig = VideoEditorLaunchConfig(
-        entryPoint: .pip,
-        hostController: self,
-        videoItems: pickedVideoUrls,
-        pipVideoItem: pickedVideoUrls[.zero],
-        animated: true
-      )
-      
-      self.checkLicenseAndOpenVideoEditor(with: launchConfig)
-    }
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: .camera,
+      hostController: self,
+      animated: true
+    )
+
+    self.checkLicenseAndOpenVideoEditor(with: launchConfig)
   }
   
   @IBAction func openVideoEditorDrafts(_ sender: UIButton) {
@@ -348,9 +342,7 @@ extension ViewController {
     entryPoint: PresentEventOptions.EntryPoint,
     completion: @escaping (_ videoUrls: [URL]) -> Void
   ) {
-    pickGalleryVideo(
-      isMultiSelectionEnabled: entryPoint != .pip
-    ) { assets in
+    pickGalleryVideo { assets in
       guard let assets = assets else {
         return
       }
@@ -416,14 +408,10 @@ extension ViewController {
     }
   }
   
-  private func pickGalleryVideo(
-    isMultiSelectionEnabled: Bool,
-    completion: @escaping ([PHAsset]?) -> Void
-  ) {
+  private func pickGalleryVideo(completion: @escaping ([PHAsset]?) -> Void) {
     let imagePicker = ImagePickerController()
     
     imagePicker.settings.fetch.assets.supportedMediaTypes = [.video]
-    imagePicker.settings.selection.max = isMultiSelectionEnabled ? Int.max : 1
     
     self.presentImagePicker(
       imagePicker,

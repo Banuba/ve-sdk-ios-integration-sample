@@ -639,6 +639,9 @@
 /* Gallery video tab title */
 "BanubaVideoEditor.Gallery.VideoTabTitle" = "Videos";
 
+/* Gallery generated videos tab title */
+"BanubaVideoEditor.Gallery.GeneratedVideoTabTitle" = "AI Generated";
+
 /* Gallery previe select button name*/
 "BanubaVideoEditor.Gallery.SelectItemName" = "Select";
 
@@ -689,8 +692,6 @@
 "pip.mode.portrait1" = "Portrait 1";
 "pip.mode.portrait2" = "Portrait 2";
 "pip.layout.settings.title" = "Select layout settings";
-
-"feature.disabled.pip" = "Picture in picture is not included in your package. Contact account manager to have it.";
 
 // MARK: - Drafts
 /* Drafts button title */
@@ -762,7 +763,8 @@
 "com.banuba.recorder.masks.title" = "Masks";
 "com.banuba.recorder.muteSound.title" = "Mic";
 "com.banuba.recorder.pip.title" = "PiP";
-"com.banuba.recorder.videoTemplates.title" = "Templates";
+"com.banuba.recorder.open" = "Open";
+"com.banuba.recorder.close" = "Close";
 "com.banuba.editor.music" = "Music";
 "com.banuba.editor.time.title" = "Time";
 
@@ -911,6 +913,7 @@
 "com.banuba.newEditor.pixelate" = "Pixelate";
 "com.banuba.newEditor.speed" = "Speed";
 "com.banuba.newEditor.draw" = "Draw";
+"com.banuba.newEditor.aiVideo" = "AI Video";
 "com.banuba.newEditor.colorPicker" = "Color picker";
 "com.banuba.newEditor.crop" = "Crop";
 "com.banuba.newEditor.rotate" = "Rotate";
@@ -1277,18 +1280,18 @@
 "photoEditor.editor.transform.rotate" = "Rotate";
 "photoEditor.editor.transform.cropAspect.custom" = "Custom";
 "photoEditor.editor.transform.cropAspect.square" = "Square";
-"photoEditor.editor.transform.cropAspect.9x16" = "9x16";
-"photoEditor.editor.transform.cropAspect.4x5" = "4x5";
-"photoEditor.editor.transform.cropAspect.5x7" = "5x7";
-"photoEditor.editor.transform.cropAspect.3x4" = "3x4";
-"photoEditor.editor.transform.cropAspect.3x5" = "3x5";
-"photoEditor.editor.transform.cropAspect.2x3" = "2x3";
-"photoEditor.editor.transform.cropAspect.16x9" = "16x9";
-"photoEditor.editor.transform.cropAspect.5x4" = "5x4";
-"photoEditor.editor.transform.cropAspect.7x5" = "7x5";
-"photoEditor.editor.transform.cropAspect.4x3" = "4x3";
-"photoEditor.editor.transform.cropAspect.5x3" = "5x3";
-"photoEditor.editor.transform.cropAspect.3x2" = "3x2";
+"photoEditor.editor.transform.cropAspect.9x16" = "9:16";
+"photoEditor.editor.transform.cropAspect.4x5" = "4:5";
+"photoEditor.editor.transform.cropAspect.5x7" = "5:7";
+"photoEditor.editor.transform.cropAspect.3x4" = "3:4";
+"photoEditor.editor.transform.cropAspect.3x5" = "3:5";
+"photoEditor.editor.transform.cropAspect.2x3" = "2:3";
+"photoEditor.editor.transform.cropAspect.16x9" = "16:9";
+"photoEditor.editor.transform.cropAspect.5x4" = "5:4";
+"photoEditor.editor.transform.cropAspect.7x5" = "7:5";
+"photoEditor.editor.transform.cropAspect.4x3" = "4:3";
+"photoEditor.editor.transform.cropAspect.5x3" = "5:3";
+"photoEditor.editor.transform.cropAspect.3x2" = "3:2";
 
 "photoEditor.expired.editingUnavailable" = "Photo editing is temporarily unavailable.";
 "photoEditor.expired.close" = "Close";
