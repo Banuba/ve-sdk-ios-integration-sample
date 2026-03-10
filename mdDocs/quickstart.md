@@ -10,10 +10,6 @@
 
 ## Installation
 
-There are 2 options to get iOS Video Editor SDK dependencies
-1. [CocoaPods](https://cocoapods.org)
-2. [Swift Package Manager](https://developer.apple.com/documentation/swift_packages) 
-
 ### CocoaPods
 :exclamation: Important
 CocoaPods version 1.12.1 or newer is required. Check your version with pod --version and upgrade if needed.
