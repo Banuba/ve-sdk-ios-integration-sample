@@ -2,74 +2,85 @@
 
 - [Installation](#Installation)
 - [Info.plist Updates](#Info.plist-Updates)
+- [Localization](#Localization)
 - [Video Editor Module Setup](#Video-Editor-Module-Setup)
 - [Launch](#Launch)
 - [Implement export](#Implement-export)
-- [Localization](#Localization)
 - [Advanced integration](#Advanced-integration)
 
 ## Installation
 
 There are 2 options to get iOS Video Editor SDK dependencies
-1. [Swift Package Manager](https://developer.apple.com/documentation/swift_packages) 
-2. [CocoaPods](https://cocoapods.org)
+1. [CocoaPods](https://cocoapods.org)
+2. [Swift Package Manager](https://developer.apple.com/documentation/swift_packages) 
+
+### CocoaPods
+:exclamation: Important
+CocoaPods version 1.12.1 or newer is required. Check your version with pod --version and upgrade if needed.
+
+To integrate the Video Editor SDK via CocoaPods:
+
+1. Install CocoaPods (if not already installed) using Homebrew:
+
+```sh
+brew install cocoapods
+```
+
+2. Initialize CocoaPods in your project folder:
+```sh
+pod init
+```
+
+3. Add sources and pods to your Podfile:
+
+```ruby
+source 'https://cdn.cocoapods.org/'
+source 'https://github.com/Banuba/specs.git'
+source 'https://github.com/sdk-banuba/banuba-sdk-podspecs.git'
+
+banuba_sdk_version = '1.50.1'
+
+pod 'BanubaVideoEditorSDK', banuba_sdk_version
+pod 'BanubaSDKSimple', banuba_sdk_version
+pod 'BanubaSDK', banuba_sdk_version
+pod 'BanubaARCloudSDK', banuba_sdk_version      # optional
+pod 'BanubaAudioBrowserSDK', banuba_sdk_version # optional
+```
+4. Install the pods:
+
+```sh
+pod install --repo-update
+```
+
+5. Open the generated ```.xcworkspace``` in Xcode and run the project.
+
+:exclamation: Info
+For more details, refer to the [CocoaPods installation guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/cocapods-installation).
 
 ### SPM
 
-The integration with SPM is in [spm branch](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/spm)
+SPM integration is available in the [spm branch](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/spm).
 
-Complete the following steps to get Video Editor SDK dependencies using SPM.
+To integrate the Video Editor SDK via SPM:
 
-1. Open ```App project```  and navigate to ```Swift Packages``` tab.
-2. Click the ```plus``` button and add the necessary packages via links: https://github.com/Banuba/BanubaVideoEditorSDK-iOS, https://github.com/Banuba/BanubaSDK-iOS.
-3. Choose ```Exact Version``` release version and type newest SDK version.
-4. Select the necessary modules in a list and click the ```Add Package``` button.
+1. Open your App project and go to the Swift Packages tab.
 
-:exclamation: Info
-Refer to [main docs](https://docs.banuba.com/ve-pe-sdk/docs/ios/spm-installation) for more detailed information about SPM installation
+2. Click the + button and add the required packages using the URLs:
+https://github.com/Banuba/BanubaVideoEditorSDK-iOS
+https://github.com/Banuba/BanubaSDK-iOS
 
-### CocoaPods
+3. Select Exact Version and enter the latest SDK version.
 
-:exclamation: Important  
-It is required to have CocoaPods version ```1.12.1``` or newer.
-Please check your version ```pod --version``` and upgrade.
-
-Complete the following steps to get Video Editor SDK dependencies using CocoaPods.
-1. Install CocoaPods using Homebrew
-   ```sh
-   brew install cocoapods 
-   ```
-2. Initialize pods in your project folder
-   ```sh
-   pod init
-   ```
-3. Add the necessary frameworks and podspec sources to the Podfile of your project:
-   ```sh
-    source 'https://cdn.cocoapods.org/'
-    source 'https://github.com/Banuba/specs.git'
-    source 'https://github.com/sdk-banuba/banuba-sdk-podspecs.git'
-
-    banuba_sdk_version = '1.50.1'
-
-    pod 'BanubaVideoEditorSDK', banuba_sdk_version
-    pod 'BanubaSDKSimple', banuba_sdk_version
-    pod 'BanubaSDK', banuba_sdk_version
-    pod 'BanubaARCloudSDK', banuba_sdk_version      # optional
-    pod 'BanubaAudioBrowserSDK', banuba_sdk_version # optional 
-    ```
-4. Install Video Editor SDK pods
-   ```sh
-   pod install --repo-update
-   ```
-5. Open ```Example.xcworkspace``` in Xcode and run the project.
+4. Choose the required modules and click Add Package.
 
 :exclamation: Info
-Refer to [main docs](https://docs.banuba.com/ve-pe-sdk/docs/ios/cocapods-installation) for more detailed information about SPM installation
+For more details, refer to the [SPM installation guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/spm-installation).
 
 ## Info.plist Updates
 
-Add the following iOS permissions used by the SDK in your [Info.plist](../example/ios/Runner/Info.plist)
-```
+Add the iOS permissions required by the SDK (camera, microphone, photo library, media library) to your [Info.plist](../example/ios/Runner/Info.plist):
+
+```xml
 <key>NSAppleMusicUsageDescription</key>
 <string>This app requires access to the media library</string>
 <key>NSCameraUsageDescription</key>
@@ -79,6 +90,10 @@ Add the following iOS permissions used by the SDK in your [Info.plist](../exampl
 <key>NSPhotoLibraryUsageDescription</key>
 <string>This app requires access to the photo library.</string>
 ```
+
+## Localization
+
+Add [English Localized Strings](../Example/Example/en.lproj/Localizable.strings) file to the project.
 
 ## Video Editor Module Setup
 Custom behavior of Video Editor SDK in your app is implemented by using a number of configuration classes in the SDK.
@@ -112,7 +127,7 @@ let videoEditorSDK = BanubaVideoEditor(
 ```videoEditorSDK``` is ```nil``` when the license token is incorrect i.e. empty, truncated.
 If ```videoEditorSDK``` is not ```nil``` you can proceed and start video editor.
 
-Next, we strongly recommend checking your license state before starting video editor
+Check your license state before starting video editor: 
 ```swift
 videoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
       if isValid {
@@ -129,7 +144,7 @@ videoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
 <img src="screenshots/screen_expired.png"  width="25%" height="auto">
 </p>
 
-The following [implementation](../Example/Example/ViewController.swift#L45) starts Video Editor from camera screen.
+The [implementation](../Example/Example/ViewController.swift#L45) below starts Video Editor from camera screen.
 ```swift
  let cameraLaunchConfig = VideoEditorLaunchConfig(
         entryPoint: .camera,
@@ -143,16 +158,16 @@ videoEditorModule.presentVideoEditor(with: cameraLaunchConfig)
 
 ## Implement export
 
-Video Editor can export multiple media files to meet your requirements.  
-Create instance of ```ExportConfiguration``` and provide ```Array<ExportVideoConfiguration>``` where every ```ExportVideoConfiguration``` is a media file i.e. video or audio. 
-Next, use ```BanubaVideoEditor.export()``` method and pass instance of ```ExportConfiguration``` to start export.
-Please check out [export implementation](../Example/Example/ViewController.swift#L250) in the sample.  
+The Video Editor SDK can export multiple files at once.
+To set up export:
 
-Learn [Export integration guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_export) to know more about exporting media content features.
+1. Make an ExportConfiguration object. Add one or more ExportVideoConfiguration objects to it. Each one stands for a video or audio file.
 
-## Localization
+2. Call BanubaVideoEditor.export() and pass your ExportConfiguration to start.
 
-Add [Localized Strings](../Example/Example/en.lproj/Localizable.strings) file with English localization to the project.
+Check the [export implementation](../Example/Example/ViewController.swift#L250) in the sample.
+
+Read the [Export integration guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_export) for more details.
 
 ## Advanced integration
 
