@@ -18,31 +18,42 @@
 [Banuba Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to quickly add short video functionality and possibly AR filters and effects into your mobile app.
 
 [Banuba AR Photo Editor SDK](https://www.banuba.com/photo-editor-sdk) allows you to quickly add the photo editing capabilities to your app. 
+
 ## Usage
+
 ### License
-Before you commit to a license, you are free to test all the features of the SDK for free. The trial period lasts 14 days. 
+Before you commit to a license, you are free to test all the features of the SDK for free.  
+**The trial period lasts 14 days**.
 
 Send us a message to start the [Video Editor SDK trial](https://www.banuba.com/video-editor-sdk#form) | [Photo Editor SDK trial](https://www.banuba.com/photo-editor-sdk#form). We will get back to you with the trial token.
 
-Feel free to contact us if you have any questions regarding [Video Editor SDK](https://www.banuba.com/support) and [Photo Editor SDK](https://www.banuba.com/support).
-### Installation
-1. Clone the repository
-2. Install CocoaPods dependencies. Open **Example** directory ```cd Example``` and run ```pod install``` in terminal.
-3. Open the project in XCode
-4. Open **Signing & Capabilities** tab in Target settings and select your Development Team.
-5. Add the license token [within the app](/Example/Example/AppDelegate.swift#L9)
-6. Run sample application in XCode
-### Quickstart Guide
-Our [Quickstart Guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/requirements) will help you to quickly integrate and customize **Video Editor SDK** into your iOS project.
+### Quickstart Integration Guide
+See the [Quickstart Guide](mddocs/quickstart.md) for complete integration steps, including:
 
-For **Photo Editor SDK** please check out the [following document](https://docs.banuba.com/ve-pe-sdk/docs/ios/pe-requirements).
+1. Repository setup
+
+2. License token [configuration](Example/Example/AppDelegate.swift#L9)
+
+3. Running the sample app
+
+### Documentation
+Explore the full capabilities of our SDKs:
+- [Video Editor SDK](https://docs.banuba.com/ve-pe-sdk/docs/ios/requirements)
+- [Photo Editor SDK](https://docs.banuba.com/ve-pe-sdk/docs/ios/pe-requirements)
+
+### Support
+For questions about Video Editor or Photo Editor SDK, reach out to Banuba support service
+- [Video Editor SDK](https://www.banuba.com/faq/kb-tickets/new) 
+- [Photo Editor SDK](https://www.banuba.com/support)
+
 ## Requirements
-This is what you need to run the AI Video Editor SDK or AR Photo Editor SDK.
+
 - iPhone devices 6s+
 - Swift 5.9+
 - Xcode 16.0+
 - iOS 15.0+
   Unfortunately, It isn't optimized for iPads.
+
 ## Supported media formats
 | Audio      | Video      | Images      |
 | ---------- | ---------  | ----------- |
