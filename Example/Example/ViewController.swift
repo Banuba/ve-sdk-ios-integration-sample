@@ -2,12 +2,11 @@ import UIKit
 import BanubaVideoEditorSDK
 import BanubaPhotoEditorSDK
 
-import VideoEditor
 import AVFoundation
 import AVKit
 import Photos
 import BSImagePicker
-import VEExportSDK
+import BanubaVideoEditorCore
 import BanubaAudioBrowserSDK
 import BanubaLicenseServicingSDK
 
@@ -40,6 +39,18 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
   }
   
   // MARK: - Actions
+  @IBAction func openNewVideoEditorUI(_ sender: Any) {
+    let musicTrackPreset: MediaTrack? = nil
+    
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: .camera,
+      hostController: self,
+      musicTrack: musicTrackPreset, // Paste a music track as a track preset at the camera screen to record video with music
+      animated: true
+    )
+    checkLicenseAndOpenVideoEditor(with: launchConfig, isEditorV2Enabled: true)
+  }
+  
   @IBAction func openVideoEditorDefault(_ sender: Any) {
     let musicTrackPreset: MediaTrack? = nil
     // Uncomment to apply custom audio track in video editor
@@ -53,21 +64,24 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     )
     checkLicenseAndOpenVideoEditor(with: launchConfig)
   }
-  
+
+  @IBAction func openVideoEditorTemplates(_ sender: Any) {
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: .videoTemplates,
+      hostController: self,
+      animated: true
+    )
+    checkLicenseAndOpenVideoEditor(with: launchConfig)
+  }
+
   @IBAction func openVideoEditorPiP(_ sender: Any) {
-    pickerGalleryVideos(entryPoint: .pip) { [weak self] pickedVideoUrls in
-      guard let self, !pickedVideoUrls.isEmpty else { return }
-      
-      let launchConfig = VideoEditorLaunchConfig(
-        entryPoint: .pip,
-        hostController: self,
-        videoItems: pickedVideoUrls,
-        pipVideoItem: pickedVideoUrls[.zero],
-        animated: true
-      )
-      
-      self.checkLicenseAndOpenVideoEditor(with: launchConfig)
-    }
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: .camera,
+      hostController: self,
+      animated: true
+    )
+
+    checkLicenseAndOpenVideoEditor(with: launchConfig)
   }
   
   @IBAction func openVideoEditorDrafts(_ sender: UIButton) {
@@ -96,7 +110,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     }
   }
   
-  @IBAction func openPhotoEditorFromGallery(_ sender: UIButton) {
+  @IBAction func openPhotoEditorDefault(_ sender: UIButton) {
     let launchConfig = PhotoEditorLaunchConfig(
       hostController: self,
       entryPoint: .gallery
@@ -104,7 +118,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     checkLicenseAndOpenPhotoEditor(with: launchConfig)
   }
   
-  @IBAction func openPhotoEditorFromEditor(_ sender: UIButton) {
+  @IBAction func openPhotoEditorImage(_ sender: UIButton) {
     pickGalleryPhoto() { assets in
       guard let asset = assets?.first else {
         return
@@ -153,7 +167,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
         print("✅ License is active, all good")
         self.photoEditorModule?.presentPhotoEditor(with: launchConfig)
       } else {
-        self.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
+        self.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/support"
         print("❌ License is either revoked or expired")
       }
       self.invalidTokenMessageLabel.isHidden = isValid
@@ -168,6 +182,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
       uuid: UUID(),
       id: nil,
       url: musicURL,
+      remoteURL: nil,
       coverURL: nil,
       timeRange: MediaTrackTimeRange(
         startTime: .zero,
@@ -183,13 +198,13 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
     return musicTrackPreset
   }
   
-  private func checkLicenseAndOpenVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
+  private func checkLicenseAndOpenVideoEditor(with launchConfig: VideoEditorLaunchConfig, isEditorV2Enabled: Bool = false) {
     // Deallocate any active instances of both editors to free used resources
     // and to prevent "You are trying to create the second instance of the singleton." crash
     photoEditorModule = nil
     videoEditorModule = nil
     
-    videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken)
+    videoEditorModule = VideoEditorModule(token: AppDelegate.licenseToken, isEditorV2Enabled: isEditorV2Enabled)
     
     guard let videoEditorSDK = videoEditorModule?.videoEditorSDK else {
       invalidTokenMessageLabel.text = "Banuba Video Editor SDK is not initialized: license token is unknown or incorrect.\nPlease check your license token or contact Banuba"
@@ -204,7 +219,7 @@ class ViewController: UIViewController, BanubaVideoEditorDelegate, BanubaPhotoEd
         print("✅ License is active, all good")
         self?.videoEditorModule?.presentVideoEditor(with: launchConfig)
       } else {
-        self?.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/faq/kb-tickets/new"
+        self?.invalidTokenMessageLabel.text = "License is revoked or expired. Please contact Banuba https://www.banuba.com/support"
         print("❌ License is either revoked or expired")
       }
       self?.invalidTokenMessageLabel.isHidden = isValid
@@ -310,9 +325,7 @@ extension ViewController {
     entryPoint: PresentEventOptions.EntryPoint,
     completion: @escaping (_ videoUrls: [URL]) -> Void
   ) {
-    pickGalleryVideo(
-      isMultiSelectionEnabled: entryPoint != .pip
-    ) { assets in
+    pickGalleryVideo { assets in
       guard let assets = assets else {
         return
       }
@@ -379,13 +392,11 @@ extension ViewController {
   }
   
   private func pickGalleryVideo(
-    isMultiSelectionEnabled: Bool,
     completion: @escaping ([PHAsset]?) -> Void
   ) {
     let imagePicker = ImagePickerController()
     
     imagePicker.settings.fetch.assets.supportedMediaTypes = [.video]
-    imagePicker.settings.selection.max = isMultiSelectionEnabled ? Int.max : 1
     
     self.presentImagePicker(
       imagePicker,

@@ -1,88 +1,101 @@
 # Quickstart Guide
 
-> [!CAUTION]
-> This documentation is deprecated and no longer updated.
-> Please check out our [new website](https://docs.banuba.com/ve-pe-sdk/docs/ios/requirements) with latest documentation.
-
-- [Prerequisites](#Prerequisites)
-- [Concepts](#Concepts)
-- [Add dependencies](#Add-dependencies)
-- [Add resources](#Add-resources)
-- [Add module](#Add-module)
-- [Implement export](#Implement-export)
+- [Installation](#Installation)
+- [Info.plist Updates](#Info.plist-Updates)
+- [Localization](#Localization)
+- [Video Editor Module Setup](#Video-Editor-Module-Setup)
 - [Launch](#Launch)
+- [Implement export](#Implement-export)
 - [Advanced integration](#Advanced-integration)
-- [Dependencies and licenses](#Dependencies-and-licenses)
-- [Releases](#Releases)
 
-## Prerequisites
-Complete [Installation](../README.md#Installation) before to proceed.
+## Installation
 
-## Concepts
-- Export - the process of making video in video editor.
-- Slideshow - the feature that allows to create short video from single or multiple images.
-- PIP - short Picture-in-Picture feature.
-- Trimmer - trimmer screen where the user can trim, merge, change aspects
-- Editor - editor the screen where the user can manage effects and audio. Normally the next screen after trimmer.
-
-## Add dependencies
 There are 2 options to get iOS Video Editor SDK dependencies
 1. [CocoaPods](https://cocoapods.org)
-2. [SwiftPackageManager](https://developer.apple.com/documentation/swift_packages)
-
-### SPM
-Learn [SPM Getting Started Guide](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app) if you are new in SPM.
-
-The integration with SPM is in [spm branch](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/spm)
-
-Complete the following steps to get Video Editor SDK dependencies using SPM.
-
-1. Add a [spm link](https://github.com/Banuba/spm) to the collection of packages
-2. Open ```App project```  and navigate to ```Swift Packages``` tab.
-3. Click the ```plus``` button and type package collections repo url https://github.com/Banuba/spm.
-4. Choose ```Exact Version``` release version and type newest SDK version.
-5. Select the necessary modules in a list and click the ```Add Package``` button.
+2. [Swift Package Manager](https://developer.apple.com/documentation/swift_packages) 
 
 ### CocoaPods
-Learn [CocoaPods Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) if you are new in CocoaPods.
+:exclamation: Important
+CocoaPods version 1.12.1 or newer is required. Check your version with pod --version and upgrade if needed.
 
-:exclamation: Important  
-It is required to have CocoaPods version ```1.12.1``` or newer.
-Please check your version ```pod --version``` and upgrade.
+To integrate the Video Editor SDK via CocoaPods:
 
-The List of required Video Editor dependencies is in [Podfile](../Example/Podfile).
+1. Install CocoaPods (if not already installed) using Homebrew:
 
-Complete the following steps to get Video Editor SDK dependencies using CocoaPods.
-1. Install CocoaPods using Homebrew
-   ```sh
-   brew install cocoapods 
-   ```
-2. Initialize pods in your project folder
-   ```sh
-   pod init
-   ```
-3. Install Video Editor SDK pods
-   ```sh
-   pod install --repo-update
-   ```
-4. Open ```Example.xcworkspace``` in Xcode and run the project.
+```sh
+brew install cocoapods
+```
 
-## Add resources
-Video Editor SDK uses a lot of resources required for running.  
-Please make sure all these resources are provided in your project.
-1. [luts](../Example/Example/luts) - the folder where all color effects are stored.
-2. [ColorEffectsPreview](../Example/Example/Assets.xcassets/ColorEffectsPreview) - preview images of color effects
-3. [Effects Preview](../Example/Example/Assets.xcassets/Effects%20Preview) - preview images of visual effects.
-4. [Localized Strings](../Example/Example/en.lproj/Localizable.strings)
+2. Initialize CocoaPods in your project folder:
+```sh
+pod init
+```
 
-[Assets.xcassets](../Example/Example/Assets.xcassets) contains other visual resources i.e. icons that are used in 
-video editor. These icons were added to the sample to customize default video editor icons.
-Feel free to copy all resources from [Assets.xcassets](../Example/Example/Assets.xcassets) if they meet your requirements.
+3. Add sources and pods to your Podfile:
 
->:exclamation: **Note:** Default video editor icons will be used in case if you copy only [luts](../Example/Example/luts), [ColorEffectsPreview](../Example/Example/Assets.xcassets/ColorEffectsPreview),
-[Effects Preview](../Example/Example/Assets.xcassets/Effects%20Preview), [Localized Strings](../Example/Example/en.lproj/Localizable.strings) resources.
+```ruby
+source 'https://cdn.cocoapods.org/'
+source 'https://github.com/Banuba/specs.git'
+source 'https://github.com/sdk-banuba/banuba-sdk-podspecs.git'
 
-## Add module
+banuba_sdk_version = '1.50.1'
+
+pod 'BanubaVideoEditorSDK', banuba_sdk_version
+pod 'BanubaSDKSimple', banuba_sdk_version
+pod 'BanubaSDK', banuba_sdk_version
+pod 'BanubaARCloudSDK', banuba_sdk_version      # optional
+pod 'BanubaAudioBrowserSDK', banuba_sdk_version # optional
+```
+4. Install the pods:
+
+```sh
+pod install --repo-update
+```
+
+5. Open the generated ```.xcworkspace``` in Xcode and run the project.
+
+:exclamation: Info
+For more details, refer to the [CocoaPods installation guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/cocapods-installation).
+
+### SPM
+
+SPM integration is available in the [spm branch](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/spm).
+
+To integrate the Video Editor SDK via SPM:
+
+1. Open your App project and go to the Swift Packages tab.
+
+2. Click the + button and add the required packages using the URLs:
+https://github.com/Banuba/BanubaVideoEditorSDK-iOS
+https://github.com/Banuba/BanubaSDK-iOS
+
+3. Select Exact Version and enter the latest SDK version.
+
+4. Choose the required modules and click Add Package.
+
+:exclamation: Info
+For more details, refer to the [SPM installation guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/spm-installation).
+
+## Info.plist Updates
+
+Add the iOS permissions required by the SDK (camera, microphone, photo library, media library) to your [Info.plist](../example/ios/Runner/Info.plist):
+
+```xml
+<key>NSAppleMusicUsageDescription</key>
+<string>This app requires access to the media library</string>
+<key>NSCameraUsageDescription</key>
+<string>This app requires access to the camera.</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>This app requires access to the microphone.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>This app requires access to the photo library.</string>
+```
+
+## Localization
+
+Add [English Localized Strings](../Example/Example/en.lproj/Localizable.strings) file to the project.
+
+## Video Editor Module Setup
 Custom behavior of Video Editor SDK in your app is implemented by using a number of configuration classes in the SDK.
 
 First, create new class [VideoEditorModule](../Example/Example/VideoEditorModule.swift) for implementing configurations.
@@ -102,14 +115,6 @@ class VideoEditorModule {
 }
 ```
 
-## Implement export
-Video Editor can export multiple media files to meet your requirements.  
-Create instance of ```ExportConfiguration``` and provide ```Array<ExportVideoConfiguration>``` where every ```ExportVideoConfiguration``` is a media file i.e. video or audio. 
-Next, use ```BanubaVideoEditor.export()``` method and pass instance of ```ExportConfiguration``` to start export.
-Please check out [export implementation](../Example/Example/ViewController.swift#L209) in the sample.  
-
-Learn [Export integration guide](guide_export.md) to know more about exporting media content features.
-
 ## Launch
 Create instance of ```BanubaVideoEditor```  by using the license token.
 ```swift
@@ -122,7 +127,7 @@ let videoEditorSDK = BanubaVideoEditor(
 ```videoEditorSDK``` is ```nil``` when the license token is incorrect i.e. empty, truncated.
 If ```videoEditorSDK``` is not ```nil``` you can proceed and start video editor.
 
-Next, we strongly recommend checking your license state before starting video editor
+Check your license state before starting video editor: 
 ```swift
 videoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
       if isValid {
@@ -139,7 +144,7 @@ videoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
 <img src="screenshots/screen_expired.png"  width="25%" height="auto">
 </p>
 
-The following [implementation](../Example/Example/ViewController.swift#L48) starts Video Editor from camera screen.
+The [implementation](../Example/Example/ViewController.swift#L45) below starts Video Editor from camera screen.
 ```swift
  let cameraLaunchConfig = VideoEditorLaunchConfig(
         entryPoint: .camera,
@@ -151,62 +156,19 @@ The following [implementation](../Example/Example/ViewController.swift#L48) star
 videoEditorModule.presentVideoEditor(with: cameraLaunchConfig)
 ```
 
-Video Editor supports multiple launch methods described in [this guide](faq.md#Launch-methods).
+## Implement export
+
+The Video Editor SDK can export multiple files at once.
+To set up export:
+
+1. Make an ExportConfiguration object. Add one or more ExportVideoConfiguration objects to it. Each one stands for a video or audio file.
+
+2. Call BanubaVideoEditor.export() and pass your ExportConfiguration to start.
+
+Check the [export implementation](../Example/Example/ViewController.swift#L250) in the sample.
+
+Read the [Export integration guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_export) for more details.
 
 ## Advanced integration
-Video editor has built in UI/UX experience and provides a number of customizations you can use to meet your requirements.
 
-**AVAILABLE**  
-:white_check_mark: Use your branded icons, colors, and text styles. [See details](faq.md#i-want-to-use-custom-icons)  
-:white_check_mark: Localize and change text resources. Default locale is :us:  
-:white_check_mark: Make content you want i.e. a number of video with different resolutions  and durations, an audio file. [See details](guide_export.md)  
-:white_check_mark: Masks and filters order. [See details](faq.md#i-want-to-change-the-order-of-masks-video-effects-or-filters)
-
-NOT AVAILABLE  
-:x: Change layout  
-:x: Change order of screens after entry point
-
-You can, however, [ask](https://www.banuba.com/faq/kb-tickets/new) us to customize the mobile video editor UI as a separate contract.
-
-Check out the list of [Frequently Asked Questions](faq.md) to know more about features customizations and if you are experiencing any issues with an integration.
-
-## Dependencies and licenses
-1. [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters) ```Optional```.
-2. Foundation
-3. AVFoundation
-4. UIKit
-5. AVKit
-6. CoreMedia
-7. CoreVideo
-8. CoreGraphics
-9. Photos
-10. MetalKit
-11. SystemConfiguration
-12. OSLog
-13. MediaPlayer
-14. Accelerate
-
-[See all dependencies and licenses](3rd_party_licences.md)
-
-## Latest Releases  
-[1.33.0](https://vebanuba.notion.site/1-33-0-d95f1f10ccf44350b6faa58876aa5e8f)
-[1.32.0](https://vebanuba.notion.site/1-32-0-ec5def11ba7545919419bdf861d07531)
-[1.30.2](https://vebanuba.notion.site/1-30-2-a0ec2ae1eeea42a59c629834f6ec6f7a)  
-[1.30.1](https://vebanuba.notion.site/1-30-1-6b90d19271b741b0b8353f7a1b92d061)  
-[1.30.0](https://vebanuba.notion.site/1-30-0-35e745d478b648199e38e86c432486e4)  
-[1.29.2](https://vebanuba.notion.site/1-29-2-d44fcd46e81c4916a13bc5fc3eb5fb4b)  
-[1.29.1](https://vebanuba.notion.site/1-29-1-e06a110ac0314b2e937adbb5621efee0)  
-[1.29.0](https://vebanuba.notion.site/1-29-0-95c88eeb25074e19ba9b11796e845432)  
-[1.28.5](https://vebanuba.notion.site/1-28-5-d64de053cf1b44ea81adb88c29b9996a)  
-[1.28.0](https://vebanuba.notion.site/1-28-0-ac7b1a919eb7443ea7caef9eae22d2a3)  
-[1.27.0](https://vebanuba.notion.site/1-27-0-591e38e8166c4833b96f96db05ead258)  
-[1.26.9](https://vebanuba.notion.site/1-26-9-73460541f0c1414ab67073e07b866e4f)  
-[1.26.8](https://vebanuba.notion.site/1-26-8-9ca76f004afc4d38a481ba8e44826713)  
-[1.26.7](https://vebanuba.notion.site/1-26-7-8653533d4ce64203ad04159d942212f6)  
-[1.26.6](https://vebanuba.notion.site/1-26-6-4c17e9a765934c2ba7da3440b1cfbe8b)  
-[1.26.5](https://vebanuba.notion.site/1-26-5-91785d18a6c64c6e86dc48ca06e3d458)  
-[1.26.4](https://vebanuba.notion.site/1-26-4-294c72f4be5944938a4e506c65435333)  
-[1.26.3](https://vebanuba.notion.site/1-26-3-8c4fb0d732eb4f2582b3aaeab28ef399)  
-[1.26.2](https://vebanuba.notion.site/1-26-2-2aa271695c974ac7b90799a0b2a108d9)   
-[1.26.1](https://vebanuba.notion.site/1-26-1-0edacf053a88499cbb51e6f065274dd3)   
-[1.26.0](https://vebanuba.notion.site/1-26-0-5e65daee7e8c41e2bebbf4d8a50e1cc4)    
+Explore [advanced setup and customization](https://docs.banuba.com/ve-pe-sdk/docs/ios/adv-integration-overview/) in our documentation.

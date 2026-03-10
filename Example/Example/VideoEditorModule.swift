@@ -2,12 +2,11 @@
 import UIKit
 import BanubaVideoEditorSDK
 
-import VideoEditor
+import BanubaVideoEditorCore
 import AVFoundation
 import AVKit
 import Photos
 import BSImagePicker
-import VEExportSDK
 import BanubaAudioBrowserSDK
 
 // Adopting CountdownView to using in BanubaVideoEditorSDK
@@ -19,11 +18,12 @@ class VideoEditorModule {
     
     var isVideoEditorInitialized: Bool { videoEditorSDK != nil }
     
-    init(token: String) {
+    init(token: String, isEditorV2Enabled: Bool) {
         let config = createConfiguration()
         
         let videoEditorSDK = BanubaVideoEditor(
             token: token,
+            arguments: [.useEditorV2: isEditorV2Enabled],
             configuration: config
         )
         
@@ -83,7 +83,6 @@ class VideoEditorModule {
         
         var featureConfiguration = config.featureConfiguration
         featureConfiguration.supportsTrimRecordedVideo = true
-        featureConfiguration.isMuteCameraAudioEnabled = true
         config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
         
         return config
