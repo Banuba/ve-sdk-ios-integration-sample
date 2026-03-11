@@ -12,22 +12,9 @@
 
 ### CocoaPods
 :exclamation: Important
-CocoaPods version 1.12.1 or newer is required. Check your version with pod --version and upgrade if needed.
+Requires CocoaPods 1.12.1+. Check with pod --version and upgrade if needed.
 
-To integrate the Video Editor SDK via CocoaPods:
-
-1. Install CocoaPods (if not already installed) using Homebrew:
-
-```sh
-brew install cocoapods
-```
-
-2. Initialize CocoaPods in your project folder:
-```sh
-pod init
-```
-
-3. Add sources and pods to your Podfile:
+1. Add sources and pods to your Podfile:
 
 ```ruby
 source 'https://cdn.cocoapods.org/'
@@ -42,29 +29,23 @@ pod 'BanubaSDK', banuba_sdk_version
 pod 'BanubaARCloudSDK', banuba_sdk_version      # optional
 pod 'BanubaAudioBrowserSDK', banuba_sdk_version # optional
 ```
-4. Install the pods:
+2. Install the pods:
 
 ```sh
 pod install --repo-update
 ```
 
-5. Open the generated ```.xcworkspace``` in Xcode and run the project.
+3. Open the generated ```.xcworkspace``` in Xcode and run the project.
 
 ### SPM
 
 SPM integration is available in the [spm branch](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/spm).
 
-To integrate the Video Editor SDK via SPM:
-
-1. Open your App project and go to the Swift Packages tab.
-
-2. Click the + button and add the required packages using the URLs:
+1. Add the required packages using the URLs:
 https://github.com/Banuba/BanubaVideoEditorSDK-iOS
 https://github.com/Banuba/BanubaSDK-iOS
 
-3. Select Exact Version and enter the latest SDK version.
-
-4. Choose the required modules and click Add Package.
+2. Use Exact Version mode and specify the 1.50.1 version.
 
 :exclamation: Info
 For more details, refer to the [SPM Mandatory modules](https://docs.banuba.com/ve-pe-sdk/docs/ios/mandatory-modules).
@@ -89,17 +70,12 @@ Add the iOS permissions required by the SDK (camera, microphone, photo library, 
 Add [English Localized Strings](../Example/Example/en.lproj/Localizable.strings) file to the project.
 
 ## Video Editor Module Setup
-Custom behavior of Video Editor SDK in your app is implemented by using a number of configuration classes in the SDK.
 
-First, create new class [VideoEditorModule](../Example/Example/VideoEditorModule.swift) for implementing configurations.
+1. Create [VideoEditorModule](../Example/Example/VideoEditorModule.swift) to initialize and customize the Video Editor SDK.
+2. Inside it, add [method](../Example/Example/VideoEditorModule.swift#L73) with your customizations:
 ```swift
 class VideoEditorModule {
-  
-}
-```
-Next, create ```VideoEditorConfig``` for implementing custom video editor configurations.
-```swift
-class VideoEditorModule {
+  ... 
   func createConfiguration() -> VideoEditorConfig {
       var config = VideoEditorConfig()
       ...
@@ -117,27 +93,16 @@ let videoEditorSDK = BanubaVideoEditor(
       externalViewControllerFactory: viewControllerFactory
     )
 ```
-```videoEditorSDK``` is ```nil``` when the license token is incorrect i.e. empty, truncated.
-If ```videoEditorSDK``` is not ```nil``` you can proceed and start video editor.
 
-Check your license state before starting video editor: 
-```swift
-videoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
-      if isValid {
-        print("✅ License is active, all good")
-      } else {
-        print("❌ License is either revoked or expired")
-      }
-      ...
-      completion(isValid)
-    })
-```
-:exclamation: Video content unavailable screen will appear if you start Video Editor SDK with revoked or expired license.
+:exclamation: Important
+1. Returns ```nil``` if the license token is invalid – verify your token
+2. [Check license activation](../Example/Example/ViewController.swift#L217) before starting the editor.
+3. Expired/revoked licenses show a "Video content unavailable" screen
 <p align="center">
 <img src="screenshots/screen_expired.png"  width="25%" height="auto">
 </p>
 
-The [implementation](../Example/Example/ExampleViewController.swift#L24) below starts Video Editor from camera screen.
+This [example](../Example/Example/ExampleViewController.swift#L24) launches from camera:
 ```swift
  let cameraLaunchConfig = VideoEditorLaunchConfig(
         entryPoint: .camera,
