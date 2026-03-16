@@ -6,7 +6,7 @@
 - [Video Editor Module Setup](#Video-Editor-Module-Setup)
 - [Launch](#Launch)
 - [Implement export](#Implement-export)
-- [Advanced integration](#Advanced-integration)
+- [Customization options](#Customization-options)
 
 ## Installation
 
@@ -50,9 +50,6 @@ pod install --repo-update
 
 5. Open the generated ```.xcworkspace``` in Xcode and run the project.
 
-:exclamation: Info
-For more details, refer to the [CocoaPods installation guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/cocapods-installation).
-
 ### SPM
 
 SPM integration is available in the [spm branch](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/spm).
@@ -70,7 +67,7 @@ https://github.com/Banuba/BanubaSDK-iOS
 4. Choose the required modules and click Add Package.
 
 :exclamation: Info
-For more details, refer to the [SPM installation guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/spm-installation).
+For more details, refer to the [SPM Mandatory modules](https://docs.banuba.com/ve-pe-sdk/docs/ios/mandatory-modules).
 
 ## Info.plist Updates
 
@@ -165,6 +162,6 @@ Check the [export implementation](../Example/Example/ViewController.swift#L250) 
 
 Read the [Export integration guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_export) for more details.
 
-## Advanced integration
+## Customization options
 
-Explore [advanced setup and customization](https://docs.banuba.com/ve-pe-sdk/docs/ios/adv-integration-overview/) in our documentation.
+Explore [customization options](https://docs.banuba.com/ve-pe-sdk/docs/ios/adv-integration-overview/) in our documentation.
