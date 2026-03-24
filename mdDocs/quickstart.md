@@ -71,7 +71,7 @@ For more details, refer to the [SPM Mandatory modules](https://docs.banuba.com/v
 
 ## Info.plist Updates
 
-Add the iOS permissions required by the SDK (camera, microphone, photo library, media library) to your [Info.plist](../example/ios/Runner/Info.plist):
+Add the iOS permissions required by the SDK (camera, microphone, photo library, media library) to your [Info.plist](../Example/Example/Info.plist):
 
 ```xml
 <key>NSAppleMusicUsageDescription</key>
@@ -137,7 +137,7 @@ videoEditorSDK?.getLicenseState(completion: { [weak self] isValid in
 <img src="screenshots/screen_expired.png"  width="25%" height="auto">
 </p>
 
-The [implementation](../Example/Example/ViewController.swift#L45) below starts Video Editor from camera screen.
+The [implementation](../Example/Example/ExampleViewController.swift#L24) below starts Video Editor from camera screen.
 ```swift
  let cameraLaunchConfig = VideoEditorLaunchConfig(
         entryPoint: .camera,
@@ -158,7 +158,7 @@ To set up export:
 
 2. Call BanubaVideoEditor.export() and pass your ExportConfiguration to start.
 
-Check the [export implementation](../Example/Example/ViewController.swift#L250) in the sample.
+Check the [export implementation](../Example/Example/VideoEditorModule.swift#L68) in the sample.
 
 Read the [Export integration guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_export) for more details.
 

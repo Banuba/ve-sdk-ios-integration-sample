@@ -28,7 +28,7 @@ Before you commit to a license, you are free to test all the features of the SDK
 Send us a message to start the [Video Editor SDK trial](https://www.banuba.com/video-editor-sdk#form) | [Photo Editor SDK trial](https://www.banuba.com/photo-editor-sdk#form). We will get back to you with the trial token.
 
 ### Quickstart Integration Guide
-See the [Quickstart Guide](mddocs/quickstart.md) for complete integration steps, including:
+See the [Quickstart Guide](mdDocs/quickstart.md) for complete integration steps, including:
 
 1. Repository setup
 
