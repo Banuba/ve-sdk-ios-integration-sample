@@ -1,7 +1,7 @@
 /*
-1) Copy and paste this file in the host application
-2) Remove unused
-3) Override values
+ 1) Copy and paste this file in the host application
+ 2) Remove unused
+ 3) Override values
 */
 
 // MARK: - Camera Screen
@@ -1040,8 +1040,6 @@
 "photoEditor.editor.done" = "Done";
 "photoEditor.editor.save" = "Save";
 "photoEditor.editor.cancel" = "Cancel";
-"photoEditor.editor.acneHint" = "Tap on spots";
-"photoEditor.editor.eyebagsHint" = "Drag to remove eyebags";
 "photoEditor.editor.makeupTab.looks" = "Looks";
 "photoEditor.editor.makeupTab.haircolors" = "Hair";
 "photoEditor.editor.makeupTab.lips" = "Lips";
@@ -1130,8 +1128,6 @@
 "photoEditor.editor.feature.softlight_alpha" = "Bright";
 "photoEditor.editor.feature.teeth_whitening_str" = "Whiten";
 "photoEditor.editor.feature.reset_button" = "Reset";
-"photoEditor.editor.feature.acne_str" = "Heal";
-"photoEditor.editor.feature.eyebags_str" = "Eyebags";
 "photoEditor.editor.feature.necklift_str" = "Neck Lift";
 "photoEditor.editor.feature.lipsize_str" = "Lip Size";
 "photoEditor.editor.feature.eyes_whitening" = "Whitening";
