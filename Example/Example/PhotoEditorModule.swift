@@ -35,11 +35,11 @@ final class PhotoEditorModule: BanubaPhotoEditorDelegate {
     }
 
     // MARK: - BanubaPhotoEditorDelegate
-    func photoEditorDidCancel(_ photoEditor: BanubaPhotoEditorSDK.BanubaPhotoEditor) {
+    func photoEditorDidCancel(_ photoEditor: BanubaPhotoEditor) {
         photoEditor.dismissPhotoEditor(animated: true, completion: nil)
     }
 
-    func photoEditorDidFinishWithImage(_ photoEditor: BanubaPhotoEditorSDK.BanubaPhotoEditor, image: UIImage) {
+    func photoEditorDidFinishWithImage(_ photoEditor: BanubaPhotoEditor, image: UIImage) {
         photoEditor.dismissPhotoEditor(animated: true) {
             self.onPhotoEditingFinished(image)
         }
