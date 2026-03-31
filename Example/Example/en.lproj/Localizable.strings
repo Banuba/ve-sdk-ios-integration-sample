@@ -504,12 +504,13 @@
 "com.banuba.overlayEditor.mainScreen.resetAll.disagree" = "Cancel";
 
 "com.banuba.overlayEditor.captions.creationCaptions" = "Creating auto captions";
-"com.banuba.overlayEditor.captions.noSpeechRecognized" = "No speech recognized";
+"com.banuba.overlayEditor.captions.noSpeechRecognized" = "No speech detected — captions not generated";
 "com.banuba.overlayEditor.captions.noInternetConnectionTitle" = "No internet connection";
 "com.banuba.overlayEditor.captions.noInternetConnectionMessage" = "Check your connection and try again.";
 "com.banuba.overlayEditor.captions.tryAgain" = "Try Again";
 "com.banuba.overlayEditor.captions.noInternetConnectionToast" = "The internet connection appears to be offline.";
 "com.banuba.captions.noAvailableForPhotoOnlyError" = "Sorry, automatic captions are currently not supported for slideshow or picture-in-picture videos.";
+"com.banuba.overlayEditor.captions.autocaptionGeneration" = "Auto captions generating…";
 
 "com.banuba.overlayEditor.captions.textStyle.basic" = "Basic";
 "com.banuba.overlayEditor.captions.textStyle.multicolor" = "Multicolor";
@@ -534,6 +535,9 @@
 "com.banuba.overlayEditor.captions.language.spanish" = "Spanish";
 "com.banuba.overlayEditor.captions.language.arabicGulf" = "Gulf Arabic";
 "com.banuba.overlayEditor.captions.language.arabic" = "Arabic";
+
+"com.banuba.overlayEditor.captions.autocaptionsGeneratingContinueTitle" = "Auto Captions are generating — they won’t be saved if you continue";
+"com.banuba.overlayEditor.captions.autocaptionsGeneratingContinueButton" = "Continue";
 
 // MARK: - AudioBrowser
 
@@ -882,9 +886,12 @@
 /* Split video part error message */
 "com.banuba.trim.splitErrorMessage" = "The selected position is invalid";
 
-// MARK: - Capture button modes
-"com.banuba.record.captureButtonVideoMode" = "Video";
-"com.banuba.record.captureButtonPhotoMode" = "Photo";
+// MARK: - Recording mode titles
+"com.banuba.record.videoModeTitle" = "Video";
+"com.banuba.record.storyModeTitle" = "Story";
+"com.banuba.record.photoModeTitle" = "Photo";
+"com.banuba.record.photoModeUnavailable" = "Photo is not available";
+
 "com.banuba.record.beautyIntensityTitle" = "Intensity";
 
 /* Sharing other button */
@@ -942,6 +949,7 @@
 "com.banuba.newEditor.addCaptions" = "Add Captions";
 "com.banuba.newEditor.addLowerThird" = "Add Lower Third";
 "com.banuba.newEditor.characterLimitReached" = "Character limit reached";
+"com.banuba.newEditor.autoCaptionsGenerationInProgressErrorMessage" = "Not available while auto captions generate";
 "com.banuba.newEditor.applyToAll" = "Apply to all";
 "com.banuba.newEditor.videoIsTooLongFormat" = "The video is too long. Maximum length is %@.";
 "com.banuba.newEditor.videoIsTooShortFormat" = "The video is too short. Minimum length is %d second.";
