@@ -11,15 +11,14 @@ target 'Example' do
   banuba_sdk_version = '1.51.0'
 
   pod 'BanubaVideoEditorSDK', banuba_sdk_version
-  pod 'BanubaSDKSimple', banuba_sdk_version
-  pod 'BanubaSDK', banuba_sdk_version
+  pod 'BanubaSDKLight', banuba_sdk_version
 
   pod 'BanubaARCloudSDK', banuba_sdk_version      # optional
   pod 'BanubaAudioBrowserSDK', banuba_sdk_version # optional
   pod 'BanubaGenAIVideos', banuba_sdk_version     # optional
 
   # Photo Editor
-  pod 'BanubaPhotoEditorSDK', '1.3.4'
+  pod 'BanubaPhotoEditorSDKLight', '1.3.4'
 
   # Third party
   pod "BSImagePicker"

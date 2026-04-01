@@ -1,6 +1,6 @@
 import UIKit
 import BanubaVideoEditorSDK
-import BanubaPhotoEditorSDK
+import BanubaPhotoEditorSDKLight
 import BanubaLicenseServicingSDK
 
 class ExampleViewController: UIViewController {
@@ -19,6 +19,24 @@ class ExampleViewController: UIViewController {
 
     // MARK: - VideoEditorSDK
     private var videoEditorModule: VideoEditorModule?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        view.addSubview(activityIndicator)
+        activityIndicator.center = CGPoint(x: view.bounds.midX, y: view.bounds.maxY - activityIndicator.frame.height - 20)
+        activityIndicator.startAnimating()
+        view.isUserInteractionEnabled = false
+
+        Task(priority: .medium) {
+            ExternalResourcesManager.shared.prepareResources()
+            Task { @MainActor in
+                activityIndicator.removeFromSuperview()
+                view.isUserInteractionEnabled = true
+            }
+        }
+    }
 
     // MARK: - Use cases
     @IBAction func openNewVideoEditorNewUI(_ sender: Any) {

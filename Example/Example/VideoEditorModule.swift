@@ -28,7 +28,12 @@ final class VideoEditorModule: BanubaVideoEditorDelegate {
 
         guard let videoEditorSDK = BanubaVideoEditor(
             token: token,
-            arguments: [.useEditorV2: isEditorV2Enabled],
+            arguments: [
+                .useEditorV2: isEditorV2Enabled,
+                .externalFARResourcesURL: ExternalResourcesManager.shared.farResourcesURL as Any,
+                .externalPhotoEditorResourcesURL: ExternalResourcesManager.shared.farResourcesURL
+                    .appendingPathComponent("photo_editor") as Any
+            ],
             configuration: Self.createConfiguration()
         ) else {
             return nil
@@ -150,6 +155,7 @@ final class VideoEditorModule: BanubaVideoEditorDelegate {
 
         var featureConfiguration = config.featureConfiguration
         featureConfiguration.supportsTrimRecordedVideo = true
+        featureConfiguration.isPhotosEditingEnabled = true
         config.updateFeatureConfiguration(featureConfiguration: featureConfiguration)
 
         return config

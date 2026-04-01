@@ -1,4 +1,4 @@
-import BanubaPhotoEditorSDK
+import BanubaPhotoEditorSDKLight
 
 final class PhotoEditorModule: BanubaPhotoEditorDelegate {
 
@@ -10,7 +10,11 @@ final class PhotoEditorModule: BanubaPhotoEditorDelegate {
     init?(token: String, onPhotoEditingFinished: @escaping (UIImage) -> Void) {
         self.onPhotoEditingFinished = onPhotoEditingFinished
 
-        let configuration = PhotoEditorConfig()
+        var configuration = PhotoEditorConfig()
+
+        configuration.beautyMaskURL = ExternalResourcesManager.shared.farResourcesURL
+            .appendingPathComponent("photo_editor")
+        configuration.effectPlayerResourcesURL = ExternalResourcesManager.shared.farResourcesURL
 
         guard let photoEditorSDK = BanubaPhotoEditor(
             token: token,
