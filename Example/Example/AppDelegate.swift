@@ -3,8 +3,6 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
-  var window: UIWindow?
-  
   // License token is required to start Video Editor SDK
   static let licenseToken: String = <#Place your token here#>
     
@@ -13,3 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 }
 
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+  var window: UIWindow?
+}
