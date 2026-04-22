@@ -50,7 +50,7 @@ For questions about Video Editor or Photo Editor SDK, reach out to Banuba suppor
 
 - iPhone devices 6s+
 - Swift 5.9+
-- Xcode 16.0+
+- Xcode 26.0+
 - iOS 15.0+
  <br> Unfortunately, the GUI isn't adapted for iPads.
 ## Supported media formats
