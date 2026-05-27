@@ -23,6 +23,7 @@ final class PhotoEditorModule: BanubaPhotoEditorDelegate {
         photoEditorSDK.delegate = self
     }
 
+    @MainActor
     func getLicenseState(completion: @escaping (_ isValid: Bool) -> Void) {
         photoEditorSDK.getLicenseState(completion: completion)
     }
