@@ -42,6 +42,7 @@ final class VideoEditorModule: BanubaVideoEditorDelegate {
         videoEditorSDK.getLicenseState(completion: completion)
     }
 
+  @MainActor
     func presentVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
         videoEditorSDK.presentVideoEditor(
             withLaunchConfiguration: launchConfig,

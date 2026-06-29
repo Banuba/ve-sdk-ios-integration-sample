@@ -1,13 +1,13 @@
 {
-  "originHash" : "b2326c771c078f2ad0b4c522f5a6a7d661274f9c496a9e4e302245bc95669985",
+  "originHash" : "038a7d215b73a16c6d7ad01e16cf260fc3e9d4a430fca8616f2b8d891910de2a",
   "pins" : [
     {
       "identity" : "banubaarcloudsdk-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Banuba/BanubaARCloudSDK-IOS.git",
+      "location" : "https://github.com/Banuba/BanubaARCloudSDK-IOS",
       "state" : {
-        "revision" : "a14105e67bb620ede317a79797c3f6e98de7f0fe",
-        "version" : "1.51.1"
+        "revision" : "c7fda3edbc089f5fff5783dc62b8c56d433e4789",
+        "version" : "1.53.0"
       }
     },
     {
@@ -15,8 +15,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS",
       "state" : {
-        "revision" : "e25125e2a6faf7f04d961b480fa08a1dc340a6cc",
-        "version" : "1.51.1"
+        "revision" : "4559de230d7d16ea7096a2bb5d6e634a0b5adb46",
+        "version" : "1.53.0"
+      }
+    },
+    {
+      "identity" : "banubadesignsystem",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Banuba/BanubaDesignSystem",
+      "state" : {
+        "revision" : "acabdbda90002ab4fe05aa66291af758f57e2d43",
+        "version" : "1.0.2"
       }
     },
     {
@@ -24,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaLicenseServicingSDK.git",
       "state" : {
-        "revision" : "6d45e59418f1f7ae5e1d99d6e041067fe5e96ca2",
-        "version" : "1.51.1"
+        "revision" : "bf10ec89f04a119f3d466a132f91d2f8942d9194",
+        "version" : "1.53.0"
       }
     },
     {
@@ -33,26 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaPhotoEditorSDK-iOS.git",
       "state" : {
-        "revision" : "836ce9ece0fa6b33a351d6bbb10d866b4716bef6",
-        "version" : "1.3.5"
-      }
-    },
-    {
-      "identity" : "banubasdk-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Banuba/BanubaSDK-iOS",
-      "state" : {
-        "revision" : "3837fb04e603a951374b2607a885dfc0d00132cc",
-        "version" : "1.51.1"
-      }
-    },
-    {
-      "identity" : "banubasdksimple-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Banuba/BanubaSDKSimple-IOS",
-      "state" : {
-        "revision" : "13d9e8032343b5ceca2ef0fcd1b817b9d8b9f464",
-        "version" : "1.51.1"
+        "revision" : "46f3f85a582c1f494755754a27fb8d224f52f69a",
+        "version" : "1.4.0"
       }
     },
     {
@@ -60,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaUtilities-iOS.git",
       "state" : {
-        "revision" : "64ba97cbf33adf948bf38a0c4c5131332e185c91",
-        "version" : "1.51.1"
+        "revision" : "a120d3f52498f1506f11f31ade32972e610950ae",
+        "version" : "1.53.0"
       }
     },
     {
@@ -69,17 +60,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaVideoEditorCore-iOS.git",
       "state" : {
-        "revision" : "8c60b7c154c430ed122ccafc18f5e86507d760f8",
-        "version" : "1.51.1"
+        "revision" : "be98c0ae9fb066b192cfb62dc16f71d7d8bf45cb",
+        "version" : "1.53.0"
       }
     },
     {
       "identity" : "banubavideoeditorsdk-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Banuba/BanubaVideoEditorSDK-iOS",
+      "location" : "https://github.com/Banuba/BanubaVideoEditorSDK-iOS.git",
       "state" : {
-        "revision" : "5e8d6306979c3e4de9ea1977b34577aa81bece05",
-        "version" : "1.51.1"
+        "revision" : "78cb405c4fa16e0d773343e7f5c302611b1fe50d",
+        "version" : "1.53.0"
       }
     },
     {
@@ -132,8 +123,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BNBLicenseUtils-iOS.git",
       "state" : {
-        "revision" : "aebb9b1599ce3aae45accbaf47ee4c069a6c023b",
-        "version" : "1.51.1"
+        "revision" : "9f42ab9b2100ca6771095859368164cc748c9224",
+        "version" : "1.53.0"
       }
     },
     {
