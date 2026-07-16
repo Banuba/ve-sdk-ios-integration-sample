@@ -1,5 +1,5 @@
 {
-  "originHash" : "038a7d215b73a16c6d7ad01e16cf260fc3e9d4a430fca8616f2b8d891910de2a",
+  "originHash" : "dd853cbdb9a9fd7ceadf943d3baf7c86769244b384973e9e3d23f111361a354d",
   "pins" : [
     {
       "identity" : "banubaarcloudsdk-ios",
@@ -44,6 +44,24 @@
       "state" : {
         "revision" : "46f3f85a582c1f494755754a27fb8d224f52f69a",
         "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "banubasdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Banuba/BanubaSDK-iOS",
+      "state" : {
+        "revision" : "f4bccbe3956f36f206f5f32a90a36210b61dc993",
+        "version" : "1.53.0"
+      }
+    },
+    {
+      "identity" : "banubasdksimple-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Banuba/BanubaSDKSimple-IOS",
+      "state" : {
+        "revision" : "c729868f2c0ce8a40cbc6ecdf40cf42f32cbce46",
+        "version" : "1.53.1"
       }
     },
     {

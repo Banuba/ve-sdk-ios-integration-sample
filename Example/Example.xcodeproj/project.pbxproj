@@ -14,6 +14,8 @@
 		639DA0182547002C0011C153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DA0162547002C0011C153 /* LaunchScreen.storyboard */; };
 		7D7D0A572B976D4000DF878E /* PhotoEditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D0A562B976D4000DF878E /* PhotoEditorModule.swift */; };
 		8A32EEDF258CB70C0098F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A32EEDE258CB70C0098F852 /* Assets.xcassets */; };
+		DB758FA730090A2500700AFD /* BanubaSdkSimple in Frameworks */ = {isa = PBXBuildFile; productRef = DB758FA630090A2500700AFD /* BanubaSdkSimple */; };
+		DB758FAA30090A9C00700AFD /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = DB758FA930090A9C00700AFD /* BanubaSdk */; };
 		DB87D3E22F84080F00161991 /* ExampleViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB87D3E12F84080800161991 /* ExampleViewController+Utils.swift */; };
 		DBA27CED2FF2DBA200FC3F42 /* BanubaPhotoEditorSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DBA27CEC2FF2DBA200FC3F42 /* BanubaPhotoEditorSDK */; };
 		DBA623FA2FF2C9170026EC5A /* BanubaAudioBrowserSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DBA623F92FF2C9170026EC5A /* BanubaAudioBrowserSDK */; };
@@ -43,7 +45,9 @@
 				DBA623FD2FF2C96D0026EC5A /* BanubaARCloudSDK in Frameworks */,
 				DBA624002FF2DAEC0026EC5A /* BanubaVideoEditorSDK in Frameworks */,
 				DBA27CED2FF2DBA200FC3F42 /* BanubaPhotoEditorSDK in Frameworks */,
+				DB758FAA30090A9C00700AFD /* BanubaSdk in Frameworks */,
 				DBA623FA2FF2C9170026EC5A /* BanubaAudioBrowserSDK in Frameworks */,
+				DB758FA730090A2500700AFD /* BanubaSdkSimple in Frameworks */,
 				DBB4F8C92D4380AA00B1AADD /* BSImagePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +117,8 @@
 				DBA623FC2FF2C96D0026EC5A /* BanubaARCloudSDK */,
 				DBA623FF2FF2DAEC0026EC5A /* BanubaVideoEditorSDK */,
 				DBA27CEC2FF2DBA200FC3F42 /* BanubaPhotoEditorSDK */,
+				DB758FA630090A2500700AFD /* BanubaSdkSimple */,
+				DB758FA930090A9C00700AFD /* BanubaSdk */,
 			);
 			productName = Example;
 			productReference = 639DA008254700290011C153 /* Example.app */;
@@ -148,6 +154,8 @@
 				DBA623FB2FF2C96D0026EC5A /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */,
 				DBA623FE2FF2DAEC0026EC5A /* XCRemoteSwiftPackageReference "BanubaVideoEditorSDK-iOS" */,
 				DBA27CEB2FF2DBA200FC3F42 /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */,
+				DB758FA530090A2500700AFD /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */,
+				DB758FA830090A9C00700AFD /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */,
 			);
 			productRefGroup = 639DA009254700290011C153 /* Products */;
 			projectDirPath = "";
@@ -404,6 +412,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DB758FA530090A2500700AFD /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Banuba/BanubaSDKSimple-IOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.53.1;
+			};
+		};
+		DB758FA830090A9C00700AFD /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Banuba/BanubaSDK-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.53.0;
+			};
+		};
 		DBA27CEB2FF2DBA200FC3F42 /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaPhotoEditorSDK-iOS.git";
@@ -447,6 +471,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DB758FA630090A2500700AFD /* BanubaSdkSimple */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB758FA530090A2500700AFD /* XCRemoteSwiftPackageReference "BanubaSDKSimple-IOS" */;
+			productName = BanubaSdkSimple;
+		};
+		DB758FA930090A9C00700AFD /* BanubaSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB758FA830090A9C00700AFD /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */;
+			productName = BanubaSdk;
+		};
 		DBA27CEC2FF2DBA200FC3F42 /* BanubaPhotoEditorSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DBA27CEB2FF2DBA200FC3F42 /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */;
