@@ -417,7 +417,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDKSimple-IOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.53.1;
+				minimumVersion = 1.53.2;
 			};
 		};
 		DB758FA830090A9C00700AFD /* XCRemoteSwiftPackageReference "BanubaSDK-iOS" */ = {
@@ -425,7 +425,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaSDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.53.0;
+				minimumVersion = 1.53.1;
 			};
 		};
 		DBA27CEB2FF2DBA200FC3F42 /* XCRemoteSwiftPackageReference "BanubaPhotoEditorSDK-iOS" */ = {
@@ -433,7 +433,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaPhotoEditorSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
+				minimumVersion = 1.4.1;
 			};
 		};
 		DBA623F82FF2C9170026EC5A /* XCRemoteSwiftPackageReference "BanubaAudioBrowserSDK-iOS" */ = {
@@ -441,7 +441,7 @@
 			repositoryURL = "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.53.0;
+				minimumVersion = 1.53.1;
 			};
 		};
 		DBA623FB2FF2C96D0026EC5A /* XCRemoteSwiftPackageReference "BanubaARCloudSDK-IOS" */ = {
@@ -456,8 +456,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Banuba/BanubaVideoEditorSDK-iOS.git";
 			requirement = {
-				kind = exactVersion;
-				version = 1.53.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.53.1;
 			};
 		};
 		DBB4F8C72D4380AA00B1AADD /* XCRemoteSwiftPackageReference "BSImagePicker" */ = {
