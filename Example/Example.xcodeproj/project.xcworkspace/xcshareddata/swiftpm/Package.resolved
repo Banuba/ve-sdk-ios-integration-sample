@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaARCloudSDK-IOS",
       "state" : {
-        "revision" : "c7fda3edbc089f5fff5783dc62b8c56d433e4789",
-        "version" : "1.53.0"
+        "revision" : "9d3d1ea88b3b7f0d0473e7d30ba226b60eebdf25",
+        "version" : "1.53.2"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaAudioBrowserSDK-iOS",
       "state" : {
-        "revision" : "46bc8f5d42d20d14a27809c6ad97a166a69274a4",
-        "version" : "1.53.1"
+        "revision" : "1f4d8c893f06afd9b4e1b2cbbea3b93bb0ba579d",
+        "version" : "1.53.2"
       }
     },
     {
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaDesignSystem.git",
       "state" : {
-        "revision" : "8101bce734dc11e632dbca6452825f7a3ce10f60",
-        "version" : "1.0.3"
+        "revision" : "5ef46a1c33fd84a1124370aff7badf7ebe545c1d",
+        "version" : "1.0.4"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaLicenseServicingSDK.git",
       "state" : {
-        "revision" : "0fc4f8c6b5d2c7c6d3f6ac20160f52b29e7ed9b9",
-        "version" : "1.53.1"
+        "revision" : "20f31f8723efa6c14560d072cee75eee5185bcca",
+        "version" : "1.53.2"
       }
     },
     {
@@ -69,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaUtilities-iOS.git",
       "state" : {
-        "revision" : "0b8e468f8952f6303cadbb38ca92b7a77c3887e8",
-        "version" : "1.53.1"
+        "revision" : "25cb8d3c89923868906f661a965eb0f6ef356eaa",
+        "version" : "1.53.2"
       }
     },
     {
@@ -87,8 +87,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Banuba/BanubaVideoEditorSDK-iOS.git",
       "state" : {
-        "revision" : "ed5d0ecc30e9ae6f9a1cd42405e2194c7385fc69",
-        "version" : "1.53.1"
+        "revision" : "596f9643821b31be89afed4beef25a47bf653a43",
+        "version" : "1.53.2"
       }
     },
     {
