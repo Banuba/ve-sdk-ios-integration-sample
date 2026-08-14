@@ -8,13 +8,15 @@ inhibit_all_warnings!
 
 target 'Example' do
 
-  pod 'BanubaVideoEditorSDK', '1.53.2'
-  pod 'BanubaSDKSimple', '1.53.1'
-  pod 'BanubaSDK', '1.53.1'
+  banuba_sdk_version = '1.54.0'
 
-  pod 'BanubaARCloudSDK', '1.53.2'      # optional
-  pod 'BanubaAudioBrowserSDK', '1.53.2' # optional
-  pod 'BanubaGenAIVideos', '1.53.0'     # optional
+  pod 'BanubaVideoEditorSDK', banuba_sdk_version
+  pod 'BanubaSDKSimple', banuba_sdk_version
+  pod 'BanubaSDK', banuba_sdk_version
+
+  pod 'BanubaARCloudSDK', banuba_sdk_version      # optional
+  pod 'BanubaAudioBrowserSDK', banuba_sdk_version # optional
+  pod 'BanubaGenAIVideos', banuba_sdk_version     # optional
 
   # Photo Editor
   pod 'BanubaPhotoEditorSDK', '1.4.1'
