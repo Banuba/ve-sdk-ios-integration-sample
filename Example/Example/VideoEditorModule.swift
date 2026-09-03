@@ -9,10 +9,11 @@ import BanubaAudioBrowserSDK
 
 typealias VideoEditingResult = (URL, BanubaVideoEditorSDK.ExportCoverImages?)
 
+@MainActor
 final class VideoEditorModule: BanubaVideoEditorDelegate {
 
     /// Callback for handling export result
-    let onVideoEditingFinished: (Result<VideoEditingResult>) -> Void
+    let onVideoEditingFinished: (Swift.Result<VideoEditingResult, Error>) -> Void
 
     let videoEditorSDK: BanubaVideoEditor
 
@@ -22,7 +23,7 @@ final class VideoEditorModule: BanubaVideoEditorDelegate {
     init?(
         token: String,
         isEditorV2Enabled: Bool,
-        onVideoEditingFinished: @escaping (Result<VideoEditingResult>) -> Void
+        onVideoEditingFinished: @escaping (Swift.Result<VideoEditingResult, Error>) -> Void
     ) {
         self.onVideoEditingFinished = onVideoEditingFinished
 
@@ -42,7 +43,6 @@ final class VideoEditorModule: BanubaVideoEditorDelegate {
         videoEditorSDK.getLicenseState(completion: completion)
     }
 
-    @MainActor
     func presentVideoEditor(with launchConfig: VideoEditorLaunchConfig) {
         videoEditorSDK.presentVideoEditor(
             withLaunchConfiguration: launchConfig,
@@ -66,7 +66,7 @@ final class VideoEditorModule: BanubaVideoEditorDelegate {
         }
     }
 
-    private func export(_ completion: @escaping (Result<VideoEditingResult>) -> Void) {
+    private func export(_ completion: @escaping (Swift.Result<VideoEditingResult, Error>) -> Void) {
         // Show progress VC
         var progressViewController: ProgressViewController?
         if let topViewController = getTopViewController() {
@@ -146,8 +146,8 @@ final class VideoEditorModule: BanubaVideoEditorDelegate {
     static func createConfiguration() -> VideoEditorConfig {
         var config = VideoEditorConfig()
 
-        AudioBrowserConfig.shared.musicSource = .allSources
-        AudioBrowserConfig.shared.setPrimaryColor(#colorLiteral(red: 0.2350233793, green: 0.7372031212, blue: 0.7565478683, alpha: 1))
+        AudioBrowserConfig.shared.musicSource = .localStorageWithMyFiles
+        
 
         var featureConfiguration = config.featureConfiguration
         featureConfiguration.supportsTrimRecordedVideo = true

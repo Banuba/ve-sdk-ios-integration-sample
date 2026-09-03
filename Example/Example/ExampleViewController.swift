@@ -150,10 +150,10 @@ class ExampleViewController: UIViewController {
             return
         }
 
-        videoEditorModule.getLicenseState(completion: { [weak self] isValid in
+        videoEditorModule.getLicenseState { [weak self] isValid in
             self?.handleTokenValidationResult(isValid)
             if isValid { self?.videoEditorModule?.presentVideoEditor(with: launchConfig) }
-        })
+        }
 
         self.videoEditorModule = videoEditorModule
     }

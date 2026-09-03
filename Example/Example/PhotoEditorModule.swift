@@ -1,5 +1,6 @@
 import BanubaPhotoEditorSDK
 
+@MainActor
 final class PhotoEditorModule: BanubaPhotoEditorDelegate {
 
     /// Callback for handling editing result
@@ -23,7 +24,6 @@ final class PhotoEditorModule: BanubaPhotoEditorDelegate {
         photoEditorSDK.delegate = self
     }
 
-    @MainActor
     func getLicenseState(completion: @escaping (_ isValid: Bool) -> Void) {
         photoEditorSDK.getLicenseState(completion: completion)
     }
