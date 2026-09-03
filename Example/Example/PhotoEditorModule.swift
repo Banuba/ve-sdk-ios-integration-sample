@@ -1,47 +1,48 @@
 import BanubaPhotoEditorSDK
 
+@MainActor
 final class PhotoEditorModule: BanubaPhotoEditorDelegate {
 
-    /// Callback for handling editing result
-    let onPhotoEditingFinished: (UIImage) -> Void
+  /// Callback for handling editing result
+  let onPhotoEditingFinished: (UIImage) -> Void
 
-    let photoEditorSDK: BanubaPhotoEditor
+  let photoEditorSDK: BanubaPhotoEditor
 
-    init?(token: String, onPhotoEditingFinished: @escaping (UIImage) -> Void) {
-        self.onPhotoEditingFinished = onPhotoEditingFinished
+  init?(token: String, onPhotoEditingFinished: @escaping (UIImage) -> Void) {
+    self.onPhotoEditingFinished = onPhotoEditingFinished
 
-        let configuration = PhotoEditorConfig()
+    let configuration = PhotoEditorConfig()
 
-        guard let photoEditorSDK = BanubaPhotoEditor(
-            token: token,
-            configuration: configuration
-        ) else {
-            return nil
-        }
-
-        self.photoEditorSDK = photoEditorSDK
-        photoEditorSDK.delegate = self
+    guard let photoEditorSDK = BanubaPhotoEditor(
+      token: token,
+      configuration: configuration
+    ) else {
+      return nil
     }
 
-    func getLicenseState(completion: @escaping (_ isValid: Bool) -> Void) {
-        photoEditorSDK.getLicenseState(completion: completion)
-    }
+    self.photoEditorSDK = photoEditorSDK
+    photoEditorSDK.delegate = self
+  }
 
-    func presentPhotoEditor(with launchConfig: PhotoEditorLaunchConfig) {
-        photoEditorSDK.presentPhotoEditor(
-            withLaunchConfiguration: launchConfig,
-            completion: nil
-        )
-    }
+  func getLicenseState(completion: @escaping (_ isValid: Bool) -> Void) {
+    photoEditorSDK.getLicenseState(completion: completion)
+  }
 
-    // MARK: - BanubaPhotoEditorDelegate
-    func photoEditorDidCancel(_ photoEditor: BanubaPhotoEditor) {
-        photoEditor.dismissPhotoEditor(animated: true, completion: nil)
-    }
+  func presentPhotoEditor(with launchConfig: PhotoEditorLaunchConfig) {
+    photoEditorSDK.presentPhotoEditor(
+      withLaunchConfiguration: launchConfig,
+      completion: nil
+    )
+  }
 
-    func photoEditorDidFinishWithImage(_ photoEditor: BanubaPhotoEditor, image: UIImage) {
-        photoEditor.dismissPhotoEditor(animated: true) {
-            self.onPhotoEditingFinished(image)
-        }
+  // MARK: - BanubaPhotoEditorDelegate
+  func photoEditorDidCancel(_ photoEditor: BanubaPhotoEditor) {
+    photoEditor.dismissPhotoEditor(animated: true, completion: nil)
+  }
+
+  func photoEditorDidFinishWithImage(_ photoEditor: BanubaPhotoEditor, image: UIImage) {
+    photoEditor.dismissPhotoEditor(animated: true) {
+      self.onPhotoEditingFinished(image)
     }
+  }
 }
