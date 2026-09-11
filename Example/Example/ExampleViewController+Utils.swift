@@ -42,7 +42,8 @@ extension ExampleViewController {
         entryPoint: PresentEventOptions.EntryPoint,
         completion: @escaping (_ videoUrls: [URL]) -> Void
     ) {
-        pickGalleryVideo { assets in
+        let limit = entryPoint == .camera ? 1 : nil
+        pickGalleryVideo(limit: limit) { assets in
             guard let assets = assets else {
                 return
             }
@@ -99,10 +100,14 @@ extension ExampleViewController {
     }
 
     private func pickGalleryVideo(
+        limit: Int?,
         completion: @escaping ([PHAsset]?) -> Void
     ) {
         let imagePicker = ImagePickerController()
 
+        if let limit {
+            imagePicker.settings.selection.max = limit
+        }
         imagePicker.settings.fetch.assets.supportedMediaTypes = [.video]
 
         self.presentImagePicker(

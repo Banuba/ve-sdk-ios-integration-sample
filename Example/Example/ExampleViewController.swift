@@ -49,12 +49,17 @@ class ExampleViewController: UIViewController {
     }
 
     @IBAction func openVideoEditorPiP(_ sender: Any) {
-        let launchConfig = VideoEditorLaunchConfig(
-            entryPoint: .camera,
-            hostController: self,
-            animated: true
-        )
-        checkLicenseAndOpenVideoEditor(with: launchConfig)
+        pickerGalleryVideos(entryPoint: .camera) { [weak self] pickedVideoUrls in
+            guard let self, let pipVideoUrl = pickedVideoUrls.first else { return }
+
+            let launchConfig = VideoEditorLaunchConfig(
+                entryPoint: .camera,
+                hostController: self,
+                cameraLayout: .init(layout: .pipLeft, payload: .media(pipVideoUrl)),
+                animated: true
+            )
+            self.checkLicenseAndOpenVideoEditor(with: launchConfig)
+        }
     }
 
     @IBAction func openVideoEditorDrafts(_ sender: UIButton) {
