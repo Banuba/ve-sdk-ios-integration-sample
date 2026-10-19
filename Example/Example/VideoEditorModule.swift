@@ -113,19 +113,11 @@ final class VideoEditorModule: BanubaVideoEditorDelegate {
     }
 
     func createExportConfiguration(destFile: URL) -> ExportConfiguration {
-        // Set up watermark. To export without a watermark, omit the configuration.
-        let watermarkConfiguration = WatermarkConfiguration(
-            watermark: ImageConfiguration(imageName: "Common.Banuba.Watermark"),
-            size: CGSize(width: 204, height: 52),
-            sharedOffset: 20,
-            position: .rightBottom
-        )
-
         let exportConfiguration = ExportVideoConfiguration(
             fileURL: destFile,
             quality: .auto,
             useHEVCCodecIfPossible: true,
-            watermarkConfiguration: watermarkConfiguration
+            watermarkConfiguration: nil
         )
 
         let exportConfig = ExportConfiguration(
