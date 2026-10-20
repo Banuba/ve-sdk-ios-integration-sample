@@ -143,6 +143,10 @@ class ExampleViewController: UIViewController {
             onVideoEditingFinished: { exportResult in
                 switch exportResult {
                 case .success((let videoUrl, let exportCoverImages)):
+                    guard let videoUrl else {
+                        print("Video editing finished without video URL")
+                        return
+                    }
                     self.showExportResult(videoUrl: videoUrl, exportCoverImages: exportCoverImages)
                 case .failure(let error):
                     print("Video editing finished with error: \(error)")
