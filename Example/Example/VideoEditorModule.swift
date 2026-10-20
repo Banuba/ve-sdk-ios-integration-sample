@@ -7,7 +7,7 @@ import AVKit
 import Photos
 import BanubaAudioBrowserSDK
 
-typealias VideoEditingResult = (URL, BanubaVideoEditorSDK.ExportCoverImages?)
+typealias VideoEditingResult = (URL?, BanubaVideoEditorSDK.ExportCoverImages?)
 
 @MainActor
 final class VideoEditorModule: BanubaVideoEditorDelegate {
@@ -76,22 +76,11 @@ final class VideoEditorModule: BanubaVideoEditorDelegate {
             topViewController.present(progress, animated: true)
         }
 
-        // Configure destination video URL
-        let exportedVideoFileName = "tmp.mov"
-        let manager = FileManager.default
-        let videoURL = manager.temporaryDirectory.appendingPathComponent(exportedVideoFileName)
-        if manager.fileExists(atPath: videoURL.path) {
-            try? manager.removeItem(at: videoURL)
-        }
-
-        let exportConfiguration = createExportConfiguration(destFile: videoURL)
-
         videoEditorSDK.export(
-            using: exportConfiguration,
             exportProgress: { [weak progressViewController] progress in
                 DispatchQueue.main.async { progressViewController?.updateProgressView(with: Float(progress)) }
             },
-            completion: { [weak self, weak progressViewController] error, exportCoverImages in
+            completion: { [weak self, weak progressViewController] videoURL, error, exportCoverImages in
                 DispatchQueue.main.async {
                     guard let self else { return }
                     // Hide progress view
@@ -110,23 +99,6 @@ final class VideoEditorModule: BanubaVideoEditorDelegate {
                 }
             }
         )
-    }
-
-    func createExportConfiguration(destFile: URL) -> ExportConfiguration {
-        let exportConfiguration = ExportVideoConfiguration(
-            fileURL: destFile,
-            quality: .auto,
-            useHEVCCodecIfPossible: true,
-            watermarkConfiguration: nil
-        )
-
-        let exportConfig = ExportConfiguration(
-            videoConfigurations: [exportConfiguration],
-            isCoverEnabled: true,
-            gifSettings: GifSettings(duration: 0.3)
-        )
-
-        return exportConfig
     }
 
     func createProgressViewController() -> ProgressViewController {
