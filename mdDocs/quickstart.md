@@ -116,9 +116,7 @@ editorSDK.launch(with: cameraLaunchConfig)
 - In `videoEditorClose()`, release the SDK.
 - In `videoEditorExportDone(with:error:coverImages:)`, handle the error or use the first exported URL to show the video.
 
-For photos, implement `BanubaPhotoEditorDelegate` in a second handler. Dismiss the photo editor in both callbacks: release the SDK in `photoEditorDidCancel(_:)`, and save and preview the returned `UIImage` in `photoEditorDidFinishWithImage(_:image:)`.
-
-See both handlers in [ExampleViewController.swift](../Example/Example/ExampleViewController.swift).
+See both handler in [ExampleViewController.swift](../Example/Example/ExampleViewController.swift).
 
 Read the [Export integration guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_export) for more details.
 
