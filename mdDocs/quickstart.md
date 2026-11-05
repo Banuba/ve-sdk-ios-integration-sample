@@ -2,7 +2,6 @@
 
 - [Installation](#Installation)
 - [Info.plist Updates](#Info.plist-Updates)
-- [Localization](#Localization)
 - [Video Editor SDK Setup](#Video-Editor-SDK-Setup)
 - [Launch](#Launch)
 - [Implement export](#Implement-export)
@@ -52,11 +51,11 @@ For more details, refer to the [SPM Mandatory modules](https://docs.banuba.com/v
 
 ## Info.plist Updates
 
-Add the iOS permissions required by the SDK (camera, microphone, photo library, media library) to your [Info.plist](../Example/Example/Info.plist):
+The ```Video Editor SDK``` uses the camera and microphone to record video, and the photo library to select media. Local music requests access to the user's media library. Add the corresponding usage descriptions to your [Info.plist](../Example/Example/Info.plist); iOS shows these strings when asking for permission. Adjust the wording to describe how your app uses each resource:
 
 ```xml
 <key>NSAppleMusicUsageDescription</key>
-<string>This app requires access to the media library</string>
+<string>This app requires access to the media library.</string>
 <key>NSCameraUsageDescription</key>
 <string>This app requires access to the camera.</string>
 <key>NSMicrophoneUsageDescription</key>
@@ -79,6 +78,8 @@ let editorSDK = VideoEditorSDK.Builder()
     .setFeatureConfiguration(featureConfiguration)
     .initialize(token: AppDelegate.licenseToken) 
 
+// The SDK holds its delegate weakly. Store the handler in self.editorHandler;
+// otherwise it is deallocated when this method returns and receives no callbacks.
 let handler = VideoEditorHandler(self)
 
 self.editorSDK = editorSDK
@@ -86,19 +87,17 @@ self.editorHandler = handler
 editorSDK.delegate = handler
 ```
 
-Keep a strong reference to the handler because `VideoEditorSDK.delegate` is weak.
+:exclamation: Important
+```editorSDk``` is ```nil``` if the license token is invalid – verify your token.
 
 ## Launch
 
-:exclamation: Important
-1. Returns ```nil``` if the license token is invalid – verify your token
-2. [Check license activation](../Example/Example/ViewController.swift#L217) before starting the editor.
-3. Expired/revoked licenses show a "Video content unavailable" screen
+1. [Check license activation](../Example/Example/ExampleViewController.swift#L219) before starting the editor.
+2. Expired/revoked licenses show a "Video content unavailable" screen
 <p align="center">
 <img src="screenshots/screen_expired.png"  width="25%" height="auto">
 </p>
 
-This [example](../Example/Example/ExampleViewController.swift#L24) launches from camera:
 ```swift
 let cameraLaunchConfig = VideoEditorLaunchConfig(
     entryPoint: .camera,
@@ -111,12 +110,12 @@ editorSDK.launch(with: cameraLaunchConfig)
 
 ## Implement export
 
-`VideoEditorSDK` handles export. Implement `VideoEditorSDKDelegate` in `VideoEditorHandler`:
+`VideoEditorSDK` exports the video and reports the result through `VideoEditorSDKDelegate`. Implement the callbacks in `VideoEditorHandler`:
 
-- In `videoEditorClose()`, release the SDK.
-- In `videoEditorExportDone(with:error:coverImages:)`, handle the error or use the first exported URL to show the video.
+- `videoEditorClose()`: release the SDK when the editor closes.
+- `videoEditorExportDone(with:error:coverImages:)`: log the error if export failed; otherwise take the first URL from `videoUrls` and pass it to `showExportResult(videoUrl:)`.
 
-See both handler in [ExampleViewController.swift](../Example/Example/ExampleViewController.swift).
+See the handler in [ExampleViewController.swift](../Example/Example/ExampleViewController.swift).
 
 Read the [Export integration guide](https://docs.banuba.com/ve-pe-sdk/docs/ios/guide_export) for more details.
 

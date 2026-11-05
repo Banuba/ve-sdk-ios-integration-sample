@@ -172,10 +172,12 @@ class ExampleViewController: UIViewController {
         
         let config = PhotoEditorConfig()
         
-        guard let photoEditorSDK = BanubaPhotoEditor(
+        let photoEditorSDK = BanubaPhotoEditor(
             token: AppDelegate.licenseToken,
             configuration: config
-        ) else {
+        )
+        
+        guard let photoEditorSDK else {
             handleFailedInitialization(message: ErrorStrings.photoEditorNotInitialized)
             return
         }
@@ -202,11 +204,13 @@ class ExampleViewController: UIViewController {
         var featureConfiguration = VideoEditorConfig().featureConfiguration
         featureConfiguration.supportsTrimRecordedVideo = true
         
-        guard let editorSDK = VideoEditorSDK.Builder()
+        let editorSDK = VideoEditorSDK.Builder()
             .setEditorV2Enabled(isEditorV2Enabled)
             .setAudioBrowserProvider(.local)
             .setFeatureConfiguration(featureConfiguration)
-            .initialize(token: AppDelegate.licenseToken) else {
+            .initialize(token: AppDelegate.licenseToken)
+        
+        guard let editorSDK else {
             handleFailedInitialization(message: ErrorStrings.videoEditorNotInitialized)
             return
         }
