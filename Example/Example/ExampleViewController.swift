@@ -25,7 +25,7 @@ class ExampleViewController: UIViewController {
     private var editorHandler: VideoEditorHandler?
     
     // MARK: - Video Editor SDK Handler
-    // Step 6: Handle Video Editor export and close callbacks.
+    // Step 5: Handle Video Editor export and close callbacks.
     private final class VideoEditorHandler: VideoEditorSDKDelegate {
         weak var hostController: ExampleViewController?
         
@@ -85,7 +85,7 @@ class ExampleViewController: UIViewController {
     }
     
     // MARK: - Use cases
-    // Step 5: Launch the Video Editor from the selected entry point.
+    // Step 4: Launch the Video Editor from the selected entry point.
     // Launch the camera flow with Editor V2 enabled.
     @IBAction func openNewVideoEditorNewUI(_ sender: Any) {
         let launchConfig = VideoEditorLaunchConfig(
@@ -202,7 +202,7 @@ class ExampleViewController: UIViewController {
         self.photoEditorHandler = photoEditorHandler
         photoEditorSDK.delegate = photoEditorHandler
         
-        // Step 4: Check the license asynchronously before presenting Photo Editor.
+        // Check the license asynchronously before presenting Photo Editor.
         photoEditorSDK.getLicenseState(completion: { [weak self] isValid in
             self?.handleTokenValidationResult(isValid)
             // Present Photo Editor only when the license is active.
@@ -238,10 +238,10 @@ class ExampleViewController: UIViewController {
         self.editorHandler = handler
         editorSDK.delegate = handler
         
-        // Step 4: Check the license asynchronously before launching Video Editor.
+        // Check the license asynchronously before launching Video Editor.
         editorSDK.getLicenseState { [weak self] isValid in
             self?.handleTokenValidationResult(isValid)
-            // Step 5: Launch Video Editor only when the license is active.
+            // Step 4: Launch Video Editor only when the license is active.
             if isValid { self?.editorSDK?.launch(with: launchConfig) }
         }
     }

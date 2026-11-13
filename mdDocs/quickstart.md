@@ -7,9 +7,8 @@ This guide shows how to install the SDKs, check the license, and launch the edit
 - [Step 1: Install the SDKs](#step-1-install-the-sdks)
 - [Step 2: Update Info.plist](#step-2-update-infoplist)
 - [Step 3: Initialize the SDK](#step-3-initialize-the-sdk)
-- [Step 4: Check the license](#step-4-check-the-license)
-- [Step 5: Launch the Video Editor](#step-5-launch-the-video-editor)
-- [Step 6: Handle export](#step-6-handle-export)
+- [Step 4: Launch the Video Editor](#step-4-launch-the-video-editor)
+- [Step 5: Handle export](#step-5-handle-export)
 - [Additional Customization](#additional-customization)
 
 ## Step 1: Install the SDKs
@@ -96,15 +95,13 @@ editorSDK.delegate = handler
 :exclamation: Important
 `initialize(token:)` returns `nil` if the license token is invalid. Keep a strong reference to the handler because the SDK holds its delegate weakly.
 
-## Step 4: Check the license
-
 1. [Check license activation](../Example/Example/ExampleViewController.swift) with `getLicenseState` before launching either editor. The check is asynchronous.
 2. If the license is revoked or expired, show an error instead of opening the editor.
 <p align="center">
 <img src="screenshots/screen_expired.png"  width="25%" height="auto">
 </p>
 
-## Step 5: Launch the Video Editor
+## Step 4: Launch the Video Editor
 
 Start the video creation flow from your view controller (see the full implementation in [ExampleViewController.swift](../Example/Example/ExampleViewController.swift)):
 
@@ -118,7 +115,7 @@ let cameraLaunchConfig = VideoEditorLaunchConfig(
 editorSDK.launch(with: cameraLaunchConfig)
 ```
 
-## Step 6: Handle export
+## Step 5: Handle export
 
 `VideoEditorSDK` exports the video and reports the result through `VideoEditorSDKDelegate`. Implement the callbacks in `VideoEditorHandler`:
 
