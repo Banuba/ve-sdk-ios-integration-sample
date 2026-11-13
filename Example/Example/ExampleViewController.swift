@@ -25,6 +25,7 @@ class ExampleViewController: UIViewController {
     private var editorHandler: VideoEditorHandler?
     
     // MARK: - Video Editor SDK Handler
+    // Step 5: Handle Video Editor export and close callbacks.
     private final class VideoEditorHandler: VideoEditorSDKDelegate {
         weak var hostController: ExampleViewController?
         
@@ -50,6 +51,7 @@ class ExampleViewController: UIViewController {
     }
     
     // MARK: - Photo Editor SDK Handler
+    // Handle Photo Editor cancellation and preview its exported image.
     private final class PhotoEditorHandler: BanubaPhotoEditorDelegate {
         weak var hostViewController: ExampleViewController?
         
@@ -70,6 +72,7 @@ class ExampleViewController: UIViewController {
                     return
                 }
                 
+                // The preview helper takes a URL, so save the image to a temporary file.
                 let imageURL = FileManager.default.temporaryDirectory.appendingPathComponent("\(UUID().uuidString).png")
                 do {
                     try data.write(to: imageURL, options: .atomic)
@@ -82,6 +85,8 @@ class ExampleViewController: UIViewController {
     }
     
     // MARK: - Use cases
+    // Step 4: Launch the Video Editor from the selected entry point.
+    // Launch the camera flow with Editor V2 enabled.
     @IBAction func openNewVideoEditorNewUI(_ sender: Any) {
         let launchConfig = VideoEditorLaunchConfig(
             entryPoint: .camera,
@@ -91,6 +96,7 @@ class ExampleViewController: UIViewController {
         checkLicenseAndOpenVideoEditor(with: launchConfig, isEditorV2Enabled: true)
     }
     
+    // Launch the default camera flow.
     @IBAction func openVideoEditorDefault(_ sender: Any) {
         let launchConfig = VideoEditorLaunchConfig(
             entryPoint: .camera,
@@ -100,6 +106,7 @@ class ExampleViewController: UIViewController {
         checkLicenseAndOpenVideoEditor(with: launchConfig)
     }
     
+    // Open the video templates screen.
     @IBAction func openVideoEditorTemplates(_ sender: Any) {
         let launchConfig = VideoEditorLaunchConfig(
             entryPoint: .videoTemplates,
@@ -109,6 +116,7 @@ class ExampleViewController: UIViewController {
         checkLicenseAndOpenVideoEditor(with: launchConfig)
     }
     
+    // Pick a video and prefill the camera's picture-in-picture layout.
     @IBAction func openVideoEditorPiP(_ sender: Any) {
         pickerGalleryVideos(entryPoint: .camera) { [weak self] pickedVideoUrls in
             guard let self, let pipVideoUrl = pickedVideoUrls.first else { return }
@@ -123,6 +131,7 @@ class ExampleViewController: UIViewController {
         }
     }
     
+    // Open saved drafts.
     @IBAction func openVideoEditorDrafts(_ sender: UIButton) {
         let launchConfig = VideoEditorLaunchConfig(
             entryPoint: .drafts,
@@ -132,6 +141,7 @@ class ExampleViewController: UIViewController {
         checkLicenseAndOpenVideoEditor(with: launchConfig)
     }
     
+    // Pick videos to open directly in the trimmer.
     @IBAction func openVideoEditorTrimmer(_ sender: UIButton) {
         pickerGalleryVideos(entryPoint: .trimmer) { [weak self] pickedVideoUrls in
             guard let self, !pickedVideoUrls.isEmpty else { return }
@@ -146,6 +156,7 @@ class ExampleViewController: UIViewController {
         }
     }
     
+    // Photo Editor entry points: open its gallery or edit a selected image.
     @IBAction func openPhotoEditorDefault(_ sender: UIButton) {
         let launchConfig = PhotoEditorLaunchConfig(
             hostController: self,
@@ -154,6 +165,7 @@ class ExampleViewController: UIViewController {
         checkLicenseAndOpenPhotoEditor(with: launchConfig)
     }
     
+    // Pick one image to edit in Photo Editor.
     @IBAction func openPhotoEditorImage(_ sender: UIButton) {
         pickGalleryPhoto() { image in
             guard let image else { return }
@@ -170,6 +182,7 @@ class ExampleViewController: UIViewController {
         // and to prevent "You are trying to create the second instance of the singleton." crash
         releaseSDK()
         
+        // Configure and initialize Photo Editor SDK with the license token.
         let config = PhotoEditorConfig()
         
         let photoEditorSDK = BanubaPhotoEditor(
@@ -185,11 +198,14 @@ class ExampleViewController: UIViewController {
         self.photoEditorSDK = photoEditorSDK
         let photoEditorHandler = PhotoEditorHandler(hostViewController: self)
         
+        // The SDK holds its delegate weakly; retain the handler to receive callbacks.
         self.photoEditorHandler = photoEditorHandler
         photoEditorSDK.delegate = photoEditorHandler
         
+        // Check the license asynchronously before presenting Photo Editor.
         photoEditorSDK.getLicenseState(completion: { [weak self] isValid in
             self?.handleTokenValidationResult(isValid)
+            // Present Photo Editor only when the license is active.
             if isValid { self?.photoEditorSDK?.presentPhotoEditor(withLaunchConfiguration: launchConfig, completion: nil) }
         })
         
@@ -201,6 +217,7 @@ class ExampleViewController: UIViewController {
         // and to prevent "You are trying to create the second instance of the singleton." crash
         releaseSDK()
         
+        // Step 3: Configure and initialize Video Editor SDK with the license token.
         var featureConfiguration = VideoEditorConfig().featureConfiguration
         featureConfiguration.supportsTrimRecordedVideo = true
         
@@ -217,11 +234,14 @@ class ExampleViewController: UIViewController {
         
         self.editorSDK = editorSDK
         let handler = VideoEditorHandler(self)
+        // The SDK holds its delegate weakly; retain the handler to receive callbacks.
         self.editorHandler = handler
         editorSDK.delegate = handler
         
+        // Check the license asynchronously before launching Video Editor.
         editorSDK.getLicenseState { [weak self] isValid in
             self?.handleTokenValidationResult(isValid)
+            // Step 4: Launch Video Editor only when the license is active.
             if isValid { self?.editorSDK?.launch(with: launchConfig) }
         }
     }
