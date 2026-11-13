@@ -2,7 +2,7 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  // License token is required to start Video Editor SDK
+  // Set a license token to start Video Editor SDK or Photo Editor SDK.
   static let licenseToken: String = <#Enter your license token#>
   
   func application(
